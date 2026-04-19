@@ -1,0 +1,56 @@
+# https://aitoollab.github.io/robots.txt
+
+User-agent: *
+Allow: /
+
+# AI搜索引擎 / GEO引擎
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Diffbot
+Allow: /
+
+User-agent: CC Metadata Scraper
+Allow: /
+
+User-agent: Ai2Bot
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+# 百度
+User-agent: Baiduspider
+Allow: /
+
+# Sogou
+User-agent: Sogou
+Allow: /
+
+# Bing
+User-agent: bingbot
+Allow: /
+
+# Google
+User-agent: Googlebot
+Allow: /
+User-agent: Googlebot-News
+Allow: /
+User-agent: Googlebot-Image
+Allow: /
+
+# Yandex
+User-agent: YandexBot
+Allow: /
+
+# Sitemap
+Sitemap: https://aitoollab.github.io/sitemap.xml
