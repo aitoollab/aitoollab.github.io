@@ -28,6 +28,7 @@
     <!-- Google SEO -->
     <meta name="google-site-verification" content="">
     <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
+    <link rel="alternate" type="application/atom+xml" title="AiToollab RSS Feed" href="/feed.xml">
 
     <!-- Bing SEO -->
     <meta name="msvalidate.01" content="">
@@ -217,10 +218,21 @@
                 }
             },
             {
+                "@type": "Person",
+                "@id": "https://aitoollab.github.io/#author",
+                "name": "AiToollab",
+                "url": "https://github.com/AiToollab",
+                "description": "AI副业实战研究者，专注于用AI提升普通人副业效率。",
+                "sameAs": [
+                    "https://github.com/AiToollab"
+                ]
+            },
+            {
                 "@type": "Organization",
                 "name": "AiToollab",
                 "url": "https://aitoollab.github.io/",
                 "logo": "https://aitoollab.github.io/og-image.png",
+                "founder": { "@id": "https://aitoollab.github.io/#author" },
                 "sameAs": [
                     "https://github.com/AiToollab"
                 ]
@@ -778,7 +790,7 @@
         </div>
         <div class="faq-item">
             <h4>Q: 需要投入多少钱？</h4>
-            <p>A: 最低0元。ChatGPT有免费版，Claude有免费额度，数字产品平台（Gumroad/Ko-fi）注册免费。¥39的提示词包是加速器，不是必需品。</p>
+            <p>A: 最低0元。ChatGPT有免费版，Claude有免费额度，数字产品平台注册免费。¥39的提示词包是加速器，不是必需品。</p>
         </div>
         <div class="faq-item">
             <h4>Q: 多久能看到第一笔收入？</h4>
@@ -797,6 +809,10 @@
     <div class="footer">
         <p><strong>AI副业加速器</strong> · 2026年实测验证</p>
         <p style="margin-top:8px;">如果你觉得本文有用，欢迎分享给需要的朋友</p>
+        <p style="margin-top:12px; font-size:13px;">
+            作者：<a href="https://github.com/AiToollab" target="_blank" rel="noopener noreferrer">@AiToollab</a>
+            · <a href="https://aitoollab.github.io/feed.xml">RSS订阅</a>
+        </p>
         <p style="margin-top:16px; font-size:12px; color:#475569;">
             本文数据来源：GitHub Trending 2026、HN Top Stories、HackerNews实时数据<br>
             产品：<a href="https://aitoollab.github.io/prompt-pack/">AI副业加速器·提示词全家桶</a>

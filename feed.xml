@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>AiToollab - AI副业加速器</title>
+  <subtitle>2026年最适合普通人的AI副业实战指南，含提示词、工具推荐、变现方法</subtitle>
+  <link href="https://aitoollab.github.io/feed.xml" rel="self"/>
+  <link href="https://aitoollab.github.io/"/>
+  <id>https://aitoollab.github.io/</id>
+  <updated>2026-04-20T00:00:00+08:00</updated>
+  <author>
+    <name>AiToollab</name>
+    <uri>https://github.com/AiToollab</uri>
+  </author>
+  <generator uri="https://aitoollab.github.io/">AiToollab Generator</generator>
+
+  <entry>
+    <title>AI变现工具大全｜2026年普通人可用的AI赚钱工具清单（实测推荐）</title>
+    <link href="https://aitoollab.github.io/ai-tools/"/>
+    <id>https://aitoollab.github.io/ai-tools/</id>
+    <updated>2026-04-19T00:00:00+08:00</updated>
+    <published>2026-04-19T00:00:00+08:00</published>
+    <summary type="text">2026年最全AI变现工具清单，覆盖内容创作、编程自动化、数据分析、图像生成等12大场景。普通人用这些工具从零开始做副业，月入3000+。</summary>
+    <category term="AI副业工具"/>
+    <category term="AI变现"/>
+    <category term="副业赚钱"/>
+  </entry>
+
+  <entry>
+    <title>AI副业加速器｜2026年最适合普通人的10种副业方向（实测有效）</title>
+    <link href="https://aitoollab.github.io/"/>
+    <id>https://aitoollab.github.io/</id>
+    <updated>2026-04-18T00:00:00+08:00</updated>
+    <published>2026-04-18T00:00:00+08:00</published>
+    <summary type="text">实测10种AI副业方向，含具体提示词、使用方法和收益分析。包含副业选择、变现路径、内容创作、数据分析等完整指南。</summary>
+    <category term="AI副业"/>
+    <category term="副业赚钱"/>
+    <category term="ChatGPT副业"/>
+  </entry>
+
+</feed>

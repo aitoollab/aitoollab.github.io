@@ -54,3 +54,7 @@ Allow: /
 
 # Sitemap
 Sitemap: https://aitoollab.github.io/sitemap.xml
+Sitemap: https://aitoollab.github.io/sitemap-index.xml
+
+# Auto-discovery
+Link: <https://aitoollab.github.io/feed.xml>; rel="alternate"; type="application/atom+xml"
