@@ -60,4 +60,40 @@
     <category term="ChatGPT提示词"/>
   </entry>
 
+  <entry>
+    <title>为本地商家搭建AI智能体：月入8000+的蓝海副业</title>
+    <link href="https://aitoollab.github.io/local-business-ai-agent/"/>
+    <id>https://aitoollab.github.io/local-business-ai-agent/</id>
+    <updated>2026-04-20T00:00:00+08:00</updated>
+    <published>2026-04-20T00:00:00+08:00</published>
+    <summary type="text">本地商家AI智能体服务是2026年蓝海副业方向。无需编程，帮商家配置AI客服/预约助手/营销系统。单次搭建费1000-3000元，月维护费300-1000元。</summary>
+    <category term="本地商家AI"/>
+    <category term="AI智能体副业"/>
+    <category term="AI客服搭建"/>
+  </entry>
+
+  <entry>
+    <title>Multi-Agent多智能体副业：2026年AI副业新风向</title>
+    <link href="https://aitoollab.github.io/multi-agent-side-hustle/"/>
+    <id>https://aitoollab.github.io/multi-agent-side-hustle/</id>
+    <updated>2026-04-20T00:00:00+08:00</updated>
+    <published>2026-04-20T00:00:00+08:00</published>
+    <summary type="text">Multi-Agent多智能体是2026年AI副业新风口。5个副业方向+3大主流框架对比+从0搭建教程。openai-agents-python、crewAI、AutoGen完整使用指南。</summary>
+    <category term="Multi-Agent"/>
+    <category term="AI Agent副业"/>
+    <category term="AutoGPT副业"/>
+  </entry>
+
+  <entry>
+    <title>AI数字产品副业：从提示词模板到月入过万的被动收入</title>
+    <link href="https://aitoollab.github.io/ai-digital-products-passive-income/"/>
+    <id>https://aitoollab.github.io/ai-digital-products-passive-income/</id>
+    <updated>2026-04-20T00:00:00+08:00</updated>
+    <published>2026-04-20T00:00:00+08:00</published>
+    <summary type="text">数字产品是AI时代最适合普通人的副业。5种高变现产品类型+零成本制作方法+Gumroad/小红书/知识星球平台选择+定价策略+真实月入5000+案例。</summary>
+    <category term="数字产品副业"/>
+    <category term="被动收入"/>
+    <category term="提示词模板"/>
+  </entry>
+
 </feed>
