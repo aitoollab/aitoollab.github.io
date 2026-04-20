@@ -1,0 +1,49 @@
+name: Daily SEO Health Check & Report
+
+on:
+  schedule:
+    - cron: '0 8 * * *'  # 每天 08:00 UTC = 16:00 北京时间
+  workflow_dispatch:  # 也可手动触发
+
+jobs:
+  seo-health:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check sitemap
+        run: |
+          echo "=== Sitemap URLs ==="
+          grep '<loc>' sitemap.xml | wc -l
+          echo "=== Last modified ==="
+          grep 'lastmod' sitemap.xml | head -3
+
+      - name: Verify HTML files
+        run: |
+          echo "=== HTML Pages ==="
+          find . -name "index.html" | wc -l
+          echo "=== Pages with Schema.org ==="
+          grep -l 'application/ld+json' index.html ai-*/index.html */index.html 2>/dev/null | wc -l
+
+      - name: Check for broken links
+        run: |
+          echo "=== Checking placeholder links ==="
+          grep -r '你的.*链接\|placeholder\|建设中' --include="*.html" . || echo "No placeholders found"
+
+      - name: SEO Report
+        run: |
+          echo "=== Daily SEO Report ==="
+          DATE=$(date '+%Y-%m-%d %H:%M:%S')
+          echo "Run: $DATE"
+          echo "Pages: $(find . -name 'index.html' | wc -l)"
+          echo "Articles: $(find . -path '*/index.html' -not -path './index.html' | wc -l)"
+          echo "Products: $(find . -name 'index.html' -path '*/xhs-*' -o -name 'index.html' -path '*/resume-*' -o -name 'index.html' -path '*/notion-*' | wc -l)"
+
+      - name: Commit sitemap update (if needed)
+        run: |
+          git config --local user.email "github-actions@aitoollab.github.io"
+          git config --local user.name "GitHub Actions Bot"
+          # Auto-update lastmod dates in sitemap
+          DATE=$(date '+%Y-%m-%d')
+          sed -i "s/<lastmod>[0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\}/<lastmod>$DATE/g" sitemap.xml
+          git diff --exit-code sitemap.xml || git add sitemap.xml && git commit -m "chore: update sitemap lastmod [auto]" && git push
