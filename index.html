@@ -353,19 +353,40 @@
             color: var(--muted);
         }
         
-        .container { max-width: 760px; margin: 0 auto; padding: 40px 20px; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 40px 20px; }
         
+        /* 两栏布局：目录 + AI副业情报 */
+        .top-section { display: flex; gap: 20px; align-items: flex-start; margin-bottom: 40px; }
+        .toc-box { flex: 0 0 auto; width: 320px; }
         .toc {
             background: var(--card);
             border: 1px solid var(--border);
             border-radius: 12px;
-            padding: 24px;
-            margin-bottom: 40px;
+            padding: 20px;
         }
         .toc h2 { font-size: 16px; margin-bottom: 16px; color: var(--muted); }
         .toc ol { padding-left: 20px; }
         .toc li { margin-bottom: 8px; color: var(--accent); font-size: 14px; }
         .toc li span { color: var(--text); }
+        
+        /* AI副业情报卡片 */
+        .info-box { flex: 1; min-width: 0; }
+        .info-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 20px;
+        }
+        .info-card h2 { font-size: 16px; margin-bottom: 16px; color: var(--green); display: flex; align-items: center; gap: 8px; }
+        .info-card h2::before { content: '📡'; }
+        .article-list { list-style: none; padding: 0; margin: 0; }
+        .article-list li { margin-bottom: 10px; padding-bottom: 10px; border-bottom: 1px solid var(--border); }
+        .article-list li:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+        .article-list a { color: var(--accent); font-size: 14px; line-height: 1.5; }
+        .article-list a:hover { text-decoration: underline; }
+        .article-list .article-date { color: var(--muted); font-size: 12px; display: block; margin-top: 2px; }
+        .more-link { display: inline-block; margin-top: 12px; color: var(--green); font-size: 14px; }
+        .more-link:hover { text-decoration: underline; }
         
         h2 { font-size: 24px; margin: 48px 0 20px; padding-bottom: 10px; border-bottom: 1px solid var(--border); }
         h3 { font-size: 18px; margin: 24px 0 12px; color: var(--purple); }
@@ -543,6 +564,11 @@
             font-size: 14px;
         }
         
+        @media (max-width: 700px) {
+            .top-section { flex-direction: column; }
+            .toc-box { width: 100%; }
+        }
+
         @media (max-width: 600px) {
             .header h1 { font-size: 24px; }
             .stats-grid { grid-template-columns: repeat(2, 1fr); }
@@ -568,16 +594,52 @@
 
 <div class="container">
 
-    <div class="toc">
-        <h2>📋 目录</h2>
-        <ol>
-            <li><span>为什么2026年是普通人做副业的最好时机</span></li>
-            <li><span>10种AI副业方向实测分析</span></li>
-            <li><span>如何用AI快速找到最适合你的副业</span></li>
-            <li><span>AI副业变现的5种核心模式</span></li>
-            <li><span>立即开始的3步行动计划</span></li>
-            <li><span>常见问题FAQ</span></li>
-        </ol>
+    <div class="top-section">
+        <div class="toc-box">
+            <div class="toc">
+                <h2>📋 目录</h2>
+                <ol>
+                    <li><span>为什么2026年是普通人做副业的最好时机</span></li>
+                    <li><span>10种AI副业方向实测分析</span></li>
+                    <li><span>如何用AI快速找到最适合你的副业</span></li>
+                    <li><span>AI副业变现的5种核心模式</span></li>
+                    <li><span>立即开始的3步行动计划</span></li>
+                    <li><span>常见问题FAQ</span></li>
+                </ol>
+            </div>
+        </div>
+        <div class="info-box">
+            <div class="info-card">
+                <h2>AI副业情报</h2>
+                <ul class="article-list">
+                    <li>
+                        <a href="/ai-side-hustle-guide/">普通人如何用AI副业赚钱？2026完整实战路线图</a>
+                        <span class="article-date">2026-04-20 · 主文</span>
+                    </li>
+                    <li>
+                        <a href="/multi-agent-side-hustle/">Multi-Agent多智能体副业：2026年AI副业新风向</a>
+                        <span class="article-date">2026-04-20 · 3000字</span>
+                    </li>
+                    <li>
+                        <a href="/ai-digital-products-passive-income/">AI数字产品副业：从提示词模板到月入过万</a>
+                        <span class="article-date">2026-04-20 · 2800字</span>
+                    </li>
+                    <li>
+                        <a href="/local-business-ai-agent/">为本地商家搭建AI智能体：月入8000+的蓝海</a>
+                        <span class="article-date">2026-04-20 · 3100字</span>
+                    </li>
+                    <li>
+                        <a href="/ai-tools/">AI变现工具大全｜2026年普通人可用的AI工具清单</a>
+                        <span class="article-date">2026-04-19 · 工具导航</span>
+                    </li>
+                    <li>
+                        <a href="/prompt-pack/">AI副业提示词全家桶｜50+可直接使用的AI副业提示词</a>
+                        <span class="article-date">2026-04-18 · ¥39</span>
+                    </li>
+                </ul>
+                <a href="/articles/" class="more-link">更多文章 →</a>
+            </div>
+        </div>
     </div>
 
     <div class="stats-grid">
