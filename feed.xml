@@ -2,20 +2,20 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>AiToollab - AI副业加速器</title>
   <subtitle>2026年最适合普通人的AI副业实战指南，含提示词、工具推荐、变现方法</subtitle>
-  <link href="https://aitoollab.github.io/feed.xml" rel="self"/>
-  <link href="https://aitoollab.github.io/"/>
-  <id>https://aitoollab.github.io/</id>
+  <link href="https://www.aitoollab.top/feed.xml" rel="self"/>
+  <link href="https://www.aitoollab.top/"/>
+  <id>https://www.aitoollab.top/</id>
   <updated>2026-04-20T00:00:00+08:00</updated>
   <author>
     <name>AiToollab</name>
     <uri>https://github.com/AiToollab</uri>
   </author>
-  <generator uri="https://aitoollab.github.io/">AiToollab Generator</generator>
+  <generator uri="https://www.aitoollab.top/">AiToollab Generator</generator>
 
   <entry>
     <title>AI副业加速器｜2026年最适合普通人的10种副业方向（实测有效）</title>
-    <link href="https://aitoollab.github.io/"/>
-    <id>https://aitoollab.github.io/</id>
+    <link href="https://www.aitoollab.top/"/>
+    <id>https://www.aitoollab.top/</id>
     <updated>2026-04-20T00:00:00+08:00</updated>
     <published>2026-04-18T00:00:00+08:00</published>
     <summary type="text">实测10种AI副业方向，含具体提示词、使用方法和收益分析。包含副业选择、变现路径、内容创作、数据分析等完整指南。</summary>
@@ -26,8 +26,8 @@
 
   <entry>
     <title>AI变现工具大全｜2026年普通人可用的AI赚钱工具清单（实测推荐）</title>
-    <link href="https://aitoollab.github.io/ai-tools/"/>
-    <id>https://aitoollab.github.io/ai-tools/</id>
+    <link href="https://www.aitoollab.top/ai-tools/"/>
+    <id>https://www.aitoollab.top/ai-tools/</id>
     <updated>2026-04-19T00:00:00+08:00</updated>
     <published>2026-04-19T00:00:00+08:00</published>
     <summary type="text">2026年最全AI变现工具清单，覆盖内容创作、编程自动化、数据分析、图像生成等12大场景。普通人用这些工具从零开始做副业，月入3000+。</summary>
@@ -38,8 +38,8 @@
 
   <entry>
     <title>普通人如何用AI副业赚钱｜2026完整实战指南</title>
-    <link href="https://aitoollab.github.io/ai-side-hustle-guide/"/>
-    <id>https://aitoollab.github.io/ai-side-hustle-guide/</id>
+    <link href="https://www.aitoollab.top/ai-side-hustle-guide/"/>
+    <id>https://www.aitoollab.top/ai-side-hustle-guide/</id>
     <updated>2026-04-20T00:00:00+08:00</updated>
     <published>2026-04-20T00:00:00+08:00</published>
     <summary type="text">普通人如何用AI副业赚钱？本指南覆盖副业选择、提示词使用、变现路径三大核心模块，附50+实战提示词。是SEO优化内容，针对"AI副业赚钱"等关键词。</summary>
@@ -50,8 +50,8 @@
 
   <entry>
     <title>AI副业提示词全家桶｜50+可直接使用的AI副业提示词</title>
-    <link href="https://aitoollab.github.io/prompt-pack/"/>
-    <id>https://aitoollab.github.io/prompt-pack/</id>
+    <link href="https://www.aitoollab.top/prompt-pack/"/>
+    <id>https://www.aitoollab.top/prompt-pack/</id>
     <updated>2026-04-20T00:00:00+08:00</updated>
     <published>2026-04-20T00:00:00+08:00</published>
     <summary type="text">50+个实测有效的AI副业提示词，覆盖副业选择、变现路径、内容创作、数据分析。ChatGPT/Claude/文心一言通用。一次性买断，永久更新。¥39首批特价。</summary>
@@ -62,8 +62,8 @@
 
   <entry>
     <title>为本地商家搭建AI智能体：月入8000+的蓝海副业</title>
-    <link href="https://aitoollab.github.io/local-business-ai-agent/"/>
-    <id>https://aitoollab.github.io/local-business-ai-agent/</id>
+    <link href="https://www.aitoollab.top/local-business-ai-agent/"/>
+    <id>https://www.aitoollab.top/local-business-ai-agent/</id>
     <updated>2026-04-20T00:00:00+08:00</updated>
     <published>2026-04-20T00:00:00+08:00</published>
     <summary type="text">本地商家AI智能体服务是2026年蓝海副业方向。无需编程，帮商家配置AI客服/预约助手/营销系统。单次搭建费1000-3000元，月维护费300-1000元。</summary>
@@ -74,8 +74,8 @@
 
   <entry>
     <title>AI副业情报｜所有文章列表</title>
-    <link href="https://aitoollab.github.io/articles/"/>
-    <id>https://aitoollab.github.io/articles/</id>
+    <link href="https://www.aitoollab.top/articles/"/>
+    <id>https://www.aitoollab.top/articles/</id>
     <updated>2026-04-20T00:00:00+08:00</updated>
     <published>2026-04-20T00:00:00+08:00</published>
     <summary type="text">AiToollab所有AI副业实战文章列表，包括副业方向、变现路径、工具推荐、提示词教程。</summary>
@@ -85,8 +85,8 @@
 
   <entry>
     <title>Multi-Agent多智能体副业：2026年AI副业新风向</title>
-    <link href="https://aitoollab.github.io/multi-agent-side-hustle/"/>
-    <id>https://aitoollab.github.io/multi-agent-side-hustle/</id>
+    <link href="https://www.aitoollab.top/multi-agent-side-hustle/"/>
+    <id>https://www.aitoollab.top/multi-agent-side-hustle/</id>
     <updated>2026-04-20T00:00:00+08:00</updated>
     <published>2026-04-20T00:00:00+08:00</published>
     <summary type="text">Multi-Agent多智能体是2026年AI副业新风口。5个副业方向+3大主流框架对比+从0搭建教程。openai-agents-python、crewAI、AutoGen完整使用指南。</summary>
@@ -97,8 +97,8 @@
 
   <entry>
     <title>AI数字产品副业：从提示词模板到月入过万的被动收入</title>
-    <link href="https://aitoollab.github.io/ai-digital-products-passive-income/"/>
-    <id>https://aitoollab.github.io/ai-digital-products-passive-income/</id>
+    <link href="https://www.aitoollab.top/ai-digital-products-passive-income/"/>
+    <id>https://www.aitoollab.top/ai-digital-products-passive-income/</id>
     <updated>2026-04-20T00:00:00+08:00</updated>
     <published>2026-04-20T00:00:00+08:00</published>
     <summary type="text">数字产品是AI时代最适合普通人的副业。5种高变现产品类型+零成本制作方法+Gumroad/小红书/知识星球平台选择+定价策略+真实月入5000+案例。</summary>
