@@ -35,7 +35,7 @@
 
 | 副业方向概览 | 提示词包示例 | 变现数据展示 |
 |:-----------:|:-----------:|:-----------:|
-| ![AI副业方向](https://via.placeholder.com/400x250/0d1117/38bdf8?text=10+AI副业方向) | ![提示词包](https://via.placeholder.com/400x250/0d1117/38bdf8?text=50++AI提示词) | ![收益分析](https://via.placeholder.com/400x250/0d1117/38bdf8?text=变现路径+数据) |
+| [AI副业方向](https://www.aitoollab.top/ai-side-hustle/) | [提示词包](https://www.aitoollab.top/prompt-pack/) | [收益分析](https://www.aitoollab.top/ai-tools/) |
 
 > 📌 更多效果截图和详细分析请访问 [在线文档](https://www.aitoollab.top/ai-side-hustle/)
 
