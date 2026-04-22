@@ -27,7 +27,7 @@
 2. **准备最小产品** → 本周内发布你的第一个AI数字产品（提示词包/模板/教程），定价¥19-99，用AI辅助创作，无需专业技能
 3. **获取第一笔收入** → 通过Ko-fi、小红书、知乎等平台销售，1-4周内出第一单，3-6个月稳定月入¥3,000~30,000
 
-> 💡 **提示**：本项目提供 50+ 直接可用的 AI 提示词，覆盖副业选择、内容创作、数据分析、变现规划全流程。配合 [AI变现工具大全](https://aitoollab.github.io/ai-tools/) 使用，效果加倍。
+> 💡 **提示**：本项目提供 50+ 直接可用的 AI 提示词，覆盖副业选择、内容创作、数据分析、变现规划全流程。配合 [AI变现工具大全](https://www.aitoollab.top/ai-tools/) 使用，效果加倍。
 
 ---
 
@@ -37,7 +37,7 @@
 |:-----------:|:-----------:|:-----------:|
 | ![AI副业方向](https://via.placeholder.com/400x250/0d1117/38bdf8?text=10+AI副业方向) | ![提示词包](https://via.placeholder.com/400x250/0d1117/38bdf8?text=50++AI提示词) | ![收益分析](https://via.placeholder.com/400x250/0d1117/38bdf8?text=变现路径+数据) |
 
-> 📌 更多效果截图和详细分析请访问 [在线文档](https://aitoollab.github.io/ai-side-hustle/)
+> 📌 更多效果截图和详细分析请访问 [在线文档](https://www.aitoollab.top/ai-side-hustle/)
 
 ---
 
@@ -73,9 +73,9 @@
 
 | 文章 | 地址 | 简介 |
 |------|------|------|
-| **AI副业加速器（主文）** | [aitoollab.github.io/ai-side-hustle/](https://aitoollab.github.io/ai-side-hustle/) | 10种副业方向 + 50+提示词 |
-| **AI变现工具大全** | [aitoollab.github.io/ai-tools/](https://aitoollab.github.io/ai-tools/) | 30+工具场景推荐 |
-| **AI副业提示词包** | [aitoollab.github.io/prompt-pack/](https://aitoollab.github.io/prompt-pack/) | 产品落地页 · ¥39 |
+| **AI副业加速器（主文）** | [aitoollab.github.io/ai-side-hustle/](https://www.aitoollab.top/ai-side-hustle/) | 10种副业方向 + 50+提示词 |
+| **AI变现工具大全** | [aitoollab.github.io/ai-tools/](https://www.aitoollab.top/ai-tools/) | 30+工具场景推荐 |
+| **AI副业提示词包** | [aitoollab.github.io/prompt-pack/](https://www.aitoollab.top/prompt-pack/) | 产品落地页 · ¥39 |
 
 ---
 

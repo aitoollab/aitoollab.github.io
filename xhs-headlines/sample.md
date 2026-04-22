@@ -1,6 +1,6 @@
 # 小红书爆款标题合集 - 精选预览
 
-> 完整版购买地址：https://aitoollab.github.io/xhs-headlines/
+> 完整版购买地址：https://www.aitoollab.top/xhs-headlines/
 
 ---
 
@@ -18,7 +18,7 @@
 
 ## 如何获取完整版？
 
-访问：https://aitoollab.github.io/xhs-headlines/
+访问：https://www.aitoollab.top/xhs-headlines/
 
 ---
 *此为精选预览版，完整内容需付费获取*

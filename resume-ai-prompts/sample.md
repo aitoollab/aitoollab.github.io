@@ -1,6 +1,6 @@
 # 简历优化神器提示词 - 精选预览
 
-> 完整版购买地址：https://aitoollab.github.io/resume-ai-prompts/
+> 完整版购买地址：https://www.aitoollab.top/resume-ai-prompts/
 
 ---
 
@@ -18,7 +18,7 @@
 
 ## 如何获取完整版？
 
-访问：https://aitoollab.github.io/resume-ai-prompts/
+访问：https://www.aitoollab.top/resume-ai-prompts/
 
 ---
 *此为精选预览版，完整内容需付费获取*
