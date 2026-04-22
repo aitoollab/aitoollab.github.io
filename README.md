@@ -73,9 +73,9 @@
 
 | 文章 | 地址 | 简介 |
 |------|------|------|
-| **AI副业加速器（主文）** | [aitoollab.github.io/ai-side-hustle/](https://www.aitoollab.top/ai-side-hustle/) | 10种副业方向 + 50+提示词 |
-| **AI变现工具大全** | [aitoollab.github.io/ai-tools/](https://www.aitoollab.top/ai-tools/) | 30+工具场景推荐 |
-| **AI副业提示词包** | [aitoollab.github.io/prompt-pack/](https://www.aitoollab.top/prompt-pack/) | 产品落地页 · ¥39 |
+| **AI副业加速器（主文）** | [www.aitoollab.top/ai-side-hustle/](https://www.aitoollab.top/ai-side-hustle/) | 10种副业方向 + 50+提示词 |
+| **AI变现工具大全** | [www.aitoollab.top/ai-tools/](https://www.aitoollab.top/ai-tools/) | 30+工具场景推荐 |
+| **AI副业提示词包** | [www.aitoollab.top/prompt-pack/](https://www.aitoollab.top/prompt-pack/) | 产品落地页 · ¥39 |
 
 ---
 
