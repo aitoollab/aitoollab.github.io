@@ -615,32 +615,44 @@
         <div class="info-box">
             <div class="info-card">
                 <h2><span class="title-group">AI副业情报</span><a href="/articles/" class="more-link">更多文章 →</a></h2>
-                <ul class="article-list">
-                    <li>
-                        <a href="/ai-side-hustle-guide/">普通人如何用AI副业赚钱？2026完整实战路线图</a>
-                        <span class="article-date">2026-04-20 · 主文</span>
-                    </li>
-                    <li>
-                        <a href="/multi-agent-side-hustle/">Multi-Agent多智能体副业：2026年AI副业新风向</a>
-                        <span class="article-date">2026-04-20 · 3000字</span>
-                    </li>
-                    <li>
-                        <a href="/ai-digital-products-passive-income/">AI数字产品副业：从提示词模板到月入过万</a>
-                        <span class="article-date">2026-04-20 · 2800字</span>
-                    </li>
-                    <li>
-                        <a href="/local-business-ai-agent/">为本地商家搭建AI智能体：月入8000+的蓝海</a>
-                        <span class="article-date">2026-04-20 · 3100字</span>
-                    </li>
-                    <li>
-                        <a href="/ai-tools/">AI变现工具大全｜2026年普通人可用的AI工具清单</a>
-                        <span class="article-date">2026-04-19 · 工具导航</span>
-                    </li>
-                    <li>
-                        <a href="/prompt-pack/">AI副业提示词全家桶｜50+可直接使用的AI副业提示词</a>
-                        <span class="article-date">2026-04-18 · ¥39</span>
-                    </li>
+                <ul class="article-list" id="homepage-article-list">
+                    <li style="color:var(--muted);font-size:13px;">加载中...</li>
                 </ul>
+                <script>
+                (function() {
+                    var list = document.getElementById('homepage-article-list');
+                    fetch('/articles/')
+                        .then(function(r) { return r.text(); })
+                        .then(function(html) {
+                            var parser = new DOMParser();
+                            var doc = parser.parseFromString(html, 'text/html');
+                            var items = doc.querySelectorAll('.article-card, .article-item, li');
+                            var html = '';
+                            var count = 0;
+                            for (var i = 0; i < items.length && count < 8; i++) {
+                                var a = items[i].querySelector('a');
+                                if (!a) continue;
+                                var href = a.getAttribute('href');
+                                var text = a.textContent.trim();
+                                if (!href || !text || href.indexOf('/articles') !== -1) continue;
+                                var date = '';
+                                var dateEl = items[i].querySelector('.article-date, .date, time, span');
+                                if (dateEl) date = ' · ' + dateEl.textContent.trim().split(' ')[0];
+                                if (href.indexOf('http') === -1) href = 'https://www.aitoollab.top' + href;
+                                html += '<li><a href="' + href + '">' + text + '</a><span class="article-date">' + date + '</span></li>';
+                                count++;
+                            }
+                            if (html) {
+                                list.innerHTML = html;
+                            } else {
+                                list.innerHTML = '<li style="color:var(--muted);font-size:13px;">暂无文章</li>';
+                            }
+                        })
+                        .catch(function() {
+                            list.innerHTML = '<li style="color:var(--muted);font-size:13px;">加载失败</li>';
+                        });
+                })();
+                </script>
             </div>
         </div>
     </div>
