@@ -626,27 +626,33 @@
                         .then(function(html) {
                             var parser = new DOMParser();
                             var doc = parser.parseFromString(html, 'text/html');
-                            var items = doc.querySelectorAll('.article-card, .article-item, li');
-                            var html = '';
-                            var count = 0;
-                            for (var i = 0; i < items.length && count < 8; i++) {
-                                var a = items[i].querySelector('a');
-                                if (!a) continue;
+                            var allLinks = doc.querySelectorAll('a');
+                            var results = [];
+                            for (var i = 0; i < allLinks.length; i++) {
+                                var a = allLinks[i];
                                 var href = a.getAttribute('href');
                                 var text = a.textContent.trim();
-                                if (!href || !text || href.indexOf('/articles') !== -1) continue;
-                                var date = '';
-                                var dateEl = items[i].querySelector('.article-date, .date, time, span');
-                                if (dateEl) date = ' · ' + dateEl.textContent.trim().split(' ')[0];
-                                if (href.indexOf('http') === -1) href = 'https://www.aitoollab.top' + href;
-                                html += '<li><a href="' + href + '">' + text + '</a><span class="article-date">' + date + '</span></li>';
-                                count++;
+                                // 过滤：排除导航/回首页/无效链接，保留文章链接（以/开头但不是/或/articles）
+                                if (!href || !text || text.length < 5) continue;
+                                if (href === '/' || href === '/articles/' || href.indexOf('aitoollab') !== -1) continue;
+                                if (href.indexOf('http') !== -1 && href.indexOf('aitoollab') === -1) continue;
+                                // 排除返回链接
+                                if (text.indexOf('返回') !== -1 || text === '←') continue;
+                                // 必须是中文标题
+                                if (!/[\u4e00-\u9fa5]/.test(text)) continue;
+                                var fullUrl = href.indexOf('http') === 0 ? href : href;
+                                results.push({href: href, text: text});
                             }
-                            if (html) {
-                                list.innerHTML = html;
-                            } else {
-                                list.innerHTML = '<li style="color:var(--muted);font-size:13px;">暂无文章</li>';
+                            var html = '';
+                            var shown = [];
+                            for (var j = 0; j < results.length && shown.length < 8; j++) {
+                                var item = results[j];
+                                // 去重
+                                if (shown.some(function(s) { return s.href === item.href; })) continue;
+                                shown.push(item);
+                                html += '<li><a href="' + item.href + '">' + item.text + '</a></li>';
                             }
+                            list.innerHTML = html || '<li style="color:var(--muted);font-size:13px;">暂无文章</li>';
                         })
                         .catch(function() {
                             list.innerHTML = '<li style="color:var(--muted);font-size:13px;">加载失败</li>';
