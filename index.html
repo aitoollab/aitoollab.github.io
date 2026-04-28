@@ -345,8 +345,89 @@
             font-size: 12px;
             color: var(--muted);
         }
+
+        /* 导航栏 */
+        .main-nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1100px;
+            margin: 0 auto 24px;
+            padding: 0 0 20px;
+            border-bottom: 1px solid var(--border);
+        }
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 700;
+            font-size: 18px;
+        }
+        .nav-logo:hover { text-decoration: none; }
+        .nav-logo-icon { font-size: 22px; }
+        .nav-logo-text { background: linear-gradient(135deg, #fff 0%, #8b949e 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .nav-links { display: flex; align-items: center; gap: 4px; }
+        .nav-link {
+            padding: 6px 14px;
+            border-radius: 8px;
+            font-size: 14px;
+            color: var(--muted);
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+        .nav-link:hover {
+            color: var(--text);
+            background: rgba(255,255,255,0.06);
+            text-decoration: none;
+        }
+        .nav-link-cta {
+            background: linear-gradient(135deg, var(--green), #059669);
+            color: #fff !important;
+            font-weight: 600;
+            margin-left: 8px;
+        }
+        .nav-link-cta:hover {
+            background: linear-gradient(135deg, #059669, var(--green));
+            box-shadow: 0 4px 15px rgba(16,185,129,0.3);
+        }
         
         .container { max-width: 1100px; margin: 0 auto; padding: 0 20px 40px; }
+
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            margin: 40px 0;
+        }
+        .stat-box {
+            background: linear-gradient(135deg, #0f2937 0%, #1a2744 100%);
+            border: 1px solid rgba(14,165,233,0.2);
+            border-radius: 14px;
+            padding: 24px 16px;
+            text-align: center;
+            transition: all 0.25s;
+        }
+        .stat-box:hover {
+            border-color: rgba(14,165,233,0.5);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(14,165,233,0.12);
+        }
+        .stat-box .number {
+            font-size: 36px;
+            font-weight: 800;
+            background: linear-gradient(135deg, #38bdf8 0%, #a78bfa 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1.1;
+            margin-bottom: 6px;
+        }
+        .stat-box .label {
+            font-size: 13px;
+            color: var(--muted);
+        }
 
         /* 两栏布局：目录 + AI副业情报 */
         .top-section {
@@ -405,10 +486,30 @@
         .hustle-card {
             background: var(--card);
             border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 24px;
-            margin: 20px 0;
+            border-radius: 14px;
+            padding: 28px;
+            margin: 24px 0;
+            transition: all 0.25s;
+            position: relative;
+            overflow: hidden;
         }
+        .hustle-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--green), var(--accent), var(--purple));
+            opacity: 0;
+            transition: opacity 0.25s;
+        }
+        .hustle-card:hover {
+            border-color: rgba(16,185,129,0.4);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(0,0,0,0.3);
+        }
+        .hustle-card:hover::before { opacity: 1; }
         .hustle-card h3 { color: var(--green); margin-top: 0; }
         .hustle-card .meta-tag {
             display: inline-block;
@@ -459,29 +560,47 @@
         .stat-box .label { font-size: 12px; color: var(--muted); margin-top: 4px; }
         
         .cta-box {
-            background: linear-gradient(135deg, rgba(16,185,129,0.15) 0%, rgba(14,165,233,0.1) 100%);
-            border: 2px solid var(--green);
-            border-radius: 16px;
-            padding: 32px;
+            background: linear-gradient(135deg, rgba(16,185,129,0.12) 0%, rgba(14,165,233,0.08) 100%);
+            border: 2px solid rgba(16,185,129,0.5);
+            border-radius: 18px;
+            padding: 36px 32px;
             text-align: center;
-            margin: 40px 0;
+            margin: 48px 0;
+            position: relative;
+            overflow: hidden;
         }
-        .cta-box h3 { color: var(--green); font-size: 20px; margin: 0 0 8px; }
-        .cta-box p { color: var(--muted); font-size: 14px; margin-bottom: 20px; }
+        .cta-box::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at center, rgba(16,185,129,0.06) 0%, transparent 60%);
+            pointer-events: none;
+        }
+        .cta-box h3 { color: #34d399; font-size: 22px; margin: 0 0 10px; }
+        .cta-box p { color: #94a3b8; font-size: 15px; margin-bottom: 24px; line-height: 1.7; }
         .cta-btn {
             display: inline-block;
-            background: linear-gradient(135deg, #059669, #0ea5e9);
+            background: linear-gradient(135deg, #10b981 0%, #0ea5e9 100%);
             color: #fff;
-            padding: 14px 40px;
-            border-radius: 10px;
+            padding: 15px 44px;
+            border-radius: 12px;
             font-size: 16px;
             font-weight: 700;
             border: none;
             cursor: pointer;
-            transition: opacity 0.2s;
+            transition: all 0.25s;
+            box-shadow: 0 4px 15px rgba(16,185,129,0.3);
+            text-decoration: none;
         }
-        .cta-btn:hover { opacity: 0.85; text-decoration: none; color: #fff; }
-        .cta-btn:hover { text-decoration: none; }
+        .cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(16,185,129,0.4);
+            color: #fff;
+            text-decoration: none;
+        }
         
         .comparison-table {
             width: 100%;
@@ -582,6 +701,18 @@
 <body>
 
 <header class="header">
+    <nav class="main-nav">
+        <a href="/" class="nav-logo">
+            <span class="nav-logo-icon">🧰</span>
+            <span class="nav-logo-text">AiToollab</span>
+        </a>
+        <div class="nav-links">
+            <a href="/" class="nav-link">首页</a>
+            <a href="/articles/" class="nav-link">文章</a>
+            <a href="/ai-tools/" class="nav-link">AI工具</a>
+            <a href="/prompt-pack/" class="nav-link nav-link-cta">提示词包 ¥39</a>
+        </div>
+    </nav>
     <div class="badge">📅 2026年4月实测 · 持续更新</div>
     <h1>AI副业加速器｜AiToollab — 普通人用AI做副业的实战分享平台</h1>
     <p class="meta">作者：AiToollab · 阅读时间：约15分钟 · 字数：3500+</p>
