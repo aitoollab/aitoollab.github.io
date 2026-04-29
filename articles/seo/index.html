@@ -343,5 +343,15 @@
     <a href="/" style="color: var(--accent);">AiToollab</a> · 持续更新
 </footer>
 
+<!-- 返回顶部按钮 -->
+<button id="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="返回顶部">↑</button>
+<style>
+#back-to-top{position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;background:#2563eb;color:#fff;border:none;cursor:pointer;font-size:18px;opacity:0;transition:opacity .3s;z-index:999;pointer-events:none}
+#back-to-top.show{opacity:.85;pointer-events:auto}
+#back-to-top:hover{opacity:1}
+</style>
+<script>
+window.addEventListener('scroll',function(){var b=document.getElementById('back-to-top');b.classList.toggle('show',window.scrollY>400);});
+</script>
 </body>
 </html>
