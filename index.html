@@ -747,45 +747,35 @@
         </div>
         <div class="info-box">
             <div class="info-card">
-                <h2><span class="title-group">AI副业情报</span><a href="/articles/" class="more-link">更多文章 →</a></h2>
+                <h2><span class="title-group">💰 赚钱案例</span><a href="/articles/cases/" class="more-link">更多案例 →</a></h2>
                 <ul class="article-list" id="homepage-article-list">
                     <li style="color:var(--muted);font-size:13px;">加载中...</li>
                 </ul>
                 <script>
                 (function() {
                     var list = document.getElementById('homepage-article-list');
-                    fetch('/articles/')
+                    fetch('/articles/cases/')
                         .then(function(r) { return r.text(); })
                         .then(function(html) {
                             var parser = new DOMParser();
                             var doc = parser.parseFromString(html, 'text/html');
-                            var allLinks = doc.querySelectorAll('a');
+                            var cards = doc.querySelectorAll('.article-card');
                             var results = [];
-                            for (var i = 0; i < allLinks.length; i++) {
-                                var a = allLinks[i];
+                            cards.forEach(function(card) {
+                                var a = card.querySelector('a');
+                                if (!a) return;
                                 var href = a.getAttribute('href');
                                 var text = a.textContent.trim();
-                                // 过滤：排除导航/回首页/无效链接，保留文章链接（以/开头但不是/或/articles）
-                                if (!href || !text || text.length < 5) continue;
-                                if (href === '/' || href === '/articles/' || href.indexOf('aitoollab') !== -1) continue;
-                                if (href.indexOf('http') !== -1 && href.indexOf('aitoollab') === -1) continue;
-                                // 排除返回链接
-                                if (text.indexOf('返回') !== -1 || text === '←') continue;
-                                // 必须是中文标题
-                                if (!/[\u4e00-\u9fa5]/.test(text)) continue;
-                                var fullUrl = href.indexOf('http') === 0 ? href : href;
+                                if (!href || !text || text.length < 5) return;
+                                if (href.indexOf('http') !== -1 && href.indexOf('aitoollab') === -1) return;
                                 results.push({href: href, text: text});
-                            }
+                            });
                             var html = '';
-                            var shown = [];
-                            for (var j = 0; j < results.length && shown.length < 8; j++) {
+                            for (var j = 0; j < results.length && j < 6; j++) {
                                 var item = results[j];
-                                // 去重
-                                if (shown.some(function(s) { return s.href === item.href; })) continue;
-                                shown.push(item);
                                 html += '<li><a href="' + item.href + '">' + item.text + '</a></li>';
                             }
-                            list.innerHTML = html || '<li style="color:var(--muted);font-size:13px;">暂无文章</li>';
+                            list.innerHTML = html || '<li style="color:var(--muted);font-size:13px;">暂无案例</li>';
                         })
                         .catch(function() {
                             list.innerHTML = '<li style="color:var(--muted);font-size:13px;">加载失败</li>';
