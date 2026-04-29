@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://www.aitoollab.top/articles/startup-100/">
+    <title>$100 AI创业实验追踪｜AiToollab</title>
+    <meta name="description" content="用真实的$100微创业实验追踪AI副业可行性。每周记录1个AI赚钱实验：做了什么事、花了多少钱、赚了多少。真实数据，不吹牛。">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="$100 AI创业实验追踪｜AiToollab">
+    <meta property="og:description" content="用真实的$100微创业实验追踪AI副业可行性。每周真实数据记录。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.aitoollab.top/articles/startup-100/">
+    <meta name="twitter:card" content="summary">
+    <style>
+        :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff; --green: #3fb950; --gold: #f0b429; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif; background: var(--bg); color: var(--text); line-height: 1.8; font-size: 16px; }
+        a { color: var(--accent); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        header.header { text-align: center; padding: 60px 20px 40px; border-bottom: 1px solid var(--border); background: linear-gradient(180deg, rgba(37,99,235,0.08) 0%, transparent 100%); }
+        header.header .tag { display: inline-block; background: rgba(63,185,80,0.15); border: 1px solid rgba(63,185,80,0.3); color: var(--green); font-size: 13px; padding: 4px 14px; border-radius: 20px; margin-bottom: 16px; }
+        header.header h1 { font-size: 36px; margin-bottom: 12px; }
+        header.header .subtitle { color: var(--muted); font-size: 16px; max-width: 600px; margin: 0 auto; }
+        header.header .stats { display: flex; justify-content: center; gap: 40px; margin-top: 24px; }
+        header.header .stat { text-align: center; }
+        header.header .stat-value { font-size: 24px; font-weight: 700; color: var(--gold); }
+        header.header .stat-label { font-size: 13px; color: var(--muted); }
+
+        nav.section-nav { display: flex; justify-content: center; gap: 4px; padding: 16px 20px; border-bottom: 1px solid var(--border); background: var(--card); position: sticky; top: 0; z-index: 100; }
+        nav.section-nav a { color: var(--muted); font-size: 14px; padding: 8px 16px; border-radius: 8px; transition: all .2s; }
+        nav.section-nav a:hover { color: var(--text); background: rgba(255,255,255,0.05); text-decoration: none; }
+        nav.section-nav a.active { color: var(--text); background: rgba(37,99,235,0.2); }
+        nav.section-nav a[data-section="startup-100"] { color: var(--gold); border: 1px solid rgba(240,180,41,0.3); }
+
+        .container { max-width: 860px; margin: 0 auto; padding: 40px 20px; }
+        .intro { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 32px; margin-bottom: 32px; }
+        .intro h2 { font-size: 20px; margin-bottom: 16px; }
+        .intro p { color: var(--muted); margin-bottom: 12px; }
+        .intro .rules { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 16px; }
+        .intro .rule { background: rgba(255,255,255,0.03); padding: 12px 16px; border-radius: 8px; font-size: 14px; color: var(--muted); }
+        .intro .rule strong { color: var(--text); }
+
+        .tracking-list { display: flex; flex-direction: column; gap: 20px; }
+        .tracking-card { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 28px; transition: border-color .2s; }
+        .tracking-card:hover { border-color: rgba(37,99,235,0.5); }
+        .tracking-card .episode { font-size: 13px; color: var(--gold); font-weight: 600; margin-bottom: 8px; }
+        .tracking-card h3 { font-size: 20px; margin-bottom: 12px; }
+        .tracking-card h3 a { color: var(--text); }
+        .tracking-card h3 a:hover { color: var(--accent); text-decoration: none; }
+        .tracking-card .meta { display: flex; gap: 20px; font-size: 13px; color: var(--muted); margin-bottom: 16px; flex-wrap: wrap; }
+        .tracking-card .meta span { display: flex; align-items: center; gap: 4px; }
+        .tracking-card .summary { color: var(--muted); font-size: 15px; margin-bottom: 16px; }
+        .tracking-card .tags { display: flex; gap: 8px; flex-wrap: wrap; }
+        .tracking-card .tag { background: rgba(255,255,255,0.06); padding: 4px 10px; border-radius: 6px; font-size: 12px; color: var(--muted); }
+        .tracking-card .result { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border); }
+        .tracking-card .result-item { text-align: center; }
+        .tracking-card .result-value { font-size: 20px; font-weight: 700; }
+        .tracking-card .result-value.positive { color: var(--green); }
+        .tracking-card .result-value.negative { color: var(--muted); }
+        .tracking-card .result-label { font-size: 12px; color: var(--muted); }
+
+        .back-link { text-align: center; margin-top: 40px; }
+        .back-link a { color: var(--muted); font-size: 14px; }
+
+        @media (max-width: 600px) {
+            header.header h1 { font-size: 28px; }
+            header.header .stats { gap: 20px; }
+            .intro .rules { grid-template-columns: 1fr; }
+            .tracking-card .result { grid-template-columns: 1fr 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<header class="header">
+    <div class="tag">🧪 真实实验</div>
+    <h1>$100 AI创业实验追踪</h1>
+    <p class="subtitle">用真实的微创业实验追踪AI副业可行性。每周记录：做了什么事、花了多少钱、赚了多少。数据说话，不吹牛。</p>
+    <div class="stats">
+        <div class="stat"><div class="stat-value">$100</div><div class="stat-label">每次实验预算</div></div>
+        <div class="stat"><div class="stat-value">每周</div><div class="stat-label">更新频率</div></div>
+        <div class="stat"><div class="stat-value">真实</div><div class="stat-label">所有数据</div></div>
+    </div>
+</header>
+
+<nav class="section-nav">
+    <a href="/articles/seo/">💡 教程</a>
+    <a href="/articles/news/">🔥 热点</a>
+    <a href="/articles/cases/">💰 案例</a>
+    <a href="/articles/startup-100/" class="active" data-section="startup-100">🧪 实验</a>
+</nav>
+
+<div class="container">
+
+    <div class="intro">
+        <h2>实验规则</h2>
+        <p>这是一个真实的$100微创业实验项目。每周用不超过$100的预算，测试一个AI赚钱方向是否可行。</p>
+        <div class="rules">
+            <div class="rule"><strong>🎯 预算：</strong>每次实验最多$100</div>
+            <div class="rule"><strong>⏱ 时长：</strong>每期实验1-4周</div>
+            <div class="rule"><strong>📊 记录：</strong>投入/产出/时间全公开</div>
+            <div class="rule"><strong>❌ 不吹：</strong>失败就是失败，不包装</div>
+        </div>
+    </div>
+
+    <div class="tracking-list">
+        <div class="tracking-card">
+            <div class="episode">Episode #1</div>
+            <h3><a href="/ai-startup-100/">$100 AI创业实验追踪 #1：用AI在Fiverr接单的第一周</a></h3>
+            <div class="meta">
+                <span>📅 2026-04-25</span>
+                <span>⏱ 投入：3小时</span>
+                <span>💰 花费：$0</span>
+            </div>
+            <p class="summary">测试用AI工具在Fiverr接自由职业单子的可行性。注册账号、发布Gig、优化标题……第一周踩了哪些坑？</p>
+            <div class="tags">
+                <span class="tag">Fiverr</span>
+                <span class="tag">AI接单</span>
+                <span class="tag">自由职业</span>
+            </div>
+            <div class="result">
+                <div class="result-item"><div class="result-value negative">$0</div><div class="result-label">本周收入</div></div>
+                <div class="result-item"><div class="result-value positive">2个</div><div class="result-label">潜在客户</div></div>
+                <div class="result-item"><div class="result-value">2/5</div><div class="result-label">进度</div></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="back-link">
+        <a href="/articles/">← 返回文章总览</a>
+    </div>
+
+</div>
+
+<!-- 返回顶部按钮 -->
+<button id="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="返回顶部">↑</button>
+<style>
+#back-to-top{position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;background:#2563eb;color:#fff;border:none;cursor:pointer;font-size:18px;opacity:0;transition:opacity .3s;z-index:999;pointer-events:none}
+#back-to-top.show{opacity:.85;pointer-events:auto}
+#back-to-top:hover{opacity:1}
+</style>
+<script>
+window.addEventListener('scroll',function(){var b=document.getElementById('back-to-top');b.classList.toggle('show',window.scrollY>400);});
+</script>
+
+</body>
+</html>
