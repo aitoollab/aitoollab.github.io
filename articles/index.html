@@ -21,18 +21,6 @@
     <meta property="og:site_name" content="AiToollab">
     <meta property="og:locale" content="zh_CN">
 
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="AI副业情报｜所有文章列表">
-    <meta name="twitter:description" content="AiToollab所有AI副业实战文章，持续更新。">
-    <meta name="twitter:image" content="https://www.aitoollab.top/og-articles.jpg">
-    <meta name="DC.title" content="AI副业情报｜所有文章列表">
-    <meta name="DC.creator" content="AiToollab">
-    <meta name="DC.subject" content="AI副业, 副业变现, AI工具, 提示词教程">
-    <meta name="DC.description" content="AiToollab所有AI副业实战文章，包括副业方向、变现路径、工具推荐、提示词教程等。持续更新。">
-    <meta name="DC.publisher" content="AiToollab">
-    <meta name="DC.date" content="2026-04-18">
-    <meta name="DC.language" content="zh-CN">
-
     <style>
         :root {
             --bg: #0d1117;
@@ -41,8 +29,9 @@
             --text: #e6edf3;
             --muted: #8b949e;
             --accent: #58a6ff;
+            --blue: #58a6ff;
+            --orange: #f97316;
             --green: #3fb950;
-            --purple: #a371f7;
         }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -74,19 +63,90 @@
         }
         .back-link:hover { color: var(--accent); text-decoration: none; }
 
-        .section-title {
-            font-size: 18px;
-            color: var(--green);
-            margin-bottom: 20px;
-            padding-bottom: 10px;
+        .nav-tabs {
+            display: flex;
+            gap: 4px;
+            margin-bottom: 40px;
             border-bottom: 1px solid var(--border);
+            padding-bottom: 0;
+        }
+        .nav-tab {
+            padding: 10px 20px;
+            color: var(--muted);
+            font-size: 14px;
+            border-bottom: 2px solid transparent;
+            margin-bottom: -1px;
+            transition: all 0.2s;
+        }
+        .nav-tab:hover { color: var(--text); text-decoration: none; }
+        .nav-tab.active {
+            color: var(--accent);
+            border-bottom-color: var(--accent);
+        }
+
+        /* 三栏入口 */
+        .section-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin-bottom: 48px;
+        }
+        .section-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 24px 20px;
+            text-align: center;
+            transition: border-color 0.2s, transform 0.2s;
+            cursor: pointer;
+        }
+        .section-card:hover {
+            border-color: var(--card-accent);
+            transform: translateY(-2px);
+        }
+        .section-card.seo { --card-accent: var(--blue); }
+        .section-card.news { --card-accent: var(--orange); }
+        .section-card.cases { --card-accent: var(--green); }
+
+        .section-card .icon {
+            font-size: 32px;
+            margin-bottom: 12px;
+        }
+        .section-card h3 {
+            font-size: 16px;
+            margin-bottom: 6px;
+            color: var(--card-accent);
+        }
+        .section-card p {
+            font-size: 13px;
+            color: var(--muted);
+            margin-bottom: 12px;
+        }
+        .section-card .count {
+            display: inline-block;
+            background: rgba(255,255,255,0.06);
+            color: var(--muted);
+            font-size: 12px;
+            padding: 2px 10px;
+            border-radius: 20px;
+        }
+
+        .divider {
+            border: none;
+            border-top: 1px solid var(--border);
+            margin: 40px 0;
+        }
+
+        .recent-label {
+            font-size: 14px;
+            color: var(--muted);
+            margin-bottom: 20px;
         }
 
         .article-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
             gap: 16px;
-            margin-bottom: 40px;
         }
 
         .article-card {
@@ -119,18 +179,13 @@
             color: var(--muted);
         }
         .article-card .card-tag {
-            background: rgba(88,166,255,0.12);
-            color: var(--accent);
             padding: 2px 8px;
             border-radius: 4px;
             font-size: 12px;
         }
-
-        .empty-state {
-            text-align: center;
-            padding: 60px 20px;
-            color: var(--muted);
-        }
+        .article-card .card-tag.blue { background: rgba(88,166,255,0.12); color: var(--blue); }
+        .article-card .card-tag.orange { background: rgba(249,115,22,0.12); color: var(--orange); }
+        .article-card .card-tag.green { background: rgba(63,185,80,0.12); color: var(--green); }
 
         footer {
             text-align: center;
@@ -140,34 +195,26 @@
             font-size: 14px;
         }
 
-        @media (max-width: 600px) {
+        @media (max-width: 700px) {
+            .section-cards { grid-template-columns: 1fr; }
             .article-grid { grid-template-columns: 1fr; }
             .header h1 { font-size: 22px; }
+            .nav-tabs { overflow-x: auto; }
         }
     </style>
 
     <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
     {
-      "@type": "WebPage",
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
       "name": "AI副业情报",
-      "description": "AiToollab所有AI副业实战文章，包括副业方向、变现路径、工具推荐、提示词教程等。持续更新。",
+      "description": "AiToollab所有AI副业实战文章，包括副业方向、变现路径、工具推荐、提示词教程等。",
       "url": "https://www.aitoollab.top/articles/",
-      "author": {
-        "@type": "Person",
-        "name": "AiToollab",
-        "url": "https://github.com/AiToollab"
-      },
       "publisher": {
-        "@type": "Person",
+        "@type": "Organization",
         "name": "AiToollab"
-      },
-      "dateModified": "2026-04-24T00:00:00+08:00"
+      }
     }
-  ]
-}
     </script>
 </head>
 <body>
@@ -180,7 +227,37 @@
 <div class="container">
     <a href="/" class="back-link">← 返回首页</a>
 
-    <h2 class="section-title">💡 全部文章</h2>
+    <nav class="nav-tabs">
+        <a href="/articles/" class="nav-tab active">全部</a>
+        <a href="/articles/seo/" class="nav-tab">💡 教程攻略</a>
+        <a href="/articles/news/" class="nav-tab">🔥 热点追踪</a>
+        <a href="/articles/cases/" class="nav-tab">💰 赚钱案例</a>
+    </nav>
+
+    <div class="section-cards">
+        <a href="/articles/seo/" class="section-card seo">
+            <div class="icon">💡</div>
+            <h3>教程攻略</h3>
+            <p>具体工具用法、操作步骤</p>
+            <span class="count">12篇</span>
+        </a>
+        <a href="/articles/news/" class="section-card news">
+            <div class="icon">🔥</div>
+            <h3>热点追踪</h3>
+            <p>GitHub趋势 · 新工具 · 新动态</p>
+            <span class="count">2篇</span>
+        </a>
+        <a href="/articles/cases/" class="section-card cases">
+            <div class="icon">💰</div>
+            <h3>赚钱案例</h3>
+            <p>真实故事 · 收入数据 · 复制路径</p>
+            <span class="count">8篇</span>
+        </a>
+    </div>
+
+    <hr class="divider">
+
+    <div class="recent-label">最新文章</div>
 
     <div class="article-grid">
 
@@ -188,9 +265,9 @@
             <div class="card-title">
                 <a href="/ai-medical-bill-repricing/">帮人审核医疗账单，收费1美元：一个大厂员工发现的AI微SaaS秘密</a>
             </div>
-            <div class="card-desc">处理成本约10美分，收费1美元，60倍利润。Hacker News上的真实案例：如何用AI把「医疗账单谈判」这个高利润服务做成$1微SaaS。</div>
+            <div class="card-desc">处理成本约10美分，收费1美元，60倍利润。Hacker News上的真实案例。</div>
             <div class="card-meta">
-                <span class="card-tag">新</span>
+                <span class="card-tag green">💰案例</span>
                 <span>2026-04-29</span>
                 <span>约3500字</span>
             </div>
@@ -200,9 +277,9 @@
             <div class="card-title">
                 <a href="/nanobot-side-hustle/">nanobot：超轻量个人AI智能体，GitHub 41k星背后的3种副业玩法</a>
             </div>
-            <div class="card-desc">HKUDS开源nanobot：Ultra-Lightweight Personal AI Agent，41k星。实测体验+3种普通人可复制的副业思路，从0开始的具体步骤。</div>
+            <div class="card-desc">HKUDS开源nanobot：Ultra-Lightweight Personal AI Agent，41k星。实测体验+3种副业思路。</div>
             <div class="card-meta">
-                <span class="card-tag">新</span>
+                <span class="card-tag orange">🔥热点</span>
                 <span>2026-04-28</span>
                 <span>约1200字</span>
             </div>
@@ -212,9 +289,9 @@
             <div class="card-title">
                 <a href="/ai-agent-customization-service/">用开源AI Agent项目做定制服务：普通人从0到月入1万的完整路径</a>
             </div>
-            <div class="card-desc">GitHub 40K星项目career-ops、77K星项目autoresearch能赚钱吗？实测验证：AI Agent定制服务是2026年最适合普通人的副业方向。</div>
+            <div class="card-desc">GitHub 40K星项目实测验证：AI Agent定制服务是2026年最适合普通人的副业方向。</div>
             <div class="card-meta">
-                <span class="card-tag">新</span>
+                <span class="card-tag green">💰案例</span>
                 <span>2026-04-27</span>
                 <span>约2500字</span>
             </div>
@@ -224,9 +301,9 @@
             <div class="card-title">
                 <a href="/caveman-side-hustle/">洞穴人的逆袭：GitHub 47k星项目揭示的AI副业新方向</a>
             </div>
-            <div class="card-desc">从caveman项目看AI副业机会：token优化已成为新战场。3种变现路径分析，附从0到月入1万的具体步骤。</div>
+            <div class="card-desc">从caveman项目看AI副业机会：token优化已成为新战场。3种变现路径分析。</div>
             <div class="card-meta">
-                <span class="card-tag">新</span>
+                <span class="card-tag orange">🔥热点</span>
                 <span>2026-04-28</span>
                 <span>约1500字</span>
             </div>
@@ -236,9 +313,9 @@
             <div class="card-title">
                 <a href="/cursor-side-hustle/">Cursor AI副业教程｜不用会编程也能用AI编程工具赚钱的3种方法</a>
             </div>
-            <div class="card-desc">实测3种方法帮人建站+卖模板，2周赚到¥3500。不需要会编程，只需要会用自然语言指挥AI。包含踩坑提醒和具体接单渠道。</div>
+            <div class="card-desc">实测3种方法帮人建站+卖模板，2周赚到¥3500。不需要会编程。</div>
             <div class="card-meta">
-                <span class="card-tag">新</span>
+                <span class="card-tag blue">💡教程</span>
                 <span>2026-04-26</span>
                 <span>约1100字</span>
             </div>
@@ -248,9 +325,9 @@
             <div class="card-title">
                 <a href="/gumroad-ai-side-hustle/">他在Gumroad上卖AI提示词，月入$2000：完整复盘</a>
             </div>
-            <div class="card-desc">一个普通人怎么在Gumroad上卖AI提示词，月入2000美元？从选品、定价到流量获取的真实过程复盘。</div>
+            <div class="card-desc">一个普通人怎么在Gumroad上卖AI提示词，月入2000美元？从选品到流量。</div>
             <div class="card-meta">
-                <span class="card-tag">新</span>
+                <span class="card-tag green">💰案例</span>
                 <span>2026-04-26</span>
                 <span>约2000字</span>
             </div>
@@ -260,9 +337,9 @@
             <div class="card-title">
                 <a href="/autoresearch-ai-research-agent/">Karpathy开源AutoResearch：让AI自己搞研究，7天76k星刷屏GitHub</a>
             </div>
-            <div class="card-desc">Andrej Karpathy新作：让AI agent自动跑研究实验，6天76k星。实测体验+3种普通人可用的副业思路。</div>
+            <div class="card-desc">Andrej Karpathy新作：让AI agent自动跑研究实验。实测体验+3种副业思路。</div>
             <div class="card-meta">
-                <span class="card-tag">新</span>
+                <span class="card-tag green">💰案例</span>
                 <span>2026-04-26</span>
                 <span>约1400字</span>
             </div>
@@ -272,9 +349,9 @@
             <div class="card-title">
                 <a href="/claude-code-token-saving/">省Token就是省钱：穴居人说话法让我每月少花60%API费</a>
             </div>
-            <div class="card-desc">GitHub 45k星神技：用穴居人说话法省65% Token费用。附实测数据，从每月¥847降到¥295，亲测有效。</div>
+            <div class="card-desc">GitHub 45k星神技：用穴居人说话法省65% Token费用。附实测数据。</div>
             <div class="card-meta">
-                <span class="card-tag">新</span>
+                <span class="card-tag blue">💡教程</span>
                 <span>2026-04-25</span>
                 <span>约1200字</span>
             </div>
@@ -284,9 +361,9 @@
             <div class="card-title">
                 <a href="/ai-startup-100/">$100 AI创业实验追踪：7个AI agent谁能跑通赚钱闭环？</a>
             </div>
-            <div class="card-desc">Day1结果：Kimi建了两个项目，Gemini一天写了104篇博客。普通人能复制的3个教训。持续追踪12周。</div>
+            <div class="card-desc">Day1结果：Kimi建了两个项目，Gemini一天写了104篇博客。持续追踪12周。</div>
             <div class="card-meta">
-                <span class="card-tag">新</span>
+                <span class="card-tag green">💰案例</span>
                 <span>2026-04-24</span>
                 <span>约1800字</span>
             </div>
@@ -298,7 +375,7 @@
             </div>
             <div class="card-desc">从0开始，照着做就能赚到第一笔钱。包含具体步骤、实测工具和变现路径。</div>
             <div class="card-meta">
-                <span class="card-tag">主文</span>
+                <span class="card-tag blue">💡教程</span>
                 <span>2026-04-20</span>
                 <span>约3500字</span>
             </div>
@@ -308,9 +385,9 @@
             <div class="card-title">
                 <a href="/multi-agent-side-hustle/">Multi-Agent多智能体副业：2026年AI副业新风向</a>
             </div>
-            <div class="card-desc">5个Multi-Agent副业方向+3大主流框架对比+从0搭建教程。crewAI、AutoGen完整指南。</div>
+            <div class="card-desc">5个Multi-Agent副业方向+3大主流框架对比+从0搭建教程。</div>
             <div class="card-meta">
-                <span class="card-tag">新</span>
+                <span class="card-tag blue">💡教程</span>
                 <span>2026-04-20</span>
                 <span>约3000字</span>
             </div>
@@ -320,9 +397,9 @@
             <div class="card-title">
                 <a href="/ai-digital-products-passive-income/">AI数字产品副业：从提示词模板到月入过万</a>
             </div>
-            <div class="card-desc">5种高变现数字产品类型+零成本制作方法+Gumroad/小红书/知识星球平台选择。</div>
+            <div class="card-desc">5种高变现数字产品类型+零成本制作方法+平台选择。</div>
             <div class="card-meta">
-                <span class="card-tag">新</span>
+                <span class="card-tag green">💰案例</span>
                 <span>2026-04-20</span>
                 <span>约2800字</span>
             </div>
@@ -332,9 +409,9 @@
             <div class="card-title">
                 <a href="/local-business-ai-agent/">为本地商家搭建AI智能体：月入8000+的蓝海副业</a>
             </div>
-            <div class="card-desc">无需编程，帮商家配置AI客服/预约助手/营销系统。单次搭建费1000-3000元。</div>
+            <div class="card-desc">无需编程，帮商家配置AI客服/预约助手/营销系统。单次1000-3000元。</div>
             <div class="card-meta">
-                <span class="card-tag">新</span>
+                <span class="card-tag blue">💡教程</span>
                 <span>2026-04-20</span>
                 <span>约3100字</span>
             </div>
@@ -344,9 +421,9 @@
             <div class="card-title">
                 <a href="/ai-tools/">AI变现工具大全｜2026年普通人可用的AI工具清单</a>
             </div>
-            <div class="card-desc">收录30+款实测有效的AI变现工具，覆盖内容创作、编程自动化、数据分析等12大场景。</div>
+            <div class="card-desc">收录30+款实测有效的AI变现工具，覆盖12大场景。</div>
             <div class="card-meta">
-                <span class="card-tag">工具导航</span>
+                <span class="card-tag blue">💡教程</span>
                 <span>2026-04-19</span>
                 <span>30+工具</span>
             </div>
@@ -356,11 +433,11 @@
             <div class="card-title">
                 <a href="/prompt-pack/">AI副业提示词全家桶｜50+可直接使用的AI副业提示词</a>
             </div>
-            <div class="card-desc">覆盖副业选择、变现路径、内容创作、数据分析。ChatGPT/Claude通用。一次性买断，永久更新。</div>
+            <div class="card-desc">覆盖副业选择、变现路径、内容创作、数据分析。一次性买断，永久更新。</div>
             <div class="card-meta">
-                <span class="card-tag">¥39</span>
+                <span class="card-tag green">💰变现</span>
                 <span>2026-04-18</span>
-                <span>50+提示词</span>
+                <span>¥39</span>
             </div>
         </div>
 

@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://www.aitoollab.top/articles/cases/">
+    <link rel="alternate" hreflang="x-default" href="https://www.aitoollab.top/articles/cases/">
+    <link rel="alternate" hreflang="zh-CN" href="https://www.aitoollab.top/articles/cases/">
+
+    <title>AI赚钱案例｜真实副业变现故事和方法</title>
+    <meta name="description" content="真实AI副业赚钱案例：具体人怎么赚到第一笔钱，时间投入多少，路径是什么。包含月入$2000的Gumroad店主、$1微SaaS等。">
+    <meta name="robots" content="index, follow">
+    <meta name="ai-content" content="allowed">
+
+    <meta property="og:title" content="AI赚钱案例｜真实副业变现故事和方法">
+    <meta property="og:image" content="https://www.aitoollab.top/og-articles.jpg">
+    <meta property="og:description" content="真实AI副业赚钱案例：具体人怎么赚到第一笔钱，时间投入多少，路径是什么。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.aitoollab.top/articles/cases/">
+
+    <style>
+        :root {
+            --bg: #0d1117;
+            --card: #161b22;
+            --border: #30363d;
+            --text: #e6edf3;
+            --muted: #8b949e;
+            --accent: #3fb950;
+            --green: #3fb950;
+            --purple: #a371f7;
+            --section-color: #3fb950;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.8;
+            font-size: 16px;
+        }
+        a { color: var(--accent); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        .header {
+            background: linear-gradient(135deg, #0d1117 0%, #1a2a1a 100%);
+            border-bottom: 1px solid var(--border);
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .header .badge {
+            display: inline-block;
+            background: rgba(63,185,80,0.15);
+            color: var(--section-color);
+            font-size: 12px;
+            padding: 4px 12px;
+            border-radius: 20px;
+            margin-bottom: 12px;
+            border: 1px solid rgba(63,185,80,0.3);
+        }
+        .header h1 { font-size: 28px; margin-bottom: 8px; color: var(--text); }
+        .header p { color: var(--muted); font-size: 14px; }
+
+        .container { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
+
+        .nav-tabs {
+            display: flex;
+            gap: 4px;
+            margin-bottom: 32px;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 0;
+        }
+        .nav-tab {
+            padding: 10px 20px;
+            color: var(--muted);
+            font-size: 14px;
+            border-bottom: 2px solid transparent;
+            margin-bottom: -1px;
+            transition: all 0.2s;
+        }
+        .nav-tab:hover { color: var(--text); text-decoration: none; }
+        .nav-tab.active {
+            color: var(--section-color);
+            border-bottom-color: var(--section-color);
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 24px;
+            color: var(--muted);
+            font-size: 14px;
+        }
+        .back-link:hover { color: var(--accent); text-decoration: none; }
+
+        .section-label {
+            font-size: 13px;
+            color: var(--section-color);
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .section-label::before {
+            content: '';
+            display: inline-block;
+            width: 3px;
+            height: 14px;
+            background: var(--section-color);
+            border-radius: 2px;
+        }
+
+        .article-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+            gap: 16px;
+        }
+
+        .article-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 20px;
+            transition: border-color 0.2s;
+        }
+        .article-card:hover { border-color: var(--accent); }
+        .article-card .card-title {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--text);
+            line-height: 1.4;
+        }
+        .article-card .card-title a { color: var(--text); }
+        .article-card .card-title a:hover { color: var(--accent); text-decoration: none; }
+        .article-card .card-desc {
+            font-size: 14px;
+            color: var(--muted);
+            margin-bottom: 12px;
+            line-height: 1.6;
+        }
+        .article-card .card-meta {
+            display: flex;
+            gap: 12px;
+            font-size: 12px;
+            color: var(--muted);
+        }
+        .article-card .card-tag {
+            background: rgba(63,185,80,0.12);
+            color: var(--accent);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+        }
+
+        .cta-box {
+            background: rgba(63,185,80,0.08);
+            border: 1px solid rgba(63,185,80,0.25);
+            border-radius: 12px;
+            padding: 24px;
+            margin-top: 32px;
+            text-align: center;
+        }
+        .cta-box h3 { color: var(--section-color); margin-bottom: 8px; font-size: 18px; }
+        .cta-box p { color: var(--muted); font-size: 14px; margin-bottom: 16px; }
+        .cta-box a {
+            display: inline-block;
+            background: var(--section-color);
+            color: #000;
+            padding: 10px 24px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+        .cta-box a:hover { text-decoration: none; opacity: 0.9; }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 1px solid var(--border);
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        @media (max-width: 600px) {
+            .article-grid { grid-template-columns: 1fr; }
+            .header h1 { font-size: 22px; }
+            .nav-tabs { overflow-x: auto; }
+        }
+    </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "AI赚钱案例",
+      "description": "真实AI副业赚钱案例：具体人怎么赚到第一笔钱，时间投入多少，路径是什么。",
+      "url": "https://www.aitoollab.top/articles/cases/",
+      "publisher": {
+        "@type": "Organization",
+        "name": "AiToollab"
+      }
+    }
+    </script>
+</head>
+<body>
+
+<header class="header">
+    <div class="badge">💰 赚钱案例</div>
+    <h1>AI赚钱案例</h1>
+    <p>真实副业故事 · 具体收入数据 · 可复制路径</p>
+</header>
+
+<div class="container">
+    <a href="/articles/" class="back-link">← 返回文章总览</a>
+
+    <nav class="nav-tabs">
+        <a href="/articles/" class="nav-tab">全部</a>
+        <a href="/articles/seo/" class="nav-tab">💡 教程攻略</a>
+        <a href="/articles/news/" class="nav-tab">🔥 热点追踪</a>
+        <a href="/articles/cases/" class="nav-tab active">💰 赚钱案例</a>
+    </nav>
+
+    <div class="section-label">共8篇</div>
+
+    <div class="article-grid">
+
+        <div class="article-card">
+            <div class="card-title">
+                <a href="/ai-medical-bill-repricing/">帮人审核医疗账单，收费1美元：一个大厂员工发现的AI微SaaS秘密</a>
+            </div>
+            <div class="card-desc">处理成本约10美分，收费1美元，60倍利润。Hacker News上的真实案例：如何用AI把「医疗账单谈判」做成$1微SaaS。</div>
+            <div class="card-meta">
+                <span class="card-tag">案例</span>
+                <span>2026-04-29</span>
+                <span>约3500字</span>
+            </div>
+        </div>
+
+        <div class="article-card">
+            <div class="card-title">
+                <a href="/ai-startup-100/">$100 AI创业实验追踪：7个AI agent谁能跑通赚钱闭环？</a>
+            </div>
+            <div class="card-desc">Day1结果：Kimi建了两个项目，Gemini一天写了104篇博客。普通人能复制的3个教训。持续追踪12周。</div>
+            <div class="card-meta">
+                <span class="card-tag">追踪</span>
+                <span>2026-04-24</span>
+                <span>约1800字</span>
+            </div>
+        </div>
+
+        <div class="article-card">
+            <div class="card-title">
+                <a href="/gumroad-ai-side-hustle/">他在Gumroad上卖AI提示词，月入$2000：完整复盘</a>
+            </div>
+            <div class="card-desc">一个普通人怎么在Gumroad上卖AI提示词，月入2000美元？从选品、定价到流量获取的真实过程复盘。</div>
+            <div class="card-meta">
+                <span class="card-tag">案例</span>
+                <span>2026-04-26</span>
+                <span>约2000字</span>
+            </div>
+        </div>
+
+        <div class="article-card">
+            <div class="card-title">
+                <a href="/ai-agent-customization-service/">用开源AI Agent项目做定制服务：普通人从0到月入1万的完整路径</a>
+            </div>
+            <div class="card-desc">GitHub 40K星项目career-ops、77K星项目autoresearch能赚钱吗？实测验证：AI Agent定制服务是2026年最适合普通人的副业方向。</div>
+            <div class="card-meta">
+                <span class="card-tag">案例</span>
+                <span>2026-04-27</span>
+                <span>约2500字</span>
+            </div>
+        </div>
+
+        <div class="article-card">
+            <div class="card-title">
+                <a href="/ai-digital-products-passive-income/">AI数字产品副业：从提示词模板到月入过万</a>
+            </div>
+            <div class="card-desc">5种高变现数字产品类型+零成本制作方法+Gumroad/小红书/知识星球平台选择。</div>
+            <div class="card-meta">
+                <span class="card-tag">案例</span>
+                <span>2026-04-20</span>
+                <span>约2800字</span>
+            </div>
+        </div>
+
+        <div class="article-card">
+            <div class="card-title">
+                <a href="/autoresearch-ai-research-agent/">Karpathy开源AutoResearch：让AI自己搞研究，7天76k星刷屏GitHub</a>
+            </div>
+            <div class="card-desc">Andrej Karpathy新作：让AI agent自动跑研究实验，6天76k星。实测体验+3种普通人可用的副业思路。</div>
+            <div class="card-meta">
+                <span class="card-tag">案例</span>
+                <span>2026-04-26</span>
+                <span>约1400字</span>
+            </div>
+        </div>
+
+        <div class="article-card">
+            <div class="card-title">
+                <a href="/xhs-headlines/">AI小红书标题生成｜帮内容创作者提升点击率的提示词</a>
+            </div>
+            <div class="card-desc">实测有效的小红书爆款标题提示词，直接可用。适合做小红书内容副业的人。</div>
+            <div class="card-meta">
+                <span class="card-tag">工具</span>
+                <span>2026-04-18</span>
+                <span>约600字</span>
+            </div>
+        </div>
+
+        <div class="article-card">
+            <div class="card-title">
+                <a href="/xiaohongshu-side-hustle/">小红书AI副业：用AI工具做小红书的完整教程</a>
+            </div>
+            <div class="card-desc">用AI工具提升小红书内容生产效率：从选题到文案，全流程AI辅助。实测有效的方法。</div>
+            <div class="card-meta">
+                <span class="card-tag">案例</span>
+                <span>2026-04-18</span>
+                <span>约1300字</span>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="cta-box">
+        <h3>想系统学习AI副业方法？</h3>
+        <p>我整理了一套完整的AI副业提示词包，覆盖选方向、做内容、搞流量全流程</p>
+        <a href="/prompt-pack/">查看提示词包 ¥39 →</a>
+    </div>
+</div>
+
+<footer>
+    <a href="/" style="color: var(--accent);">AiToollab</a> · 持续更新
+</footer>
+
+</body>
+</html>

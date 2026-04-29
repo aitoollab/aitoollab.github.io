@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://www.aitoollab.top/articles/seo/">
+    <link rel="alternate" hreflang="x-default" href="https://www.aitoollab.top/articles/seo/">
+    <link rel="alternate" hreflang="zh-CN" href="https://www.aitoollab.top/articles/seo/">
+
+    <title>AI副业教程｜SEO实战文章列表</title>
+    <meta name="description" content="AI副业实战教程文章，覆盖ChatGPT/Cursor/Claude用法、提示词技巧、Multi-Agent搭建等具体技能。持续更新。">
+    <meta name="robots" content="index, follow">
+    <meta name="ai-content" content="allowed">
+
+    <meta property="og:title" content="AI副业教程｜SEO实战文章列表">
+    <meta property="og:image" content="https://www.aitoollab.top/og-articles.jpg">
+    <meta property="og:description" content="AI副业实战教程，覆盖具体工具用法和操作步骤。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.aitoollab.top/articles/seo/">
+
+    <style>
+        :root {
+            --bg: #0d1117;
+            --card: #161b22;
+            --border: #30363d;
+            --text: #e6edf3;
+            --muted: #8b949e;
+            --accent: #58a6ff;
+            --green: #3fb950;
+            --purple: #a371f7;
+            --section-color: #58a6ff;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.8;
+            font-size: 16px;
+        }
+        a { color: var(--accent); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        .header {
+            background: linear-gradient(135deg, #0d1117 0%, #1a1f35 100%);
+            border-bottom: 1px solid var(--border);
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .header .badge {
+            display: inline-block;
+            background: rgba(88,166,255,0.15);
+            color: var(--section-color);
+            font-size: 12px;
+            padding: 4px 12px;
+            border-radius: 20px;
+            margin-bottom: 12px;
+            border: 1px solid rgba(88,166,255,0.3);
+        }
+        .header h1 { font-size: 28px; margin-bottom: 8px; color: var(--text); }
+        .header p { color: var(--muted); font-size: 14px; }
+
+        .container { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
+
+        .nav-tabs {
+            display: flex;
+            gap: 4px;
+            margin-bottom: 32px;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 0;
+        }
+        .nav-tab {
+            padding: 10px 20px;
+            color: var(--muted);
+            font-size: 14px;
+            border-bottom: 2px solid transparent;
+            margin-bottom: -1px;
+            transition: all 0.2s;
+        }
+        .nav-tab:hover { color: var(--text); text-decoration: none; }
+        .nav-tab.active {
+            color: var(--section-color);
+            border-bottom-color: var(--section-color);
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 24px;
+            color: var(--muted);
+            font-size: 14px;
+        }
+        .back-link:hover { color: var(--accent); text-decoration: none; }
+
+        .section-label {
+            font-size: 13px;
+            color: var(--section-color);
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .section-label::before {
+            content: '';
+            display: inline-block;
+            width: 3px;
+            height: 14px;
+            background: var(--section-color);
+            border-radius: 2px;
+        }
+
+        .article-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+            gap: 16px;
+        }
+
+        .article-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 20px;
+            transition: border-color 0.2s;
+        }
+        .article-card:hover { border-color: var(--accent); }
+        .article-card .card-title {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--text);
+            line-height: 1.4;
+        }
+        .article-card .card-title a { color: var(--text); }
+        .article-card .card-title a:hover { color: var(--accent); text-decoration: none; }
+        .article-card .card-desc {
+            font-size: 14px;
+            color: var(--muted);
+            margin-bottom: 12px;
+            line-height: 1.6;
+        }
+        .article-card .card-meta {
+            display: flex;
+            gap: 12px;
+            font-size: 12px;
+            color: var(--muted);
+        }
+        .article-card .card-tag {
+            background: rgba(88,166,255,0.12);
+            color: var(--accent);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 1px solid var(--border);
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        @media (max-width: 600px) {
+            .article-grid { grid-template-columns: 1fr; }
+            .header h1 { font-size: 22px; }
+            .nav-tabs { overflow-x: auto; }
+        }
+    </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "AI副业教程列表",
+      "description": "AI副业实战教程文章，覆盖ChatGPT、Claude、Cursor等工具的具体用法。",
+      "url": "https://www.aitoollab.top/articles/seo/",
+      "publisher": {
+        "@type": "Organization",
+        "name": "AiToollab"
+      }
+    }
+    </script>
+</head>
+<body>
+
+<header class="header">
+    <div class="badge">📚 教程攻略</div>
+    <h1>AI副业教程</h1>
+    <p>具体工具用法、实战步骤、提示词技巧</p>
+</header>
+
+<div class="container">
+    <a href="/articles/" class="back-link">← 返回文章总览</a>
+
+    <nav class="nav-tabs">
+        <a href="/articles/" class="nav-tab">全部</a>
+        <a href="/articles/seo/" class="nav-tab active">💡 教程攻略</a>
+        <a href="/articles/news/" class="nav-tab">🔥 热点追踪</a>
+        <a href="/articles/cases/" class="nav-tab">💰 赚钱案例</a>
+    </nav>
+
+    <div class="section-label">共12篇</div>
+
+    <div class="article-grid">
+
+        <div class="article-card">
+            <div class="card-title">
+                <a href="/ai-side-hustle-guide/">普通人如何用AI副业赚钱？2026完整实战路线图</a>
+            </div>
+            <div class="card-desc">从0开始，照着做就能赚到第一笔钱。包含具体步骤、实测工具和变现路径。</div>
+            <div class="card-meta">
+                <span class="card-tag">主文</span>
+                <span>2026-04-20</span>
+                <span>约3500字</span>
+            </div>
+        </div>
+
+        <div class="article-card">
+            <div class="card-title">
+                <a href="/ai-tools/">AI变现工具大全｜2026年普通人可用的AI工具清单</a>
+            </div>
+            <div class="card-desc">收录30+款实测有效的AI变现工具，覆盖内容创作、编程自动化、数据分析等12大场景。</div>
+            <div class="card-meta">
+                <span class="card-tag">工具导航</span>
+                <span>2026-04-19</span>
+                <span>30+工具</span>
+            </div>
+        </div>
+
+        <div class="article-card">
+            <div class="card-title">
+                <a href="/cursor-side-hustle/">Cursor AI副业教程｜不用会编程也能用AI编程工具赚钱的3种方法</a>
+            </div>
+            <div class="card-desc">实测3种方法帮人建站+卖模板，2周赚到¥3500。不需要会编程，只需要会用自然语言指挥AI。</div>
+            <div class="card-meta">
+                <span>2026-04-26</span>
+                <span>约1100字</span>
+            </div>
+        </div>
+
+        <div class="article-card">
+            <div class="card-title">
+                <a href="/multi-agent-side-hustle/">Multi-Agent多智能体副业：2026年AI副业新风向</a>
+            </div>
+            <div class="card-desc">5个Multi-Agent副业方向+3大主流框架对比+从0搭建教程。crewAI、AutoGen完整指南。</div>
+            <div class="card-meta">
+                <span>2026-04-20</span>
+                <span>约3000字</span>
+            </div>
+        </div>
+
+        <div class="article-card">
+            <div class="card-title">
+                <a href="/local-business-ai-agent/">为本地商家搭建AI智能体：月入8000+的蓝海副业</a>
+            </div>
+            <div class="card-desc">无需编程，帮商家配置AI客服/预约助手/营销系统。单次搭建费1000-3000元。</div>
+            <div class="card-meta">
+                <span>2026-04-20</span>
+                <span>约3100字</span>
+            </div>
+        </div>
+
+        <div class="article-card">
+            <div class="card-title">
+                <a href="/claude-code-token-saving/">省Token就是省钱：穴居人说话法让我每月少花60%API费</a>
+            </div>
+            <div class="card-desc">GitHub 45k星神技：用穴居人说话法省65% Token费用。附实测数据，从每月¥847降到¥295。</div>
+            <div class="card-meta">
+                <span>2026-04-25</span>
+                <span>约1200字</span>
+            </div>
+        </div>
+
+        <div class="article-card">
+            <div class="card-title">
+                <a href="/chatgpt-earn-money/">ChatGPT副业变现教程｜普通人用ChatGPT赚钱的6种方法</a>
+            </div>
+            <div class="card-desc">实测6种方法，从内容创作到编程辅助。包含具体步骤和避坑提示。</div>
+            <div class="card-meta">
+                <span>2026-04-18</span>
+                <span>约2200字</span>
+            </div>
+        </div>
+
+        <div class="article-card">
+            <div class="card-title">
+                <a href="/claude-earn-money/">Claude副业变现教程｜用Claude的几种赚钱思路</a>
+            </div>
+            <div class="card-desc">深度写作、长文分析、代码审查——用Claude创造收入的实战思路。</div>
+            <div class="card-meta">
+                <span>2026-04-18</span>
+                <span>约1800字</span>
+            </div>
+        </div>
+
+        <div class="article-card">
+            <div class="card-title">
+                <a href="/ai-writing-side-hustle/">AI写作副业教程｜用AI工具高效创作内容赚钱</a>
+            </div>
+            <div class="card-desc">AI辅助写作的变现思路：从选题到发布，用AI工具提升内容生产效率。</div>
+            <div class="card-meta">
+                <span>2026-04-18</span>
+                <span>约2000字</span>
+            </div>
+        </div>
+
+        <div class="article-card">
+            <div class="card-title">
+                <a href="/notion-side-hustle/">Notion AI副业教程｜用Notion AI提升工作效率</a>
+            </div>
+            <div class="card-desc">Notion AI用法指南：知识管理、任务自动化、内容创作的实际应用。</div>
+            <div class="card-meta">
+                <span>2026-04-18</span>
+                <span>约1500字</span>
+            </div>
+        </div>
+
+        <div class="article-card">
+            <div class="card-title">
+                <a href="/resume-ai-prompts/">AI简历优化提示词｜用AI帮你改简历的提示词模板</a>
+            </div>
+            <div class="card-desc">实测有效的简历优化提示词，批量改简历服务单次50-200元。</div>
+            <div class="card-meta">
+                <span>2026-04-18</span>
+                <span>约800字</span>
+            </div>
+        </div>
+
+        <div class="article-card">
+            <div class="card-title">
+                <a href="/side-hustle-money/">AI副业赚钱方法汇总｜2026年最新实操方向</a>
+            </div>
+            <div class="card-desc">当前最有效的AI副业方向汇总，包含具体方法和入门路径。</div>
+            <div class="card-meta">
+                <span>2026-04-18</span>
+                <span>约1600字</span>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<footer>
+    <a href="/" style="color: var(--accent);">AiToollab</a> · 持续更新
+</footer>
+
+</body>
+</html>
