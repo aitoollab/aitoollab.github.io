@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeepSeek终于能「看见」了，我试了一下，差点被它的思考过程惊到</title>
+    <meta name="description" content="刚刚，DeepSeek上线了识图模式。我实际测试了一圈，发现它最厉害的的不是答案，而是思考过程——会追问、会联想、还会自我纠正。">
+    <meta name="robots" content="index, follow">
+    <meta name="ai-content" content="allowed">
+    <link rel="canonical" href="https://www.aitoollab.top/2026-04-30-deepseek-视觉模型发布/">
+    <meta property="og:title" content="DeepSeek终于能「看见」了，我试了一下，差点被它的思考过程惊到">
+    <meta property="og:description" content="刚刚，DeepSeek上线了识图模式。我实际测试了一圈，发现它最厉害的的不是答案，而是思考过程。">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.aitoollab.top/2026-04-30-deepseek-视觉模型发布/">
+    <style>
+        :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --muted: #8b949e; --accent: #f97316; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; background: var(--bg); color: var(--text); line-height: 1.9; font-size: 17px; }
+        a { color: var(--accent); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .container { max-width: 680px; margin: 0 auto; padding: 40px 20px; }
+        header { padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+        .tag { display: inline-block; background: rgba(249,115,22,0.15); color: var(--accent); font-size: 12px; padding: 4px 10px; border-radius: 6px; margin-bottom: 14px; }
+        h1 { font-size: 26px; line-height: 1.4; margin-bottom: 14px; }
+        .meta { color: var(--muted); font-size: 14px; }
+        .meta span { margin-right: 16px; }
+        .content p { margin: 20px 0; }
+        .content h2 { font-size: 20px; margin: 36px 0 16px; color: var(--text); }
+        .content blockquote { border-left: 3px solid var(--accent); padding: 12px 16px; background: rgba(255,255,255,0.04); margin: 24px 0; border-radius: 0 8px 8px 0; }
+        .content img { max-width: 100%; border-radius: 8px; margin: 20px 0; }
+        .cta { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin: 40px 0; text-align: center; }
+        .cta h3 { font-size: 18px; margin-bottom: 10px; }
+        .cta p { color: var(--muted); font-size: 14px; margin: 8px 0; }
+        .cta a { display: inline-block; background: var(--accent); color: #fff; padding: 10px 24px; border-radius: 8px; font-size: 15px; margin-top: 12px; }
+        .cta a:hover { opacity: 0.9; text-decoration: none; }
+        footer { border-top: 1px solid var(--border); padding: 30px 0; margin-top: 50px; color: var(--muted); font-size: 14px; text-align: center; }
+        .wechat-footer { background: rgba(255,255,255,0.03); border-radius: 12px; padding: 20px; margin: 30px 0; text-align: center; }
+        .wechat-footer img { width: 120px; border-radius: 8px; }
+        .wechat-footer p { color: var(--muted); font-size: 13px; margin-top: 10px; }
+    </style>
+    <script type='application/ld+json'>
+    {
+        '@context': 'https://schema.org',
+        '@type': 'Article',
+        'headline': 'DeepSeek终于能「看见」了，我试了一下，差点被它的思考过程惊到',
+        'description': '刚刚，DeepSeek上线了识图模式。我实际测试了一圈，发现它最厉害的的不是答案，而是思考过程。',
+        'datePublished': '2026-04-30',
+        'author': {'@type': 'Person', 'name': '数字生命卡兹克'}
+    }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="tag">🔥 热点速递</div>
+            <h1>DeepSeek终于能「看见」了，我试了一下，差点被它的思考过程惊到</h1>
+            <div class="meta"><span>2026-04-30</span><span>阅读大约 8 分钟</span></div>
+        </header>
+
+        <div class="content">
+            <p>事情是这样的。</p>
+
+            <p>原以为这个疯狂的AI疯狂更新应该已经告一段落了，没想到，上周才发V4的DeepSeek，突然又抛出一个更大的惊喜。</p>
+
+            <p>就在刚刚，DeepSeek上线了识图模式，显示正在灰测中。那结果会怎样呢，讨论了一整年的DeepSeek多模态能力，终于来了！</p>
+
+            <p>目前DeepSeek网页版和App更新后都有机会被灰测到，APPSO第一时间给大家进行了实测。我跟着跑了一遍，发现这件事有意思的地方，根本不在答案本身。</p>
+
+            <p>在于过程。</p>
+
+            <p>DeepSeek负责多模态的研究员陈小康在X上发文，Now, we see you，配了一张图，我们就让DeepSeek来解读一下这张图什么意思。</p>
+
+            <p>结果它能识别出这张图背后的隐喻，虽然图中没有任何关于DeepSeek的字眼，但它结合对发布者身份和图像的识别，推断出这是关于DeepSeek多模态能力的更新。</p>
+
+            <p>最后给出一句十分到位的总结</p>
+
+            <blockquote>那个看不见世界的鲸鱼，现在终于睁开眼了。</blockquote>
+
+            <p>比起回答结果，APPSO发现DeepSeek识图模式的思考过程更有意思。过去AI来看那张推特截图，大概率是老老实实描述，两只蓝色鲸鱼，左边戴眼罩，右边没戴。</p>
+
+            <p>但DeepSeek它上来就开始追问，这人是谁？他为什么发这个？鲸鱼logo代表什么？眼罩上的XX又在暗示什么？</p>
+
+            <p>这才是我们刷到一张梗图时脑子里真正发生的事。没人会先数鲸鱼有几只，我们关心的是谁在对谁说什么，用的什么潜台词。</p>
+
+            <p>而且它还会来回的自我纠正。比如它甚至一度把图中的眼罩联想到《天才突破》里卡米那的眼镜，然后自己打脸，不，这太宅男向了。等等，仔仔细细看……再换个角度……</p>
+
+            <p>前面那些推理、联想、自我纠正，都挺精彩的。但整段思考过程里最反常的部分，其实是它推理到快收尾时，忽然自己喊了个暂停，给自己开了一场小型答辩会。</p>
+
+            <blockquote>它列出三个问题自问自答，先确认客观事实，再推测事件性质，最后才做解读。DeepSeek把这个我们自己都没意识到的思维习惯，做成了识图的思考逻辑。</blockquote>
+
+            <p>就像我们平时给结论之前，脑子里也会过一遍，等等，这个前提对吗？那个假设站得住吗？万一我理解错了方向呢？</p>
+
+            <p>我们还把经典的AI测试题，数手指，抛给了DeepSeek。</p>
+
+            <p>它思考了一通，还是回答错了，中间还吐了一句，我真的是数懵了。</p>
+
+            <p>不过如果我再引导一下，它还是能够给出正确答案的。</p>
+
+            <p>另外一个经典的爱心测试，这个图之前难倒了所有AI，DeepSeek同样没能识别出来。</p>
+
+            <p>抛开这些难度较高的极限测试，初步测试下来，DeepSeek识图的准确率其实还是比较高的，不开思考模式的话甚至半秒就能给出回答。</p>
+
+            <p>比如这个电影照的识别，应该已经在数据库内了。</p>
+
+            <p>对抽象图片的理解也十分到位。</p>
+
+            <p>优衣库这个商品图的理解也没有问题。</p>
+
+            <p>不过这个识图的过程应该没有联网搜索，只能基于知识库回答，所以一些比较新的东西，就无法识别，比如苹果这个新的吉祥物Finder酱。</p>
+
+            <p>而且识图模式上传的文件格式也有限制，比如不支持HEIF格式。</p>
+
+            <p>DeepSeek识图模式上线，意味着那只鲸鱼终于睁眼了，但也许只是刚刚开始。</p>
+
+            <h2>我的感受</h2>
+
+            <p>说实话，我看到这条消息的时候，第一反应不是「又多了一个功能」，而是有点被它的思考过程打动了。</p>
+
+            <p>它不是直接给你答案，它是先追问、再联想、然后自我纠正——这套流程，是不是像极了我们面对一个复杂问题时的真实思考方式？</p>
+
+            <p>以前我们总觉得AI的回答太「干」，就是因为它跳过了中间那些「等一下，让我再想想」的犹豫环节。而DeepSeek这次的识图模式，等于是把黑箱打开了给你看。</p>
+
+            <p>这不是功能更新，这是能力升维。</p>
+
+            <p>如果你还没被灰测到，建议再等等——或者，你也去找张梗图发给它，看看它能不能读懂你的潜台词。</p>
+
+            <p>这种被AI「看透」的感觉，还是挺让人头皮发麻的。</p>
+        </div>
+
+        <div class="cta">
+            <h3>想第一时间玩到最新的AI能力？</h3>
+            <p>我整理了一份最实用的AI能力清单，包含多模态能力的正确打开方式</p>
+            <a href="https://www.aitoollab.top/prompt-pack/">👉 点击获取提示词包</a>
+        </div>
+
+        <div class="wechat-footer">
+            <p>以上，既然看到这里了，如果觉得不错，随手点个赞、在看、转发三连吧</p>
+            <p style="margin-top:8px;color:var(--accent)">如果你想第一时间收到推送，也可以给我个星标 ⭐</p>
+            <p style="margin-top:12px;font-size:12px;color:var(--muted)">谢谢你看我的文章，我们，下次再见。</p>
+        </div>
+
+        <footer>
+            <p>作者，数字生命卡兹克 | 激发大家对AI的好奇</p>
+            <p style="margin-top:8px"><a href="https://www.aitoollab.top/articles/news/">← 返回热点追踪</a></p>
+        </footer>
+    </div>
+</body>
+</html>
