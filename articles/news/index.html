@@ -4,204 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="canonical" href="https://www.aitoollab.top/articles/news/">
+    <title>🔥 热点追踪｜AiToollab</title>
+    <meta name="description" content="GitHub趋势、新工具发布、AI行业动态，第一时间追踪">
+    <meta name="robots" content="index, follow">
     <link rel="alternate" hreflang="x-default" href="https://www.aitoollab.top/articles/news/">
     <link rel="alternate" hreflang="zh-CN" href="https://www.aitoollab.top/articles/news/">
-
-    <title>AI热点追踪｜最新AI工具和副业动态</title>
-    <meta name="description" content="追踪AI最新热点：GitHub趋势项目、新上线工具、行业新动态。第一时间解读，普通人可复制的副业机会。">
-    <meta name="robots" content="index, follow">
-    <meta name="ai-content" content="allowed">
-
-    <meta property="og:title" content="AI热点追踪｜最新AI工具和副业动态">
-    <meta property="og:image" content="https://www.aitoollab.top/og-articles.jpg">
-    <meta property="og:description" content="追踪AI最新热点，第一时间解读，普通人可复制的副业机会。">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.aitoollab.top/articles/news/">
-
     <style>
-        :root {
-            --bg: #0d1117;
-            --card: #161b22;
-            --border: #30363d;
-            --text: #e6edf3;
-            --muted: #8b949e;
-            --accent: #f97316;
-            --green: #3fb950;
-            --purple: #a371f7;
-            --section-color: #f97316;
-        }
+        :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --muted: #8b949e; --accent: #f97316; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
-            background: var(--bg);
-            color: var(--text);
-            line-height: 1.8;
-            font-size: 16px;
-        }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif; background: var(--bg); color: var(--text); line-height: 1.8; font-size: 16px; }
         a { color: var(--accent); text-decoration: none; }
         a:hover { text-decoration: underline; }
 
-        .header {
-            background: linear-gradient(135deg, #0d1117 0%, #2a1f15 100%);
-            border-bottom: 1px solid var(--border);
-            padding: 40px 20px;
-            text-align: center;
-        }
-        .header .badge {
-            display: inline-block;
-            background: rgba(249,115,22,0.15);
-            color: var(--section-color);
-            font-size: 12px;
-            padding: 4px 12px;
-            border-radius: 20px;
-            margin-bottom: 12px;
-            border: 1px solid rgba(249,115,22,0.3);
-        }
-        .header h1 { font-size: 28px; margin-bottom: 8px; color: var(--text); }
-        .header p { color: var(--muted); font-size: 14px; }
+        header.page-header { text-align: center; padding: 60px 20px 40px; border-bottom: 1px solid var(--border); }
+        header.page-header h1 { font-size: 32px; margin-bottom: 12px; }
+        header.page-header .subtitle { color: var(--muted); font-size: 16px; max-width: 600px; margin: 0 auto; }
+        header.page-header .count { display: inline-block; background: rgba(255,255,255,0.06); padding: 4px 12px; border-radius: 20px; font-size: 13px; color: var(--muted); margin-top: 12px; }
 
-        .container { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
+        nav.section-nav { display: flex; justify-content: center; gap: 4px; padding: 16px 20px; border-bottom: 1px solid var(--border); background: var(--card); position: sticky; top: 0; z-index: 100; }
+        nav.section-nav a { color: var(--muted); font-size: 14px; padding: 8px 16px; border-radius: 8px; transition: all .2s; }
+        nav.section-nav a:hover { color: var(--text); background: rgba(255,255,255,0.05); text-decoration: none; }
+        nav.section-nav a.active { color: var(--text); background: rgba(37,99,235,0.2); }
+        nav.section-nav a[data-section="news"] { color: var(--accent); border: 1px solid rgba(255,255,255,0.15); }
 
-        .nav-tabs {
-            display: flex;
-            gap: 4px;
-            margin-bottom: 32px;
-            border-bottom: 1px solid var(--border);
-            padding-bottom: 0;
-        }
-        .nav-tab {
-            padding: 10px 20px;
-            color: var(--muted);
-            font-size: 14px;
-            border-bottom: 2px solid transparent;
-            margin-bottom: -1px;
-            transition: all 0.2s;
-        }
-        .nav-tab:hover { color: var(--text); text-decoration: none; }
-        .nav-tab.active {
-            color: var(--section-color);
-            border-bottom-color: var(--section-color);
-        }
-
-        .back-link {
-            display: inline-block;
-            margin-bottom: 24px;
-            color: var(--muted);
-            font-size: 14px;
-        }
-        .back-link:hover { color: var(--accent); text-decoration: none; }
-
-        .section-label {
-            font-size: 13px;
-            color: var(--section-color);
-            margin-bottom: 16px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        .section-label::before {
-            content: '';
-            display: inline-block;
-            width: 3px;
-            height: 14px;
-            background: var(--section-color);
-            border-radius: 2px;
-        }
-
-        .article-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
-            gap: 16px;
-        }
-
-        .article-card {
-            background: var(--card);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 20px;
-            transition: border-color 0.2s;
-        }
+        .container { max-width: 860px; margin: 0 auto; padding: 40px 20px; }
+        .article-grid { display: flex; flex-direction: column; gap: 16px; }
+        .article-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; transition: border-color .2s; }
         .article-card:hover { border-color: var(--accent); }
-        .article-card .card-title {
-            font-size: 16px;
-            font-weight: 600;
-            margin-bottom: 8px;
-            color: var(--text);
-            line-height: 1.4;
-        }
+        .article-card .card-title { font-size: 17px; font-weight: 600; margin-bottom: 10px; }
         .article-card .card-title a { color: var(--text); }
         .article-card .card-title a:hover { color: var(--accent); text-decoration: none; }
-        .article-card .card-desc {
-            font-size: 14px;
-            color: var(--muted);
-            margin-bottom: 12px;
-            line-height: 1.6;
-        }
-        .article-card .card-meta {
-            display: flex;
-            gap: 12px;
-            font-size: 12px;
-            color: var(--muted);
-        }
-        .article-card .card-tag {
-            background: rgba(249,115,22,0.12);
-            color: var(--accent);
-            padding: 2px 8px;
-            border-radius: 4px;
-            font-size: 12px;
-        }
+        .article-card .card-desc { color: var(--muted); font-size: 14px; margin-bottom: 12px; line-height: 1.6; }
+        .article-card .card-meta { display: flex; gap: 16px; font-size: 13px; color: var(--muted); align-items: center; }
+        .article-card .card-tag { background: rgba(255,255,255,0.06); padding: 3px 10px; border-radius: 6px; }
 
-        footer {
-            text-align: center;
-            padding: 40px 20px;
-            border-top: 1px solid var(--border);
-            color: var(--muted);
-            font-size: 14px;
-        }
+        .back-link { text-align: center; margin-top: 40px; }
+        .back-link a { color: var(--muted); font-size: 14px; }
 
-        @media (max-width: 600px) {
-            .article-grid { grid-template-columns: 1fr; }
-            .header h1 { font-size: 22px; }
-            .nav-tabs { overflow-x: auto; }
-        }
+        #back-to-top{position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;background:#2563eb;color:#fff;border:none;cursor:pointer;font-size:18px;opacity:0;transition:opacity .3s;z-index:999;pointer-events:none}
+        #back-to-top.show{opacity:.85;pointer-events:auto}
+        #back-to-top:hover{opacity:1}
+
+        @media (max-width: 600px) { header.page-header h1 { font-size: 26px; } }
     </style>
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "CollectionPage",
-      "name": "AI热点追踪",
-      "description": "追踪AI最新热点：GitHub趋势项目、新上线工具、行业新动态。第一时间解读，普通人可复制的副业机会。",
-      "url": "https://www.aitoollab.top/articles/news/",
-      "publisher": {
-        "@type": "Organization",
-        "name": "AiToollab"
-      }
-    }
-    </script>
 </head>
 <body>
 
-<header class="header">
-    <div class="badge">🔥 热点追踪</div>
-    <h1>AI热点追踪</h1>
-    <p>GitHub趋势 · 新工具 · 行业动态</p>
+<header class="page-header">
+    <h1>🔥 热点追踪</h1>
+    <p class="subtitle">GitHub趋势、新工具发布、AI行业动态，第一时间追踪</p>
+    <span class="count">3篇</span>
 </header>
 
+<nav class="section-nav">
+    <a href="/articles/seo/">💡 教程</a>
+    <a href="/articles/news/">🔥 热点</a>
+    <a href="/articles/cases/">💰 案例</a>
+    <a href="/articles/startup-100/" data-section="startup-100">🧪 实验</a>
+    <a href="/articles/" class="active">全部</a>
+</nav>
+
 <div class="container">
-    <a href="/articles/" class="back-link">← 返回文章总览</a>
-
-    <nav class="nav-tabs">
-        <a href="/articles/" class="nav-tab">全部</a>
-        <a href="/articles/seo/" class="nav-tab">💡 教程攻略</a>
-        <a href="/articles/news/" class="nav-tab active">🔥 热点追踪</a>
-        <a href="/articles/cases/" class="nav-tab">💰 赚钱案例</a>
-    </nav>
-
-    <div class="section-label">共2篇</div>
-
     <div class="article-grid">
-
         <div class="article-card">
             <div class="card-title">
                 <a href="/nanobot-side-hustle/">nanobot：超轻量个人AI智能体，GitHub 41k星背后的3种副业玩法</a>
@@ -209,11 +73,19 @@
             <div class="card-desc">HKUDS开源nanobot：Ultra-Lightweight Personal AI Agent，41k星。实测体验+3种普通人可复制的副业思路，从0开始的具体步骤。</div>
             <div class="card-meta">
                 <span class="card-tag">热点</span>
-                <span>2026-04-28</span>
-                <span>约1200字</span>
+                <span>📅 2026-04-28</span>
             </div>
         </div>
-
+        <div class="article-card">
+            <div class="card-title">
+                <a href="/autoresearch-ai-research-agent/">Karpathy开源AutoResearch：让AI自己搞研究，7天76k星刷屏GitHub</a>
+            </div>
+            <div class="card-desc">Andrej Karpathy新作：让AI agent自动跑研究实验的开源工具，6天76k星。实测教程+3种普通人可用的副业思路，AI副业新方向。</div>
+            <div class="card-meta">
+                <span class="card-tag">热点</span>
+                <span>📅 2026-04-26</span>
+            </div>
+        </div>
         <div class="article-card">
             <div class="card-title">
                 <a href="/caveman-side-hustle/">洞穴人的逆袭：GitHub 47k星项目揭示的AI副业新方向</a>
@@ -221,27 +93,20 @@
             <div class="card-desc">从caveman项目看AI副业机会：token优化已成为新战场。3种变现路径分析，附从0到月入1万的具体步骤。</div>
             <div class="card-meta">
                 <span class="card-tag">热点</span>
-                <span>2026-04-28</span>
-                <span>约1500字</span>
+                <span>📅 2026-04-28</span>
             </div>
         </div>
+    </div>
 
+    <div class="back-link">
+        <a href="/articles/">← 返回文章总览</a>
     </div>
 </div>
 
-<footer>
-    <a href="/" style="color: var(--accent);">AiToollab</a> · 持续更新
-</footer>
-
-<!-- 返回顶部按钮 -->
 <button id="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="返回顶部">↑</button>
-<style>
-#back-to-top{position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;background:#2563eb;color:#fff;border:none;cursor:pointer;font-size:18px;opacity:0;transition:opacity .3s;z-index:999;pointer-events:none}
-#back-to-top.show{opacity:.85;pointer-events:auto}
-#back-to-top:hover{opacity:1}
-</style>
 <script>
 window.addEventListener('scroll',function(){var b=document.getElementById('back-to-top');b.classList.toggle('show',window.scrollY>400);});
 </script>
+
 </body>
 </html>
