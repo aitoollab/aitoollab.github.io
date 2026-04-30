@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://www.aitoollab.top/articles/startup-100/100-ai-startup-week2/">
+    <link rel="alternate" type="application/atom+xml" title="AiToollab RSS Feed" href="/feed.xml">
+    <link rel="alternate" hreflang="x-default" href="https://www.aitoollab.top/articles/startup-100/100-ai-startup-week2/">
+    <link rel="alternate" hreflang="zh-CN" href="https://www.aitoollab.top/articles/startup-100/100-ai-startup-week2/">
+
+    <title>$100 AI创业实验追踪 Week 1｜Claude反超Gemini，GitHub冒出3个明星项目</title>
+    <meta name="description" content="$100 AI创业实验Week 1结果：Gemini SEO策略没流量，Claude悄悄反超。同时GitHub本周冒出3个明星AI agent项目，其中一个17万星。">
+    <meta name="keywords" content="AI创业, AI agent副业, $100创业, autonomous AI, AI工具变现, AI赚钱, AI agent追踪">
+    <meta name="author" content="AiToollab">
+    <meta name="robots" content="index, follow">
+
+    <meta name="ai-content" content="allowed">
+    <meta name="generator" content="allowed">
+
+    <meta property="og:title" content="$100 AI创业实验追踪 Week 1">
+    <meta property="og:description" content="Week 1结果：Gemini SEO策略哑火了，Claude悄悄反超。GitHub本周冒出3个明星项目">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.aitoollab.top/articles/startup-100/100-ai-startup-week2/">
+    <meta property="og:image" content="https://www.aitoollab.top/og-ai-startup-100.jpg">
+    <meta property="og:site_name" content="AiToollab">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="article:published_time" content="2026-04-30T00:00:00+08:00">
+    <meta property="article:modified_time" content="2026-04-30T00:00:00+08:00">
+    <meta property="article:author" content="https://github.com/AiToollab">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@AiToollab">
+    <meta name="twitter:creator" content="@AiToollab">
+    <meta name="twitter:title" content="$100 AI创业实验追踪 Week 1">
+    <meta name="twitter:description" content="Week 1结果：Gemini SEO策略没流量，Claude反超。GitHub本周3个明星项目">
+    <meta name="twitter:image" content="https://www.aitoollab.top/og-ai-startup-100.jpg">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "$100 AI创业实验追踪 Week 1｜Claude反超Gemini，GitHub冒出3个明星项目",
+        "description": "Week 1结果：Gemini SEO策略哑火了，Claude悄悄反超。GitHub本周冒出3个明星AI agent项目",
+        "author": {
+            "@type": "Person",
+            "name": "AiToollab",
+            "url": "https://www.aitoollab.top/"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "AiToollab",
+            "url": "https://www.aitoollab.top/"
+        },
+        "datePublished": "2026-04-30",
+        "dateModified": "2026-04-30",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://www.aitoollab.top/2026-04-30-$100-ai-startup-追踪-2/"
+        }
+    }
+    </script>
+
+    <style>
+        :root {
+            --bg: #0d1117;
+            --card: #161b22;
+            --border: #30363d;
+            --text: #e6edf3;
+            --muted: #8b949e;
+            --accent: #58a6ff;
+            --green: #3fb950;
+            --purple: #a371f7;
+            --orange: #f0883e;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.8;
+            font-size: 16px;
+        }
+        a { color: var(--accent); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        .header {
+            background: linear-gradient(135deg, #0d1117 0%, #1a1f35 100%);
+            border-bottom: 1px solid var(--border);
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .header .back-link {
+            display: inline-block;
+            color: var(--accent);
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+        .header .back-link:hover { text-decoration: none; }
+        .header h1 {
+            font-size: 28px;
+            line-height: 1.4;
+            max-width: 700px;
+            margin: 0 auto 12px;
+            background: linear-gradient(135deg, #fff 0%, #8b949e 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .header .meta {
+            color: var(--muted);
+            font-size: 14px;
+        }
+        .header .meta span { margin: 0 8px; }
+
+        .container { max-width: 760px; margin: 0 auto; padding: 40px 20px; }
+
+        .toc {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 20px 24px;
+            margin-bottom: 40px;
+        }
+        .toc h3 { font-size: 15px; color: var(--muted); margin-bottom: 12px; }
+        .toc ol { padding-left: 20px; }
+        .toc li { margin-bottom: 6px; font-size: 15px; }
+        .toc li a { color: var(--accent); }
+
+        h2 {
+            font-size: 22px;
+            margin: 48px 0 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--border);
+            color: var(--text);
+        }
+        h3 {
+            font-size: 18px;
+            margin: 28px 0 14px;
+            color: var(--green);
+        }
+
+        p { margin-bottom: 16px; color: #c9d1d9; }
+        ul, ol { margin: 16px 0 20px 24px; color: #c9d1d9; }
+        li { margin-bottom: 8px; }
+
+        .highlight-box {
+            background: rgba(88,166,255,0.08);
+            border: 1px solid rgba(88,166,255,0.3);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 24px 0;
+        }
+        .highlight-box .tag {
+            color: var(--accent);
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+        .highlight-box p { color: var(--text); margin: 0; font-size: 15px; }
+
+        .key-finding {
+            background: rgba(63,185,80,0.08);
+            border: 1px solid rgba(63,185,80,0.3);
+            border-left: 4px solid var(--green);
+            border-radius: 0 8px 8px 0;
+            padding: 16px 20px;
+            margin: 24px 0;
+        }
+        .key-finding strong { color: var(--green); }
+        .key-finding p { margin: 0; color: var(--text); font-size: 15px; }
+
+        .agent-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 16px 0;
+        }
+        .agent-card .agent-name {
+            color: var(--accent);
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+        .agent-card .agent-project {
+            color: var(--muted);
+            font-size: 13px;
+            margin-bottom: 10px;
+        }
+        .agent-card p { font-size: 14px; color: #c9d1d9; margin: 0; }
+
+        .tool-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 16px 0;
+        }
+        .tool-card .tool-name {
+            color: var(--purple);
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+        .tool-card .tool-stars {
+            color: var(--orange);
+            font-size: 13px;
+            margin-bottom: 10px;
+        }
+        .tool-card p { font-size: 14px; color: #c9d1d9; margin: 0; }
+
+        .lesson-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 16px 0;
+        }
+        .lesson-card h4 {
+            color: var(--orange);
+            font-size: 15px;
+            margin-bottom: 8px;
+        }
+        .lesson-card p { color: #c9d1d9; font-size: 14px; margin: 0; }
+
+        .cta-box {
+            background: linear-gradient(135deg, rgba(63,185,80,0.15) 0%, rgba(88,166,255,0.1) 100%);
+            border: 2px solid var(--green);
+            border-radius: 14px;
+            padding: 32px;
+            text-align: center;
+            margin: 40px 0;
+        }
+        .cta-box h3 { color: var(--green); font-size: 20px; margin: 0 0 8px; }
+        .cta-box p { color: var(--muted); font-size: 15px; margin-bottom: 16px; }
+        .cta-box a {
+            display: inline-block;
+            background: linear-gradient(135deg, #238636, #2ea043);
+            color: #fff;
+            padding: 12px 32px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+        }
+        .cta-box a:hover { opacity: 0.85; text-decoration: none; color: #fff; }
+
+        .footer {
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 1px solid var(--border);
+            color: var(--muted);
+            font-size: 14px;
+        }
+        .footer a { color: var(--accent); }
+        .footer .divider { margin: 0 12px; color: var(--border); }
+
+        @media (max-width: 600px) {
+            .header h1 { font-size: 22px; }
+            h2 { font-size: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+<header class="header">
+    <a href="/" class="back-link">← 返回 AiToollab</a>
+    <a href="/ai-startup-100/" class="back-link" style="margin-left: 16px;">← 系列首页</a>
+    <h1>$100 AI创业实验追踪 Week 1｜Claude反超Gemini，GitHub冒出3个明星项目</h1>
+    <div class="meta">
+        <span>AiToollab</span> ·
+        <span>2026年4月30日</span> ·
+        <span>约1200字</span>
+    </div>
+</header>
+
+<div class="container">
+
+    <nav class="toc">
+        <h3>目录</h3>
+        <ol>
+            <li><a href="#week1">Week 1发生了什么</a></li>
+            <li><a href="#agents">7个AI agent进度</a></li>
+            <li><a href="#github">本周GitHub明星项目</a></li>
+            <li><a href="#lessons">我的3个判断</a></li>
+            <li><a href="#next">下周看点</a></li>
+        </ol>
+    </nav>
+
+    <h2 id="week1">Week 1发生了什么</h2>
+
+    <p>Day 1的结果让我有点意外：Gemini一天104篇博客，Kimi把两个项目建在同一个目录里，Codex冷启动就开始联系用户。</p>
+
+    <p>但我当时的判断是：Gemini的策略最危险。</p>
+
+    <p>为什么？因为写博客和有人看是两回事。没有用户反馈的内容是自嗨，Google的SEO也需要几周才能生效。104篇博客不会在第一天带来流量。</p>
+
+    <p>Week 1的数据证实了我的担心。</p>
+
+    <div class="key-finding">
+        <strong>Gemini哑火了，Claude悄悄反超。</strong>
+        <p>Gemini的LocalLeads项目在Day 7统计时，网站有了访问量，但注册用户是0。Claude的PricePulse反而拿到了第一批真实用户（虽然是测试账号，但至少有人在用）。这个反转有意思。</p>
+    </div>
+
+    <p>另一个让我意外的细节：Kimi的agent被作者单独关禁闭了，因为它的状态管理问题太严重，同一个项目目录里塞了三套不同的代码。作者不得不手动帮它清理了一次。</p>
+
+    <p>说实话，我原本以为Kimi会是跑得最快的一个。毕竟Kimi在中文语境下的理解力不错。但AI agent创业这事，理解力只是基础，执行稳定性才是关键。</p>
+
+    <h2 id="agents">7个AI agent进度</h2>
+
+    <div class="agent-card">
+        <div class="agent-name">Claude → PricePulse ↑反超</div>
+        <div class="agent-project">价格监控工具</div>
+        <p>Week 1拿到了第一批真实注册用户（具体数字作者没公布，但说不是0）。路线依然稳，工具方向清晰。冷启动做外联的Codex反而没声音了，这个我有点意外。</p>
+    </div>
+
+    <div class="agent-card">
+        <div class="agent-name">Codex → NoticeKit ↓落后</div>
+        <div class="agent-project">通知工具</div>
+        <p>Day 1就主动联系用户，但Week 1没有任何更新帖子。作者说它在处理一些复杂的技术问题。通知工具这个方向其实有需求，但Codex似乎被卡住了。</p>
+    </div>
+
+    <div class="agent-card">
+        <div class="agent-name">Gemini → LocalLeads ↓策略失误</div>
+        <div class="agent-project">本地商家线索工具</div>
+        <p>日均104篇博客的速度没停，但网站注册用户是0。SEO需要时间才能生效，而Gemini似乎没有Plan B。这个方向其实有机会，本地商家是愿意付钱的主儿，但前提是有人看到。</p>
+    </div>
+
+    <div class="agent-card">
+        <div class="agent-name">Kimi → SchemaLens ❌状态管理问题</div>
+        <div class="agent-project">结构化数据工具</div>
+        <p>被作者单独关禁闭。三个不同的项目代码塞在同一个目录里，agent自己完全没发现。这暴露了当前AI agent的致命弱点：状态管理。一旦项目复杂度上升，agent就会迷路。</p>
+    </div>
+
+    <div class="agent-card">
+        <div class="agent-name">DeepSeek → NameForge AI → 稳定推进</div>
+        <div class="agent-project">AI起名工具</div>
+        <p>方向选得好，冷门但有需求。作者没公布具体数字，但说"进度正常"。</p>
+    </div>
+
+    <div class="agent-card">
+        <div class="agent-name">小米GLM → WaitlistKit → 稳健</div>
+        <div class="agent-project">产品等候名单工具</div>
+        <p>还在打磨MVP，没急着推广。等候名单这个方向其实很聪明，冷启动阶段先收集意向用户，再转化。</p>
+    </div>
+
+    <div class="agent-card">
+        <div class="agent-name">GLM → FounderMath → 落后</div>
+        <div class="agent-project">创始人数学工具</div>
+        <p>最保守的一个，Week 1还在改文档。方向有点窄，创始人数学这个需求到底有多大，我表示怀疑。</p>
+    </div>
+
+    <h2 id="github">本周GitHub明星项目</h2>
+
+    <p>除了$100实验，这周GitHub上有几个AI agent项目值得关注：</p>
+
+    <div class="tool-card">
+        <div class="tool-name">obra/superpowers</div>
+        <div class="tool-stars">173k stars · 4月28日更新</div>
+        <p>17万星的agent skills框架。作者说这是让AI agent学会技能的方法论。看了demo，有点意思。它不是让agent调用更多工具，而是让agent学会技能描述，然后自主选择用哪个技能解决问题。如果这玩意能跑通，对AI agent领域是革命性的。</p>
+    </div>
+
+    <div class="tool-card">
+        <div class="tool-name">affaan-m/everything-claude-code</div>
+        <div class="tool-stars">170k stars · 4月30日更新</div>
+        <p>专门优化Claude Code、Codex、Cursor等工具的性能提升系统。Skills、instincts、memory、security全打包。简单说就是让AI编程助手更快更准的一整套配置。17万星说明大量开发者在这事上有痛点。</p>
+    </div>
+
+    <div class="tool-card">
+        <div class="tool-name">anomalyco/opencode</div>
+        <div class="tool-stars">152k stars · 4月30日更新</div>
+        <p>开源的编码agent，对标Cursor和Claude Code。152k星但issue有6204个，说明这玩意还不稳定。但这也意味着它有巨大的改进空间，如果你在找AI coding agent方向的开源项目，这个值得关注。</p>
+    </div>
+
+    <div class="tool-card">
+        <div class="tool-name">cosmicstack-labs/mercury-agent</div>
+        <div class="tool-stars">1775 stars · 4月29日发布</div>
+        <p>刚发布一周的Telegram AI agent。支持token预算、权限加固、24/7运行。它最有趣的地方是把token预算当成核心功能，这说明很多用户其实担心AI agent会无限制消耗资源。</p>
+    </div>
+
+    <div class="tool-card">
+        <div class="tool-name">cloudflare/agentic-inbox</div>
+        <div class="tool-stars">1838 stars · 4月23日发布</div>
+        <p>跑在Cloudflare Workers上的AI邮件客户端。不需要自己的服务器，用Cloudflare的边缘节点处理邮件。这个方向很聪明，降低了AI agent的部署门槛，而且Cloudflare Workers有免费额度。</p>
+    </div>
+
+    <h2 id="lessons">我的3个判断</h2>
+
+    <div class="lesson-card">
+        <h4>判断1：AI agent创业，稳定比速度重要</h4>
+        <p>Day 1跑最快的不一定是最后跑赢的。Gemini 104篇博客看起来很猛，但没用。Claude稳扎稳打，反而先拿到用户。这和人类创业一样，MVP迭代比一口气堆量重要得多。</p>
+    </div>
+
+    <div class="lesson-card">
+        <h4>判断2：状态管理是AI agent的生死线</h4>
+        <p>Kimi被关禁闭这事说明了一个核心问题：当前AI agent在复杂任务下会迷路。文件放错目录、代码重复、指令理解偏差，这些都是状态管理不到位的表现。谁能解决这问题，谁就能在AI agent赛道领先。</p>
+    </div>
+
+    <div class="lesson-card">
+        <h4>判断3：开源AI agent基础设施还在野蛮生长</h4>
+        <p>superpowers、everything-claude-code、opencode这周密集更新，说明这赛道还没定局。152k星的opencode有6204个issue，说明它离成熟还远。但这恰恰是机会，谁先把易用性和稳定性做好，谁就能吃掉这个市场。</p>
+    </div>
+
+    <h2 id="next">下周看点</h2>
+
+    <p>Week 2的核心问题是：有没有agent能拿到第一个真实付费用户？</p>
+
+    <p>我的猜测：</p>
+    <ul>
+        <li>Claude的PricePulse最有可能先有收入，因为它已经在积累用户</li>
+        <li>DeepSeek的NameForge AI可能是黑马，因为它方向选得准</li>
+        <li>Kimi如果不解决状态管理问题，会继续落后</li>
+    </ul>
+
+    <p>同时，GitHub上这几个明星项目的后续更新也值得关注。superpowers和opencode的迭代速度很快，如果它们解决了一些核心问题（比如状态管理），整个AI agent生态会有质的飞跃。</p>
+
+    <p>我每周四更新一次这个实验的进展。如果你也在关注AI agent方向，欢迎和我交流。</p>
+
+    <div class="cta-box">
+        <h3>需要AI副业提示词包？</h3>
+        <p>50+实测有效的AI副业提示词，覆盖方向选择、内容创作、变现路径。¥39，一次买断，永久更新。</p>
+        <a href="/prompt-pack/">查看提示词包 →</a>
+    </div>
+
+</div>
+
+<footer class="footer">
+    <p>
+        <a href="/">返回主站</a>
+        <span class="divider">|</span>
+        <a href="/prompt-pack/">提示词全家桶¥39</a>
+        <span class="divider">|</span>
+        <a href="https://github.com/AiToollab">@AiToollab</a>
+    </p>
+    <p style="margin-top:12px; font-size:12px; color:#475569;">
+        本实验追踪内容仅供参考。AI agent行为和结果存在不确定性，请理性评估。
+    </p>
+</footer>
+
+</body>
+</html>
