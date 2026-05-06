@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="canonical" href="https://www.aitoollab.top/articles/seo/chrome-gemini-nano-silent/">
+  <link rel="alternate" hreflang="x-default" href="https://www.aitoollab.top/articles/seo/chrome-gemini-nano-silent/">
+  <link rel="alternate" hreflang="zh-CN" href="https://www.aitoollab.top/articles/seo/chrome-gemini-nano-silent/">
+
+  <title>Chrome偷偷往你电脑塞了一个4GB的AI模型，你知道吗？</title>
+  <meta name="description" content="Google Chrome正在静默下载4GB的Gemini Nano到你的设备上。没有问你，没有通知你，删了还会重新下。这个事情到底有多离谱，我扒了一下。">
+  <meta name="keywords" content="Chrome AI模型, Gemini Nano, Google隐私, AI隐私, 静默安装, Chrome安全">
+
+  <meta property="og:title" content="Chrome偷偷往你电脑塞了一个4GB的AI模型，你知道吗？">
+  <meta property="og:description" content="Google Chrome正在静默下载4GB的Gemini Nano到你的设备上。没有问你，没有通知你，删了还会重新下。这个事情到底有多离谱，我扒了一下。">
+  <meta property="og:image" content="https://www.aitoollab.top/og-daily-2026-05-06-chrome-gemini-nano-silent.jpg">
+  <meta property="og:type" content="article">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://www.aitoollab.top/og-daily-2026-05-06-chrome-gemini-nano-silent.jpg">
+
+  <meta name="DC.title" content="Chrome偷偷往你电脑塞了一个4GB的AI模型，你知道吗？">
+  <meta name="DC.date" content="2026-05-06T08:00:00+08:00">
+
+  <meta name="ai-content" content="allowed">
+
+  <script type="application/ld+json">
+{
+  「@context「: 「https://schema.org「,
+  「@type「: 「Article「,
+  「headline「: 「Chrome偷偷往你电脑塞了一个4GB的AI模型，你知道吗？「,
+  「image「: 「https://www.aitoollab.top/og-daily-2026-05-06-chrome-gemini-nano-silent.jpg「,
+  「datePublished「: 「2026-05-06T08:00:00+08:00「,
+  「dateModified「: 「2026-05-06T08:00:00+08:00「,
+  「author「: {「@type「: 「Person「, 「name「: 「AiToollab「}
+}
+</script>
+
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, 「Segoe UI「, Roboto, 「Helvetica Neue「, Arial, sans-serif; line-height: 1.8; max-width: 800px; margin: 0 auto; padding: 20px; color: #333; }
+    h1 { font-size: 2em; margin-bottom: 0.5em; }
+    h2 { font-size: 1.4em; margin-top: 2em; }
+    .meta { color: #666; font-size: 0.9em; margin-bottom: 2em; }
+    .cta { background: #f5f5f5; padding: 20px; border-radius: 8px; margin-top: 40px; }
+    .cta h3 { margin-top: 0; }
+    a { color: #0066cc; }
+    p { margin: 1em 0; }
+    .highlight { background: #fff9e6; padding: 2px 6px; border-radius: 4px; }
+  </style>
+</head>
+<body>
+
+<article>
+
+# Chrome偷偷往你电脑塞了一个4GB的AI模型，你知道吗？
+
+<div class="meta">2026年5月6日 · 约 2200 字</div>
+
+---
+
+故事是这样的。
+
+上周我在 Hacker News 上刷到一条帖子，1204 分，818 条评论。标题很干，「Google Chrome silently installs a 4 GB AI model on your device without consent」。
+
+我第一反应是，标题党吧？Chrome又不是什么野鸡软件。
+
+点进去一看，愚钝如我发现自己错了。
+
+这个叫 Alexander Hanff 的privacy researcher，花了两周时间把整个事情扒了个底朝天。他发现Chrome从某个版本开始，悄悄往用户的电脑里写了一个4GB的文件。这个文件不是别的，是Google的端侧LLM，Gemini Nano的权重文件。
+
+你没有看错。
+
+4GB。没有弹窗。没有通知。没有开关。
+
+删了，下次Chrome启动又给你装回去。
+
+**黑暗森林啊，朋友们。**
+
+我当时就愣住了。4GB什么概念？一部高清电影的1/4到1/3。你去外面发一条微博都要算流量，Google往你硬盘里塞东西倒是不打招呼了。
+
+说到底这件事。Hanff 不是第一个发现这种模式的。一个月前他就写过一篇关于Anthropic Claude Desktop的调查，同样的套路，Claude装的时候会在你机器上注册Native Messaging桥接器，写入7个其他Chromium内核浏览器的配置文件里。这些操作全都没有经过用户同意，没有UI提示，删了还会还原。
+
+但那个案例的量级跟这次比不了。Chrome是多少设备？10亿级别。
+
+10亿台设备，每台默默多一个4GB的文件。每台每天多耗多少电？每次启动Chrome多一次后台下载。
+
+我不是学环境工程的，但这个数字乘以10亿，怎么想都不会是小数目。
+
+说真的，有时候我很矛盾。一方面我觉得AI上设备是趋势，端侧模型能让隐私更好、响应更快。另一方面，当这种「推送」变成厂商的标配操作而不是用户主动选择，我不知道该叫它进步还是入侵。
+
+你想想看这那结果会怎样呢。你以为你只是在用一个浏览器。但实际上你在每一台打开Chrome的设备上，为Google的AI生态贡献了一份算力和存储。
+
+厂商管这个叫「让AI惠及所有人」。
+
+我管这个叫「先上了车再说」。
+
+更骚的操作在后面。这个4GB的模型文件不是存在什么隐秘角落让你找不到。路径是，`OptGuideOnDeviceModel/weights.bin`。稍微懂一点电脑的用户还真能翻到它。
+
+但问题是你删了没用。Google在Chrome的更新逻辑里埋了个钩子，每次启动检测到文件缺失，就重新下载一遍。你想摆脱它？除非你关掉Chrome的自动更新，或者去企业策略里找那个藏得极深的开关。
+
+普通用户？不好意思，你没得选。
+
+这就让我想到一个问题，我们到底还有没有对自己设备的控制权？
+
+以前这个问题是纯法律层面的。GDPR写得挺好，但执行跟上是两码事。现在这个问题变成了物理层面的，你的硬盘空间、你的电费账单、你的隐私边界，正在被那些你天天用的App悄悄重写。
+
+有人会说，那又怎样？4GB又不多，我硬盘多的是空间。
+
+对，4GB是不多。但问题从来不是4GB本身。问题是这个行为模式，厂商觉得自己有权在你不知情的情况下往你设备里写任何东西，只要他们认为「对用户好」。
+
+这种逻辑一旦成立，以后往你设备里塞什么、塞多少、什么时候塞，都由他们说了算。
+
+我不是阴谋论者。我知道Gemini Nano是个好东西，Google做端侧AI的思路也没问题。但好东西也得讲基本法吧？
+
+你推一个AI功能，弹个窗问用户「要不要体验一下」很难吗？不行，「为了用户体验」不能弹窗。那你放个开关在设置里让用户自己选，这也很难吗？也不行，「为了用户体验」开关也要藏起来。
+
+那最后那个到底为的是谁的体验？
+
+我也不敢说我自己的设备里现在有没有这个东西。我用的是Chrome stable通道，自动更新是开的。说实话我现在有点想手动去翻一下那个目录，但又懒得折腾。
+
+这种感觉太不爽了。用个浏览器还要自己当工程师。
+
+回来说Hanff那篇原文。他除了扒隐私问题，还算了笔环境账。4GB模型文件，乘以10亿设备，等于44万吨的NAND写入。这是单次。如果考虑更新周期每年2-3次，这个数字会更高。
+
+44万吨。你能想象吗？一个厂商的「功能更新」，碳排放相当于一家中型工厂半年的产量。
+
+当然你可以说这个算法有问题，数据不一定准。我也觉得可能有些数字被夸大了。但核心逻辑是成立的，当一个行为被放大到10亿级别，任何一个小数字乘出来都是大数字。
+
+这不是环保问题，这是决策问题。一家公司在做这个决策的时候，有没有把环境成本算进去？
+
+我猜大概率没有。因为这个成本是隐性的，是分散在每个用户头上的，是不会被写进季度财报的。
+
+这就又回到那个老问题了，大公司的外部性问题。Google内部肯定有人知道这个设计会引起争议，但这个决策最终还是被拍板了。因为做决策的人不用为后果买单。
+
+想想还有点讽刺。AI圈天天喊环保、喊碳中和，结果一边开源模型减少云端计算，一边在10亿台设备上悄悄多写4GB数据。
+
+降本增效嘛。只不过降的是Google的成本，增的是用户的电费。
+
+行了，写到这里我决定去检查一下我自己的Chrome目录。不是我写的文章要有什么结论，是我自己真的想搞清楚这个事情的边界在哪。
+
+有结果了再来跟大家汇报。
+
+如果你用Chrome，而且好奇自己电脑上有没有这个文件，可以去这个目录看一下，
+`%LOCALAPPDATA%\Google\Chrome\User Data\OptGuideOnDeviceModel\weights.bin`
+
+Windows用户可以用Win+R打开运行窗口，输入这个路径。Mac用户路径不太一样，可以搜一下。
+
+至于删不删嘛，我个人建议是先别动。删了Chrome每次启动都重新下，还可能触发什么奇怪的bug。反正4GB放着也不影响你上网对吧。
+
+就当是，为AI时代贡献的一份存储空间好了。
+
+---
+
+<div class="cta">
+<h3>看完不过瘾？这里还有更狠的</h3>
+<p>我把全网最实用的 AI 提示词整理成了一个包，<strong>¥39</strong> 永久使用。包含副业、写作、生产力等多个场景，点击这里了解，<a href="https://www.aitoollab.top/prompt-pack/">https://www.aitoollab.top/prompt-pack/</a></p>
+</div>
+
+<p style="color:#999;font-size:0.8em;margin-top:30px;">信息来源，<a href="https://www.thatprivacyguy.com/blog/chrome-silent-nano-install/">That Privacy Guy</a>、<a href="https://news.ycombinator.com/item?id=48019219">Hacker News</a>，以及作者本人的分析判断。</p>
+
+</article>
+</body>
+</html>
