@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://www.aitoollab.top/articles/startup-100/2026-05-07-100-ai-startup-week-3/">
+    <link rel="alternate" type="application/atom+xml" title="AiToollab RSS Feed" href="/feed.xml">
+    <link rel="alternate" hreflang="x-default" href="https://www.aitoollab.top/articles/startup-100/2026-05-07-100-ai-startup-week-3/">
+    <link rel="alternate" hreflang="zh-CN" href="https://www.aitoollab.top/articles/startup-100/2026-05-07-100-ai-startup-week-3/">
+
+    <title>$100 AI创业实验追踪 Week 3 | DeepClaude一夜涨星1500，树莓派开始自己写代码</title>
+    <meta name="description" content="Week 3：DeepClaude用Claude Code的agent框架跑DeepSeek，4天涨星1500。树莓派Zero开始自己造agent。这周的信号很明确：大家不满足于用agent，开始造造agent的东西了。">
+    <meta name="keywords" content="AI创业, AI agent副业, $100创业, DeepClaude, Claude Code, DeepSeek V4, AI agent工具, SPECA, AI审计, 树莓派AI">
+    <meta name="author" content="AiToollab">
+    <meta name="robots" content="index, follow">
+    <meta name="ai-content" content="allowed">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="$100 AI创业实验追踪 Week 3 | DeepClaude一夜爆火，树莓派开始自己造agent">
+    <meta property="og:description" content="DeepClaude用Claude Code的agent框架跑DeepSeek，4天涨星1500。树莓派Zero自己造agent。这周agent圈已经卷到meta层了。">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.aitoollab.top/articles/startup-100/2026-05-07-100-ai-startup-week-3/">
+    <meta property="og:image" content="https://www.aitoollab.top/og-startup-2026-05-07-week-3.jpg">
+    <meta property="og:site_name" content="AiToollab">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="article:published_time" content="2026-05-07T10:00:00+08:00">
+    <meta property="article:modified_time" content="2026-05-07T10:00:00+08:00">
+    <meta property="article:author" content="https://github.com/AiToollab">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@AiToollab">
+    <meta name="twitter:creator" content="@AiToollab">
+    <meta name="twitter:title" content="$100 AI创业实验追踪 Week 3 | DeepClaude一夜爆火，树莓派开始自己造agent">
+    <meta name="twitter:description" content="DeepClaude用Claude Code的agent框架跑DeepSeek，4天涨星1500。树莓派Zero自己造agent。agent圈卷到meta层了。">
+    <meta name="twitter:image" content="https://www.aitoollab.top/og-startup-2026-05-07-week-3.jpg">
+
+    <!-- Dublin Core -->
+    <meta name="DC.title" content="$100 AI创业实验追踪 Week 3 | DeepClaude一夜爆火，树莓派开始自己造agent">
+    <meta name="DC.creator" content="AiToollab">
+    <meta name="DC.subject" content="AI创业追踪, AI agent竞赛, 开源项目">
+    <meta name="DC.description" content="Week 3追踪：DeepClaude涨星飞速，warpdot-dev双项目同发，agent审计框架出现，树莓派Zero上的自主agent实验。">
+    <meta name="DC.publisher" content="AiToollab">
+    <meta name="DC.date" content="2026-05-07">
+    <meta name="DC.language" content="zh-CN">
+
+    <style>
+        :root {
+            --bg: #0d1117;
+            --card: #161b22;
+            --border: #30363d;
+            --text: #e6edf3;
+            --muted: #8b949e;
+            --accent: #58a6ff;
+            --green: #3fb950;
+            --purple: #a371f7;
+            --orange: #f0883e;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.8;
+            font-size: 16px;
+        }
+        a { color: var(--accent); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        .header {
+            background: linear-gradient(135deg, #0d1117 0%, #1a1f35 100%);
+            border-bottom: 1px solid var(--border);
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .header .back-link {
+            display: inline-block;
+            color: var(--accent);
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+        .header .back-link:hover { text-decoration: none; }
+        .header h1 {
+            font-size: 28px;
+            line-height: 1.4;
+            max-width: 700px;
+            margin: 0 auto 12px;
+            background: linear-gradient(135deg, #fff 0%, #8b949e 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .header .meta {
+            color: var(--muted);
+            font-size: 14px;
+        }
+        .header .meta span { margin: 0 8px; }
+
+        .container { max-width: 760px; margin: 0 auto; padding: 40px 20px; }
+
+        h2 {
+            font-size: 22px;
+            margin: 48px 0 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--border);
+            color: var(--text);
+        }
+        h3 {
+            font-size: 18px;
+            margin: 28px 0 14px;
+            color: var(--green);
+        }
+
+        p { margin-bottom: 16px; color: #c9d1d9; }
+        ul, ol { margin: 16px 0 20px 24px; color: #c9d1d9; }
+        li { margin-bottom: 8px; }
+
+        .highlight-box {
+            background: rgba(88,166,255,0.08);
+            border: 1px solid rgba(88,166,255,0.3);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 24px 0;
+        }
+        .highlight-box .tag {
+            color: var(--accent);
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+        .highlight-box p { color: var(--text); margin: 0; font-size: 15px; }
+
+        .key-finding {
+            background: rgba(63,185,80,0.08);
+            border: 1px solid rgba(63,185,80,0.3);
+            border-left: 4px solid var(--green);
+            border-radius: 0 8px 8px 0;
+            padding: 16px 20px;
+            margin: 24px 0;
+        }
+        .key-finding strong { color: var(--green); }
+        .key-finding p { margin: 0; color: var(--text); font-size: 15px; }
+
+        .project-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 16px 0;
+        }
+        .project-card .project-name {
+            color: var(--accent);
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+        .project-card .project-stats {
+            color: var(--muted);
+            font-size: 13px;
+            margin-bottom: 10px;
+        }
+        .project-card p { font-size: 14px; color: #c9d1d9; margin: 0; }
+
+        .related-posts {
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 1px solid var(--border);
+        }
+        .related-posts h3 {
+            color: var(--muted);
+            font-size: 14px;
+            margin-bottom: 16px;
+        }
+        .related-posts a {
+            display: block;
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(48,54,61,0.5);
+            font-size: 14px;
+        }
+        .related-posts a:last-child { border: none; }
+
+        .series-note {
+            background: rgba(163,113,247,0.08);
+            border: 1px solid rgba(163,113,247,0.2);
+            border-radius: 8px;
+            padding: 16px 20px;
+            margin: 40px 0;
+        }
+        .series-note p {
+            margin: 0;
+            font-size: 14px;
+            color: var(--muted);
+        }
+        .series-note strong { color: var(--text); }
+
+        @media (max-width: 600px) {
+            .header h1 { font-size: 22px; }
+            .container { padding: 24px 16px; }
+        }
+    </style>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Article",
+                "headline": "$100 AI创业实验追踪 Week 3 | DeepClaude一夜爆火，树莓派开始自己造agent",
+                "description": "Week 3追踪：DeepClaude用Claude Code的agent框架跑DeepSeek，4天涨星1500。树莓派Zero开始自己造agent。这周的信号很明确，大家不满足于用agent，开始造造agent的东西。",
+                "author": {"@type": "Person", "name": "AiToollab", "url": "https://github.com/AiToollab"},
+                "datePublished": "2026-05-07T10:00:00+08:00",
+                "dateModified": "2026-05-07T10:00:00+08:00",
+                "publisher": {"@type": "Organization", "name": "AiToollab", "url": "https://www.aitoollab.top"},
+                "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.aitoollab.top/articles/startup-100/2026-05-07-100-ai-startup-week-3/"},
+                "wordCount": 1680,
+                "articleSection": "AI创业追踪",
+                "image": {"@type": "ImageObject", "url": "https://www.aitoollab.top/og-startup-2026-05-07-week-3.jpg"}
+            },
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {"@type": "ListItem", "position": 1, "name": "首页", "item": "https://www.aitoollab.top/"},
+                    {"@type": "ListItem", "position": 2, "name": "$100创业实验追踪", "item": "https://www.aitoollab.top/articles/startup-100/"},
+                    {"@type": "ListItem", "position": 3, "name": "$100 AI创业实验追踪 Week 3", "item": "https://www.aitoollab.top/articles/startup-100/2026-05-07-100-ai-startup-week-3/"}
+                ]
+            },
+            {"@type": "WebSite", "name": "AiToollab", "url": "https://www.aitoollab.top/"}
+        ]
+    }
+    </script>
+</head>
+<body>
+
+<div class="header">
+    <a href="/articles/startup-100/" class="back-link">← 返回系列总览</a>
+    <h1>$100 AI创业实验追踪 Week 3</h1>
+    <div class="meta">
+        <span>📅 2026-05-07</span>
+        <span>📖 约7分钟</span>
+        <span>🏷️ AI竞赛</span>
+    </div>
+</div>
+
+<div class="container">
+
+    <p>Week 3. 这周的GitHub Trending我翻了三遍才敢写。</p>
+
+    <p>上一周大家还在围观OpenCode的六千个issue，这周风向完全变了。不再有人关心能不能用agent写个网站，所有人都在问同一个问题：怎么造一个能造agent的东西？</p>
+
+    <p>我挑了几个最有代表性的项目。看完你就知道为什么我说agent圈卷到meta层了。</p>
+
+    <h2>DeepClaude：花Claude Code的钱，跑DeepSeek的活</h2>
+
+    <div class="project-card">
+        <div class="project-name">aattaran/deepclaude</div>
+        <div class="project-stats">⭐ 1492 | 79 forks | JavaScript | 2026-05-03</div>
+        <p>用Claude Code的autonomous agent loop跑DeepSeek V4 Pro或者其他兼容Anthropic API的后端。</p>
+    </div>
+
+    <p>这个项目五月三号才上线，四天暴涨近1500星。我第一反应是查了下它值不值得这么多关注。看完觉得，值。</p>
+
+    <p>Claude Code有一个非常成熟的自主agent循环。能写代码、能调试、能自己修bug。但它贵。DeepSeek V4 Pro便宜得多，推理能力也强，但没有那个agent loop。</p>
+
+    <p>DeepClaude干的事很简单：把Claude Code的agent框架拆出来，让它可以接DeepSeek的后端。效果出奇的好。你得到的是Claude Code的自主决策能力加上DeepSeek的性价比。</p>
+
+    <div class="key-finding">
+        <p><strong>我的判断：</strong>这是本周最值得关注的趋势信号。之前大家的思路是等各家模型自己做agent框架。DeepClaude证明了另一条路：好agent框架可以换脑子。以后这种解耦会越来越多。</p>
+    </div>
+
+    <h2>warpdot-dev 双响炮：同一天扔出两个项目</h2>
+
+    <div class="project-card">
+        <div class="project-name">composio</div>
+        <div class="project-stats">⭐ 247 | 225 forks | TypeScript | 2026-05-01</div>
+        <p>AI agent SDK，支持Anthropic、LangChain、OpenAI Agents、LlamaIndex、Mastra，带了MCP和OAuth集成。</p>
+    </div>
+
+    <div class="project-card">
+        <div class="project-name">craft-agents-oss</div>
+        <div class="project-stats">⭐ 236 | 241 forks | TypeScript | 2026-05-01</div>
+        <p>基于Electron的桌面端agent thin client，支持多LLM、WebSocket通信、OpenAPI技能注册。</p>
+    </div>
+
+    <p>warpdot-dev这个团队五月一号同一天开源了两个项目。这个节奏不多见。</p>
+
+    <p>Composio是一个agent SDK集成层。市面上agent框架太多了，Anthropic一套、OpenAI一套、LangChain一套、LlamaIndex一套。每个的集成方式都不一样。Composio做的事情是在上面再包一层，让你写一次代码对接所有框架。</p>
+
+    <p>Craft-agents则是个桌面产品。Electron写的，能跑在本地，通过WebSocket和MCP连各种LLM。你可以把它理解成一个开源版的Claude Desktop，但是不锁死在Anthropic的模型上。</p>
+
+    <p>两个项目加起来228个topic标签，覆盖了你能想到的所有agent技术栈。更值得看的是fork数：composio 225个fork，craft-agents 241个fork。fork比star还多，说明社区不是在围观，是在拿着代码改。</p>
+
+    <div class="highlight-box">
+        <div class="tag">趋势判断</div>
+        <p>agent工具层的竞争正在从单点工具转向平台。warpdot-dev的策略是布一张大网，用两个项目覆盖server端和client端。开源社区在给他们铺路。</p>
+    </div>
+
+    <h2>lukiIabs/skills：一个更会讲故事的复制品</h2>
+
+    <div class="project-card">
+        <div class="project-name">lukiIabs/skills</div>
+        <div class="project-stats">⭐ 209 | 222 forks | TypeScript | 2026-05-01</div>
+        <p>Cursor、Claude、MCP的SKILL.md格式仓库，AI agent提示词和自动化技能集合。</p>
+    </div>
+
+    <p>这个项目五月一号上线，到今天209个星、222个fork。fork数再次超过star数。</p>
+
+    <p>坦白说，这个项目没有太多技术含量。它就是一个skill格式的模板仓库。核心文件就是一堆SKILL.md。但它的传播数据说明了一件事：agent技能的可复用格式成了刚需。</p>
+
+    <p>之前Github上有个skills项目（就是我现在用的这套skill体系），格式和概念差不多。但lukiIabs版本用TypeScript重写了工具链，加了更清晰的文档，还把MCP支持说明白了。同样的概念，包装更好，传播效果就翻倍。</p>
+
+    <div class="key-finding">
+        <p><strong>我的判断：</strong>SKILL.md这个格式在快速标准化。上周讲过的skill格式这周已经有三个独立仓库在做。谁先跑通跨平台的技能市场，谁就抓住了agent时代的npm。</p>
+    </div>
+
+    <h2>SPECA：当agent开始犯错，谁来审计</h2>
+
+    <div class="project-card">
+        <div class="project-name">NyxFoundation/speca</div>
+        <div class="project-stats">⭐ 310 | 16 forks | Python | 2026-05-02</div>
+        <p>Specification-to-Checklist Agentic Auditing Framework。把需求规格转成可执行的审计清单。</p>
+    </div>
+
+    <p>这个项目排在GitHub这周新项目的第四名。它做的东西和前面那些画风完全不同。</p>
+
+    <p>SPECA是一个审计框架。你给它一份需求文档或者规格说明，它自动生成检查清单。然后agent执行的时候每一步都在清单上打钩。哪一步偏离了预期，当场就能发现。</p>
+
+    <p>团队NyxFoundation以前是做形式化验证的。他们做的这个方向是agent安全里最刚需但最没人做的：如何在agent自主行动时确认它在做正确的事。</p>
+
+    <p>310个星在这批项目里不算高，但它只有16个fork。这说明内容本身还在消化阶段。大家知道方向对，但还没想好怎么参与。</p>
+
+    <p>上周我们聊过有人被AI写了黑稿，这周就有了审计框架。工具链的跟进速度超过我的预期。</p>
+
+    <h2>SEED：树莓派开始自己造agent</h2>
+
+    <div class="project-card">
+        <div class="project-name">seedpi867-cmd/seed</div>
+        <div class="project-stats">⭐ 7 | 2 forks | Python | 2026-05-01</div>
+        <p>Autonomous AI agent that builds other autonomous agents. Runs 24/7 on a Pi Zero 2W.</p>
+    </div>
+
+    <p>这个项目只有7个星，但我看到的时候笑了。它完美代表了$100创业实验的精神。</p>
+
+    <p>开发者在一台树莓派Zero 2W上跑了一个自主agent。这台机器不到15美元，功耗极低。24小时不间断运行。它在干什么？在设计并发布其他autonomous agent。</p>
+
+    <p>对，它在造agent。自己设计架构，自己写代码，自己发布。然后根据结果改自己的方案。</p>
+
+    <p>项目描述里写的是cognitive architecture加self-improving loop。它的topic标签包括agent-os、brain-loop、raspberry-pi、self-improving-ai。虽然星少，但这个项目的精神状态和$100实验完全一致。</p>
+
+    <div class="highlight-box">
+        <div class="tag">启发</div>
+        <p>15美元的硬件跑一个agent，这个agent又在造其他agent。这不就是AI时代的俄罗斯套娃。100美元创业的思路放在这个语境下，成本已经低到可以忽略不计了。</p>
+    </div>
+
+    <h2>这周的几条信号</h2>
+
+    <p>翻完这周的Trending，脑子里冒出几个信号。</p>
+
+    <p>agent框架解耦这事我没想到会来得这么快。DeepClaude证明了agent的决策框架可以跑不同的模型。之前大家还在等各家自己出agent模式，现在社区直接替他们干了。以后没人会说这个模型没有agent模式了。</p>
+
+    <p>工具层也在加速平台化。warpdot-dev一天两个项目，server端一个client端一个。之前大家各自造轮子，现在有团队在试着搭平台。而且这些平台是开源的，机会窗口还在。</p>
+
+    <p>安全审计在追赶。SPECA只拿了310个星，但方向对。agent自主行动越普遍，审计和合规的需求就越刚。现在做这个方向的人还很少，是个蓝海。</p>
+
+    <p>meta-agent层正在出现。造agent的agent不再是一个概念。树莓派上的SEED在这样做，OpenCode的社区也在催生新的agent生成工具。下一阶段的工作量不是写代码，是定义agent的行为规范。</p>
+
+    <div class="key-finding">
+        <p><strong>总结：</strong>这周的GitHub不是拼谁写了更多代码，是拼谁更会定义元规则。赢的不是造agent的人，是造造agent的工具的人。$100创业的思路放在这里，最聪明的做法不是做一个agent产品，是做agent的脚手架。</p>
+    </div>
+
+    <div class="series-note">
+        <p><strong>关于这个系列</strong><br>
+        每周四追踪AI agent竞赛的最新动态。关注开源项目、独立黑客案例、以及100美元能跑通的实验。不写新闻稿，只做自己的分析判断。<br><br>
+        <a href="/articles/startup-100/2026-05-01-100-ai-startup-week-5/">← 上周：Week 2 OpenCode爆发</a></p>
+    </div>
+
+    <div class="related-posts">
+        <h3>系列文章</h3>
+        <a href="/articles/startup-100/2026-05-01-100-ai-startup-week-5/">$100 AI创业实验追踪 Week 2 | OpenCode爆发，有人被AI写了黑稿</a>
+        <a href="/articles/startup-100/100-ai-startup-week2/">$100 AI创业实验追踪 Week 1 | Claude反超Gemini，GitHub冒出3个明星项目</a>
+        <a href="/articles/startup-100/ai-startup-100/">$100 AI创业实验追踪 | 7个AI agent谁能跑通赚钱路子</a>
+    </div>
+
+</div>
+
+</body>
+</html>
