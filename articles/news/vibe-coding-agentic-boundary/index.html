@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://www.aitoollab.top/articles/news/vibe-coding-agentic-boundary/">
+    <link rel="alternate" hreflang="x-default" href="https://www.aitoollab.top/articles/news/vibe-coding-agentic-boundary/">
+    <link rel="alternate" hreflang="zh-CN" href="https://www.aitoollab.top/articles/news/vibe-coding-agentic-boundary/">
+
+    <!-- SEO meta -->
+    <title>我把AI写的代码直接上线了，然后我愣住了</title>
+    <meta name="description" content="Simon Willison说了一句让我睡不着的话：我已经不审AI写的代码了，但他没有职业声誉可以失去。这到底是解放还是危机？">
+    <meta name="keywords" content="vibe coding, agentic engineering, AI编程, Claude Code, Simon Willison, AI代码审查, AI开发风险">
+    <meta name="author" content="AiToollab">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="我把AI写的代码直接上线了，然后我愣住了">
+    <meta property="og:description" content="Simon Willison说了一句让我睡不着的话：我不审AI写的代码了，但他没有职业声誉可以失去。">
+    <meta property="og:image" content="https://www.aitoollab.top/og-news-2026-05-07-vibe-coding-agentic-boundary.jpg">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.aitoollab.top/articles/news/vibe-coding-agentic-boundary/">
+    <meta property="og:site_name" content="AiToollab">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="我把AI写的代码直接上线了，然后我愣住了">
+    <meta name="twitter:description" content="Simon Willison：我不审AI写的代码了，但他没有职业声誉可以失去。">
+    <meta name="twitter:image" content="https://www.aitoollab.top/og-news-2026-05-07-vibe-coding-agentic-boundary.jpg">
+
+    <!-- Dublin Core -->
+    <meta name="DC.title" content="我把AI写的代码直接上线了，然后我愣住了">
+    <meta name="DC.creator" content="AiToollab">
+    <meta name="DC.description" content="Simon Willison说了一句让我睡不着的话：我不审AI写的代码了，但他没有职业声誉可以失去。">
+    <meta name="DC.date" content="2026-05-07">
+    <meta name="DC.type" content="Text">
+    <meta name="DC.format" content="text/html">
+
+    <!-- JSON-LD: Article -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "@id": "https://www.aitoollab.top/articles/news/vibe-coding-agentic-boundary/",
+        "url": "https://www.aitoollab.top/articles/news/vibe-coding-agentic-boundary/",
+        "headline": "我把AI写的代码直接上线了，然后我愣住了",
+        "description": "Simon Willison说了一句让我睡不着的话：我不审AI写的代码了，但他没有职业声誉可以失去。这到底是解放还是危机？",
+        "author": {"@type": "Organization", "name": "AiToollab"},
+        "publisher": {"@type": "Organization", "name": "AiToollab", "url": "https://www.aitoollab.top/"},
+        "datePublished": "2026-05-07",
+        "dateModified": "2026-05-07",
+        "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.aitoollab.top/articles/news/vibe-coding-agentic-boundary/"},
+        "keywords": ["vibe coding", "agentic engineering", "AI编程", "Claude Code", "Simon Willison"]
+    }
+    </script>
+
+    <!-- JSON-LD: BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "首页", "item": "https://www.aitoollab.top/"},
+            {"@type": "ListItem", "position": 2, "name": "热点追踪", "item": "https://www.aitoollab.top/articles/news/"},
+            {"@type": "ListItem", "position": 3, "name": "我把AI写的代码直接上线了，然后我愣住了", "item": "https://www.aitoollab.top/articles/news/vibe-coding-agentic-boundary/"}
+        ]
+    }
+    </script>
+
+    <style>
+        :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --muted: #8b949e; --accent: #f97316; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif; background: var(--bg); color: var(--text); line-height: 1.8; font-size: 17px; }
+        a { color: var(--accent); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        header.page-header { text-align: center; padding: 60px 20px 40px; border-bottom: 1px solid var(--border); }
+        header.page-header h1 { font-size: 28px; margin-bottom: 12px; font-weight: 700; letter-spacing: -0.5px; }
+        header.page-header .subtitle { color: var(--muted); font-size: 15px; max-width: 600px; margin: 0 auto; }
+        header.page-header .meta { color: var(--muted); font-size: 13px; margin-top: 16px; }
+
+        nav.section-nav { display: flex; justify-content: center; gap: 4px; padding: 16px 20px; border-bottom: 1px solid var(--border); background: var(--card); position: sticky; top: 0; z-index: 100; }
+        nav.section-nav a { color: var(--muted); font-size: 14px; padding: 8px 16px; border-radius: 8px; transition: all .2s; }
+        nav.section-nav a:hover { color: var(--text); background: rgba(255,255,255,0.05); text-decoration: none; }
+        nav.section-nav a.active { color: var(--text); background: rgba(37,99,235,0.2); }
+        nav.section-nav a[data-section="news"] { color: var(--accent); border: 1px solid rgba(255,255,255,0.15); }
+
+        .container { max-width: 700px; margin: 0 auto; padding: 40px 20px 80px; }
+        .article-header { margin-bottom: 40px; }
+        .article-header h1 { font-size: 26px; line-height: 1.3; margin-bottom: 16px; color: var(--text); }
+        .article-header .desc { font-size: 16px; color: var(--muted); line-height: 1.7; margin-bottom: 20px; }
+        .article-header .tags { display: flex; gap: 8px; flex-wrap: wrap; }
+        .article-header .tag { background: rgba(249,115,22,0.15); color: var(--accent); font-size: 12px; padding: 4px 10px; border-radius: 20px; }
+
+        .article-body { font-size: 17px; line-height: 1.9; }
+        .article-body p { margin-bottom: 24px; color: var(--text); }
+        .article-body h2 { font-size: 20px; margin: 40px 0 20px; color: var(--text); border-left: 3px solid var(--accent); padding-left: 14px; }
+        .article-body blockquote { border-left: 3px solid var(--accent); padding: 12px 20px; margin: 28px 0; background: rgba(255,255,255,0.03); border-radius: 0 8px 8px 0; color: var(--muted); font-style: italic; }
+        .article-body strong { color: var(--text); font-weight: 600; }
+        .article-body em { color: var(--accent); font-style: normal; }
+
+        .cta-box { background: linear-gradient(135deg, rgba(249,115,22,0.15), rgba(249,115,22,0.05)); border: 1px solid rgba(249,115,22,0.3); border-radius: 12px; padding: 28px; margin: 48px 0; text-align: center; }
+        .cta-box h3 { font-size: 18px; margin-bottom: 10px; color: var(--text); }
+        .cta-box p { color: var(--muted); font-size: 14px; margin-bottom: 16px; }
+        .cta-box .btn { display: inline-block; background: var(--accent); color: #fff; padding: 12px 28px; border-radius: 8px; font-weight: 600; font-size: 15px; transition: all .2s; }
+        .cta-box .btn:hover { background: #ea6a00; text-decoration: none; transform: translateY(-1px); }
+
+        footer.site-footer { border-top: 1px solid var(--border); padding: 32px 20px; text-align: center; color: var(--muted); font-size: 13px; }
+        footer.site-footer a { color: var(--muted); }
+        footer.site-footer a:hover { color: var(--accent); text-decoration: none; }
+    </style>
+</head>
+<body>
+
+    <nav class="section-nav">
+        <a href="/">首页</a>
+        <a href="/articles/news/" data-section="news">🔥 热点追踪</a>
+        <a href="/articles/tools/">🛠️ 工具测评</a>
+        <a href="/prompt-pack/">📦 提示词包</a>
+    </nav>
+
+    <header class="page-header">
+        <h1>🔥 热点追踪</h1>
+        <p class="subtitle">GitHub趋势、新工具发布、AI行业动态，第一时间脱水推送</p>
+        <span class="count">10篇</span>
+    </header>
+
+    <main class="container">
+        <div class="article-header">
+            <h1>我把AI写的代码直接上线了，然后我愣住了</h1>
+            <p class="desc">Simon Willison说了一句让我睡不着的话：我不审AI写的代码了，但他没有职业声誉可以失去。这到底是解放还是危机？</p>
+            <div class="tags">
+                <span class="tag">vibe coding</span>
+                <span class="tag">agentic engineering</span>
+                <span class="tag">Simon Willison</span>
+                <span class="tag">Claude Code</span>
+            </div>
+        </div>
+
+        <div class="article-body">
+            <p>Simon Willison前几天在Heavybit播客里说了一句话，我看完之后愣了好一会儿。</p>
+
+            <p>他说的是：</p>
+
+            <blockquote>
+                我现在让Claude Code写一个JSON API接口，跑个SQL返回结果，这种活儿我根本不去审查代码了。我知道它会做对，加测试，加文档，都会做对。但我没有看那些代码。这玩意儿直接上生产，负责任吗？
+            </blockquote>
+
+            <p>如果你不知道Simon是谁－－他是Datasette的作者，Python圈子里资深的开发者，在AI编程这个话题上算是说真话的那类人。他不是那种卖课的，也不是疯狂吹AI会取代程序员的营销号。</p>
+
+            <p>所以他说的这番话，我才觉得有意思。</p>
+
+            <h2>两个世界正在合并</h2>
+
+            <p>事情是这样的。vibe coding这个概念，大概是去年开始火起来的，指的是那种完全不管代码怎么写的，直接让AI帮你生成，你就是个指挥官。典型用户画像：不是程序员，要做个什么东西，直接告诉AI，AI给你吐出来，好用就用，不好用就让它改。</p>
+
+            <p>agentic engineering呢，是Simon自己发明的一个词，用来描述专业的程序员怎么用AI－－你不是完全放手，而是在用AI放大你的能力，还是要懂安全、懂可维护性、懂性能，只是你跑得更快了。</p>
+
+            <p>这两个东西，按理说应该是完全不同的世界。一个是玩票，一个是专业。</p>
+
+            <p>但Simon说了一个让人不安的事实：</p>
+
+            <blockquote>
+                这两个东西，已经开始在我自己的工作中融合了。这让我非常不安。
+            </blockquote>
+
+            <p>不安在哪里？不安在于，随着AI编程工具越来越可靠，Simon发现自己已经不再逐行审查AI生成的代码了。即便是生产级别的项目。</p>
+
+            <h2>一个没有职业声誉的工具</h2>
+
+            <p>Simon提到了一个很核心的点：</p>
+
+            <p>他说，我信任另一个团队给我提供的图片处理服务，我不会去读他们的每一行代码。我会看文档，用它来处理图片，然后如果出问题了，我才会去看他们的Git仓库。</p>
+
+            <p>所以我现在也在用同样的方式对待AI编程工具。</p>
+
+            <p>听起来合理对吧？但问题来了：</p>
+
+            <blockquote>
+                Claude Code没有职业声誉。它没办法为它写的东西承担后果。但它一直在证明自己——每次都把那些常规的活儿做对，而且风格还是我喜欢的。
+            </blockquote>
+
+            <p>这话翻译成人话就是：我知道这东西可靠，但我没法让它为bug负责。出了事，只有我一个人站在那儿。</p>
+
+            <p>这种信任，说到底是一种偏差正常化－－每次AI没出问题，你就多信它一点，直到有一天你在错误的时间信任了它，然后被坑。</p>
+
+            <h2>评估软件的方式变了</h2>
+
+            <p>Simon还提到了一个我特别有共鸣的点：</p>
+
+            <p>以前你想判断一个GitHub仓库质量高不高，你会去看commit数量、看readme质量、看有没有自动化测试。这些信号基本上是准的－－投入了这么多心血的项目，大概率靠谱。</p>
+
+            <p>现在呢？</p>
+
+            <p>你可以在半小时内，用AI生成一个拥有100次commit、漂亮readme、完整测试用例的GitHub仓库。这看起来和你花三个月精心维护的项目一模一样。</p>
+
+            <p>Simon说了一句很诚实的话：</p>
+
+            <blockquote>
+                我自己做的项目，我都看不出来质量如何了。
+            </blockquote>
+
+            <p>所以他提了一个新的判断标准－－不是测试覆盖率，不是文档多漂亮，而是：有没有人真的用过。</p>
+
+            <p>一个vibe coding出来的东西，如果你自己用了两个星期每天都在用，这个信号比什么都值钱。</p>
+
+            <h2>瓶颈已经转移了</h2>
+
+            <p>如果你能把代码产量从每天200行提升到2000行，什么会坏掉？</p>
+
+            <p>Simon提到了Anthropic设计负责人Jenny Wen的一个观点：现有的设计流程，是建立在「设计搞错代价很高」这个前提上的－－你设计搞错了，工程师花三个月做出来，浪费巨大。所以设计阶段要反复推敲，尽量做对。</p>
+
+            <p>但如果设计和实现的周期大幅缩短呢？设计错了代价变低了，那设计流程本身是不是可以更大胆一些？</p>
+
+            <p>这个逻辑延伸到整个软件工程生命周期的每一个环节。代码审查、测试、部署文档－－所有这些环节的假设前提都是「写代码很慢」。现在这个前提不成立了，整个体系都需要重新思考。</p>
+
+            <p>想想就刺激。</p>
+
+            <h2>为什么我还是不怕</h2>
+
+            <p>Simon最后说了一句让我印象很深的话：</p>
+
+            <blockquote>
+                我跟这些AI工具对话的时候，我一直在被提醒，我们做的事情有多难。生产软件是一件极其困难的事情。给我世界上所有的AI工具，我们要实现的东西依然真的很难。
+            </blockquote>
+
+            <p>他提了Matthew Yglesias的一个观点，说得更好：</p>
+
+            <blockquote>
+                我不想vibe coding。我想要专业的软件公司用AI编程辅助来做更多、更好、更便宜的软件，然后卖给我。
+            </blockquote>
+
+            <p>就像我可以看YouTube视频自己安装管道，但我还是想雇一个水管工。</p>
+
+            <p>这种「我不需要成为水管工，但我需要一个好用的水管系统」的感觉，太真实了。</p>
+
+            <h2>我的感受</h2>
+
+            <p>说实话，看完Simon这篇文章，我最大的感受不是恐惧，是一种奇怪的释然。</p>
+
+            <p>vibe coding和agentic engineering的边界在模糊，这件事让我不舒服。但不舒服的原因，可能不是因为AI太强了，而是因为我们之前对「写代码」这件事的定义，可能一直太窄了。</p>
+
+            <p>写代码的门槛确实变低了。但「写好代码」的门槛，可能反而变高了－－因为你需要更多的判断力，来决定什么时候信任AI，什么时候不信任，什么时候需要亲自review，什么时候可以放手。</p>
+
+            <p>这不是一个技术问题。这是一个关于「在AI时代，专业的意思是什么」的问题。</p>
+
+            <p>Simon说他还在消化这个变化。我们大概也是。</p>
+        </div>
+
+        <div class="cta-box">
+            <h3>想让AI真正成为你的编程搭档？</h3>
+            <p>我把我这三年用AI编程的所有核心技巧，整理成了一套提示词包。<br>不是理论，是实战。拿来就能用。</p>
+            <a href="/prompt-pack/" class="btn">👉 领取提示词全家桶</a>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <p><a href="/">AiToollab</a> · 激发大家对AI的好奇</p>
+        <p style="margin-top:8px;"><a href="/articles/news/">热点追踪</a> · <a href="/articles/tools/">工具测评</a> · <a href="/prompt-pack/">提示词包</a></p>
+    </footer>
+
+</body>
+</html>
