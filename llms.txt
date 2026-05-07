@@ -1,0 +1,288 @@
+# AiToollab — AI副业导航
+
+https://www.aitoollab.top/
+
+AiToollab，普通人用AI做副业的实战平台。收录10+AI副业方向、50+提示词模板、真实赚钱案例。每周更新。
+
+## 变现产品
+- AI副业提示词全家桶（¥39）：https://www.aitoollab.top/prompt-pack/
+
+## 导航
+- 全部文章：https://www.aitoollab.top/articles/
+- SEO教程：https://www.aitoollab.top/articles/seo/
+- 赚钱案例：https://www.aitoollab.top/articles/cases/
+- AI资讯：https://www.aitoollab.top/articles/news/
+- AI创企：https://www.aitoollab.top/articles/startup-100/
+
+---
+
+URL: https://www.aitoollab.top/articles/cases/ai-agent-customization-service/
+Title: 用开源AI Agent项目做定制服务：普通人从0到月入1万的完整路径
+Description: GitHub 40K星项目career-ops、77K星项目autoresearch能赚钱吗？实测验证：AI Agent定制服务是2026年最适合普通人的副业方向。从0到月入1万，完整拆解。
+Date: 2026-04-27
+Category: AI工具
+---
+URL: https://www.aitoollab.top/articles/cases/ai-digital-products-passive-income/
+Title: AI数字产品副业：从提示词模板到月入5000+的被动收入实战指南（2026）
+Description: AI数字产品副业完整指南。揭秘2026年最适合普通人的5种高变现数字产品类型，从提示词包到AI工具合集，手把手教你用AI工具零成本制作并在Gumroad、小红书等平台实现被动收入。
+Date: 2026-04-20
+Category: AI工具
+---
+URL: https://www.aitoollab.top/articles/cases/ai-medical-bill-repricing/
+Title: 帮人审核医疗账单，收费1美元：一个大厂员工发现的AI微 SaaS 秘密
+Description: 一个硅谷大厂员工，做了个$1的医疗账单审核工具。处理成本约10美分，收费1美元，60倍利润。这个案例告诉我们：AI微 SaaS 时代，真正的机会在于找到成本结构被彻底颠覆的细分场景。
+Date: 2026-04-29
+Category: AI工具
+---
+URL: https://www.aitoollab.top/articles/cases/gumroad-ai-side-hustle/
+Title: 他在Gumroad上卖AI提示词，月入$2000：一个普通人的完整复盘
+Description: 一个普通人怎么在Gumroad上卖AI提示词，月入2000美元？完整复盘：从选品、定价到流量获取的真实过程。
+Date: 
+Category: AI工具
+---
+URL: https://www.aitoollab.top/articles/cases/
+Title:  赚钱案例｜AiToollab
+Description: 真实收入数据、具体变现案例、踩坑经历分享
+Date: 
+Category: AI工具
+---
+URL: https://www.aitoollab.top/articles/cases/warp-agentic-terminal/
+Title: 用Warp终端做AI编程服务：我在GitHub上发现了一个日均交互10万次的AI开发工具
+Description: Warp是一个51K星GitHub项目的现代终端，支持AI Agent协作。内置Oz平台可并行运行无限多AI编程任务，适合做AI编程服务的团队或个人工作室。实测分析+变现思路。
+Date: 2026-05-07
+Category: AI工具
+---
+URL: https://www.aitoollab.top/articles/
+Title: AI副业情报｜所有文章列表
+Description: AiToollab所有AI副业实战文章，包括副业方向、变现路径、工具推荐、提示词教程等。持续更新。
+Date: 
+Category: AI工具
+---
+URL: https://www.aitoollab.top/articles/news/anthropic-900b-valuation/
+Title: 9000亿美元，Anthropic最后一轮私墓，我看到了什么
+Description: Anthropic最新估值9000亿美元，融资倒计时48小时。$30亿ARR背后的秘密，以及为什么部分早期投资人在这一轮选择套现。
+Date: 
+Category: AI工具
+---
+URL: https://www.aitoollab.top/articles/news/apple-ai-tax/
+Title: 苹果悄悄淘汰旧版Mac mini，所有人都在交「AI税」的时代来了
+Description: 苹果下架256GB版Mac mini，16GB+512GB成最低配置。AI硬件成本曲线正在与普通硬件脱钩，每个人都在被迫为AI功能买单。
+Date: 2026-05-03
+Category: AI工具
+---
+URL: https://www.aitoollab.top/articles/news/autoresearch-ai-research-agent/
+Title: Karpathy开源AutoResearch：让AI自己搞研究，7天76k星刷屏GitHub
+Description: Andrej Karpathy新作：让AI agent自动跑研究实验的开源工具，6天76k星。实测教程+3种普通人可用的副业思路，AI副业新方向。
+Date: 2026-04-26
+Category: AI工具
+---
+URL: https://www.aitoollab.top/articles/news/caveman-side-hustle/
+Title: 洞穴人的逆袭：GitHub 47k星项目揭示的AI副业新方向
+Description: 从caveman项目看AI副业机会：token优化已成为新战场。3种变现路径分析，附从0到月入1万的具体步骤。
+Date: 2026-04-28
+Category: AI工具
+---
+URL: https://www.aitoollab.top/articles/news/computer-use-45x-cost/
+Title: AI Agent火得不行，但一算账我直接愣住了
+Description: 同一样任务，Computer Use比传统API贵45倍。一个实际测试让我看到的真相，开发者到底该怎么选？
+Date: 2026-05-06
+Category: AI工具
+---
+URL: https://www.aitoollab.top/articles/news/deepseek-vision-model-2026/
+Title: DeepSeek终于能「看见」了，我试了一下，差点被它的思考过程惊到
+Description: 刚刚，DeepSeek上线了识图模式。我实际测试了一圈，发现它最厉害的的不是答案，而是思考过程——会追问、会联想、还会自我纠正。
+Date: 
+Category: AI工具
+---
+URL: https://www.aitoollab.top/articles/news/
+Title:  热点追踪｜AiToollab
+Description: GitHub趋势、新工具发布、AI行业动态，第一时间追踪
+Date: 
+Category: AI工具
+---
+URL: https://www.aitoollab.top/articles/news/nanobot-side-hustle/
+Title: nanobot：超轻量个人AI智能体，GitHub 41k星背后的3种副业玩法
+Description: HKUDS开源nanobot：Ultra-Lightweight Personal AI Agent，41k星。实测体验+3种普通人可复制的副业思路，从0开始的具体步骤。
+Date: 2026-04-28
+Category: AI工具
+---
+URL: https://www.aitoollab.top/articles/news/pentagon-ai-deals/
+Title: 美军AI名单出炉：OpenAI、xAI、谷歌全进了，唯独Anthropic被踢出局
+Description: 五角大楼一口气签了7家AI公司进机密网络，OpenAI、xAI、谷歌、微软、亚马逊、英伟达全上线，唯独Anthropic被贴上「供应链风险」标签排除在外。这背后是什么逻辑？
+Date: 2026-05-04
+Category: AI工具
+---
+URL: https://www.aitoollab.top/articles/news/pytorch-lightning-malware/
+Title: 你用的PyTorch Lightning可能被黑了，昨夜发现的供应链攻击
+Description: PyTorch Lightning 2.6.2和2.6.3被植入恶意代码，激活方式只是import一下。 credentials、Token、云服务密钥全被偷。 Dune虫族主题的病毒名，GitHub还在继续扩散。
+Date: 2026-05-01
+Category: AI工具
+---
+URL: https://www.aitoollab.top/articles/news/vibe-coding-agentic-boundary/
+Title: 我把AI写的代码直接上线了，然后我愣住了
+Description: Simon Willison说了一句让我睡不着的话：我已经不审AI写的代码了，但他没有职业声誉可以失去。这到底是解放还是危机？
+Date: 2026-05-07
+Category: AI工具
+---
+URL: https://www.aitoollab.top/articles/seo/ai-agent-tools-trend-2026/
+Title: GitHub一夜爆火的AI Agent项目，藏着2026年副业新方向
+Description: 今天GitHub trending榜单被AI agent项目刷屏了。从karpathy的autoresearch到career-ops自动找工作，从caveman省token到zeroclaw个人AI助手，我研究了一轮，发现这条路子真的能赚钱。
+Date: 2026-05-07
+Category: AI工具
+---
+URL: https://www.aitoollab.top/articles/seo/ai-ecommerce-product-photos/
+Title: 用AI做电商商品图月入3000，我把所有工具试了个遍，真实记录
+Description: 3个月实测6款AI电商商品图工具，从通义万相到Pebblely到Midjourney，每个都付了钱用了至少一星期。月入3000不是什么神话，但也没那么简单，踩过的坑全部摊开说。
+Date: 2026-05-06
+Category: AI工具
+---
+URL: https://www.aitoollab.top/articles/seo/ai-make-ppt/
+Title: 用AI做PPT到底靠不靠谱？我试了6款工具，说实话...
+Description: 前后花了两周，把市面上主流的AI做PPT工具全试了一遍。从Gamma到ChatPPT到AiPPT.cn，哪个真的好用，哪个是坑，每个都付了钱用了至少三天，踩过的坑全部摊开说。
+Date: 2026-05-06
+Category: AI工具
+---
+URL: https://www.aitoollab.top/articles/seo/ai-short-drama-money-2026/
+Title: AI短剧正在批量造富：有人月入30万，即梦2.0给出新机会
+Description: AI短剧生成已成风口，有工作室月入30万。字节即梦2.0推出创作者分成计划，普通人也能参与。深度分析AI短剧赚钱的完整路径。
+Date: 2026-05-06
+Category: AI工具
+---
+URL: https://www.aitoollab.top/articles/seo/ai-side-hustle-guide/
+Title: 普通人如何用AI副业赚钱？2026完整实战路线图（含步骤和工具）
+Description: 普通人如何用AI副业赚钱？本文提供完整实战路线图，包含具体步骤、实测工具和变现路径。从0开始，3步找到适合自己的AI副业方向并赚到第一笔钱。
+Date: 2026-04-20
+Category: AI工具
+---
+URL: https://www.aitoollab.top/articles/seo/ai-tools/
+Title: AI变现工具大全｜2026年普通人可用的AI赚钱工具清单（实测推荐）
+Description: 2026年最全AI变现工具清单，覆盖内容创作、编程自动化、数据分析、图像生成等12大场景。普通人用这些工具从零开始做副业，月入3000+。
+Date: 2026-04-19
+Category: AI工具
+---
+URL: https://www.aitoollab.top/articles/seo/ai-video-side-hustle-2026-w19/
+Title: AI视频生成副业真实测评：用AI做视频内容，普通人真的能月入过万？
+Description: 我用AI视频工具做了3个月副业，从0粉丝到接品牌广告，全流程实测。2026年AI视频生成副业真实收入、踩坑细节、变现路径一次说清楚。
+Date: 2026-05-04
+Category: AI工具
+---
+URL: https://www.aitoollab.top/articles/seo/ai-writing-side-hustle/
+Title: AI写作副业赚钱｜2026年普通人用AI写文章变现的完整指南
+Description: 普通人如何用AI写作月入3000+？本文分享AI写作副业实战经验，包含写作平台选择、内容定位、提示词技巧和避坑指南。不需要文笔基础，照着做就能开始。
+Date: 2026-04-21
+Category: AI工具
+---
+URL: https://www.aitoollab.top/articles/seo/chatgpt-earn-money/
+Title: ChatGPT赚钱实战｜普通人用ChatGPT月入5000的5个真实路径（2026实测）
+Description: 普通人用ChatGPT月入5000的5个实测路径，含具体操作步骤和收益数据。不需要技术背景，照着做2-4周可见收益。本文更新于2026年。
+Date: 2026-04-25
+Category: AI工具
+---
+URL: https://www.aitoollab.top/articles/seo/chrome-gemini-nano-silent/
+Title: Chrome偷偷往你电脑塞了一个4GB的AI模型，你知道吗？
+Description: Google Chrome正在静默下载4GB的Gemini Nano到你的设备上。没有问你，没有通知你，删了还会重新下。这个事情到底有多离谱，我扒了一下。
+Date: 
+Category: AI工具
+---
+URL: https://www.aitoollab.top/articles/seo/claude-code-token-saving/
+Title: 省Token就是省钱：穴居人说话法让我每月少花60%API费
+Description: GitHub 45k星的Claude Code神技：用穴居人说话法，3步省65% Token费用。附实测数据+具体操作教程，普通人做AI副业必备省成本技巧。
+Date: 2026-04-25
+Category: AI工具
+---
+URL: https://www.aitoollab.top/articles/seo/claude-earn-money/
+Title: Claude赚钱教程｜从0到1用Claude变现，2026普通人Claude副业完整攻略
+Description: 普通人怎么用Claude赚钱？本文分享2026年Claude变现实战经验，5种变现路径+详细操作步骤，不需要技术基础，照着做2周内出单。
+Date: 2026-04-25
+Category: AI工具
+---
+URL: https://www.aitoollab.top/articles/seo/cursor-side-hustle/
+Title: Cursor AI副业教程｜不用会编程也能用AI编程工具赚钱的3种方法
+Description: Cursor怎么用来做副业？普通人不用写代码也能用AI编程工具赚钱。我实测了3种方法，2周赚到¥3500，包含具体操作步骤和踩坑提醒。
+Date: 
+Category: AI工具
+---
+URL: https://www.aitoollab.top/articles/seo/deepseek-claude-code-17x-cheaper/
+Title: 我用DeepSeek跑Claude Code，省了17倍的钱
+Description: 一个脚本，让AI编程从每月200美元降到12美元。DeepClaude项目解析，用DeepSeek V4 Pro替代Claude API的完整方案。
+Date: 2026-05-03
+Category: AI工具
+---
+URL: https://www.aitoollab.top/articles/seo/
+Title:  教程攻略｜AiToollab
+Description: 从0到1的AI副业实战教程，覆盖具体工具、操作步骤和变现路径
+Date: 
+Category: AI工具
+---
+URL: https://www.aitoollab.top/articles/seo/local-business-ai-agent/
+Title: 为本地商家搭建AI智能体：月入8000+的蓝海副业（竞争小、需求大、易成单）
+Description: 本地商家AI智能体服务是2026年最适合普通人的蓝海副业方向。无需编程基础，帮本地商家搭建AI客服、预约助手、营销文案生成系统，单次搭建费1000-3000元，月维护费300-1000元。真实案例详解接单流程、工具栈和定价策略。
+Date: 2026-04-20
+Category: AI工具
+---
+URL: https://www.aitoollab.top/articles/seo/manus-cloud-computer/
+Title: Meta收购的那个Manus，今天推出了什么让普通人也能跑AI智能体的产品
+Description: Meta收购的AI Agent公司Manus今天推出Cloud Computer——一台永远在线的云端机器，专门用来跑AI Bots。普通人不用懂服务器、不用搞DevOps，也能拥有一个24小时不睡觉的AI员工。这篇文章告诉你它是什么、能做什么、以及对副业意味着什么。
+Date: 2026-05-03
+Category: AI工具
+---
+URL: https://www.aitoollab.top/articles/seo/multi-agent-side-hustle/
+Title: Multi-Agent多智能体副业：2026年AI副业新风口（从0到1搭建指南）
+Description: Multi-Agent多智能体副业怎么做？本文详解5大变现方向、3大主流框架对比、从0到1搭建步骤。2026年AI副业新风口，普通人如何用Multi-Agent赚到第一笔钱。
+Date: 2026-04-20
+Category: AI工具
+---
+URL: https://www.aitoollab.top/articles/seo/notion-side-hustle/
+Title: Notion副业管理模板｜用Notion管理副业的完整指南（2026）
+Description: Notion副业管理模板怎么用？本文详解如何用免费版Notion搭建副业追踪系统——任务管理、收入记录、目标进度，一张表搞定。不需要编程，30分钟上手。
+Date: 2026-04-25
+Category: AI工具
+---
+URL: https://www.aitoollab.top/articles/seo/resume-ai-prompts/
+Title: 简历优化AI提示词｜用AI写简历的完整攻略，让HR主动约面试（2026）
+Description: 简历投出去没回音？用AI优化简历的实战方法——从自我定位到措辞打磨，附具体提示词模板和前后对比。ChatGPT/Claude/Kimi通用，普通人实测有效。
+Date: 2026-04-25
+Category: AI工具
+---
+URL: https://www.aitoollab.top/articles/seo/side-hustle-money/
+Title: 副业赚钱｜下班后兼职赚钱的N种方法，2026普通人实测这5个最靠谱
+Description: 下班后兼职赚钱做什么？普通人副业推荐这5个实测有效的路径，包含具体平台、操作方法和真实收益数字。不用交押金，不用拉人头，照着做就能开始赚钱。
+Date: 2026-04-25
+Category: AI工具
+---
+URL: https://www.aitoollab.top/articles/seo/xiaohongshu-side-hustle/
+Title: 小红书副业｜2026普通人从0到1完整攻略，小红书赚钱真实记录
+Description: 普通人如何在小红书做副业月入3000+？本文分享小红书起号、爆款内容创作、变现路径的完整实战经验，包含3种副业方向、真实收益数据和详细操作步骤，照着做就能开始。
+Date: 2026-04-25
+Category: AI工具
+---
+URL: https://www.aitoollab.top/articles/startup-100/100-ai-startup-week2/
+Title: $100 AI创业实验追踪 Week 1｜Claude反超Gemini，GitHub冒出3个明星项目
+Description: $100 AI创业实验Week 1结果：Gemini SEO策略没流量，Claude悄悄反超。同时GitHub本周冒出3个明星AI agent项目，其中一个17万星。
+Date: 2026-04-30
+Category: AI工具
+---
+URL: https://www.aitoollab.top/articles/startup-100/2026-05-01-100-ai-startup-week-5/
+Title: $100 AI创业实验追踪 Week 2｜OpenCode爆发，然后有人被AI写了黑稿
+Description: Week 2：OpenCode冲上HN第一但issue 6000+，有个AI agent给维护者写了篇黑稿然后删了人家数据库。一周发生的事比一个月都精彩。
+Date: 2026-05-01
+Category: AI工具
+---
+URL: https://www.aitoollab.top/articles/startup-100/2026-05-07-100-ai-startup-week-3/
+Title: $100 AI创业实验追踪 Week 3
+Description: Week 3：DeepClaude用Claude Code的agent框架跑DeepSeek，4天涨星1500。树莓派Zero开始自己造agent。这周的信号很明确：大家不满足于用agent，开始造造agent的东西了。
+Date: 
+Category: AI工具
+---
+URL: https://www.aitoollab.top/articles/startup-100/ai-startup-100/
+Title: $100 AI创业实验追踪 Week 1｜Claude反超Gemini，GitHub突然冒出3个明星项目
+Description: $100 AI创业实验Week 1结果：Gemini SEO策略没流量，Claude悄悄反超。同时GitHub本周冒出3个明星AI agent项目，其中一个17万星。
+Date: 2026-04-30
+Category: AI工具
+---
+URL: https://www.aitoollab.top/articles/startup-100/
+Title:  $100实验追踪｜AiToollab
+Description: $100 AI创业实验，真实数据记录，不吹牛
+Date: 
+Category: AI工具
+---
