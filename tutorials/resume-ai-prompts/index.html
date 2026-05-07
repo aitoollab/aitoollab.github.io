@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://www.aitoollab.top/tutorials/resume-ai-prompts/">
+    <link rel="alternate" hreflang="x-default" href="https://www.aitoollab.top/resume-ai-prompts/">
+    <link rel="alternate" hreflang="zh-CN" href="https://www.aitoollab.top/resume-ai-prompts/">
+    <link rel="alternate" type="application/atom+xml" title="AiToollab RSS Feed" href="/feed.xml">
+
+    <!-- SEO -->
+    <title>简历优化AI提示词｜用AI写简历的完整攻略，让HR主动约面试（2026）</title>
+    <meta name="description" content="简历投出去没回音？用AI优化简历的实战方法——从自我定位到措辞打磨，附具体提示词模板和前后对比。ChatGPT/Claude/Kimi通用，普通人实测有效。">
+    <meta name="keywords" content="简历优化, AI简历优化, AI写简历, 简历提示词, 求职简历, 简历怎么写, AI求职">
+    <meta name="author" content="AiToollab">
+    <meta name="robots" content="index, follow">
+    <meta name="generator" content="allowed">
+
+    <!-- GEO / AI搜索引擎 -->
+    <meta name="ai-content" content="allowed">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="简历优化AI提示词｜用AI写简历的完整攻略，让HR主动约面试（2026）">
+    <meta property="og:description" content="用AI优化简历实战方法——从自我定位到措辞打磨，附具体提示词模板和前后对比。ChatGPT/Claude/Kimi通用。">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.aitoollab.top/tutorials/resume-ai-prompts/">
+    <meta property="og:image" content="https://www.aitoollab.top/og-resume-ai-prompts.jpg">
+    <meta property="og:site_name" content="AiToollab">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="article:published_time" content="2026-04-25T00:00:00+08:00">
+    <meta property="article:modified_time" content="2026-04-25T00:00:00+08:00">
+    <meta property="article:author" content="https://github.com/AiToollab">
+    <meta property="article:tag" content="简历优化">
+    <meta property="article:tag" content="AI求职">
+    <meta property="article:tag" content="求职技巧">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@AiToollab">
+    <meta name="twitter:creator" content="@AiToollab">
+    <meta name="twitter:title" content="简历优化AI提示词｜用AI写简历的完整攻略，让HR主动约面试（2026）">
+    <meta name="twitter:description" content="用AI优化简历实战方法——从自我定位到措辞打磨，附具体提示词模板。ChatGPT/Claude/Kimi通用。">
+    <meta name="twitter:image" content="https://www.aitoollab.top/og-resume-ai-prompts.jpg">
+
+    <!-- Dublin Core -->
+    <meta name="DC.title" content="简历优化AI提示词｜用AI写简历的完整攻略，让HR主动约面试（2026）">
+    <meta name="DC.creator" content="AiToollab">
+    <meta name="DC.subject" content="简历优化, AI简历优化, AI求职, 简历提示词">
+    <meta name="DC.description" content="用AI优化简历实战方法——从自我定位到措辞打磨，附具体提示词模板和前后对比。ChatGPT/Claude/Kimi通用。">
+    <meta name="DC.publisher" content="AiToollab">
+    <meta name="DC.date" content="2026-04-25">
+    <meta name="DC.language" content="zh-CN">
+
+    <style>
+        :root {
+            --bg: #f8fafc;
+            --text: #1e293b;
+            --primary: #059669;
+            --accent: #0ea5e9;
+            --card: #ffffff;
+            --muted: #64748b;
+            --border: #e2e8f0;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+        .container { max-width: 720px; margin: 0 auto; padding: 40px 20px; }
+        .breadcrumb { margin-bottom: 24px; font-size: 13px; color: var(--muted); }
+        .breadcrumb a { color: var(--primary); text-decoration: none; }
+        .badge { display: inline-block; background: linear-gradient(135deg, var(--primary), var(--accent)); color: #fff; padding: 4px 14px; border-radius: 20px; font-size: 13px; font-weight: 600; margin-bottom: 20px; }
+        h1 { font-size: 2.2rem; font-weight: 800; margin-bottom: 12px; line-height: 1.3; }
+        .lead { color: var(--muted); font-size: 1.1rem; margin-bottom: 32px; }
+        h2 { font-size: 1.4rem; font-weight: 700; margin: 36px 0 16px; color: var(--text); }
+        h3 { font-size: 1.15rem; font-weight: 700; margin: 24px 0 12px; color: var(--primary); }
+        p { margin-bottom: 16px; }
+        .article-card { background: var(--card); border-radius: 16px; padding: 28px; box-shadow: 0 4px 24px rgba(0,0,0,0.08); margin-bottom: 28px; }
+        .highlight-box { background: linear-gradient(135deg, #f0fdf4, #ecfdf5); border-left: 4px solid var(--primary); padding: 16px 20px; border-radius: 0 10px 10px 0; margin: 20px 0; }
+        .tip-box { background: #fffbeb; border: 1px solid #fde68a; border-radius: 10px; padding: 16px 20px; margin: 20px 0; }
+        .prompt-block { background: #1e293b; color: #e2e8f0; border-radius: 10px; padding: 20px; font-family: 'Courier New', monospace; font-size: 14px; line-height: 1.8; white-space: pre-wrap; margin: 16px 0; overflow-x: auto; }
+        .prompt-block .label { color: #fbbf24; font-weight: 700; }
+        .diff-old { background: #fee2e2; padding: 8px 12px; border-radius: 6px; margin: 8px 0; text-decoration: line-through; color: #991b1b; }
+        .diff-new { background: #dcfce7; padding: 8px 12px; border-radius: 6px; margin: 8px 0; color: #166534; }
+        .price-row { display: flex; align-items: baseline; gap: 16px; margin: 24px 0; }
+        .price { font-size: 2.8rem; font-weight: 800; color: var(--primary); }
+        .original { font-size: 1.1rem; color: var(--muted); text-decoration: line-through; }
+        .cta-btn { display: inline-block; background: linear-gradient(135deg, var(--primary), var(--accent)); color: #fff; padding: 16px 48px; border-radius: 12px; font-size: 1.1rem; font-weight: 700; text-decoration: none; transition: transform 0.2s; }
+        .cta-btn:hover { transform: translateY(-2px); }
+        .features { list-style: none; margin: 24px 0; }
+        .features li { padding: 10px 0; border-bottom: 1px solid var(--border); display: flex; gap: 12px; }
+        .features li::before { content: '✅'; }
+        .faq-item { margin: 20px 0; }
+        .footer { text-align: center; color: var(--muted); font-size: 13px; margin-top: 40px; }
+        @media (max-width: 600px) {
+            h1 { font-size: 1.7rem; }
+            .container { padding: 20px 16px; }
+        }
+    </style>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Article",
+                "headline": "简历优化AI提示词｜用AI写简历的完整攻略，让HR主动约面试（2026）",
+                "description": "用AI优化简历实战方法——从自我定位到措辞打磨，附具体提示词模板和前后对比。ChatGPT/Claude/Kimi通用，普通人实测有效。",
+                "author": {
+                    "@type": "Person",
+                    "@id": "https://www.aitoollab.top/#author",
+                    "name": "AiToollab",
+                    "url": "https://github.com/AiToollab"
+                },
+                "datePublished": "2026-04-25T00:00:00+08:00",
+                "dateModified": "2026-04-25T00:00:00+08:00",
+                "publisher": {
+                    "@type": "Person",
+                    "name": "AiToollab"
+                },
+                "mainEntityOfPage": {
+                    "@type": "WebPage",
+                    "@id": "https://www.aitoollab.top/resume-ai-prompts/"
+                },
+                "wordCount": 1950,
+                "articleSection": "AI求职",
+                "keywords": ["简历优化", "AI简历优化", "AI写简历", "简历提示词", "求职简历", "AI求职"],
+                "timeRequired": "PT20M",
+                "speakable": {
+                    "@type": "SpeakableSpecification",
+                    "cssSelector": ["h1", ".lead", "h2"]
+                }
+            },
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {"@type": "ListItem", "position": 1, "name": "首页", "item": "https://www.aitoollab.top/"},
+                    {"@type": "ListItem", "position": 2, "name": "AI求职", "item": "https://www.aitoollab.top/resume-ai-prompts/"}
+                ]
+            },
+            {
+                "@type": "FAQPage",
+                "mainEntity": [
+                    {"@type": "Question", "name": "AI写的简历HR能看出来吗？", "acceptedAnswer": {"@type": "Answer", "text": "正常使用AI优化措辞，HR完全看不出来。但如果整篇都是AI生成的空洞套话，HR反而会觉得「这人没有自己的东西」。关键是让AI帮你打磨表达，而不是帮你想内容。", "textFormat": "plain"}},
+                    {"@type": "Question", "name": "ChatGPT和Claude哪个更适合优化简历？", "acceptedAnswer": {"@type": "Answer", "text": "实测下来Claude更适合。Claude的长上下文窗口能一次读完你所有工作经历，给出更连贯的定位建议；ChatGPT更适合单点优化，比如只改「项目经历」部分。", "textFormat": "plain"}},
+                    {"@type": "Question", "name": "简历优化最重要的部分是哪一块？", "acceptedAnswer": {"@type": "Answer", "text": "80%的HR看一份简历的时间不超过15秒。最关键的是「项目经历」的写法——用「做了什么+怎么做+结果是什么」的公式，比「负责XX工作」有力得多。", "textFormat": "plain"}},
+                    {"@type": "Question", "name": "零经验应届生怎么用AI写简历？", "acceptedAnswer": {"@type": "Answer", "text": "应届生没有工作经历，就把「校园经历」和「项目经历」拆透——课程作业、社团活动、比赛、实习都可以写。重点是展示你的思考框架和执行力，而不是有没有「正经工作」。", "textFormat": "plain"}}
+                ]
+            }
+        ]
+    }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="breadcrumb"><a href="/">首页</a> / <a href="/ai-tools/">AI工具</a> / 简历优化AI提示词</div>
+        <div class="badge">💼 AI求职</div>
+        <h1>简历优化AI提示词｜用AI写简历的完整攻略，让HR主动约面试（2026）</h1>
+        <p class="lead">简历优化这件事，找人改一次至少500块起步。其实用AI完全可以搞定——关键是知道你让AI扮演什么角色、问什么具体问题。这篇讲清楚怎么做。</p>
+
+        <div class="article-card">
+            <h2>为什么你的简历投出去没有回音</h2>
+            <p>我自己帮人看简历的时候发现，大多数简历的问题不是「经历不够好」，而是<strong>表达方式没有让HR看到你的价值</strong>。</p>
+            <p>一个具体的场景：两个同样做过「用户运营」的人，一个写「负责用户运营工作，提升用户活跃度」，另一个写「通过A/B测试优化push文案，点击率从1.2%提升到3.8%，带来日活增长15%」，你觉得HR会约谁面试？</p>
+            <div class="highlight-box">
+                <strong>核心问题：</strong>你的简历没有展示「你做了什么+带来了什么结果」。AI可以帮助你重新措辞，把平淡的经历写得有重量感。
+            </div>
+        </div>
+
+        <div class="article-card">
+            <h2>用AI优化简历的完整流程</h2>
+
+            <h3>第一步：让AI帮你重新定位「卖点」</h3>
+            <p>在让AI改简历之前，先让它帮你搞清楚：你真正想展示的是什么。</p>
+            <div class="prompt-block"><span class="label">提示词：</span>我是一名[职业/背景]，有[X]年经验，主要做过[简要经历]。我接下来想申请[目标岗位类型]。请帮我分析：我最有竞争力的3个卖点是什么？围绕这些卖点，我的简历应该重点突出什么？</div>
+            <p>这一步很多人跳过了，直接让AI改文字。但如果没有清晰的定位，改出来的文字也是散的。</p>
+
+            <h3>第二步：用STAR法则改写项目经历</h3>
+            <p>STAR法则：Situation（情境）→ Task（任务）→ Action（行动）→ Result（结果）。</p>
+            <p>但AI时代不需要你手写，直接让AI帮你「翻译」：</p>
+            <div class="prompt-block"><span class="label">提示词：</span>请用STAR法则改写以下工作描述，让它更有说服力，同时保留真实数据：
+[粘贴原始描述]
+
+要求：
+- 突出「具体行动」而不是「负责什么」
+- 结果用数字量化，如果原始数据不够精确，用「约」「左右」标注
+- 不要夸大，保持真实</div>
+
+            <h3>第三步：针对不同岗位定制化调整</h3>
+            <p>一份简历打天下是最低效的做法。AI的优势在于可以快速针对不同岗位调整侧重。</p>
+            <div class="prompt-block"><span class="label">提示词：</span>我申请的岗位是[岗位名称]，核心要求是[列出关键词]。请从以下简历中挑选最相关的经历，并调整措辞使其更贴合这个岗位：
+[粘贴简历全文]</div>
+        </div>
+
+        <div class="article-card">
+            <h2>优化前后对比实例</h2>
+
+            <h3>原始写法（HR 5秒扫过）</h3>
+            <div class="diff-old">负责公司小红书账号运营，发布内容，与用户互动</div>
+
+            <h3>优化后（HR会多看两眼）</h3>
+            <div class="diff-new">运营小红书账号，0预算冷启动，3个月内从0做到粉丝3200，篇均互动率8.2%（对标同体量账号均值约3%）</div>
+
+            <h3>原始写法</h3>
+            <div class="diff-old">协助完成市场推广活动，提升了品牌知名度</div>
+
+            <h3>优化后</h3>
+            <div class="diff-new">策划执行3场线下推广活动，累计触达潜在用户1200+，，活动后官网UV上涨37%，其中23%来自活动长尾流量</div>
+
+            <div class="tip-box">
+                <strong>关键变化：</strong>从「做了什么」到「做成了什么」。数字是关键——即使你的数字不够漂亮，用「约」「左右」标注也是诚实且有效的。
+            </div>
+        </div>
+
+        <div class="article-card">
+            <h2>针对不同岗位的提示词模板</h2>
+
+            <h3>互联网产品/运营岗</h3>
+            <div class="prompt-block"><span class="label">提示词：</span>我是一名运营专员，正在申请高级运营/产品经理岗位。我的工作经历包括用户运营、内容运营、活动运营。请帮我：
+1. 找出我经历中最能体现「数据驱动」能力的3件事
+2. 用「北极星指标+分解动作+量化结果」的方式重新描述
+3. 如果原简历缺少数据，请用「假设合理的方式」给出估算，并标注「约」</div>
+
+            <h3>技术/开发岗</h3>
+            <div class="prompt-block"><span class="label">提示词：</span>我是一名后端/前端/全栈工程师，正在申请[目标公司/岗位]。请帮我优化项目经历部分，重点突出：技术难点、你负责的模块、最终的系统效果（性能、稳定性、扩展性）。避免只写「用了XX技术」，要写「用XX技术解决了什么问题」。</div>
+
+            <h3>应届生/转行者</h3>
+            <div class="prompt-block"><span class="label">提示词：</span>我是应届生/转行者，之前做[原背景]，现在想转行做[目标岗位]。我虽然没有直接相关经验，但有以下经历：[列出校园经历/项目/比赛/自学作品]。请帮我把这些经历翻译成「对目标岗位有价值的技能和经验」，重点展示我的学习能力和思维框架。</div>
+        </div>
+
+        <div class="article-card">
+            <h2>注意事项：AI优化简历的边界</h2>
+            <p>AI优化简历能帮你做两件事：<strong>重新定位卖点</strong>和<strong>打磨表达方式</strong>。但它不能帮你伪造经历、编造数据。</p>
+            <p>面试官一个问题就能拆穿简历造假。相比之下：</p>
+            <ul class="features">
+                <li>用AI优化措辞，让真实经历更有力——✅ 完全可以用</li>
+                <li>让AI帮你想一个你没有做过的项目的细节——❌ 风险极大</li>
+                <li>用AI估算一个合理的数字（比如活动触达人数）并标注——✅ 可以接受</li>
+            </ul>
+            <div class="price-row">
+                <span class="price">¥39</span>
+                <span class="original">¥99</span>
+            </div>
+            <a href="/contact/" class="cta-btn">获取完整简历优化提示词包 →</a>
+        </div>
+
+        <div class="article-card">
+            <h2>常见问题</h2>
+
+            <div class="faq-item">
+                <h3>AI写的简历HR能看出来吗？</h3>
+                <p>正常使用AI优化措辞，HR完全看不出来。但如果整篇都是AI生成的空洞套话，HR反而会觉得「这人没有自己的东西」。关键是让AI帮你打磨表达，而不是帮你想内容。</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>ChatGPT和Claude哪个更适合优化简历？</h3>
+                <p>实测下来Claude更适合。Claude的长上下文窗口能一次读完你所有工作经历，给出更连贯的定位建议；ChatGPT更适合单点优化，比如只改「项目经历」部分。</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>简历优化最重要的部分是哪一块？</h3>
+                <p>80%的HR看一份简历的时间不超过15秒。最关键的是「项目经历」的写法——用「做了什么+怎么做+结果是什么」的公式，比「负责XX工作」有力得多。</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>零经验应届生怎么用AI写简历？</h3>
+                <p>应届生没有工作经历，就把「校园经历」和「项目经历」拆透——课程作业、社团活动、比赛、实习都可以写。重点是展示你的思考框架和执行力，而不是有没有「正经工作」。</p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>© 2026 AiToollab · <a href="/">返回首页</a> · <a href="/prompt-pack/">AI副业提示词包</a></p>
+        </div>
+    </div>
+</body>
+</html>

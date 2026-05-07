@@ -9,7 +9,7 @@ AiToollab，普通人用AI做副业的实战平台。收录10+AI副业方向、5
 
 ## 导航
 - 全部文章：https://www.aitoollab.top/articles/
-- SEO教程：https://www.aitoollab.top/articles/seo/
+- SEO教程：https://www.aitoollab.top/tutorials/
 - 赚钱案例：https://www.aitoollab.top/articles/cases/
 - AI资讯：https://www.aitoollab.top/articles/news/
 - AI创企：https://www.aitoollab.top/articles/startup-100/
@@ -124,133 +124,133 @@ Description: Simon Willison说了一句让我睡不着的话：我已经不审AI
 Date: 2026-05-07
 Category: AI工具
 ---
-URL: https://www.aitoollab.top/articles/seo/ai-agent-tools-trend-2026/
+URL: https://www.aitoollab.top/tutorials/ai-agent-tools-trend-2026/
 Title: GitHub一夜爆火的AI Agent项目，藏着2026年副业新方向
 Description: 今天GitHub trending榜单被AI agent项目刷屏了。从karpathy的autoresearch到career-ops自动找工作，从caveman省token到zeroclaw个人AI助手，我研究了一轮，发现这条路子真的能赚钱。
 Date: 2026-05-07
 Category: AI工具
 ---
-URL: https://www.aitoollab.top/articles/seo/ai-ecommerce-product-photos/
+URL: https://www.aitoollab.top/tutorials/ai-ecommerce-product-photos/
 Title: 用AI做电商商品图月入3000，我把所有工具试了个遍，真实记录
 Description: 3个月实测6款AI电商商品图工具，从通义万相到Pebblely到Midjourney，每个都付了钱用了至少一星期。月入3000不是什么神话，但也没那么简单，踩过的坑全部摊开说。
 Date: 2026-05-06
 Category: AI工具
 ---
-URL: https://www.aitoollab.top/articles/seo/ai-make-ppt/
+URL: https://www.aitoollab.top/tutorials/ai-make-ppt/
 Title: 用AI做PPT到底靠不靠谱？我试了6款工具，说实话...
 Description: 前后花了两周，把市面上主流的AI做PPT工具全试了一遍。从Gamma到ChatPPT到AiPPT.cn，哪个真的好用，哪个是坑，每个都付了钱用了至少三天，踩过的坑全部摊开说。
 Date: 2026-05-06
 Category: AI工具
 ---
-URL: https://www.aitoollab.top/articles/seo/ai-short-drama-money-2026/
+URL: https://www.aitoollab.top/tutorials/ai-short-drama-money-2026/
 Title: AI短剧正在批量造富：有人月入30万，即梦2.0给出新机会
 Description: AI短剧生成已成风口，有工作室月入30万。字节即梦2.0推出创作者分成计划，普通人也能参与。深度分析AI短剧赚钱的完整路径。
 Date: 2026-05-06
 Category: AI工具
 ---
-URL: https://www.aitoollab.top/articles/seo/ai-side-hustle-guide/
+URL: https://www.aitoollab.top/tutorials/ai-side-hustle-guide/
 Title: 普通人如何用AI副业赚钱？2026完整实战路线图（含步骤和工具）
 Description: 普通人如何用AI副业赚钱？本文提供完整实战路线图，包含具体步骤、实测工具和变现路径。从0开始，3步找到适合自己的AI副业方向并赚到第一笔钱。
 Date: 2026-04-20
 Category: AI工具
 ---
-URL: https://www.aitoollab.top/articles/seo/ai-tools/
+URL: https://www.aitoollab.top/tutorials/ai-tools/
 Title: AI变现工具大全｜2026年普通人可用的AI赚钱工具清单（实测推荐）
 Description: 2026年最全AI变现工具清单，覆盖内容创作、编程自动化、数据分析、图像生成等12大场景。普通人用这些工具从零开始做副业，月入3000+。
 Date: 2026-04-19
 Category: AI工具
 ---
-URL: https://www.aitoollab.top/articles/seo/ai-video-side-hustle-2026-w19/
+URL: https://www.aitoollab.top/tutorials/ai-video-side-hustle-2026-w19/
 Title: AI视频生成副业真实测评：用AI做视频内容，普通人真的能月入过万？
 Description: 我用AI视频工具做了3个月副业，从0粉丝到接品牌广告，全流程实测。2026年AI视频生成副业真实收入、踩坑细节、变现路径一次说清楚。
 Date: 2026-05-04
 Category: AI工具
 ---
-URL: https://www.aitoollab.top/articles/seo/ai-writing-side-hustle/
+URL: https://www.aitoollab.top/tutorials/ai-writing-side-hustle/
 Title: AI写作副业赚钱｜2026年普通人用AI写文章变现的完整指南
 Description: 普通人如何用AI写作月入3000+？本文分享AI写作副业实战经验，包含写作平台选择、内容定位、提示词技巧和避坑指南。不需要文笔基础，照着做就能开始。
 Date: 2026-04-21
 Category: AI工具
 ---
-URL: https://www.aitoollab.top/articles/seo/chatgpt-earn-money/
+URL: https://www.aitoollab.top/tutorials/chatgpt-earn-money/
 Title: ChatGPT赚钱实战｜普通人用ChatGPT月入5000的5个真实路径（2026实测）
 Description: 普通人用ChatGPT月入5000的5个实测路径，含具体操作步骤和收益数据。不需要技术背景，照着做2-4周可见收益。本文更新于2026年。
 Date: 2026-04-25
 Category: AI工具
 ---
-URL: https://www.aitoollab.top/articles/seo/chrome-gemini-nano-silent/
+URL: https://www.aitoollab.top/tutorials/chrome-gemini-nano-silent/
 Title: Chrome偷偷往你电脑塞了一个4GB的AI模型，你知道吗？
 Description: Google Chrome正在静默下载4GB的Gemini Nano到你的设备上。没有问你，没有通知你，删了还会重新下。这个事情到底有多离谱，我扒了一下。
 Date: 
 Category: AI工具
 ---
-URL: https://www.aitoollab.top/articles/seo/claude-code-token-saving/
+URL: https://www.aitoollab.top/tutorials/claude-code-token-saving/
 Title: 省Token就是省钱：穴居人说话法让我每月少花60%API费
 Description: GitHub 45k星的Claude Code神技：用穴居人说话法，3步省65% Token费用。附实测数据+具体操作教程，普通人做AI副业必备省成本技巧。
 Date: 2026-04-25
 Category: AI工具
 ---
-URL: https://www.aitoollab.top/articles/seo/claude-earn-money/
+URL: https://www.aitoollab.top/tutorials/claude-earn-money/
 Title: Claude赚钱教程｜从0到1用Claude变现，2026普通人Claude副业完整攻略
 Description: 普通人怎么用Claude赚钱？本文分享2026年Claude变现实战经验，5种变现路径+详细操作步骤，不需要技术基础，照着做2周内出单。
 Date: 2026-04-25
 Category: AI工具
 ---
-URL: https://www.aitoollab.top/articles/seo/cursor-side-hustle/
+URL: https://www.aitoollab.top/tutorials/cursor-side-hustle/
 Title: Cursor AI副业教程｜不用会编程也能用AI编程工具赚钱的3种方法
 Description: Cursor怎么用来做副业？普通人不用写代码也能用AI编程工具赚钱。我实测了3种方法，2周赚到¥3500，包含具体操作步骤和踩坑提醒。
 Date: 
 Category: AI工具
 ---
-URL: https://www.aitoollab.top/articles/seo/deepseek-claude-code-17x-cheaper/
+URL: https://www.aitoollab.top/tutorials/deepseek-claude-code-17x-cheaper/
 Title: 我用DeepSeek跑Claude Code，省了17倍的钱
 Description: 一个脚本，让AI编程从每月200美元降到12美元。DeepClaude项目解析，用DeepSeek V4 Pro替代Claude API的完整方案。
 Date: 2026-05-03
 Category: AI工具
 ---
-URL: https://www.aitoollab.top/articles/seo/
+URL: https://www.aitoollab.top/tutorials/
 Title:  教程攻略｜AiToollab
 Description: 从0到1的AI副业实战教程，覆盖具体工具、操作步骤和变现路径
 Date: 
 Category: AI工具
 ---
-URL: https://www.aitoollab.top/articles/seo/local-business-ai-agent/
+URL: https://www.aitoollab.top/tutorials/local-business-ai-agent/
 Title: 为本地商家搭建AI智能体：月入8000+的蓝海副业（竞争小、需求大、易成单）
 Description: 本地商家AI智能体服务是2026年最适合普通人的蓝海副业方向。无需编程基础，帮本地商家搭建AI客服、预约助手、营销文案生成系统，单次搭建费1000-3000元，月维护费300-1000元。真实案例详解接单流程、工具栈和定价策略。
 Date: 2026-04-20
 Category: AI工具
 ---
-URL: https://www.aitoollab.top/articles/seo/manus-cloud-computer/
+URL: https://www.aitoollab.top/tutorials/manus-cloud-computer/
 Title: Meta收购的那个Manus，今天推出了什么让普通人也能跑AI智能体的产品
 Description: Meta收购的AI Agent公司Manus今天推出Cloud Computer——一台永远在线的云端机器，专门用来跑AI Bots。普通人不用懂服务器、不用搞DevOps，也能拥有一个24小时不睡觉的AI员工。这篇文章告诉你它是什么、能做什么、以及对副业意味着什么。
 Date: 2026-05-03
 Category: AI工具
 ---
-URL: https://www.aitoollab.top/articles/seo/multi-agent-side-hustle/
+URL: https://www.aitoollab.top/tutorials/multi-agent-side-hustle/
 Title: Multi-Agent多智能体副业：2026年AI副业新风口（从0到1搭建指南）
 Description: Multi-Agent多智能体副业怎么做？本文详解5大变现方向、3大主流框架对比、从0到1搭建步骤。2026年AI副业新风口，普通人如何用Multi-Agent赚到第一笔钱。
 Date: 2026-04-20
 Category: AI工具
 ---
-URL: https://www.aitoollab.top/articles/seo/notion-side-hustle/
+URL: https://www.aitoollab.top/tutorials/notion-side-hustle/
 Title: Notion副业管理模板｜用Notion管理副业的完整指南（2026）
 Description: Notion副业管理模板怎么用？本文详解如何用免费版Notion搭建副业追踪系统——任务管理、收入记录、目标进度，一张表搞定。不需要编程，30分钟上手。
 Date: 2026-04-25
 Category: AI工具
 ---
-URL: https://www.aitoollab.top/articles/seo/resume-ai-prompts/
+URL: https://www.aitoollab.top/tutorials/resume-ai-prompts/
 Title: 简历优化AI提示词｜用AI写简历的完整攻略，让HR主动约面试（2026）
 Description: 简历投出去没回音？用AI优化简历的实战方法——从自我定位到措辞打磨，附具体提示词模板和前后对比。ChatGPT/Claude/Kimi通用，普通人实测有效。
 Date: 2026-04-25
 Category: AI工具
 ---
-URL: https://www.aitoollab.top/articles/seo/side-hustle-money/
+URL: https://www.aitoollab.top/tutorials/side-hustle-money/
 Title: 副业赚钱｜下班后兼职赚钱的N种方法，2026普通人实测这5个最靠谱
 Description: 下班后兼职赚钱做什么？普通人副业推荐这5个实测有效的路径，包含具体平台、操作方法和真实收益数字。不用交押金，不用拉人头，照着做就能开始赚钱。
 Date: 2026-04-25
 Category: AI工具
 ---
-URL: https://www.aitoollab.top/articles/seo/xiaohongshu-side-hustle/
+URL: https://www.aitoollab.top/tutorials/xiaohongshu-side-hustle/
 Title: 小红书副业｜2026普通人从0到1完整攻略，小红书赚钱真实记录
 Description: 普通人如何在小红书做副业月入3000+？本文分享小红书起号、爆款内容创作、变现路径的完整实战经验，包含3种副业方向、真实收益数据和详细操作步骤，照着做就能开始。
 Date: 2026-04-25

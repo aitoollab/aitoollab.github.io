@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://www.aitoollab.top/tutorials/notion-side-hustle/">
+    <link rel="alternate" hreflang="x-default" href="https://www.aitoollab.top/notion-side-hustle/">
+    <link rel="alternate" hreflang="zh-CN" href="https://www.aitoollab.top/notion-side-hustle/">
+    <link rel="alternate" type="application/atom+xml" title="AiToollab RSS Feed" href="/feed.xml">
+
+    <!-- SEO -->
+    <title>Notion副业管理模板｜用Notion管理副业的完整指南（2026）</title>
+    <meta name="description" content="Notion副业管理模板怎么用？本文详解如何用免费版Notion搭建副业追踪系统——任务管理、收入记录、目标进度，一张表搞定。不需要编程，30分钟上手。">
+    <meta name="keywords" content="Notion副业管理, Notion副业模板, 副业管理工具, Notion任务管理, 副业收入记录, 副业追踪看板">
+    <meta name="author" content="AiToollab">
+    <meta name="robots" content="index, follow">
+    <meta name="generator" content="allowed">
+
+    <!-- GEO / AI搜索引擎 -->
+    <meta name="ai-content" content="allowed">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Notion副业管理模板｜用Notion管理副业的完整指南（2026）">
+    <meta property="og:description" content="用免费版Notion搭建副业追踪系统——任务管理、收入记录、目标进度，30分钟上手，不需编程。">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.aitoollab.top/tutorials/notion-side-hustle/">
+    <meta property="og:image" content="https://www.aitoollab.top/og-notion-side-hustle.jpg">
+    <meta property="og:site_name" content="AiToollab">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="article:published_time" content="2026-04-25T00:00:00+08:00">
+    <meta property="article:modified_time" content="2026-04-25T00:00:00+08:00">
+    <meta property="article:author" content="https://github.com/AiToollab">
+    <meta property="article:tag" content="Notion副业">
+    <meta property="article:tag" content="副业管理">
+    <meta property="article:tag" content="效率工具">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@AiToollab">
+    <meta name="twitter:creator" content="@AiToollab">
+    <meta name="twitter:title" content="Notion副业管理模板｜用Notion管理副业的完整指南（2026）">
+    <meta name="twitter:description" content="用免费版Notion搭建副业追踪系统——任务管理、收入记录、目标进度，30分钟上手。">
+    <meta name="twitter:image" content="https://www.aitoollab.top/og-notion-side-hustle.jpg">
+
+    <!-- Dublin Core -->
+    <meta name="DC.title" content="Notion副业管理模板｜用Notion管理副业的完整指南（2026）">
+    <meta name="DC.creator" content="AiToollab">
+    <meta name="DC.subject" content="Notion副业管理, 副业追踪看板, Notion模板, 副业管理工具">
+    <meta name="DC.description" content="用免费版Notion搭建副业追踪系统——任务管理、收入记录、目标进度，30分钟上手，不需编程。">
+    <meta name="DC.publisher" content="AiToollab">
+    <meta name="DC.date" content="2026-04-25">
+    <meta name="DC.language" content="zh-CN">
+
+    <style>
+        :root {
+            --bg: #f8fafc;
+            --text: #1e293b;
+            --primary: #059669;
+            --accent: #0ea5e9;
+            --card: #ffffff;
+            --muted: #64748b;
+            --border: #e2e8f0;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+        .container { max-width: 720px; margin: 0 auto; padding: 40px 20px; }
+        .breadcrumb { margin-bottom: 24px; font-size: 13px; color: var(--muted); }
+        .breadcrumb a { color: var(--primary); text-decoration: none; }
+        .badge { display: inline-block; background: linear-gradient(135deg, var(--primary), var(--accent)); color: #fff; padding: 4px 14px; border-radius: 20px; font-size: 13px; font-weight: 600; margin-bottom: 20px; }
+        h1 { font-size: 2.2rem; font-weight: 800; margin-bottom: 12px; line-height: 1.3; }
+        .lead { color: var(--muted); font-size: 1.1rem; margin-bottom: 32px; }
+        h2 { font-size: 1.4rem; font-weight: 700; margin: 36px 0 16px; color: var(--text); }
+        h3 { font-size: 1.15rem; font-weight: 700; margin: 24px 0 12px; color: var(--primary); }
+        p { margin-bottom: 16px; }
+        .article-card { background: var(--card); border-radius: 16px; padding: 28px; box-shadow: 0 4px 24px rgba(0,0,0,0.08); margin-bottom: 28px; }
+        .highlight-box { background: linear-gradient(135deg, #f0fdf4, #ecfdf5); border-left: 4px solid var(--primary); padding: 16px 20px; border-radius: 0 10px 10px 0; margin: 20px 0; }
+        .tip-box { background: #fffbeb; border: 1px solid #fde68a; border-radius: 10px; padding: 16px 20px; margin: 20px 0; }
+        .tip-box::before { content: '💡 '; }
+        .step-list { list-style: none; margin: 16px 0; }
+        .step-list li { padding: 8px 0; display: flex; gap: 12px; align-items: flex-start; }
+        .step-num { background: var(--primary); color: #fff; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; flex-shrink: 0; margin-top: 2px; }
+        .price-row { display: flex; align-items: baseline; gap: 16px; margin: 24px 0; }
+        .price { font-size: 2.8rem; font-weight: 800; color: var(--primary); }
+        .original { font-size: 1.1rem; color: var(--muted); text-decoration: line-through; }
+        .cta-btn { display: inline-block; background: linear-gradient(135deg, var(--primary), var(--accent)); color: #fff; padding: 16px 48px; border-radius: 12px; font-size: 1.1rem; font-weight: 700; text-decoration: none; transition: transform 0.2s; }
+        .cta-btn:hover { transform: translateY(-2px); }
+        .features { list-style: none; margin: 24px 0; }
+        .features li { padding: 10px 0; border-bottom: 1px solid var(--border); display: flex; gap: 12px; }
+        .features li::before { content: '✅'; }
+        .faq-item { margin: 20px 0; }
+        .footer { text-align: center; color: var(--muted); font-size: 13px; margin-top: 40px; }
+        @media (max-width: 600px) {
+            h1 { font-size: 1.7rem; }
+            .container { padding: 20px 16px; }
+        }
+    </style>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Article",
+                "headline": "Notion副业管理模板｜用Notion管理副业的完整指南（2026）",
+                "description": "用免费版Notion搭建副业追踪系统——任务管理、收入记录、目标进度，30分钟上手，不需编程。",
+                "author": {
+                    "@type": "Person",
+                    "@id": "https://www.aitoollab.top/#author",
+                    "name": "AiToollab",
+                    "url": "https://github.com/AiToollab"
+                },
+                "datePublished": "2026-04-25T00:00:00+08:00",
+                "dateModified": "2026-04-25T00:00:00+08:00",
+                "publisher": {
+                    "@type": "Person",
+                    "name": "AiToollab"
+                },
+                "mainEntityOfPage": {
+                    "@type": "WebPage",
+                    "@id": "https://www.aitoollab.top/notion-side-hustle/"
+                },
+                "wordCount": 1800,
+                "articleSection": "副业工具",
+                "keywords": ["Notion副业管理", "Notion副业模板", "副业管理工具", "Notion任务管理", "副业收入记录"],
+                "timeRequired": "PT10M",
+                "speakable": {
+                    "@type": "SpeakableSpecification",
+                    "cssSelector": ["h1", ".lead", "h2"]
+                }
+            },
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {"@type": "ListItem", "position": 1, "name": "首页", "item": "https://www.aitoollab.top/"},
+                    {"@type": "ListItem", "position": 2, "name": "副业工具", "item": "https://www.aitoollab.top/notion-side-hustle/"}
+                ]
+            },
+            {
+                "@type": "FAQPage",
+                "mainEntity": [
+                    {"@type": "Question", "name": "Notion免费版能管理副业吗？", "acceptedAnswer": {"@type": "Answer", "text": "完全可以。免费版Notion对页面数量无限制，完全能满足个人副业管理的需求。任务列表、收入记录、目标追踪这些核心功能免费版都能实现，不需要花钱升级。", "textFormat": "plain"}},
+                    {"@type": "Question", "name": "Notion副业模板从哪里找？", "acceptedAnswer": {"@type": "Answer", "text": "Notion官方模板库、Notion VIP社区、某宝/咸鱼都有大量现成模板。也可以自己用30分钟从零搭一个，核心就是一个数据库+几个视图，完全定制化。", "textFormat": "plain"}},
+                    {"@type": "Question", "name": "副业管理最关键要记什么？", "acceptedAnswer": {"@type": "Answer", "text": "三件事：收入流水（记录每笔进账）、时间投入（每周花了多少小时）、目标进度（下个月想赚多少、还差多少）。这三点搞清楚，副业就不容易变成无底洞。", "textFormat": "plain"}},
+                    {"@type": "Question", "name": "Notion和Excel/飞书表格比有什么优势？", "acceptedAnswer": {"@type": "Answer", "text": "Notion最大的优势是多视图——同一个数据库可以切换成表格、日历、时间线、看板等不同视图，适合副业这种同时有项目+时间+收入三个维度的管理工作。", "textFormat": "plain"}}
+                ]
+            }
+        ]
+    }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="breadcrumb"><a href="/">首页</a> / <a href="/ai-tools/">AI工具</a> / Notion副业管理</div>
+        <div class="badge">⏱ 效率工具</div>
+        <h1>Notion副业管理模板｜用Notion管理副业的完整指南（2026）</h1>
+        <p class="lead">副业做久了最怕什么？不是赚不到钱，是忙了半天不知道自己在忙什么。用Notion把副业当正事管——一张表看清收入、花了多少时间、下一步要做什么。</p>
+
+        <div class="article-card">
+            <h2>为什么副业需要管理系统</h2>
+            <p>很多人副业做着做着就放弃了，不是因为赚不到钱，而是因为没有反馈回路。白天上班累成狗，晚上副业又看不到进度条，坚持两周就放弃了。</p>
+            <div class="highlight-box">
+                <strong>一个简单的事实：</strong>能持续做下去的副业，都有「看得见的进展」。收入记录表就像游戏里的经验条，让你知道自己在进步，而不是原地踏步。
+            </div>
+            <p>Notion特别适合副业管理，因为它免费、灵活、跨平台。手机、电脑、网页都能用，不需要装任何软件。</p>
+        </div>
+
+        <div class="article-card">
+            <h2>Notion副业管理核心：一张数据库，三个视图</h2>
+            <p>副业管理本质上就三个维度：<strong>任务</strong>（要做什么）、<strong>时间</strong>（花了多少）、<strong>收入</strong>（赚了还是亏了）。用Notion的一个数据库就能把三个维度串起来。</p>
+
+            <h3>第一步：建立副业任务数据库</h3>
+            <p>在Notion新建一个数据库，字段包括：</p>
+            <ul class="step-list">
+                <li><span class="step-num">1</span><span><strong>任务名称</strong>——具体要做什么，比如「写小红书第三篇」</span></li>
+                <li><span class="step-num">2</span><span><strong>所属项目</strong>——内容创作/产品销售/接单服务</span></li>
+                <li><span class="step-num">3</span><span><strong>预计时长</strong>——预估花多少小时</span></li>
+                <li><span class="step-num">4</span><span><strong>实际时长</strong>——完成后记录真实花费</span></li>
+                <li><span class="step-num">5</span><span><strong>截止日期</strong>——什么时候要完成</span></li>
+                <li><span class="step-num">6</span><span><strong>状态</strong>——待办/进行中/已完成</span></li>
+                <li><span class="step-num">7</span><span><strong>收入影响</strong>——完成这项任务预计能带来多少收入</span></li>
+            </ul>
+
+            <h3>第二步：切换三种视图</h3>
+            <p>同一个数据库，右上角切换视图：</p>
+            <ul class="step-list">
+                <li><span class="step-num">📋</span><span><strong>看板视图</strong>——按状态分组，看看今天有哪些待办</span></li>
+                <li><span class="step-num">📅</span><span><strong>日历视图</strong>——按截止日期排列，避免错过deadline</span></li>
+                <li><span class="step-num">📊</span><span><strong>表格视图</strong>——看整体数据，比如某个月花了多少小时</span></li>
+            </ul>
+        </div>
+
+        <div class="article-card">
+            <h2>收入追踪：每个月底复盘的底气</h2>
+            <p>副业收入记录不需要复杂，一个收入流水表就够了。字段：日期、来源平台、金额、备注。</p>
+            <p>关键是<strong>每月汇总</strong>：用Notion的公式功能自动算出当月总收入。不需要手动加，表格自动更新。</p>
+            <div class="tip-box">
+                <strong>建议：</strong>收到第一笔副业收入那天，即使只有5块钱，也要记下来。从5块到500块的路径，比从0到1看起来更真实，也更能坚持。
+            </div>
+        </div>
+
+        <div class="article-card">
+            <h2>时间追踪：知道自己「真忙还是假忙」</h2>
+            <p>很多人体感「我副业花了好多时间」，但实际统计出来可能只有每周3-4小时。Notion的任务数据库里记录每次任务的实际时长，月底一看：哦，原来我并没有想象中那么努力。</p>
+            <p>这个数据很重要——如果你每周副业时间少于10小时，变现速度慢是正常的，不是个人的问题，调整预期就好。</p>
+        </div>
+
+        <div class="article-card">
+            <h2>Notion副业模板推荐</h2>
+            <p>不想自己从零搭？可以直接用现成模板。推荐几个免费且评价好的：</p>
+            <ul class="step-list">
+                <li><span class="step-num">✅</span><span><strong>Notion VIP社区模板</strong>——专门为副业设计的追踪系统，含收入仪表盘</span></li>
+                <li><span class="step-num">✅</span><span><strong>Passionfounder模板</strong>——适合内容创作者，含发布日程+收益追踪</span></li>
+                <li><span class="step-num">✅</span><span><strong>Thomas Frank的Entrepreneur OS</strong>——英文但逻辑清晰，适合做副业全局管理</span></li>
+            </ul>
+            <p>也可以直接用我们整理的副业管理模板，包含收入记录+任务追踪+月度复盘三个核心组件：</p>
+            <div class="price-row">
+                <span class="price">¥39</span>
+                <span class="original">¥129</span>
+            </div>
+            <a href="/contact/" class="cta-btn">获取完整副业管理模板 →</a>
+        </div>
+
+        <div class="article-card">
+            <h2>常见问题</h2>
+
+            <div class="faq-item">
+                <h3>Notion免费版能管理副业吗？</h3>
+                <p>完全可以。免费版Notion对页面数量无限制，完全能满足个人副业管理的需求。任务列表、收入记录、目标追踪这些核心功能免费版都能实现，不需要花钱升级。</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Notion副业模板从哪里找？</h3>
+                <p>Notion官方模板库、Notion VIP社区、某宝/咸鱼都有大量现成模板。也可以自己用30分钟从零搭一个，核心就是一个数据库+几个视图，完全定制化。</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>副业管理最关键要记什么？</h3>
+                <p>三件事：收入流水（记录每笔进账）、时间投入（每周花了多少小时）、目标进度（下个月想赚多少、还差多少）。这三点搞清楚，副业就不容易变成无底洞。</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Notion和Excel/飞书表格比有什么优势？</h3>
+                <p>Notion最大的优势是多视图——同一个数据库可以切换成表格、日历、时间线、看板等不同视图，适合副业这种同时有项目+时间+收入三个维度的管理工作。</p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>© 2026 AiToollab · <a href="/">返回首页</a> · <a href="/prompt-pack/">AI副业提示词包</a></p>
+        </div>
+    </div>
+</body>
+</html>
