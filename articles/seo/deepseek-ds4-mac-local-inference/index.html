@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://www.aitoollab.top/articles/seo/deepseek-ds4-mac-local-inference/">
+    <link rel="alternate" hreflang="x-default" href="https://www.aitoollab.top/articles/seo/deepseek-ds4-mac-local-inference/">
+    <link rel="alternate" hreflang="zh-CN" href="https://www.aitoollab.top/articles/seo/deepseek-ds4-mac-local-inference/">
+    <link rel="alternate" type="application/atom+xml" title="AiToollab RSS Feed" href="/feed.xml">
+
+    <title>Redis创始人做了个新玩具：在Mac上跑满血DeepSeek V4 Flash</title>
+    <meta name="description" content="antirez（Redis创始人）做了个只有260行代码的本地推理引擎ds4，让Mac用户能在本地跑DeepSeek V4 Flash。1M上下文、压缩KV缓存、Metal加速——这是普通人第一次不用花大钱就能用上顶级大模型。">
+    <meta name="keywords" content="DeepSeek V4 Flash, ds4, Mac本地大模型, 本地推理引擎, antirez, DeepSeek本地运行, Mac AI, 本地LLM, AI副业工具">
+    <meta name="author" content="AiToollab">
+    <meta name="robots" content="index, follow">
+    <meta name="generator" content="allowed">
+    <meta name="ai-content" content="allowed">
+
+    <meta property="og:title" content="Redis创始人做了个新玩具：在Mac上跑满血DeepSeek V4 Flash">
+    <meta property="og:description" content="antirez（Redis创始人）做了个只有260行代码的本地推理引擎ds4，让Mac用户能在本地跑DeepSeek V4 Flash。1M上下文、压缩KV缓存、Metal加速。">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.aitoollab.top/articles/seo/deepseek-ds4-mac-local-inference/">
+    <meta property="og:image" content="https://www.aitoollab.top/og-deepseek-ds4.jpg">
+    <meta property="og:site_name" content="AiToollab">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="article:published_time" content="2026-05-08T08:00:00+08:00">
+    <meta property="article:modified_time" content="2026-05-08T08:00:00+08:00">
+    <meta property="article:author" content="https://github.com/AiToollab">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@AiToollab">
+    <meta name="twitter:creator" content="@AiToollab">
+    <meta name="twitter:title" content="Redis创始人做了个新玩具：在Mac上跑满血DeepSeek V4 Flash">
+    <meta name="twitter:description" content="antirez做了个260行代码的本地推理引擎，让Mac跑DeepSeek V4 Flash。">
+    <meta name="twitter:image" content="https://www.aitoollab.top/og-deepseek-ds4.jpg">
+
+    <meta name="DC.title" content="Redis创始人做了个新玩具：在Mac上跑满血DeepSeek V4 Flash">
+    <meta name="DC.creator" content="AiToollab">
+    <meta name="DC.subject" content="DeepSeek本地运行, Mac AI, AI副业">
+    <meta name="DC.description" content="antirez（Redis创始人）做了个只有260行代码的本地推理引擎ds4，让Mac用户能在本地跑DeepSeek V4 Flash。">
+    <meta name="DC.publisher" content="AiToollab">
+    <meta name="DC.date" content="2026-05-08">
+    <meta name="DC.language" content="zh-CN">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Redis创始人做了个新玩具：在Mac上跑满血DeepSeek V4 Flash",
+        "description": "antirez（Redis创始人）做了个只有260行代码的本地推理引擎ds4，让Mac用户能在本地跑DeepSeek V4 Flash。1M上下文、压缩KV缓存、Metal加速。",
+        "datePublished": "2026-05-08T08:00:00+08:00",
+        "dateModified": "2026-05-08T08:00:00+08:00",
+        "author": {
+            "@type": "Organization",
+            "name": "AiToollab",
+            "url": "https://www.aitoollab.top/"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "AiToollab",
+            "url": "https://www.aitoollab.top/"
+        }
+    }
+    </script>
+
+    <style>
+    :root {
+        --bg: #0d1117;
+        --card: #161b22;
+        --border: #30363d;
+        --text: #e6edf3;
+        --muted: #8b949e;
+        --accent: #58a6ff;
+        --green: #3fb950;
+        --orange: #d29922;
+        --red: #f85149;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+    .container { max-width: 720px; margin: 0 auto; padding: 20px; }
+    .header { margin-bottom: 40px; padding-bottom: 24px; border-bottom: 1px solid var(--border); }
+    .tag { display: inline-block; background: rgba(88,166,255,0.1); color: var(--accent); font-size: 12px; padding: 4px 10px; border-radius: 20px; margin-bottom: 12px; }
+    .header h1 { font-size: 28px; font-weight: 700; margin-bottom: 12px; line-height: 1.3; }
+    .meta { font-size: 14px; color: var(--muted); }
+    .article-body { padding-bottom: 60px; }
+    .article-body p { margin-bottom: 16px; color: #c9d1d9; font-size: 16px; line-height: 1.8; }
+    .article-body h2 { font-size: 20px; margin: 40px 0 16px; color: var(--text); border-left: 3px solid var(--accent); padding-left: 12px; }
+    .article-body h3 { font-size: 17px; margin: 24px 0 10px; color: #e6edf3; }
+    .article-body strong { color: var(--text); }
+    .article-body ul, .article-body ol { margin: 16px 0 20px 24px; }
+    .article-body li { margin-bottom: 8px; color: #c9d1d9; }
+    .article-body .highlight { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin: 20px 0; font-size: 15px; }
+    .article-body .highlight-blue { border-left: 3px solid var(--accent); background: rgba(88,166,255,0.06); }
+    .article-body .highlight-green { border-left: 3px solid var(--green); background: rgba(63,185,80,0.06); }
+    .article-body .highlight-orange { border-left: 3px solid var(--orange); background: rgba(210,153,34,0.06); }
+    .article-body .tip { background: rgba(240,136,62,0.1); border: 1px solid rgba(240,136,62,0.3); border-radius: 8px; padding: 14px 16px; margin: 20px 0; font-size: 14px; color: #e6edf3; }
+    .article-body .tip strong { color: var(--orange); }
+    .article-body .cta { background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(63,185,80,0.1)); border: 1px solid rgba(88,166,255,0.3); border-radius: 12px; padding: 20px; margin: 32px 0; text-align: center; }
+    .article-body .cta p { margin-bottom: 8px; color: var(--text); }
+    .article-body .cta a { display: inline-block; background: var(--accent); color: #fff; padding: 10px 24px; border-radius: 8px; text-decoration: none; font-weight: 600; margin-top: 8px; }
+    .article-body .cta a:hover { opacity: 0.9; }
+    .article-body .related { border-top: 1px solid var(--border); margin-top: 48px; padding-top: 24px; }
+    .article-body .related h3 { font-size: 16px; color: var(--muted); margin-bottom: 16px; }
+    .article-body .related a { display: block; padding: 10px 0; color: var(--accent); font-size: 15px; text-decoration: none; }
+    .article-body .related a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 40px 20px; border-top: 1px solid var(--border); color: var(--muted); font-size: 14px; }
+    footer a { color: var(--accent); text-decoration: none; }
+    @media (max-width: 600px) { .header h1 { font-size: 22px; } }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <article class="article-body">
+        <header class="header">
+    <div class="tag">💡 AI工具</div>
+    <h1>Redis创始人做了个新玩具：在Mac上跑满血DeepSeek V4 Flash</h1>
+    <div class="meta">2026-05-08 · 约3200字 · AiToollab</div>
+</header>
+
+<p>事情是这样的。</p>
+
+<p>前两天在 Hacker News 上刷到一个项目，260 points，不算最高，但看了一眼我就愣住了——<strong>antirez 做了个新的本地推理引擎</strong>。</p>
+
+<p>antirez 就是那个 antirez，Redis 的创始人，写出了几乎统治了半个互联网基础设施的男人。2020 年他把 Redis 卖给 Redis Labs 之后，大家都在猜他会去搞什么新东西。</p>
+
+<p>答案来了：他去写了一个只有 260 行 C 代码的、专门跑 DeepSeek V4 Flash 的、Metal 加速的本地推理引擎，叫 ds4。</p>
+
+<p>我当时的反应就是：<strong>？？？</strong></p>
+
+<p>说实话，2026 年了，本地跑大模型这件事已经不稀奇了。llama.cpp、Ollama、GPT4All，一堆工具都能在本地跑。但 ds4 让我觉得不一样的原因，恰恰就是它的"不贪心"——只做一件事，只跑一个模型，把这一件事做到极致。</p>
+
+<p>这个项目在 HN 上被顶了 260 分不算什么，但项目本身的思路，以及 DeepSeek V4 Flash 这个模型本身的特点，让我越想越觉得这玩意儿有意思。今天就把我的研究结果摊开说说。</p>
+
+<h2>先搞清楚它是什么</h2>
+
+<p>ds4 的全称是 DeepSeek V4 Flash Native Inference Engine for Metal。名字已经把核心说清楚了：它是一个专门为 DeepSeek V4 Flash 打造的、Metal（苹果GPU）加速的本地推理引擎。</p>
+
+<p>注意"专门"这个词。</p>
+
+<p>现在主流的本地推理工具，llama.cpp、Ollama 这些，都是"通用选手"——什么模型都能跑，但也意味着什么模型都不是专门优化的。ds4 走的是相反的路：我就认准 DeepSeek V4 Flash 这一棵树，往死里优化它。</p>
+
+<p>antirez 自己说了，这个项目存在的原因是他相信 DeepSeek V4 Flash 是一个"值得专门为它写一个引擎"的模型。原因有 8 个，我在 README 里看到的时候，感觉他说得我心服口服：</p>
+
+<p>先说速度。V4 Flash 比很多比它小的模型还快，靠的是稀疏激活和更少的活跃参数。</p>
+
+<p>再说思考模式。它不是那种你问个简单问题它给你生成八千字思考过程的模型，思考长度和问题复杂度成正比。这在本地跑的时候太重要了——你知道本地跑一个满血思考模型有多慢吗？</p>
+
+<p>然后是上下文窗口——<strong>100万 token</strong>。这个数字现在说出来已经不像当初那么震撼了，但 100 万 token 意味着你可以往里面塞一整年所有的对话记录、财务报表、代码库——然后问它问题。</p>
+
+<p>还有压缩 KV 缓存。这是最让我兴奋的一点。DeepSeek V4 的 KV 缓存压缩率极高，在 Mac 上跑的时候内存占用大幅降低，而且——<strong>KV 缓存可以持久化到磁盘</strong>。下次再跑同一个对话，秒加载，不用重新跑一遍。</p>
+
+<p>支持 2-bit 量化这个也很实用。配合特殊量化方式，128GB 内存的 MacBook 就能跑起来。</p>
+
+<p>最后，它写英文和意大利文的质量"接近前沿模型"。这是 antirez 自己的原话，作为一个意大利开发者，他特意提到了这一点。</p>
+
+<h2>为什么说这是给普通人的机会</h2>
+
+<p>说了这么多项目特点，你可能还是觉得：然后呢？这跟我有什么关系？</p>
+
+<p>坦率的讲，关系还挺大的。</p>
+
+<p>我是真的觉得，<strong>本地大模型的能力边界，正在被这类专用引擎快速突破</strong>。以前觉得本地跑大模型是个极客玩具，散热差、速度慢、体验糟糕。但现在 DeepSeek V4 Flash + ds4 这套组合，它解决的不只是"能不能跑"的问题，而是"跑起来够不够好用"的问题。</p>
+
+<p>举一个具体的场景。我自己平时写代码用 Claude Code，云端跑，速度和体验都没话说。但我一直有一个痛点没解决：<strong>私有数据的安全问题</strong>。公司内部的项目、一些涉及商业机密的东西，扔给云端模型跑，心里总有点膈应。</p>
+
+<p>ds4 这条路打开了一个新的可能性：如果我有一台 128GB 内存的 Mac Studio，我完全可以把整个代码库、分析文档全部塞进 DeepSeek V4 Flash 的上下文里，让它帮我做代码审查、生成测试用例、分析业务逻辑，而且数据永远不会离开我的机器。</p>
+
+<p>这不是YY，是已经可以做到的事情了。</p>
+
+<p>ds4 和 DeepSeek V4 Flash 带来的机会，主要在这几个方向：</p>
+
+<p>先说<strong>隐私敏感的 AI 服务</strong>。现在很多企业、政府机构、医院，对数据外泄是零容忍的。以前他们只能用本地开源模型，体验差、速度慢。DeepSeek V4 Flash 的能力配合专用引擎的优化，让"在本地跑一个好用的大模型"变成了现实。这类客户愿意为稳定、可用的方案付钱。</p>
+
+<p>然后说<strong>Mac 生态下的 AI 应用开发</strong>。ds4 本身是 C 代码，接口是 HTTP API。说白了，任何能发 HTTP 请求的应用都能接上它。对于想在 Mac 平台上做 AI 应用创业的人来说，这是一个新的底层选项。</p>
+
+<p>第三，<strong>提示词工程和模型调优服务</strong>。DeepSeek V4 Flash 的思考模式和其他模型不太一样，如何有效利用它的思考链、1M 上下文窗口、压缩 KV 缓存这些特性，需要有人去研究、去踩坑。这个领域的知识，目前还是早期。</p>
+
+<p>第四，<strong>数字产品：本地 AI 使用指南</strong>。说实话，有能力在 Mac 上跑满血 DeepSeek V4 Flash 的人，绝对不是普通用户。但这群人恰好是愿意为好内容付费的。可以做教程、做配置指南、做场景使用手册，挂 Gumroad 或者自己的网站。</p>
+
+<h2>一些你可能想问的问题</h2>
+
+<p><strong>Q：我的 Mac 能跑吗？</strong></p>
+
+<p>最低需求大概是这样的：Mac（含 Apple Silicon M系列芯片），至少 128GB 统一内存。是的你没看错，128GB。这是一个比较高的门槛，但如果你是目标用户，你应该知道自己有没有这个配置。128GB 以下的机器，可以考虑跑量化版本，但体验会打折扣。</p>
+
+<p><strong>Q：这和 Ollama 有什么区别？</strong></p>
+
+<p>Ollama 是一个通用的本地模型运行平台，支持成百上千个模型。ds4 专门为一个模型优化，不做别的。类比一下：Ollama 像瑞士军刀，ds4 像一把专门为某把刀定制的磨刀石。瑞士军刀啥都能干，但那把刀用这个磨刀石磨出来，比用瑞士军刀磨的更锋利。</p>
+
+<p><strong>Q：为什么选 DeepSeek V4 Flash 而不是其他模型？</strong></p>
+
+<p>这个问题 antirez 本人回答过，他的核心论点是：当前的本地推理工具有一个普遍问题——它们追求"支持更多模型"，但没有认真把任何一个模型做到"开箱即用"的体验。DeepSeek V4 Flash 的技术特性（压缩 KV 缓存、稀疏激活、1M 上下文）让它成为做这件事的最佳候选。</p>
+
+<p><strong>Q：这是不是意味着本地 AI 时代来了？</strong></p>
+
+<p>我觉得还需要时间。128GB 内存的 Mac 毕竟是少数。但这个方向是对的，而且 antirez 的思路很清晰——不是做一个大而全的东西，而是把一个小而美的东西做到极致。这往往是技术突破最常见的路径。</p>
+
+<h2>我的判断</h2>
+
+<p>聊了这么多，说说我自己的感受。</p>
+
+<p>ds4 这个项目最打动我的，不是它技术多牛，而是它背后的思路——<strong>选择正确的问题，比解决问题更重要</strong>。antirez 没有去做另一个 llama.cpp，而是问了自己一个问题：当前条件下，哪一个模型、哪一条路，值得我花时间把每一步都走到极致？</p>
+
+<p>他的答案是 DeepSeek V4 Flash，Metal，专用引擎。</p>
+
+<p>这个选择本身，就是价值。</p>
+
+<p>对于普通人来说，与其追着每一个新模型、新工具跑，不如停下来想清楚：<strong>自己真正需要解决的问题是什么，然后找到最合适的那一个工具，死磕它</strong>。</p>
+
+<p>ds4 是这么做的，antirez 也是这么做的。</p>
+
+<p>某种程度上，这和做副业的逻辑是一样的。</p>
+
+<p>好了，就说这么多。如果你对 ds4 或者 DeepSeek V4 Flash 的具体使用有什么问题，欢迎在评论区聊。</p>
+
+        <div class="cta">
+            <p>需要 AI 副业提示词包？</p>
+            <p style="color: #8b949e; font-size: 14px;">50+ 实测有效的 AI 副业提示词，覆盖方向选择、内容创作、变现路径。¥39，一次买断，永久更新。</p>
+            <a href="/prompt-pack/">查看提示词全家桶 →</a>
+        </div>
+
+        <div class="related">
+            <h3>相关阅读</h3>
+            <a href="/articles/seo/deepseek-claude-code-17x-cheaper/">我用 DeepSeek 跑 Claude Code，省了 17 倍的钱</a>
+            <a href="/articles/seo/ai-agent-tools-trend-2026/">GitHub 一夜爆火的 AI Agent 项目，藏着 2026 年副业新方向</a>
+            <a href="/articles/cases/ai-agent-customization-service/">用开源 AI Agent 项目做定制服务：普通人从 0 到月入 1 万的完整路径</a>
+        </div>
+
+    </article>
+</div>
+
+<footer>
+    <p>© 2026 <a href="/">AiToollab</a> · <a href="/prompt-pack/">AI副业提示词全家桶</a></p>
+</footer>
+
+</body>
+</html>
