@@ -1,153 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url><loc>https://www.aitoollab.top/</loc><lastmod>2026-04-29</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
-<url><loc>https://www.aitoollab.top/tutorials/ai-side-hustle-guide/</loc><lastmod>2026-04-26</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
-<url><loc>https://www.aitoollab.top/articles/</loc><lastmod>2026-04-29</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-<url><loc>https://www.aitoollab.top/tutorials/</loc><lastmod>2026-04-29</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-<url><loc>https://www.aitoollab.top/articles/news/</loc><lastmod>2026-04-29</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://www.aitoollab.top/articles/cases/</loc><lastmod>2026-04-29</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-<url><loc>https://www.aitoollab.top/articles/startup-100/</loc><lastmod>2026-04-29</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://www.aitoollab.top/tutorials/multi-agent-side-hustle/</loc><lastmod>2026-04-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-<url><loc>https://www.aitoollab.top/articles/cases/ai-digital-products-passive-income/</loc><lastmod>2026-04-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-<url><loc>https://www.aitoollab.top/tutorials/local-business-ai-agent/</loc><lastmod>2026-04-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-<url><loc>https://www.aitoollab.top/tutorials/ai-tools/</loc><lastmod>2026-04-26</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-<url><loc>https://www.aitoollab.top/prompt-pack/</loc><lastmod>2026-04-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-<url><loc>https://www.aitoollab.top/contact/</loc><lastmod>2026-04-26</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-<url><loc>https://www.aitoollab.top/articles/cases/gumroad-ai-side-hustle/</loc><lastmod>2026-04-26</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-<url><loc>https://www.aitoollab.top/tutorials/resume-ai-prompts/</loc><lastmod>2026-04-25</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-<url><loc>https://www.aitoollab.top/tutorials/notion-side-hustle/</loc><lastmod>2026-04-25</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-<url><loc>https://www.aitoollab.top/articles/startup-100/ai-startup-100/</loc><lastmod>2026-04-25</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-<url><loc>https://www.aitoollab.top/tutorials/ai-writing-side-hustle/</loc><lastmod>2026-04-25</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-<url><loc>https://www.aitoollab.top/tutorials/claude-code-token-saving/</loc><lastmod>2026-04-25</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-<url><loc>https://www.aitoollab.top/tutorials/side-hustle-money/</loc><lastmod>2026-04-25</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-<url><loc>https://www.aitoollab.top/tutorials/chatgpt-earn-money/</loc><lastmod>2026-04-25</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-<url><loc>https://www.aitoollab.top/tutorials/claude-earn-money/</loc><lastmod>2026-04-25</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-<url><loc>https://www.aitoollab.top/tutorials/xiaohongshu-side-hustle/</loc><lastmod>2026-04-25</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-<url><loc>https://www.aitoollab.top/articles/news/autoresearch-ai-research-agent/</loc><lastmod>2026-04-26</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-<url><loc>https://www.aitoollab.top/tutorials/cursor-side-hustle/</loc><lastmod>2026-04-26</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-<url><loc>https://www.aitoollab.top/articles/news/caveman-side-hustle/</loc><lastmod>2026-04-28</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-<url><loc>https://www.aitoollab.top/articles/cases/ai-agent-customization-service/</loc><lastmod>2026-04-27</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-<url><loc>https://www.aitoollab.top/articles/news/nanobot-side-hustle/</loc><lastmod>2026-04-28</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-<url><loc>https://www.aitoollab.top/articles/cases/ai-medical-bill-repricing/</loc><lastmod>2026-04-29</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-<url><loc>https://www.aitoollab.top/xhs-headlines/</loc><lastmod>2026-04-25</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-    <url>
-        <loc>https://www.aitoollab.top/articles/news/deepseek-vision-model-2026/</loc>
-        <lastmod>2026-04-30</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.aitoollab.top/articles/news/pytorch-lightning-malware/</loc>
-        <lastmod>2026-05-01</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.aitoollab.top/articles/news/anthropic-900b-valuation/</loc>
-        <lastmod>2026-05-03</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.aitoollab.top/tutorials/manus-cloud-computer/</loc>
-        <lastmod>2026-05-03</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.aitoollab.top/articles/news/pentagon-ai-deals/</loc>
-        <lastmod>2026-05-04</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.aitoollab.top/articles/news/apple-ai-tax/</loc>
-        <lastmod>2026-05-03</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.aitoollab.top/tutorials/deepseek-claude-code-17x-cheaper/</loc>
-        <lastmod>2026-05-04</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.aitoollab.top/tutorials/ai-video-side-hustle-2026-w19/</loc>
-        <lastmod>2026-05-04</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.aitoollab.top/tutorials/chrome-gemini-nano-silent/</loc>
-        <lastmod>2026-05-06</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.aitoollab.top/tutorials/ai-ecommerce-product-photos/</loc>
-        <lastmod>2026-05-06</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.aitoollab.top/articles/news/computer-use-45x-cost/</loc>
-        <lastmod>2026-05-06</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.aitoollab.top/tutorials/ai-make-ppt/</loc>
-        <lastmod>2026-05-06</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.aitoollab.top/tutorials/ai-short-drama-money-2026/</loc>
-        <lastmod>2026-05-06</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.aitoollab.top/articles/startup-100/2026-05-07-100-ai-startup-week-3/</loc>
-        <lastmod>2026-05-07</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.aitoollab.top/tutorials/ai-agent-tools-trend-2026/</loc>
-        <lastmod>2026-05-07</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.aitoollab.top/articles/news/vibe-coding-agentic-boundary/</loc>
-        <lastmod>2026-05-07</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.aitoollab.top/articles/cases/warp-agentic-terminal/</loc>
-        <lastmod>2026-05-07</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.aitoollab.top/articles/seo/deepseek-ds4-mac-local-inference/</loc>
-        <lastmod>2026-05-08</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.aitoollab.top/articles/news/ai-slop-killing-communities/</loc>
-        <lastmod>2026-05-08</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.aitoollab.top/articles/seo/mcp-side-hustle-2026/</loc>
-        <lastmod>2026-05-09</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
+<url><loc>https://www.aitoollab.top/</loc><lastmod>2026-05-09</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+<url><loc>https://www.aitoollab.top/about/</loc><lastmod>2026-05-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.aitoollab.top/tutorials/</loc><lastmod>2026-05-07</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+<url><loc>https://www.aitoollab.top/articles/</loc><lastmod>2026-05-07</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+<url><loc>https://www.aitoollab.top/articles/news/</loc><lastmod>2026-05-08</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>
+<url><loc>https://www.aitoollab.top/articles/cases/</loc><lastmod>2026-05-07</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+<url><loc>https://www.aitoollab.top/articles/startup-100/</loc><lastmod>2026-05-07</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+<url><loc>https://www.aitoollab.top/tutorials/claude-earn-money/</loc><lastmod>2026-05-07</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+<url><loc>https://www.aitoollab.top/tutorials/ai-short-drama-money-2026/</loc><lastmod>2026-05-07</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+<url><loc>https://www.aitoollab.top/tutorials/ai-video-side-hustle-2026-w19/</loc><lastmod>2026-05-07</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+<url><loc>https://www.aitoollab.top/tutorials/ai-ecommerce-product-photos/</loc><lastmod>2026-05-07</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+<url><loc>https://www.aitoollab.top/tutorials/ai-side-hustle-guide/</loc><lastmod>2026-05-07</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+<url><loc>https://www.aitoollab.top/tutorials/ai-agent-tools-trend-2026/</loc><lastmod>2026-05-07</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+<url><loc>https://www.aitoollab.top/tutorials/multi-agent-side-hustle/</loc><lastmod>2026-05-07</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+<url><loc>https://www.aitoollab.top/tutorials/side-hustle-money/</loc><lastmod>2026-05-07</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+<url><loc>https://www.aitoollab.top/tutorials/chrome-gemini-nano-silent/</loc><lastmod>2026-05-07</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+<url><loc>https://www.aitoollab.top/tutorials/ai-make-ppt/</loc><lastmod>2026-05-07</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+<url><loc>https://www.aitoollab.top/tutorials/deepseek-claude-code-17x-cheaper/</loc><lastmod>2026-05-07</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+<url><loc>https://www.aitoollab.top/tutorials/manus-cloud-computer/</loc><lastmod>2026-05-07</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+<url><loc>https://www.aitoollab.top/tutorials/chatgpt-earn-money/</loc><lastmod>2026-05-07</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+<url><loc>https://www.aitoollab.top/tutorials/cursor-side-hustle/</loc><lastmod>2026-05-07</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+<url><loc>https://www.aitoollab.top/tutorials/ai-writing-side-hustle/</loc><lastmod>2026-05-07</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+<url><loc>https://www.aitoollab.top/tutorials/ai-tools/</loc><lastmod>2026-05-07</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+<url><loc>https://www.aitoollab.top/tutorials/local-business-ai-agent/</loc><lastmod>2026-05-07</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+<url><loc>https://www.aitoollab.top/tutorials/claude-code-token-saving/</loc><lastmod>2026-05-07</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+<url><loc>https://www.aitoollab.top/tutorials/notion-side-hustle/</loc><lastmod>2026-05-07</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+<url><loc>https://www.aitoollab.top/tutorials/xiaohongshu-side-hustle/</loc><lastmod>2026-05-07</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+<url><loc>https://www.aitoollab.top/tutorials/resume-ai-prompts/</loc><lastmod>2026-05-07</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+<url><loc>https://www.aitoollab.top/articles/news/pytorch-lightning-malware/</loc><lastmod>2026-05-06</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>
+<url><loc>https://www.aitoollab.top/articles/news/nanobot-side-hustle/</loc><lastmod>2026-05-04</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>
+<url><loc>https://www.aitoollab.top/articles/news/vibe-coding-agentic-boundary/</loc><lastmod>2026-05-07</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>
+<url><loc>https://www.aitoollab.top/articles/news/anthropic-900b-valuation/</loc><lastmod>2026-05-03</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>
+<url><loc>https://www.aitoollab.top/articles/news/autoresearch-ai-research-agent/</loc><lastmod>2026-05-06</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>
+<url><loc>https://www.aitoollab.top/articles/news/ai-slop-killing-communities/</loc><lastmod>2026-05-08</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>
+<url><loc>https://www.aitoollab.top/articles/news/deepseek-vision-model-2026/</loc><lastmod>2026-04-30</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>
+<url><loc>https://www.aitoollab.top/articles/news/pentagon-ai-deals/</loc><lastmod>2026-05-06</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>
+<url><loc>https://www.aitoollab.top/articles/news/computer-use-45x-cost/</loc><lastmod>2026-05-06</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>
+<url><loc>https://www.aitoollab.top/articles/news/apple-ai-tax/</loc><lastmod>2026-05-06</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>
+<url><loc>https://www.aitoollab.top/articles/news/caveman-side-hustle/</loc><lastmod>2026-05-04</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>
+<url><loc>https://www.aitoollab.top/articles/cases/ai-agent-customization-service/</loc><lastmod>2026-05-04</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+<url><loc>https://www.aitoollab.top/articles/cases/ai-digital-products-passive-income/</loc><lastmod>2026-05-04</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+<url><loc>https://www.aitoollab.top/articles/cases/ai-medical-bill-repricing/</loc><lastmod>2026-05-04</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+<url><loc>https://www.aitoollab.top/articles/cases/warp-agentic-terminal/</loc><lastmod>2026-05-07</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+<url><loc>https://www.aitoollab.top/articles/cases/gumroad-ai-side-hustle/</loc><lastmod>2026-05-04</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+<url><loc>https://www.aitoollab.top/articles/startup-100/2026-05-01-100-ai-startup-week-5/</loc><lastmod>2026-05-01</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+<url><loc>https://www.aitoollab.top/articles/startup-100/ai-startup-100/</loc><lastmod>2026-05-04</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+<url><loc>https://www.aitoollab.top/articles/startup-100/100-ai-startup-week2/</loc><lastmod>2026-04-30</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+<url><loc>https://www.aitoollab.top/articles/startup-100/2026-05-07-100-ai-startup-week-3/</loc><lastmod>2026-05-07</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+<url><loc>https://www.aitoollab.top/prompt-pack/</loc><lastmod>2026-04-30</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+<url><loc>https://www.aitoollab.top/contact/</loc><lastmod>2026-04-30</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 </urlset>

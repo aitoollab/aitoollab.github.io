@@ -28,6 +28,18 @@ Allow: /
 User-agent: FacebookBot
 Allow: /
 
+# Perplexity AI
+User-agent: PerplexityBot
+Allow: /
+
+# Amazon AI
+User-agent: Amazonbot
+Allow: /
+
+# You.com
+User-agent: YouBot
+Allow: /
+
 # 百度
 User-agent: Baiduspider
 Allow: /
