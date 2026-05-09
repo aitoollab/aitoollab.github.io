@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://www.aitoollab.top/articles/cases/opensquilla-token-efficient-ai-agent/">
+    <link rel="alternate" type="application/atom+xml" title="AiToollab RSS Feed" href="/feed.xml">
+    <link rel="alternate" hreflang="x-default" href="https://www.aitoollab.top/articles/cases/opensquilla-token-efficient-ai-agent/">
+    <link rel="alternate" hreflang="zh-CN" href="https://www.aitoollab.top/articles/cases/opensquilla-token-efficient-ai-agent/">
+
+    <title>用OpenSquilla做AI Agent优化服务：同一个任务，省80%Token成本怎么赚钱</title>
+    <meta name="description" content="2天99星，50星/天的增速，OpenSquilla正在让AI Agent的Token消耗量降低60-80%。这篇文章聊聊：普通人怎么用它来赚钱。">
+    <meta name="keywords" content="OpenSquilla, AI Agent, Token优化, 变现, 副业, 智能路由">
+    <meta name="author" content="AiToollab">
+    <meta name="robots" content="index, follow">
+    <meta name="ai-content" content="allowed">
+
+    <meta property="og:title" content="用OpenSquilla做AI Agent优化服务：同一个任务，省80%Token成本怎么赚钱">
+    <meta property="og:description" content="2天99星，50星/天的增速，OpenSquilla正在让AI Agent的Token消耗量降低60-80%。这篇文章聊聊：普通人怎么用它来赚钱。">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.aitoollab.top/articles/cases/opensquilla-token-efficient-ai-agent/">
+    <meta property="og:site_name" content="AiToollab">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="article:published_time" content="2026-05-09T00:00:00+08:00">
+    <meta property="article:modified_time" content="2026-05-09T00:00:00+08:00">
+    <meta property="article:author" content="https://github.com/AiToollab">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="用OpenSquilla做AI Agent优化服务">
+    <meta name="twitter:description" content="同一个任务，省80%Token成本怎么赚钱">
+
+    <style>
+        :root {
+            --bg: #0d1117;
+            --card: #161b22;
+            --border: #30363d;
+            --text: #e6edf3;
+            --muted: #8b949e;
+            --accent: #58a6ff;
+            --green: #3fb950;
+            --purple: #a371f7;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.9;
+            font-size: 17px;
+        }
+        a { color: var(--accent); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        
+        .header {
+            background: linear-gradient(135deg, #0d1117 0%, #1a2035 50%, #0d1117 100%);
+            border-bottom: 1px solid var(--border);
+            padding: 60px 20px 40px;
+            text-align: center;
+        }
+        .header .badge {
+            display: inline-block;
+            background: rgba(88,166,255,0.12);
+            color: var(--accent);
+            padding: 4px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            margin-bottom: 16px;
+            border: 1px solid rgba(88,166,255,0.3);
+        }
+        .header h1 {
+            font-size: 32px;
+            line-height: 1.3;
+            max-width: 800px;
+            margin: 0 auto 16px;
+            background: linear-gradient(135deg, #fff 0%, #8b949e 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .header .meta {
+            color: var(--muted);
+            font-size: 14px;
+            margin-bottom: 16px;
+        }
+        .header .tags { display: flex; justify-content: center; gap: 8px; flex-wrap: wrap; }
+        .header .tag {
+            background: var(--card);
+            border: 1px solid var(--border);
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-size: 12px;
+            color: var(--muted);
+        }
+        
+        .container { max-width: 720px; margin: 0 auto; padding: 40px 20px 60px; }
+        
+        .lead {
+            font-size: 20px;
+            color: var(--text);
+            border-left: 3px solid var(--green);
+            padding: 20px 24px;
+            margin: 32px 0;
+            background: rgba(63,185,80,0.08);
+            border-radius: 0 8px 8px 0;
+            line-height: 1.8;
+        }
+        
+        h2 {
+            font-size: 24px;
+            margin: 48px 0 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--border);
+            color: var(--text);
+        }
+        
+        h3 {
+            font-size: 19px;
+            margin: 32px 0 14px;
+            color: var(--purple);
+        }
+        
+        p { margin-bottom: 18px; color: #c9d1d9; }
+        
+        .highlight-box {
+            background: rgba(88,166,255,0.08);
+            border: 1px solid rgba(88,166,255,0.3);
+            border-radius: 12px;
+            padding: 24px;
+            margin: 28px 0;
+        }
+        .highlight-box h4 {
+            color: var(--accent);
+            font-size: 16px;
+            margin-bottom: 12px;
+        }
+        .highlight-box p { margin-bottom: 0; color: var(--muted); }
+        
+        .stats-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            margin: 28px 0;
+        }
+        .stat-box {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+        }
+        .stat-box .number { font-size: 28px; font-weight: 700; color: var(--green); }
+        .stat-box .label { font-size: 13px; color: var(--muted); margin-top: 6px; }
+        
+        .case-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+            margin: 24px 0;
+        }
+        .case-card h4 { color: var(--green); font-size: 17px; margin-bottom: 10px; }
+        .case-card p { margin-bottom: 8px; }
+        
+        .method-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+            margin: 20px 0;
+        }
+        .method-card h4 {
+            color: var(--purple);
+            font-size: 18px;
+            margin-bottom: 12px;
+        }
+        .method-card .price {
+            color: var(--green);
+            font-size: 22px;
+            font-weight: 700;
+            margin: 12px 0;
+        }
+        .method-card p { margin-bottom: 10px; }
+        
+        .cta-box {
+            background: linear-gradient(135deg, rgba(16,185,129,0.15) 0%, rgba(14,165,233,0.1) 100%);
+            border: 2px solid var(--green);
+            border-radius: 16px;
+            padding: 32px;
+            text-align: center;
+            margin: 40px 0;
+        }
+        .cta-box h3 { color: var(--green); font-size: 20px; margin: 0 0 8px; }
+        .cta-box p { color: var(--muted); font-size: 14px; margin-bottom: 20px; }
+        .cta-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #238636, #2ea043);
+            color: #fff;
+            padding: 14px 40px;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 700;
+            text-decoration: none;
+        }
+        .cta-btn:hover { opacity: 0.85; text-decoration: none; color: #fff; }
+        
+        .footer {
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 1px solid var(--border);
+            color: var(--muted);
+            font-size: 14px;
+        }
+        
+        @media (max-width: 600px) {
+            .header h1 { font-size: 24px; }
+            .stats-row { grid-template-columns: 1fr; }
+        }
+    </style>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "用OpenSquilla做AI Agent优化服务：同一个任务，省80%Token成本怎么赚钱",
+        "description": "2天99星，50星/天的增速，OpenSquilla正在让AI Agent的Token消耗量降低60-80%。这篇文章聊聊：普通人怎么用它来赚钱。",
+        "author": {
+            "@type": "Person",
+            "name": "AiToollab",
+            "url": "https://github.com/AiToollab"
+        },
+        "datePublished": "2026-05-09T00:00:00+08:00",
+        "dateModified": "2026-05-09T00:00:00+08:00",
+        "publisher": {
+            "@type": "Person",
+            "name": "AiToollab"
+        },
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://www.aitoollab.top/articles/cases/opensquilla-token-efficient-ai-agent/"
+        }
+    }
+    </script>
+</head>
+<body>
+
+<header class="header">
+    <div class="badge">💰 变现案例</div>
+    <h1>用OpenSquilla做AI Agent优化服务：同一个任务，省80%Token成本怎么赚钱</h1>
+    <p class="meta">AiToollab · 2026年5月9日 · 约1800字</p>
+    <div class="tags">
+        <span class="tag">OpenSquilla</span>
+        <span class="tag">AI Agent</span>
+        <span class="tag">Token优化</span>
+        <span class="tag">智能路由</span>
+    </div>
+</header>
+
+<div class="container">
+
+    <div class="lead">
+        前两天在GitHub Trending上看到了一个项目。<br><br>
+        名字叫OpenSquilla，2天拿了99颗星，增速50颗/天。 Description里写着「Token-Efficient AI Agent」——同样的预算，让AI Agent做更多的事、花更少的钱。<br><br>
+        我点进去看了一下官网，愣了。它宣称能把Token消耗降低60-80%。<br><br>
+        60-80%是什么概念？你现在每个月在Claude或者GPT上花500块，用上这个方案，每个月只要100块就够了。<br><br>
+        这个项目现在还在非常早期（v0.1.0），但GitHub已经跑了2天99星的速度，商业网站也搭好了。说明团队在认真做产品。<br><br>
+        我就在想：这种「让AI Agent省Token」的工具，普通人能怎么用它来赚钱？
+    </div>
+
+    <h2>先说清楚OpenSquilla是什么</h2>
+
+    <p>传统的AI Agent是怎么工作的？你给它一个任务，它用同一个模型从头做到尾。</p>
+
+    <p>简单任务也用大模型，浪费。复杂任务也用小模型，崩。</p>
+
+    <p>OpenSquilla做的事是「智能路由」。它的核心思路是：</p>
+
+    <p>简单问题 → 分配给便宜的小模型处理</p>
+    <p>复杂问题 → 分配给贵但能力强的大模型</p>
+    <p>每个任务 → 自动选择最合适的模型和参数</p>
+
+    <p>官网说它有4层路由分级，3层沙箱安全隔离，还能记忆上下文。架构叫Microkernel——类似操作系统的微内核思路，核心只做最小化的调度，其他功能都是插拔式的插件。</p>
+
+    <div class="stats-row">
+        <div class="stat-box">
+            <div class="number">60-80%</div>
+            <div class="label">Token节省量</div>
+        </div>
+        <div class="stat-box">
+            <div class="number">4层</div>
+            <div class="label">路由分级</div>
+        </div>
+        <div class="stat-box">
+            <div class="number">10+</div>
+            <div class="label">LLM提供商支持</div>
+        </div>
+    </div>
+
+    <p>支持的模型包括OpenRouter、OpenAI、Anthropic、Ollama、DeepSeek、Gemini、Qwen等等。基本上涵盖了所有主流LLM提供商。</p>
+
+    <p>技术栈是Python 3.12+，装起来也简单，官方提供了一个bash脚本搞定。</p>
+
+    <h2>怎么用它来赚钱？</h2>
+
+    <p>好，现在说重点。这种「省Token」的工具，赚钱逻辑在哪里？</p>
+
+    <p>答案很简单：谁在花钱用AI Agent？企业在花。开发者在花。做AI应用的人在花。</p>
+
+    <p>而这群人最大的痛点是什么？成本。Token费用每个月都在跑，月底一对账单就心疼。</p>
+
+    <p>如果你能帮他们省下60-80%的Token成本，哪怕你只收省下部分的30%作为服务费，对他们来说也是净赚。</p>
+
+    <p>具体怎么落地？我列了3种普通人可以做的方向：</p>
+
+    <div class="method-card">
+        <h4>方法一：做OpenSquilla的托管部署服务</h4>
+        <p>目标客户：中小企业、创业公司、有AI需求但没有专职AI工程师的团队</p>
+        <p class="price">报价参考：¥3,000-8,000/次 + 维护费 ¥1,000/月</p>
+        <p>很多公司想用AI Agent来处理客服、数据分析、文档处理这类重复性工作。但他们不知道怎么搭、懒得维护、不想养人。</p>
+        <p>你可以帮他们做这么几件事：评估业务场景看适不适合，在他们的服务器上把OpenSquilla跑起来，配置好路由策略，再对接业务流程。最后收一个日常维护费。</p>
+        <p>第一个客户可能不好找。我的建议是先免费帮一两个朋友的公司部署，积累案例和口碑。拿到真实反馈之后，再去做推广。</p>
+    </div>
+
+    <div class="method-card">
+        <h4>方法二：做行业垂直解决方案</h4>
+        <p>目标客户：律所、医疗机构、电商公司、内容团队</p>
+        <p class="price">报价参考：¥5,000-20,000/套 + 年费 ¥2,000-8,000/年</p>
+        <p>通用方案不好卖，行业方案才好卖。</p>
+        <p>比如，电商公司每天要用AI处理：商品描述生成、用户评价分析、客服对话、库存预警。这些任务里，有80%是简单重复的query，完全可以用小模型处理。</p>
+        <p>你针对一个行业做深度配置，把路由策略、Prompt模板、专属插件都打包好，形成一套「开箱即用」的解决方案。</p>
+        <p>这个方向的壁垒在哪里？行业Know-How。你对这个行业越了解，你能配置的Prompt和规则就越精准，客户就越愿意付钱。</p>
+        <p>选行业的时候有个小技巧：选那些Token消耗量大、但AI应用还处于早期的行业。量大意味着优化空间大，早期意味着竞争少。</p>
+    </div>
+
+    <div class="method-card">
+        <h4>方法三：开发插件和模板市场</h4>
+        <p>目标客户：OpenSquilla的终端用户</p>
+        <p class="price">报价参考：¥49-199/个插件，¥99-399/套模板包</p>
+        <p>OpenSquilla是一个微内核架构，插件开发门槛很低。官方文档说「5行代码就能写一个插件」。</p>
+        <p>你可以开发针对特定场景的插件，比如：</p>
+        <p>专门处理合同审查的插件</p>
+        <p>专门对接小红书API的插件</p>
+        <p>专门做SEO文章生成的插件</p>
+        <p>然后把这些插件放到GitHub上开源引流，同时在 Gumroad 或者自己网站上卖高级版。</p>
+        <p>这种模式的优点是：边际成本接近零。一个插件开发完，卖100份和卖10000份，成本几乎一样。</p>
+        <p>缺点是：需要一定的开发能力，而且要找到真正的需求点。</p>
+    </div>
+
+    <h2>我的判断</h2>
+
+    <p>OpenSquilla这个项目，现在入场有优势。</p>
+
+    <p>首先它还处于非常早期。v0.1.0的版本，说明还有很多功能在开发中。这意味着先入场的人有先发优势——等它成熟了，大厂直接复制，你就没机会了。</p>
+
+    <p>然后它的定位很清晰。「Token高效」这个点，直击AI应用落地的最大痛点——成本。比起「功能更强」、「速度更快」，「更省钱」是客户最愿意掏钱的理由。</p>
+
+    <p>最后，GitHub 2天99星的速度，说明市场已经在用脚投票了。这种增速不是偶然的，是有人在认真做产品。</p>
+
+    <div class="highlight-box">
+        <h4>一个值得关注的信号</h4>
+        <p>OpenSquilla的官网上有一个「Free Tokens」申请入口。用户可以申请免费的Token额度来试用。这意味着项目方在同时推进开源和商业化。开源版本免费用，想用更多或者要企业级服务就付费。这是SaaS的经典打法。</p>
+    </div>
+
+    <p>对于普通人来说，现在最好的策略是这样的：</p>
+
+    <p>先把OpenSquilla跑起来，自己用一遍，搞清楚它的能力和边界。然后选一个你想服务的行业或场景，开始做案例。等有了案例，再去找客户。这个顺序不能颠倒。</p>
+
+    <p>最坏的情况是什么？项目方自己做托管服务，自己做行业方案。那你就做一个「用OpenSquilla做定制开发」的自由职业者，专门接项目做实施。这也是一条路。</p>
+
+    <p>最好情况是什么？AI Agent的Token优化需求爆发，OpenSquilla成为这个领域的事实标准。你早早在GitHub上活跃、做插件的人，直接享受这个领域快速发展的红利。</p>
+
+    <p>我不知道哪个情况会发生。但我知道一件事：Token成本问题不会消失，只会在AI应用越来越普及的时候变得越来越重要。</p>
+
+    <p>提前占位，总比事后拍大腿强。</p>
+
+    <div class="cta-box">
+        <h3>🚀 想要完整的 AI 副业提示词全家桶？</h3>
+        <p>包含50+个可直接使用的AI提示词，覆盖副业选择、变现路径、内容创作等<br>¥39 首批特价，之后涨至 ¥99</p>
+        <a href="https://www.aitoollab.top/prompt-pack/" class="cta-btn">查看详情 →</a>
+    </div>
+
+</div>
+
+<footer class="footer">
+    <p><strong>AI副业加速器</strong> · 2026年实测验证</p>
+    <p style="margin-top:12px;">
+        <a href="https://github.com/AiToollab" target="_blank" rel="noopener noreferrer">@AiToollab</a>
+        · <a href="https://www.aitoollab.top/feed.xml">RSS订阅</a>
+    </p>
+</footer>
+
+</body>
+</html>
