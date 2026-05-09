@@ -50,4 +50,10 @@
 <url><loc>https://www.aitoollab.top/articles/startup-100/2026-05-07-100-ai-startup-week-3/</loc><lastmod>2026-05-07</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
 <url><loc>https://www.aitoollab.top/prompt-pack/</loc><lastmod>2026-04-30</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 <url><loc>https://www.aitoollab.top/contact/</loc><lastmod>2026-04-30</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+    <url>
+        <loc>https://www.aitoollab.top/articles/news/deepseek-tui-terminal-coding-agent/</loc>
+        <lastmod>2026-05-09</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
 </urlset>
