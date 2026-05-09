@@ -56,4 +56,10 @@
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
+    <url>
+        <loc>https://www.aitoollab.top/articles/cases/opensquilla-token-efficient-ai-agent/</loc>
+        <lastmod>2026-05-09</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
 </urlset>
