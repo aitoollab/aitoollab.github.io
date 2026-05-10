@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://www.aitoollab.top/articles/cases/sim-ai-agent-workflow/">
+    <link rel="alternate" type="application/atom+xml" title="AiToollab RSS Feed" href="/feed.xml">
+    <link rel="alternate" hreflang="x-default" href="https://www.aitoollab.top/articles/cases/sim-ai-agent-workflow/">
+    <link rel="alternate" hreflang="zh-CN" href="https://www.aitoollab.top/articles/cases/sim-ai-agent-workflow/">
+
+    <title>用Sim搭AI工作流服务：我在GitHub上发现了一个28000星的可视化AI Agent平台</title>
+    <meta name="description" content="28K星的开源AI Agent平台Sim，可视化搭建1000+集成的工作流，支持OpenAI/Anthropic/DeepSeek等所有主流LLM。怎么用它赚钱？">
+    <meta name="keywords" content="Sim, AI Agent, 工作流, 可视化, 副业变现, AI自动化, 开源项目">
+    <meta name="author" content="AiToollab">
+    <meta name="robots" content="index, follow">
+    <meta name="ai-content" content="allowed">
+
+    <meta property="og:title" content="用Sim搭AI工作流服务：我在GitHub上发现了一个28000星的可视化AI Agent平台">
+    <meta property="og:description" content="28K星开源AI Agent平台Sim，可视化搭千种集成工作流。怎么用它赚钱？">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.aitoollab.top/articles/cases/sim-ai-agent-workflow/">
+    <meta property="og:site_name" content="AiToollab">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="article:published_time" content="2026-05-10T10:30:00+08:00">
+    <meta property="article:modified_time" content="2026-05-10T10:30:00+08:00">
+    <meta property="article:author" content="https://github.com/AiToollab">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="用Sim搭AI工作流服务：28K星可视化Agent平台怎么赚钱">
+    <meta name="twitter:description" content="28K星开源AI Agent平台Sim，可视化搭千种集成工作流。">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "@id": "https://www.aitoollab.top/articles/cases/sim-ai-agent-workflow/",
+        "headline": "用Sim搭AI工作流服务：我在GitHub上发现了一个28000星的可视化AI Agent平台",
+        "description": "28K星开源AI Agent平台Sim，可视化搭建1000+集成的工作流。怎么用它赚钱？",
+        "author": {"@type": "Organization", "name": "AiToollab"},
+        "datePublished": "2026-05-10",
+        "dateModified": "2026-05-10",
+        "publisher": {
+            "@type": "Organization",
+            "name": "AiToollab",
+            "url": "https://www.aitoollab.top"
+        },
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://www.aitoollab.top/articles/cases/sim-ai-agent-workflow/"
+        }
+    }
+    </script>
+
+    <style>
+        :root {
+            --bg: #0d1117;
+            --card: #161b22;
+            --border: #30363d;
+            --text: #e6edf3;
+            --muted: #8b949e;
+            --accent: #58a6ff;
+            --green: #3fb950;
+            --purple: #a371f7;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.9;
+            font-size: 17px;
+        }
+        a { color: var(--accent); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        .header {
+            background: linear-gradient(135deg, #0d1117 0%, #1a2035 50%, #0d1117 100%);
+            border-bottom: 1px solid var(--border);
+            padding: 60px 20px 40px;
+            text-align: center;
+        }
+        .header .badge {
+            display: inline-block;
+            background: rgba(63,185,80,0.12);
+            color: var(--green);
+            padding: 4px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            margin-bottom: 16px;
+            border: 1px solid rgba(63,185,80,0.3);
+        }
+        .header h1 {
+            font-size: 30px;
+            line-height: 1.3;
+            max-width: 800px;
+            margin: 0 auto 16px;
+            background: linear-gradient(135deg, #fff 0%, #8b949e 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .header .meta { color: var(--muted); font-size: 14px; margin-bottom: 16px; }
+        .header .tags { display: flex; justify-content: center; gap: 8px; flex-wrap: wrap; }
+        .header .tag {
+            background: var(--card);
+            border: 1px solid var(--border);
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-size: 12px;
+            color: var(--muted);
+        }
+
+        .container { max-width: 720px; margin: 0 auto; padding: 40px 20px 60px; }
+
+        .lead {
+            font-size: 20px;
+            color: var(--text);
+            margin-bottom: 28px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        h2 {
+            font-size: 22px;
+            margin: 40px 0 16px;
+            color: var(--text);
+        }
+
+        p { margin-bottom: 16px; }
+
+        .highlight-box {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 20px 24px;
+            margin: 24px 0;
+        }
+
+        .highlight-box .label {
+            font-size: 12px;
+            color: var(--green);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+
+        .highlight-box .value {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 4px;
+        }
+
+        .highlight-box .desc {
+            font-size: 14px;
+            color: var(--muted);
+        }
+
+        ul, ol { margin: 16px 0 16px 24px; }
+        li { margin-bottom: 8px; }
+
+        .divider {
+            border: none;
+            border-top: 1px solid var(--border);
+            margin: 36px 0;
+        }
+
+        .cta-box {
+            background: linear-gradient(135deg, rgba(63,185,80,0.08), rgba(88,166,255,0.08));
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 28px;
+            text-align: center;
+            margin: 36px 0;
+        }
+
+        .cta-box p { color: var(--muted); font-size: 15px; margin-bottom: 16px; }
+
+        .cta-box a {
+            display: inline-block;
+            background: var(--green);
+            color: #000;
+            padding: 10px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 15px;
+        }
+
+        .cta-box a:hover {
+            background: #4ade80;
+            text-decoration: none;
+        }
+
+        .method-item {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 20px 24px;
+            margin: 20px 0;
+        }
+
+        .method-item h3 {
+            font-size: 18px;
+            margin: 0 0 12px;
+            color: var(--accent);
+        }
+
+        .method-item p {
+            margin-bottom: 12px;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 1px solid var(--border);
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        .footer a { color: var(--muted); }
+
+        code {
+            background: var(--card);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 14px;
+            color: var(--green);
+        }
+    </style>
+</head>
+<body>
+
+<header class="header">
+    <div class="badge">💰 变现案例</div>
+    <h1>用Sim搭AI工作流服务：我在GitHub上发现了一个28000星的可视化AI Agent平台</h1>
+    <div class="meta">2026-05-10 · simstudioai/sim · 28K GitHub Stars</div>
+    <div class="tags">
+        <span class="tag">AI Agent</span>
+        <span class="tag">可视化工作流</span>
+        <span class="tag">开源</span>
+        <span class="tag">副业变现</span>
+    </div>
+</header>
+
+<div class="container">
+
+<p class="lead">故事是这样的。前两天我在刷GitHub Trending，看见一个项目叫Sim，stars涨到了28000。点进去一看，是一个可视化搭建AI Agent工作流的平台，支持1000多种集成，云端版免费用，自己部署也行。我就顺手玩了一下，发现这玩意挺有意思——今天来聊聊怎么用它来赚钱。</p>
+
+<h2>这项目是什么</h2>
+
+<p>Sim（<a href="https://www.sim.ai">sim.ai</a>）是一个开源的AI Agent工作流平台。你可以用可视化画布拖拽Agent、工具和 блок，连接起来之后直接跑。内置Copilot，可以用自然语言生成节点、修复错误、迭代流程。</p>
+
+<p>支持的所有主流LLM提供商：OpenAI、Anthropic、Google AI（Gemini）、Mistral、xAI、DeepSeek、Perplexity，等等。支持1000多种集成，Slack、Gmail、Discord、Notion、Airtable、Supabase这些常见的全都有。</p>
+
+<p>技术栈是Next.js + Bun + PostgreSQL（带pgvector向量数据库）+ Drizzle ORM。完全开源，Apache 2.0协议，自己部署也行，用云端版也行。</p>
+
+<div class="highlight-box">
+    <div class="label">关键数据</div>
+    <div class="value">28,150 ★</div>
+    <div class="desc">GitHub Stars · TypeScript开源项目</div>
+</div>
+
+<p>定价方面：有个免费版，Pro版本25美元/月，Max版本100美元/月，也有企业定制版。免费版限制挺多的，适合尝鲜，真正用起来基本都要上付费版。</p>
+
+<h2>为什么值得关注</h2>
+
+<p>我是真的觉得，这个项目值得关注的点在于：它把AI Agent的搭建门槛降到了极低。以前你想做一个「监听Slack消息→调用GPT-4处理→把结果写入Notion」的自动化流程，得写代码，得自己对接API。Sim把这套东西变成了拖拽操作，而且支持中文。</p>
+
+<p>更骚的是它还有个内置Copilot，你跟它说「我要做一个客服Bot」，它直接帮你把节点搭好。这种工具对非技术背景的人吸引力巨大——而这些人群恰好是最愿意付费的。</p>
+
+<h2>怎么用它赚钱（3种思路）</h2>
+
+<p>我直接说我的判断，这块有3条路可以走，每条路都有人跑通了。</p>
+
+<h2>① 行业模板包售卖</h2>
+
+<p>Sim本身免费，但真正跑起来得配置工作流。大量中小企业主想用AI自动化业务，又没能力自己搞。</p>
+
+<p>你可以针对特定行业，提前把完整工作流搭好，比如：</p>
+
+<ul>
+    <li>电商客服：接收消息→FAQ匹配→自动回复→工单录入</li>
+    <li>内容运营：抓热点→AI生成文案→多平台发布</li>
+    <li>简历筛选：接收PDF→提取信息→与JD匹配打分</li>
+</ul>
+
+<p>每个模板99-299元，一键导入。对于有需求的中小企业，比自己研究省几十个小时，愿意付费是自然的。</p>
+
+<h2>② 企业私有化部署服务</h2>
+
+<p>Sim开源，支持Docker一键部署。但很多企业没有DevOps能力，不知道怎么配置、怎么迁移数据、怎么对接现有系统。</p>
+
+<p>你能做的事：帮企业在自己的云服务器上部署Sim，配置LLM密钥和集成，定制符合业务的工作流模板，再做培训和后续维护。</p>
+
+<p>这类服务客单价5000-30000元之间，按项目复杂度定价。说实话，很多客户愿意为「省心」付溢价——省的不是钱，是精力。</p>
+
+<h2>③ AI工作流培训与咨询</h2>
+
+<p>2026年了，传统行业里还是大量人完全不知道怎么用AI工具。这就是信息差市场，而且大得很。</p>
+
+<p>你能做专场培训，教他们用Sim搭建自己业务的AI工作流。线下培训一天3000-8000元，线上录播课打包99-399元。</p>
+
+<p>再进一步，帮企业做咨询——梳理业务流程，找出哪些环节可以被AI自动化，然后用手里的模板库快速交付。这块的利润率极高，而且客户粘性很强，一旦跑起来了很难换供应商。</p>
+
+<h2>具体怎么上手</h2>
+
+<p>第一步，先把Sim玩熟。云端版直接去 <a href="https://sim.ai">sim.ai</a> 注册，把主要功能都过一遍。重点体验这几个：可视化画布、常用工具集成、Copilot自然语言生成工作流。</p>
+
+<p>第二步，确定你的变现方向。我建议从「模板包售卖」开始，低成本，先验证需求。</p>
+
+<p>第三步，开始输出内容。在小红书、知乎、公众号记录你搭建工作流的过程。内容本身就是获客，有人来问就引导到私域。</p>
+
+<p>这个东西最难的部分不是技术，是找到对的客户。你真正在卖的从来不是工作流本身，而是「让某个具体的人每天少加班3小时」这个结果。想清楚这一层，变现就是顺理成章的。</p>
+
+<div class="cta-box">
+    <p>想第一时间看到这类AI副业拆解？</p>
+    <a href="/prompt-pack/">查看提示词包 →</a>
+</div>
+
+</div>
+
+<footer class="footer">
+    <p>以上，既然看到这里了，如果觉得不错，随手点个赞、在看、转发三连吧<br>
+    如果想第一时间收到推送，也可以给我个星标 ⭐～</p>
+    <p style="margin-top: 12px;">谢谢你看我的文章，我们，下次再见。</p>
+    <p style="margin-top: 20px; opacity: 0.5;">&copy; 2026 AiToollab · <a href="/">aitoollab.top</a></p>
+</footer>
+
+</body>
+</html>
