@@ -68,4 +68,10 @@
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
+    <url>
+        <loc>https://www.aitoollab.top/articles/news/anthropic-claude-in-office/</loc>
+        <lastmod>2026-05-10</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
 </urlset>

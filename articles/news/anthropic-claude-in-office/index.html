@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anthropic 悄悄开源了一个「办公室打工人」Agent，打工人的天要塌了？</title>
+    <meta name="description" content="Anthropic 刚刚开源了一个可以在 Microsoft 365 全套办公软件里替你干活的 AI Agent——Claude in Office。17.6k Star，2.2k Fork。这可能是今年企业 AI 落地最重磅的一次动作。">
+    <meta name="keywords" content="Anthropic, Claude, Claude in Office, Microsoft 365, AI Agent, 企业AI, AI办公自动化, Copilot">
+    <link rel="canonical" href="https://www.aitoollab.top/articles/news/anthropic-claude-in-office/">
+    <link rel="alternate" hreflang="x-default" href="https://www.aitoollab.top/articles/news/anthropic-claude-in-office/">
+    <link rel="alternate" hreflang="zh-CN" href="https://www.aitoollab.top/articles/news/anthropic-claude-in-office/">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Anthropic 悄悄开源了一个「办公室打工人」Agent，打工人的天要塌了？">
+    <meta property="og:description" content="Anthropic 刚刚开源了一个可以在 Microsoft 365 全套办公软件里替你干活的 AI Agent——Claude in Office。17.6k Star，2.2k Fork。">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.aitoollab.top/articles/news/anthropic-claude-in-office/">
+    <meta property="og:image" content="https://www.aitoollab.top/og-news-2026-05-10-anthropic-claude-in-office.jpg">
+    <meta property="og:site_name" content="AiToollab">
+    <meta property="article:published_time" content="2026-05-10T12:00:00+08:00">
+    <meta property="article:section" content="AI热点">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Anthropic 悄悄开源了一个「办公室打工人」Agent，打工人的天要塌了？">
+    <meta name="twitter:description" content="Anthropic 刚刚开源了一个可以在 Microsoft 365 全套办公软件里替你干活的 AI Agent。">
+    <meta name="twitter:image" content="https://www.aitoollab.top/og-news-2026-05-10-anthropic-claude-in-office.jpg">
+
+    <!-- Dublin Core -->
+    <meta name="DC.title" content="Anthropic 悄悄开源了一个「办公室打工人」Agent，打工人的天要塌了？">
+    <meta name="DC.creator" content="AiToollab">
+    <meta name="DC.description" content="Anthropic 刚刚开源了一个可以在 Microsoft 365 全套办公软件里替你干活的 AI Agent——Claude in Office。">
+    <meta name="DC.date" content="2026-05-10">
+    <meta name="DC.type" content="Text">
+
+    <!-- JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Anthropic 悄悄开源了一个「办公室打工人」Agent，打工人的天要塌了？",
+        "description": "Anthropic 刚刚开源了一个可以在 Microsoft 365 全套办公软件里替你干活的 AI Agent——Claude in Office。17.6k Star，2.2k Fork。",
+        "author": {"@type": "Person", "name": "AiToollab"},
+        "publisher": {"@type": "Organization", "name": "AiToollab", "url": "https://www.aitoollab.top"},
+        "datePublished": "2026-05-10",
+        "dateModified": "2026-05-10",
+        "url": "https://www.aitoollab.top/articles/news/anthropic-claude-in-office/",
+        "image": "https://www.aitoollab.top/og-news-2026-05-10-anthropic-claude-in-office.jpg",
+        "keywords": ["Anthropic", "Claude", "Claude in Office", "Microsoft 365", "AI Agent", "企业AI", "AI办公自动化"]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "首页", "item": "https://www.aitoollab.top/"},
+            {"@type": "ListItem", "position": 2, "name": "AI热点", "item": "https://www.aitoollab.top/articles/news/"},
+            {"@type": "ListItem", "position": 3, "name": "Anthropic 悄悄开源了一个「办公室打工人」Agent", "item": "https://www.aitoollab.top/articles/news/anthropic-claude-in-office/"}
+        ]
+    }
+    </script>
+
+    <style>
+        :root {
+            --bg: #0d1117;
+            --bg-card: #161b22;
+            --text: #e6edf3;
+            --text-secondary: #8b949e;
+            --accent: #f97316;
+            --border: #30363d;
+            --code-bg: #1c2128;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.8;
+            font-size: 17px;
+        }
+        .container { max-width: 680px; margin: 0 auto; padding: 2rem 1.5rem; }
+        header { margin-bottom: 2.5rem; }
+        .tag {
+            display: inline-block;
+            background: var(--accent);
+            color: #fff;
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 3px 10px;
+            border-radius: 20px;
+            margin-bottom: 1rem;
+        }
+        h1 {
+            font-size: 1.75rem;
+            font-weight: 800;
+            line-height: 1.3;
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+        .meta { color: var(--text-secondary); font-size: 0.875rem; margin-bottom: 1.5rem; }
+        .meta span { margin-right: 1rem; }
+        .hero-img {
+            width: 100%;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            border: 1px solid var(--border);
+        }
+        .article-body p { margin-bottom: 1.5rem; }
+        .article-body h2 { font-size: 1.3rem; margin: 2rem 0 1rem; color: #fff; }
+        .article-body a { color: var(--accent); text-decoration: none; }
+        .article-body a:hover { text-decoration: underline; }
+        .article-body strong { color: #fff; font-weight: 600; }
+        .article-body blockquote {
+            border-left: 3px solid var(--accent);
+            padding: 0.5rem 1rem;
+            margin: 1.5rem 0;
+            background: var(--bg-card);
+            border-radius: 0 8px 8px 0;
+            color: var(--text-secondary);
+            font-style: italic;
+        }
+        .article-body ul, .article-body ol {
+            margin: 1rem 0 1.5rem 1.5rem;
+        }
+        .article-body li { margin-bottom: 0.5rem; }
+        .article-body .break {
+            display: block;
+            margin: 2rem 0;
+        }
+        .cta-box {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            border: 1px solid var(--accent);
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2.5rem 0;
+            text-align: center;
+        }
+        .cta-box h3 {
+            color: var(--accent);
+            font-size: 1.2rem;
+            margin-bottom: 0.75rem;
+        }
+        .cta-box p { color: var(--text-secondary); margin-bottom: 1.25rem; font-size: 0.95rem; }
+        .cta-box a {
+            display: inline-block;
+            background: var(--accent);
+            color: #fff;
+            font-weight: 700;
+            padding: 0.75rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: opacity 0.2s;
+        }
+        .cta-box a:hover { opacity: 0.9; text-decoration: none; }
+        footer { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border); }
+        .nav-links { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+        .nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.875rem; }
+        .nav-links a:hover { color: var(--accent); }
+        .author { margin-top: 1.5rem; color: var(--text-secondary); font-size: 0.875rem; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <span class="tag">🔥 热点</span>
+            <h1>Anthropic 悄悄开源了一个「办公室打工人」Agent，打工人的天要塌了？</h1>
+            <div class="meta"><span>📅 2026-05-10</span><span>👤 AiToollab</span></div>
+        </header>
+
+        <article class="article-body">
+            <p>事情是这样的。</p>
+
+            <p>我昨天刷 GitHub Trending，看到一个项目，名字叫 <strong>anthropics/financial-services</strong>。17.6k Star，2.2k Fork，这个数字已经让我愣住了，光看这个量级，就知道不是一般的小工具。</p>
+
+            <p>点进去一看，更离谱了。</p>
+
+            <p>这个仓库里，Anthropic 放了一个东西，叫 <strong>Claude in Office</strong>。翻译成人话就是，Claude 可以替你在 Microsoft 365 全套软件里干活了。Word、Excel、PowerPoint、Teams、Outlook，你能想到的办公软件，它都能控制。</p>
+
+            <p>想想看这意味着什么。</p>
+
+            <p>你跟 AI 说，帮我把这份报告发给张三，然后在 Teams 上告诉他李四已经审批过了。AI 真的就帮你做了。不是给你一段回复让你复制粘贴，而是直接操作你的 Office 软件，一条一条帮你执行。
+
+            <p>黑暗森林。</p>
+
+            <p>我是真的觉得，这件事的重要性，被严重低估了。</p>
+
+            <p>你想想，Anthropic 之前最火的是什么，是 Computer Use，让 AI 直接控制你的屏幕、操作你的鼠标和键盘，来完成各种复杂任务。Claude in Office 就是这个能力的企业版落地，而且直接跟微软全家桶打通了。</p>
+
+            <p>说真的，Copilot 出来的时候，大家都觉得微软要赢了。结果 Anthropic 转头就把同样的能力开源出来，任何公司都可以用，任何人都能拿去改。这剧情，比电视剧还离谱。</p>
+
+<p>commit 信息写的是 <strong>feat(claude-in-office): add disabled_features manifest param</strong>。然后我就想，这个 Claude in Office 还处于非常活跃的开发状态，每天的代码更新都能看到。</p>
+
+            <p>这个仓库的结构很有意思，除了 Claude in Office 本身，还有 managed-agent-cookbooks（托管智能体食谱）、claude-for-msft-365-install（针对微软 365 的安装配置），以及一系列企业级安全策略和 Manifest 参数控制。Anthropic 在告诉你，这个东西不是玩具，是认真面向企业级部署的。</p>
+
+            <p>有意思的地方在于，这个项目的スター数增长曲线极其陡峭。5 月初才几千星，短短几天时间冲到了 17.6k，这个速度说明什么？说明大家都在盯着 Anthropic 的下一步动作，而且对「AI 进入办公场景」这件事，需求是真实存在的。</p>
+
+            <p>坦率的讲，这件事对打工人的影响，比大多数人想象的要近得多。</p>
+
+            <p>你可能会说，AI 帮我做个 PPT、写个邮件，这我早就知道了。但 Claude in Office 不一样的地方在于，它做的是「多步骤、跨软件、真实操作」。以前你需要自己拆解任务、复制粘贴、切换窗口，现在 AI 直接帮你把这些流程串起来了。</p>
+
+            <p>我有时候觉得，AI 落地的节奏就是这样。一开始是单点工具（帮我写文案、帮我画图），然后是助手模式（陪我对练、给我建议），现在进入第三阶段，Agent 模式，AI 直接替你执行。</p>
+
+            <p>Claude in Office，就是第三阶段的标志性事件之一。</p>
+
+            <p>而且你再想想，这件事的背景。Anthropic 刚刚拿了新一轮融资，估值已经到了 900 亿美金。拿到钱之后干的第一件事，不是铺天盖地的广告，不是做消费级产品，而是把能力开源出去，让整个行业自己做落地。这波操作，有点东西。</p>
+
+            <p>对于我们普通用户来说，接下来会发生什么？</p>
+
+            <p>可能用不了多久，你会发现，同事用 AI 处理邮件、生成报表、安排会议，而你还在一个个手动点，效率差距，会比你想象的更快拉开。</p>
+
+            <p>但先别慌。AI 工具越强，学会用 AI 的成本反而越低。你不需要学 Python，不需要懂什么 API 配置，只需要知道怎么跟 AI 说清楚你要什么。</p>
+
+            <p>说到怎么跟 AI 说清楚这件事，我们团队其实整理了一套 Prompt 方法论，专门解决「我怎么描述需求 AI 才能听懂」这个核心问题。覆盖了主流 AI 工具的使用场景，都是实战里攒下来的。</p>
+
+            <div class="cta-box">
+                <h3>🚀 想第一时间用上最全的 AI 提示词库？</h3>
+                <p>点击获取我们整理的提示词全家桶，涵盖 Claude、GPT、DeepSeek 等主流 AI 工具的实战用法，永久更新。</p>
+                <a href="https://www.aitoollab.top/prompt-pack/">获取提示词全家桶 →</a>
+            </div>
+
+            <p>好了，说回 Claude in Office。</p>
+
+            <p>这个项目现在 Star 17.6k，Fork 2.2k，还在每天更新。Anthropic 把这个能力开源出来，意味着任何公司都可以基于它做自己的定制，金融、医疗、教育、律所，各行各业的办公自动化，门槛都在降低。</p>
+
+            <p>大时代啊，朋友们。</p>
+
+            <p>以前我们说 AI 要改变世界，这话听起来虚。但 Claude in Office 这样的东西出来，你会发现，改变不是某一天突然发生的，它是一天一天渗透的，从你同事开始用 AI 发邮件开始，从你看到 GitHub Trending 被一个 AI 办公室工具刷屏开始。</p>
+
+            <p>不知不觉，你就站在新的世界里了。</p>
+
+            <p>Anyway，既然看到这里了，如果觉得不错，随手点个赞、在看、转发三连吧，如果想第一时间收到推送，也可以给我个星标。</p>
+
+            <p>谢谢你看我的文章，我们，下次再见。</p>
+        </article>
+
+        <footer>
+            <div class="nav-links">
+                <a href="/articles/news/">← AI热点</a>
+                <a href="/">首页</a>
+                <a href="/prompt-pack/">提示词全家桶</a>
+            </div>
+            <div class="author">> / 作者：AiToollab</div>
+        </footer>
+    </div>
+</body>
+</html>
