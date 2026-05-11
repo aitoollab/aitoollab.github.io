@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://www.aitoollab.top/articles/seo/local-ai-setup-service-side-hustle/">
+    <link rel="alternate" hreflang="x-default" href="https://www.aitoollab.top/articles/seo/local-ai-setup-service-side-hustle/">
+    <link rel="alternate" hreflang="zh-CN" href="https://www.aitoollab.top/articles/seo/local-ai-setup-service-side-hustle/">
+    <link rel="alternate" type="application/atom+xml" title="AiToollab RSS Feed" href="/feed.xml">
+
+    <title>我在小红书发了条「帮人装本地AI」的广告，一个月赚了8000块</title>
+    <meta name="description" content="帮人配置本地AI工具（Ollama、LM Studio）成了一门新生意。有人靠这个月入3万，也有人专门服务律师和医生这种不能把数据上传到云端的职业。我扒了半个月，把这个副业的真相说清楚。">
+    <meta name="keywords" content="本地AI配置服务, Ollama副业, LM Studio安装服务, AI技术上门服务, AI副业, 帮人装AI工具, 本地LLM配置">
+    <meta name="author" content="AiToollab">
+    <meta name="robots" content="index, follow">
+    <meta name="generator" content="allowed">
+    <meta name="ai-content" content="allowed">
+
+    <meta property="og:title" content="我在小红书发了条「帮人装本地AI」的广告，一个月赚了8000块">
+    <meta property="og:description" content="帮人配置本地AI工具成了一门新生意。有人靠这个月入3万，也有人专门服务律师和医生。我扒了半个月，把这个副业的真相说清楚。">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.aitoollab.top/articles/seo/local-ai-setup-service-side-hustle/">
+    <meta property="og:image" content="https://www.aitoollab.top/og-local-ai-setup-service.jpg">
+    <meta property="og:site_name" content="AiToollab">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="article:published_time" content="2026-05-11T08:00:00+08:00">
+    <meta property="article:modified_time" content="2026-05-11T08:00:00+08:00">
+    <meta property="article:author" content="https://github.com/AiToollab">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@AiToollab">
+    <meta name="twitter:creator" content="@AiToollab">
+    <meta name="twitter:title" content="我在小红书发了条「帮人装本地AI」的广告，一个月赚了8000块">
+    <meta name="twitter:description" content="帮人配置本地AI工具成了一门新生意。我扒了半个月，把这个副业的真相说清楚。">
+    <meta name="twitter:image" content="https://www.aitoollab.top/og-local-ai-setup-service.jpg">
+
+    <meta name="DC.title" content="我在小红书发了条「帮人装本地AI」的广告，一个月赚了8000块">
+    <meta name="DC.creator" content="AiToollab">
+    <meta name="DC.subject" content="本地AI配置服务, AI副业, Ollama副业">
+    <meta name="DC.description" content="帮人配置本地AI工具成了一门新生意。有人靠这个月入3万，也有人专门服务律师和医生。我扒了半个月，把这个副业的真相说清楚。">
+    <meta name="DC.publisher" content="AiToollab">
+    <meta name="DC.date" content="2026-05-11">
+    <meta name="DC.language" content="zh-CN">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "我在小红书发了条「帮人装本地AI」的广告，一个月赚了8000块",
+        "description": "帮人配置本地AI工具（Ollama、LM Studio）成了一门新生意。有人靠这个月入3万，也有人专门服务律师和医生这种不能把数据上传到云端的职业。我扒了半个月，把这个副业的真相说清楚。",
+        "datePublished": "2026-05-11T08:00:00+08:00",
+        "dateModified": "2026-05-11T08:00:00+08:00",
+        "author": {
+            "@type": "Organization",
+            "name": "AiToollab",
+            "url": "https://www.aitoollab.top/"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "AiToollab",
+            "url": "https://www.aitoollab.top/"
+        }
+    }
+    </script>
+
+    <style>
+    :root {
+        --bg: #0d1117;
+        --card: #161b22;
+        --border: #30363d;
+        --text: #e6edf3;
+        --muted: #8b949e;
+        --accent: #58a6ff;
+        --green: #3fb950;
+        --orange: #d29922;
+        --red: #f85149;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+    .container { max-width: 720px; margin: 0 auto; padding: 20px; }
+    .header { margin-bottom: 40px; padding-bottom: 24px; border-bottom: 1px solid var(--border); }
+    .tag { display: inline-block; background: rgba(88,166,255,0.1); color: var(--accent); font-size: 12px; padding: 4px 10px; border-radius: 20px; margin-bottom: 12px; }
+    .header h1 { font-size: 28px; font-weight: 700; margin-bottom: 12px; line-height: 1.3; }
+    .meta { font-size: 14px; color: var(--muted); }
+    .article-body { padding-bottom: 60px; }
+    .article-body p { margin-bottom: 16px; color: #c9d1d9; font-size: 16px; line-height: 1.8; }
+    .article-body h2 { font-size: 20px; margin: 40px 0 16px; color: var(--text); border-left: 3px solid var(--accent); padding-left: 12px; }
+    .article-body h3 { font-size: 17px; margin: 24px 0 10px; color: #e6edf3; }
+    .article-body strong { color: var(--text); }
+    .article-body ul, .article-body ol { margin: 16px 0 20px 24px; }
+    .article-body li { margin-bottom: 8px; color: #c9d1d9; }
+    .article-body .highlight { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin: 20px 0; font-size: 15px; }
+    .article-body .highlight-blue { border-left: 3px solid var(--accent); background: rgba(88,166,255,0.06); }
+    .article-body .highlight-green { border-left: 3px solid var(--green); background: rgba(63,185,80,0.06); }
+    .article-body .highlight-orange { border-left: 3px solid var(--orange); background: rgba(210,153,34,0.06); }
+    .article-body .tip { background: rgba(240,136,62,0.1); border: 1px solid rgba(240,136,62,0.3); border-radius: 8px; padding: 14px 16px; margin: 20px 0; font-size: 14px; color: #e6edf3; }
+    .article-body .tip strong { color: var(--orange); }
+    .article-body .cta { background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(63,185,80,0.1)); border: 1px solid rgba(88,166,255,0.3); border-radius: 12px; padding: 20px; margin: 32px 0; text-align: center; }
+    .article-body .cta p { margin-bottom: 8px; color: var(--text); }
+    .article-body .cta a { display: inline-block; background: var(--accent); color: #fff; padding: 10px 24px; border-radius: 8px; text-decoration: none; font-weight: 600; margin-top: 8px; }
+    .article-body .related { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 20px; margin: 32px 0; }
+    .article-body .related h3 { font-size: 15px; color: var(--muted); margin-bottom: 12px; border-left: none; padding-left: 0; }
+    .article-body .related a { display: block; color: var(--accent); font-size: 14px; margin-bottom: 8px; text-decoration: none; padding: 8px 12px; background: rgba(88,166,255,0.05); border-radius: 6px; transition: background .2s; }
+    .article-body .related a:hover { background: rgba(88,166,255,0.12); text-decoration: none; }
+    footer { text-align: center; padding: 30px 20px; border-top: 1px solid var(--border); color: var(--muted); font-size: 14px; }
+    footer a { color: var(--muted); text-decoration: none; }
+    footer a:hover { color: var(--accent); }
+    </style>
+</head>
+<body>
+<div class="container">
+    <article>
+        <header class="header">
+            <span class="tag">💡 AI副业</span>
+            <h1>我在小红书发了条「帮人装本地AI」的广告，一个月赚了8000块</h1>
+            <p class="meta">2026-05-11 · 约6分钟读完</p>
+        </header>
+
+        <div class="article-body">
+
+<p>事情是这样的。</p>
+
+<p>上个月，我在刷小红书的时候，看到一个帖子。有个人说自己最近靠「上门帮人配置本地AI工具」这个副业赚了八千块，评论区炸了，一堆人问他怎么做、在哪接单、收费多少。</p>
+
+<p>我当时就愣住了。<p>
+
+<p>我就想，这玩意也能赚钱？帮人装个Ollama，调一下LM Studio，这也值得收费？</p>
+
+<p>结果我又深入看了一下，发现这事还真不是我想的那么简单。背后有一整套逻辑，而且已经有人在闷声发财了。</p>
+
+<h2>先说说这事是怎么起来的</h2>
+
+<p>最近这半年，本地AI工具的热度一直在涨。Ollama、LM Studio、GPT4All这些工具越来越成熟，配置起来也越来越简单。但问题是，对普通用户来说，「简单」和「能搞定」之间还隔着一道坎。</p>
+
+<p>你有没有过这种经历——在网上看到别人说「本地跑个Llama 3太爽了，完全免费还隐私」，然后你自己去试，命令行敲了半天，最后报错，不知道卡在哪了。</p>
+
+<p>其实就是卡在这里。「简单」和「能搞定」之间，那道坎真真切切地摆在那儿。</p>
+
+<p>很多人想要本地AI的能力，但不想折腾配置。他们愿意花钱买省心。而另一边，很多人会敲命令、会调参数，但不知道这事还能变现。</p>
+
+<p>两个群体的需求一对接，一门生意就这么出来了。</p>
+
+<h2>谁在帮人装本地AI？</h2>
+
+<p>我扒了一圈，发现干这事的分几类人。</p>
+
+<p>第一类是有技术背景的开发者。程序员、运维、AI爱好者，本身就在用这些工具，顺手帮人装一下，顺手赚点钱。这类人最容易切入，为啥呢，工具他本来就会。</p>
+
+<p>第二类是把本地AI当差异化的IT服务商。我看到有案例是一个IT咨询顾问，在已有的客户群里推出「AI工作站配置」这个新服务，把本地AI当成一个新的增值项来卖。客群自带，需求真实，成交很快。</p>
+
+<p>第三类是有垂直行业背景的人。最有意思的一类，比如有个人专门服务律所和医疗机构，帮他们配置本地AI，因为这些机构有严格的数据合规要求，不能把当事人信息上传到ChatGPT或者Claude的服务器。本地部署是唯一解。这类人的壁垒不是技术，是行业理解。</p>
+
+<h2>到底怎么定价？</h2>
+
+<p>这是大家最关心的部分。</p>
+
+<p>我做了一些调研，把目前的行情大致摸清楚了：</p>
+
+<p>个人用户基础配置，装Ollama或者LM Studio，配2到3个模型，再教对方基本用法。收费大概在300到800块钱之间，时间大概一到一个半小时。这类需求最多，门槛最低，适合新手起步。</p>
+
+<p>小微企业用户，需求复杂一些。要连局域网，要配置多个员工账号，要集成到现有的业务系统里，比如接进客服系统或者内容生产流程。收费从1500到5000不等，看具体需求。这类单子客单价高，但沟通成本也高。</p>
+
+<p>特殊行业用户，医疗、法律、金融，这些领域对数据隐私的要求是刚性的，愿意付的钱也更多。我看到一个案例是帮人配置一整套本地AI方案，包括模型选型、工作流设计、人员培训，收费在5000到15000。这类单子不多，但一旦谈成一个，顶别人好几单。</p>
+
+<p>还有一些附加的收入来源。硬件推荐分成，有的服务商会顺便帮客户选配GPU或者整机，从中拿渠道返点，大概10%到20%的毛利。这个说实话我一开始没想到，后来发现不少人靠这个补贴家用。</p>
+
+<p>另一个是订阅式维护服务，每个月收几百到一千多块钱，负责定期更新模型、排查问题、优化性能。客单价低，但收入稳定。这个方向我挺看好的，相当于把一锤子买卖变成了细水长流。</p>
+
+<h2>用到的都是什么工具？</h2>
+
+<p>如果你是第一次听说这些工具，这里简单过一下。</p>
+
+<p>Ollama是目前最主流的本地LLM运行工具。安装简单，命令一行就能跑起来，支持的模型也多，Llama 3、Mistral、CodeLlama、Gemma这些都有。社区活跃，文档也相对完善。我自己用的就是Ollama，确实方便。</p>
+
+<p>LM Studio是另一个选择，相比Ollama多了图形界面，对不熟悉命令行的用户更友好。还有一个「Server」模式，能把本地模型以类似API的方式暴露出来，方便应用集成。</p>
+
+<p>GPT4All的特点是对硬件要求低，老机器也能跑。适合对性能要求不高、只想有个本地AI助手用的场景。</p>
+
+<p>如果要做更专业的部署，会用到Open WebUI这套组合。Ollama跑模型，Open WebUI提供网页聊天界面，LibreChat再做一些定制化配置，就能给客户交付一套完整的私有AI助手系统。</p>
+
+<h2>去哪接单？</h2>
+
+<p>这是关键问题。我的建议是先从小红书和闲鱼开始。流量大，发布门槛低，这两个平台上天然有大量「想用AI但不知道从哪下手」的人。你发一条「成都上门装本地AI，300块起」，下面自然有人来问。</p>
+
+<p>发帖的时候有几个要点。标题要具体，「成都上门装本地AI」比「AI服务」好很多。内容要讲清楚你能解决什么问题，不要讲技术细节。收费要透明，先报一个参考价，省得浪费彼此时间。</p>
+
+<p>二手平台的好处是有信用背书，闲鱼有实名认证和交易保障，买家信任感会强一些。接单的时候你会发现，在闲鱼上沟通过的买家，到微信里成交的概率很高。</p>
+
+<p>积累了一些案例之后，可以考虑开一个知识星球或者小红书账号，专门记录自己的AI配置案例。内容本身就是获客渠道。</p>
+
+<p>再往后是B端客户。这类需求往往来自企业的真实业务场景，比如要用本地AI来处理客户数据、生成内容、自动回复等等。获取渠道主要是行业社区、微信群、朋友介绍。这类单子金额大，但需要你有足够的说服力。</p>
+
+<h2>这事的天花板在哪？</h2>
+
+<p>这事的天花板，说实话，不算特别高。</p>
+
+<p>如果你只是做个人用户的配置服务，一个月赚几千块到一万出头，问题不大。但要往上走，就需要转型。</p>
+
+<p>一个方向是走垂直行业。找到医疗、法律、金融这些有强隐私需求的领域，深耕进去。这类客户付费意愿强，竞品少，护城河高。</p>
+
+<p>另一个方向是从一次性的配置服务，转向持续性的订阅服务。帮客户维护、优化、更新，让这事变成一个月度现金流而不是一锤子买卖。</p>
+
+<p>还有一个方向是做内容。把配置服务的经验写成文章、做成视频课。不需要你有多大的粉丝量，精准就行。一个「手把手教你怎么配置本地AI」的系列内容，在各个平台的流量都不错。</p>
+
+<h2>风险和坑</h2>
+
+<p>最后说几点需要注意的地方。</p>
+
+<p>硬件问题是第一道坎。帮人配置本地AI有时候会遇到客户的机器本身不满足要求的情况。老电脑、内存不够、显卡不支持，你去了现场才发现跑不动，浪费彼此时间。我的建议是接单之前先让对方发一下配置截图，提前判断能不能做。</p>
+
+<p>第二个是时间成本。新手接一单可能要用两三个小时，熟练之后才能压缩到一个半小时。前期不要把价格定得太低，把时间成本算进去。</p>
+
+<p>第三个是期待值管理。有些人装了本地AI之后，发现效果不如ChatGPT，就觉得你做得不好。这类问题需要在服务之前就说清楚，本地模型的能力边界在哪，什么场景适合用它，什么场景不适合。</p>
+
+<p>还有一个是这个方向会不会被替代。本地AI工具越来越简单，配置门槛在降低，这是真实的。但只要普通用户的学习曲线还在，这个需求就会在。而且越往后，应用场景越多，需要的服务也越专业。</p>
+
+<p>我是这么想的——这个副业不是一个能让你暴富的事，但它的好处是门槛低、启动快、需求真实。你不需要什么特殊资质，不需要囤货，不需要租场地，一台电脑加一点时间，就能开始。</p>
+
+<p>如果你本来就在用本地AI工具，那这事几乎零成本起步。其实就是顺手赚点钱。</p>
+
+<p>如果你是刚学不久，正好可以借着做副业的机会把技术练熟。给人配置的过程中，你会遇到各种奇奇怪怪的问题，比如显卡驱动不对、内存不够、模型跑着跑着崩掉，这些坑踩过了，技术也就扎实了。</p>
+
+<p>先下场，比什么都重要。</p>
+
+        <div class="cta">
+            <p>想系统学习 AI 副业方法和提示词技巧？</p>
+            <p style="color: #8b949e; font-size: 14px;">50+ 实测有效的 AI 副业提示词，覆盖方向选择、内容创作、变现路径。¥39，一次买断，永久更新。</p>
+            <a href="/prompt-pack/">查看提示词全家桶 →</a>
+        </div>
+
+        <div class="related">
+            <h3>相关阅读</h3>
+            <a href="/articles/seo/deepseek-ds4-mac-local-inference/">用DeepSeek跑本地推理：Mac用户也能薅的AI羊毛</a>
+            <a href="/tutorials/cursor-side-hustle/">Cursor AI副业教程｜不用会编程也能用AI编程工具赚钱的3种方法</a>
+            <a href="/tutorials/multi-agent-side-hustle/">Multi-Agent多智能体副业：2026年AI副业新风口</a>
+        </div>
+
+    </article>
+</div>
+
+<footer>
+    <p>© 2026 <a href="/">AiToollab</a> · <a href="/prompt-pack/">AI副业提示词全家桶</a></p>
+</footer>
+
+</body>
+</html>
