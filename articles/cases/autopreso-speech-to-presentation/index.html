@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://www.aitoollab.top/articles/cases/autopreso-speech-to-presentation/">
+    <link rel="alternate" type="application/atom+xml" title="AiToollab RSS Feed" href="/feed.xml">
+    <link rel="alternate" hreflang="x-default" href="https://www.aitoollab.top/articles/cases/autopreso-speech-to-presentation/">
+    <link rel="alternate" hreflang="zh-CN" href="https://www.aitoollab.top/articles/cases/autopreso-speech-to-presentation/">
+
+    <title>用autopreso做演讲交付：边说边画的白板AI，187星的新玩法</title>
+    <meta name="description" content="你说它画，实时语音转白板PPT的开源工具autopreso。怎么用它赚钱？我想了5种方式。">
+    <meta name="keywords" content="autopreso, 演讲, 白板, AI演示, 副业变现, 语音转PPT, Excalidraw">
+    <meta name="author" content="AiToollab">
+    <meta name="robots" content="index, follow">
+    <meta name="ai-content" content="allowed">
+
+    <meta property="og:title" content="用autopreso做演讲交付：边说边画的白板AI，187星的新玩法">
+    <meta property="og:description" content="你说它画，实时语音转白板PPT的开源工具。怎么用它赚钱？">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.aitoollab.top/articles/cases/autopreso-speech-to-presentation/">
+    <meta property="og:site_name" content="AiToollab">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="article:published_time" content="2026-05-11T15:00:00+08:00">
+    <meta property="article:modified_time" content="2026-05-11T15:00:00+08:00">
+    <meta property="article:author" content="https://github.com/AiToollab">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="用autopreso做演讲交付：边说边画的白板AI">
+    <meta name="twitter:description" content="你说它画，实时语音转白板PPT的开源工具。">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "@id": "https://www.aitoollab.top/articles/cases/autopreso-speech-to-presentation/",
+        "headline": "用autopreso做演讲交付：边说边画的白板AI，187星的新玩法",
+        "description": "你说它画，实时语音转白板PPT的开源工具autopreso。怎么用它赚钱？我想了5种方式。",
+        "author": {"@type": "Organization", "name": "AiToollab"},
+        "datePublished": "2026-05-11",
+        "dateModified": "2026-05-11",
+        "publisher": {
+            "@type": "Organization",
+            "name": "AiToollab",
+            "url": "https://www.aitoollab.top"
+        },
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://www.aitoollab.top/articles/cases/autopreso-speech-to-presentation/"
+        }
+    }
+    </script>
+
+    <style>
+        :root {
+            --bg: #0d1117;
+            --card: #161b22;
+            --border: #30363d;
+            --text: #e6edf3;
+            --muted: #8b949e;
+            --accent: #58a6ff;
+            --green: #3fb950;
+            --purple: #a371f7;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.9;
+            font-size: 17px;
+        }
+        a { color: var(--accent); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        .header {
+            background: linear-gradient(135deg, #0d1117 0%, #1a2035 50%, #0d1117 100%);
+            border-bottom: 1px solid var(--border);
+            padding: 60px 20px 40px;
+            text-align: center;
+        }
+        .header .badge {
+            display: inline-block;
+            background: rgba(63,185,80,0.12);
+            color: var(--green);
+            padding: 4px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            margin-bottom: 16px;
+            border: 1px solid rgba(63,185,80,0.3);
+        }
+        .header h1 {
+            font-size: 30px;
+            line-height: 1.3;
+            max-width: 800px;
+            margin: 0 auto 16px;
+            background: linear-gradient(135deg, #fff 0%, #8b949e 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .header .meta { color: var(--muted); font-size: 14px; margin-bottom: 16px; }
+        .header .tags { display: flex; justify-content: center; gap: 8px; flex-wrap: wrap; }
+        .header .tag {
+            background: var(--card);
+            border: 1px solid var(--border);
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-size: 12px;
+            color: var(--muted);
+        }
+
+        .container { max-width: 720px; margin: 0 auto; padding: 40px 20px 60px; }
+
+        .lead {
+            font-size: 20px;
+            color: var(--text);
+            margin-bottom: 28px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        h2 {
+            font-size: 22px;
+            margin: 40px 0 16px;
+            color: var(--text);
+        }
+
+        p { margin-bottom: 16px; }
+
+        .highlight-box {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 20px 24px;
+            margin: 24px 0;
+        }
+
+        .highlight-box .label {
+            font-size: 12px;
+            color: var(--green);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+
+        .highlight-box .value {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 4px;
+        }
+
+        .highlight-box .desc {
+            font-size: 14px;
+            color: var(--muted);
+        }
+
+        .method-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 20px 24px;
+            margin: 16px 0;
+        }
+
+        .method-card h3 {
+            font-size: 18px;
+            color: var(--accent);
+            margin-bottom: 12px;
+        }
+
+        .method-card .money {
+            color: var(--green);
+            font-weight: 700;
+        }
+
+        .cta-box {
+            background: linear-gradient(135deg, rgba(88,166,255,0.1) 0%, rgba(163,113,247,0.1) 100%);
+            border: 1px solid rgba(88,166,255,0.3);
+            border-radius: 10px;
+            padding: 24px;
+            margin: 32px 0;
+            text-align: center;
+        }
+
+        .cta-box h3 {
+            font-size: 20px;
+            margin-bottom: 12px;
+        }
+
+        .cta-box p {
+            color: var(--muted);
+            margin-bottom: 16px;
+        }
+
+        .cta-box a {
+            display: inline-block;
+            background: var(--green);
+            color: #000;
+            padding: 12px 28px;
+            border-radius: 8px;
+            font-weight: 700;
+        }
+
+        .footer {
+            border-top: 1px solid var(--border);
+            padding: 32px 20px;
+            text-align: center;
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        .inline-code {
+            background: rgba(88,166,255,0.1);
+            color: var(--accent);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-family: "SF Mono", Monaco, monospace;
+            font-size: 14px;
+        }
+
+        code {
+            background: rgba(88,166,255,0.1);
+            color: var(--accent);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-family: "SF Mono", Monaco, monospace;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <div class="badge">GitHub Trending · 5天187★</div>
+    <h1>用autopreso做演讲交付：边说边画的白板AI，187星的新玩法</h1>
+    <div class="meta">2026-05-11 · AiToollab</div>
+    <div class="tags">
+        <span class="tag">autopreso</span>
+        <span class="tag">语音演讲</span>
+        <span class="tag">白板PPT</span>
+        <span class="tag">副业</span>
+    </div>
+</div>
+
+<div class="container">
+
+<div class="lead">
+你有没有过这种感觉，准备一场分享，光是搭PPT就耗掉了大半精力？内容其实都在脑子里，但要把它们变成「能演示的东西」，那个转化的过程又累又费时间。我最近在GitHub上刷到一个小工具，叫 autopreso，解决的就是这个问题——你说，它画，实时生成白板演示。真的，我第一眼看到slogan的时候就觉得有意思：<strong>Let the whiteboard whiteboard itself.</strong> 让白板自己画自己。5天时间，187颗星，增长速度挺猛的。
+</div>
+
+<p>点进去看了一下README，我就知道这东西为什么能冲上Trending了。</p>
+
+<h2>它解决的是什么问题？</h2>
+
+<p>
+传统的演讲准备流是这样的：先写内容，再做PPT，最后排练。整个流程是线性的，内容生产和视觉呈现是分开的两个环节。
+
+autopreso把这两个环节合并了。你对着麦克风说话，它实时把你说的内容转成白板上的图形、箭头、文字标签。相当于你一边讲，一边有人在帮你画思维导图，而且是那种手绘风格的白板图。
+
+工作原理是这样的：
+</p>
+
+<div class="highlight-box">
+    <div class="label">核心技术栈</div>
+    <div class="value">麦克风 → 语音转文字(STT) → AI Agent → Excalidraw白板</div>
+    <div class="desc">全程本地运行，语音数据不传服务器。支持OpenAI、Codex、Ollama作为AI大脑。</div>
+</div>
+
+<p>
+它底层调的是Excalidraw的API，你说什么内容，它就让白板上对应地长出什么形状来。讲用户增长，它就画一条上升曲线；讲三个策略，它就给你排成三列加箭头。有点像是给演讲者配备了一个「会动的思维导图生成器」。
+</p>
+
+<p>
+安装很简单，一条命令：
+</p>
+
+<p>
+<code>npx autopreso</code>
+</p>
+
+<p>
+没有npx也行，<code>npm install -g autopreso</code>装成全局命令也行。跑起来之后自动打开浏览器，界面就是一个Excalidraw白板。你在左边选麦克风、选AI模型，右边就是白板区域。点「Start Preso」，开讲，白板就开始自己长内容了。
+</p>
+
+<h2>为什么它值得关注？</h2>
+
+<p>
+这个东西有意思的地方在于，它解决的不是「效率问题」，而是「心态问题」。很多人怕演讲，不是因为不知道讲什么，而是因为一想到「要做PPT」就累了。autopreso把PPT这个环节去掉了，你只管讲，白板帮你视觉化。
+
+对于以下几类人，这个工具的吸引力是真实的：
+</p>
+
+<p>
+第一类是知识博主和在线课程讲师。他们需要持续产出内容，但PPT制作本身就占掉了大量时间。用autopreso，录一期分享的前期准备可以压缩到「想清楚要讲什么，然后对着麦克风讲」的程度。
+</p>
+
+<p>
+第二类是培训师和企业内训师。他们讲课的特点是需要互动、需要画图，但大部分时间是在讲而不是在画。autopreso让边讲边画变成了零成本的操作。
+</p>
+
+<p>
+第三类是有分享习惯的创业者。一个CEO说要每周做一次内部分享，如果每次都要花3小时做PPT，可能两周就放弃了。但如果5分钟能搭一个白板框架，然后边讲边生成，这个习惯就更容易维持。
+</p>
+
+<h2>怎么用它赚钱？</h2>
+
+<p>
+这是我重点想的部分。一个工具能不能变现，看的不是工具本身，而是它解决的那个问题背后有没有人愿意付钱。autopreso解决的是「演讲交付效率」的问题，愿意为高效演讲付钱的人，付费能力和意愿都不差。
+
+我有5个方向的思路，说给你听。
+</p>
+
+<div class="method-card">
+    <h3>方式一：卖「种子素材包」</h3>
+    <p>
+    autopreso支持在演讲前先在白板上放一些「种子元素」，作为AI绘图的基础。你可以在这个基础上，针对不同行业、不同场景，预制不同的种子包。
+    </p>
+    <p>
+    比如一个「商业计划书演讲包」，里面包含了一个基础框架——封面布局、三段式结构、融资节点标注框等。一个「产品发布会包」，包含产品功能分类、对比表格框架、用户痛点标注。一个「管理培训包」，包含组织架构图、流程图模板、考核指标框。
+    </p>
+    <p>
+    <span class="money">预估收入：</span>99-299元/套，面向B端可以卖企业授权，999元/年起。
+    </p>
+</div>
+
+<div class="method-card">
+    <h3>方式二：帮人定制「Agent指令集」</h3>
+    <p>
+    autopreso白板上画什么，取决于AI Agent的指令。你可以把「讲什么内容AI会画什么图形」理解为一个Prompt工程。
+    </p>
+    <p>
+    不同的人对着同一个autopreso讲，AI画出来的东西质量可以差很远。有些人讲了一大段，AI画出来的是一坨混乱的形状；有些人简单几句话，AI画出来的结构清晰、重点分明。这中间的差别就是「Agent指令调优」的价值。
+    </p>
+    <p>
+    你可以提供定制服务，帮客户优化他们的autopreso Agent指令，让AI更懂他们的演讲风格和内容逻辑。按次收费，每次500-2000元不等。
+    </p>
+    <p>
+    <span class="money">预估收入：</span>月接10-15单，月入5000-20000元。
+    </p>
+</div>
+
+<div class="method-card">
+    <h3>方式三：企业培训「演讲效率」服务</h3>
+    <p>
+    企业内部培训、会议演讲、汇报这些场景，用autopreso可以大幅降低演讲准备成本。你可以做企业培训，教他们怎么用autopreso来做内部知识分享。
+    </p>
+    <p>
+    这个方向的收费模式可以是一天的企业培训Workshop，报价5000-15000元。内容是：autopreso工具介绍、演讲结构设计、种子素材制作、实操演练。
+    </p>
+    <p>
+    <span class="money">预估收入：</span>每月2-3场企业培训，月入10000-30000元。
+    </p>
+</div>
+
+<div class="method-card">
+    <h3>方式四：知识付费内容演示</h3>
+    <p>
+    如果你自己在做知识付费产品，可以用autopreso来做演示。现在很多人买课之前会先看免费分享，你在B站、小红书、视频号发一段「用autopreso讲一个知识点」的视频，观众能直观看到这个工具的价值。
+    </p>
+    <p>
+    autopreso生成的演讲效果本身就带有「展示性质」，很适合短视频传播。你不需要露脸，只需要展示白板上的内容「从零到有」地生长出来，这个过程就足够吸引人了。
+    </p>
+    <p>
+    <span class="money">预估收入：</span>流量变现+引流到付费课程，看个人IP影响力，月入不确定，但边际成本极低。
+    </p>
+</div>
+
+<div class="method-card">
+    <h3>方式五：集成工作流服务</h3>
+    <p>
+    autopreso生成的演讲是Excalidraw格式的白板，可以导出成图片、SVG，甚至PDF。如果你能把它集成到更完整的工作流里——比如演讲后自动生成带你配音的图文版、自动发布到Notion或者飞书文档——这个集成服务的价值就更高了。
+    </p>
+    <p>
+    做一个「autopreso + 自动化发布」的服务包，帮客户实现「讲完自动出全套物料」。报价3000-8000元/套。
+    </p>
+    <p>
+    <span class="money">预估收入：</span>每套5000元左右，月出2-3单，月入10000-20000元。
+    </p>
+</div>
+
+<h2>我的判断</h2>
+
+<p>
+坦率地讲，autopreso现在还是alpha版本，功能上还有很多粗糙的地方。但正因为是早期，才有时间窗口。等它成熟了、社区大了，机会反而可能就少了。
+</p>
+
+<p>
+这个工具本质上是把「演讲」和「可视化」合二为一，解决了内容创作者、培训师、知识工作者最痛苦的那个环节——从脑子里的东西到能展示的东西之间的转化成本。只要这个问题存在，解决方案就有价值。
+</p>
+
+<p>
+现在入场最好的姿势可能不是等它完美，而是用起来、分享出去、在它长大的过程中找到自己的位置。工具不完美的时候，也是做内容、做服务最好做的时候。等所有人都觉得这东西牛的时候，就轮到卷价格了。
+</p>
+
+<p>
+GitHub地址我放这里了，感兴趣自己去看看：
+</p>
+
+<p>
+<a href="https://github.com/kunchenguid/autopreso">https://github.com/kunchenguid/autopreso</a>
+</p>
+
+<div class="cta-box">
+    <h3>想第一时间知道有什么好项目？</h3>
+    <p>我每天从GitHub Trending里挑最有赚钱潜力的AI项目做分析</p>
+    <a href="/">查看更多赚钱案例 →</a>
+</div>
+
+</div>
+
+<div class="footer">
+    <p>以上，既然看到这里了，如果觉得不错，随手点个赞、在看、转发三连吧</p>
+    <p>谢谢你看我的文章，我们，下次再见。</p>
+    <p>/ 作者：AiToollab</p>
+</div>
+
+</body>
+</html>
