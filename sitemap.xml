@@ -92,4 +92,10 @@
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
+    <url>
+        <loc>https://www.aitoollab.top/articles/news/ps3-emulator-ai-pr-conflict/</loc>
+        <lastmod>2026-05-11</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
 </urlset>

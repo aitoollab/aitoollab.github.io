@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://www.aitoollab.top/articles/news/ps3-emulator-ai-pr-conflict/">
+    <title>PS3模拟器维护者终于发声：请别再用AI生成的PR炸我了｜AiToollab</title>
+    <meta name="description" content="PS3模拟器开发者在GitHub上发文，请求AI用户停止疯狂提交PR。一篇关于开源维护者与AI代码泛滥的战争，以及背后被忽视的社区危机。">
+    <meta name="robots" content="index, follow">
+    <link rel="alternate" hreflang="x-default" href="https://www.aitoollab.top/articles/news/ps3-emulator-ai-pr-conflict/">
+    <link rel="alternate" hreflang="zh-CN" href="https://www.aitoollab.top/articles/news/ps3-emulator-ai-pr-conflict/">
+    <meta property="og:title" content="PS3模拟器维护者终于发声：请别再用AI生成的PR炸我了">
+    <meta property="og:description" content="PS3模拟器开发者在GitHub上发文，请求AI用户停止疯狂提交PR。一篇关于开源维护者与AI代码泛滥的战争。">
+    <meta property="og:image" content="https://www.aitoollab.top/og-ps3-emulator-ai-pr-conflict.jpg">
+    <meta property="og:url" content="https://www.aitoollab.top/articles/news/ps3-emulator-ai-pr-conflict/">
+    <meta property="og:type" content="article">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="PS3模拟器维护者终于发声：请别再用AI生成的PR炸我了">
+    <meta name="twitter:description" content="PS3模拟器开发者的公开请求：请别再用AI生成的PR炸我了。">
+    <meta name="twitter:image" content="https://www.aitoollab.top/og-ps3-emulator-ai-pr-conflict.jpg">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "@id": "https://www.aitoollab.top/articles/news/ps3-emulator-ai-pr-conflict/",
+        "url": "https://www.aitoollab.top/articles/news/ps3-emulator-ai-pr-conflict/",
+        "headline": "PS3模拟器维护者终于发声：请别再用AI生成的PR炸我了",
+        "description": "PS3模拟器开发者在GitHub上发文，请求AI用户停止疯狂提交PR。一篇关于开源维护者与AI代码泛滥的战争。",
+        "datePublished": "2026-05-11",
+        "dateModified": "2026-05-11",
+        "author": {"@type": "Organization", "name": "AiToollab"},
+        "publisher": {
+            "@type": "Organization",
+            "name": "AiToollab",
+            "url": "https://www.aitoollab.top"
+        },
+        "image": "https://www.aitoollab.top/og-ps3-emulator-ai-pr-conflict.jpg",
+        "articleSection": "热点",
+        "keywords": ["AI", "GitHub", "开源", "PS3模拟器", "Pull Request", "社区"]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "首页", "item": "https://www.aitoollab.top/"},
+            {"@type": "ListItem", "position": 2, "name": "热点追踪", "item": "https://www.aitoollab.top/articles/news/"},
+            {"@type": "ListItem", "position": 3, "name": "PS3模拟器维护者终于发声：请别再用AI生成的PR炸我了"}
+        ]
+    }
+    </script>
+    <style>
+        :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --muted: #8b949e; --accent: #f97316; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif; background: var(--bg); color: var(--text); line-height: 1.9; font-size: 17px; }
+        a { color: var(--accent); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        header.page-header { text-align: center; padding: 60px 20px 40px; border-bottom: 1px solid var(--border); }
+        header.page-header h1 { font-size: 28px; margin-bottom: 16px; line-height: 1.4; max-width: 700px; margin-left: auto; margin-right: auto; }
+        header.page-header .meta { color: var(--muted); font-size: 14px; margin-top: 12px; }
+        header.page-header .meta span { margin: 0 8px; }
+
+        nav.section-nav { display: flex; justify-content: center; gap: 4px; padding: 16px 20px; border-bottom: 1px solid var(--border); background: var(--card); position: sticky; top: 0; z-index: 100; }
+        nav.section-nav a { color: var(--muted); font-size: 14px; padding: 8px 16px; border-radius: 8px; transition: all .2s; }
+        nav.section-nav a:hover { color: var(--text); background: rgba(255,255,255,0.05); text-decoration: none; }
+        nav.section-nav a.active { color: var(--text); background: rgba(37,99,235,0.2); }
+
+        .container { max-width: 700px; margin: 0 auto; padding: 40px 20px 80px; }
+        .article-body { font-size: 17px; line-height: 1.9; }
+        .article-body p { margin-bottom: 24px; }
+        .article-body h2 { font-size: 22px; margin: 40px 0 20px; color: var(--text); }
+        .article-body blockquote { border-left: 3px solid var(--accent); padding-left: 20px; margin: 24px 0; color: var(--muted); font-style: italic; }
+
+        .hero-image { width: 100%; max-height: 400px; object-fit: cover; border-radius: 12px; margin-bottom: 32px; border: 1px solid var(--border); }
+
+        .article-body .lead { font-size: 19px; color: var(--text); margin-bottom: 32px; line-height: 1.7; }
+
+        .cta-section { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); border: 1px solid rgba(249,115,22,0.3); border-radius: 16px; padding: 32px; margin: 48px 0; }
+        .cta-section h3 { color: #fff; font-size: 20px; margin-bottom: 12px; }
+        .cta-section p { color: #a0aec0; font-size: 15px; margin-bottom: 20px; line-height: 1.7; }
+        .cta-btn { display: inline-block; background: linear-gradient(135deg, #f97316, #ea580c); color: #fff; padding: 14px 32px; border-radius: 10px; font-weight: 600; font-size: 16px; transition: all .2s; }
+        .cta-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(249,115,22,0.35); text-decoration: none; }
+
+        .tag-line { display: inline-block; background: rgba(249,115,22,0.15); color: #f97316; padding: 4px 12px; border-radius: px; font-size: 13px; margin-bottom: 24px; }
+
+        footer.article-footer { margin-top: 60px; padding-top: 32px; border-top: 1px solid var(--border); }
+        footer.article-footer a { color: var(--muted); font-size: 14px; }
+        footer.article-footer a:hover { color: var(--accent); text-decoration: none; }
+    </style>
+</head>
+<body>
+
+<header class="page-header">
+    <h1>PS3模拟器维护者终于发声：请别再用AI生成的PR炸我了</h1>
+    <div class="meta">
+        <span>📅 2026-05-11</span>
+        <span>•</span>
+        <span>🔥 热点</span>
+    </div>
+</header>
+
+<nav class="section-nav">
+    <a href="/tutorials/">💡 教程</a>
+    <a href="/articles/news/" class="active">🔥 热点</a>
+    <a href="/articles/cases/">💰 案例</a>
+    <a href="/articles/startup-100/">🧪 实验</a>
+    <a href="/articles/">全部</a>
+</nav>
+
+<div class="container">
+    <article class="article-body">
+        <span class="tag-line">社区</span>
+
+        <p class="lead">故事是这样的。</p>
+
+        <p>一群玩PS3模拟器的开发者，最近被一件事搞得心态崩了，有人不停地往他们的仓库提交Pull Request，不是为了帮忙修bug，纯粹是因为AI工具太容易生成代码了，而这些代码质量一言难尽。</p>
+
+        <p>他们终于忍不住了，发了一篇长文请求大家「求求你们了，别再这样搞了」。</p>
+
+        <p>就这么简单的一件事，在Hacker News上拿了108点，讨论区炸开了锅。</p>
+
+        <h2>你不是在帮倒忙，你是在制造垃圾</h2>
+
+        <p>可能有人会觉得，不就是提交代码吗，有人愿意参与是好事啊。问题在于，AI生成的代码提交，质量参差不齐，有的甚至连基本的逻辑都没有。</p>
+
+        <p>更让人头疼的是量太大。一个维护PS3模拟器的团队，本来就几个人，大家都有自己的本职工作。结果每天收到的PR里，一大半都是AI生成的垃圾代码。</p>
+
+        <p>你以为你是在帮忙，实际上你只是在制造额外的工作量，维护者得花时间去review、去解释为什么这个PR不能用、还得礼貌地拒绝你。</p>
+
+        <p>这种事情，不止发生在PS3模拟器上。</p>
+
+        <h2>开源社区正在经历一场信任危机</h2>
+
+        <p>我一直觉得，开源社区最珍贵的东西，不是代码本身，是那群愿意花时间维护代码的人。他们用自己的业余时间，保证一个项目活下去。</p>
+
+        <p>但现在，这群人正在被两件事夹击。</p>
+
+        <p>一边是企业级的白嫖，大公司用开源项目赚钱，一行代码都不贡献。另一边是AI带来的噪音，以为自己在贡献，实际上在制造垃圾。</p>
+
+        <p>你想想看，一个维护者在GitHub上收到一条PR，兴冲冲地点开，结果发现是一堆毫无意义的代码。失望吗？久而久之，谁还愿意维护这个项目？</p>
+
+        <p>这种感觉太爽了，我说真的，就是那种被淹没在无效信息里的绝望感。</p>
+
+        <h2>AI到底帮了开源还是害了开源？</h2>
+
+        <p>我不是来唱衰AI的。但我们得承认，工具的普及和工具的合理使用，是两回事。</p>
+
+        <p>用AI辅助写代码，这事本身没问题。但提交之前，至少跑一遍测试，至少自己review一遍代码逻辑，这不过分吧？</p>
+
+        <p>问题是，现在很多人用AI工具的心态是「我提交了，反正有人会看」。这种心态，放在人类贡献者身上已经够糟糕了，放在AI辅助场景下，更被无限放大。</p>
+
+        <p>我当时就愣住了，原来AI降低门槛这件事，不一定是好事。门槛降低了，进来的人多了，但不代表质量会上来。</p>
+
+        <h2>说到底，这是一个关于尊重的问题</h2>
+
+        <p>回到PS3模拟器开发者的那篇长文。他们没有骂人，没有阴阳怪气，就是很平静地请求大家「如果要用AI写代码，请确保质量再提交」。</p>
+
+        <p>你看，这就是典型的开发者社区的反应，被逼到没办法了，才来请求大家。</p>
+
+        <p>我自己也踩过这个坑。刚学编程那会儿，觉得写代码很酷，到处给人提建议。后来才明白，真正的帮助不是你做了多少，而是你的帮助是否真的有用。</p>
+
+        <p>这个道理，放到AI时代一样适用。</p>
+
+        <p>下次你想用AI帮一个开源项目做贡献的时候，先问自己一个问题，这个东西，我自己真的理解吗？</p>
+
+        <p>如果答案是「不太确定」，那不如去当一个用户，用、点赞、提bug，这就够了。</p>
+
+        <p>别让「帮忙」变成「添乱」。</p>
+
+        <div class="cta-section">
+            <h3>想让AI真正帮到你？</h3>
+            <p>你是不是也发现，AI工具用起来效果参差不齐，有时候反而更费时间？问题可能不在于AI不够强，而在于你没有用对方法。</p>
+            <p>我们整理了一份「提示词全家桶」，包含各场景的AI使用技巧，让你的AI效率提升10倍。</p>
+            <a href="/prompt-pack/" class="cta-btn">获取提示词全家桶 →</a>
+        </div>
+
+    </article>
+
+    <footer class="article-footer">
+        <p><a href="/articles/news/">← 返回热点追踪</a></p>
+        <p style="margin-top:16px;color:var(--muted);font-size:13px;">
+            以上，既然看到这里了，如果觉得不错，随手点个赞、在看、转发三连吧。如果想第一时间收到推送，也可以给我个星标⭐～
+        </p>
+        <p style="margin-top:12px;color:var(--muted);font-size:13px;">
+            谢谢你看我的文章，我们，下次再见。
+        </p>
+        <p style="margin-top:8px;color:var(--muted);font-size:12px;">
+            > / 作者：AiToollab
+        </p>
+    </footer>
+</div>
+
+</body>
+</html>
