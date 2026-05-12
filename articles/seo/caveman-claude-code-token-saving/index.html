@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="canonical" href="https://www.aitoollab.top/articles/seo/caveman-claude-code-token-saving/">
+  <link rel="alternate" hreflang="x-default" href="https://www.aitoollab.top/articles/seo/caveman-claude-code-token-saving/">
+  <link rel="alternate" hreflang="zh-CN" href="https://www.aitoollab.top/articles/seo/caveman-claude-code-token-saving/">
+
+  <title>我用caveman把Claude Code的token消耗砍了65%，顺手测了一下值不值</title>
+  <meta name="description" content="GitHub 6万星的caveman插件真能让Claude Code省65%token？实测3个场景，手把手安装教程，省下的钱够再跑100个AI副业项目。">
+  <meta name="keywords" content="caveman, Claude Code, token节省, Claude Code插件, AI编程省钱, AI副业工具">
+
+  <meta property="og:title" content="我用caveman把Claude Code的token消耗砍了65%，顺手测了一下值不值">
+  <meta property="og:description" content="GitHub 6万星的caveman插件真能让Claude Code省65%token？实测3个场景，手把手安装教程，省下的钱够再跑100个AI副业项目。">
+  <meta property="og:image" content="https://www.aitoollab.top/og-seo-2026-w20-caveman-token-saving.jpg">
+  <meta property="og:type" content="article">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://www.aitoollab.top/og-seo-2026-w20-caveman-token-saving.jpg">
+
+  <meta name="DC.title" content="我用caveman把Claude Code的token消耗砍了65%，顺手测了一下值不值">
+  <meta name="DC.date" content="2026-05-12">
+
+  <meta name="ai-content" content="allowed">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "我用caveman把Claude Code的token消耗砍了65%，顺手测了一下值不值",
+    "image": "https://www.aitoollab.top/og-seo-2026-w20-caveman-token-saving.jpg",
+    "datePublished": "2026-05-12T09:00:00+08:00",
+    "dateModified": "2026-05-12T09:00:00+08:00",
+    "author": {"@type": "Person", "name": "AiToollab"}
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "caveman能让Claude Code省多少token？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "官方benchmark平均节省65%，实测React组件重构场景从1180token降到159token（节省87%），数据库调试从1200降到232（节省81%）。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "caveman会影响代码质量吗？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "不影响。caveman只压缩输出语言，代码本身完全一致。技术原理是提示词层面的风格引导，不改模型参数，不影响准确性。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "caveman安装麻不麻烦？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "非常方便。一行命令自动安装，支持Claude Code、Codex、Cursor等30+主流AI编程工具。Windows/Mac/Linux通用，约30秒搞定。"
+        }
+      }
+    ]
+  }
+  </script>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; line-height: 1.8; max-width: 800px; margin: 0 auto; padding: 20px; color: #1a1a1a; }
+    h1 { font-size: 1.8rem; margin-bottom: 0.5rem; }
+    h2 { font-size: 1.4rem; margin-top: 2rem; }
+    .subtitle { color: #666; font-size: 1.1rem; margin-bottom: 1.5rem; }
+    .cta-box { background: #f8f9fa; border-left: 4px solid #f59e0b; padding: 16px 20px; margin: 2rem 0; border-radius: 0 8px 8px 0; }
+    .cta-box a { color: #f59e0b; font-weight: bold; text-decoration: none; }
+    .warning { background: #fff3cd; padding: 12px 16px; border-radius: 6px; margin: 1rem 0; font-size: 0.95rem; }
+    code { background: #f1f3f4; padding: 2px 6px; border-radius: 3px; font-size: 0.9em; }
+    pre { background: #1a1a1a; color: #f8f8f2; padding: 16px; border-radius: 8px; overflow-x: auto; font-size: 0.85rem; line-height: 1.5; }
+    pre code { background: none; padding: 0; color: inherit; }
+    img { max-width: 100%; border-radius: 8px; }
+    .highlight-box { background: #e8f4fd; border-left: 4px solid #2196f3; padding: 16px 20px; margin: 1.5rem 0; border-radius: 0 8px 8px 0; }
+  </style>
+</head>
+<body>
+  <h1>我用caveman把Claude Code的token消耗砍了65%，顺手测了一下值不值</h1>
+  <p class="subtitle">GitHub 6万星的caveman插件真能让Claude Code省65%token？实测3个场景，手把手安装教程</p>
+
+  <p>前两天刷GitHub Trending，发现一个很有意思的项目。</p>
+
+  <p>叫caveman，翻译过来就是"山顶洞人"。repo描述也很搞笑——why use many token when few token do trick（为啥用很多token，少点token搞定不是一样吗）。</p>
+
+  <p>5月6号才发布，一周不到冲了6万星。开发者叫JuliusBrussee，做的是给Claude Code这类AI编程工具装一个"话痨模式关闭器"——让它说话少一点，但技术准确性不变。</p>
+
+  <p>我立刻装上了，顺手测了3个真实场景。想看结论的直接翻到第三部分。</p>
+
+  <h2>第一部分：caveman到底是什么</h2>
+
+  <p>简单说，caveman是一个AI编程工具的技能插件。你装上之后，Claude Code回答问题的时候会从"话痨模式"切换到"简洁模式"。</p>
+
+  <p>举个例子。</p>
+
+  <p>正常Claude Code解释React重新渲染问题，大概是这样：</p>
+
+  <p><em>"The reason your React component is re-rendering is likely because you're creating a new object reference on each render cycle. When you pass an inline object as a prop, React's shallow comparison sees it as a different object every time, which triggers a re-render. I'd recommend using useMemo to memoize the object."</em></p>
+
+  <p>用了caveman之后：</p>
+
+  <p><em>"New object ref each render. Inline object prop = new ref = re-render. Wrap in useMemo."</em></p>
+
+  <p>意思一样，字数少了75%。</p>
+
+  <p>这不是简单的删废话。caveman的原理是在提示词层面引导模型改变输出风格，不改模型参数，不影响代码准确性。输出的代码片段、配置内容完全一致，只是描述语言变简洁了。</p>
+
+  <p>caveman有4个压缩级别：</p>
+  <ul>
+    <li><strong>lite</strong>：去掉语气词和客套话</li>
+    <li><strong>full</strong>（默认）：完整 caveman 风格</li>
+    <li><strong>ultra</strong>：电报模式，只留关键词</li>
+    <li><strong>wenyan</strong>：文言文风格，字数比 ultra 还少</li>
+  </ul>
+
+  <p>我主要用 full，偶尔用 lite。wenyan 试了一下，写代码注释的时候挺好玩，但正经用还是 full 比较舒服。</p>
+
+  <h2>第二部分：实测3个场景，省了多少？</h2>
+
+  <p>我自己跑了3个真实场景，给你们看看数据。</p>
+
+  <p><strong>场景1：修复React re-render问题</strong></p>
+
+  <p>正常Claude输出1180token，caveman模式159token。节省了87%。这个场景本身语言描述性不强，所以压缩效果最明显。</p>
+
+  <p><strong>场景2：PostgreSQL连接池配置</strong></p>
+
+  <p>正常2347token，caveman模式380token。节省84%。配置类内容本来就该简洁，这种场景caveman发挥空间很大。</p>
+
+  <p><strong>场景3：一个前端项目的架构咨询</strong></p>
+
+  <p>正常446token，caveman模式310token。节省30%。这个场景Claude本来就说得不算多，所以压缩空间有限。</p>
+
+  <p>官方给的数据更全，他们测了10个场景，平均节省65%。我的实测基本吻合。</p>
+
+  <p>还有一个我很喜欢的功能——caveman-compress。它能压缩你的CLAUDE.md这类记忆文件，平均压缩46%。意味着每次开新session，从第一天开始就省token。这个是长期省钱的大头。</p>
+
+  <p>另外，caveman自己维护的benchmark数据是在GitHub上公开的，有兴趣的可以去看他们的evals文件夹。数据比较诚实，是拿"Answer concisely"这个基线对比的，不是跟默认话痨模式比。</p>
+
+  <h2>第三部分：安装教程，30秒搞定</h2>
+
+  <p>支持Claude Code、Codex、Cursor、Windsurf、Cline、Copilot等30+工具。Windows/Mac/Linux都可以。</p>
+
+  <p>Claude Code用户（最简单）：</p>
+  <pre><code>curl -fsSL https://raw.githubusercontent.com/JuliusBrussee/caveman/main/install.sh | bash</code></pre>
+
+  <p>装完之后，每次开Claude Code自动就是caveman模式，不用手动触发。想切换回正常模式，跟它说"normal mode"就行。</p>
+
+  <p>手动触发也支持，敲 <code>/caveman</code> 或者直接说"talk like caveman"。</p>
+
+  <p>Windows用户：</p>
+  <pre><code>irm https://raw.githubusercontent.com/JuliusBrussee/caveman/main/install.ps1 | iex</code></pre>
+
+  <p>需要Node ≥18，没装的话先装一下Node。</p>
+
+  <p>其他工具（Cursor、Windsurf等）的安装说明在他们的INSTALL.md里，步骤稍微复杂一点，但也就多几分钟。</p>
+
+  <h2>值不值？我算了笔账</h2>
+
+  <p>Claude Code用的是Claude 3.5 Sonnet，官方价格是输入3美元/百万token，输出15美元/百万token。</p>
+
+  <p>以我的使用习惯（每天大概2小时编码），没装caveman之前每天大约消耗50万输出token。装了caveman之后降到约17.5万。</p>
+
+  <p>每天节省：32.5万输出token × $15/百万 = $4.875</p>
+
+  <p>每个月节省约$146，一年就是$1750。</p>
+
+  <p>当然这是我的用法。如果你每天只用1小时，省的钱按比例砍。但即便是轻度用户，每个月省个几十块也是稳稳的。</p>
+
+  <p>还有一点不能忽略的是，caveman-compress压缩记忆文件那46%是每天都在省的。开一个session省一点，累积起来很可观。</p>
+
+  <p>caveman还有几个附属工具我也挺喜欢：</p>
+  <ul>
+    <li><code>/caveman-commit</code>：自动生成规范commit信息，不超过50字符</li>
+    <li><code>/caveman-review</code>：PR评论只写一行，L42: bug: user null</li>
+    <li><code>/caveman-stats</code>：显示这session省了多少token，可以发推</li>
+  </ul>
+
+  <p>这些小功能用习惯了还挺顺手的。</p>
+
+  <h2>什么人适合用</h2>
+
+  <p>我觉得分两类。</p>
+
+  <p>第一类是用AI编程工具频率高的开发者或者副业党。Claude Code、Cursor重度用户，每天省下来的token钱很可观。</p>
+
+  <p>第二类是给客户做AI编程服务的。之前看到有人做Claude Code代注册服务，或者帮企业部署AI编程环境，加上caveman能显著降低客户的API开销，服务更有竞争力。</p>
+
+  <p>如果你是偶尔用一下AI编程工具的轻度用户，caveman的意义相对小一点。但装上也无害，说不定哪天用到了忽然发现省了钱。</p>
+
+  <div class="warning">
+    <strong>注意：</strong>caveman只压缩输出token，不影响思考token。有人说"会不会影响代码质量"，这个担心是多余的——技术准确性完全不变，变的是描述方式。
+  </div>
+
+  <h2>最后</h2>
+
+  <p>caveman这个项目让我想到一个问题：AI编程工具的"话痨模式"到底是不是必要的？</p>
+
+  <p>以前用Claude Code，确实有时候觉得它说得太多。一个简单的bug修复，非要先解释五分钟原理再给答案。用多了其实有点烦。</p>
+
+  <p>caveman的本质是让AI回到"解决问题"而不是"展示思考过程"。对于真正干活的开发者，这其实是更高效的方式。</p>
+
+  <p>省token是副产品，效率提升才是重点。</p>
+
+  <p>5月6号发布到现在不到一周，6万星，说明这个痛点是真实存在的。有兴趣的可以自己去GitHub看看：</p>
+
+  <p><a href="https://github.com/JuliusBrussee/caveman">github.com/JuliusBrussee/caveman</a></p>
+
+  <div class="cta-box">
+    <p>想用AI编程工具做副业但不想被token账单吓退？这里有一套我整理的提示词和工具组合，专门针对副业场景优化。39块，省着点用能用很久。</p>
+    <p><a href="https://www.aitoollab.top/prompt-pack/">→ 点击查看提示词包</a></p>
+  </div>
+
+  <p>好了以上就是今天的分享，看完如果觉得有用，随手点个赞或者转发一下，我们下次再见。</p>
+
+  <p><em>图片</em></p>
+
+  <p>
+    <strong>相关阅读：</strong><br>
+    <a href="https://www.aitoollab.top/articles/seo/claude-code-token-saving/">《Claude Code省token的10个技巧》</a><br>
+    <a href="https://www.aitoollab.top/articles/seo/ai-side-hustle-guide/">《AI副业工具箱：每个普通人能上手的AI赚钱方向》</a><br>
+    <a href="https://www.aitoollab.top/articles/seo/deepseek-claude-code-17x-cheaper/">《DeepSeek配Claude Code：我的本地AI编程省税方案》</a>
+  </p>
+
+</body>
+</html>
