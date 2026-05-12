@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://www.aitoollab.top/articles/cases/mattpocock-skills-real-engineers/">
+    <link rel="alternate" type="application/atom+xml" title="AiToollab RSS Feed" href="/feed.xml">
+    <link rel="alternate" hreflang="x-default" href="https://www.aitoollab.top/articles/cases/mattpocock-skills-real-engineers/">
+    <link rel="alternate" hreflang="zh-CN" href="https://www.aitoollab.top/articles/cases/mattpocock-skills-real-engineers/">
+
+    <title>用mattpocock/skills把AI编程从" vibe coding"拉回工程正轨：52K星项目的赚钱思路</title>
+    <meta name="description" content="GitHub 52K星的项目，专门解决AI编程「看起来很美用起来很废」的问题。怎么用它赚钱？我想了4种方式。">
+    <meta name="keywords" content="mattpocock/skills, AI编程, Claude Code, 提示词工程, 副业变现, 编程工作流">
+    <meta name="author" content="AiToollab">
+    <meta name="robots" content="index, follow">
+    <meta name="ai-content" content="allowed">
+
+    <meta property="og:title" content="用mattpocock/skills把AI编程从 vibe coding拉回工程正轨">
+    <meta property="og:description" content="GitHub 52K星的项目，专门解决AI编程「看起来很美用起来很废」的问题。">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.aitoollab.top/articles/cases/mattpocock-skills-real-engineers/">
+    <meta property="og:site_name" content="AiToollab">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="article:published_time" content="2026-05-12T15:00:00+08:00">
+    <meta property="article:modified_time" content="2026-05-12T15:00:00+08:00">
+    <meta property="article:author" content="https://github.com/AiToollab">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="用mattpocock/skills把AI编程拉回工程正轨">
+    <meta name="twitter:description" content="GitHub 52K星的项目，专门解决AI编程「看起来很美用起来很废」。">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "@id": "https://www.aitoollab.top/articles/cases/mattpocock-skills-real-engineers/",
+        "headline": "用mattpocock/skills把AI编程从 vibe coding拉回工程正轨：52K星项目的赚钱思路",
+        "description": "GitHub 52K星的项目，专门解决AI编程「看起来很美用起来很废」的问题。怎么用它赚钱？我想了4种方式。",
+        "author": {"@type": "Organization", "name": "AiToollab"},
+        "datePublished": "2026-05-12",
+        "dateModified": "2026-05-12",
+        "publisher": {
+            "@type": "Organization",
+            "name": "AiToollab",
+            "url": "https://www.aitoollab.top"
+        },
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://www.aitoollab.top/articles/cases/mattpocock-skills-real-engineers/"
+        }
+    }
+    </script>
+
+    <style>
+        :root {
+            --bg: #0d1117;
+            --card: #161b22;
+            --border: #30363d;
+            --text: #e6edf3;
+            --muted: #8b949e;
+            --accent: #58a6ff;
+            --green: #3fb950;
+            --purple: #a371f7;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.9;
+            font-size: 17px;
+        }
+        a { color: var(--accent); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        .header {
+            background: linear-gradient(135deg, #0d1117 0%, #1a2035 50%, #0d1117 100%);
+            border-bottom: 1px solid var(--border);
+            padding: 60px 20px 40px;
+            text-align: center;
+        }
+        .header .badge {
+            display: inline-block;
+            background: rgba(63,185,80,0.12);
+            color: var(--green);
+            padding: 4px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            margin-bottom: 16px;
+            border: 1px solid rgba(63,185,80,0.3);
+        }
+        .header h1 {
+            font-size: 30px;
+            line-height: 1.3;
+            max-width: 800px;
+            margin: 0 auto 16px;
+            background: linear-gradient(135deg, #fff 0%, #8b949e 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .header .meta { color: var(--muted); font-size: 14px; margin-bottom: 16px; }
+        .header .tags { display: flex; justify-content: center; gap: 8px; flex-wrap: wrap; }
+        .header .tag {
+            background: var(--card);
+            border: 1px solid var(--border);
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-size: 12px;
+            color: var(--muted);
+        }
+
+        .container { max-width: 720px; margin: 0 auto; padding: 40px 20px 60px; }
+
+        .lead {
+            font-size: 20px;
+            color: var(--text);
+            margin-bottom: 28px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        h2 {
+            font-size: 22px;
+            margin: 40px 0 16px;
+            color: var(--text);
+        }
+
+        p { margin-bottom: 16px; }
+
+        .highlight-box {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 20px 24px;
+            margin: 24px 0;
+        }
+
+        .highlight-box .label {
+            font-size: 12px;
+            color: var(--green);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+
+        .highlight-box .value {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 4px;
+        }
+
+        .highlight-box .desc {
+            font-size: 14px;
+            color: var(--muted);
+        }
+
+        .method-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 20px 24px;
+            margin: 16px 0;
+        }
+
+        .method-card h3 {
+            font-size: 18px;
+            color: var(--accent);
+            margin-bottom: 12px;
+        }
+
+        .method-card .money {
+            color: var(--green);
+            font-weight: 700;
+        }
+
+        .cta-box {
+            background: linear-gradient(135deg, rgba(88,166,255,0.1) 0%, rgba(163,113,247,0.1) 100%);
+            border: 1px solid rgba(88,166,255,0.3);
+            border-radius: 10px;
+            padding: 24px;
+            margin: 32px 0;
+            text-align: center;
+        }
+
+        .cta-box h3 {
+            font-size: 20px;
+            margin-bottom: 12px;
+        }
+
+        .cta-box p {
+            color: var(--muted);
+            margin-bottom: 16px;
+        }
+
+        .cta-box a {
+            display: inline-block;
+            background: var(--green);
+            color: #000;
+            padding: 12px 28px;
+            border-radius: 8px;
+            font-weight: 700;
+        }
+
+        .footer {
+            border-top: 1px solid var(--border);
+            padding: 32px 20px;
+            text-align: center;
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        .inline-code {
+            background: rgba(88,166,255,0.1);
+            color: var(--accent);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-family: "SF Mono", Monaco, monospace;
+            font-size: 14px;
+        }
+
+        code {
+            background: rgba(88,166,255,0.1);
+            color: var(--accent);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-family: "SF Mono", Monaco, monospace;
+            font-size: 14px;
+        }
+
+        .skill-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 12px;
+            margin: 20px 0;
+        }
+
+        .skill-item {
+            background: var(--card);
+            border: 1px solid var(--border);
+            padding: 12px 16px;
+            border-radius: 8px;
+            font-size: 14px;
+        }
+
+        .skill-item .name {
+            color: var(--accent);
+            font-family: monospace;
+            font-weight: 600;
+        }
+
+        .skill-item .desc {
+            color: var(--muted);
+            font-size: 13px;
+            margin-top: 4px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <div class="badge">GitHub Trending · 52K★</div>
+    <h1>用mattpocock/skills把AI编程从「vibe coding」拉回工程正轨</h1>
+    <div class="meta">2026-05-12 · AiToollab</div>
+    <div class="tags">
+        <span class="tag">mattpocock/skills</span>
+        <span class="tag">Claude Code</span>
+        <span class="tag">AI编程</span>
+        <span class="tag">副业</span>
+    </div>
+</div>
+
+<div class="container">
+
+<div class="lead">
+你有没有过这种感觉，用Claude Code或者Codex写代码的时候，一开始很爽，感觉自己在飞。然后突然有一天，你发现代码库里，多了一堆你自己都看不懂的东西，bug一堆，架构乱七八糟，你不是在编程，你是在给AI打工。我最近在GitHub上刷到一个项目，52K颗星，名字叫mattpocock/skills，专门解决这个「vibe coding」问题。作者是Matt Pocock，TypeScript社区的老熟人了。这项目做的事情，用一句话概括就是：<strong>让AI编程变回真正的工程实践，而不是一场失控的打字比赛。</strong>
+</div>
+
+<p>
+点进去看了一下README，我就觉得这项目能拿52K星，不是没有道理的。它不是给你一堆花里胡哨的prompt，而是针对AI编程里真实会遇到的四个核心失败模式，各有一套工程级的解决方案。
+</p>
+
+<h2>AI编程的四个坑，这个项目都想到了</h2>
+
+<p>
+Matt Pocock在README里写得非常直接。他说，开发真正可用的应用，是很难的，市面上那些GSD、BMAD、Spec-Kit方法论倒是能帮你推进，但代价是你对过程的控制权没了，出了bug很难追溯。他做这些skills的出发点，就是要解决这个问题——让AI编程回归工程本质，small、easy to adapt、composable。
+</p>
+
+<p>
+这四个坑，大概是每一个用AI写代码的人都踩过的：
+</p>
+
+<div class="highlight-box">
+    <div class="label">核心问题与解法</div>
+    <div class="value">4个失败模式 → 4套解决方案</div>
+    <div class="desc">AI做的跟你想要的不一样 / 输出太啰嗦 / 写出来的代码跑不通 / 代码库变成一团乱麻</div>
+</div>
+
+<p>
+第一个是「AI没做你想要的东西」。这个太常见了，你让AI写一个功能，它交出来的东西，跟你脑子里想的完全不是一回事。Matt的解法是<strong>grill会话</strong>——在开始动手之前，先让AI问你一堆问题，把你的真实需求扒干净。用 <code>/grill-me</code> 或者 <code>/grill-with-docs</code> 这两个skill，让AI在动手之前先「面试」你一轮。
+</p>
+
+<p>
+第二个是「AI输出太啰嗦」。Agent进入一个项目之后，要花大量token去理解项目里的术语和缩写。Matt的解法是建立一个<strong>shared language</strong>——用一份CONTEXT.md文档，让AI学会项目专属的词汇表。结果就是AI的输出，从20个词变成1个词，token消耗降75%，代码里变量名函数名也统一了。
+</p>
+
+<p>
+第三个是「AI写的代码跑不通」。这个问题本质，是反馈循环缺失。Matt的建议是加上静态类型、浏览器访问、自动化测试。这里面最关键的是TDD——测试驱动开发，让AI先写一个会失败的测试，然后再去修复它。<code>/tdd</code> 这个skill，把整个red-green-refactor循环封装好了，直接用就行。
+</p>
+
+<p>
+第四个是「代码库变成一团乱麻」。因为AI加速了编码，也加速了软件熵增。Matt的解法是持续关注代码设计。<code>/to-prd</code> 在创建PRD之前，先问你准备改动哪些模块，<code>/zoom-out</code> 让AI从全局视角解释代码，<code>/improve-codebase-architecture</code> 定期跑一跑，给你的代码库做体检。
+</p>
+
+<h2>这套skills具体怎么用？</h2>
+
+<p>
+安装只需要一条命令：
+</p>
+
+<p>
+<code>npx skills@latest add mattpocock/skills</code>
+</p>
+
+<p>
+然后在AI coding agent里选你要用的skills，选 <code>/setup-matt-pocock-skills</code> 做初始化配置。配置完你选issue tracker（GitHub、Linear或本地文件）、triage标签体系、文档存放位置。之后就可以开始用了。
+</p>
+
+<p>
+我大概扫了一下，这套skills一共有十几个，覆盖了工程和产品两个大类。工程类的有：
+</p>
+
+<div class="skill-list">
+    <div class="skill-item"><div class="name">/diagnose</div><div class="desc">复现→最小化→假设→instrument→修复→回归测试</div></div>
+    <div class="skill-item"><div class="name">/grill-with-docs</div><div class="desc">需求深度挖掘+更新CONTEXT.md和ADR</div></div>
+    <div class="skill-item"><div class="name">/triage</div><div class="desc">通过状态机对issue做分类</div></div>
+    <div class="skill-item"><div class="name">/improve-codebase-architecture</div><div class="desc">找代码深化机会，给架构做体检</div></div>
+    <div class="skill-item"><div class="name">/tdd</div><div class="desc">测试驱动开发，red-green-refactor</div></div>
+    <div class="skill-item"><div class="name">/to-issues</div><div class="desc">把PRD拆成独立的GitHub issues</div></div>
+    <div class="skill-item"><div class="name">/zoom-out</div><div class="desc">让AI从全局视角解释代码</div></div>
+    <div class="skill-item"><div class="name">/prototype</div><div class="desc">快速原型验证设计</div></div>
+</div>
+
+<p>
+产品类的有：<code>/caveman</code> 压缩通讯省75% token、<code>/grill-me</code> 需求深度挖掘、<code>/handoff</code> 交接文档、<code>/write-a-skill</code> 创建新skill。
+</p>
+
+<p>
+Matt Pocock这个人，本身就是TypeScript社区的大V，搞了total-typescript.ai，拿了52K星说明他的工程经验，是被市场验证过的。这套skills不是那种「我来教你用AI」的空中楼阁，而是实打实的工程实践。
+</p>
+
+<h2>怎么用它赚钱？</h2>
+
+<p>
+这是我想重点聊的部分。mattpocock/skills解决的是「怎么用AI写好代码」的问题，愿意为「写好代码」付钱的人，付费能力本身就不差。我有4个方向的思路，说给你听。
+</p>
+
+<div class="method-card">
+    <h3>方式一：做「AI编程工程实践」付费课程</h3>
+<p>
+现在市面上教你「怎么用Claude Code写代码」的视频，一抓一大把，但教你「怎么用工程思维跟AI协作」的课程，几乎没有。这套skills背后的方法论——TDD、领域驱动设计、ADR决策记录——本身就是软件工程里的硬核知识，只是以前要踩很多坑才能领悟。
+</p>
+    <p>
+    你可以把这套skills的使用方法论包装成一门课：《用Matt Pocock的方法让AI写工程级代码》。面向想要提升代码质量、或者带队做AI编程转型的中高级开发者。
+    </p>
+    <p>
+    <span class="money">预估收入：</span>定价499-999元/人，录播课边际成本极低。做出影响力之后可以开企业版，5000-15000元/企业账号。
+    </p>
+</div>
+
+<div class="method-card">
+    <h3>方式二：企业AI编程转型咨询</h3>
+    <p>
+    现在很多公司都在推AI编程，但大多数团队用Claude Code的方式其实是「vibe coding」——让AI随便写，写完看看能不能跑，不能跑就让AI再改。这种用法代码质量完全没有保障。
+    </p>
+    <p>
+    你可以做企业咨询，帮团队建立「AI编程工程规范」。内容包括：引入mattpocock/skills作为团队标准配置、建立CONTEXT.md文档体系、落地TDD流程、引入ADR做架构决策记录。
+    </p>
+    <p>
+    这个方向客单价非常高，但需要你有比较强的软件工程背景，和咨询能力，说实话。
+    </p>
+    <p>
+    <span class="money">预估收入：</span>项目制收费，3-10万/项目，含调研、方案、培训、落地辅导。
+    </p>
+</div>
+
+<div class="method-card">
+    <h3>方式三：创建中文本地化+行业定制版skills</h3>
+<p>
+mattpocock/skills是英文的，而且它的设计哲学是「让你自己hack去用」。你完全可以做一个中文本地化版本，把skill文档翻译成中文，然后针对特定行业做定制。
+</p>
+<p>
+比如，针对前端团队定制一套包含React/Vue最佳实践的skills，针对数据团队定制一套包含SQL质量规范的skills。卖的是「开箱即用的行业模板」，不是单个skill，说实话。
+</p>
+    <p>
+    <span class="money">预估收入：</span>行业模板包定价99-399元/套，企业授权1999元/年。多个行业加起来，月入1-3万不是问题。
+    </p>
+</div>
+
+<div class="method-card">
+    <h3>方式四：做skill开发教程和模板市场</h3>
+    <p>
+    这个项目里有<code>/write-a-skill</code>这个skill，说明Matt Pocock本身就在鼓励用户开发自己的skills。但「怎么写一个真正好用的skill」这个事，市面上没有系统教程。
+    </p>
+    <p>
+    你可以出一套教程，教别人怎么开发高质量的agent skills。然后搭一个模板市场，让开发者上传自己开发的skills，设置付费下载。这块的想象空间在于，agent skills未来可能会变成一个独立的交易市场，就像WordPress插件或者Chrome扩展一样。
+    </p>
+    <p>
+    <span class="money">预估收入：</span>教程定价99-299元，模板市场抽佣20-30%。早期做的人少，流量红利明显。
+    </p>
+</div>
+
+<h2>我的判断</h2>
+
+<p>
+坦率地讲，mattpocock/skills不是一个「新鲜出炉」的早期项目，它的52K星，已经是市场验证的结果。但正因为它已经验证了方向，这个领域的竞争还没有那么激烈——大多数人还在用「vibe coding」的方式用AI编程，根本不知道还有「工程实践」这套玩法。
+</p>
+
+<p>
+这个项目的本质是「把几十年软件工程积累的最佳实践，封装成AI agent可以直接执行的skills」。TDD不是新概念，ADR不是新概念，CONTEXT.md也不是新概念。但把这些东西做成AI可以理解的格式，让AI在编程过程中自动执行，这才是这个项目的核心价值。
+</p>
+
+<p>
+如果你本身有工程背景，这套skills值得你认真研究一下。它解决的不是「怎么让AI帮我写代码」的问题，而是「怎么跟AI一起做工程」的问题。这两者之间的差别，可能比编程语言之间的差别，还要大。
+</p>
+
+<p>
+GitHub地址我放这里了，感兴趣自己去看看：
+</p>
+
+<p>
+<a href="https://github.com/mattpocock/skills">https://github.com/mattpocock/skills</a>
+</p>
+
+<div class="cta-box">
+    <h3>想第一时间知道有什么好项目？</h3>
+    <p>我每天从GitHub Trending里挑最有赚钱潜力的AI项目做分析</p>
+    <a href="/">查看更多赚钱案例 →</a>
+</div>
+
+</div>
+
+<div class="footer">
+    <p>以上，既然看到这里了，如果觉得不错，随手点个赞、在看、转发三连吧</p>
+    <p>谢谢你看我的文章，我们，下次再见。</p>
+    <p>/ 作者：AiToollab</p>
+</div>
+
+</body>
+</html>
