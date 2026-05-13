@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google把鼠标指针，变成了你的AI副驾驶</title>
+    <meta name="description" content="Google DeepMind发布AI Pointer，用Gemini让鼠标指针读懂你在指什么、张嘴就能问。再见，复制粘贴到ChatGPT的日子。">
+    <meta name="keywords" content="Google AI Pointer, Gemini, AI交互, 鼠标指针, DeepMind">
+    <meta name="author" content="AiToollab">
+    <link rel="canonical" href="https://www.aitoollab.top/articles/news/google-ai-pointer-reimagined/">
+    <meta property="og:title" content="Google把鼠标指针，变成了你的AI副驾驶">
+    <meta property="og:description" content="Google DeepMind发布AI Pointer，用Gemini让鼠标指针读懂你在指什么、张嘴就能问。再见，复制粘贴到ChatGPT的日子。">
+    <meta property="og:url" content="https://www.aitoollab.top/articles/news/google-ai-pointer-reimagined/">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://www.aitoollab.top/images/og-default.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Google把鼠标指针，变成了你的AI副驾驶">
+    <meta name="twitter:description" content="Google DeepMind发布AI Pointer，用Gemini让鼠标指针读懂你在指什么、张嘴就能问。">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Google把鼠标指针，变成了你的AI副驾驶",
+        "description": "Google DeepMind发布AI Pointer，用Gemini让鼠标指针读懂你在指什么、张嘴就能问。再见，复制粘贴到ChatGPT的日子。",
+        "author": {"@type": "Person", "name": "AiToollab"},
+        "datePublished": "2026-05-13",
+        "publisher": {
+            "@type": "Organization",
+            "name": "AiToollab",
+            "url": "https://www.aitoollab.top"
+        }
+    }
+    </script>
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{background:#0d1117;color:#e6e6e6;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;line-height:1.8;max-width:760px;margin:0 auto;padding:20px}
+        h1{font-size:1.8rem;color:#f0f6fc;margin:24px 0 16px}
+        .meta{font-size:.85rem;color:#8b949e;margin-bottom:32px}
+        p{margin:16px 0;color:#c9d1d9}
+        a{color:#58a6ff;text-decoration:none}
+        a:hover{text-decoration:underline}
+        strong{color:#f0f6fc}
+        blockquote{margin:24px 0;padding:16px 20px;border-left:3px solid #30363d;background:#161b22;border-radius:6px;color:#c9d1d9;font-style:italic}
+        .cta{margin:40px 0;padding:20px;background:#161b22;border:1px solid #30363d;border-radius:8px}
+        .cta h3{color:#f0f6fc;font-size:1.1rem;margin-bottom:12px}
+        .cta p{color:#8b949e;font-size:.9rem}
+        .cta a{display:inline-block;margin-top:12px;padding:10px 24px;background:#238636;color:#fff;border-radius:6px;font-weight:600}
+        .cta a:hover{background:#2ea043;text-decoration:none}
+        .tags{margin:32px 0}
+        .tags span{display:inline-block;margin:4px 4px 4px 0;padding:4px 12px;background:#21262d;color:#8b949e;border-radius:20px;font-size:.8rem}
+        footer{margin-top:60px;padding-top:20px;border-top:1px solid #30363d;font-size:.8rem;color:#8b949e;text-align:center}
+        footer a{color:#58a6ff}
+        .back-link{display:block;margin-bottom:20px;color:#58a6ff;font-size:.9rem}
+    </style>
+</head>
+<body>
+    <a href="/articles/news/" class="back-link">← 返回AI资讯</a>
+    <h1>Google把鼠标指针，变成了你的AI副驾驶</h1>
+    <div class="meta">2026年5月13日 · AI资讯 · AiToollab</div>
+
+    <p>事情是这样的。</p>
+
+    <p>上周我在刷Google DeepMind的博客，然后看到了一张图，当时就愣住了。</p>
+
+    <p>图里是一只手，握着鼠标，指针悬停在一张旅行纪录片视频的某一帧上。然后指针旁边冒出来一个对话框，问了一句：「这家餐厅能预订吗？」</p>
+
+    <p>不是哥们？？？</p>
+
+    <p>你在一帧视频画面里，指着一辆看起来很酷的摩托车，问AI这东西能不能买，AI直接给你甩出购买链接。</p>
+
+    <p>你指着一张手写的便签，它自动识别成待办清单。</p>
+
+    <p>你选中几款冰箱产品，让AI帮你比价，三秒钟给你拉出一张对比表。</p>
+
+    <p>不需要打开ChatGPT，不需要复制粘贴，不需要组织Prompt。你只需要做一件事——<strong>指</strong>。</p>
+
+    <p>这个项目叫AI Pointer，Google DeepMind昨天正式发布，底层由Gemini驱动。说真的，看完技术文档我脑子里就一个念头：Google终于做了一件，有点当年Google会做的事。</p>
+
+    <p>怎么说呢，就是那种「卧槽这个想法好像也不复杂，怎么之前没人做」的感受。</p>
+
+    <h2>这玩意到底改变了什么</h2>
+
+    <p>我们先退一步，想想平时怎么用AI处理屏幕上的东西。</p>
+
+    <p>你在刷一个产品页，觉得这个扫地机器人参数有点迷惑，想问AI怎么看。你现在怎么做？截图，复制，打开ChatGPT，粘贴，输Prompt，等回复。来回至少三四个步骤，切换三四个窗口。</p>
+
+    <p>现在呢？你就指着那个产品名称，问一句「这个跟那款比怎么样」，Gemini当场给你拉出对比。</p>
+
+    <p>你在一篇英文文档里看到一个词不认识，不用再开翻译插件了。指着他，问一句「这是啥意思」，AI就地给你翻译+解释。</p>
+
+    <p>本质上，Google做的是一件事：<strong>把屏幕上的像素，变成AI能理解的结构化实体</strong>。图片里有一家餐厅，系统识别为「餐厅」实体，附带地址、评分、预订入口。你指着一件衣服，系统识别为「商品」实体，附带价格、链接、相似款推荐。</p>
+
+    <p>像素不再是死的了。他活过来了。</p>
+
+    <h2>四个原则，技术背后的思考</h2>
+
+    <p>DeepMind在博客里披露了这套方案背后的四个设计原则，我翻了翻觉得写得挺实在的，不是那种「AI要改变一切」的废话。</p>
+
+    <p>先说第一条，系统要学会读懂上下文，不只是你在哪，还要知道你为什么去哪。你打开地图点了一家餐厅，系统知道你刚在刷旅行视频，对这家店感兴趣。不是你问什么它答什么，而是你手之所指，意有所指。</p>
+
+    <p>第二条，把像素变成可交互的实体。图片里的一个日期、一个地点、一件商品、一段文字，全都是结构化数据。拖进来就能用，不用你再OCR、截图、复制。</p>
+
+    <p>第三条，预测你的意图。Google说他们训练了一个模型，专门根据你指的方向、停留时间、当前应用，预测你接下来最可能想干什么。这有点像自动驾驶预判路况，不需要你开口，AI先走一步。</p>
+
+    <p>第四条，适配人的行为，而不是让人去适应AI。以前的交互范式是「你学怎么跟AI说话」，Google想推倒重来，变成「AI学你怎么用电脑」。</p>
+
+    <h2>Chrome先用上，中国用户暂时无缘</h2>
+
+    <p>具体落地节奏，Google说现在已经在Chrome里灰度测试了。</p>
+
+    <p>你在Chrome里打开Gemini，对任意网页上的内容指一指、说一句话，就能提问。不需要打开新Tab，不需要切换窗口。</p>
+
+    <p>Googlebook笔记本电脑也会上线一个叫Magic Pointer的功能，指尖一碰Gemini随时待命。</p>
+
+    <p>但坦率的讲一句，目前这些功能都是英文场景，而且需要Google账号登录Gemini。对于国内用户来说，暂时只能看看视频过过瘾。</p>
+
+    <p>不过我想说的是，这东西的思路，国内厂商跟不跟得上是另一回事，但它背后的逻辑值得每一个做AI产品的人认真想一下：<strong>下一代交互，到底是让人学AI，还是让AI学人？</strong></p>
+
+    <p>Google选了后者。</p>
+
+    <h2>我的判断</h2>
+
+    <p>这可能是近一年来，我看到的最接近「下一代计算平台交互范式」的东西。</p>
+
+    <p>不是说它多革命，而是它回答了一个很根本的问题：当AI无处不在的时候，人应该怎么跟它说话？Google的答案是，少说话，多指。</p>
+
+    <p>就像教小孩认识世界，你不需要先上一课再问问题。你指着，他答。这是最原始、最直觉、最不需要学习成本的方式。</p>
+
+    <p>当然，最终效果怎么样，还得等大规模用户用起来才知道。Google实验室里的演示，永远是最好看的那一面。</p>
+
+    <p>但方向，我认为是走对了。</p>
+
+    <p>好了以上就是今天的分享。如果你想第一时间收到这类AI新品和工具的分析，给大家一个传送门：<a href="/prompt-pack/">提示词全家桶</a>，里面收录了我用下来最靠谱的Prompt技巧和方法论。</p>
+
+    <p>以上，既然看到这里了，如果觉得不错，随手点个赞、在看、转发三连吧，如果想第一时间收到推送，也可以给我个星标⭐～</p>
+
+    <p>谢谢你看我的文章，我们，下次再见。</p>
+
+    <div class="cta">
+        <h3>延伸阅读</h3>
+        <p>AI交互正在从「打字」进化到「所指即所问」，想系统提升你的Prompt能力？这里有一套我压箱底的提示词全家桶。</p>
+        <a href="/prompt-pack/">查看提示词全家桶 →</a>
+    </div>
+
+    <div class="tags">
+        <span>#AI Pointer</span>
+        <span>#Gemini</span>
+        <span>#Google DeepMind</span>
+        <span>#AI交互</span>
+        <span>#Chrome</span>
+    </div>
+
+    <footer>
+        <p>© 2026 <a href="/">AiToollab</a> · <a href="/articles/">文章列表</a> · <a href="/prompt-pack/">提示词全家桶</a></p>
+    </footer>
+</body>
+</html>
