@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://www.aitoollab.top/articles/seo/mattpocock-skills-ai-side-hustle/">
+    <link rel="alternate" hreflang="x-default" href="https://www.aitoollab.top/articles/seo/mattpocock-skills-ai-side-hustle/">
+    <link rel="alternate" hreflang="zh-CN" href="https://www.aitoollab.top/articles/seo/mattpocock-skills-ai-side-hustle/">
+    <link rel="alternate" type="application/atom+xml" title="AiToollab RSS Feed" href="/feed.xml">
+
+    <title>GitHub 7.5万星的开源提示词库，让我看到了AI副业最直接的路径</title>
+    <meta name="description" content="Matt Pocock把他在Claude Code里真正在用的skills全部开源了，GitHub 7.5万星。这不是普通的prompt集合，是一个专业工程师用AI编程的真实工作流。我扒了三天，找到了几个普通人可以直接复制的变现思路。">
+    <meta name="keywords" content="Matt Pocock, Claude Code skills, AI副业, AI提示词, AI编程, 副业变现, AI skills, GitHub开源">
+    <meta name="author" content="AiToollab">
+    <meta name="robots" content="index, follow">
+    <meta name="generator" content="allowed">
+    <meta name="ai-content" content="allowed">
+
+    <meta property="og:title" content="GitHub 7.5万星的开源提示词库，让我看到了AI副业最直接的路径">
+    <meta property="og:description" content="Matt Pocock把他在Claude Code里真正在用的skills全部开源了。这不是prompt集合，是一个专业工程师用AI编程的真实工作流。我扒了三天，找到了几个可以直接复制的变现思路。">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.aitoollab.top/articles/seo/mattpocock-skills-ai-side-hustle/">
+    <meta property="og:site_name" content="AiToollab">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="article:published_time" content="2026-05-13T08:00:00+08:00">
+    <meta property="article:modified_time" content="2026-05-13T08:00:00+08:00">
+    <meta property="article:author" content="https://github.com/AiToollab">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@AiToollab">
+    <meta name="twitter:creator" content="@AiToollab">
+    <meta name="twitter:title" content="GitHub 7.5万星的开源提示词库，让我看到了AI副业最直接的路径">
+    <meta name="twitter:description" content="Matt Pocock把他在Claude Code里真正在用的skills全部开源了。7.5万星背后，是一套真实的AI副业方法论。">
+
+    <meta name="DC.title" content="GitHub 7.5万星的开源提示词库，让我看到了AI副业最直接的路径">
+    <meta name="DC.creator" content="AiToollab">
+    <meta name="DC.subject" content="Matt Pocock, AI副业, AI提示词, GitHub开源">
+    <meta name="DC.description" content="Matt Pocock把他在Claude Code里真正在用的skills全部开源了，GitHub 7.5万星。这不是prompt集合，是专业工程师用AI编程的真实工作流。">
+    <meta name="DC.publisher" content="AiToollab">
+    <meta name="DC.date" content="2026-05-13">
+    <meta name="DC.language" content="zh-CN">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "GitHub 7.5万星的开源提示词库，让我看到了AI副业最直接的路径",
+        "description": "Matt Pocock把他在Claude Code里真正在用的skills全部开源了，GitHub 7.5万星。这不是prompt集合，是一个专业工程师用AI编程的真实工作流。",
+        "datePublished": "2026-05-13T08:00:00+08:00",
+        "dateModified": "2026-05-13T08:00:00+08:00",
+        "author": {
+            "@type": "Organization",
+            "name": "AiToollab",
+            "url": "https://www.aitoollab.top/"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "AiToollab",
+            "url": "https://www.aitoollab.top/"
+        }
+    }
+    </script>
+
+    <style>
+    :root {
+        --bg: #0d1117;
+        --card: #161b22;
+        --border: #30363d;
+        --text: #e6edf3;
+        --muted: #8b949e;
+        --accent: #58a6ff;
+        --green: #3fb950;
+        --orange: #d29922;
+        --red: #f85149;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+    .container { max-width: 720px; margin: 0 auto; padding: 20px; }
+    .header { margin-bottom: 40px; padding-bottom: 24px; border-bottom: 1px solid var(--border); }
+    .tag { display: inline-block; background: rgba(88,166,255,0.1); color: var(--accent); font-size: 12px; padding: 4px 10px; border-radius: 20px; margin-bottom: 12px; }
+    .header h1 { font-size: 28px; font-weight: 700; margin-bottom: 12px; line-height: 1.3; }
+    .meta { font-size: 14px; color: var(--muted); }
+    .article-body { padding-bottom: 60px; }
+    .article-body p { margin-bottom: 16px; color: #c9d1d9; font-size: 16px; line-height: 1.8; }
+    .article-body h2 { font-size: 20px; margin: 40px 0 16px; color: var(--text); border-left: 3px solid var(--accent); padding-left: 12px; }
+    .article-body h3 { font-size: 17px; margin: 24px 0 10px; color: #e6edf3; }
+    .article-body strong { color: var(--text); }
+    .article-body ul, .article-body ol { margin: 16px 0 20px 24px; }
+    .article-body li { margin-bottom: 8px; color: #c9d1d9; }
+    .article-body .highlight { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin: 20px 0; font-size: 15px; }
+    .article-body .highlight-blue { border-left: 3px solid var(--accent); background: rgba(88,166,255,0.06); }
+    .article-body .highlight-green { border-left: 3px solid var(--green); background: rgba(63,185,80,0.06); }
+    .article-body .highlight-orange { border-left: 3px solid var(--orange); background: rgba(210,153,34,0.06); }
+    .article-body .tip { background: rgba(240,136,62,0.1); border: 1px solid rgba(240,136,62,0.3); border-radius: 8px; padding: 14px 16px; margin: 20px 0; font-size: 14px; color: #e6edf3; }
+    .article-body .tip strong { color: var(--orange); }
+    .article-body .cta { background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(63,185,80,0.1)); border: 1px solid rgba(88,166,255,0.3); border-radius: 12px; padding: 20px; margin: 32px 0; text-align: center; }
+    .article-body .cta p { margin-bottom: 8px; color: var(--text); }
+    .article-body .cta a { display: inline-block; background: var(--accent); color: #fff; padding: 10px 24px; border-radius: 8px; text-decoration: none; font-weight: 600; margin-top: 8px; }
+    .article-body .quote { background: rgba(88,166,255,0.06); border-left: 3px solid var(--accent); padding: 14px 16px; margin: 20px 0; font-style: italic; color: var(--muted); }
+    .related { margin-top: 40px; padding-top: 24px; border-top: 1px solid var(--border); }
+    .related h3 { font-size: 16px; margin-bottom: 16px; color: var(--muted); }
+    .related a { display: block; color: var(--accent); text-decoration: none; margin-bottom: 10px; font-size: 14px; }
+    .related a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 40px 20px; border-top: 1px solid var(--border); color: var(--muted); font-size: 14px; }
+    footer a { color: var(--accent); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <header class="header">
+        <span class="tag">AI副业</span>
+        <h1>GitHub 7.5万星的开源提示词库，让我看到了AI副业最直接的路径</h1>
+        <div class="meta">2026年5月13日 · AiToollab</div>
+    </header>
+
+    <article class="article-body">
+        <p>故事是这样的。</p>
+
+        <p>前两天我在刷GitHub Trending，发现了一个离谱的项目。</p>
+
+        <p>一个叫Matt Pocock的工程师，把自己平时在Claude Code里用的skills全部开源了。就一个项目，扔在GitHub上，没有任何付费内容，没有任何隐藏的Premium版本。就是纯粹的、开源的、真的在用的skills。</p>
+
+        <p>然后这个项目在不到三个月时间里，拿到了75000颗星。</p>
+
+        <p>75000。什么概念呢？react、vue、angular，这些顶级框架的stars增速都没有这个快。</p>
+
+        <p>这个事情有意思的地方在于，Matt Pocock本身就是一个靠AI Skills卖课变现的典型案例。他把这个东西开源出来，不是"教别人怎么做"，而是"展示自己是怎么做的"。</p>
+
+        <p>这两个东西的差距，懂的都懂。</p>
+
+        <h2>Skills是什么？为什么这么火？</h2>
+
+        <p>先说清楚这个项目是做什么的。</p>
+
+        <p>Matt Pocock的skills项目，全称叫「Skills for Real Engineers」，GitHub地址是 github.com/mattpocock/skills。简单来说，他把自己在实际工作中用Claude Code编程的各种工作流，全部整理成了可以直接复用的skills配置。</p>
+
+        <p>不是那种"你好，请帮我写一段代码"的简单prompt。是他自己积累下来的一整套工作方式：</p>
+
+        <p>怎么用Claude Code做代码审查、怎么用它快速写测试、怎么处理边界情况、怎么让它遵守项目规范。这些skills不是纸上谈兵，是他每天在实际开发中都在用的。</p>
+
+        <p>所以这个项目的本质是什么？</p>
+
+        <p>是一个专业工程师用AI编程的真实工作流集合。</p>
+
+        <p>这就解释了为什么它能在三个月内涨到75000星。大家在找的，不是一个花哨的prompt，而是一套真实的、能用的、已经经过验证的工作方式。</p>
+
+        <h2>为什么我说这是AI副业最直接的路径</h2>
+
+        <p>说回正题。为什么我觉得这个项目对想做AI副业的人有参考价值？</p>
+
+        <p>Matt Pocock本人的路径就很有意思。他最早在Vercel做工程师，后来出来自己做内容。现在他的付费课程卖了几万份，月收入可能超过很多中小创业公司。</p>
+
+        <p>他怎么做到的？两个字：展示。</p>
+
+        <p>不是讲大道理"AI会改变世界"，不是发那种"10个让你效率提升10倍的AI工具"的信息流内容。他做的事情很简单：每天用AI编程，然后把过程中的真实发现、真实问题、真实解决方案，全部做成内容发出来。</p>
+
+        <p>Skills开源就是这一步的集大成。他不是告诉你"我有个课程教你用AI编程"，而是直接把自己的工作流开源给你看。你用了觉得好，自然会想学更多，然后他的课程就在那里。</p>
+
+        <p>这就是我说的最直接的路径：用真实的工作流吸引目标用户，用开源建立信任，用付费内容完成变现。不是割韭菜，是真的给你看了货。</p>
+
+        <h2>普通人能复制这个模式吗？</h2>
+
+        <p>能，但不能完全照搬。Matt Pocock能成，有几个前提：他是专业工程师，在Vercel这种明星公司待过，本身有一定的内容积累。这些条件不是每个人都有的。</p>
+
+        <p>但有几个点是可以直接抄的：</p>
+
+        <p>第一步，找到一个你真正在用的AI工具，然后开始记录你的使用方式。不要编，不要想当然，就是记录你实际在做的。</p>
+
+        <p>第二步，把这个记录整理成可复用的形式。不需要是完整的"课程"，可以是一个skill合集、一个配置模板、一组prompt集合。</p>
+
+        <p>第三步，持续输出你在使用这个工具过程中的真实发现。遇到了什么问题，怎么解决的，有什么坑要避开。</p>
+
+        <p>这三步听起来简单，但能坚持做下来的人极少。绝大多数人要么卡在第一步，不知道记录什么，要么卡在第三步，觉得没什么好写的。</p>
+
+        <p>其实不是的。你每天用AI解决的那个问题，可能有一万个人也在遇到。你把解决方案分享出来，就是在建立影响力。</p>
+
+        <h2>Matt Pocock Skills里有哪些值得关注的</h2>
+
+        <p>回到项目本身。他的skills里面有几个我认为特别有意思的方向：</p>
+
+        <p><strong>代码审查类skill。</strong>这类skill的价值在于，它解决的是一个真实痛点——很多工程师不喜欢review代码，觉得费时费力。用AI辅助review，效率能提升多少？Matt Pocock直接把自己的workflow开源了，你可以直接试。</p>
+
+        <p><strong>测试生成类skill。</strong>写测试一直是工程师不愿意做但又不得不做的事情。这类skill教你如何用AI高效生成测试用例，覆盖常见的边界情况。</p>
+
+        <p><strong>项目规范类skill。</strong>每个项目都有自己的规范，比如提交信息格式、代码风格要求。这个skill解决的是怎么让AI遵守这些规范，而不是每次都手动提醒。</p>
+
+        <p>我扒这个项目的时候，有一个很深的感受：这些东西的价值不在于某个具体的skill配置，而在于它展示了"用AI编程"这件事可以有多系统、多细致。</p>
+
+        <p>很多人还在用"帮我写一个函数"这种粗放方式的时候，Matt Pocock已经把自己的工作流拆成了几十个可复用的skills，每一个都针对一个具体的场景。</p>
+
+        <p>这种系统化的能力，是他课程变现的核心。</p>
+
+        <h2>我的判断</h2>
+
+        <p>坦率的讲，我觉得Matt Pocock Skills这个项目给普通人最大的启发，不是某个具体的skill可以怎么用，而是它展示了AI时代做副业的一种可行路径：先深度使用一个工具，积累真实的操作经验，然后把这套经验整理成可分享的内容，最后用付费产品完成变现。</p>
+
+        <p>先说好处。门槛低，你不需要是什么领域专家，只要在一个细分方向上比大多数人用得更深，就可以了。正反馈快，你分享的内容本身就是在帮别人解决问题，这个反馈是即时的。可积累，你分享的每一个skill、每一篇内容，都是在建立你的个人品牌，越积累越值钱。</p>
+
+        <p>当然，风险也存在。你选择一个工具方向，这个工具本身会不会被淘汰？比如Claude Code这个产品如果出了问题，那基于它的skills价值就会下降。这是真实的风险，得承认。</p>
+
+        <p>但我觉得，这个风险不应该成为你观望的理由。AI编程这个大方向是确定的，具体用哪个工具是可以动态调整的。先下场，在场上有积累，比什么都强。</p>
+
+        <p>与其花时间研究"现在做什么副业最赚钱"，不如花时间找到一个你真正感兴趣的AI工具，然后真的把它用起来。你在这个过程中积累的经验和发现，才是最值钱的资产。</p>
+
+        <p>Matt Pocock用三个月证明了一件事：真实的价值分享，比任何营销手段都有效。剩下的，就是找到你的方式，开始做。</p>
+
+        <div class="cta">
+            <p>想系统学习 AI 副业方法和提示词技巧？</p>
+            <p style="color: #8b949e; font-size: 14px;">50+ 实测有效的 AI 副业提示词，覆盖方向选择、内容创作、变现路径。¥39，一次买断，永久更新。</p>
+            <a href="/prompt-pack/">查看提示词全家桶 →</a>
+        </div>
+
+        <div class="related">
+            <h3>相关阅读</h3>
+            <a href="/articles/seo/mcp-side-hustle-2026/">MCP正在成为AI的USB接口：普通人上车窗口还有多久？</a>
+            <a href="/articles/seo/deepseek-ds4-mac-local-inference/">DeepSeek DS4 Mac本地推理：跑通了我第一套本地AI开发环境</a>
+            <a href="/articles/cases/gumroad-ai-side-hustle/">Gumroad AI副业记录：从0到第一个1000美元的踩坑全记录</a>
+        </div>
+    </article>
+</div>
+
+<footer>
+    <p>© 2026 <a href="/">AiToollab</a> · <a href="/prompt-pack/">AI副业提示词全家桶</a></p>
+</footer>
+
+</body>
+</html>
