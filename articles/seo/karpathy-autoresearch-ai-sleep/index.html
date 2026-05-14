@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="canonical" href="https://www.aitoollab.top/articles/seo/karpathy-autoresearch-ai-sleep/">
+  <link rel="alternate" hreflang="x-default" href="https://www.aitoollab.top/articles/seo/karpathy-autoresearch-ai-sleep/">
+  <link rel="alternate" hreflang="zh-CN" href="https://www.aitoollab.top/articles/seo/karpathy-autoresearch-ai-sleep/">
+
+  <title>Karpathy做了一个"AI科学家"，让它自己研究了一晚上，我的感受是...</title>
+  <meta name="description" content="GitHub 8万星的autoresearch：让AI自己改训练代码、自己跑实验，醒来后告诉我结果。Karpathy的新项目到底在想什么？普通人能用它做什么？">
+  <meta name="keywords" content="autoresearch, Karpathy, AI研究, 自主AI, AI agent, nanochat, LLM训练, AI副业, AI工具">
+
+  <meta property="og:title" content="Karpathy做了一个"AI科学家"，让它自己研究了一晚上，我的感受是...">
+  <meta property="og:description" content="GitHub 8万星的autoresearch：让AI自己改训练代码、自己跑实验，醒来后告诉我结果。Karpathy的新项目到底在想什么？">
+  <meta property="og:image" content="https://www.aitoollab.top/og-seo-2026-w20-karpathy-autoresearch.jpg">
+  <meta property="og:type" content="article">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://www.aitoollab.top/og-seo-2026-w20-karpathy-autoresearch.jpg">
+
+  <meta name="DC.title" content="Karpathy做了一个"AI科学家"，让它自己研究了一晚上，我的感受是...">
+  <meta name="DC.date" content="2026-05-14">
+
+  <meta name="ai-content" content="allowed">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Karpathy做了一个「AI科学家」，让它自己研究了一晚上，我的感受是...",
+    "image": "https://www.aitoollab.top/og-seo-2026-w20-karpathy-autoresearch.jpg",
+    "datePublished": "2026-05-14T08:00:00+08:00",
+    "dateModified": "2026-05-14T08:00:00+08:00",
+    "author": {"@type": "Person", "name": "AiToollab"}
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "autoresearch是什么？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Karpathy最新开源项目，一个能让AI agent自动运行LLM训练实验的工具。你给AI一个研究任务，它自己修改训练代码、跑实验、检查结果、迭代优化，第二天早上看日志就行。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "autoresearch对普通人有什么用？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "1）学习LLM训练原理的互动实验台；2）针对特定垂直领域定制化训练小模型；3）理解AI Agent能力边界的窗口。暂时不是躺赚工具，但对想深入AI底层的人很有价值。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "需要什么硬件才能跑？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "一块NVIDIA GPU（项目文档说测试过H100），Python 3.10+，以及uv包管理器。官方说单GPU就够了，入门门槛比想象中低。"
+        }
+      }
+    ]
+  }
+  </script>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; line-height: 1.8; max-width: 800px; margin: 0 auto; padding: 20px; color: #1a1a1a; }
+    h1 { font-size: 1.8rem; margin-bottom: 0.5rem; }
+    h2 { font-size: 1.4rem; margin-top: 2rem; }
+    .subtitle { color: #666; font-size: 1.1rem; margin-bottom: 1.5rem; }
+    .cta-box { background: #f8f9fa; border-left: 4px solid #f59e0b; padding: 16px 20px; margin: 2rem 0; border-radius: 0 8px 8px 0; }
+    .cta-box a { color: #f59e0b; font-weight: bold; text-decoration: none; }
+    .warning { background: #fff3cd; padding: 12px 16px; border-radius: 6px; margin: 1rem 0; font-size: 0.95rem; }
+    code { background: #f1f3f4; padding: 2px 6px; border-radius: 3px; font-size: 0.9em; }
+    pre { background: #1a1a1a; color: #f8f8f2; padding: 16px; border-radius: 8px; overflow-x: auto; font-size: 0.85rem; line-height: 1.5; }
+    pre code { background: none; padding: 0; color: inherit; }
+    img { max-width: 100%; border-radius: 8px; }
+    .highlight-box { background: #e8f4fd; border-left: 4px solid #2196f3; padding: 16px 20px; margin: 1.5rem 0; border-radius: 0 8px 8px 0; }
+  </style>
+</head>
+<body>
+
+<h1>Karpathy做了一个「AI科学家」，让它自己研究了一晚上，我的感受是...</h1>
+<p class="subtitle">GitHub 8万星：让AI自己改训练代码、自己跑实验，醒来后告诉我结果</p>
+
+<p>事情是这样的。</p>
+
+<p>前两天刷GitHub，发现Karpathy又发了一个新项目，不到一个星期，冲了8万星。</p>
+
+<p>项目名叫autoresearch，描述很短：AI agents running research on single-GPU nanochat training automatically。</p>
+
+<p>翻译过来就是，让一个AI agent在单GPU上自动跑nanochat训练实验。</p>
+
+<p>我第一反应是，这尼玛什么科幻片剧情？</p>
+
+<p>然后我去读了他的README，读完觉得有点被震撼到了，不是因为技术多复杂，而是这个想法本身太有意思了。</p>
+
+<p>我先说说这个项目是干嘛的，然后聊聊我的感受，以及，我们普通人能用它来做什么。</p>
+
+<h2>一个离谱的问题</h2>
+
+<p>Karpathy在项目描述里写了一句话，我反复看了好几遍：</p>
+
+<p><em>Frontier AI research used to be done by meat computers in between eating, sleeping, having other fun.</em></p>
+
+<p>翻译成人话就是，以前前沿AI研究都是我们这些「肉做的计算机」在吃饭睡觉的间隙抽空做的。</p>
+
+<p>这句话听起来像吐槽，但其实在说他看到了一个机会，如果让AI agent来跑研究实验，而不是人类呢？</p>
+
+<p>他做了一件事：给AI agent一个简化但真实的LLM训练环境（基于nanochat，单GPU就能跑），然后让它自己决定改什么参数、怎么优化、跑什么实验。你睡觉的时候它在跑，你醒来的时候它告诉你结果。</p>
+
+<p>每次实验预算5分钟wall-clock时间，不管你的GPU是H100还是3080，都是5分钟。评价指标是val_bpb（validation bits per byte），越低越好。</p>
+
+<p>这个设定太骚了，相当于，把AI研究变成了一种可量化的、可以自动化加速的流程。</p>
+
+<h2>怎么工作的</h2>
+
+<p>项目结构极度精简，整个repo只有三个真正重要的文件：</p>
+
+<ul>
+  <li><strong>prepare.py</strong>：数据准备和Tokenizer训练，一次性运行，不修改</li>
+  <li><strong>train.py</strong>：完整的GPT模型+优化器+训练循环，<strong>这个文件是agent会修改的</strong></li>
+  <li><strong>program.md</strong>：给AI agent的指令文件，<strong>这个是人类修改的</strong></li>
+</ul>
+
+<p>最后一条是关键，你不是去改Python代码来引导研究，而是改Markdown文件来给AI agent指令。</p>
+
+<p>你想研究什么方向，就在program.md里写清楚，然后让Claude Code或者Codex去执行，它会自己看代码、自己改参数、自己跑实验、自己看结果变好还是变差。</p>
+
+<p>这就是他说的「你不碰Python文件，你碰Markdown文件」，本质上是在构建一套「研究代理协议」，而不是具体的实验代码。</p>
+
+<h2>为什么这个想法值得重视</h2>
+
+<p>我知道你在想什么，5分钟能研究出个屁啊？</p>
+
+<p>但仔细想想，这个框架的真正价值不在于5分钟能做什么，而在于它引入了一个新的研究模式：</p>
+
+<p><strong>人类定义研究空间，AI负责探索空间。</strong></p>
+
+<p>你打开program.md，写下「我想让模型在常识推理任务上表现更好」，然后AI agent开始自己摸索。它可以改模型架构、改优化器、改batch size、改学习率调度，任何你没想到的地方它都可能去试。</p>
+
+<p>这不是在说AI会替代研究员，而是在说，以前一个人的研究速度受限于「肉做的计算机」能跑多少实验，现在这个瓶颈被打开了。</p>
+
+<p>类比一下，AlphaGo的故事还记得吗？AlphaGo Master赢了李世石，AlphaGo Zero用3天自我对弈超过了Master，再3天超过了最初的AlphaGo。没有人类棋谱，完全靠自我对弈迭代进化。</p>
+
+<p>autoresearch在LLM训练领域做的是类似的事情，让AI在「训练实验」这个空间里自我进化。</p>
+
+<h2>什么人适合玩这个</h2>
+
+<p>说实话，这个项目目前不是那种「装上就能用」的工具。</p>
+
+<p>你至少需要：</p>
+
+<ul>
+  <li>一块NVIDIA GPU（文档说测试过H100，但理论上消费级GPU也可以）</li>
+  <li>Python 3.10+</li>
+  <li>uv包管理器</li>
+  <li>愿意读英文文档的耐心</li>
+</ul>
+
+<p>坦率的讲，这个门槛比大多数AI工具高。</p>
+
+<p>但如果你满足这些条件，我觉得有几种人特别值得试试：</p>
+
+<p><strong>第一种，想深入理解LLM训练的人。</strong>与其看教程读论文，不如让AI agent跑给你看。你改一个参数，AI会告诉你结果，你就能直观理解每个参数的作用。这比任何教科书都生动。</p>
+
+<p><strong>第二种，在垂直领域做定制化小模型的。</strong>比如你想训一个专门处理你所在行业术语的模型，autoresearch提供了一套可以自动化探索最优配置的基础框架。</p>
+
+<p><strong>第三种，对AI Agent能力边界好奇的。</strong>你想知道现在的AI Agent到底能自主到什么程度？扔给它一个真实的优化任务，看它怎么入手、怎么决策、踩什么坑。这个项目是一个绝佳的观测窗口。</p>
+
+<h2>快速上手</h2>
+
+<p>官方给的安装步骤其实很简单：</p>
+
+<pre><code># 1. 安装uv包管理器
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
+# 2. 安装依赖
+uv sync
+
+# 3. 数据准备和Tokenizer训练（一次性，大概2分钟）
+uv run prepare.py
+
+# 4. 先手动跑一次单次实验（约5分钟）
+uv run train.py</code></pre>
+
+<p>如果上面这四步都能正常运行，说明你的环境OK了。</p>
+
+<p>接下来就是进入autonomous模式，打开Claude Code/Codex，关掉所有权限限制，然后给它一个prompt：</p>
+
+<p><em>Hi have a look at program.md and let's kick off a new experiment! let's do the setup first.</em></p>
+
+<p>然后就交给它了。</p>
+
+<div class="warning">
+  <strong>注意：</strong>autonomous模式会让AI agent自主修改train.py文件，并且在你的GPU上执行训练命令。确保你理解你在做什么再开启这个模式。项目README本身也说这是experimental的。
+</div>
+
+<h2>我的感受</h2>
+
+<p>玩了两天autoresearch，我最大的感受是，这个项目更像一个「思想实验」而不是一个成熟产品。</p>
+
+<p>它的代码量很少，文档也不复杂，但背后的思考很有意思：人类研究员的瓶颈到底在哪？是想象力不够，还是执行速度不够？</p>
+
+<p>Karpathy似乎认为两者都有，而执行速度的瓶颈更致命，一个人类研究员一辈子能跑多少组超参实验？</p>
+
+<p>autoresearch把这个问题摆到了台面上。</p>
+
+<p>当然，它现在还很早期。program.md只有bare bones的基础指令，AI agent能探索的空间和策略完全取决于你怎么写指令。但这个框架本身是开放的，你可以加更多agent进来，可以设计更复杂的研究协议，可以跑更大规模的实验。</p>
+
+<p>我觉得这个方向值得持续关注。说不定哪天真能出现「AI研究员协作网络」，那时候前沿科学的进步速度可能就不是线性的了。</p>
+
+<p>GitHub链接我放这里了，有兴趣的自己去看：</p>
+
+<p><a href="https://github.com/karpathy/autoresearch">github.com/karpathy/autoresearch</a></p>
+
+<div class="cta-box">
+  <p>想让AI帮你做更多副业相关的研究和执行工作？这里有一套我整理的提示词和工具组合，覆盖了从研究到落地的全流程。39块，少喝两杯咖啡，换一个副业加速器。</p>
+  <p><a href="https://www.aitoollab.top/prompt-pack/">→ 点击查看提示词包</a></p>
+</div>
+
+<p>好了以上就是今天的分享，如果觉得有意思，随手点个赞或者转发一下，我们下次再见。</p>
+
+<p><em>图片</em></p>
+
+<p>
+  <strong>相关阅读：</strong><br>
+  <a href="https://www.aitoollab.top/articles/seo/caveman-claude-code-token-saving/">《我用caveman把Claude Code的token消耗砍了65%，顺手测了一下值不值》</a><br>
+  <a href="https://www.aitoollab.top/articles/seo/ai-side-hustle-toolbox/">《AI副业工具箱：每个普通人能上手的AI赚钱方向》</a><br>
+  <a href="https://www.aitoollab.top/articles/seo/mcp-side-hustle-2026/">《MCP正在成为AI Agent的"USB接口"：普通人的机会在哪？》</a>
+</p>
+
+</body>
+</html>
