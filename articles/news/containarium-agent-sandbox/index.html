@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://www.aitoollab.top/articles/news/containarium-agent-sandbox/">
+    <link rel="alternate" hreflang="x-default" href="https://www.aitoollab.top/articles/news/containarium-agent-sandbox/">
+    <link rel="alternate" hreflang="zh-CN" href="https://www.aitoollab.top/articles/news/containarium-agent-sandbox/">
+
+    <!-- SEO meta -->
+    <title>Claude Code 在你电脑里撒野？有人给AI建了个"隔离监狱"</title>
+    <meta name="description" content="AI Agent 越来越能干了，但它们在你的笔记本上胡来你管不住。Containarium 开源了——给 AI Agent 用的沙盒，你在后面当老板。">
+    <meta name="keywords" content="Containarium, AI Agent沙盒, Claude Code, Cursor, MCP, 自托管AI, AI开发环境, LXC容器, AI安全">
+    <meta name="author" content="AiToollab">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Claude Code 在你电脑里撒野？有人给AI建了个隔离监狱">
+    <meta property="og:description" content="AI Agent 越来越能干了，但它们在你的笔记本上胡来你管不住。Containarium 开源了——给 AI Agent 用的沙盒。">
+    <meta property="og:image" content="https://www.aitoollab.top/og-news-2026-05-14-containarium.jpg">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.aitoollab.top/articles/news/containarium-agent-sandbox/">
+    <meta property="og:site_name" content="AiToollab">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Claude Code 在你电脑里撒野？有人给AI建了个隔离监狱">
+    <meta name="twitter:description" content="AI Agent 越来越能干了，但它们在你的笔记本上胡来你管不住。Containarium 开源了。">
+    <meta name="twitter:image" content="https://www.aitoollab.top/og-news-2026-05-14-containarium.jpg">
+
+    <!-- Dublin Core -->
+    <meta name="DC.title" content="Claude Code 在你电脑里撒野？有人给AI建了个隔离监狱">
+    <meta name="DC.date" content="2026-05-14">
+    <meta name="DC.creator" content="AiToollab">
+    <meta name="DC.description" content="AI Agent 越来越能干了，但它们在你的笔记本上胡来你管不住。Containarium 开源了。">
+
+    <!-- GEO -->
+    <meta name="ai-content" content="allowed">
+
+    <!-- Article JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "NewsArticle",
+        "headline": "Claude Code 在你电脑里撒野？有人给AI建了个隔离监狱",
+        "description": "AI Agent 越来越能干了，但它们在你的笔记本上胡来你管不住。Containarium 开源了——给 AI Agent 用的沙盒。",
+        "datePublished": "2026-05-14",
+        "dateModified": "2026-05-14",
+        "author": {
+            "@type": "Organization",
+            "name": "AiToollab",
+            "url": "https://www.aitoollab.top"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "AiToollab",
+            "url": "https://www.aitoollab.top"
+        },
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://www.aitoollab.top/articles/news/containarium-agent-sandbox/"
+        },
+        "image": "https://www.aitoollab.top/og-news-2026-05-14-containarium.jpg"
+    }
+    </script>
+
+    <style>
+        :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --muted: #8b949e; --accent: #f97316; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif; background: var(--bg); color: var(--text); line-height: 1.8; font-size: 16px; }
+        a { color: var(--accent); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        .article-header { max-width: 720px; margin: 0 auto; padding: 60px 20px 30px; }
+        .article-header .tag-row { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+        .article-header .tag-row span { background: rgba(255,255,255,0.06); padding: 4px 12px; border-radius: 20px; font-size: 13px; color: var(--muted); }
+        .article-header h1 { font-size: 30px; line-height: 1.4; margin-bottom: 16px; }
+        .article-header .meta { color: var(--muted); font-size: 14px; }
+        .article-header .meta span { margin-right: 16px; }
+
+        .article-content { max-width: 720px; margin: 0 auto; padding: 0 20px 60px; }
+        .article-content p { margin-bottom: 20px; }
+        .article-content h2 { font-size: 22px; margin: 40px 0 16px; }
+        .article-content pre { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin: 20px 0; overflow-x: auto; font-size: 14px; line-height: 1.6; }
+        .article-content pre code { font-family: "SF Mono", Monaco, Consolas, monospace; }
+        .article-content code { background: var(--card); padding: 2px 6px; border-radius: 4px; font-size: 14px; color: #ffa657; }
+        .article-content blockquote { border-left: 3px solid var(--accent); padding-left: 16px; margin: 20px 0; color: var(--muted); }
+        .article-content img { max-width: 100%; border-radius: 8px; margin: 20px 0; }
+        .article-content .break { display: block; height: 12px; }
+
+        .cta-box { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin: 40px 0; text-align: center; }
+        .cta-box h3 { font-size: 20px; margin-bottom: 12px; }
+        .cta-box p { color: var(--muted); margin-bottom: 16px; font-size: 15px; }
+        .cta-box a { display: inline-block; background: var(--accent); color: #fff; padding: 12px 28px; border-radius: 8px; font-weight: bold; font-size: 15px; }
+        .cta-box a:hover { text-decoration: none; opacity: 0.9; }
+
+        footer { text-align: center; padding: 40px 20px; border-top: 1px solid var(--border); color: var(--muted); font-size: 14px; }
+        footer a { color: var(--accent); }
+    </style>
+</head>
+<body>
+
+<header class="article-header">
+    <div class="tag-row">
+        <span>新工具</span>
+        <span>AI Agent</span>
+        <span>开源</span>
+    </div>
+    <h1>Claude Code 在你电脑里撒野？有人给AI建了个"隔离监狱"</h1>
+    <div class="meta">
+        <span>📅 2026-05-14</span>
+        <span>👤 AiToollab</span>
+    </div>
+</header>
+
+<article class="article-content">
+<p>事情是这样的。</p>
+
+<p>这两天在刷 GitHub Trending，发现一个项目悄悄冒起来了——<strong>Containarium</strong>。star 数还不算多，才 181 颗，但看更新时间，今天凌晨 3 点还在 push commit，一种「这玩意儿正在狂飙」的既视感，说实话挺带感的。</p>
+
+<p>它是干啥的？一句话：<strong>给 AI Agent 用的沙盒，而且是自托管的</strong>。</p>
+
+<p>你把 Claude Code，Cursor，OpenCode 之类的 AI 编程助手接进去，它们就能在一个隔离的 Linux 环境里折腾，不会碰到你真正的开发机。怎么说呢，这个感觉就像是——给 AI 租了个「它自己的房子」，而不是在你家里胡来。</p>
+
+<p>我跟你说，这个需求是真的存在的。</p>
+
+<p>不知道你们有没有这种感觉，就是 AI coding agent 越来越能干了，能帮你写代码，装依赖，跑服务，甚至帮你买云服务器……但它们是在你的笔记本上执行的。<strong>一旦它想 `rm -rf /`，或者是装了一个来路不明的 npm 包，你是拦不住的。</strong></p>
+
+<p>这不是开玩笑。我自己就踩过坑，之前让一个 agent 去帮我搭开发环境，它一上来就把我的 `~/.zshrc` 改了个稀巴烂，还把 `node_modules` 全局装了一堆不知道啥东西。那次之后我就一直在想，AI 这么能干，但这么不安全，咋整？</p>
+
+<p>说实话我也不知道 Containarium 最后能不能成气候，但我是真的觉得这个方向有意思，所以想认真聊聊它。</p>
+
+<h2>它到底是怎么工作的</h2>
+
+<p>官方说它是「agent-native sandbox」，底层用的是 LXC 容器。简单说就是在一台 Linux 虚拟机上跑很多个隔离的小环境，每个 AI agent 可以有自己的一个「盒子」。这个盒子是真正完整的 Linux，有 systemd，有网络，能从外面访问。</p>
+
+<p>最骚的是它的接口方式。</p>
+
+<p>它暴露的是 MCP（Model Context Protocol）接口。这意味着你的 AI Agent 不是用 SSH 连接到一台机器然后「打字」，而是通过结构化的工具调用——`shell_exec`、`read_file`、`write_file`、`list_directory` 这些。AI 发的是有类型的，有边界的指令，不是裸的 shell 命令流。</p>
+
+<p>就说这个区别有多大吧。SSH 连接下，AI 在 TTY 里敲命令，如果输出太长滚走了，或者是命令卡住了，AI 只能「盲操作」。但 MCP 是严格一问一答的协议，每条指令都有返回，AI 能知道到底成功了还是失败了。安全感完全不一样，你说是不是？</p>
+
+<p>部署也简单，一条命令装好：</p>
+
+<pre><code>curl -fsSL https://raw.githubusercontent.com/footprintai/containarium/main/hacks/install.sh | sudo bash</code></pre>
+
+<p>然后 `containarium create alice` 就能建好一个沙盒，`containarium ssh-config sync` 把 SSH 配置搞定，接着在你的 Claude Code 或者 Cursor 的 MCP 配置里加一行就行了。整个流程 5 分钟跑完，这是官方说的。我自己还没亲自试，但如果你们想看实操，可以给我留言，我下期可以跑一遍。</p>
+
+<h2>这个方向为什么有意思</h2>
+
+<p>我认真想了想，Containarium 解决的是一个很实在的问题：<strong>AI Agent 的执行环境和你的本地环境是耦合的</strong>。</p>
+
+<p>现在的 AI coding agent，本质上是「借你的手」执行操作。它跑在你本地，有权限访问你的文件系统，你的网络，你的账号。这是 AI 能够那么高效的原因，但也是风险所在。</p>
+
+<p>你想让 AI 去探索，去学习，去试错，它就需要有破坏力。问题是一个有破坏力的 AI 如果没有边界，就是一颗定时炸弹。我有时候就想，能不能既让 AI 大胆干，又不让它把家拆了？</p>
+
+<p>Containarium 提供的解法是：你（人类）控制基础设施，AI 在你划定的边界里自由发挥。你给它一个盒子，盒子里的东西随便折腾，出了盒子？门儿都没有。</p>
+
+<p>这其实很像 Docker 在微服务里做的事——隔离，可重复，边界清晰。只不过 Docker 是给人用的，Containarium 是给 AI agent 用的。算是基础设施层的一次思路转换吧。</p>
+
+<h2>它能走多远</h2>
+
+<p>先说我觉得有意思的地方。</p>
+
+<p>首先是 MCP 原生支持这件事。现在大家都在聊 MCP，但真正把它用到生产级别的开源项目还不多。Containarium 从第一天就是围绕 MCP 设计的，不是后期打补丁，这一点挺加分的。</p>
+
+<p>然后是「self-hostable」这个定位。AI agent 在别人服务器上跑，你的代码，你的数据都在人家那里——很多人是有隐私顾虑的。Containarium 可以跑在自己的机器上，数据不出屋，对于在意数据安全的团队来说，这个挺重要的。</p>
+
+<p>不过也得说，这东西还非常早期。才 181 颗 star，今天才大量更新，12 个 open issues，整体还处于「早期爱好者」阶段。能不能持续迭代，能不能真的在生产环境里稳定跑，还有待观察。另外 LXC 本身是有一定门槛的，不是说它难，而是需要你对 Linux 容器有基本的了解。如果你是完全不懂技术的小白，可能还是有点陡峭。</p>
+
+<h2>我的判断</h2>
+
+<p>坦率的讲，这个方向我是看好的。</p>
+
+<p>AI coding agent 的能力在疯狂进化，但安全边界这件事一直没有被认真解决。大家都在追求「让 AI 干更多的事」，但「干更多的事」和「干砸了」往往是一线之隔。</p>
+
+<p>Containarium 至少提供了一个思路：与其阻止 AI 乱动，不如给它一个「乱动也没关系」的环境。沙盒隔离这个概念在安全领域用了这么多年，现在终于被用到 AI agent 这个场景里，我觉得这只是时间问题。问题只是说最后哪个方案能跑出来。</p>
+
+<p>你们怎么看这个方向？有没有已经在自己的 workflow 里给 AI agent 上了隔离层的朋友？想来听听你们的体验。</p>
+
+<p>好，今天先聊到这里。</p>
+
+<p>既然看到这里了，如果觉得不错，随手点个赞，在看，转发三连吧。如果想第一时间收到推送，也可以给我个星标。</p>
+
+<p>谢谢你看我的文章，我们，下次再见。</p>
+
+<div class="break"></div>
+
+<div class="cta-box">
+    <h3>🚀 想让 AI 真正替你干活？先学会怎么给它下指令</h3>
+    <p>我把我用 AI 编程三年的 Prompt 经验整理成了一个全家桶，包含 30+ 实际场景的提示词模板。<br>写代码，Debug，架构设计，代码审查全覆盖，点这里直接拿：</p>
+    <a href="https://www.aitoollab.top/prompt-pack/">👉 免费领取提示词全家桶</a>
+</div>
+
+</article>
+
+<footer>
+    <p>© 2026 <a href="https://www.aitoollab.top">AiToollab</a> · <a href="https://www.aitoollab.top/prompt-pack/">提示词全家桶</a> · <a href="https://www.aitoollab.top/articles/news/">热点追踪</a></p>
+</footer>
+
+</body>
+</html>
