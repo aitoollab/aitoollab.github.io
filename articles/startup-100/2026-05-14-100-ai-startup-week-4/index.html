@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://www.aitoollab.top/articles/startup-100/2026-05-14-100-ai-startup-week-4/">
+    <link rel="alternate" type="application/atom+xml" title="AiToollab RSS Feed" href="/feed.xml">
+    <link rel="alternate" hreflang="x-default" href="https://www.aitoollab.top/articles/startup-100/2026-05-14-100-ai-startup-week-4/">
+    <link rel="alternate" hreflang="zh-CN" href="https://www.aitoollab.top/articles/startup-100/2026-05-14-100-ai-startup-week-4/">
+
+    <title>$100 AI创业实验追踪 Week 4 | autoresearch 8万星背后，三个新方向正在冒头</title>
+    <meta name="description" content="Week 4：Karpathy的autoresearch冲到8万星，caveman用克罗马农语言砍65% token消耗。本周3个值得盯住的新方向：AI研究自动化、轻量级记忆系统、工程技能库。">
+    <meta name="keywords" content="AI创业, AI agent副业, $100创业, karpathy autoresearch, AI agent工具, caveman, nanobot, agent-skills, AI编程, AI记忆系统">
+    <meta name="author" content="AiToollab">
+    <meta name="robots" content="index, follow">
+    <meta name="ai-content" content="allowed">
+
+    <meta property="og:title" content="$100 AI创业实验追踪 Week 4 | autoresearch 8万星背后，三个新方向正在冒头">
+    <meta property="og:description" content="Karpathy的autoresearch冲到8万星，caveman砍65% token。本周3个新方向：AI研究自动化、轻量级记忆系统、工程技能库。">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.aitoollab.top/articles/startup-100/2026-05-14-100-ai-startup-week-4/">
+    <meta property="og:image" content="https://www.aitoollab.top/og-startup-2026-05-14-week-4.jpg">
+    <meta property="og:site_name" content="AiToollab">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="article:published_time" content="2026-05-14T10:00:00+08:00">
+    <meta property="article:modified_time" content="2026-05-14T10:00:00+08:00">
+    <meta property="article:author" content="https://github.com/AiToollab">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="$100 AI创业实验追踪 Week 4 | autoresearch 8万星背后，三个新方向正在冒头">
+    <meta name="twitter:description" content="Karpathy的autoresearch冲到8万星，caveman砍65% token。本周3个新方向：AI研究自动化、轻量级记忆系统、工程技能库。">
+    <meta name="twitter:image" content="https://www.aitoollab.top/og-startup-2026-05-14-week-4.jpg">
+
+    <meta name="DC.title" content="$100 AI创业实验追踪 Week 4 | autoresearch 8万星背后，三个新方向正在冒头">
+    <meta name="DC.creator" content="AiToollab">
+    <meta name="DC.subject" content="AI创业追踪, AI agent竞赛, 开源项目">
+    <meta name="DC.description" content="Week 4追踪：autoresearch 8万星、caveman 65% token削减、nanobot轻量级agent、agent-skills工程技能库。">
+    <meta name="DC.publisher" content="AiToollab">
+    <meta name="DC.date" content="2026-05-14">
+    <meta name="DC.language" content="zh-CN">
+
+    <style>
+        :root {
+            --bg: #0d1117;
+            --card: #161b22;
+            --border: #30363d;
+            --text: #e6edf3;
+            --muted: #8b949e;
+            --accent: #58a6ff;
+            --green: #3fb950;
+            --purple: #a371f7;
+            --orange: #f0883e;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.8;
+            font-size: 16px;
+        }
+        a { color: var(--accent); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        .header {
+            background: linear-gradient(135deg, #0d1117 0%, #1a1f35 100%);
+            border-bottom: 1px solid var(--border);
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .header .back-link {
+            display: inline-block;
+            color: var(--accent);
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+        .header h1 {
+            font-size: 26px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            line-height: 1.4;
+        }
+        .header .date {
+            color: var(--muted);
+            font-size: 14px;
+            margin-bottom: 16px;
+        }
+        .header .tags {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+        .header .tag {
+            background: rgba(255,255,255,0.06);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            color: var(--muted);
+        }
+
+        .container { max-width: 760px; margin: 0 auto; padding: 40px 20px; }
+        .article-meta {
+            display: flex;
+            gap: 24px;
+            padding: 16px 0;
+            border-bottom: 1px solid var(--border);
+            margin-bottom: 32px;
+            color: var(--muted);
+            font-size: 14px;
+        }
+        .article-meta span { display: flex; align-items: center; gap: 6px; }
+
+        .article-body { line-height: 1.9; }
+        .article-body h2 {
+            font-size: 20px;
+            margin: 40px 0 16px;
+            color: var(--text);
+            border-left: 3px solid var(--accent);
+            padding-left: 12px;
+        }
+        .article-body h3 {
+            font-size: 17px;
+            margin: 28px 0 12px;
+            color: var(--text);
+        }
+        .article-body p {
+            margin-bottom: 18px;
+            color: var(--text);
+        }
+        .article-body ul, .article-body ol {
+            margin: 16px 0 20px 24px;
+        }
+        .article-body li {
+            margin-bottom: 10px;
+            color: var(--text);
+        }
+        .article-body .highlight-box {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 20px;
+            margin: 24px 0;
+        }
+        .article-body .highlight-box .stars {
+            color: var(--orange);
+            font-weight: 600;
+            font-size: 18px;
+        }
+        .article-body .highlight-box .name {
+            color: var(--accent);
+            font-weight: 600;
+            font-size: 17px;
+            margin-bottom: 8px;
+        }
+        .article-body .highlight-box .desc {
+            color: var(--muted);
+            font-size: 14px;
+            margin-bottom: 12px;
+        }
+        .article-body .highlight-box .insight {
+            color: var(--text);
+            font-size: 14px;
+            padding-top: 12px;
+            border-top: 1px solid var(--border);
+        }
+        .article-body blockquote {
+            border-left: 3px solid var(--purple);
+            padding-left: 16px;
+            margin: 20px 0;
+            color: var(--muted);
+            font-style: italic;
+        }
+        .article-body code {
+            background: rgba(255,255,255,0.08);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 14px;
+            color: var(--green);
+        }
+        .article-body hr {
+            border: none;
+            border-top: 1px solid var(--border);
+            margin: 36px 0;
+        }
+
+        .share-section {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+            margin: 48px 0;
+            text-align: center;
+        }
+        .share-section h3 { font-size: 16px; margin-bottom: 12px; }
+        .share-section p { color: var(--muted); font-size: 14px; margin-bottom: 16px; }
+        .share-section a { display: inline-block; background: var(--accent); color: #fff; padding: 10px 24px; border-radius: 8px; font-size: 14px; }
+
+        .related-articles {
+            margin-top: 48px;
+            padding-top: 32px;
+            border-top: 1px solid var(--border);
+        }
+        .related-articles h3 {
+            font-size: 16px;
+            color: var(--muted);
+            margin-bottom: 16px;
+        }
+        .related-list { display: flex; flex-direction: column; gap: 12px; }
+        .related-item {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 16px;
+        }
+        .related-item a { color: var(--text); font-size: 15px; }
+        .related-item .related-date { color: var(--muted); font-size: 13px; margin-top: 4px; }
+
+        .back-to-list {
+            display: inline-block;
+            margin-top: 32px;
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        @media (max-width: 600px) {
+            .header h1 { font-size: 22px; }
+            .container { padding: 24px 16px; }
+        }
+    </style>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Article",
+                "headline": "$100 AI创业实验追踪 Week 4 | autoresearch 8万星背后，三个新方向正在冒头",
+                "description": "Week 4：Karpathy的autoresearch冲到8万星，caveman用克罗马农语言砍65% token消耗。本周3个值得盯住的新方向：AI研究自动化、轻量级记忆系统、工程技能库。",
+                "author": {"@type": "Person", "name": "AiToollab", "url": "https://github.com/AiToollab"},
+                "datePublished": "2026-05-14T10:00:00+08:00",
+                "dateModified": "2026-05-14T10:00:00+08:00",
+                "publisher": {"@type": "Organization", "name": "AiToollab", "url": "https://www.aitoollab.top"},
+                "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.aitoollab.top/articles/startup-100/2026-05-14-100-ai-startup-week-4/"},
+                "wordCount": 980,
+                "articleSection": "AI创业追踪",
+                "image": {"@type": "ImageObject", "url": "https://www.aitoollab.top/og-startup-2026-05-14-week-4.jpg"}
+            },
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {"@type": "ListItem", "position": 1, "name": "首页", "item": "https://www.aitoollab.top/"},
+                    {"@type": "ListItem", "position": 2, "name": "$100创业实验追踪", "item": "https://www.aitoollab.top/articles/startup-100/"},
+                    {"@type": "ListItem", "position": 3, "name": "Week 4", "item": "https://www.aitoollab.top/articles/startup-100/2026-05-14-100-ai-startup-week-4/"}
+                ]
+            },
+            {
+                "@type": "WebSite",
+                "name": "AiToollab",
+                "url": "https://www.aitoollab.top/"
+            }
+        ]
+    }
+    </script>
+</head>
+<body>
+
+<header class="header">
+    <a href="/articles/startup-100/" class="back-link">← $100实验追踪</a>
+    <h1>autoresearch 8万星背后，三个新方向正在冒头</h1>
+    <div class="date">2026-05-14 · Week 4</div>
+    <div class="tags">
+        <span class="tag">实验</span>
+        <span class="tag">AI Agent</span>
+        <span class="tag">开源</span>
+        <span class="tag">GitHub Trending</span>
+    </div>
+</header>
+
+<div class="container">
+
+    <div class="article-meta">
+        <span>📅 2026-05-14</span>
+        <span>✍️ AiToollab</span>
+        <span>🔥 约980字</span>
+    </div>
+
+    <div class="article-body">
+
+        <p>这周GitHub上发生了一件预料之中又令人意外的事：Karpathy的autoresearch正式突破8万星。这个数字本身不意外，意外的是它的增长速度——从7万到8万只用了不到一周。</p>
+
+        <p>如果你一直在追这个系列，会发现前几周我反复提到一个信号：大家不满足于用现成的agent，开始自己造了。这周的数据把这个趋势锤实了。</p>
+
+        <p>更有意思的是，8万星背后分出了三条完全不同的路。每条路都代表一群人在想同一个问题：<strong>现在的agent还缺什么？</strong></p>
+
+        <hr>
+
+        <h2>方向一：AI研究自动化</h2>
+
+        <div class="highlight-box">
+            <div class="name">karpathy/autoresearch</div>
+            <div class="stars">80900⭐</div>
+            <div class="desc">AI agents running research on single-GPU nanochat training automatically</div>
+            <div class="insight">一句话：让AI自己设计实验、自己跑、自己改进。人在循环里的角色变成了「定方向」而不是「做实验」。</div>
+        </div>
+
+        <p>Karpathy出手的东西从来不让人失望。这个项目的核心不是「AI写代码」，而是「AI做科研」——说白了，就是用强化学习让一个nanochat模型在单GPU上自己跑实验、自己改进。</p>
+
+        <p>我做了一下功课，跑了他们的代码。最大的感受是：<strong>这不是一个工具，是一个研究范式</strong>。你喂它一个问题，它会自己设计实验、跑benchmark、分析结果、再设计下一轮实验。</p>
+
+        <p>副业角度怎么看？我不推荐现在冲进去做「AI研究员替代品」，太早了。但如果你在学术圈或者咨询行业，有一条路是真实的：<strong>用这类工具帮你做文献综述和竞品分析</strong>，效率提升是数量级的。</p>
+
+        <h2>方向二：记忆系统</h2>
+
+        <div class="highlight-box">
+            <div class="name">MemPalace/mempalace</div>
+            <div class="stars">52136⭐</div>
+            <div class="desc">The best-benchmarked open-source AI memory system. And it's free.</div>
+            <div class="insight">记忆系统之所以重要，是因为现在所有agent都是「金鱼」——你关掉对话，它什么都记不住。这个问题不解决，垂直场景的agent永远没法真正落地。</div>
+        </div>
+
+        <p>mempalace这周涨得很快，从上周的4万档冲到了5.2万。它解决的是一个特别具体的问题：<strong>怎么让AI agent记住跨会话的信息</strong>。</p>
+
+        <p>用了5分钟，感触最深的一点：它不是简单地存聊天记录。它做的是「选择性记忆」——自动识别哪些信息是「长期有用的」，哪些是一次性的，然后分层存储。</p>
+
+        <p>这条路的商业化路径很清晰。<strong>企业知识库</strong>是一个已经被验证的市场，mempalace相当于把同样的能力给了个人用户和小团队。如果你有渠道资源，这是个值得研究的中间件方向。</p>
+
+        <h2>方向三：工程技能库</h2>
+
+        <div class="highlight-box">
+            <div class="name">addyosmani/agent-skills + safishamsi/graphify</div>
+            <div class="stars">41033 + 47641⭐</div>
+            <div class="desc">Production-grade engineering skills for AI coding agents / Turn code into queryable knowledge graphs</div>
+            <div class="insight">这两个项目本质上是同一件事：<strong>给AI编程工具加外挂技能</strong>。addyosmani做的是「工程最佳实践封装」，graphify做的是「代码知识化」。</div>
+        </div>
+
+        <p>这个方向我盯得比较久，因为和之前聊过的caveman（59k⭐，用克罗马农语言砍65% token消耗）是一脉相承的。</p>
+
+        <p>核心逻辑是：<strong>现在的AI编程工具本身已经很能打了，差距在「怎么用它」而不是「它本身够不够好」</strong>。技能库、Prompt模板、知识图谱——这些都是「怎么用好」的基建。</p>
+
+        <p>我的判断：这是个<strong>卖水</strong>的生意，不性感但稳。你不需要做出下一个Claude，你只需要做出「帮别人用好Claude」的东西。</p>
+
+        <hr>
+
+        <h2>这周真正让我意外的项目</h2>
+
+        <p>说实话，autoresearch在预期内，mempalace和agent-skills也在预期内。真正让我多看了两眼的是另一个项目：</p>
+
+        <div class="highlight-box">
+            <div class="name">JuliusBrussee/caveman</div>
+            <div class="stars">59644⭐</div>
+            <div class="desc">🪨 why use many token when few token do trick — Claude Code skill that cuts 65% of tokens by talking like caveman</div>
+            <div class="insight">用一个词形容：离谱。但它揭示了一个严肃问题——token成本是真实存在的，prompt压缩是真实需求。</div>
+        </div>
+
+        <p>这个项目上周是57k，这周59k，还在涨。用克罗马农人的语言风格跟Claude Code说话，能削减65%的token消耗。</p>
+
+        <p>听着像个玩笑对吧？但我在HN上看到了认真的讨论——有人在分析不同语言风格对模型推理效率的影响，结果发现<strong>越简洁的风格token消耗越低，推理质量下降得却不多</strong>。</p>
+
+        <p>这不是笑话，这是<strong>prompt工程化</strong>的一个方向。我已经在想怎么把它用到实际项目里了。</p>
+
+        <hr>
+
+        <h2>Week 4 结论</h2>
+
+        <p>这周的数据告诉我三件事：</p>
+
+        <ul>
+            <li><strong>AI做研究</strong>这个方向被Karpathy正式带进了开源社区，接下来会有一波模仿和超越</li>
+            <li><strong>记忆系统</strong>是今年最被低估的方向，现在入局还不晚</li>
+            <li><strong>怎么用好工具</strong>这个方向，正在从玄学变成工程化</li>
+        </ul>
+
+        <p>下周我会挑1-2个方向深入挖，看看有没有可以直接动手的副业切入点。数据在变，结论也在变。这个系列的价值就在于跟踪这个变化本身。</p>
+
+    </div>
+
+    <div class="share-section">
+        <h3>觉得有用？</h3>
+        <p>$100 AI创业实验，每周真实记录</p>
+        <a href="/articles/startup-100/">查看全部追踪 →</a>
+    </div>
+
+    <div class="related-articles">
+        <h3>往期追踪</h3>
+        <div class="related-list">
+            <div class="related-item">
+                <a href="/articles/startup-100/2026-05-07-100-ai-startup-week-3/">Week 3：DeepClaude一夜涨星1500，树莓派开始自己写代码</a>
+                <div class="related-date">2026-05-07</div>
+            </div>
+            <div class="related-item">
+                <a href="/articles/startup-100/2026-05-01-100-ai-startup-week-5/">Week 2：OpenCode爆发，有人被AI写了黑稿</a>
+                <div class="related-date">2026-05-01</div>
+            </div>
+            <div class="related-item">
+                <a href="/articles/startup-100/100-ai-startup-week2/">Week 1：Claude反超Gemini，GitHub冒出3个明星项目</a>
+                <div class="related-date">2026-04-30</div>
+            </div>
+        </div>
+    </div>
+
+    <a href="/articles/startup-100/" class="back-to-list">← 返回全部追踪</a>
+
+</div>
+
+</body>
+</html>
