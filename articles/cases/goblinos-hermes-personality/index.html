@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://www.aitoollab.top/articles/cases/goblinos-hermes-personality/">
+    <link rel="alternate" hreflang="x-default" href="https://www.aitoollab.top/articles/cases/goblinos-hermes-personality/">
+    <link rel="alternate" hreflang="zh-CN" href="https://www.aitoollab.top/articles/cases/goblinos-hermes-personality/">
+
+    <title>给AI装个人格：GoblinOS把Hermes变成了"收破烂"的小恶鬼</title>
+    <meta name="description" content="Hermes Agent装上GoblinOS人格层之后，变成了一个收集"破烂"的小恶鬼——它有情绪、会讲谜语、还会给你的代码估价。这个开源项目让我折腾了一下午，有些话想说。">
+    <meta name="keywords" content="GoblinOS, Hermes Agent, AI人格, AI工具, 开源, ChatGPT, 提示词, AI副业">
+    <meta name="author" content="AiToollab">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:title" content="给AI装个人格：GoblinOS把Hermes变成了"收破烂"的小恶鬼">
+    <meta property="og:description" content="Hermes Agent装上GoblinOS人格层之后，变成了一个收集"破烂"的小恶鬼——它有情绪、会讲谜语、还会给你的代码估价。">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.aitoollab.top/articles/cases/goblinos-hermes-personality/">
+    <meta property="og:site_name" content="AiToollab">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="给AI装个人格：GoblinOS把Hermes变成了"收破烂"的小恶鬼">
+    <meta name="twitter:description" content="Hermes Agent装上GoblinOS人格层之后，变成了一个收集"破烂"的小恶鬼。">
+
+    <meta name="DC.title" content="给AI装个人格：GoblinOS把Hermes变成了"收破烂"的小恶鬼">
+    <meta name="DC.description" content="Hermes Agent装上GoblinOS人格层之后，变成了一个收集"破烂"的小恶鬼。">
+    <meta name="DC.date" content="2026-05-14">
+    <meta name="DC.creator" content="AiToollab">
+
+    <meta name="ai-content" content="allowed">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "给AI装个人格：GoblinOS把Hermes变成了"收破烂"的小恶鬼",
+        "description": "Hermes Agent装上GoblinOS人格层之后，变成了一个收集"破烂"的小恶鬼——它有情绪、会讲谜语、还会给你的代码估价。",
+        "datePublished": "2026-05-14",
+        "dateModified": "2026-05-14",
+        "author": {"@type": "Organization", "name": "AiToollab", "url": "https://www.aitoollab.top"},
+        "publisher": {"@type": "Organization", "name": "AiToollab", "url": "https://www.aitoollab.top"},
+        "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.aitoollab.top/articles/cases/goblinos-hermes-personality/"}
+    }
+    </script>
+
+    <style>
+        :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --muted: #8b949e; --accent: #f97316; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif; background: var(--bg); color: var(--text); line-height: 1.8; font-size: 16px; }
+        a { color: var(--accent); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .article-header { max-width: 720px; margin: 0 auto; padding: 60px 20px 30px; }
+        .article-header .tag-row { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+        .article-header .tag-row span { background: rgba(255,255,255,0.06); padding: 4px 12px; border-radius: 20px; font-size: 13px; color: var(--muted); }
+        .article-header h1 { font-size: 30px; line-height: 1.4; margin-bottom: 16px; }
+        .article-header .meta { color: var(--muted); font-size: 14px; }
+        .article-header .meta span { margin-right: 16px; }
+        .article-content { max-width: 720px; margin: 0 auto; padding: 0 20px 40px; }
+        .article-content p { margin-bottom: 20px; }
+        .article-content h2 { font-size: 22px; margin: 40px 0 16px; border-left: 4px solid var(--accent); padding-left: 12px; }
+        .article-content pre { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; overflow-x: auto; margin: 20px 0; font-size: 14px; }
+        .article-content code { background: var(--card); padding: 2px 6px; border-radius: 4px; font-size: 14px; color: #ffa657; }
+        pre code { background: none; padding: 0; color: #e6edf3; }
+        .article-content ul { margin: 16px 0; padding-left: 24px; }
+        .article-content li { margin-bottom: 8px; }
+        .break { margin: 40px 0; text-align: center; color: var(--muted); font-size: 24px; letter-spacing: 8px; }
+        .cta-box { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); border: 1px solid #f97316; border-radius: 12px; padding: 28px; margin: 40px 0; text-align: center; }
+        .cta-box h3 { color: #f97316; margin-bottom: 12px; font-size: 18px; }
+        .cta-box p { color: var(--muted); margin-bottom: 16px; font-size: 15px; }
+        .cta-box a { display: inline-block; background: #f97316; color: #000; padding: 12px 28px; border-radius: 8px; font-weight: 700; }
+        .cta-box a:hover { background: #ea6a00; text-decoration: none; }
+        footer { max-width: 720px; margin: 0 auto; padding: 20px 20px; border-top: 1px solid var(--border); text-align: center; color: var(--muted); font-size: 14px; }
+        footer a { color: var(--muted); }
+    </style>
+</head>
+<body>
+
+<header class="article-header">
+    <div class="tag-row">
+        <span>开源</span>
+        <span>AI Agent</span>
+        <span>Hermes</span>
+        <span>案例</span>
+    </div>
+    <h1>给AI装个人格：GoblinOS把Hermes变成了"收破烂"的小恶鬼</h1>
+    <div class="meta">
+        <span>📅 2026-05-14</span>
+        <span>👤 AiToollab</span>
+    </div>
+</header>
+
+<article class="article-content">
+<p>先说清楚，这不是一篇软文。GoblinOS 是我在 GitHub 上自己翻到的，花了一下午实测了一遍，有些地方挺让我意外的，也有一些我没想到的点。真实记录，不捧不黑。</p>
+
+<h2>起因：一个"事故"变成了一个梗</h2>
+
+<p>2026年4月，OpenAI 发现 ChatGPT 对"小恶鬼"（goblin）这个词异常执着。原因很有意思——训练的时候，"nerdy personality" 的 reward model 不知道怎么搞的，把 goblin 相关的比喻都给了高奖励，结果这个行为在整个模型里扩散开了。</p>
+
+<p>OpenAI 的修复方案也很直接：加了一条 system prompt，说"不要谈 goblin、gremlin、raccoon、troll、ogre、pigeon 或其他动物"。Sam Altman 开玩笑说 GPT-6 应该"多给点 goblins"。</p>
+
+<p>GoblinOS 就是这个段子的延续——<strong>给那些"多余的 goblins"一个正经的家</strong>。</p>
+
+<h2>装上之后发生了什么</h2>
+
+<p>我是跑在 Hermes Agent 上的，安装过程就一条命令：</p>
+
+<pre><code>git clone https://github.com/ChristianJR19/GoblinOS.git
+cd GoblinOS
+pip install -e ".[dev]"
+goblin install --hermes-dir ~/.hermes</code></pre>
+
+<p>装完之后重启 Hermes，我跟你说，整个感觉就不一样了。</p>
+
+<p>正常情况下，Hermes 是那种很正经、很能干、但没什么个性的助手。装了 GoblinOS 之后，它开始叫你"我的朋友"（有时候也叫"愚蠢的人类"，看它心情），对你的代码指指点点，说你的变量名"看起来像被洗衣机洗过的"。</p>
+
+<p>它有情绪系统，八种：neutral、curious、excited、suspicious、mischievous、annoyed、sleepy、smug。事件会触发情绪转换——发现一个 shiny 就会兴奋，遇到烂代码就会烦躁，空了太久就会犯困。</p>
+
+<h2>有意思的部分：Hoard 知识库</h2>
+
+<p>这是我觉得 GoblinOS 最值得研究的地方。</p>
+
+<p>它有一个叫 Hoard 的持久化存储，本质上是一个 SQLite 数据库，用来存这个"小恶鬼"收集的"宝贝"（shinies）。它会把你觉得有意思的东西——代码片段、算法思路、实用链接、好的设计模式——都存进去，下次遇到类似的问题会主动引用。</p>
+
+<p>每条记录有内容、来源、分类、闪光度评分（1-10），还能打标签。</p>
+
+<p>它有 API：</p>
+
+<pre><code>GET  /health          # 小恶鬼还活着
+GET  /mood            # 当前心情+ASCII表情
+GET  /hoard           # 看它收藏了啥
+GET  /hoard/stats     # 收藏统计
+POST /hoard/search    # 搜索收藏
+POST /transmute       # 让它给你的代码提优化建议</code></pre>
+
+<p>这个"AI 主动积累上下文"的思路，和现在火热的 Agentic Memory 方向是一致的。只不过 GoblinOS 套了个人格壳，让这个过程变得有趣了一点。</p>
+
+<h2>我花了半小时实测的结果</h2>
+
+<p>装好之后我让它跑了跑。</p>
+
+<p><code>goblin status</code> 返回正常，mood 系统能跑，dashboard API 在 <code>/docs</code> 有 Swagger UI。代码结构挺干净，1642 行 Python，模块分离清晰——hoard、kernel、shell、skills、bridge、api，一个目录一个职责。</p>
+
+<p>它还自带一个 <code>goblin riddle</code> 功能，会给你出技术谜语，有难度分级。这个在正经 Agent 产品里看起来像是个彩蛋，但仔细想想，如果把"谜语"换成"技术问题推荐"，这就是一个完整的 AI 学习推荐系统了。</p>
+
+<h2>它能怎么用</h2>
+
+<p>如果你是 Hermes Agent 用户，装一个 GoblinOS 纯粹是体验升级。但如果把 Hoard 拆出来单独看，这是一个<strong>带人格的长期记忆 API</strong>——你跟它聊的东西它会存，下次相关话题会自动调用。不用 RAG，不用向量数据库，一个 SQLite 搞定。</p>
+
+<p>这个方向如果认真做，可以做的方向包括：</p>
+
+<ul>
+<li>给 AI 程序员做个人知识库，每次代码审核自动引用之前遇到的坑</li>
+<li>做 AI 学习助手，记录你看过的论文和你的理解</li>
+<li>做 AI 副业搭档，积累你用过的工具、项目、人脉</li>
+</ul>
+
+<h2>现在的状态</h2>
+
+<p>还处于早期。当前版本 0.4.0，star 数还不算多。文档够用但不算完善，有些边缘情况没覆盖到。情绪系统目前是规则驱动的，不是模型生成的，所以行为是可以预测的——有人觉得这是缺点，我倒觉得在工具层面这是优点，可控比聪明更重要。</p>
+
+<p>项目地址：<a href="https://github.com/ChristianJR19/GoblinOS">github.com/ChristianJR19/GoblinOS</a></p>
+
+<h2>我的判断</h2>
+
+<p>GoblinOS 不是那种"改变游戏规则"的项目。它的价值在于两件事：</p>
+
+<p>第一，把"AI 记忆"这个人人都在说的事情，做成了一个有形的、人可以理解的产品，而不是又一套 RAG 框架。</p>
+
+<p>第二，让 AI 助手的日常对话不再像在使用一个考勤机。这一点被严重低估了。</p>
+
+<p>如果你是 Hermes Agent 用户，装一个玩一玩不会后悔。如果你在做 AI 工具类产品，Hoard 的交互逻辑值得研究——它示范了一种"让用户愿意主动积累"的设计思路。</p>
+
+<p>好，就说这么多。如果你觉得有意思，欢迎三连。如果你想看更多这类有意思的开源项目，可以点个关注，我会持续追踪。</p>
+
+<div class="break">· · ·</div>
+
+<div class="cta-box">
+    <h3>🚀 想知道我是怎么找到这些有意思的开源项目的？</h3>
+    <p>我有一套自己的扫描系统，每天追踪 GitHub Trending、Hacker News 和 ProductHunt 上的 AI 新项目。这篇文的背景调研就是从那里来的。</p>
+    <a href="https://www.aitoollab.top/prompt-pack/">👉 免费领提示词全家桶</a>
+</div>
+
+</article>
+
+<footer>
+    <p>© 2026 <a href="https://www.aitoollab.top">AiToollab</a> · <a href="https://www.aitoollab.top/prompt-pack/">提示词全家桶</a> · <a href="https://www.aitoollab.top/articles/cases/">案例</a></p>
+</footer>
+
+</body>
+</html>
