@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://www.aitoollab.top/articles/seo/gstack-one-person-ai-engineering-team/">
+    <link rel="alternate" hreflang="x-default" href="https://www.aitoollab.top/articles/seo/gstack-one-person-ai-engineering-team/">
+    <link rel="alternate" hreflang="zh-CN" href="https://www.aitoollab.top/articles/seo/gstack-one-person-ai-engineering-team/">
+    <link rel="alternate" type="application/atom+xml" title="AiToollab RSS Feed" href="/feed.xml">
+
+    <title>YC CEO的AI工程团队：一个人用gstack做出810倍产能，我扒出了普通人也能复制的路径</title>
+    <meta name="description" content="Garry Tan（YC CEO）开源了他的AI工作流工具gstack，96K星，23个slash命令把一个人变成整支工程团队。810倍产能背后是什么？普通人怎么用这套方法做副业？我扒了三天，给你一个完整的答案。">
+    <meta name="keywords" content="gstack, YC CEO, AI工程团队, AI副业, Claude Code, 810倍产能, AI编程工具, 自动驾驶开发, AI Agent副业">
+    <meta name="author" content="AiToollab">
+    <meta name="robots" content="index, follow">
+    <meta name="generator" content="allowed">
+    <meta name="ai-content" content="allowed">
+
+    <meta property="og:title" content="YC CEO的AI工程团队：一个人用gstack做出810倍产能">
+    <meta property="og:description" content="Garry Tan开源了gstack，96K星，23个slash命令把一个人变成整支工程团队。810倍产能背后是什么？普通人怎么用这套方法做副业？">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.aitoollab.top/articles/seo/gstack-one-person-ai-engineering-team/">
+    <meta property="og:site_name" content="AiToollab">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="article:published_time" content="2026-05-15T08:00:00+08:00">
+    <meta property="article:modified_time" content="2026-05-15T08:00:00+08:00">
+    <meta property="article:author" content="https://github.com/AiToollab">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@AiToollab">
+    <meta name="twitter:creator" content="@AiToollab">
+    <meta name="twitter:title" content="YC CEO的AI工程团队：一个人用gstack做出810倍产能">
+    <meta name="twitter:description" content="Garry Tan开源了gstack，23个slash命令把一个人变成整支工程团队。普通人怎么用这套方法做副业？">
+
+    <meta name="DC.title" content="YC CEO的AI工程团队：一个人用gstack做出810倍产能，我扒出了普通人也能复制的路径">
+    <meta name="DC.creator" content="AiToollab">
+    <meta name="DC.subject" content="gstack, YC CEO, AI工程团队, AI副业, Claude Code">
+    <meta name="DC.description" content="Garry Tan（YC CEO）开源了他的AI工作流工具gstack，96K星，23个slash命令把一个人变成整支工程团队。810倍产能背后是什么？普通人怎么用这套方法做副业？">
+    <meta name="DC.publisher" content="AiToollab">
+    <meta name="DC.date" content="2026-05-15">
+    <meta name="DC.language" content="zh-CN">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "YC CEO的AI工程团队：一个人用gstack做出810倍产能，我扒出了普通人也能复制的路径",
+        "description": "Garry Tan（YC CEO）开源了他的AI工作流工具gstack，96K星，23个slash命令把一个人变成整支工程团队。810倍产能背后是什么？普通人怎么用这套方法做副业？",
+        "datePublished": "2026-05-15T08:00:00+08:00",
+        "dateModified": "2026-05-15T08:00:00+08:00",
+        "author": {
+            "@type": "Organization",
+            "name": "AiToollab",
+            "url": "https://www.aitoollab.top/"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "AiToollab",
+            "url": "https://www.aitoollab.top/"
+        }
+    }
+    </script>
+
+    <style>
+    :root {
+        --bg: #0d1117;
+        --card: #161b22;
+        --border: #30363d;
+        --text: #e6edf3;
+        --muted: #8b949e;
+        --accent: #58a6ff;
+        --green: #3fb950;
+        --orange: #d29922;
+        --red: #f85149;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+    .container { max-width: 720px; margin: 0 auto; padding: 20px; }
+    .header { margin-bottom: 40px; padding-bottom: 24px; border-bottom: 1px solid var(--border); }
+    .tag { display: inline-block; background: rgba(88,166,255,0.1); color: var(--accent); font-size: 12px; padding: 4px 10px; border-radius: 20px; margin-bottom: 12px; }
+    .header h1 { font-size: 28px; font-weight: 700; margin-bottom: 12px; line-height: 1.3; }
+    .meta { font-size: 14px; color: var(--muted); }
+    .article-body { padding-bottom: 60px; }
+    .article-body p { margin-bottom: 16px; color: #c9d1d9; font-size: 16px; line-height: 1.8; }
+    .article-body h2 { font-size: 20px; margin: 40px 0 16px; color: var(--text); border-left: 3px solid var(--accent); padding-left: 12px; }
+    .article-body h3 { font-size: 17px; margin: 24px 0 10px; color: #e6edf3; }
+    .article-body strong { color: var(--text); }
+    .article-body ul, .article-body ol { margin: 16px 0 20px 24px; }
+    .article-body li { margin-bottom: 8px; color: #c9d1d9; }
+    .article-body .highlight { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin: 20px 0; font-size: 15px; }
+    .article-body .highlight-blue { border-left: 3px solid var(--accent); background: rgba(88,166,255,0.06); }
+    .article-body .highlight-green { border-left: 3px solid var(--green); background: rgba(63,185,80,0.06); }
+    .article-body .highlight-orange { border-left: 3px solid var(--orange); background: rgba(210,153,34,0.06); }
+    .article-body .tip { background: rgba(240,136,62,0.1); border: 1px solid rgba(240,136,62,0.3); border-radius: 8px; padding: 14px 16px; margin: 20px 0; font-size: 14px; color: #e6edf3; }
+    .article-body .tip strong { color: var(--orange); }
+    .article-body .cta { background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(63,185,80,0.1)); border: 1px solid rgba(88,166,255,0.3); border-radius: 12px; padding: 20px; margin: 32px 0; text-align: center; }
+    .article-body .cta p { margin-bottom: 8px; color: var(--text); }
+    .article-body .cta a { display: inline-block; background: var(--accent); color: #fff; padding: 10px 24px; border-radius: 8px; text-decoration: none; font-weight: 600; margin-top: 8px; }
+    .article-body .quote { background: rgba(88,166,255,0.06); border-left: 3px solid var(--accent); padding: 14px 16px; margin: 20px 0; font-style: italic; color: var(--muted); }
+    .related { margin-top: 40px; padding-top: 24px; border-top: 1px solid var(--border); }
+    .related h3 { font-size: 16px; margin-bottom: 16px; color: var(--muted); }
+    .related a { display: block; color: var(--accent); text-decoration: none; margin-bottom: 10px; font-size: 14px; }
+    .related a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 40px 20px; border-top: 1px solid var(--border); color: var(--muted); font-size: 14px; }
+    footer a { color: var(--accent); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <header class="header">
+        <span class="tag">AI副业</span>
+        <h1>YC CEO的AI工程团队：一个人用gstack做出810倍产能，我扒出了普通人也能复制的路径</h1>
+        <div class="meta">2026年5月15日 · AiToollab</div>
+    </header>
+
+    <article class="article-body">
+        <p>故事是这样的。</p>
+
+        <p>前两天我在刷GitHub Trending，被一个项目的增速给整懵了。</p>
+
+        <p>一个叫gstack的项目，3月11日才创建，到今天（5月15日）两个月时间，96K颗星。 forks 14K，open issues 502个还在活跃维护。这不是一个小的side project，这是一个顶级创业者把自己真实的AI工作流开源出来了。</p>
+
+        <p>gstack的作者是Garry Tan，Y Combinator的CEO。之前在Palantir最早一批工程师，创办过Posterous（卖给Twitter），YC W07 alumni。现在管着全球最大的创业加速器。</p>
+
+        <p>他自己说了一句话，我看完就愣住了：</p>
+
+        <p>「I don't think I've typed like a line of code probably since December」—— Andrej Karpathy</p>
+
+        <p>Karpathy说这话的时候是2026年3月，他说他大概从去年12月开始就几乎不写代码了。Garry Tan听到这话就去研究，他是怎么做到的，研究完了就把自己的一套方法开源了。</p>
+
+        <p>结果就是这个gstack。</p>
+
+        <h2>23个slash命令，把一个人变成一支团队</h2>
+
+        <p>其实吧，gstack就是一套Claude Code的skills配置。但这不是那种花哨的prompt集合，这是Garry Tan本人每天在实际工作中用的完整工作流。</p>
+
+        <p>他把自己的AI编程方式拆成了23个可独立调用的slash命令，每个命令对应一个专业角色：</p>
+
+        <p>/office-hours——YC导师的追问式产品审视，六个强制问题重新定义你的产品方向。/plan-ceo-review——CEO视角，帮你找到「10星产品」藏在哪个角落里。/plan-eng-review——工程总监视角，锁定架构、数据流、边界情况。/design-review——设计师视角，AI生成的界面哪里丑、哪里需要改。/review——高级工程师视角，找出那些过了CI但在生产环境会炸的bug。/qa——QA负责人，真的会打开浏览器去测试你的应用。/cso——首席安全官，跑OWASP Top 10 + STRIDE威胁模型。</p>
+
+        <p>这就是Garry Tan说的「一个人等于一支团队」的意思，每个slash命令就是一个虚拟的专业角色，你需要什么就调什么。不用的时候不花钱，用的时候一条命令它就上场了。</p>
+
+        <h2>810倍产能争议：真实数据还是营销？</h2>
+
+        <p>gstack的README里有一个特别炸的数据：</p>
+
+        <p>Garry Tan说他在2026年，基于逻辑代码变更量（不是原始LOC，因为AI会膨胀这个数字），他的产能是2013年建造Bookface时的810倍。2026年到现在才四个月，已经超过了2013年全年产量的240倍。</p>
+
+        <p>这个说法一出来，GitHub上吵翻了。有人说这是吹牛，有人说这是因为2013年的他还是个新手程序员没有可比性，有人说LOC这个指标本来就有问题。</p>
+
+        <p>我去看了一下他写的反驳。他的逻辑是这样的：是的，用原始代码行数对比不公平，因为AI会膨胀LOC。所以他用的是「逻辑代码变更量」，他定义了一个叫logical LOC的概念，过滤掉AI为了格式化、缩进、代码补全生成的那些没有实质意义的行。</p>
+
+        <p>而且他也承认了，2026年的他比2013年经验更丰富，所以这个对比本身就有问题。但他的核心论点是：批评他产能没有提升的人，用的指标本身就是错的。用正确的指标衡量，他的产能确实提升了，而且提升得离谱。</p>
+
+        <p>坦率的讲，我觉得这个争议本身就是一个内容营销的经典案例，一篇README引发全网讨论，GitHub 96K星，这就是结果。</p>
+
+        <h2>为什么说这个对普通人做副业有参考价值？</h2>
+
+        <p>说回正题。</p>
+
+        <p>Garry Tan在YC见过几千家创业公司从「车库里一两个人」成长为「独角兽」，他判断一个创始人能不能跑出来的标准之一，就是这个人有没有可能「以一敌二十」。</p>
+
+        <p>gstack就是他的答案。</p>
+
+        <p>他开源这套东西，核心逻辑是什么？你不需要雇一支团队，你需要的只是会用AI工具，然后在正确的方向上做决策。一个人的产能可以超过一支小团队，核心差异在于工具和工作流，而不是人头。</p>
+
+        <p>这个逻辑放在副业场景里意味着什么？意味着以前你想做一个产品，你可能需要「我会前端、会后端、会设计、会测试、会上线」才能做出来。现在你只需要一个Claude Code账号 + gstack + 一个正确的方向判断。</p>
+
+        <p>技术壁垒在下降，方向判断的壁垒在上升，这是我在这个过程里体会最深的一点。</p>
+
+        <h2>普通人怎么用这套方法？</h2>
+
+        <p>分几步。</p>
+
+        <p>第一步，安装gstack。</p>
+
+        <p>git clone --single-branch --depth 1 https://github.com/garrytan/gstack.git ~/gstack && cd ~/gstack && ./setup</p>
+
+        <p>这个过程大概五分钟，安装完你就有了一套完整的AI编程工作流。</p>
+
+        <p>第二步，搞清楚你要做什么。</p>
+
+        <p>这里gstack帮不了你，它只是一个执行工具。但它有一个技能叫 /office-hours，就是让你先回答六个问题，把你想做的事想清楚。这六个问题能逼你把「我要做什么」「解决了什么问题」「为什么是我」这些核心的东西先想清楚。</p>
+
+        <p>第三步，用/plans去梳理你的方案。</p>
+
+        <p>/plan-ceo-review 会帮你重新审视你的产品方向，找出那个「10星产品」在哪里。/plan-eng-review 会帮你锁定技术架构，让你在写代码之前就把数据流、边界情况这些东西想清楚。</p>
+
+        <p>第四步，用/build去执行。</p>
+
+        <p>这步你会真正开始写代码，gstack会让你用AI编程，但有一个关键区别：它不是让你随便问AI一个问题然后复制粘贴答案，它是让你用一套系统化的方式去驱动AI完成完整的开发流程。</p>
+
+        <p>第五步，用/ship去发布。</p>
+
+        <p>这个命令会同步主分支、跑测试、审计覆盖率、推送代码、打开PR。不是简单地把代码扔上去，是跑完完整的上线流程。</p>
+
+        <h2>我的判断</h2>
+
+        <p>说真的，gstack这个项目给普通人最大的启发，不是某个slash命令有多好用，而是它展示了一种新的工作方式的可能性：一个人 + 正确的工具 + 系统化的工作流，确实可以等于一支团队。</p>
+
+        <p>以前说这个话，感觉是鸡汤。现在Y Combinator的CEO把整个工作流开源了，96K星在那摆着，这个说法的可信度就不一样了。</p>
+
+        <p>对于想做副业的人来说，这意味着技术能力的门槛在进一步降低。你不需要雇人帮你写代码、测试、做安全审计、上线，这些都可以用AI工具来完成。</p>
+
+        <p>不过话说回来，方向判断能力的价值会变得越来越明显。你能不能找到一个真正值得解决的问题，愿不愿意为它投入时间，这个判断在AI时代比任何时候都更值钱。</p>
+
+        <p>gstack降低了执行的门槛，但没有降低决策的门槛。先想清楚做什么，再去研究怎么做，这是我一直以来的观点。</p>
+
+        <div class="cta">
+            <p>想系统学习 AI 副业方法和提示词技巧？</p>
+            <p style="color: #8b949e; font-size: 14px;">50+ 实测有效的 AI 副业提示词，覆盖方向选择、内容创作、变现路径。¥39，一次买断，永久更新。</p>
+            <a href="/prompt-pack/">查看提示词全家桶 →</a>
+        </div>
+
+        <div class="related">
+            <h3>相关阅读</h3>
+            <a href="/articles/seo/mattpocock-skills-ai-side-hustle/">GitHub 7.5万星的开源提示词库，让我看到了AI副业最直接的路径</a>
+            <a href="/articles/seo/mcp-side-hustle-2026/">MCP正在成为AI的USB接口：普通人上车窗口还有多久？</a>
+            <a href="/articles/seo/rowboat-ai-agent-side-hustle/">开源AI同事终于能记住你了：我在GitHub上发现了一个13.8K星的副业神器</a>
+        </div>
+
+    </article>
+</div>
+
+<footer>
+    <p>© 2026 <a href="/">AiToollab</a> · <a href="/prompt-pack/">AI副业提示词全家桶</a></p>
+</footer>
+
+</body>
+</html>
