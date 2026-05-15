@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://www.aitoollab.top/articles/cases/html-anything-agentic-html-editor/">
+    <link rel="alternate" type="application/atom+xml" title="AiToollab RSS Feed" href="/feed.xml">
+    <link rel="alternate" hreflang="x-default" href="https://www.aitoollab.top/articles/cases/html-anything-agentic-html-editor/">
+    <link rel="alternate" hreflang="zh-CN" href="https://www.aitoollab.top/articles/cases/html-anything-agentic-html-editor/">
+
+    <title>用html-anything做AI内容创作服务：我不写代码，照样用上这8个编程Agent</title>
+    <meta name="description" content="1050星、4天爆发、来自40K星团队的开源项目html-anything，让你的本地AI编程工具直接替你写HTML。普通人怎么用它赚钱？我想了5种方式。">
+    <meta name="keywords" content="html-anything, AI内容创作, 编程Agent, 副业赚钱, 被动收入, 内容变现">
+    <meta name="author" content="AiToollab">
+    <meta name="robots" content="index, follow">
+    <meta name="ai-content" content="allowed">
+
+    <meta property="og:title" content="用html-anything做AI内容创作服务：我不写代码，照样用上这8个编程Agent">
+    <meta property="og:description" content="1050星、4天爆发、来自40K星团队的开源项目html-anything，让你的本地AI编程工具直接替你写HTML。普通人怎么用它赚钱？我想了5种方式。">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.aitoollab.top/articles/cases/html-anything-agentic-html-editor/">
+    <meta property="og:site_name" content="AiToollab">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="article:published_time" content="2026-05-15T00:00:00+08:00">
+    <meta property="article:modified_time" content="2026-05-15T00:00:00+08:00">
+    <meta property="article:author" content="https://github.com/AiToollab">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="用html-anything做AI内容创作服务">
+    <meta name="twitter:description" content="1050星、4天爆发、来自40K星团队的开源项目html-anything">
+
+    <style>
+        :root {
+            --bg: #0d1117;
+            --card: #161b22;
+            --border: #30363d;
+            --text: #e6edf3;
+            --muted: #8b949e;
+            --accent: #58a6ff;
+            --green: #3fb950;
+            --purple: #a371f7;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.9;
+            font-size: 17px;
+        }
+        a { color: var(--accent); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        
+        .header {
+            background: linear-gradient(135deg, #0d1117 0%, #1a2035 50%, #0d1117 100%);
+            border-bottom: 1px solid var(--border);
+            padding: 60px 20px 40px;
+            text-align: center;
+        }
+        .header .badge {
+            display: inline-block;
+            background: rgba(88,166,255,0.12);
+            color: var(--accent);
+            padding: 4px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            margin-bottom: 16px;
+            border: 1px solid rgba(88,166,255,0.3);
+        }
+        .header h1 {
+            font-size: 32px;
+            line-height: 1.3;
+            max-width: 800px;
+            margin: 0 auto 16px;
+            background: linear-gradient(135deg, #fff 0%, #8b949e 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .header .meta {
+            color: var(--muted);
+            font-size: 14px;
+            margin-bottom: 16px;
+        }
+        .header .tags { display: flex; justify-content: center; gap: 8px; flex-wrap: wrap; }
+        .header .tag {
+            background: var(--card);
+            border: 1px solid var(--border);
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-size: 12px;
+            color: var(--muted);
+        }
+        
+        .container { max-width: 720px; margin: 0 auto; padding: 40px 20px 60px; }
+        
+        .lead {
+            font-size: 20px;
+            color: var(--text);
+            border-left: 3px solid var(--green);
+            padding: 20px 24px;
+            margin: 32px 0;
+            background: rgba(63,185,80,0.08);
+            border-radius: 0 8px 8px 0;
+            line-height: 1.8;
+        }
+        
+        h2 {
+            font-size: 24px;
+            margin: 48px 0 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--border);
+            color: var(--text);
+        }
+        
+        h3 {
+            font-size: 19px;
+            margin: 32px 0 14px;
+            color: var(--purple);
+        }
+        
+        p { margin-bottom: 18px; color: #c9d1d9; }
+        
+        .highlight-box {
+            background: rgba(88,166,255,0.08);
+            border: 1px solid rgba(88,166,255,0.3);
+            border-radius: 12px;
+            padding: 24px;
+            margin: 28px 0;
+        }
+        .highlight-box h4 {
+            color: var(--accent);
+            font-size: 16px;
+            margin-bottom: 12px;
+        }
+        .highlight-box p { margin-bottom: 0; color: var(--muted); }
+        
+        .stats-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            margin: 28px 0;
+        }
+        .stat-box {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+        }
+        .stat-box .number { font-size: 28px; font-weight: 700; color: var(--green); }
+        .stat-box .label { font-size: 13px; color: var(--muted); margin-top: 6px; }
+        
+        .case-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+            margin: 24px 0;
+        }
+        .case-card h4 { color: var(--green); font-size: 17px; margin-bottom: 10px; }
+        .case-card p { margin-bottom: 8px; }
+        
+        .prompt-box {
+            background: #0a0e17;
+            border: 1px solid #238636;
+            border-left: 4px solid #3fb950;
+            border-radius: 0 8px 8px 0;
+            padding: 20px;
+            margin: 20px 0;
+            font-family: "SF Mono", "Consolas", monospace;
+            font-size: 14px;
+            white-space: pre-wrap;
+            color: #c9d1d9;
+            line-height: 1.7;
+        }
+        .prompt-box .label {
+            color: var(--green);
+            font-size: 12px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        .cta-box {
+            background: linear-gradient(135deg, rgba(16,185,129,0.15) 0%, rgba(14,165,233,0.1) 100%);
+            border: 2px solid var(--green);
+            border-radius: 16px;
+            padding: 32px;
+            text-align: center;
+            margin: 40px 0;
+        }
+        .cta-box h3 { color: var(--green); font-size: 20px; margin: 0 0 8px; }
+        .cta-box p { color: var(--muted); font-size: 14px; margin-bottom: 20px; }
+        .cta-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #238636, #2ea043);
+            color: #fff;
+            padding: 14px 40px;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 700;
+            text-decoration: none;
+        }
+        .cta-btn:hover { opacity: 0.85; text-decoration: none; color: #fff; }
+        
+        .footer {
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 1px solid var(--border);
+            color: var(--muted);
+            font-size: 14px;
+        }
+        
+        @media (max-width: 600px) {
+            .header h1 { font-size: 24px; }
+            .stats-row { grid-template-columns: 1fr; }
+        }
+    </style>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "用html-anything做AI内容创作服务：我不写代码，照样用上这8个编程Agent",
+        "description": "1050星、4天爆发、来自40K星团队的开源项目html-anything，让你的本地AI编程工具直接替你写HTML。普通人怎么用它赚钱？我想了5种方式。",
+        "author": {
+            "@type": "Person",
+            "name": "AiToollab",
+            "url": "https://github.com/AiToollab"
+        },
+        "datePublished": "2026-05-15T00:00:00+08:00",
+        "dateModified": "2026-05-15T00:00:00+08:00",
+        "publisher": {
+            "@type": "Person",
+            "name": "AiToollab"
+        },
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://www.aitoollab.top/articles/cases/html-anything-agentic-html-editor/"
+        }
+    }
+    </script>
+</head>
+<body>
+
+<header class="header">
+    <span class="badge">💰 变现案例</span>
+    <h1>用html-anything做AI内容创作服务：我不写代码，照样用上这8个编程Agent</h1>
+    <div class="meta">📅 2026-05-15 · 👤 AiToollab · GitHub 1050★</div>
+    <div class="tags">
+        <span class="tag">html-anything</span>
+        <span class="tag">AI内容创作</span>
+        <span class="tag">编程Agent</span>
+        <span class="tag">副业变现</span>
+    </div>
+</header>
+
+<div class="container">
+
+<div class="lead">
+故事是这样的。
+
+前两天我在GitHub Trending上刷到一个项目，4天1000多星，日均260星增速，来自一个40K星团队的子项目。我当时就愣住了，什么玩意能在这个节点还这么猛？
+
+点进去一看，html-anything。一个口号直接把我干懵了——
+
+「Markdown只是草稿，HTML才是人类真正阅读的东西。你的本地AI编程工具直接帮你写。」
+
+我就想，这不就是在说，以后输出给用户看的内容，直接就是HTML，不需要我手动排版了吗？
+</div>
+
+<p>好，说人话。</p>
+
+<p>这个项目到底是干嘛的。简单说就是，你电脑上装了Claude Code、Cursor Agent、Gemini CLI这些编程工具对吧？但这些工具本来是帮程序员写代码的，普通内容创作者用不上。这个项目让这些编程Agent帮你写「给人看的内容」——公众号长文、小红书卡片、演讲PPT、视频封面，全部一键搞定。</p>
+
+<p>最骚的是，它不需要任何API key。你电脑上已经登录的Claude或者Cursor账号，直接复用。零额外成本。</p>
+
+<div class="stats-row">
+    <div class="stat-box">
+        <div class="number">1050★</div>
+        <div class="label">4天总星数</div>
+    </div>
+    <div class="stat-box">
+        <div class="number">262</div>
+        <div class="label">日均增速</div>
+    </div>
+    <div class="stat-box">
+        <div class="number">8个</div>
+        <div class="label">支持的编程Agent</div>
+    </div>
+</div>
+
+<p>说说这个团队是什么来头。nexu-io/open-design，40K星，200多个贡献者，是目前最大的AI设计系统开源项目之一。html-anything就是他们在这个方向上做的一个垂类工具。所以技术底子是完全过硬的，不是那种跑一圈就没了的东西。</p>
+
+<h2>它具体能做什么？</h2>
+
+<p>75个模板，9种输出类型。我挑几个你们可能用得上的：</p>
+
+<p>演讲PPT——瑞士国际风格、贵气编辑风、XHS马卡龙色系，一共20种 keynote 风格可选。你给AI一段文字，它直接给你生成一套可以演示的幻灯片。</p>
+
+<p>小红书卡片——专门优化过的配图格式，一键导出2倍分辨率PNG，直接粘贴到小红书编辑器里。</p>
+
+<p>微信公众号长文——杂志风格的排版，支持多种配色方案，写完直接复制粘贴。</p>
+
+<p>个人简历——现代简约风格，AI根据你的信息自动排版，输出可直接打印的PDF友好格式。</p>
+
+<p>还有个很骚的——视频封面脚本。直接输出 Hyperframes 格式，可以丢给 HeyGen 或者 Remotion 渲染成视频。</p>
+
+<p>你说这些功能微喀市场上有没有？都有。但问题是，这玩意零门槛。你不需要学任何设计，不需要装任何插件，不需要付任何订阅费。你只要电脑上有个 Claude Code 或者 Cursor（这两个都有免费额度），就能跑。</p>
+
+<h2>怎么用它赚钱？5种方式</h2>
+
+<h3>方式一：内容创作服务（最容易启动）</h3>
+
+<p>你去闲鱼或者小红书发个广告，就说「代做高颜值PPT/演讲稿/图文卡片」。报价参考：普通PPT 80-150一页，复杂演示文稿 300-800一套。你用html-anything生成，速度比传统方式快3-5倍。客户给文字，你给成品，中间全是AI干的。</p>
+
+<p>我认识一个做小红书的朋友，她帮人代运营图文账号，一篇笔记报价300-500。用html-anything制作配图，单张成本基本为零，每天可以接3-5单。这就是纯利。</p>
+
+<h3>方式二：垂直行业模板包</h3>
+
+<p>html-anything是开源的，你可以fork它的模板，改成你自己的版本。比如，专门做「律师用的法律服务文书模板包」，或者「健身教练用的训练计划可视化模板」。</p>
+
+<p>把这些模板打包，放到Gumroad或者自己的网站上卖。参考价：19-49美元一套。这个项目的75个模板是通用的，你只需要针对某个垂直场景做深度定制，就能建立差异化。</p>
+
+<h3>方式三：企业宣传物料服务</h3>
+
+<p>很多中小企业需要做产品介绍、公司介绍、招商手册，但请不起设计公司。一份20页的招商手册，设计公司报价通常在5000-20000。而你用html-anything + AI内容创作，2-3天就能交付，价格可以压到1500-3000。</p>
+
+<p>核心逻辑是：AI承担了排版和视觉设计的工作，你负责和客户沟通需求和组织内容。这里面的手艺在于「prompt写得准不准」，跟设计能力关系不大。</p>
+
+<h3>方式四：培训课程</h3>
+
+<p>教你目标用户「用AI编程工具做内容创作」。対象是：内容创作者、小红书博主、个体户老板。课程内容可以是：</p>
+
+<p>第一课，安装和环境配置（15分钟）<br>
+第二课，用Claude Code生成第一张图文卡片（30分钟）<br>
+第三课，一键导出小红书可用配图（20分钟）<br>
+第四课，用deck模式做演讲PPT（45分钟）<br>
+第五课，接单实战演示（60分钟）</p>
+
+<p>录播课定价99-199，直播课可以卖到499-999。这个项目的独特性在于「来自40K星团队的技术背书」，跟其他野路子AI课比起来，用户信任度完全不一样。</p>
+
+<h3>方式五：做模板订阅服务</h3>
+
+<p>每月更新一批新模板，用户付月费订阅。比如「每月69元，获得20套新模板 + 社群答疑」。这个模式的精髓是「懒人包」——用户不需要研究，直接用。</p>
+
+<p>你可以先在GitHub上免费发一套基础模板包引流，然后付费版提供进阶模板和数据更新。你看 html-anything 本身是开源的，但「帮你整理好、测试好、加上使用说明」这件事是有价值的。</p>
+
+<h2>我的判断</h2>
+
+<p>先说这个项目本身的吸引力。</p>
+
+<p>最大的差异化在于：它是目前唯一一个把「AI编程工具」和「内容创作」打通的工具。Claude Code、Cursor这些工具，用户量非常大，但普通人用不上——因为它们本来就是给程序员写的。这个项目降维打击，让会写prompt的人也能用上这些工具。</p>
+
+<p>而且它的商业路径很清晰——不收费工具本身，靠周边服务赚钱。这和它在GitHub上的爆发是匹配的，因为开发者喜欢这种模式。</p>
+
+<p>但也有坑我想提醒你们。</p>
+
+<p>先说学习曲线。这玩意它宣称零门槛，没骗人——装上确实能跑。但想跑出客户想要的东西，得花时间摸索模板和prompt。我的建议是，先自己玩两周，确认这东西真的顺手了，再考虑拿出去卖钱。别急着发广告，砸自己招牌。</p>
+
+<p>再说市场竞争。内容创作这个市场是真的卷。你要面对的不仅是其他用html-anything的人，还有Canva、Figma、各种AI PPT工具。差异化在哪儿？「垂直场景」和「服务质量」，而不是「会用这个工具」。这么说吧，你得找到自己的细分领域，而不是泛泛接单。</p>
+
+<p>最后说付款意愿。AI内容创作的需求是真的有，但客户分层很明显。有些人愿意为一份精美的招商手册付几千元，有些人觉得AI生成的就是不值钱。前者才是你的目标客户，后者你花再多时间也转化不了。</p>
+
+<p>怎么说呢，我觉得这个项目的窗口期大概还有3-6个月。现在入局做服务，时间上还来得及。但如果是卖课或者模板包，需要尽快建立品牌认知，否则等大厂跟进就没有机会了。</p>
+
+<div class="cta-box">
+    <h3>🚀 快速上手</h3>
+    <p>安装只需要三步，有手就行</p>
+    <a href="https://github.com/nexu-io/html-anything" class="cta-btn">GitHub 地址</a>
+</div>
+
+<p>说实话，我也不知道这个项目最后能不能成。但有一点我可以确定——AI正在改变内容创作的方式，而 html-anything 提供了一个零门槛的切入点。与其在外面围观，不如亲自下场试试。</p>
+
+<p>你想想看，就算最后没赚到钱，你学会了这套工作流，以后给自己做内容不也是赚了吗？</p>
+
+</div>
+
+<footer class="footer">
+    <p>以上，既然看到这里了，如果觉得不错，随手点个赞、在看、转发三连吧</p>
+    <p>如果你想第一时间收到推送，可以给我个星标⭐～</p>
+    <p>谢谢你看我的文章，我们，下次再见。</p>
+</footer>
+
+</body>
+</html>
