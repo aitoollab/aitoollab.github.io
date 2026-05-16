@@ -387,7 +387,7 @@ async function llmScore(title, platform, content) {
 
 只返回 JSON，不要有其他文字。`;
 
-  const response = await fetch('https://api.minimax.chat/v1/text/chatcompletion_pro', {
+  const response = await fetch('https://api.minimaxi.com/v1/text/chatcompletion_pro', {
     method: 'POST',
     headers: { 'Authorization': `Bearer ${key}`, 'Content-Type': 'application/json' },
     body: JSON.stringify({

@@ -1,0 +1,285 @@
+{
+  "last_updated": "2026-05-11T16:47:49.031118Z",
+  "candidate_pool_total": 144,
+  "analyzed_count": 99,
+  "last_analyzed": [
+    "OpenSquilla/opensquilla",
+    "kubetail-org/kstack",
+    "darkrishabh/agent-skills-eval"
+  ],
+  "top_candidates": [
+    {
+      "repo": "OpenSquilla/opensquilla",
+      "score": 100,
+      "has_pricing": true,
+      "installable": true
+    },
+    {
+      "repo": "kubetail-org/kstack",
+      "score": 100,
+      "has_pricing": false,
+      "installable": false
+    },
+    {
+      "repo": "darkrishabh/agent-skills-eval",
+      "score": 100,
+      "has_pricing": false,
+      "installable": true
+    }
+  ],
+  "high_score_projects": [
+    {
+      "repo": "OpenSquilla/opensquilla",
+      "score": 100,
+      "has_pricing": true,
+      "installable": true,
+      "stars": 206
+    },
+    {
+      "repo": "kubetail-org/kstack",
+      "score": 100,
+      "has_pricing": false,
+      "installable": false,
+      "stars": 44
+    },
+    {
+      "repo": "darkrishabh/agent-skills-eval",
+      "score": 100,
+      "has_pricing": false,
+      "installable": true,
+      "stars": 323
+    },
+    {
+      "repo": "IdraDev/Diagrammer",
+      "score": 100,
+      "has_pricing": true,
+      "installable": false,
+      "stars": 8
+    },
+    {
+      "repo": "kunchenguid/autopreso",
+      "score": 100,
+      "has_pricing": true,
+      "installable": true,
+      "stars": 187
+    },
+    {
+      "repo": "huangserva/3DCellForge",
+      "score": 100,
+      "has_pricing": false,
+      "installable": true,
+      "stars": 1039
+    },
+    {
+      "repo": "mereses-labs/solana-pumpfun-bundler",
+      "score": 98,
+      "has_pricing": false,
+      "installable": true,
+      "stars": 294
+    },
+    {
+      "repo": "TitanFlow-Systems/polymarket-trading-bot-v2",
+      "score": 95,
+      "has_pricing": false,
+      "installable": true,
+      "stars": 275
+    },
+    {
+      "repo": "SXai-lab/prediction-market-arbitrage",
+      "score": 93,
+      "has_pricing": false,
+      "installable": true,
+      "stars": 141
+    },
+    {
+      "repo": "XBuilderLAB/cheat-on-content",
+      "score": 90,
+      "has_pricing": false,
+      "installable": true,
+      "stars": 848
+    },
+    {
+      "repo": "NirDiamant/Agent_Memory_Techniques",
+      "score": 90,
+      "has_pricing": true,
+      "installable": false,
+      "stars": 276
+    },
+    {
+      "repo": "butthtio/solidity-cot-auditor",
+      "score": 90,
+      "has_pricing": false,
+      "installable": true,
+      "stars": 427
+    },
+    {
+      "repo": "joshawome/chainreason",
+      "score": 90,
+      "has_pricing": true,
+      "installable": true,
+      "stars": 416
+    },
+    {
+      "repo": "TQ-trade-agent/tq-trading-agent",
+      "score": 88,
+      "has_pricing": false,
+      "installable": true,
+      "stars": 295
+    },
+    {
+      "repo": "SXai-lab/prediction-market-copytrade",
+      "score": 88,
+      "has_pricing": false,
+      "installable": true,
+      "stars": 141
+    },
+    {
+      "repo": "regent-vcs/re_gent",
+      "score": 87,
+      "has_pricing": true,
+      "installable": true,
+      "stars": 120
+    },
+    {
+      "repo": "marvincaspar/agent-sanbox",
+      "score": 86,
+      "has_pricing": true,
+      "installable": false,
+      "stars": 8
+    },
+    {
+      "repo": "DuckTapeKiller/horme",
+      "score": 85,
+      "has_pricing": false,
+      "installable": false,
+      "stars": 10
+    },
+    {
+      "repo": "WenyuChiou/awesome-agentic-ai-zh",
+      "score": 85,
+      "has_pricing": false,
+      "installable": true,
+      "stars": 683
+    },
+    {
+      "repo": "moxailoo/univ3-pool-lens",
+      "score": 85,
+      "has_pricing": false,
+      "installable": false,
+      "stars": 420
+    },
+    {
+      "repo": "tolibear/goalbuddy",
+      "score": 81,
+      "has_pricing": true,
+      "installable": true,
+      "stars": 301
+    },
+    {
+      "repo": "shootthesound/comfyui-CleanFreak",
+      "score": 80,
+      "has_pricing": false,
+      "installable": false,
+      "stars": 17
+    },
+    {
+      "repo": "JeanDupuis68/polymarket-arbitrage",
+      "score": 80,
+      "has_pricing": false,
+      "installable": true,
+      "stars": 121
+    },
+    {
+      "repo": "simstudioai/sim",
+      "score": 78,
+      "has_pricing": true,
+      "installable": true,
+      "stars": 28150
+    },
+    {
+      "repo": "JeanDupuis68/polymarket-copytrade",
+      "score": 78,
+      "has_pricing": false,
+      "installable": true,
+      "stars": 120
+    },
+    {
+      "repo": "alchaincyf/huashu-md-html",
+      "score": 78,
+      "has_pricing": false,
+      "installable": true,
+      "stars": 287
+    },
+    {
+      "repo": "D4Vinci/Scrapling",
+      "score": 76,
+      "has_pricing": true,
+      "installable": false,
+      "stars": 40673
+    },
+    {
+      "repo": "strukto-ai/mirage",
+      "score": 75,
+      "has_pricing": false,
+      "installable": true,
+      "stars": 1830
+    },
+    {
+      "repo": "MayersScott/rkn-block-checker",
+      "score": 75,
+      "has_pricing": true,
+      "installable": true,
+      "stars": 425
+    },
+    {
+      "repo": "jungang/alumnet",
+      "score": 75,
+      "has_pricing": false,
+      "installable": false,
+      "stars": 48
+    },
+    {
+      "repo": "Ch1rpy2613/Mirrai",
+      "score": 75,
+      "has_pricing": true,
+      "installable": true,
+      "stars": 295
+    },
+    {
+      "repo": "chencore/autoresearch-crypto",
+      "score": 75,
+      "has_pricing": false,
+      "installable": false,
+      "stars": 123
+    },
+    {
+      "repo": "bidah/skill-set",
+      "score": 75,
+      "has_pricing": false,
+      "installable": false,
+      "stars": 162
+    },
+    {
+      "repo": "Sayhi-bzb/AIEden",
+      "score": 73,
+      "has_pricing": false,
+      "installable": false,
+      "stars": 139
+    },
+    {
+      "repo": "forjd/agenthint",
+      "score": 73,
+      "has_pricing": true,
+      "installable": true,
+      "stars": 6
+    },
+    {
+      "repo": "HiDream-ai/HiDream-O1-Image",
+      "score": 72,
+      "has_pricing": false,
+      "installable": true,
+      "stars": 141
+    }
+  ],
+  "note": "共99个build_candidate已全量分析"
+}
