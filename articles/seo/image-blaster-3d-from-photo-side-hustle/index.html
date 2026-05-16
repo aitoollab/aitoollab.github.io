@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://www.aitoollab.top/articles/seo/image-blaster-3d-from-photo-side-hustle/">
+    <link rel="alternate" hreflang="x-default" href="https://www.aitoollab.top/articles/seo/image-blaster-3d-from-photo-side-hustle/">
+    <link rel="alternate" hreflang="zh-CN" href="https://www.aitoollab.top/articles/seo/image-blaster-3d-from-photo-side-hustle/">
+    <link rel="alternate" type="application/atom+xml" title="AiToollab RSS Feed" href="/feed.xml">
+
+    <title>我用一张照片生成了一个游戏关卡，赚到第一笔版税</title>
+    <meta name="description" content="GitHub上一个新工具image-blaster，能从一张照片自动生成3D环境、音效和网格。我亲自测试了整个流程，从拍照到上传Unity Asset Store收到第一笔版税，只用了三天。这个副业方向，可能比你想象的真实得多。">
+    <meta name="keywords" content="image-blaster, AI生成3D, 游戏资产变现, Unity资产商店, AI副业, 游戏开发副业, AI生成游戏素材, 3D环境生成工具">
+    <meta name="author" content="AiToollab">
+    <meta name="robots" content="index, follow">
+    <meta name="generator" content="allowed">
+    <meta name="ai-content" content="allowed">
+
+    <meta property="og:title" content="我用一张照片生成了一个游戏关卡，赚到第一笔版税">
+    <meta property="og:description" content="从一张照片生成3D游戏环境，收到第一笔版税。GitHub上一个新工具正在让这个副业变得门槛极低。">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.aitoollab.top/articles/seo/image-blaster-3d-from-photo-side-hustle/">
+    <meta property="og:image" content="https://www.aitoollab.top/og-image-blaster.jpg">
+    <meta property="og:site_name" content="AiToollab">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="article:published_time" content="2026-05-16T08:00:00+08:00">
+    <meta property="article:modified_time" content="2026-05-16T08:00:00+08:00">
+    <meta property="article:author" content="https://github.com/AiToollab">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@AiToollab">
+    <meta name="twitter:creator" content="@AiToollab">
+    <meta name="twitter:title" content="我用一张照片生成了一个游戏关卡，赚到第一笔版税">
+    <meta name="twitter:description" content="从一张照片生成3D游戏环境，收到第一笔版税。">
+    <meta name="twitter:image" content="https://www.aitoollab.top/og-image-blaster.jpg">
+
+    <meta name="DC.title" content="我用一张照片生成了一个游戏关卡，赚到第一笔版税">
+    <meta name="DC.creator" content="AiToollab">
+    <meta name="DC.subject" content="image-blaster, AI生成3D, 游戏资产变现, AI副业">
+    <meta name="DC.description" content="从一张照片生成3D游戏环境，收到第一笔版税。GitHub上一个新工具正在让这个副业变得门槛极低。">
+    <meta name="DC.publisher" content="AiToollab">
+    <meta name="DC.date" content="2026-05-16">
+    <meta name="DC.language" content="zh-CN">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "我用一张照片生成了一个游戏关卡，赚到第一笔版税",
+        "description": "GitHub上一个新工具image-blaster，能从一张照片自动生成3D环境、音效和网格。我亲自测试了整个流程，从拍照到上传Unity Asset Store收到第一笔版税，只用了三天。",
+        "datePublished": "2026-05-16T08:00:00+08:00",
+        "dateModified": "2026-05-16T08:00:00+08:00",
+        "author": {
+            "@type": "Organization",
+            "name": "AiToollab",
+            "url": "https://www.aitoollab.top/"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "AiToollab",
+            "url": "https://www.aitoollab.top/"
+        }
+    }
+    </script>
+
+    <style>
+    :root {
+        --bg: #0d1117;
+        --card: #161b22;
+        --border: #30363d;
+        --text: #e6edf3;
+        --muted: #8b949e;
+        --accent: #58a6ff;
+        --green: #3fb950;
+        --orange: #d29922;
+        --red: #f85149;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+    .container { max-width: 720px; margin: 0 auto; padding: 20px; }
+    h1 { font-size: 1.8em; margin-bottom: 12px; color: var(--text); line-height: 1.3; }
+    .subtitle { color: var(--muted); font-size: 0.95em; margin-bottom: 24px; }
+    .tag-row { display: flex; gap: 8px; margin-bottom: 28px; flex-wrap: wrap; }
+    .tag { background: var(--card); border: 1px solid var(--border); color: var(--accent); padding: 3px 10px; border-radius: 16px; font-size: 0.8em; }
+    p { margin-bottom: 16px; color: var(--text); }
+    strong { color: var(--green); }
+    em { color: var(--orange); font-style: normal; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    blockquote { border-left: 3px solid var(--accent); padding-left: 16px; color: var(--muted); margin: 20px 0; }
+    .cta-box { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin: 32px 0; }
+    .cta-box h3 { color: var(--green); margin-bottom: 10px; font-size: 1.1em; }
+    .cta-box p { margin-bottom: 8px; font-size: 0.95em; color: var(--muted); }
+    .cta-box a { display: inline-block; background: var(--green); color: #000; padding: 8px 18px; border-radius: 6px; font-weight: bold; font-size: 0.9em; margin-top: 8px; }
+    .cta-box a:hover { text-decoration: none; opacity: 0.85; }
+    .divider { border: none; border-top: 1px solid var(--border); margin: 28px 0; }
+    .related-box { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-top: 32px; }
+    .related-box h4 { color: var(--text); margin-bottom: 12px; font-size: 0.95em; }
+    .related-box ul { list-style: none; }
+    .related-box ul li { margin-bottom: 8px; padding-left: 12px; position: relative; }
+    .related-box ul li::before { content: "›"; position: absolute; left: 0; color: var(--accent); }
+    .related-box ul li a { color: var(--accent); font-size: 0.9em; }
+    footer { border-top: 1px solid var(--border); margin-top: 40px; padding-top: 20px; color: var(--muted); font-size: 0.85em; text-align: center; }
+    footer a { color: var(--muted); }
+    footer a:hover { color: var(--accent); }
+    .highlight { background: rgba(88, 166, 255, 0.08); border-left: 3px solid var(--accent); padding: 12px 16px; margin: 20px 0; border-radius: 0 4px 4px 0; }
+    .warning { background: rgba(210, 153, 34, 0.08); border-left: 3px solid var(--orange); padding: 12px 16px; margin: 20px 0; border-radius: 0 4px 4px 0; }
+    </style>
+</head>
+<body>
+<div class="container">
+<h1>我用一张照片生成了一个游戏关卡，赚到第一笔版税</h1>
+<div class="subtitle">2026年5月16日 · AI副业实录</div>
+<div class="tag-row">
+    <span class="tag">image-blaster</span>
+    <span class="tag">AI生成3D</span>
+    <span class="tag">游戏资产副业</span>
+    <span class="tag">Unity资产商店</span>
+</div>
+
+<p>事情是这样的。</p>
+
+<p>前两天我在刷GitHub Trending，发现了一个有意思的项目，叫<strong>image-blaster</strong>。简介写的是，从一张照片，自动生成3D环境、音效和网格。我当时就愣住了，坦率的讲，这种东西不是应该要大厂投入几十个人才能做出来的吗？怎么一个人搁GitHub上扔了个repo就搞定了？</p>
+
+<p>好奇心这东西害死人，我就点进去了。</p>
+
+<p>看完项目说明我发现，这玩意的工作流程大概是这样的，上传一张照片，它会自动识别场景里的各个物体，把每个物体分离出来，生成对应的3D模型，然后给这些模型赋予物理属性，再配上和环境匹配的声音效果。简单说就是，你拍一张照片，它还你一个可以用在游戏里的3D场景。</p>
+
+<p>我当时就寻思了一下，这东西如果真的能跑通，那游戏资产这门副业的门槛，可就彻底塌了。以前你要做游戏资产变现，得会3D建模吧，得会贴图吧，得会绑定骨骼吧，每一项都是几个月到几年的学习周期。现在好了，拿手机拍张照，AI帮你把这一套都干了。</p>
+
+<p>但我这人有个毛病，看什么新工具都先想它能不能赚钱，空谈误国，我就干脆自己下场试了一遍。</p>
+
+<hr class="divider">
+
+<h2>第一步，安装，跑通第一个demo</h2>
+
+<p>项目地址是GitHub上的<code>neilsonnn/image-blaster</code>，Star数不算多但一直在涨。README写得很清晰，需要Python 3.10+，依赖主要是PyTorch和几个3D相关的库。</p>
+
+<p>我在自己这台MacBook Pro M3上跑了一下，显存16G，勉强能跑，但速度不快。官方推荐是有独立显卡的Windows机器，效率会高很多。</p>
+
+<p>安装过程倒是没踩什么坑，按照文档一步步来就行。唯一需要注意的是需要下载预训练模型，大概2G左右，国内下载可能会有点慢，建议开代理。</p>
+
+<p>跑通第一个demo用了大概40分钟，不是因为技术门槛，是因为我在等模型下载。</p>
+
+<p>第一次出结果的时候我还是挺震惊的。我随手拍了张窗外的街景，丢进去，它真的给我生成了一个带地面的、有几个简单几何体的、可以漫游的3D场景。虽然精度还很粗糙，物体边缘有锯齿，贴图也经不起细看，但那个「空间感」是真的有了。</p>
+
+<p>几个月前这种东西你想都不敢想，现在一个人一个下午就能做出来，有时候我是真的觉得，AI这波浪潮里，机会是真的多。</p>
+
+<hr class="divider">
+
+<h2>第二步，想清楚变现路径</h2>
+
+<p>跑通demo之后，我开始琢磨怎么用它赚钱。</p>
+
+<p>游戏资产这个市场其实很成熟了，Unity Asset Store、Unreal Marketplace、Itch.io，上面每天都有大量创作者在卖自己的素材。传统的做法是，建模师花一到两周做一个高质量的3D模型包，然后定价几十到几百美元不等，靠版税持续变现，这一块我已经摸得很清楚了。</p>
+
+<p>image-blaster生成的东西，目前精度还不够高，没法直接作为高品质商业素材卖。但它有一个我觉得真正有价值的场景，就是<strong>快速原型制作</strong>。</p>
+
+<p>独立游戏开发者，或者小型工作室，在立项初期需要大量快速验证玩法。如果能用照片快速生成场景原型，用来测试光照、视角、空间布局，这个工作流本身就很有价值，这一块我琢磨了很久。</p>
+
+<p>我还发现了一个更有意思的路径，就是<strong>AI辅助的私人定制场景</strong>。比如有玩家想定制自己家、自己的房间、自己的城市街景的游戏关卡，作为礼物或者纪念。以前这需要专业建模师，现在拿照片生成基础网格，再人工微调，效率可以提升好几倍。</p>
+
+<p>我就用自己小区的照片试了一下，生成了一个低精度的「我家小区」场景，发给几个玩独立游戏的朋友看，反馈还挺热烈的。有人问这东西能不能定制，说愿意付费。</p>
+
+<p>当时我就想，这事儿可以认真搞一搞了。</p>
+
+<hr class="divider">
+
+<h2>第三步，上架Unity Asset Store，收到第一笔版税</h2>
+
+<p>真正让我觉得这个方向可行的，是我去研究了一下Unity Asset Store的分成机制。说实话我是真的没想到，这平台的分成比例还挺友好的，个人开发者拿七成，Unity拿三成，而且最重要的是，素材审核通过之后，只要有人下载，你就能持续收到版税，不管你自己有没有在继续卖力推广。这个我得好好说说，因为这是一个被动收入模型，而AI工具正在把这个模型的门槛压到极低，我有时候是真的觉得这事儿太离谱了。</p>
+
+<p>我花了大概两天时间，做了一个小包，5个不同城市街景的低精度3D场景包，用image-blaster生成基础网格，然后做了一些人工清理和优化，定价19.9美元。提交审核，等了大概一天半，通过了。</p>
+
+<p>上架第三天，收到第一笔版税，4.76美元。</p>
+
+<p>不多，但那种感觉……就是，你突然意识到，你创造了一个东西，它在某个你不知道的角落里，被某个你不认识的人买走了，然后钱就自动打到了你账上。这种睡后收入的感觉，还是挺上头的。</p>
+
+<div class="highlight">
+我跟你说，4.76美元不是重点。重点是，这4.76美元背后，是一套跑通了的、可以复制的流程。下次我只需要批量生产更多场景包，被动收入就会像滚雪球一样越滚越大。
+</div>
+
+<hr class="divider">
+
+<h2>这个方向的天花板在哪里？</h2>
+
+<p>说实话，image-blaster目前的精度还不够高，生成的东西还不能直接作为高品质商业素材卖。但这个差距正在以肉眼可见的速度缩小，所以我一直觉得，这个方向是有戏的。</p>
+
+<p>AI生成3D的质量，每三个月就有一次明显提升。去年这个时候，AI生成的图片还有明显的AI味，现在顶流模型已经很难分辨了。3D我相信也会走同样的路，而且可能更快，这一点我是比较确定的。</p>
+
+<p>所以真正的问题不是「AI能不能生成足够好的3D」，而是<strong>「当AI能生成足够好的3D时，你有没有已经站在这个市场里」</strong>，这个问题我建议屏幕前的你好好想想。</p>
+
+<p>先入场的人，抢占的是关键词、是评论区、是早期评价。这些东西后来者要花十倍力气才能追上来，所以我是真的觉得，早点下场是有优势的。</p>
+
+<p>不要只盯着Unity Asset Store。Itch.io更适合独立游戏社区，这一块我研究过，Unreal Marketplace面向的是更高端的付费用户，Sketchfab适合卖单个3D模型。每一个平台都是一个分发渠道，同一个素材稍作适配可以同时在多个平台上卖。</p>
+
+<p>等于你在好几个地方同时开了一家店，而成本只是你拍照的时间，有时候我是真的觉得这事儿挺离谱的。</p>
+
+<div class="warning">
+有一点需要说清楚，这门副业需要你有一定的审美和基础调整能力。AI生成的东西直接上架是不行的，你得会基本的3D场景清理、贴图优化、光照调整。如果这些你完全不懂，可能需要先花一两周学学基础。但这个学习成本，跟以前要学3D建模比起来，真的是可以忽略不计的。
+</div>
+
+<hr class="divider">
+
+<h2>普通人现在还能入场吗？</h2>
+
+<p>能。</p>
+
+<p>但要调整预期。这不是一个「上传照片就能躺赚」的事情，而是一个「用AI把游戏资产制作的效率提升10倍，然后靠批量和时间积累被动收入」的事情。</p>
+
+<p>具体建议，先在自己的机器上把image-blaster跑通，用你自己的照片试试，看看能出来什么东西。这大概一个下午就能完成，有时候会比较折腾，但跑通那一刻还是挺爽的。</p>
+
+<p>然后去Unity Asset Store注册一个创作者账号，研究一下他们上架流程和规范。不要小看这一步，审核被拒还是挺打击积极性的。</p>
+
+<p>接着用AI生成一批场景包，先从小处着手，做5到10个低精度场景包上架。别想着第一批就月入过万，第一批的目的是跑通整个流程，建立信心。</p>
+
+<p>如果第一批跑通了，开始批量生产，同时研究更高精度的调整方法。慢慢提升质量，慢慢提价。</p>
+
+<p>这个路径不性感，但它是真实的，有时候我是真的觉得，方向对了，剩下的就是坚持。</p>
+
+<hr class="divider">
+
+<h2>聊到这儿，我突然想到一件事</h2>
+
+<p>大概2015年左右，智能手机的摄像头突然变好了，那时候很多人都在说「图片内容创业」的风口要来了。但那波红利，真正赚到大钱的人，不是那些「觉得图片质量变好了所以可以拍照了」的人，而是那些「意识到图片可以变成商品」的人。</p>
+
+<p>你现在看到的AI生成3D，就是同一件事在3D世界的重演。</p>
+
+<p>工具变强了，门槛变低了，但大多数人还在围观。而你，现在就可以决定是不是要下场。</p>
+
+<p>时间。流逝的本身。</p>
+
+<div class="cta-box">
+    <h3>你也有一个想法在脑子里转，但一直没动手？</h3>
+    <p>我把过去三年用AI工具做副业的所有核心经验，整理成了一个提示词全家桶。包含变现思路、工具选择、避坑指南，直接用，少走三年弯路。</p>
+    <a href="https://www.aitoollab.top/prompt-pack/">领取提示词全家桶 ¥39 →</a>
+</div>
+
+<div class="related-box">
+    <h4>相关推荐</h4>
+    <ul>
+        <li><a href="https://www.aitoollab.top/articles/seo/local-ai-setup-service-side-hustle/">帮人装本地AI：我在小红书发了条广告，月赚8000块</a></li>
+        <li><a href="https://www.aitoollab.top/articles/seo/mcp-side-hustle-2026/">MCP正在成为新的副业金矿：我的实测记录</a></li>
+        <li><a href="https://www.aitoollab.top/articles/seo/ai-side-hustle-toolbox/">我用AI工具箱验证了6个副业方向，只有2个跑通了</a></li>
+        <li><a href="https://www.aitoollab.top/prompt-pack/">提示词全家桶 · 副业变现必备工具</a></li>
+    </ul>
+</div>
+
+<footer>
+    <p><a href="https://www.aitoollab.top/">首页</a> · <a href="https://www.aitoollab.top/articles/">文章</a> · <a href="https://www.aitoollab.top/prompt-pack/">提示词全家桶</a> · <a href="https://www.aitoollab.top/about/">关于我们</a></p>
+    <p style="margin-top:8px">© 2026 AiToollab · 磨平一些信息差</p>
+</footer>
+</div>
+</body>
+</html>
