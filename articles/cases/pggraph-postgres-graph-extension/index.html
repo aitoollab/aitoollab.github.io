@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://www.aitoollab.top/articles/cases/pggraph-postgres-graph-extension/">
+    <link rel="alternate" type="application/atom+xml" title="AiToollab RSS Feed" href="/feed.xml">
+    <link rel="alternate" hreflang="x-default" href="https://www.aitoollab.top/articles/cases/pggraph-postgres-graph-extension/">
+    <link rel="alternate" hreflang="zh-CN" href="https://www.aitoollab.top/articles/cases/pggraph-postgres-graph-extension/">
+
+    <title>PostgreSQL秒变图数据库：2天128★的pgGraph让我想到了几种变现思路</title>
+    <meta name="description" content="2天128星，64★/天增速，Rust写的PostgreSQL图查询扩展。不搬家、不换语言，在原有表上直接跑图算法。普通人怎么用它赚钱？">
+    <meta name="keywords" content="pgGraph, PostgreSQL扩展, 图数据库, 关系数据, 副业赚钱, 数据服务, Rust, 开源项目">
+    <meta name="author" content="AiToollab">
+    <meta name="robots" content="index, follow">
+    <meta name="ai-content" content="allowed">
+
+    <meta property="og:title" content="PostgreSQL秒变图数据库：2天128★的pgGraph让我想到了几种变现思路">
+    <meta property="og:description" content="2天128星，64★/天增速，Rust写的PostgreSQL图查询扩展。不搬家、不换语言，在原有表上直接跑图算法。">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.aitoollab.top/articles/cases/pggraph-postgres-graph-extension/">
+    <meta property="og:site_name" content="AiToollab">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="article:published_time" content="2026-05-16T00:00:00+08:00">
+    <meta property="article:modified_time" content="2026-05-16T00:00:00+08:00">
+    <meta property="article:author" content="https://github.com/AiToollab">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="PostgreSQL秒变图数据库：2天128★的pgGraph">
+    <meta name="twitter:description" content="2天128星，64★/天增速，Rust写的PostgreSQL图查询扩展">
+
+    <style>
+        :root {
+            --bg: #0d1117;
+            --card: #161b22;
+            --border: #30363d;
+            --text: #e6edf3;
+            --muted: #8b949e;
+            --accent: #58a6ff;
+            --green: #3fb950;
+            --purple: #a371f7;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.9;
+            font-size: 17px;
+        }
+        a { color: var(--accent); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        
+        .header {
+            background: linear-gradient(135deg, #0d1117 0%, #1a2035 50%, #0d1117 100%);
+            border-bottom: 1px solid var(--border);
+            padding: 60px 20px 40px;
+            text-align: center;
+        }
+        .header .badge {
+            display: inline-block;
+            background: rgba(88,166,255,0.12);
+            color: var(--accent);
+            padding: 4px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            margin-bottom: 16px;
+            border: 1px solid rgba(88,166,255,0.3);
+        }
+        .header h1 {
+            font-size: 32px;
+            line-height: 1.3;
+            max-width: 800px;
+            margin: 0 auto 16px;
+            background: linear-gradient(135deg, #fff 0%, #8b949e 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .header .meta {
+            color: var(--muted);
+            font-size: 14px;
+            margin-bottom: 16px;
+        }
+        .header .tags { display: flex; justify-content: center; gap: 8px; flex-wrap: wrap; }
+        .header .tag {
+            background: var(--card);
+            border: 1px solid var(--border);
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-size: 12px;
+            color: var(--muted);
+        }
+        
+        .container { max-width: 720px; margin: 0 auto; padding: 40px 20px 60px; }
+        
+        .lead {
+            font-size: 20px;
+            color: var(--text);
+            border-left: 3px solid var(--green);
+            padding: 20px 24px;
+            margin: 32px 0;
+            background: rgba(63,185,80,0.08);
+            border-radius: 0 8px 8px 0;
+            line-height: 1.8;
+        }
+        
+        h2 {
+            font-size: 24px;
+            margin: 48px 0 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--border);
+            color: var(--text);
+        }
+        
+        h3 {
+            font-size: 19px;
+            margin: 32px 0 14px;
+            color: var(--purple);
+        }
+        
+        p { margin-bottom: 18px; color: #c9d1d9; }
+        
+        .highlight-box {
+            background: rgba(88,166,255,0.08);
+            border: 1px solid rgba(88,166,255,0.3);
+            border-radius: 12px;
+            padding: 24px;
+            margin: 28px 0;
+        }
+        .highlight-box h4 {
+            color: var(--accent);
+            font-size: 16px;
+            margin-bottom: 12px;
+        }
+        .highlight-box p { margin-bottom: 0; color: var(--muted); }
+        
+        .stats-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            margin: 28px 0;
+        }
+        .stat-box {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+        }
+        .stat-box .number { font-size: 28px; font-weight: 700; color: var(--green); }
+        .stat-box .label { font-size: 13px; color: var(--muted); margin-top: 6px; }
+        
+        .case-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+            margin: 24px 0;
+        }
+        .case-card h4 { color: var(--green); font-size: 17px; margin-bottom: 10px; }
+        .case-card p { margin-bottom: 8px; }
+        
+        .prompt-box {
+            background: #0a0e17;
+            border: 1px solid #238636;
+            border-left: 4px solid #3fb950;
+            border-radius: 0 8px 8px 0;
+            padding: 20px;
+            margin: 20px 0;
+            font-family: "SF Mono", "Consolas", monospace;
+            font-size: 14px;
+            white-space: pre-wrap;
+            color: #c9d1d9;
+            line-height: 1.7;
+        }
+        .prompt-box .label {
+            color: var(--green);
+            font-size: 12px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        .cta-box {
+            background: linear-gradient(135deg, rgba(16,185,129,0.15) 0%, rgba(14,165,233,0.1) 100%);
+            border: 2px solid var(--green);
+            border-radius: 16px;
+            padding: 32px;
+            text-align: center;
+            margin: 40px 0;
+        }
+        .cta-box h3 { color: var(--green); font-size: 20px; margin: 0 0 8px; }
+        .cta-box p { color: var(--muted); font-size: 14px; margin-bottom: 20px; }
+        .cta-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #238636, #2ea043);
+            color: #fff;
+            padding: 14px 40px;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 700;
+            text-decoration: none;
+        }
+        .cta-btn:hover { opacity: 0.85; text-decoration: none; color: #fff; }
+        
+        .footer {
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 1px solid var(--border);
+            color: var(--muted);
+            font-size: 14px;
+        }
+        
+        @media (max-width: 600px) {
+            .header h1 { font-size: 24px; }
+            .stats-row { grid-template-columns: 1fr; }
+        }
+    </style>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "PostgreSQL秒变图数据库：2天128★的pgGraph让我想到了几种变现思路",
+        "description": "2天128星，64★/天增速，Rust写的PostgreSQL图查询扩展。不搬家、不换语言，在原有表上直接跑图算法。普通人怎么用它赚钱？",
+        "author": {
+            "@type": "Person",
+            "name": "AiToollab",
+            "url": "https://github.com/AiToollab"
+        },
+        "datePublished": "2026-05-16T00:00:00+08:00",
+        "dateModified": "2026-05-16T00:00:00+08:00",
+        "publisher": {
+            "@type": "Organization",
+            "name": "AiToollab",
+            "url": "https://www.aitoollab.top"
+        },
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://www.aitoollab.top/articles/cases/pggraph-postgres-graph-extension/"
+        }
+    }
+    </script>
+</head>
+<body>
+
+<header class="header">
+    <div class="badge">💰 赚钱案例</div>
+    <h1>PostgreSQL秒变图数据库：2天128★的pgGraph让我想到了几种变现思路</h1>
+    <div class="meta">2026-05-16 · 5分钟阅读</div>
+    <div class="tags">
+        <span class="tag">pgGraph</span>
+        <span class="tag">PostgreSQL</span>
+        <span class="tag">图数据库</span>
+        <span class="tag">Rust</span>
+        <span class="tag">开源</span>
+    </div>
+</header>
+
+<div class="container">
+
+<div class="lead">
+说出来我自己都有点懵。
+
+我平时是不怎么关注数据库类项目的，但前两天刷GitHub Trending的时候，这个叫pgGraph的东西直接把我看愣了。2天128个星，64★/天增速，Rust写的，核心功能是——在你的PostgreSQL表上直接跑图查询，不需要搬家，不需要换数据库，什么都不需要改。
+
+我当时就愣住了。
+
+这不对劲啊，正常这种底层infra项目，星涨得没这么快的。肯定有什么东西打中了开发者的痛点。
+</div>
+
+<p>我花了大半个晚上把这个项目的README和文档全看完了，越看越觉得这玩意有点意思。不是那种"又一个人云亦云的AI项目"，是真的在解决一个很具体的问题。</p>
+
+<h2>pgGraph是什么</h2>
+
+<p>简单说，pgGraph是一个PostgreSQL扩展。它干的事情很纯粹——在你现有的PostgreSQL表上，加一层图查询的能力。</p>
+
+<p>什么叫图查询？</p>
+
+<p>你数据库里有一堆用户表、订单表、商品表，它们之间通过外键关联。传统SQL查"Alice的订单里有哪些商品"没问题，但查"Alice和Bob之间有没有共同买过的商品，通过几个朋友认识的"，这种多跳关系查询，传统SQL写起来就很痛苦，要写递归CTE，要一层层JOIN，写完自己都看不懂。</p>
+
+<p>图数据库就是来解决这个的。但问题是你得把数据从PostgreSQL搬到Neo4j之类的图数据库里，数据要冗余存储，还要学Cypher查询语言。</p>
+
+<p>pgGraph说，不需要。你现有的表别动，跑一个<code>graph.build()</code>，它会基于你现有的外键关系，自动构建一个图索引。然后你用SQL函数调用图算法，什么最短路径、几度关系，直接查。</p>
+
+<div class="prompt-box">
+<span class="label">核心SQL函数</span>-- 在你的PostgreSQL表上构建图
+SELECT graph.build('users', 'posts', 'comments');
+
+-- 查"Alice在2度关系内认识哪些人"
+SELECT * FROM graph.search(
+  start_node =&gt; 'users:alice',
+  max_depth  =&gt; 2,
+  edge_labels =&gt; ARRAY['follows', 'likes', 'comments']
+);
+
+-- 查两个用户之间的最短路径
+SELECT * FROM graph.shortest_path('users:alice', 'users:bob');
+</div>
+
+<p>不需要迁数据，不需要学新语言，就在你用了几年的PostgreSQL上，直接原生SQL调用图算法。</p>
+
+<h2>技术上的亮点</h2>
+
+<p>我仔细看了它的技术实现，有几个点确实有点东西。</p>
+
+<p>第一个是CSR（压缩稀疏行）存储。图遍历最怕的就是每次找邻居都要去数据库里查，CSR把节点的所有邻居存在一段连续的内存里，查询的时候直接内存扫描，不用再走索引。所以它声称遍历速度"接近内存速度"，不是吹的。</p>
+
+<p>第二个是mmap。pgGraph把图数据写成文件，查询的时候直接内存映射，操作系统帮你做缓存。这和传统数据库的共享缓存不一样，每个PostgreSQL后端进来都直接映射同一个文件，启动快，不重复占用内存。</p>
+
+<p>第三个是安全Guard。官方明确说了，图遍历如果没限制可以直接把数据库查崩。pgGraph内置了深度限制、节点访问上限、内存上限这些东西，防止你的服务器被自己的图查询干掉。</p>
+
+<p>整体看下来技术选型很扎实，Rust写的，性能敏感的部分全在Rust层，SQL层只做调度。早期alpha版本，文档和Playground都有了，quickstart脚本一条命令起Docker环境。</p>
+
+<h2>为什么我觉得它值得写</h2>
+
+<p>不是因为它技术上多牛，而是因为它踩中了一个很实在的场景。</p>
+
+<p>现在有多少公司是用PostgreSQL的？我查了一下，光是2024年DB-Engines的排名，PostgreSQL已经稳居前五，在关系型数据库里更是常年老二。无数公司的核心业务数据都在PostgreSQL里，但当他们想做图分析的时候，唯一的出路就是上Neo4j，数据要搬，应用要改。</p>
+
+<p>pgGraph说不用。你不用搬，我直接在你的数据库上长出图能力来。</p>
+
+<p>这个价值主张非常清晰。我当时看到这里就感觉，这玩意如果能成，在中小企业市场会有很大吸引力——成本低，迁移风险低，团队不用学新东西。</p>
+
+<h2>普通人怎么用它赚钱</h2>
+
+<p>好，重点来了。结合我对这个项目的理解，我列了几种可能的变现思路，不保证都能跑通，但至少都是基于项目实际能力在想的。</p>
+
+<h3>方式一：PostgreSQL图查询技术服务</h3>
+
+<p>这是最直接的一个方向。</p>
+
+<p>很多中小公司用着PostgreSQL，现在突然发现不用搬家就能有图能力了，但他们自己可能没有懂pgGraph的工程师。这个时间差就是机会。</p>
+
+<p>你可以做什么：帮企业评估是否适合用pgGraph，做概念验证（PoC），协助生产环境部署，调优图查询性能。这块的市场参考价，PostgreSQL相关的DBA驻场服务一天3000-5000不等，如果是高级技术咨询更高。</p>
+
+<p>关键是要跑通几个常见场景的Demo，比如社交关系图、推荐系统里的关联分析、风控的关联欺诈检测。有Demo在手，谈单的时候直接演示，比PPT有说服力多了。</p>
+
+<h3>方式二：垂直行业图数据SaaS工具</h3>
+
+<p>pgGraph解决的是"怎么查"的问题，但它不管"谁来用"和"用在哪"。</p>
+
+<p>你可以基于pgGraph，针对某个垂直行业封装一层自己的SaaS。</p>
+
+<p>比如电商场景：构建"商品关联图"、"用户社交购买图"，提供"买了A的人还买了B"、"通过KOL找到目标用户群"这类业务层的图查询服务，按查询次数或订阅收费。</p>
+
+<p>比如医疗或学术：帮助研究机构构建论文引用图、药物相互作用图，提供"这篇论文的上下游研究链"、"这个靶点跟哪些已知药物有关联"这类专业查询服务。</p>
+
+<p>这块需要一定的行业积累，但好处是护城河高，一旦跑通就是稳定订阅收入。</p>
+
+<h3>方式三：图数据库培训和教育内容</h3>
+
+<p>这个方向被很多人忽略了。</p>
+
+<p>pgGraph本质上是在降低图数据库的使用门槛——不需要学新语言，不需要搬数据，不需要建新系统。任何会用SQL的人都可以开始玩图查询。</p>
+
+<p>这意味着目标用户群突然变大了。传统的图数据库培训，受众是数据工程师和数据科学家；但pgGraph的培训，受众可以是任何会用SQL的业务分析师、产品经理、数据运营。</p>
+
+<p>你可以出系列教程，做视频课，或者做企业内训。光是一个"PostgreSQL图查询入门"的系列课，如果定价999元/人，招募200个学员就是20万的收入。而且边际成本接近零。</p>
+
+<p>结合现在各大厂都在推"全民数据素养"的大背景，这个方向的窗口期可能就在这两年。</p>
+
+<h3>方式四：贡献上游功能，做pgGraph生态插件</h3>
+
+<p>pgGraph现在是早期alpha版本，功能还在快速演进中。GitHub上明确写着"early alpha, feedback welcome"。</p>
+
+<p>这意味着社区参与的空间很大。</p>
+
+<p>你可以去研究它的源码，找到不完善的地方，提交PR。或者针对特定场景（比如LDBC基准测试的某个数据集）做专门的优化，把自己的实现推回去。</p>
+
+<p>这样做的好处是什么？积累声誉，建立技术影响力，顺便可能拿到官方背书。等项目成熟了，早期贡献者的名字会留在Credit里，这个就是长期资产——能帮你接到更好的咨询单子，或者直接在社区里建立个人品牌。</p>
+
+<div class="stats-row">
+    <div class="stat-box">
+        <div class="number">128★</div>
+        <div class="label">2天获得Star数</div>
+    </div>
+    <div class="stat-box">
+        <div class="number">64★/天</div>
+        <div class="label">日均增速</div>
+    </div>
+    <div class="stat-box">
+        <div class="number">Rust</div>
+        <div class="label">核心语言</div>
+    </div>
+</div>
+
+<h2>我的判断</h2>
+
+<p>pgGraph这个项目，方向是对的。降低门槛、不搬家、SQL原生——这三个点加起来，对中小企业和个人开发者来说，决策成本非常低。</p>
+
+<p>但也有风险，需要说清楚。</p>
+
+<p>首先，它是早期alpha，生产环境直接用有风险，企业客户可能会观望。其次，PostgreSQL 19原生带了SQL/PGQ的图查询语法支持，pgGraph的文档里也承认了这一点，说"它们是互补的，未来可以对接"。这说明竞争不只是开源社区，官方也在往这个方向走。最后，技术门槛摆在这里，Rust写的，核心引擎是内存结构和算法，想快速吃透需要时间。</p>
+
+<p>我的建议是，如果你是做数据库服务的，或者有PostgreSQL背景的，这个方向值得研究一下。不是现在就能赚大钱，但方向对了，窗口期在，积累在，机会来的时候才能接住。</p>
+
+<p>如果你不是技术背景的，光看这个项目觉得有意思，可以先动手跑一遍quickstart，感受一下"不用搬家就能查图"是什么体验。门槛真的不高。</p>
+
+<div class="highlight-box">
+    <h4>项目速览</h4>
+    <p>GitHub：<a href="https://github.com/Evokoa/pgGraph">Evokoa/pgGraph</a><br>
+    语言：Rust + PostgreSQL扩展<br>
+    特点：不搬数据，SQL原生调用图算法<br>
+    现状：早期alpha，已有Playground和完整文档<br>
+    装起来试试：一条命令起Docker环境</p>
+</div>
+
+<div class="cta-box">
+    <h3>想第一时间看到这类项目分析？</h3>
+    <p>关注AiToollab，每周一篇开源项目变现拆解</p>
+    <a href="/prompt-pack/" class="cta-btn">看看提示词包</a>
+</div>
+
+<div class="footer">
+    <p>以上，既然看到这里了，如果觉得不错，随手点个赞、在看、转发三连吧。</p>
+    <p>谢谢你看我的文章，我们，下次再见。</p>
+</div>
+
+</div>
+
+</body>
+</html>
