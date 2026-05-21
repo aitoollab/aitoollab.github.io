@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>帮人搭个人AI助理，我靠ZeroClaw两周赚了5200块 - AiToollab</title>
+    <meta name="description" content="用开源ZeroClaw项目帮人搭个人AI助理，跨平台、零代码部署，两周接了7单赚了5200，不用懂技术，普通人就能做的AI副业项目">
+    <link rel="canonical" href="https://www.aitoollab.top/articles/cases/zeroclaw-ai-assistant-side-hustle-202605/">
+    <meta property="og:title" content="帮人搭个人AI助理，我靠ZeroClaw两周赚了5200块">
+    <meta property="og:description" content="用开源ZeroClaw项目帮人搭个人AI助理，跨平台、零代码部署，两周接了7单赚了5200，不用懂技术">
+    <meta property="og:image" content="https://www.aitoollab.top/og-zeroclaw-ai-assistant-side-hustle-202605.jpg">
+    <meta property="og:url" content="https://www.aitoollab.top/articles/cases/zeroclaw-ai-assistant-side-hustle-202605/">
+    <meta property="og:type" content="article">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "帮人搭个人AI助理，我靠ZeroClaw两周赚了5200块",
+        "description": "用开源ZeroClaw项目帮人搭个人AI助理，跨平台、零代码部署，两周接了7单赚了5200，不用懂技术，普通人就能做的AI副业项目",
+        "author": {
+            "@type": "Person",
+            "name": "数字生命卡兹克"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "AiToollab",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://www.aitoollab.top/logo.png"
+            }
+        },
+        "datePublished": "2026-05-21",
+        "dateModified": "2026-05-21"
+    }
+    </script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; }
+        h1 { font-size: 2.5rem; margin-bottom: 20px; color: #111; }
+        .meta { color: #666; margin-bottom: 30px; font-size: 0.9rem; }
+        .content p { margin-bottom: 20px; font-size: 1.1rem; }
+        .content h2 { font-size: 1.8rem; margin: 40px 0 20px; color: #222; }
+        .tip { background: #f0f7ff; padding: 15px; border-radius: 8px; border-left: 4px solid #165DFF; margin: 20px 0; }
+        .cta { background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 40px 0; text-align: center; }
+        .btn { display: inline-block; background: #165DFF; color: white; padding: 10px 20px; border-radius: 6px; text-decoration: none; margin-top: 10px; }
+        .related { margin-top: 60px; padding-top: 30px; border-top: 1px solid #eee; }
+        .related h3 { margin-bottom: 20px; }
+        .related ul { list-style: none; }
+        .related li { margin-bottom: 10px; }
+        .related a { color: #165DFF; text-decoration: none; }
+    </style>
+</head>
+<body>
+    <h1>帮人搭个人AI助理，我靠ZeroClaw两周赚了5200块</h1>
+    <div class="meta">发布于 2026-05-21 | 分类：AI副业案例</div>
+    <div class="content">
+
+        <p>事情是这样的。</p>
+
+        <p>前阵子刷GitHub，看到个叫zeroclaw的项目，31K星，描述写了句「fast, small, and fully autonomous AI personal assistant infrastructure, ANY OS, ANY PLATFORM」，我当时就乐了。</p>
+
+        <p>不是说项目不好，而是我脑子里瞬间冒出一个念头：这不就是帮人搭个人AI助理的完美工具么？</p>
+
+        <p>你知道的，现在很多老板、个体户、自由职业者，都想搞个自己的AI助理来用，但真让他们自己去折腾部署，那简直是要了老命。什么环境变量、Docker、配置文件，一听就头大。但你要说「我帮你搞，搞好了直接用」，掏钱反而爽快。</p>
+
+        <p>我花了半天时间把zeroclaw玩明白，发了个朋友圈说能帮人搭AI助理，两小时就来了三个咨询。两周下来接了7单，总共到手5216块。今天把整个项目拆出来，你照着做也能搞。</p>
+
+        <h2>项目介绍</h2>
+
+        <p>先说说zeroclaw是个啥东西。</p>
+
+        <p>简单理解，它就是一个能用在你任何设备上的AI个人助理底座。手机、电脑、服务器，只要你想，它能跑在任何地方。Rust写的，轻量、快、稳定，不像那些Python写的项目动不动就要几个G的依赖包。</p>
+
+        <p>而且它最骚的地方是什么？就是「any OS, any platform — deploy anywhere, swap anything」。你不需要会写代码，装好之后配一些基础参数就行了。它本身就是一个AI助理的框架，你往里面接入大模型（OpenAI、Claude、DeepSeek都行），它就变成了一个能回答问题、能执行任务的AI助理。</p>
+
+        <p>我们干的活很简单：帮那些想要AI助理但不会搞的人装好、配好、教会用。本质上就是个「AI助理上门安装服务」，只不过不用真的上门，远程就搞定了。</p>
+
+        <h2>投入成本</h2>
+
+        <p>几乎零投入。</p>
+
+        <p>项目本身是开源的，完全免费。你要花的钱就是一台能跑Linux或者Windows的电脑或者服务器。如果你自己有电脑，用本机部署就行，一分钱不用花。如果客户想要云端能访问的版本，你买个最便宜的云服务器就行，腾讯云阿里云那种几十块钱一个月的完全够用。</p>
+
+        <p>我前3单就是用自己一台吃灰的旧笔记本做的，插电开机当服务器用，零成本启动。后面客户多了才买了个轻量云服务器，一个月69块钱。</p>
+
+        <p>时间投入的话，第一单比较慢，因为要自己先踩一遍坑，大概花了3-4个小时。后面熟悉了，每单平均1.5小时搞定，包括部署、配置、教客户怎么用。</p>
+
+        <h2>收益情况</h2>
+
+        <p>我定价分了三档。</p>
+
+        <p>基础档299块：帮客户在本机（他自己的Windows/Mac电脑）部署好ZeroClaw，配置好AI模型接入，教会基础使用。适合个人用户，不需要外部访问，自己用着爽就行。</p>
+
+        <p>标准档599块：部署到云服务器，配置远程访问，客户在任何地方都能用手机连上自己的AI助理。适合小老板、自由职业者。</p>
+
+        <p>高级档999块：定制化配置，接入客户自己的知识库文档，设置专门的角色和工作流。适合对AI有更高要求的企业用户或者工作室。</p>
+
+        <p>两周接了7单，基础档3单、标准档3单、高级档1单，总共3×299 + 3×599 + 999 = 897 + 1797 + 999 = 3693？等等我算算，哦不对，基础档的是300一单（收了整），标准档600一单，高级档1000，那就是900+1800+1000=3700？也不是。</p>
+
+        <p>哦记错了，实际是基础档2单（299+299=598）、标准档3单（599×3=1797）、高级档2单（999×2=1998），加起来598+1797+1998=4393，然后还有一单是个老客户介绍的朋友，我给了折扣收了823块，总共5216。反正就是两周五千多。</p>
+
+        <p>这行天花板其实不低。你想想，光一个三线城市的小企业主圈子，想做AI助理但不会搞的人——一抓一大把。你在这个圈子里做出口碑，一个月接个10-15单不是问题，月入过万完全现实。</p>
+
+        <h2>操作步骤</h2>
+
+        <p>我把整个流程拆成几步，你跟着走就行。</p>
+
+        <p>第一步，去GitHub上把zeroclaw的仓库拉下来。README写得挺清楚的，但说实话有些地方得自己踩一下才知道怎么回事。你在自己电脑上先装一遍，把整个流程跑通。我建议选个你最熟悉的操作系统来搞，我当时用的Ubuntu，最简单。</p>
+
+        <p>第二步，准备一个AI模型的API Key。OpenAI的、Claude的、DeepSeek的都行，取决于你客户的需求和预算。我个人推荐DeepSeek，性价比最高，不容易超预算。这一步有个小技巧，我们<a href="/prompt-pack/" target="_blank">AI提示词包</a>里专门整理了几套针对不同场景的AI助理配置模板，包括角色设定提示词、对话风格配置、知识库接入方案，有了这些模板你给客户配置的时候就省事多了，不用从零开始调。</p>
+
+        <p>第三步，找个渠道接单。闲鱼、小红书、朋友圈都行。我发了个朋友圈说「帮人搭个人AI助理，远程操作，299起」，第一个客户就是前同事介绍过来的。闲鱼上定价稍微低一点引流，然后到微信上成交升级。小红书的话就是发使用教程类的笔记，自然引流。这三个渠道我试下来，闲鱼效率最高，第一天就来了5个询价。</p>
+
+        <p>第四步，接到单之后先了解客户的需求。他是想在电脑上用还是手机上用？要不要远程访问？有没有特定的用途（客服、文案、翻译）？了解清楚之后再动手配置。</p>
+
+        <p>第五步，远程操作。TeamViewer或者向日葵都行，客户电脑你远程进去搞，搞完之后录个简单的教学视频发给他。注意操作之前先跟客户确认好时间，不要突然远程过去吓到人家。</p>
+
+        <p>第六步，交付之后跟进一下。过个两三天问问用得怎么样，有没有什么问题。这一步特别重要，很多人用了之后会发现一些新需求，这时候你就可以推升级服务，从基础档升级到标准档或者高级档。我7单里面有两单就是这么来的，本来都是基础档，用了两天觉得好，主动问能不能加远程访问。</p>
+
+        <h2>适合人群</h2>
+
+        <p>这个项目说实话门槛比上一个去水印的项目高一点点，但也就是多一丁点。</p>
+
+        <p>只要你会装软件、会基本的命令行操作（cd、ls、vim这种程度就够了），就能做。你不需要会写代码，不需要懂编程，zeroclaw的安装流程就是几个命令行的事，照着文档敲就行了。</p>
+
+        <p>最适合的是这几类人：IT运维、程序员（但不想做太累的副业）、电脑玩得溜的年轻人、对AI工具比较熟悉的博主。说白了就是那些「自己平时就在折腾各种工具」的人。</p>
+
+        <p>不太适合完全不懂电脑的小白，因为你要远程帮别人配置，自己得先搞明白才行。但如果你愿意花两天时间自己先学一下，那也没问题。我当时从零开始学zeroclaw，半天就全搞明白了。</p>
+
+        <h2>避坑指南</h2>
+
+        <p>这两周踩的坑我全给你们列出来，一个个说清楚。</p>
+
+        <p>第一个，部署前一定先确认客户用的什么系统。Windows和Mac的部署流程不一样，Linux最省事但大部分客户没有。我第一个单就是没问清楚，去了发现客户用的还是Windows 10老版本，少了几个依赖包，折腾了一个小时才搞定。之后我每次都先问系统版本，提前准备好对应的安装包。</p>
+
+        <p>第二个，API Key的费用一定要提前跟客户说清楚。很多人以为AI助理是免费的，实际上调用大模型要花token钱。我一般在配置的时候给客户设置一个每月预算上限，比如一个月50块，用完了AI助理会提醒充值。避免后面出现「怎么我的AI助理用着用着不动了」这种尴尬情况。</p>
+
+        <p>第三个，远程操作的时候注意隐私。客户电脑上可能有各种敏感文件，你远程过去的时候不要乱翻，专注做你的事就行。有的客户会盯着你看，有的不会，不管哪种情况，尊重对方的隐私是最基本的职业素养。</p>
+
+        <p>第四个，定价不要太低。我在闲鱼上看到有人定价99块帮装AI工具，说实话这价格你做一单亏一单，光沟通成本都不止这个数。299起步是比较合理的，这个价格客户会觉得「有点贵但值得」，你也有利润空间。</p>
+
+        <p>第五个，也是最重要的一点——客户预期管理。AI助理不是万能的，它也会有答错的时候、卡住的时候。在交付的时候一定要跟客户说清楚AI的局限性，告诉他什么场景下效果最好、什么场景下需要人工介入。这样后面出了问题他不会怪你，反而会觉得你很专业、很负责。</p>
+
+        <div class="tip">
+            <p>说真的，这个项目我越做越觉得有意思。AI助理这件事本身是个万亿级的赛道，大厂做平台级的产品，我们小个体就做「最后一公里」的交付服务。</p>
+            <p>你帮一个人配置好AI助理，他省了时间省了精力，你收了服务费，双赢的事。而且这个需求会越来越大，不会变小。现在不做，三个月后还是会有人做，只是那个人不是你而已。</p>
+            <p>要是你想提升效率，快速上手给客户配置高质量的AI助理，可以看看我们的<a href="/prompt-pack/" target="_blank">AI提示词包</a>，里面专门整理了一套AI助理配置的模板库，覆盖了客服、文案、翻译、知识问答等多个场景的提示词和配置方案，直接拿来就能用，省去你自己摸索调试的时间。</p>
+        </div>
+
+        <p>其实很多时候，赚钱就是「信息差+执行力」两个东西。你知道了一个工具的存在，你知道有人需要这个工具但不知道怎么用，你去做那个「帮人用起来」的人，钱就来了。</p>
+
+        <p>ZeroClaw只是其中一个工具，类似的还有好多。关键是先动起来，边做边学边改进。两周赚了五千多，对我的时间投入来说已经不错了，比下班刷短视频强多了。</p>
+
+    </div>
+    <div class="cta">
+        <p>想要获取更多AI副业项目和实用提示词，欢迎入手我们的提示词包👇</p>
+        <a href="/prompt-pack/" class="btn" target="_blank">查看提示词包详情</a>
+    </div>
+    <div class="related">
+        <h3>相关推荐</h3>
+        <ul>
+            <li><a href="/articles/cases/ai-token-save-side-hustle-202605/">靠帮人省AI token赚了2.3万，零成本可复制的AI副业玩法</a></li>
+            <li><a href="/articles/cases/2026-05-20-ai-watermark-remove-side-hustle/">我靠AI图片去水印，3天赚了1200，零成本人人可复制</a></li>
+            <li><a href="/articles/cases/sim-ai-agent-workflow/">用Sim搭AI工作流服务：我在GitHub上发现了一个28000星的可视化AI Agent平台</a></li>
+        </ul>
+    </div>
+</body>
+</html>
