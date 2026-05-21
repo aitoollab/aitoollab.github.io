@@ -4,28 +4,88 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="canonical" href="https://www.aitoollab.top/articles/startup-100/">
-    <title>$100 AI创业实验追踪｜AiToollab</title>
-    <meta name="description" content="$100 AI创业实验，真实数据记录，不吹牛">
+    <title>AI工具真实测评｜AiToollab</title>
+    <meta name="description" content="最新AI工具的真实测评，包括功能体验、价格对比、优缺点分析，帮你找到适合自己的AI工具">
     <meta name="robots" content="index, follow">
     <link rel="alternate" hreflang="x-default" href="https://www.aitoollab.top/articles/startup-100/">
     <link rel="alternate" hreflang="zh-CN" href="https://www.aitoollab.top/articles/startup-100/">
-    <meta property="og:title" content="$100 AI创业实验追踪｜AiToollab">
-    <meta property="og:description" content="$100 AI创业实验，用真实数据验证AI副业可行性。每周记录收支、工具、策略，不吹牛。">
-    <meta property="og:image" content="https://www.aitoollab.top/og-startup-100.jpg">
+    <meta property="og:title" content="AI工具真实测评｜AiToollab">
+    <meta property="og:description" content="最新AI工具的真实测评，包括功能体验、价格对比、优缺点分析，帮你找到适合自己的AI工具">
+    <meta property="og:image" content="https://www.aitoollab.top/og-articles.jpg">
     <meta property="og:url" content="https://www.aitoollab.top/articles/startup-100/">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="$100 AI创业实验追踪｜AiToollab">
-    <meta name="twitter:description" content="$100 AI创业实验，真实数据记录，不吹牛。">
-    <meta name="twitter:image" content="https://www.aitoollab.top/og-startup-100.jpg">
+    <meta name="twitter:title" content="AI工具真实测评｜AiToollab">
+    <meta name="twitter:description" content="最新AI工具的真实测评，包括功能体验、价格对比、优缺点分析，帮你找到适合自己的AI工具">
+    <meta name="twitter:image" content="https://www.aitoollab.top/og-articles.jpg">
+    <meta property="og:title:en" content="🧪 实验测评 | AiToollab" />
+    <meta property="og:description:en" content="最新AI工具的真实测评，包括功能体验、价格对比、优缺点分析，帮你找到适合自己的AI工具" />
+    <meta name="description:en" content="最新AI工具的真实测评，包括功能体验、价格对比、优缺点分析，帮你找到适合自己的AI工具" />
+    <style>
+        :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --muted: #8b949e; --accent: #f97316; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif; background: var(--bg); color: var(--text); line-height: 1.8; font-size: 16px; }
+        a { color: var(--accent); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        header.page-header { text-align: center; padding: 60px 20px 40px; border-bottom: 1px solid var(--border); }
+        header.page-header h1 { font-size: 32px; margin-bottom: 12px; }
+        header.page-header .subtitle { color: var(--muted); font-size: 16px; max-width: 600px; margin: 0 auto; }
+        header.page-header .count { display: inline-block; background: rgba(255,255,255,0.06); padding: 4px 12px; border-radius: 20px; font-size: 13px; color: var(--muted); margin-top: 12px; }
+        nav.section-nav { display: flex; justify-content: center; gap: 4px; padding: 16px 20px; border-bottom: 1px solid var(--border); background: var(--card); position: sticky; top: 0; z-index: 100; }
+        nav.section-nav a { color: var(--muted); font-size: 14px; padding: 8px 16px; border-radius: 8px; transition: all .2s; }
+        nav.section-nav a:hover { color: var(--text); background: rgba(255,255,255,0.05); text-decoration: none; }
+        nav.section-nav a.active { color: var(--text); background: rgba(37,99,235,0.2); }
+        nav.section-nav a[data-section="news"] { color: var(--accent); border: 1px solid rgba(255,255,255,0.15); }
+        .container { max-width: 860px; margin: 0 auto; padding: 40px 20px; }
+        .article-grid { display: flex; flex-direction: column; gap: 16px; }
+        .article-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; transition: border-color .2s; }
+        .article-card:hover { border-color: var(--accent); }
+        .article-card .card-title { font-size: 17px; font-weight: 600; margin-bottom: 10px; }
+        .article-card .card-title a { color: var(--text); }
+        .article-card .card-title a:hover { color: var(--accent); text-decoration: none; }
+        .article-card .card-desc { color: var(--muted); font-size: 14px; margin-bottom: 12px; line-height: 1.6; }
+        .article-card .card-meta { display: flex; gap: 16px; font-size: 13px; color: var(--muted); align-items: center; }
+        .article-card .card-tag { background: rgba(255,255,255,0.06); padding: 3px 10px; border-radius: 6px; }
+        .back-link { text-align: center; margin-top: 40px; }
+        .back-link a { color: var(--muted); font-size: 14px; }
+        #back-to-top{position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;background:#2563eb;color:#fff;border:none;cursor:pointer;font-size:18px;opacity:0;transition:opacity .3s;z-index:999;pointer-events:none}
+        #back-to-top.show{opacity:.85;pointer-events:auto}
+        #back-to-top:hover{opacity:1}
+        @media (max-width: 600px) { header.page-header h1 { font-size: 26px; } }
+    </style>
+</head>
+<body>
+<header class="page-header">
+    <h1>🧪 🧪 实验测评</h1>
+    <p class="subtitle">最新AI工具的真实测评，包括功能体验、价格对比、优缺点分析，帮你找到适合自己的AI工具</p>
+    <span class="count">5篇</span>
+</header>
+<nav class="section-nav">
+    <a href="/tutorials/">💡 教程</a>
+    <a href="/articles/news/" data-section="news">🔥 热点</a>
+    <a href="/articles/cases/">💰 案例</a>
+    <a href="/articles/startup-100/" data-section="startup-100">🧪 实验</a>
+    <a href="/articles/">全部</a>
+</nav>
+<div class="container">
+<div class="category-intro" style="background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 32px;">
+    <h2 style="margin-bottom: 16px; font-size: 20px;">📰 本分类包含什么内容？</h2>
+    <p style="margin-bottom: 12px; color: var(--text);">最新AI工具的真实测评，包括功能体验、价格对比、优缺点分析，帮你找到适合自己的AI工具</p>
+    <ul style="margin: 16px 0 0 20px; color: var(--muted);">
+        <li style="margin-bottom: 8px;">✅ 每天更新最新的AI行业热点和新工具发布消息</li>
+        <li style="margin-bottom: 8px;">✅ 深度解读热点事件背后的赚钱机会和行业趋势</li>
+        <li style="margin-bottom: 8px;">✅ 所有内容都是原创分析，不是复制粘贴的新闻通稿</li>
+    </ul>
+</div>
+<div class="article-grid">
     <script type="application/ld+json">
 {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
     "@id": "https://www.aitoollab.top/articles/startup-100/",
     "url": "https://www.aitoollab.top/articles/startup-100/",
-    "name": "🧪 $100实验追踪｜AiToollab",
-    "description": "$100 AI创业实验，真实数据记录，不吹牛",
+    "name": "🧪 实验测评｜AiToollab",
+    "description": "最新AI工具的真实测评，包括功能体验、价格对比、优缺点分析，帮你找到适合自己的AI工具",
     "isPartOf": {
         "@id": "https://www.aitoollab.top/"
     },
@@ -60,25 +120,25 @@
                 "@type": "ListItem",
                 "position": 5,
                 "url": "https://www.aitoollab.top/articles/startup-100/2026-05-07-100-ai-startup-week-3/",
-                "name": "$100 AI创业实验追踪 Week 3｜DeepClaude一夜涨星1500，树莓派开始自己写代码"
+                "name": "$100 AI创业实验追踪 Week 3 | DeepClaude一夜涨星1500，树莓派开始自己写代码"
             },
             {
                 "@type": "ListItem",
                 "position": 6,
                 "url": "https://www.aitoollab.top/articles/startup-100/2026-05-01-100-ai-startup-week-5/",
-                "name": "$100 AI创业实验追踪 Week 2｜OpenCode爆发，有人被AI写了黑稿"
+                "name": "$100 AI创业实验追踪 Week 2"
             },
             {
                 "@type": "ListItem",
                 "position": 7,
-                "url": "https://www.aitoollab.top/articles/startup-100/100-ai-startup-week2/",
-                "name": "$100 AI创业实验追踪 Week 1｜Claude反超Gemini，GitHub冒出3个明星项目"
+                "url": "https://www.aitoollab.top/articles/startup-100/ai-startup-100/",
+                "name": "$100 AI创业实验追踪 Week 1"
             },
             {
                 "@type": "ListItem",
                 "position": 8,
-                "url": "https://www.aitoollab.top/articles/startup-100/ai-startup-100/",
-                "name": "$100 AI创业实验追踪｜7个AI agent谁能跑通赚钱闭环？"
+                "url": "https://www.aitoollab.top/articles/startup-100/100-ai-startup-week2/",
+                "name": "$100 AI创业实验追踪 Week 1"
             },
             {
                 "@type": "ListItem",
@@ -89,168 +149,60 @@
         ]
     }
 }
-</script>
-    <style>
-        :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --muted: #8b949e; --accent: #f0b429; }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif; background: var(--bg); color: var(--text); line-height: 1.8; font-size: 16px; }
-        a { color: var(--accent); text-decoration: none; }
-        a:hover { text-decoration: underline; }
-
-        header.page-header { text-align: center; padding: 60px 20px 40px; border-bottom: 1px solid var(--border); }
-        header.page-header h1 { font-size: 32px; margin-bottom: 12px; }
-        header.page-header .subtitle { color: var(--muted); font-size: 16px; max-width: 600px; margin: 0 auto; }
-        header.page-header .count { display: inline-block; background: rgba(255,255,255,0.06); padding: 4px 12px; border-radius: 20px; font-size: 13px; color: var(--muted); margin-top: 12px; }
-
-        nav.section-nav { display: flex; justify-content: center; gap: 4px; padding: 16px 20px; border-bottom: 1px solid var(--border); background: var(--card); position: sticky; top: 0; z-index: 100; }
-        nav.section-nav a { color: var(--muted); font-size: 14px; padding: 8px 16px; border-radius: 8px; transition: all .2s; }
-        nav.section-nav a:hover { color: var(--text); background: rgba(255,255,255,0.05); text-decoration: none; }
-        nav.section-nav a.active { color: var(--text); background: rgba(37,99,235,0.2); }
-        nav.section-nav a[data-section="startup-100"] { color: var(--accent); border: 1px solid rgba(255,255,255,0.15); }
-
-        .container { max-width: 860px; margin: 0 auto; padding: 40px 20px; }
-        .article-grid { display: flex; flex-direction: column; gap: 16px; }
-        .article-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; transition: border-color .2s; }
-        .article-card:hover { border-color: var(--accent); }
-        .article-card .card-title { font-size: 17px; font-weight: 600; margin-bottom: 10px; }
-        .article-card .card-title a { color: var(--text); }
-        .article-card .card-title a:hover { color: var(--accent); text-decoration: none; }
-        .article-card .card-desc { color: var(--muted); font-size: 14px; margin-bottom: 12px; line-height: 1.6; }
-        .article-card .card-meta { display: flex; gap: 16px; font-size: 13px; color: var(--muted); align-items: center; }
-        .article-card .card-tag { background: rgba(255,255,255,0.06); padding: 3px 10px; border-radius: 6px; }
-
-        .back-link { text-align: center; margin-top: 40px; }
-        .back-link a { color: var(--muted); font-size: 14px; }
-
-        #back-to-top{position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;background:#2563eb;color:#fff;border:none;cursor:pointer;font-size:18px;opacity:0;transition:opacity .3s;z-index:999;pointer-events:none}
-        #back-to-top.show{opacity:.85;pointer-events:auto}
-        #back-to-top:hover{opacity:1}
-
-        @media (max-width: 600px) { header.page-header h1 { font-size: 26px; } }
-    </style>
-
-
-
-
-
-
-
-
-
-
-<meta property="og:title:en" content="AI Tool Reviews | AiToollab" />
-<meta property="og:description:en" content="Real reviews of the latest AI tools, including function experience, price comparison, advantages and disadvantages analysis, help you find suitable AI tools and avoid wasting money" />
-<meta name="description:en" content="Real reviews of the latest AI tools, including function experience, price comparison, advantages and disadvantages analysis, help you find suitable AI tools and avoid wasting money" />
-        
-        
-        
-        
-        
-        
-        
-        
-        
-</head>
-<body>
-
-<header class="page-header">
-    <h1>🧪 $100实验追踪</h1>
-    <p class="subtitle">$100 AI创业实验，真实数据记录，不吹牛</p>
-    <span class="count">5篇</span>
-</header>
-
-<nav class="section-nav">
-    <a href="/tutorials/">💡 教程</a>
-    <a href="/articles/news/">🔥 热点</a>
-    <a href="/articles/cases/">💰 案例</a>
-    <a href="/articles/startup-100/" data-section="startup-100">🧪 实验</a>
-    <a href="/articles/" class="active">全部</a>
-</nav>
-
-<div class="container">
-<div class="category-intro" style="background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 32px;">
-    <h2 style="margin-bottom: 16px; font-size: 20px;">🔬 本分类包含什么内容？</h2>
-    <p style="margin-bottom: 12px; color: var(--text);">这里是最新AI工具的真实测评合集，所有工具我们都亲自付费使用过，包括功能体验、价格对比、优缺点分析，帮你找到适合自己的AI工具，不花冤枉钱。</p>
-    <ul style="margin: 16px 0 0 20px; color: var(--muted);">
-        <li style="margin-bottom: 8px;">✅ 所有工具都亲自付费实测，真实体验没有广告</li>
-        <li style="margin-bottom: 8px;">✅ 包含价格对比、优缺点分析，帮你做购买决策</li>
-        <li style="margin-bottom: 8px;">✅ 每周更新最新的AI工具测评，帮你掌握新工具</li>
-    </ul>
-</div>
-        
-    
-    <div class="article-grid">
-<div class="article-card"><div class="card-title">
+    </script>
+        <div class="article-card"><div class="card-title">
                 <a href="/articles/startup-100/2026-05-14-100-ai-startup-week-4/">$100 AI创业实验追踪 Week 4 | autoresearch 8万星背后，三个新方向正在冒头</a>
             </div>
-            <div class="card-desc">Week 4：Karpathy的autoresearch冲到8万星，caveman砍65% token消耗。本周3个值得盯住的新方向：AI研究自动化、轻量级记忆系统、工程技能库。</div>
+            <div class="card-desc">Week 4：Karpathy的autoresearch冲到8万星，caveman用克罗马农语言砍65% token消耗。。</div>
             <div class="card-meta">
                 <span class="card-tag">实验</span>
                 <span>📅 2026-05-14</span>
             </div>
         </div>
-
-<div class="article-card"><div class="card-title">
-                <a href="/articles/startup-100/2026-05-07-100-ai-startup-week-3/">$100 AI创业实验追踪 Week 3｜DeepClaude一夜涨星1500，树莓派开始自己写代码</a>
+        <div class="article-card"><div class="card-title">
+                <a href="/articles/startup-100/2026-05-07-100-ai-startup-week-3/">$100 AI创业实验追踪 Week 3 | DeepClaude一夜涨星1500，树莓派开始自己写代码</a>
             </div>
-            <div class="card-desc">Week 3：DeepClaude 4天涨星1500，用Claude Code的agent框架跑DeepSeek。树莓派Zero开始自己造agent。这周的信号很明确，大家不满足于用agent，开始造造agent的东西了。</div>
+            <div class="card-desc">Week 3：DeepClaude用Claude Code的agent框架跑DeepSeek，4天涨星1500。树莓派Z。。</div>
             <div class="card-meta">
                 <span class="card-tag">实验</span>
                 <span>📅 2026-05-07</span>
             </div>
         </div>
-
-<div class="article-card"><div class="card-title">
-                <a href="/articles/startup-100/2026-05-01-100-ai-startup-week-5/">$100 AI创业实验追踪 Week 2｜OpenCode爆发，有人被AI写了黑稿</a>
+        <div class="article-card"><div class="card-title">
+                <a href="/articles/startup-100/2026-05-01-100-ai-startup-week-5/">$100 AI创业实验追踪 Week 2</a>
             </div>
-            <div class="card-desc">Week 2：OpenCode冲上HN第一但issue 6000+，有个AI agent给维护者写了篇黑稿然后删了人家数据库。一周发生的事比一个月都精彩。</div>
+            <div class="card-desc">Week 2：OpenCode冲上HN第一但issue 6000+，有个AI agent给维护者写了篇黑稿然后删了人家数。。</div>
             <div class="card-meta">
                 <span class="card-tag">实验</span>
                 <span>📅 2026-05-01</span>
             </div>
         </div>
-
-<div class="article-card"><div class="card-title">
-                <a href="/articles/startup-100/100-ai-startup-week2/">$100 AI创业实验追踪 Week 1｜Claude反超Gemini，GitHub冒出3个明星项目</a>
+        <div class="article-card"><div class="card-title">
+                <a href="/articles/startup-100/ai-startup-100/">$100 AI创业实验追踪 Week 1</a>
             </div>
-            <div class="card-desc">Week 1结果：Gemini SEO策略哑火，注册用户是0。Claude悄悄反超拿到第一批用户。同时GitHub本周冒出superpowers、opencode等3个明星项目。</div>
+            <div class="card-desc">$100 AI创业实验Week 1结果：Gemini SEO策略没流量，Claude悄悄反超。同时GitHub本周冒出3。。</div>
             <div class="card-meta">
                 <span class="card-tag">实验</span>
                 <span>📅 2026-04-30</span>
             </div>
         </div>
-
-<div class="article-card"><div class="card-title">
-                <a href="/articles/startup-100/ai-startup-100/">$100 AI创业实验追踪｜7个AI agent谁能跑通赚钱闭环？</a>
+        <div class="article-card"><div class="card-title">
+                <a href="/articles/startup-100/100-ai-startup-week2/">$100 AI创业实验追踪 Week 1</a>
             </div>
-            <div class="card-desc">7个AI agent各拿100美元，12周内谁能做出盈利项目？Day1实测结果：Kimi建了两个不同项目，Gemini一天写104篇博客。普通人能复制的教训。</div>
+            <div class="card-desc">$100 AI创业实验Week 1结果：Gemini SEO策略没流量，Claude悄悄反超。同时GitHub本周冒出3。。</div>
             <div class="card-meta">
                 <span class="card-tag">实验</span>
-                <span>📅 2026-04-24</span>
+                <span>📅 2026-04-30</span>
             </div>
         </div>
-
-    
-<div class="category-faq" style="margin-top: 40px; padding: 24px; background: var(--card); border: 1px solid var(--border); border-radius: 12px;">
-    <h2 style="margin-bottom: 20px; font-size: 20px;">❓ 常见问题</h2>
-    <div style="margin-bottom: 16px;">
-        <h3 style="margin-bottom: 8px; font-size: 16px;">Q：测评的工具都是免费的吗？</h3>
-        <p style="color: var(--muted);">A：有免费的也有付费的，我们会明确标注价格和是否有免费版，以及性价比分析，帮你判断值不值得买。</p>
     </div>
-    <div style="margin-bottom: 16px;">
-        <h3 style="margin-bottom: 8px; font-size: 16px;">Q：有没有适合普通人的AI工具推荐？</h3>
-        <p style="color: var(--muted);">A：我们会优先测评普通人能用、可以用来赚钱的AI工具，重点关注性价比和实用性，不会推荐华而不实的工具。</p>
-    </div>
-</div>
-        <div class="back-link">
+<div class="back-link">
         <a href="/articles/">← 返回文章总览</a>
     </div>
 </div>
-
 <button id="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="返回顶部">↑</button>
 <script>
 window.addEventListener('scroll',function(){var b=document.getElementById('back-to-top');b.classList.toggle('show',window.scrollY>400);});
 </script>
-
 </body>
 </html>
