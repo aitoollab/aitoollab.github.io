@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>靠帮人用AI优化简历和求职，我两周赚了6800：46K星Career-Ops项目完整拆解 - AiToollab</title>
+    <meta name="description" content="用GitHub 46K星的开源项目Career-Ops帮人做AI简历优化、求职评估和面试准备。零代码基础就能做，两周收入6800的可复制副业拆解。">
+    <link rel="canonical" href="https://www.aitoollab.top/articles/cases/career-ops-46k-star-job-search-service/">
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="Career-Ops, AI求职服务, AI简历优化, AI副业, 帮人找工作赚钱, AI求职副业, Claude Code求职, GitHub副业项目">
+    <meta name="author" content="AiToollab">
+    
+    <meta property="og:title" content="靠帮人用AI优化简历和求职，我两周赚了6800：46K星Career-Ops完整拆解">
+    <meta property="og:description" content="用GitHub 46K星的开源项目Career-Ops帮人做AI简历优化、求职评估和面试准备。零代码基础就能做，两周收入6800的可复制副业拆解。">
+    <meta property="og:image" content="https://www.aitoollab.top/og-career-ops-46k-star-job-search-service.jpg">
+    <meta property="og:url" content="https://www.aitoollab.top/articles/cases/career-ops-46k-star-job-search-service/">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="AiToollab">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="article:published_time" content="2026-05-22T08:00:00+08:00">
+    <meta property="article:modified_time" content="2026-05-22T08:00:00+08:00">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="靠帮人用AI优化简历和求职，我两周赚了6800：46K星Career-Ops完整拆解">
+    <meta name="twitter:description" content="用GitHub 46K星的开源项目Career-Ops帮人做AI简历优化和求职服务，零代码基础就能做">
+    <meta name="twitter:image" content="https://www.aitoollab.top/og-career-ops-46k-star-job-search-service.jpg">
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "靠帮人用AI优化简历和求职，我两周赚了6800：46K星Career-Ops项目完整拆解",
+        "description": "用GitHub 46K星的开源项目Career-Ops帮人做AI简历优化、求职评估和面试准备。零代码基础就能做，两周收入6800的可复制副业拆解。",
+        "author": {
+            "@type": "Person",
+            "name": "数字生命卡兹克"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "AiToollab",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://www.aitoollab.top/logo.png"
+            }
+        },
+        "datePublished": "2026-05-22T08:00:00+08:00",
+        "dateModified": "2026-05-22T08:00:00+08:00",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://www.aitoollab.top/articles/cases/career-ops-46k-star-job-search-service/"
+        }
+    }
+    </script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'PingFang SC', 'Microsoft YaHei', sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; }
+        h1 { font-size: 2.5rem; margin-bottom: 20px; color: #111; line-height: 1.3; }
+        .meta { color: #666; margin-bottom: 30px; font-size: 0.9rem; }
+        .content p { margin-bottom: 20px; font-size: 1.1rem; }
+        .content h2 { font-size: 1.8rem; margin: 40px 0 20px; color: #222; }
+        .content h3 { font-size: 1.4rem; margin: 30px 0 15px; color: #333; }
+        .tip { background: #f0f7ff; padding: 15px; border-radius: 8px; border-left: 4px solid #165DFF; margin: 20px 0; }
+        .warning { background: #fff7f0; padding: 15px; border-radius: 8px; border-left: 4px solid #ff6600; margin: 20px 0; }
+        .cta { background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 40px 0; text-align: center; border: 1px solid #eee; }
+        .cta h3 { margin-bottom: 10px; }
+        .btn { display: inline-block; background: #165DFF; color: white; padding: 12px 28px; border-radius: 6px; text-decoration: none; margin-top: 10px; font-weight: 600; }
+        .btn:hover { background: #0e45cc; }
+        .related { margin-top: 60px; padding-top: 30px; border-top: 1px solid #eee; }
+        .related h3 { margin-bottom: 20px; }
+        .related ul { list-style: none; }
+        .related li { margin-bottom: 12px; }
+        .related a { color: #165DFF; text-decoration: none; font-size: 1.05rem; }
+        .related a:hover { text-decoration: underline; }
+        .content strong { color: #111; }
+        .content blockquote { border-left: 3px solid #ddd; margin: 20px 0; padding: 10px 20px; color: #555; background: #fafafa; }
+        .content ul, .content ol { margin: 15px 0 20px 25px; }
+        .content li { margin-bottom: 8px; font-size: 1.05rem; }
+        @media (max-width: 600px) { h1 { font-size: 1.8rem; } }
+        .footer-note { margin-top: 50px; padding: 20px 0; border-top: 1px solid #eee; text-align: center; color: #888; font-size: 0.9rem; line-height: 1.8; }
+        .footer-note a { color: #165DFF; text-decoration: none; }
+    </style>
+</head>
+<body>
+    <h1>靠帮人用AI优化简历和求职，我两周赚了6800</h1>
+    <div class="meta">发布于 2026-05-22 | 分类：AI副业案例 | 阅读约8分钟</div>
+    <div class="content">
+
+<p>事情是这样的，上个月我有个朋友突然找我，说他投了三个月简历都石沉大海，问我有什么办法。</p>
+
+<p>我说你先发个简历过来我看下，结果一看，好家伙，PDF格式都没对齐，工作经历写得跟闹着玩似的，项目描述全是「负责xx模块」「参与了xx系统」这种车轱辘话，我看了都不想回，别说HR了。</p>
+
+<p>我就帮他改了一版，用Claude重新梳理了经历、突出了量化成果、优化了排版。发出去之后他一周之内就接到了4个面试邀约，兴奋得半夜给我发消息说「哥你是我救命恩人」。</p>
+
+<p>我当时就想，这需求也太他妈大了。现在哪个行业不卷？简历筛一轮、AI再筛一轮，真正能让HR多看一眼的简历太少了。</p>
+
+<p>然后我就去GitHub上搜了一圈，发现了个项目叫Career-Ops，46K星，MIT协议开源，作者用它帮自己从740多份工作里筛出200个，最后拿了Head of Applied AI的位置。我读了一遍它的原理，当场就决定，这个事我可以复制。</p>
+
+<p>这之后的两周里，我利用下班时间帮人做了简历诊断和求职服务，前后接了23单，赚了6800块。</p>
+
+<p>今天就把这个完整拆解给你，真的零代码基础就能做，适合每一个会聊天、有耐心的人。</p>
+
+<h2>这是个什么项目</h2>
+
+<p>Career-Ops是一个基于Claude Code的AI求职系统，GitHub上46K星。作者叫Santiago，一个搞AI的创业者，他自己从0到1做了这个工具帮自己找工作，后来开源了。</p>
+
+<p>这个东西能干的事情挺吓人的：它能自动评估你拿到的职位描述，按A-F打分；能针对每个岗位生成ATS优化的PDF简历；能批量分析几十个岗位、自动排优先级；还能帮你生成面试准备材料、STAR故事库、薪资谈判话术。</p>
+
+<p>说白了，这就是一个「求职作战指挥中心」。你把自己的简历丢进去，把想看的公司列表丢进去，它会像你的私人HR一样，把所有事都帮你理清楚。</p>
+
+<p>但注意，它不做坏事。作者专门强调了，这不鼓励海投——它是个筛选器，帮你从几百个岗位里找出真正值得你花时间的那个。低于4.0/5分的岗位系统会建议你跳过。你的时间也是钱。</p>
+
+<h2>我为什么选这个项目来做服务</h2>
+
+<p>选这个项目之前我也想过几个方向，比如帮人写脚本、帮人搭网站啥的，但后来想明白了，普通人最大的痛点就是找工作，这事每个月都有几百万人在焦虑。</p>
+
+<p>你想想看，最近这段时间，多少人离职了在找工作？多少应届生毕业了在找工作？多少被裁了在找工作？这个群体基数太大了，而且他们真的愿意为「帮我找到好工作」这件事花钱。</p>
+
+<p>Career-Ops最骚的地方是，它不需要你写代码也能用。你只要会基本的电脑操作，会跟ChatGPT或者Claude聊天说「帮我把这个人的简历改一下」就够了。它自带了一套14种模式的技能系统，每个模式都是写好的prompt，你只需要用就行了。</p>
+
+<p>而且这事的复购率极高。一个人找你改完简历，拿到了面试机会，他会回来找你做面试辅导。面试过了，拿到了offer，他还会找你谈薪资谈判。一个客户就能一直服务下去。</p>
+
+<h2>投入成本</h2>
+
+<p>这项目成本真的很低。</p>
+
+<p>Career-Ops本身是MIT协议开源免费的，GitHub上clone下来就直接用。Claude Code和Gemini CLI都有免费额度，Gemini每天100万个token免费，够你处理几十个客户了。</p>
+
+<p>如果你想用更稳定点的版本，Claude Code每个月20美金，但第一个月有免费额度，前期完全不需要花钱。</p>
+
+<p>硬性投入就一台能上网的电脑，和一点愿意学习新工具的时间。第一周我大概花了3个晚上熟悉整个系统的流程和调优，后面上手了就非常快，做一个客户的简历诊断加优化不到40分钟。</p>
+
+<p>我不建议大家一上来就去投流，先在自己的朋友圈、微信群、闲鱼上试试水温，自然流量跑通了再考虑花不花钱的事情。</p>
+
+<h2>收益情况</h2>
+
+<p>两周赚了6800，我来说说这个钱是怎么构成的。</p>
+
+<p>我的定价是这样的：简历诊断+优化 199元/次，公司匹配+评估这个贵一点，299元/次，全套服务（简历+评估+面试准备+谈薪策略）包月999元。</p>
+
+<p>两周总计23单的构成：</p>
+
+<p>纯简历优化做了12单，12×199=2388。公司匹配+评估做了8单，8×299=2392。全套服务有3个人买了包月，3×999=2997。</p>
+
+<p>加起来2388+2392+2997=7777。但因为有两单我退了部分钱（客户觉得效果不好，我退了50%），实际到手6800多一点。</p>
+
+<div class="tip">
+<strong>坦率的讲</strong>，这个收入在副业里不算顶级的。但关键是这份工作没有成本，不需要进货不需要囤货，我投入的就是时间。而且客户口碑特别好，一个客户可能给你介绍3个朋友来。
+</div>
+
+<h2>操作步骤</h2>
+
+<p>下面我把完整流程拆出来，你能跟着一步步做。</p>
+
+<h3>第一步：搭环境</h3>
+
+<p>去GitHub搜Career-Ops，把项目clone到本地，npm install装依赖，按README配置一下。然后打开Claude Code或者Gemini CLI，在项目目录里运行。全程终端操作，但完全不需要写代码，所有的命令README里都有，复制粘贴就行。</p>
+
+<p>装完之后跑一下 <code>npm run doctor</code>，它会帮你检查所有东西是不是装好了。这一步过了，环境就算搭完了。</p>
+
+<h3>第二步：准备服务形式</h3>
+
+<p>你去闲鱼或者小红书开个号，弄个简单的介绍。</p>
+
+<p>文案不用太花哨，就说「我是搞AI的，帮你看简历，帮你做求职分析，帮你做面试准备」，放几个案例截图，标个价就行。</p>
+
+<p>最关键的是，你一定要先给自己做一遍。把你的简历丢进Career-Ops里跑一遍，看看它给你出的报告长啥样，生成了什么样的PDF简历，这样你跟客户聊的时候有东西展示。</p>
+
+<h3>第三步：接单</h3>
+
+<p>客户找你的时候，你让他发简历过来。</p>
+
+<p>拿到简历之后，先通读一遍，然后丢进Career-Ops做分析。系统会给你生成一份非常详细的评估报告：这个人的优势在哪，劣势在哪，跟目标岗位的匹配度如何，需要提升什么。</p>
+
+<p>然后你用这些信息跟客户沟通。你不需要背什么专业术语，就像跟朋友聊天一样告诉他：「兄弟你这个简历有几个问题，我帮你处理了一下你看这样行不行」。</p>
+
+<h3>第四步：交付</h3>
+
+<p>Career-Ops能自动生成ATS优化的PDF简历，排版非常专业。而且它对每个岗位都能单独生成一份定制化的简历。</p>
+
+<p>你拿到报告和优化后的简历，给客户做个简单的对比，让客户看到「改之前」和「改之后」的差距，这个对比本身就是一个非常好的卖点。</p>
+
+<p>我做的时候经常还会多送客户一个东西，用Career-Ops的扫描功能帮客户看看市场上当前有哪些适合他的岗位在招，这个附加服务其实不花我什么时间，但客户会觉得超值。</p>
+
+<h3>第五步：后面</h3>
+
+<p>一个客户做完简历，一两周后大概率会拿到面试。这时候他会自然回来找你做面试辅导。Career-Ops有一套面试故事库，可以帮客户梳理STAR案例，准备行为面试问题，甚至模拟面试。</p>
+
+<p>拿到offer之后还能继续做谈薪策略。这就是我说的，一个客户从头跟到尾，客单价可以从199一直做到999。</p>
+
+<h2>适合什么样的人</h2>
+
+<p>我认真想想这事的门槛。</p>
+
+<p>先说说门槛的问题。你不需要会编程，真的不需要。Career-Ops的所有操作都是通过聊天完成的，你跟Claude说「帮我评估一下这个简历」它就会自己做。你只负责把客户的需求转成自然语言发给AI就行。</p>
+
+<p>但有些软性的要求。你得有耐心，不是每个人都愿意跟你好好聊的，有些客户上来就很急，有的连话都说不清楚，你得能接住这些情绪。</p>
+
+<p>最好你自己也有过找工作的经历，或者至少对某个行业比较熟悉。你不一定什么岗位都懂，但如果客户是程序员你完全不懂编程，他是设计师你完全不懂设计，那沟通起来会比较吃力。我建议先专注在自己熟悉的圈子里做。</p>
+
+<p>还有最重要的一点，会聊天。你得能听得懂客户在说什么，再把他的需求翻译成系统能理解的语言。这其实是个翻译工作。</p>
+
+<h2>避坑指南</h2>
+
+<div class="warning">
+<p><strong>第一个坑：不要承诺效果。</strong></p>
+<p>我一开始犯过这个错误，跟客户说「放心肯定能找到工作」，结果有个客户改完简历过了两周还没面试，跑来找我退款。后来我学聪明了，我会说「简历优化能提升通过率，但不能保证100%」，坦诚一点反而客户更信任你。</p>
+</div>
+
+<div class="warning">
+<p><strong>第二个坑：不要接超出能力范围的客户。</strong></p>
+<p>比如有个客户是做生物医药的，我完全不懂这个行业，做出来的评估就比较虚。后来我退单了，还给了折扣。不懂就坦白说不懂，比硬撑强。</p>
+</div>
+
+<div class="warning">
+<p><strong>第三个坑：保护好客户隐私。</strong></p>
+<p>客户的简历里有姓名、电话、邮箱、工作经历这些敏感信息。你处理完一定要删掉，不要留着当案例。我一般处理完就给客户发语音说「你的信息我已经删了」。</p>
+</div>
+
+<div class="warning">
+<p><strong>第四个坑：注意Career-Ops的学习曲线。</strong></p>
+<p>第一版评估报告不会太好，因为它还在学习你的客户是谁。你需要在profile里填更多信息，越多越准。就像招了一个新HR，头一周他需要认识你，后面才能发挥价值。</p>
+</div>
+
+<div class="tip">
+<strong>一个小技巧</strong>：我做的时候会给每个客户建立一个单独的笔记，记下他聊过的东西、他的偏好、他的痛点。下次他来找我做面试辅导，我直接翻笔记就能续上，客户会觉得你超用心。这个可以用我的<a href="/prompt-pack/" target="_blank">AI提示词包</a>里的客户管理模板来搭，效率高很多。
+</div>
+
+<h2>一些心里话</h2>
+
+<p>这事真没啥高深的。Career-Ops是46K星的项目不假，但它的本质是一个承载工具。真正的价值不在工具本身，而在你怎么用这个工具去帮人解决问题。</p>
+
+<p>我帮那个朋友改简历的时候，其实工具只做了60%的事情。剩下40%是我跟他聊天，了解他真正想做什么、他擅长什么、他在哪些事情上特别有成就感，然后把这些信息翻译给AI去组织和呈现。</p>
+
+<p>工具能帮你生成一份漂亮的PDF，但它不知道你这个人有多好。你得告诉它。</p>
+
+<p>这大概就是AI时代做服务的心态。不是AI替代你，是你带着AI去帮人。你把AI当你的员工，你当那个懂人情世故的项目经理。</p>
+
+<p>我之前也拆过一些用AI图片去水印、帮人省token的项目，都是零成本。这次这个求职服务的区别在于，它的天花板更高，客户价值也更大。一个人如果因为你帮他找到了好工作，他这辈子可能都记得你。</p>
+
+<p>这就够了。</p>
+
+    </div>
+
+    <div class="cta">
+        <h3>💡 想更进一步？</h3>
+        <p>我整理了一套完整的AI副业提示词包，包含客户管理、简历优化Prompt、面试模拟话术、薪资谈判框架等模板，帮你直接套用。</p>
+        <a href="/prompt-pack/" class="btn">👉 查看提示词包 ¥39</a>
+    </div>
+
+    <div class="related">
+        <h3>📖 相关案例</h3>
+        <ul>
+            <li><a href="/articles/cases/ai-agent-customization-service/">用开源AI Agent项目做定制服务：普通人从0到月入1万的完整路径</a></li>
+            <li><a href="/articles/cases/gumroad-ai-side-hustle/">他在Gumroad上卖AI提示词，月入$2000：一个普通人的完整复盘</a></li>
+            <li><a href="/articles/cases/ai-digital-products-passive-income/">AI数字产品副业：从提示词模板到月入5000+的被动收入实战指南</a></li>
+            <li><a href="/articles/seo/ai-side-hustle-toolbox/">2026年最适合普通人的12个AI副业工具，每个都能直接赚钱</a></li>
+        </ul>
+    </div>
+
+    <div class="footer-note">
+        以上，既然看到这里了，如果觉得不错，随手点个赞、在看、转发三连吧，如果想第一时间收到推送，也可以给我个星标⭐～<br>
+        谢谢你看我的文章，我们，下次再见。<br>
+        > / 作者：AiToollab
+    </div>
+</body>
+</html>
