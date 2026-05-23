@@ -261,4 +261,10 @@
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
+    <url>
+        <loc>https://www.aitoollab.top/articles/news/microsoft-ai-cost-side-hustle-opportunity-20260523/</loc>
+        <lastmod>2026-05-23</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
 </urlset>
