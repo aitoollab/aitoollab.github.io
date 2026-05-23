@@ -25,48 +25,55 @@
   <meta name="ai-content" content="allowed">
 
   <script type="application/ld+json">
-  {
+{
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": "我用caveman把Claude Code的token消耗砍了65%，顺手测了一下值不值",
     "image": "https://www.aitoollab.top/og-seo-2026-w20-caveman-token-saving.jpg",
     "datePublished": "2026-05-12T09:00:00+08:00",
     "dateModified": "2026-05-12T09:00:00+08:00",
-    "author": {"@type": "Person", "name": "AiToollab"}
-  }
-  </script>
+    "author": {
+        "@type": "Person",
+        "name": "AiToollab"
+    },
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.aitoollab.top/articles/seo/caveman-claude-code-token-saving/"
+    }
+}
+    </script>
   <script type="application/ld+json">
-  {
+{
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "caveman能让Claude Code省多少token？",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "官方benchmark平均节省65%，实测React组件重构场景从1180token降到159token（节省87%），数据库调试从1200降到232（节省81%）。"
+        {
+            "@type": "Question",
+            "name": "caveman能让Claude Code省多少token？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "官方benchmark平均节省65%，实测React组件重构场景从1180token降到159token（节省87%），数据库调试从1200降到232（节省81%）。"
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "caveman会影响代码质量吗？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "不影响。caveman只压缩输出语言，代码本身完全一致。技术原理是提示词层面的风格引导，不改模型参数，不影响准确性。"
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "caveman安装麻不麻烦？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "非常方便。一行命令自动安装，支持Claude Code、Codex、Cursor等30+主流AI编程工具。Windows/Mac/Linux通用，约30秒搞定。"
+            }
         }
-      },
-      {
-        "@type": "Question",
-        "name": "caveman会影响代码质量吗？",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "不影响。caveman只压缩输出语言，代码本身完全一致。技术原理是提示词层面的风格引导，不改模型参数，不影响准确性。"
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "caveman安装麻不麻烦？",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "非常方便。一行命令自动安装，支持Claude Code、Codex、Cursor等30+主流AI编程工具。Windows/Mac/Linux通用，约30秒搞定。"
-        }
-      }
     ]
-  }
-  </script>
+}
+    </script>
   <style>
     body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; line-height: 1.8; max-width: 800px; margin: 0 auto; padding: 20px; color: #1a1a1a; }
     h1 { font-size: 1.8rem; margin-bottom: 0.5rem; }

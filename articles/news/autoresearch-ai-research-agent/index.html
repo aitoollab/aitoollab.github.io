@@ -41,72 +41,77 @@
     <meta name="DC.language" content="zh-CN">
 
     <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "Karpathy开源AutoResearch：让AI自己搞研究，7天76k星刷屏GitHub",
-        "description": "Andrej Karpathy新作：让AI agent自动跑研究实验的开源工具，6天76k星。实测教程+3种普通人可用的副业思路。",
-        "datePublished": "2026-04-26T08:00:00+08:00",
-        "dateModified": "2026-04-26T08:00:00+08:00",
-        "author": {
-            "@type": "Organization",
-            "name": "AiToollab",
-            "url": "https://www.aitoollab.top/"
-        },
-        "publisher": {
-            "@type": "Organization",
-            "name": "AiToollab",
-            "url": "https://www.aitoollab.top/"
-        }
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Karpathy开源AutoResearch：让AI自己搞研究，7天76k星刷屏GitHub",
+    "description": "Andrej Karpathy新作：让AI agent自动跑研究实验的开源工具，6天76k星。实测教程+3种普通人可用的副业思路。",
+    "datePublished": "2026-04-26T08:00:00+08:00",
+    "dateModified": "2026-04-26T08:00:00+08:00",
+    "author": {
+        "@type": "Organization",
+        "name": "AiToollab",
+        "url": "https://www.aitoollab.top/"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "AiToollab",
+        "url": "https://www.aitoollab.top/"
+    },
+    "image": "https://www.aitoollab.top/og-autoresearch.jpg",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.aitoollab.top/articles/news/autoresearch-ai-research-agent/"
     }
+}
     </script>
     <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-            {
-                "@type": "Question",
-                "name": "AutoResearch是什么？",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "AutoResearch是Andrej Karpathy开源的AI研究自动化框架，让AI agent自动完成从提出假设→设计实验→跑实验→分析结果的全流程。本质上是一个\"AI科学家\"，目前主要跑nanochat模型的训练研究。6天斩获76k星，创下AI开源项目增长纪录。"
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "普通人能用AutoResearch做什么？",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "三个实际方向：1）帮人搭建AutoResearch研究环境，按次收费；2）做AI研究助手外包，帮学术团队跑自动化实验；3）开发垂直领域（医疗/金融）的AutoResearch定制版本。有技术背景的人可以从这波浪潮里分一杯羹。"
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "AutoResearch需要什么配置？",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "官方定位是\"single-GPU nanochat training\"，最低单卡A100（40GB）即可跑起来。但如果你想做复杂实验，可能需要多卡。主要语言是Python，有CUDA环境就能跑。配置要求比大多数人想象的低。"
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "AutoResearch和普通AI Agent有什么区别？",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "普通AI Agent帮你写文案、画图、聊天。AutoResearch帮你做科学研究——提出假设、读论文、设计实验、跑代码、分析结果。它不是工具，是能替你思考的研究伙伴。当然，目前主要跑的是LLM训练相关的研究，但框架本身是通用的。"
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "AutoResearch会取代AI研究员吗？",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "短期内不会。AutoResearch更像是一个\"超级研究员实习生\"——执行效率高，但提出好问题的能力还是靠人。它的价值在于：把研究员从重复性实验里解放出来，让真正有创意的人做更少杂活、想更多点子。与其担心被取代，不如学会用它放大自己的研究能力。"
-                }
+{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "AutoResearch是什么？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "AutoResearch是Andrej Karpathy开源的AI研究自动化框架，让AI agent自动完成从提出假设→设计实验→跑实验→分析结果的全流程。本质上是一个\"AI科学家\"，目前主要跑nanochat模型的训练研究。6天斩获76k星，创下AI开源项目增长纪录。"
             }
-        ]
-    }
+        },
+        {
+            "@type": "Question",
+            "name": "普通人能用AutoResearch做什么？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "三个实际方向：1）帮人搭建AutoResearch研究环境，按次收费；2）做AI研究助手外包，帮学术团队跑自动化实验；3）开发垂直领域（医疗/金融）的AutoResearch定制版本。有技术背景的人可以从这波浪潮里分一杯羹。"
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "AutoResearch需要什么配置？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "官方定位是\"single-GPU nanochat training\"，最低单卡A100（40GB）即可跑起来。但如果你想做复杂实验，可能需要多卡。主要语言是Python，有CUDA环境就能跑。配置要求比大多数人想象的低。"
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "AutoResearch和普通AI Agent有什么区别？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "普通AI Agent帮你写文案、画图、聊天。AutoResearch帮你做科学研究——提出假设、读论文、设计实验、跑代码、分析结果。它不是工具，是能替你思考的研究伙伴。当然，目前主要跑的是LLM训练相关的研究，但框架本身是通用的。"
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "AutoResearch会取代AI研究员吗？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "短期内不会。AutoResearch更像是一个\"超级研究员实习生\"——执行效率高，但提出好问题的能力还是靠人。它的价值在于：把研究员从重复性实验里解放出来，让真正有创意的人做更少杂活、想更多点子。与其担心被取代，不如学会用它放大自己的研究能力。"
+            }
+        }
+    ]
+}
     </script>
 
 <meta property="og:title:en" content="Karpathy开源AutoResearch：让AI自己搞研究，7天76k星刷屏GitHub" />

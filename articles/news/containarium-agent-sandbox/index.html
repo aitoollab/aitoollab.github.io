@@ -39,29 +39,29 @@
 
     <!-- Article JSON-LD -->
     <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "NewsArticle",
-        "headline": "Claude Code 在你电脑里撒野？有人给AI建了个隔离监狱",
-        "description": "AI Agent 越来越能干了，但它们在你的笔记本上胡来你管不住。Containarium 开源了——给 AI Agent 用的沙盒。",
-        "datePublished": "2026-05-14",
-        "dateModified": "2026-05-14",
-        "author": {
-            "@type": "Organization",
-            "name": "AiToollab",
-            "url": "https://www.aitoollab.top"
-        },
-        "publisher": {
-            "@type": "Organization",
-            "name": "AiToollab",
-            "url": "https://www.aitoollab.top"
-        },
-        "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": "https://www.aitoollab.top/articles/news/containarium-agent-sandbox/"
-        },
-        "image": "https://www.aitoollab.top/og-news-2026-05-14-containarium.jpg"
-    }
+{
+    "@context": "https://schema.org",
+    "@type": "NewsArticle",
+    "headline": "Claude Code 在你电脑里撒野？有人给AI建了个隔离监狱",
+    "description": "AI Agent 越来越能干了，但它们在你的笔记本上胡来你管不住。Containarium 开源了——给 AI Agent 用的沙盒。",
+    "datePublished": "2026-05-14",
+    "dateModified": "2026-05-14",
+    "author": {
+        "@type": "Organization",
+        "name": "AiToollab",
+        "url": "https://www.aitoollab.top"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "AiToollab",
+        "url": "https://www.aitoollab.top"
+    },
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.aitoollab.top/articles/news/containarium-agent-sandbox/"
+    },
+    "image": "https://www.aitoollab.top/og-news-2026-05-14-containarium.jpg"
+}
     </script>
 
     <style>
@@ -101,7 +101,40 @@
 <meta property="og:title:en" content="Claude Code 在你电脑里撒野？有人给AI建了个"隔离监狱"" />
 <meta property="og:description:en" content="AI Agent 越来越能干了，但它们在你的笔记本上胡来你管不住。Containarium 开源了——给 AI Agent 用的沙盒，你在后面当老板。" />
 <meta name="description:en" content="AI Agent 越来越能干了，但它们在你的笔记本上胡来你管不住。Containarium 开源了——给 AI Agent 用的沙盒，你在后面当老板。" />
-</head>
+
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "它到底是怎么工作的",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "官方说它是「agent-native sandbox」，底层用的是 LXC 容器。简单说就是在一台 Linux 虚拟机上跑很多个隔离的小环境，每个 AI agent 可以有自己的一个「盒子」。这个盒子是真正完整的 Linux，有 systemd，有网络，能从外面访问。"
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "这个方向为什么有意思",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "我认真想了想，Containarium 解决的是一个很实在的问题：<strong>AI Agent 的执行环境和你的本地环境是耦合的</strong>。"
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "🚀 想让 AI 真正替你干活？先学会怎么给它下指令",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "我把我用 AI 编程三年的 Prompt 经验整理成了一个全家桶，包含 30+ 实际场景的提示词模板。<br>写代码，Debug，架构设计，代码审查全覆盖，点这里直接拿："
+            }
+        }
+    ]
+}
+    </script>
+    </head>
 <body>
 
 <header class="article-header">

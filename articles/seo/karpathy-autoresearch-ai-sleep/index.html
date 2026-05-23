@@ -25,48 +25,55 @@
   <meta name="ai-content" content="allowed">
 
   <script type="application/ld+json">
-  {
+{
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": "Karpathy做了一个「AI科学家」，让它自己研究了一晚上，我的感受是...",
     "image": "https://www.aitoollab.top/og-seo-2026-w20-karpathy-autoresearch.jpg",
     "datePublished": "2026-05-14T08:00:00+08:00",
     "dateModified": "2026-05-14T08:00:00+08:00",
-    "author": {"@type": "Person", "name": "AiToollab"}
-  }
-  </script>
+    "author": {
+        "@type": "Person",
+        "name": "AiToollab"
+    },
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.aitoollab.top/articles/seo/karpathy-autoresearch-ai-sleep/"
+    }
+}
+    </script>
   <script type="application/ld+json">
-  {
+{
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "autoresearch是什么？",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Karpathy最新开源项目，一个能让AI agent自动运行LLM训练实验的工具。你给AI一个研究任务，它自己修改训练代码、跑实验、检查结果、迭代优化，第二天早上看日志就行。"
+        {
+            "@type": "Question",
+            "name": "autoresearch是什么？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Karpathy最新开源项目，一个能让AI agent自动运行LLM训练实验的工具。你给AI一个研究任务，它自己修改训练代码、跑实验、检查结果、迭代优化，第二天早上看日志就行。"
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "autoresearch对普通人有什么用？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "1）学习LLM训练原理的互动实验台；2）针对特定垂直领域定制化训练小模型；3）理解AI Agent能力边界的窗口。暂时不是躺赚工具，但对想深入AI底层的人很有价值。"
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "需要什么硬件才能跑？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "一块NVIDIA GPU（项目文档说测试过H100），Python 3.10+，以及uv包管理器。官方说单GPU就够了，入门门槛比想象中低。"
+            }
         }
-      },
-      {
-        "@type": "Question",
-        "name": "autoresearch对普通人有什么用？",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "1）学习LLM训练原理的互动实验台；2）针对特定垂直领域定制化训练小模型；3）理解AI Agent能力边界的窗口。暂时不是躺赚工具，但对想深入AI底层的人很有价值。"
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "需要什么硬件才能跑？",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "一块NVIDIA GPU（项目文档说测试过H100），Python 3.10+，以及uv包管理器。官方说单GPU就够了，入门门槛比想象中低。"
-        }
-      }
     ]
-  }
-  </script>
+}
+    </script>
   <style>
     body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; line-height: 1.8; max-width: 800px; margin: 0 auto; padding: 20px; color: #1a1a1a; }
     h1 { font-size: 1.8rem; margin-bottom: 0.5rem; }

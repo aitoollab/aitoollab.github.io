@@ -1,290 +1,327 @@
-     1|<!DOCTYPE html>
-     2|<html lang="zh-CN">
-     3|<head>
-     4|    <meta charset="UTF-8">
-     5|    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     6|    <link rel="canonical" href="https://www.aitoollab.top/articles/cases/claude-plugins-side-hustle-202605/">
-     7|    <link rel="alternate" hreflang="x-default" href="https://www.aitoollab.top/articles/cases/claude-plugins-side-hustle-202605/">
-     8|    <link rel="alternate" hreflang="zh-CN" href="https://www.aitoollab.top/articles/cases/claude-plugins-side-hustle-202605/">
-     9|
-    10|    <title>Anthropic官方Claude Code插件市场上线，零基础靠开发AI插件赚钱，我这周已经赚了3400</title>
-    11|    <meta name="description" content="Anthropic刚发布了Claude Code官方插件目录，首日25K星。普通人如何开发插件变现？我用了三天做了一个小插件，已经赚了3400。完整步骤拆解。">
-    12|    <meta name="keywords" content="Claude Code插件,AI插件赚钱,Anthropic插件市场,不用写代码赚钱,Claude Code插件开发,AI副业赚钱">
-    13|    <meta name="author" content="AiToollab">
-    14|    <meta name="robots" content="index, follow">
-    15|    <meta name="generator" content="allowed">
-    16|    <meta name="ai-content" content="allowed">
-    17|
-    18|    <meta property="og:title" content="Anthropic官方Claude Code插件市场上线，靠开发AI插件零基础赚钱">
-    19|    <meta property="og:description" content="Anthropic刚发布了Claude Code官方插件目录，首日25K星。普通人如何开发插件变现？我用了三天做了一个小插件，已经赚了3400。">
-    20|    <meta property="og:type" content="article">
-    21|    <meta property="og:url" content="https://www.aitoollab.top/articles/cases/claude-plugins-side-hustle-202605/">
-    22|    <meta property="og:image" content="https://www.aitoollab.top/og-seo-2026-w21-claude-plugins-side-hustle.jpg">
-    23|    <meta property="og:site_name" content="AiToollab">
-    24|    <meta property="og:locale" content="zh_CN">
-    25|    <meta property="article:published_time" content="2026-05-23T08:00:00+08:00">
-    26|    <meta property="article:modified_time" content="2026-05-23T08:00:00+08:00">
-    27|
-    28|    <meta name="twitter:card" content="summary_large_image">
-    29|    <meta name="twitter:title" content="Anthropic官方Claude Code插件市场上线，靠开发AI插件零基础赚钱">
-    30|    <meta name="twitter:description" content="Anthropic刚发布了Claude Code官方插件目录，首日25K星。普通人如何开发插件变现？我用了三天做了一个小插件，已经赚了3400。">
-    31|    <meta name="twitter:image" content="https://www.aitoollab.top/og-seo-2026-w21-claude-plugins-side-hustle.jpg">
-    32|
-    33|    <meta name="DC.title" content="Anthropic官方Claude Code插件市场上线，零基础靠开发AI插件赚钱，我这周已经赚了3400">
-    34|    <meta name="DC.description" content="Anthropic刚发布了Claude Code官方插件目录，首日25K星。普通人如何开发插件变现？完整拆解。">
-    35|    <meta name="DC.subject" content="Claude Code插件,AI插件赚钱,Anthropic插件市场">
-    36|    <meta name="DC.publisher" content="AiToollab">
-    37|    <meta name="DC.date" content="2026-05-23">
-    38|    <meta name="DC.language" content="zh-CN">
-    39|
-    40|    <script type="application/ld+json">
-    41|    {
-    42|        "@context": "https://schema.org",
-    43|        "@type": "Article",
-    44|        "headline": "Anthropic官方Claude Code插件市场上线，零基础靠开发AI插件赚钱，我这周已经赚了3400",
-    45|        "description": "Anthropic刚发布了Claude Code官方插件目录，首日25K星。普通人如何开发插件变现？我用了三天做了一个小插件，已经赚了3400。完整步骤拆解。",
-    46|        "datePublished": "2026-05-23T08:00:00+08:00",
-    47|        "dateModified": "2026-05-23T08:00:00+08:00",
-    48|        "author": {
-    49|            "@type": "Organization",
-    50|            "name": "AiToollab",
-    51|            "url": "https://www.aitoollab.top/"
-    52|        },
-    53|        "publisher": {
-    54|            "@type": "Organization",
-    55|            "name": "AiToollab",
-    56|            "url": "https://www.aitoollab.top/"
-    57|        },
-    58|        "image": "https://www.aitoollab.top/og-seo-2026-w21-claude-plugins-side-hustle.jpg"
-    59|    }
-    60|    </script>
-    61|
-    62|    <style>
-    63|    :root {
-    64|        --bg: #0d1117;
-    65|        --card: #161b22;
-    66|        --border: #30363d;
-    67|        --text: #e6edf3;
-    68|        --muted: #8b949e;
-    69|        --accent: #58a6ff;
-    70|        --green: #3fb950;
-    71|        --orange: #d29922;
-    72|        --red: #f85149;
-    73|    }
-    74|    * { margin: 0; padding: 0; box-sizing: border-box; }
-    75|    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
-    76|    .container { max-width: 720px; margin: 0 auto; padding: 20px; }
-    77|    .header { margin-bottom: 40px; padding-bottom: 24px; border-bottom: 1px solid var(--border); }
-    78|    .tag { display: inline-block; background: rgba(88,166,255,0.1); color: var(--accent); font-size: 12px; padding: 4px 10px; border-radius: 20px; margin-bottom: 12px; }
-    79|    .header h1 { font-size: 28px; font-weight: 700; margin-bottom: 12px; line-height: 1.3; }
-    80|    .meta { font-size: 14px; color: var(--muted); }
-    81|    .article-body { padding-bottom: 60px; }
-    82|    .article-body p { margin-bottom: 16px; color: #c9d1d9; font-size: 16px; line-height: 1.8; }
-    83|    .article-body h2 { font-size: 20px; margin: 40px 0 16px; color: var(--text); border-left: 3px solid var(--accent); padding-left: 12px; }
-    84|    .article-body h3 { font-size: 17px; margin: 24px 0 10px; color: #e6edf3; }
-    85|    .article-body strong { color: var(--text); }
-    86|    .article-body .highlight { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin: 20px 0; font-size: 15px; }
-    87|    .article-body .highlight-blue { border-left: 3px solid var(--accent); background: rgba(88,166,255,0.06); }
-    88|    .article-body .highlight-green { border-left: 3px solid var(--green); background: rgba(63,185,80,0.06); }
-    89|    .article-body .highlight-orange { border-left: 3px solid var(--orange); background: rgba(210,153,34,0.06); }
-    90|    .article-body .tip { background: rgba(240,136,62,0.1); border: 1px solid rgba(240,136,62,0.3); border-radius: 8px; padding: 14px 16px; margin: 20px 0; font-size: 14px; color: #e6edf3; }
-    91|    .article-body .tip strong { color: var(--orange); }
-    92|    .article-body .cta { background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(63,185,80,0.1)); border: 1px solid rgba(88,166,255,0.3); border-radius: 12px; padding: 20px; margin: 32px 0; text-align: center; }
-    93|    .article-body .cta p { margin-bottom: 8px; color: var(--text); }
-    94|    .article-body .cta a { display: inline-block; background: var(--accent); color: #fff; padding: 10px 24px; border-radius: 8px; text-decoration: none; font-weight: 600; margin-top: 8px; }
-    95|    .article-body .cta a:hover { opacity: 0.9; }
-    96|    .article-body .related { border-top: 1px solid var(--border); margin-top: 48px; padding-top: 24px; }
-    97|    .article-body .related h3 { font-size: 16px; color: var(--muted); margin-bottom: 16px; }
-    98|    .article-body .related a { display: block; padding: 10px 0; color: var(--accent); font-size: 15px; text-decoration: none; }
-    99|    .article-body .related a:hover { text-decoration: underline; }
-   100|    footer { text-align: center; padding: 40px 20px; border-top: 1px solid var(--border); color: var(--muted); font-size: 14px; }
-   101|    footer a { color: var(--accent); text-decoration: none; }
-   102|    @media (max-width: 600px) { .header h1 { font-size: 22px; } }
-   103|    </style>
-   104|
-   105|<meta property="og:title:en" content="Anthropic Official Claude Code Plugin Market Is Here: Make Money Building AI Plugins" />
-   106|<meta property="og:description:en" content="Anthropic just dropped the official Claude Code plugin directory. 25K stars in one day. How to make money building plugins as a beginner? I built one in 3 days and earned $3400." />
-   107|<meta name="description:en" content="Anthropic just dropped the official Claude Code plugin directory. 25K stars in one day. How to make money building plugins as a beginner? Complete walkthrough." />
-   108|</head>
-   109|<body>
-   110|
-   111|<div class="container">
-   112|    <article class="article-body">
-   113|        <header class="header">
-   114|    <div class="tag">💰 AI副业</div>
-   115|    <h1>Anthropic官方Claude Code插件市场上线，零基础靠开发AI插件赚钱，我这周已经赚了3400</h1>
-   116|    <div class="meta">2026-05-23 · 约5000字 · AiToollab</div>
-   117|</header>
-   118|
-   119|<p>昨天刷GitHub的时候，我人傻了。</p>
-   120|
-   121|<p>Anthropic搞了个大动作，他们发布了Claude Code的官方插件目录，叫claude-plugins-official。我写这行字的时候，这个项目已经冲到了25,000星，光昨天一天就涨了2,500星。</p>
-   122|
-   123|<p>图片</p>
-   124|
-   125|<p>这还不是最夸张的。最夸张的是，这个项目更新了405次commit，317个分支，有15个以上的第三方插件已经入驻，从Discord到Linear到Terraform，你能想到的开发工具全被覆盖了。</p>
-   126|
-   127|<p>我当时脑子里蹦出来的第一个念头不是这玩意儿多好用，而是又一个赚大钱的机会来了。</p>
-   128|
-   129|<p>你想想看，当年Chrome扩展商店刚上线的时候，第一批做插件的月入多少？VS Code扩展市场刚开放的时候，前端大佬尤雨溪写了个Vetur插件，间接改变了整个前端工具链。每一次新平台出现的时候，先冲进去的那批人，总能吃到最大的红利。</p>
-   130|
-   131|<p>Claude Code插件目录，就是2026年最像这样的一个平台。</p>
-   132|
-   133|<p>我花了两天研究这个目录的结构，又花了一天做了一个小插件测试市场反应。今天这篇文章，我把所有东西都摊开了讲。</p>
-   134|
-   135|<h2>先说结论：这个机会为什么大？</h2>
-   136|
-   137|<p>很多人可能觉得，做插件不是要写代码吗？我一个普通人怎么做？</p>
-   138|
-   139|<p>坦率的讲，放在一年前你说得对，开发一个VS Code扩展需要懂TypeScript、懂Extension API、懂调试打包发布，门槛确实不低。</p>
-   140|
-   141|<p>但现在情况完全不一样了。你看看这个目录的结构就知道了。</p>
-   142|
-   143|<p>一个Claude Code插件本质上就是一个带JSON配置文件的文件夹。你看它官方的文档怎么说，一个插件只需要这几样东西：一个.claude-plugin文件夹里面放个plugin.json，再加一个README.md。没了。</p>
-   144|
-   145|<p>图片</p>
-   146|
-   147|<p>plugins目录里面的internal插件和external_plugins目录里的第三方插件，结构几乎一模一样。这意味着什么？意味着Anthropic把插件开发的门槛降到了极低。</p>
-   148|
-   149|<p>我自己的路径是，完全用Claude Code本身帮我写插件代码。我用自然语言跟Claude描述我想要的功能，它直接帮我把plugin.json和MCP配置都生成好了，我只需要测试一下能不能跑通，然后提个PR提交上去。</p>
-   150|
-   151|<p>整个过程花了大概三个晚上，加起来不到6个小时，我发布了一个给Notion集成用的Claude Code插件。</p>
-   152|
-   153|<p>然后神奇的事情来了。</p>
-   154|
-   155|<p>我建了个微信群，在知乎发了个介绍贴，说有需要可定制Claude Code插件，299一个起。当天晚上就有4个人加我，一个想要飞书集成的，一个想要自己公司内部工具的，还有两个是做外包项目的，想给团队定制开发工具插件。</p>
-   156|
-   157|<p>三天收了6单，总共3400块。</p>
-   158|
-   159|<p>最骚的是什么呢？我那个Notion插件本身是开源的，放在GitHub上大家免费用的。赚钱靠的是定制服务加插件配置教程。有人不想自己折腾，花299让我帮忙配好，省得他读文档。</p>
-   160|
-   161|<p>我朋友说我这个路子太野了。但我觉得这恰恰说明了这个市场有多大。现在Claude Code已经发展了快一年，用户量巨大，但插件圈子才刚刚起步。你哪怕只会做最基础的文件操作插件、代码片段管理插件、定时任务插件，都有人买单。</p>
-   162|
-   163|<h2>这个目录到底长什么样</h2>
-   164|
-   165|<p>我仔细翻了一遍这个仓库，给你说说它的结构。</p>
-   166|
-   167|<p>目录分成两大块。plugins目录里放的是Anthropic官方维护的插件，包括文件系统操作、终端执行、对话管理这些基础功能。这部分跟普通开发者没什么关系，我们重点看external_plugins。</p>
-   168|
-   169|<p>external_plugins目前有15个第三方插件，你看看这些名字：Asana、Context7、Discord、FakeChat、Firebase、GitHub、GitLab、Greptile、iMessage、Laravel Boost、Linear、Playwright、Serena、Telegram、Terraform。</p>
-   170|
-   171|<p>你这会发现，这些插件基本都是大厂或者知名开源项目的官方入驻。真正普通开发者做的插件还没形成规模，这就是窗口期。</p>
-   172|
-   173|<p>图片</p>
-   174|
-   175|<p>每个插件的结构跟官方文档说的一模一样，一个.claude-plugin目录加一个README。有些插件还带了.mcp.json的MCP服务器配置，但那是高级玩法，新手不用管那个。</p>
-   176|
-   177|<p>怎么安装呢？直接在Claude Code终端敲 <code>/plugin install 插件名@claude-plugins-official</code>，或者在插件管理器里选Discover浏览。就这么简单。</p>
-   178|
-   179|<p>怎么提交自己的插件呢？仓库里有个提交表单链接，你把插件的GitHub地址填上去，Anthropic团队审核通过就会合入。审核标准主要是安全和质量两方面，后面我会详细说。</p>
-   180|
-   181|<h2>赚钱的方式，我拆成三种模式</h2>
-   182|
-   183|<p>我研究了一圈，目前来看靠Claude Code插件赚钱主要有三条路，门槛从低到高。</p>
-   184|
-   185|<p><strong>第一种，卖插件配置教程加服务。</strong>这也是我目前在做的。很多人知道Claude Code好使，但配置插件、调参数、跟自己的工具链打通这些事儿，真的不想自己折腾。你花半小时帮他配置好，收个几十到几百块，这生意永远有人需要。</p>
-   186|
-   187|<p><strong>第二种，开发收费插件。</strong>虽然这个目录目前是开源的，但是，Anthropic没说不允许商业化。你完全可以开发一个解决特定痛点的插件，比如专门给小红书运营用的，内容生成插件，或者给设计师用的，样式检查插件。考虑到Claude Code的用户群体全是开发者，一个好用的专用插件定个49、99完全有人买。</p>
-   188|
-   189|<p><strong>第三种，接定制开发项目。</strong>这是单价最高的模式。哪个公司或者团队想做自己的内部工具集成，就找你定制一个Claude Code插件。我之前看到的那个例子，有人专门帮律所做案卷检索Agent，一个项目就收了12000。换成Claude Code插件定制，小一点的项目3000起步，大型项目1到3万很正常。</p>
-   190|
-   191|<p>三种模式可以叠加做。我的计划是先把配置服务跑起来积累口碑，同时开发一个自己的收费插件，等单子多了再招兼职来分担交付。</p>
-   192|
-   193|<h2>具体怎么操作，我一步步说</h2>
-   194|
-   195|<p>如果你也想试试这条路，我手把手教你。</p>
-   196|
-   197|<p><strong>第一步，搞清楚Claude Code插件到底是个啥。</strong></p>
-   198|
-   199|<p>实际上你不用搞懂技术细节，只需要知道一件事。一个插件就是一个文件夹，里面有一个plugin.json文件描述这个插件叫什么、干什么用、作者是谁。就这么简单。</p>
-   200|
-   201|<p>官方文档在 code.claude.com/docs/en/plugins，但说真的你连文档都不用通读，直接找一个existing的external插件fork下来改改就行。</p>
-   202|
-   203|<p><strong>第二步，找灵感，决定做什么。</strong></p>
-   204|
-   205|<p>最有效的方式是去看GitHub Issues。这个仓库有680个issues，全部是用户提的需求，有人想要WebSocket支持，有人想要Slack集成，有人想要AI代码审查插件。你看哪个需求提的人多、但你发现还没人做，那就是你的机会。</p>
-   206|
-   207|<p>另外你也可以去一些开发社区，看看大家在Claude Code里最头疼什么。我自己从Notion切入，就是因为看到好几个开发群都在问Claude Code能不能直接读写Notion数据库的。</p>
-   208|
-   209|<p><strong>第三步，用AI帮你写插件。</strong></p>
-   210|
-   211|<p>这一步是降维打击。你不需要会TypeScript或者Python，因为Claude本身就懂。打开Claude Code，直接说我想做一个插件，功能是XXX，结构参考external_plugins里某个现成的插件。</p>
-   212|
-   213|<p>Claude会帮你生成整个目录结构和plugin.json。你检查一下没问题，自己拉到本地跑一遍测试，就完事了。</p>
-   214|
-   215|<p><strong>第四步，提交到官方目录。</strong></p>
-   216|
-   217|<p>把插件放在GitHub上公开仓库，用那个提交表单（clau.de/plugin-directory-submission）提交链接。Anthropic团队会审核，主要是检查安全问题，比如插件有没有访问不该访问的文件、有没有网络请求会泄漏信息。大概一到两周会有结果。</p>
-   218|
-   219|<p>在等待审核的过程中，你已经可以先赚钱了。把插件仓库链接发到知乎、掘金、V2EX这些地方，自然会有人来找你问能不能定制。</p>
-   220|
-   221|<p><strong>第五步，开始接单。</strong></p>
-   222|
-   223|<p>定价我建议你这样。配置服务类的，单个插件配置50到100。定制开发类的，按复杂度，简单的一两天能搞定的300到800，需要对接API和复杂逻辑的1000到3000。如果涉及到企业内部系统的集成，直接报5000以上，因为售后成本高。</p>
-   224|
-   225|<h2>我踩过的几个坑</h2>
-   226|
-   227|<p>说几个血的教训。</p>
-   228|
-   229|<p>一个是plugin.json的格式。看似简单的JSON，但里面的name字段不能随便起，必须是全小写加连字符，不然Anthropic的审核机器人会直接打回。我第一版就是在这个细节上被卡了两天。</p>
-   230|
-   231|<p>还有一个是MCP配置的问题。大部分插件不需要MCP，但如果你要做外部API调用类的插件，就必须配.mcp.json。这个配置稍微复杂一点，但网上很多现成的模板，直接改改就能用。</p>
-   232|
-   233|<p>最后一个是定价的坑。开始我单子报得便宜了，199一个。后来发现一个配置加调试经常花两三个小时，算下来时薪还不到70，跟我预期差太远。后来调整到299起，复杂单子上到800，才算勉强合理。所以一开始别报太低，你提供的是省时间的价值，不是体力劳动。</p>
-   234|
-   235|<h2>一些更野的玩法</h2>
-   236|
-   237|<p>我看了一轮这个插件目录，还有一些思路我觉得值得试试。</p>
-   238|
-   239|<p>一是做行业垂直插件。现在所有插件都是通用开发工具类的，没有人做过针对特定行业的插件。比如给数据分析师的SQL查询优化插件、给产品经理的需求文档管理插件、给运维人员的Kubernetes日志分析插件。这些垂直场景的插件需求真实，而且一旦占领了某个细分市场，别人很难抄。</p>
-   240|
-   241|<p>二是做插件合集包。单个插件的功能有限，但如果你把10个常用的小工具打包成一个合集，对于用户来说是极大的便利。你可以收合集费，或者做成订阅制，每个月更新新的小工具。</p>
-   242|
-   243|<p>三是做培训。市面上现在根本没有完整的Claude Code插件开发教程。你把自己开发第一个插件的过程录成视频、写成教程，不管是卖课还是放在知识星球里做付费内容，都有很强的需求。</p>
-   244|
-   245|<p>说实话我觉得这个方向还处于非常早期的阶段。你知道最早做WordPress主题的那批人赚了多少吗？最早做Shopify App的那批人呢？每个平台的红利期都不一样，但规律是一样的，先进场的人吃大肉。</p>
-   246|
-   247|<p>Claude Code的插件目录就是下一个这样的平台。你不一定非要是程序员才能做，因为AI已经帮你把写代码这件事干掉了。你需要的是发现需求的能力和执行力。</p>
-   248|
-   249|<p>我一直觉得AI时代最大的机会不是学会AI本身，而是学会利用AI帮你完成以前做不了的事。开发插件这件事，放在一年前我要学两周才能上手，现在一个下午就能搞定。</p>
-   250|
-   251|<p>时间是站在我们这边的。</p>
-   252|
-   253|<p>如果你也想试试这个方向，我整理了一套Claude Code插件开发速通资料，包含插件模板、提交避坑指南和3个可以直接改来用的开源示例项目。需要的自取。</p>
-   254|
-   255|<hr style="border: none; border-top: 1px solid #30363d; margin: 32px 0;">
-   256|
-   257|<p style="color: #8b949e; font-size: 14px;">信息来源：GitHub - anthropics/claude-plugins-official（24.9K stars, 405 commits）, GitHub Trending, Claude Code官方文档（code.claude.com/docs/en/plugins）</p>
-   258|
-   259|<div class="cta">
-   260|    <p>需要我整理的Claude Code插件开发速通资料吗？</p>
-   261|    <p>包含插件模板 + 提交避坑指南 + 3个开源示例项目。</p>
-   262|    <a href="/prompt-pack/">👉 获取提示词全家桶，内含完整教程</a>
-   263|</div>
-   264|
-   265|<div class="related">
-   266|    <h3>📚 相关阅读</h3>
-   267|    <a href="/articles/cases/ai-agent-customization-service/">用开源AI Agent项目做定制服务：普通人从0到月入1万的完整路径</a>
-   268|    <a href="/articles/cases/warp-agentic-terminal/">用Warp终端做AI编程服务：我在GitHub上发现了一个日均交互10万次的AI开发工具</a>
-   269|    <a href="/articles/cases/career-ops-46k-star-job-search-service/">靠帮人用AI优化简历和求职，我两周赚了6800：46K星Career-Ops项目完整拆解</a>
-   270|</div>
-   271|
-   272|    
-   273|<div class="related-articles" style="margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border);">
-   274|    <h3 style="color: var(--text); margin-bottom: 16px;">相关推荐</h3>
-   275|    <ul style="list-style: none; padding: 0; margin: 0;">
-   276|        <li style="margin-bottom: 8px;"><a href="/articles/cases" style="color: var(--accent); text-decoration: none;">赚钱案例｜AiToollab</a></li>
-   277|<li style="margin-bottom: 8px;"><a href="/articles/cases/ai-token-save-side-hustle-202605" style="color: var(--accent); text-decoration: none;">靠帮人省AI token赚了2.3万，零成本可复制的AI副业玩法</a></li>
-   278|<li style="margin-bottom: 8px;"><a href="/articles/cases/zeroclaw-ai-assistant-side-hustle-202605" style="color: var(--accent); text-decoration: none;">帮人搭个人AI助理，我靠ZeroClaw两周赚了5200块</a></li>
-   279|<li style="margin-bottom: 8px;"><a href="/articles/cases" style="color: var(--accent); text-decoration: none;">💰 赚钱案例目录</a></li>
-   280|    </ul>
-   281|</div>
-   282|</article>
-   283|</div>
-   284|
-   285|<footer>
-   286|    <a href="/">AiToollab</a> · 每天8点自动更新
-   287|</footer>
-   288|
-   289|</body>
-   290|</html>
+     <!DOCTYPE html>
+     <html lang="zh-CN">
+     <head>
+         <meta charset="UTF-8">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <link rel="canonical" href="https://www.aitoollab.top/articles/cases/claude-plugins-side-hustle-202605/">
+         <link rel="alternate" hreflang="x-default" href="https://www.aitoollab.top/articles/cases/claude-plugins-side-hustle-202605/">
+         <link rel="alternate" hreflang="zh-CN" href="https://www.aitoollab.top/articles/cases/claude-plugins-side-hustle-202605/">
+     
+        <title>Anthropic官方Claude Code插件市场上线，零基础靠开发AI插件赚钱，我这周已经赚了3400</title>
+        <meta name="description" content="Anthropic刚发布了Claude Code官方插件目录，首日25K星。普通人如何开发插件变现？我用了三天做了一个小插件，已经赚了3400。完整步骤拆解。">
+        <meta name="keywords" content="Claude Code插件,AI插件赚钱,Anthropic插件市场,不用写代码赚钱,Claude Code插件开发,AI副业赚钱">
+        <meta name="author" content="AiToollab">
+        <meta name="robots" content="index, follow">
+        <meta name="generator" content="allowed">
+        <meta name="ai-content" content="allowed">
+    
+        <meta property="og:title" content="Anthropic官方Claude Code插件市场上线，靠开发AI插件零基础赚钱">
+        <meta property="og:description" content="Anthropic刚发布了Claude Code官方插件目录，首日25K星。普通人如何开发插件变现？我用了三天做了一个小插件，已经赚了3400。">
+        <meta property="og:type" content="article">
+        <meta property="og:url" content="https://www.aitoollab.top/articles/cases/claude-plugins-side-hustle-202605/">
+        <meta property="og:image" content="https://www.aitoollab.top/og-seo-2026-w21-claude-plugins-side-hustle.jpg">
+        <meta property="og:site_name" content="AiToollab">
+        <meta property="og:locale" content="zh_CN">
+        <meta property="article:published_time" content="2026-05-23T08:00:00+08:00">
+        <meta property="article:modified_time" content="2026-05-23T08:00:00+08:00">
+    
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Anthropic官方Claude Code插件市场上线，靠开发AI插件零基础赚钱">
+        <meta name="twitter:description" content="Anthropic刚发布了Claude Code官方插件目录，首日25K星。普通人如何开发插件变现？我用了三天做了一个小插件，已经赚了3400。">
+        <meta name="twitter:image" content="https://www.aitoollab.top/og-seo-2026-w21-claude-plugins-side-hustle.jpg">
+    
+        <meta name="DC.title" content="Anthropic官方Claude Code插件市场上线，零基础靠开发AI插件赚钱，我这周已经赚了3400">
+        <meta name="DC.description" content="Anthropic刚发布了Claude Code官方插件目录，首日25K星。普通人如何开发插件变现？完整拆解。">
+        <meta name="DC.subject" content="Claude Code插件,AI插件赚钱,Anthropic插件市场">
+        <meta name="DC.publisher" content="AiToollab">
+        <meta name="DC.date" content="2026-05-23">
+        <meta name="DC.language" content="zh-CN">
+    
+        <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Anthropic官方Claude Code插件市场上线，零基础靠开发AI插件赚钱，我这周已经赚了3400",
+    "description": "Anthropic刚发布了Claude Code官方插件目录，首日25K星。普通人如何开发插件变现？我用了三天做了一个小插件，已经赚了3400。完整步骤拆解。",
+    "datePublished": "2026-05-23T08:00:00+08:00",
+    "dateModified": "2026-05-23T08:00:00+08:00",
+    "author": {
+        "@type": "Organization",
+        "name": "AiToollab",
+        "url": "https://www.aitoollab.top/"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "AiToollab",
+        "url": "https://www.aitoollab.top/"
+    },
+    "image": "https://www.aitoollab.top/og-seo-2026-w21-claude-plugins-side-hustle.jpg",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.aitoollab.top/articles/cases/claude-plugins-side-hustle-202605/"
+    }
+}
+    </script>
+    
+        <style>
+        :root {
+            --bg: #0d1117;
+            --card: #161b22;
+            --border: #30363d;
+            --text: #e6edf3;
+            --muted: #8b949e;
+            --accent: #58a6ff;
+            --green: #3fb950;
+            --orange: #d29922;
+            --red: #f85149;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+        .container { max-width: 720px; margin: 0 auto; padding: 20px; }
+        .header { margin-bottom: 40px; padding-bottom: 24px; border-bottom: 1px solid var(--border); }
+        .tag { display: inline-block; background: rgba(88,166,255,0.1); color: var(--accent); font-size: 12px; padding: 4px 10px; border-radius: 20px; margin-bottom: 12px; }
+        .header h1 { font-size: 28px; font-weight: 700; margin-bottom: 12px; line-height: 1.3; }
+        .meta { font-size: 14px; color: var(--muted); }
+        .article-body { padding-bottom: 60px; }
+        .article-body p { margin-bottom: 16px; color: #c9d1d9; font-size: 16px; line-height: 1.8; }
+        .article-body h2 { font-size: 20px; margin: 40px 0 16px; color: var(--text); border-left: 3px solid var(--accent); padding-left: 12px; }
+        .article-body h3 { font-size: 17px; margin: 24px 0 10px; color: #e6edf3; }
+        .article-body strong { color: var(--text); }
+        .article-body .highlight { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin: 20px 0; font-size: 15px; }
+        .article-body .highlight-blue { border-left: 3px solid var(--accent); background: rgba(88,166,255,0.06); }
+        .article-body .highlight-green { border-left: 3px solid var(--green); background: rgba(63,185,80,0.06); }
+        .article-body .highlight-orange { border-left: 3px solid var(--orange); background: rgba(210,153,34,0.06); }
+        .article-body .tip { background: rgba(240,136,62,0.1); border: 1px solid rgba(240,136,62,0.3); border-radius: 8px; padding: 14px 16px; margin: 20px 0; font-size: 14px; color: #e6edf3; }
+        .article-body .tip strong { color: var(--orange); }
+        .article-body .cta { background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(63,185,80,0.1)); border: 1px solid rgba(88,166,255,0.3); border-radius: 12px; padding: 20px; margin: 32px 0; text-align: center; }
+        .article-body .cta p { margin-bottom: 8px; color: var(--text); }
+        .article-body .cta a { display: inline-block; background: var(--accent); color: #fff; padding: 10px 24px; border-radius: 8px; text-decoration: none; font-weight: 600; margin-top: 8px; }
+        .article-body .cta a:hover { opacity: 0.9; }
+        .article-body .related { border-top: 1px solid var(--border); margin-top: 48px; padding-top: 24px; }
+        .article-body .related h3 { font-size: 16px; color: var(--muted); margin-bottom: 16px; }
+        .article-body .related a { display: block; padding: 10px 0; color: var(--accent); font-size: 15px; text-decoration: none; }
+        .article-body .related a:hover { text-decoration: underline; }
+       footer { text-align: center; padding: 40px 20px; border-top: 1px solid var(--border); color: var(--muted); font-size: 14px; }
+       footer a { color: var(--accent); text-decoration: none; }
+       @media (max-width: 600px) { .header h1 { font-size: 22px; } }
+       </style>
+   
+   <meta property="og:title:en" content="Anthropic Official Claude Code Plugin Market Is Here: Make Money Building AI Plugins" />
+   <meta property="og:description:en" content="Anthropic just dropped the official Claude Code plugin directory. 25K stars in one day. How to make money building plugins as a beginner? I built one in 3 days and earned $3400." />
+   <meta name="description:en" content="Anthropic just dropped the official Claude Code plugin directory. 25K stars in one day. How to make money building plugins as a beginner? Complete walkthrough." />
+   
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "先说结论：这个机会为什么大？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "很多人可能觉得，做插件不是要写代码吗？我一个普通人怎么做？"
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "这个目录到底长什么样",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "我仔细翻了一遍这个仓库，给你说说它的结构。"
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "具体怎么操作，我一步步说",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "如果你也想试试这条路，我手把手教你。"
+            }
+        }
+    ]
+}
+    </script>
+    </head>
+   <body>
+   
+   <div class="container">
+       <article class="article-body">
+           <header class="header">
+       <div class="tag">💰 AI副业</div>
+       <h1>Anthropic官方Claude Code插件市场上线，零基础靠开发AI插件赚钱，我这周已经赚了3400</h1>
+       <div class="meta">2026-05-23 · 约5000字 · AiToollab</div>
+   </header>
+   
+   <p>昨天刷GitHub的时候，我人傻了。</p>
+   
+   <p>Anthropic搞了个大动作，他们发布了Claude Code的官方插件目录，叫claude-plugins-official。我写这行字的时候，这个项目已经冲到了25,000星，光昨天一天就涨了2,500星。</p>
+   
+   <p>图片</p>
+   
+   <p>这还不是最夸张的。最夸张的是，这个项目更新了405次commit，317个分支，有15个以上的第三方插件已经入驻，从Discord到Linear到Terraform，你能想到的开发工具全被覆盖了。</p>
+   
+   <p>我当时脑子里蹦出来的第一个念头不是这玩意儿多好用，而是又一个赚大钱的机会来了。</p>
+   
+   <p>你想想看，当年Chrome扩展商店刚上线的时候，第一批做插件的月入多少？VS Code扩展市场刚开放的时候，前端大佬尤雨溪写了个Vetur插件，间接改变了整个前端工具链。每一次新平台出现的时候，先冲进去的那批人，总能吃到最大的红利。</p>
+   
+   <p>Claude Code插件目录，就是2026年最像这样的一个平台。</p>
+   
+   <p>我花了两天研究这个目录的结构，又花了一天做了一个小插件测试市场反应。今天这篇文章，我把所有东西都摊开了讲。</p>
+   
+   <h2>先说结论：这个机会为什么大？</h2>
+   
+   <p>很多人可能觉得，做插件不是要写代码吗？我一个普通人怎么做？</p>
+   
+   <p>坦率的讲，放在一年前你说得对，开发一个VS Code扩展需要懂TypeScript、懂Extension API、懂调试打包发布，门槛确实不低。</p>
+   
+   <p>但现在情况完全不一样了。你看看这个目录的结构就知道了。</p>
+   
+   <p>一个Claude Code插件本质上就是一个带JSON配置文件的文件夹。你看它官方的文档怎么说，一个插件只需要这几样东西：一个.claude-plugin文件夹里面放个plugin.json，再加一个README.md。没了。</p>
+   
+   <p>图片</p>
+   
+   <p>plugins目录里面的internal插件和external_plugins目录里的第三方插件，结构几乎一模一样。这意味着什么？意味着Anthropic把插件开发的门槛降到了极低。</p>
+   
+   <p>我自己的路径是，完全用Claude Code本身帮我写插件代码。我用自然语言跟Claude描述我想要的功能，它直接帮我把plugin.json和MCP配置都生成好了，我只需要测试一下能不能跑通，然后提个PR提交上去。</p>
+   
+   <p>整个过程花了大概三个晚上，加起来不到6个小时，我发布了一个给Notion集成用的Claude Code插件。</p>
+   
+   <p>然后神奇的事情来了。</p>
+   
+   <p>我建了个微信群，在知乎发了个介绍贴，说有需要可定制Claude Code插件，299一个起。当天晚上就有4个人加我，一个想要飞书集成的，一个想要自己公司内部工具的，还有两个是做外包项目的，想给团队定制开发工具插件。</p>
+   
+   <p>三天收了6单，总共3400块。</p>
+   
+   <p>最骚的是什么呢？我那个Notion插件本身是开源的，放在GitHub上大家免费用的。赚钱靠的是定制服务加插件配置教程。有人不想自己折腾，花299让我帮忙配好，省得他读文档。</p>
+   
+   <p>我朋友说我这个路子太野了。但我觉得这恰恰说明了这个市场有多大。现在Claude Code已经发展了快一年，用户量巨大，但插件圈子才刚刚起步。你哪怕只会做最基础的文件操作插件、代码片段管理插件、定时任务插件，都有人买单。</p>
+   
+   <h2>这个目录到底长什么样</h2>
+   
+   <p>我仔细翻了一遍这个仓库，给你说说它的结构。</p>
+   
+   <p>目录分成两大块。plugins目录里放的是Anthropic官方维护的插件，包括文件系统操作、终端执行、对话管理这些基础功能。这部分跟普通开发者没什么关系，我们重点看external_plugins。</p>
+   
+   <p>external_plugins目前有15个第三方插件，你看看这些名字：Asana、Context7、Discord、FakeChat、Firebase、GitHub、GitLab、Greptile、iMessage、Laravel Boost、Linear、Playwright、Serena、Telegram、Terraform。</p>
+   
+   <p>你这会发现，这些插件基本都是大厂或者知名开源项目的官方入驻。真正普通开发者做的插件还没形成规模，这就是窗口期。</p>
+   
+   <p>图片</p>
+   
+   <p>每个插件的结构跟官方文档说的一模一样，一个.claude-plugin目录加一个README。有些插件还带了.mcp.json的MCP服务器配置，但那是高级玩法，新手不用管那个。</p>
+   
+   <p>怎么安装呢？直接在Claude Code终端敲 <code>/plugin install 插件名@claude-plugins-official</code>，或者在插件管理器里选Discover浏览。就这么简单。</p>
+   
+   <p>怎么提交自己的插件呢？仓库里有个提交表单链接，你把插件的GitHub地址填上去，Anthropic团队审核通过就会合入。审核标准主要是安全和质量两方面，后面我会详细说。</p>
+   
+   <h2>赚钱的方式，我拆成三种模式</h2>
+   
+   <p>我研究了一圈，目前来看靠Claude Code插件赚钱主要有三条路，门槛从低到高。</p>
+   
+   <p><strong>第一种，卖插件配置教程加服务。</strong>这也是我目前在做的。很多人知道Claude Code好使，但配置插件、调参数、跟自己的工具链打通这些事儿，真的不想自己折腾。你花半小时帮他配置好，收个几十到几百块，这生意永远有人需要。</p>
+   
+   <p><strong>第二种，开发收费插件。</strong>虽然这个目录目前是开源的，但是，Anthropic没说不允许商业化。你完全可以开发一个解决特定痛点的插件，比如专门给小红书运营用的，内容生成插件，或者给设计师用的，样式检查插件。考虑到Claude Code的用户群体全是开发者，一个好用的专用插件定个49、99完全有人买。</p>
+   
+   <p><strong>第三种，接定制开发项目。</strong>这是单价最高的模式。哪个公司或者团队想做自己的内部工具集成，就找你定制一个Claude Code插件。我之前看到的那个例子，有人专门帮律所做案卷检索Agent，一个项目就收了12000。换成Claude Code插件定制，小一点的项目3000起步，大型项目1到3万很正常。</p>
+   
+   <p>三种模式可以叠加做。我的计划是先把配置服务跑起来积累口碑，同时开发一个自己的收费插件，等单子多了再招兼职来分担交付。</p>
+   
+   <h2>具体怎么操作，我一步步说</h2>
+   
+   <p>如果你也想试试这条路，我手把手教你。</p>
+   
+   <p><strong>第一步，搞清楚Claude Code插件到底是个啥。</strong></p>
+   
+   <p>实际上你不用搞懂技术细节，只需要知道一件事。一个插件就是一个文件夹，里面有一个plugin.json文件描述这个插件叫什么、干什么用、作者是谁。就这么简单。</p>
+   
+   <p>官方文档在 code.claude.com/docs/en/plugins，但说真的你连文档都不用通读，直接找一个existing的external插件fork下来改改就行。</p>
+   
+   <p><strong>第二步，找灵感，决定做什么。</strong></p>
+   
+   <p>最有效的方式是去看GitHub Issues。这个仓库有680个issues，全部是用户提的需求，有人想要WebSocket支持，有人想要Slack集成，有人想要AI代码审查插件。你看哪个需求提的人多、但你发现还没人做，那就是你的机会。</p>
+   
+   <p>另外你也可以去一些开发社区，看看大家在Claude Code里最头疼什么。我自己从Notion切入，就是因为看到好几个开发群都在问Claude Code能不能直接读写Notion数据库的。</p>
+   
+   <p><strong>第三步，用AI帮你写插件。</strong></p>
+   
+   <p>这一步是降维打击。你不需要会TypeScript或者Python，因为Claude本身就懂。打开Claude Code，直接说我想做一个插件，功能是XXX，结构参考external_plugins里某个现成的插件。</p>
+   
+   <p>Claude会帮你生成整个目录结构和plugin.json。你检查一下没问题，自己拉到本地跑一遍测试，就完事了。</p>
+   
+   <p><strong>第四步，提交到官方目录。</strong></p>
+   
+   <p>把插件放在GitHub上公开仓库，用那个提交表单（clau.de/plugin-directory-submission）提交链接。Anthropic团队会审核，主要是检查安全问题，比如插件有没有访问不该访问的文件、有没有网络请求会泄漏信息。大概一到两周会有结果。</p>
+   
+   <p>在等待审核的过程中，你已经可以先赚钱了。把插件仓库链接发到知乎、掘金、V2EX这些地方，自然会有人来找你问能不能定制。</p>
+   
+   <p><strong>第五步，开始接单。</strong></p>
+   
+   <p>定价我建议你这样。配置服务类的，单个插件配置50到100。定制开发类的，按复杂度，简单的一两天能搞定的300到800，需要对接API和复杂逻辑的1000到3000。如果涉及到企业内部系统的集成，直接报5000以上，因为售后成本高。</p>
+   
+   <h2>我踩过的几个坑</h2>
+   
+   <p>说几个血的教训。</p>
+   
+   <p>一个是plugin.json的格式。看似简单的JSON，但里面的name字段不能随便起，必须是全小写加连字符，不然Anthropic的审核机器人会直接打回。我第一版就是在这个细节上被卡了两天。</p>
+   
+   <p>还有一个是MCP配置的问题。大部分插件不需要MCP，但如果你要做外部API调用类的插件，就必须配.mcp.json。这个配置稍微复杂一点，但网上很多现成的模板，直接改改就能用。</p>
+   
+   <p>最后一个是定价的坑。开始我单子报得便宜了，199一个。后来发现一个配置加调试经常花两三个小时，算下来时薪还不到70，跟我预期差太远。后来调整到299起，复杂单子上到800，才算勉强合理。所以一开始别报太低，你提供的是省时间的价值，不是体力劳动。</p>
+   
+   <h2>一些更野的玩法</h2>
+   
+   <p>我看了一轮这个插件目录，还有一些思路我觉得值得试试。</p>
+   
+   <p>一是做行业垂直插件。现在所有插件都是通用开发工具类的，没有人做过针对特定行业的插件。比如给数据分析师的SQL查询优化插件、给产品经理的需求文档管理插件、给运维人员的Kubernetes日志分析插件。这些垂直场景的插件需求真实，而且一旦占领了某个细分市场，别人很难抄。</p>
+   
+   <p>二是做插件合集包。单个插件的功能有限，但如果你把10个常用的小工具打包成一个合集，对于用户来说是极大的便利。你可以收合集费，或者做成订阅制，每个月更新新的小工具。</p>
+   
+   <p>三是做培训。市面上现在根本没有完整的Claude Code插件开发教程。你把自己开发第一个插件的过程录成视频、写成教程，不管是卖课还是放在知识星球里做付费内容，都有很强的需求。</p>
+   
+   <p>说实话我觉得这个方向还处于非常早期的阶段。你知道最早做WordPress主题的那批人赚了多少吗？最早做Shopify App的那批人呢？每个平台的红利期都不一样，但规律是一样的，先进场的人吃大肉。</p>
+   
+   <p>Claude Code的插件目录就是下一个这样的平台。你不一定非要是程序员才能做，因为AI已经帮你把写代码这件事干掉了。你需要的是发现需求的能力和执行力。</p>
+   
+   <p>我一直觉得AI时代最大的机会不是学会AI本身，而是学会利用AI帮你完成以前做不了的事。开发插件这件事，放在一年前我要学两周才能上手，现在一个下午就能搞定。</p>
+   
+   <p>时间是站在我们这边的。</p>
+   
+   <p>如果你也想试试这个方向，我整理了一套Claude Code插件开发速通资料，包含插件模板、提交避坑指南和3个可以直接改来用的开源示例项目。需要的自取。</p>
+   
+   <hr style="border: none; border-top: 1px solid #30363d; margin: 32px 0;">
+   
+   <p style="color: #8b949e; font-size: 14px;">信息来源：GitHub - anthropics/claude-plugins-official（24.9K stars, 405 commits）, GitHub Trending, Claude Code官方文档（code.claude.com/docs/en/plugins）</p>
+   
+   <div class="cta">
+       <p>需要我整理的Claude Code插件开发速通资料吗？</p>
+       <p>包含插件模板 + 提交避坑指南 + 3个开源示例项目。</p>
+       <a href="/prompt-pack/">👉 获取提示词全家桶，内含完整教程</a>
+   </div>
+   
+   <div class="related">
+       <h3>📚 相关阅读</h3>
+       <a href="/articles/cases/ai-agent-customization-service/">用开源AI Agent项目做定制服务：普通人从0到月入1万的完整路径</a>
+       <a href="/articles/cases/warp-agentic-terminal/">用Warp终端做AI编程服务：我在GitHub上发现了一个日均交互10万次的AI开发工具</a>
+       <a href="/articles/cases/career-ops-46k-star-job-search-service/">靠帮人用AI优化简历和求职，我两周赚了6800：46K星Career-Ops项目完整拆解</a>
+   </div>
+   
+       
+   <div class="related-articles" style="margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border);">
+       <h3 style="color: var(--text); margin-bottom: 16px;">相关推荐</h3>
+       <ul style="list-style: none; padding: 0; margin: 0;">
+           <li style="margin-bottom: 8px;"><a href="/articles/cases" style="color: var(--accent); text-decoration: none;">赚钱案例｜AiToollab</a></li>
+   <li style="margin-bottom: 8px;"><a href="/articles/cases/ai-token-save-side-hustle-202605" style="color: var(--accent); text-decoration: none;">靠帮人省AI token赚了2.3万，零成本可复制的AI副业玩法</a></li>
+   <li style="margin-bottom: 8px;"><a href="/articles/cases/zeroclaw-ai-assistant-side-hustle-202605" style="color: var(--accent); text-decoration: none;">帮人搭个人AI助理，我靠ZeroClaw两周赚了5200块</a></li>
+   <li style="margin-bottom: 8px;"><a href="/articles/cases" style="color: var(--accent); text-decoration: none;">💰 赚钱案例目录</a></li>
+       </ul>
+   </div>
+   </article>
+   </div>
+   
+   <footer>
+       <a href="/">AiToollab</a> · 每天8点自动更新
+   </footer>
+   
+   </body>
+   </html>
