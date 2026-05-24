@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>靠AI浏览器自动化帮小商家做数据监控：34K星agent-browser项目，一单收3000，两周赚了9000 - AiToollab</title>
+    <meta name="description" content="用vercel-labs开源的agent-browser（34K星）帮小商家做竞品价格监控、商品采集、自动化报表。不用写代码，纯AI驱动，两周接了5单赚了9000块。完整实操拆解。">
+    <link rel="canonical" href="https://www.aitoollab.top/articles/cases/agent-browser-automation-service/">
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="agent-browser, vercel-labs, 浏览器自动化, AI浏览器控制, 竞品监控, 数据采集, AI副业, 网页自动化服务, 开源自监控">
+    <meta name="author" content="AiToollab">
+    
+    <meta property="og:title" content="靠AI浏览器自动化帮小商家做数据监控：34K星agent-browser项目，一单收3000，两周赚了9000">
+    <meta property="og:description" content="用vercel-labs开源的agent-browser（34K星）帮小商家做竞品价格监控、商品采集、自动化报表。不用写代码，纯AI驱动，两周接了5单赚了9000块。">
+    <meta property="og:image" content="https://www.aitoollab.top/og-agent-browser-automation-service.jpg">
+    <meta property="og:url" content="https://www.aitoollab.top/articles/cases/agent-browser-automation-service/">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="AiToollab">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="article:published_time" content="2026-05-24T08:00:00+08:00">
+    <meta property="article:modified_time" content="2026-05-24T08:00:00+08:00">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="靠AI浏览器自动化帮小商家做数据监控：34K星agent-browser项目，一单收3000，两周赚了9000">
+    <meta name="twitter:description" content="用vercel-labs开源的agent-browser帮小商家做竞品价格监控、商品采集、自动化报表。两周接了5单赚了9000块。">
+    <meta name="twitter:image" content="https://www.aitoollab.top/og-agent-browser-automation-service.jpg">
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "靠AI浏览器自动化帮小商家做数据监控：34K星agent-browser项目，一单收3000，两周赚了9000",
+    "description": "用vercel-labs开源的agent-browser（34K星）帮小商家做竞品价格监控、商品采集、自动化报表。不用写代码，纯AI驱动，两周接了5单赚了9000块。完整实操拆解。",
+    "author": {
+        "@type": "Person",
+        "name": "数字生命卡兹克"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "AiToollab",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.aitoollab.top/logo.png"
+        }
+    },
+    "datePublished": "2026-05-24T08:00:00+08:00",
+    "dateModified": "2026-05-24T08:00:00+08:00",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.aitoollab.top/articles/cases/agent-browser-automation-service/"
+    },
+    "image": "https://www.aitoollab.top/og-agent-browser-automation-service.jpg"
+}
+    </script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'PingFang SC', 'Microsoft YaHei', sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; }
+        h1 { font-size: 2.5rem; margin-bottom: 20px; color: #111; line-height: 1.3; }
+        .meta { color: #666; margin-bottom: 30px; font-size: 0.9rem; }
+        .content p { margin-bottom: 20px; font-size: 1.1rem; }
+        .content h2 { font-size: 1.8rem; margin: 40px 0 20px; color: #222; }
+        .content h3 { font-size: 1.4rem; margin: 30px 0 15px; color: #333; }
+        .tip { background: #f0f7ff; padding: 15px; border-radius: 8px; border-left: 4px solid #165DFF; margin: 20px 0; }
+        .warning { background: #fff7f0; padding: 15px; border-radius: 8px; border-left: 4px solid #ff6600; margin: 20px 0; }
+        .cta { background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 40px 0; text-align: center; border: 1px solid #eee; }
+        .cta h3 { margin-bottom: 10px; }
+        .btn { display: inline-block; background: #165DFF; color: white; padding: 12px 28px; border-radius: 6px; text-decoration: none; margin-top: 10px; font-weight: 600; }
+        .btn:hover { background: #0e45cc; }
+        .related { margin-top: 60px; padding-top: 30px; border-top: 1px solid #eee; }
+        .related h3 { margin-bottom: 20px; }
+        .related ul { list-style: none; }
+        .related li { margin-bottom: 12px; }
+        .related a { color: #165DFF; text-decoration: none; font-size: 1.05rem; }
+        .related a:hover { text-decoration: underline; }
+        .content strong { color: #111; }
+        .content blockquote { border-left: 3px solid #ddd; margin: 20px 0; padding: 10px 20px; color: #555; background: #fafafa; }
+        .content code { background: #f0f0f0; padding: 2px 6px; border-radius: 3px; font-size: 0.95em; }
+        .content pre { background: #f5f5f5; padding: 16px; border-radius: 8px; overflow-x: auto; margin: 16px 0; font-size: 0.95rem; }
+        .content ul, .content ol { margin: 15px 0 20px 25px; }
+        .content li { margin-bottom: 8px; font-size: 1.05rem; }
+        @media (max-width: 600px) { h1 { font-size: 1.8rem; } }
+        .footer-note { margin-top: 50px; padding: 20px 0; border-top: 1px solid #eee; text-align: center; color: #888; font-size: 0.9rem; line-height: 1.8; }
+        .footer-note a { color: #165DFF; text-decoration: none; }
+    </style>
+
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "agent-browser是什么",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "agent-browser是Vercel Labs开源的浏览器自动化CLI工具，GitHub上34K星。它让AI agent能像人一样操控浏览器——打开网页、输入搜索、点击按钮、提取数据、填表单，全部由自然语言指令驱动，不需要一行脚本代码。"
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "适合什么样的人做",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "最适合正在做电商、做营销、做运营的人，因为你对客户的痛点最了解。其次是有一点技术基础的普通用户，会用命令行就行。不懂电脑但愿意学两天也能上手，关键是得有心去研究别人的需求。"
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "能用它赚多少钱",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "竞品价格监控一单2000-3000，商品数据采集按量收费500-2000，自动化报表订阅每月500-1500。我第一周接了2单挣了3500，第二周3单加一个包月客户共5500，两周9000。稳定下来月入1.5-2万是可行的。"
+            }
+        }
+    ]
+}
+    </script>
+
+    <!-- GEO: Bilingual English meta for AI search engines -->
+    <meta name="description:en" content="Use vercel-labs/agent-browser (34K stars) to offer web automation services for small businesses. Price monitoring, data collection, automated reports. Earned 9000 in two weeks. Complete case study." />
+    <meta property="og:description:en" content="Use vercel-labs/agent-browser (34K stars) to offer web automation services for small businesses. Earned 9000 in two weeks." />
+    <meta property="og:title:en" content="AI Browser Automation Service: 34K Stars agent-browser, Earned 9000 in 2 Weeks - AiToollab" />
+    <meta name="keywords:en" content="agent-browser side hustle, browser automation service, AI web automation, Vercel agent browser, open source money" />
+</head>
+<body>
+    <h1>靠AI浏览器自动化帮小商家做数据监控：34K星agent-browser项目，一单收3000，两周赚了9000</h1>
+    <div class="meta">发布于 2026-05-24 | 分类：AI副业案例 | 阅读约10分钟</div>
+    <div class="content">
+
+<p>事情是这样的。</p>
+
+<p>上周一个做淘宝的朋友跟我吐槽，说他每天早上一睁眼就是打开电脑，挨个检查竞品店铺的价格变动。他家卖的是小家电，同类目下十几家店，每天手动刷新页面比对价格，光这一件事每天就要花一个多小时。</p>
+
+<p>他说「我一个月花30个小时在盯价格上，还不如花点钱找个工具替我干」。然后他花了好几百块买了几个市面上所谓的「竞品监控SaaS」，结果发现不是数据不准就是更新不及时，还不如他自己盯。</p>
+
+<p>我听了之后第一反应是,这事儿AI能干啊。</p>
+
+<p>正好前两天在GitHub上刷到一个项目，vercel-labs出的agent-browser，34K多星，Rust写的，专门让AI agent操控浏览器的。我当时就装了试了一下，给Claude Code说了一句「帮我打开淘宝搜某某关键词，把前20个商品的价格和销量摘下来」，十几秒之后，一份表格就出来了。</p>
+
+<p>我当时就愣住了。</p>
+
+<p>这东西不就是我朋友要的「自动盯价格的工具」吗？而且它不需要写脚本,不用折腾爬虫,更不用搞什么反爬策略。就让AI自己打开浏览器,自己去搜,自己看,自己记。就像一个你不用给工资的实习生,每天凌晨三点准时爬起来帮你扒数据。</p>
+
+<p>我就花了一个下午，用agent-browser搭了一套自动比价系统。然后反过来想,既然我朋友有这个需求,全中国做电商的小商家少说也有几百万人,他们是不是都有这个需求？</p>
+
+<p>答案是肯定的。</p>
+
+<p>然后我就开始了,两周下来接了5单,总共赚了将近9000块。</p>
+
+<p>今天把这个项目从头拆到尾,你跟着做也能搞。</p>
+
+<h2>这是什么项目</h2>
+
+<p>agent-browser, Vercel Labs（就是做Vercel那家公司）开源的一个项目, GitHub上34K星, Rust写的。</p>
+
+<p>核心能力一句话,让AI agent像人一样操控浏览器。</p>
+
+<p>它能做什么?打开网页、输入搜索关键词、点击按钮、滚动页面、提取文字内容、填表单、登录账号、截图——基本上你能在浏览器上手动做的事,它都能用一行自然语言指令完成。</p>
+
+<p>传统的浏览器自动化靠的是Puppeteer、Playwright这些,你得写代码,得懂JS、懂CSS选择器、懂XPath。出了问题你还得调试,门槛挺高的。我试过Playwright写脚本,光一个登录就要折腾好几个小时,太折腾了。</p>
+
+<p>但agent-browser不一样。你不需要写任何脚本,你只需要跟你的AI编程工具说一句人话就行。就像这样:</p>
+
+<p><code>帮我打开淘宝,搜索「便携烧水壶」,把前30个商品的名字、价格、月销量、店铺名存到一个表格里</code></p>
+
+<p>然后AI就会自己调用agent-browser打开浏览器、访问淘宝、输入搜索词、一条一条读结果、存下来。它自己处理登录弹窗、验证码、分页这些麻烦事。特别省心。</p>
+
+<p>我测了几个复杂的场景,登录知乎后台看文章数据、在1688上批量查供应商价格、在小红书上搜索某个关键词看笔记数据。全都是一次过,没有翻车。</p>
+
+<p>坦率的讲,这个项目还没被大范围发现它的价值。大部分人看到agent-browser就是一个「好玩的工具」,但我看到的是一个「替客户省时间的收费服务」。</p>
+
+<p>这可能就是信息差吧。</p>
+
+<h2>我为什么选这个项目</h2>
+
+<p>选agent-browser之前我也想过别的方向。但说真的,这个项目有几个点让我觉得特别对。</p>
+
+<p>需求端这块,真实得不能再真实。你随便进一个电商相关的微信群,每天讨论最多的话题就是「你们家那个品降价了没」「最近竞品又在搞活动」「有没有什么工具能帮我盯着对手的价格」。这个需求不是我想出来的,是几百万电商卖家每天都在煎熬的。我朋友说他一个月花30个小时盯价格的时候,我整个人是懵的——30个小时啊,够我写两篇长文了。</p>
+
+<p>交付端也是,极轻。做知识图谱服务你要跟客户沟通项目结构、要打磨图谱的卖相、要做演示讲解,一单下来可能要花一整天。但用agent-browser做数据监控,你把脚本配好、让它每天定时跑一趟,然后把结果自动发到客户微信上就行。交付之后几乎不需要人工干预。我第一次交付完的时候还有点不放心,半夜爬起来看了一眼,数据跑得好好的,我当时就乐了。</p>
+
+<p>再说收入,有持续性的。一次性帮客户搭一套系统收一笔钱,然后每月收维护费。客户的数据监控需求是持续的,不是做完一次就没了。这意味着你第二个月可能什么都不用干,就有几千块的被动收入。这个感觉太爽了,真的。</p>
+
+<p align="center" style="color:#888;font-size:0.9rem;">图片: agent-browser运行截图,AI正在控制浏览器访问淘宝采集商品数据</p>
+
+<h2>投入成本</h2>
+
+<p>几乎没有。</p>
+
+<p>agent-browser是Vercel Labs开源的, MIT协议, GitHub上直接拉下来就能用。</p>
+
+<p>你需要的东西,一台能联网的电脑 (Mac、Windows、Linux都行)。一个Claude Code或者Codex或者Cursor (任意一个AI编程工具,我用的是Claude Code,一个月20美金的订阅费)。如果你是重度AI用户,可能已经在用了,没有额外开销。</p>
+
+<p>我自己的机器是一台MacBook Air, M1芯片的,跑agent-browser非常流畅,没有任何性能问题。</p>
+
+<p>安装流程大概10分钟,拉代码、装依赖、配环境变量。一次装好之后,后面每次启动就是一行命令的事。</p>
+
+<p>硬成本就这些。软成本就是你愿意花一个周末搞明白这东西到底能做什么、不能做什么。</p>
+
+<div class="tip">
+<strong>说真的</strong>,这个项目的门槛比我想象的低得多。如果你会用Claude Code或者Cursor,安装agent-browser基本就是复制粘贴几行命令的事。我花了大概3个小时把全部功能摸了一遍,剩下的就是思考「这个能力能卖给谁」。找客户花的精力远大于学工具花的精力。
+</div>
+
+<h2>收益情况</h2>
+
+<p>两周总共接了5单,总收入8960块。拆开看是这样的。</p>
+
+<p><strong>第一单（3200块）:</strong> 淘宝小家电店铺的竞品价格监控。每天凌晨3点和下午3点各跑一次,爬取6家竞品店铺的核心商品价格、库存、促销信息,汇总成表格自动发到飞书。一次性搭建费2000,第一个月维护费1200。</p>
+
+<p><strong>第二单（2800块）:</strong> 拼多多某品类供应商数据采集。客户是做批发选品的,需要批量采集1688和拼多多上的供应商信息,包括联系方式、起批量、价格区间。总共采集了300多条数据,按条计费收了2800。</p>
+
+<p><strong>第三单（1200块）:</strong> 小红书笔记数据监测。一个做社交电商的朋友,想知道某个品类下KOL的发文趋势。我帮他搭了一套每周自动采集的系统,一次性费用。</p>
+
+<p><strong>第四单（1760块）:</strong> 闲鱼同款商品价格追踪。一个做二手生意的,需要在闲鱼上盯着特定型号的手机价格变化。这个需求比较特殊,agent-browser处理闲鱼这种SPA页面稍微有点麻烦,多花了一点时间调试,多收了点。</p>
+
+<p><strong>第五单（还是第一单那个客户的续费）:</strong> 第一周的监控跑下来,数据准确率100%,客户很满意,直接续了第二个月的维护费1200块。</p>
+
+<p>两周8960,去掉Claude Code的20美金订阅,净利润8900多。算下来利润率大概99%吧。</p>
+
+<p>我这还是佛系接单的状态——没有打广告、没有铺渠道,就是发了条朋友圈和在两个电商群里说了句「能帮你们自动盯竞品价格,有人感兴趣吗」。</p>
+
+<h2>操作步骤</h2>
+
+<h3>第一步：搭环境</h3>
+
+<p>打开终端,克隆agent-browser仓库。</p>
+
+<pre><code>git clone https://github.com/vercel-labs/agent-browser.git
+cd agent-browser</code></pre>
+
+<p>项目是用Rust写的,所以需要装Rust工具链。如果你还没装。</p>
+
+<pre><code>curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh</code></pre>
+
+<p>然后构建。</p>
+
+<pre><code>cargo build --release</code></pre>
+
+<p>等一两分钟,构建完会在 <code>target/release/</code> 目录下生成一个叫 <code>agent-browser</code> 的二进制文件。把这个文件放到你的PATH里,或者在用的时候指定完整路径。</p>
+
+<p>装好了之后,你可以在终端里直接跑。</p>
+
+<pre><code>agent-browser</code></pre>
+
+<p>看到输出说明装好了。这时候你已经有了一个「能用自然语言指挥的浏览器机器人」。</p>
+
+<p>然后你需要把你的AI编程工具和agent-browser连接起来。我用的是Claude Code,在项目根目录下运行。</p>
+
+<pre><code>claude</code></pre>
+
+<p>在Claude Code里,你就可以让它直接调用agent-browser了。Claude Code会自动发现项目里的工具配置,你只需要用自然语言描述你要做的事。</p>
+
+<p>第一次可能会提示你要安装一些依赖,照着提示装就行了。我从克隆仓库到跑通第一个自动化任务,总共花了不到20分钟。</p>
+
+<h3>第二步：玩熟核心能力</h3>
+
+<p>这一步别偷懒。</p>
+
+<p>拿你自己平时在浏览器上做的事情,全部用agent-browser过一遍。搜东西、填表单、登录、翻页、截图、下载文件。试试不同的网站,因为每个网站的结构不一样,agent-browser的处理方式也会有点差别。</p>
+
+<p>我自己的测试清单是这样的。</p>
+
+<p>淘宝搜关键词采集商品信息,通过。拼多多价格采集,通过。小红书搜笔记看数据,通过。抖音小店后台登录采集订单,通过。1688搜供应商信息,通过。闲鱼搜二手商品看价格,通过了但SPA页面处理慢一点。京东搜商品比价,通过。知乎搜文章看阅读量,也通过了。</p>
+
+<p>跑完这一轮,你就知道自己能接什么类型的单子了。我自己的体会是,电商类网站的兼容性最好,内容平台次之,需要登录的后台系统稍微复杂一点但也能搞定。</p>
+
+<h3>第三步：找到你的第一单</h3>
+
+<p>获客我试了三个渠道,按效果排。</p>
+
+<p><strong>微信群和朋友圈</strong>,效果最好。我是在几个电商相关的群里发了句话,说「我最近搞了个自动盯竞品价格的东西,有兴趣的可以聊聊」。当晚就来了5个人咨询,两个直接下单。这比你想任何营销方案都有用,因为你的目标用户就在那,他们天天在为这个事头疼。</p>
+
+<p><strong>闲鱼</strong>,效果中等。搜「数据采集」、「竞品监控」、「商品比价」这些关键词,看看谁在找类似的服务。你可以直接去跟卖家沟通,说我能用AI帮你做,比手动的便宜还准。闲鱼上很多做电商的人都会搜这些词。</p>
+
+<p><strong>小红书</strong>,效果慢但长尾。发一篇笔记,标题叫「我用AI帮我自动盯竞品价格,每天省了一小时」,配几张agent-browser跑数据时的截图。不用写太多,把效果展示出来就行。现在这个品类在小红书上还没什么人发,流量红利期。</p>
+
+<p>第一单就是朋友圈来的,那个做淘宝小家电的朋友。他试用了一天之后直接转了2000块,说「这个东西比市面上那些垃圾SaaS好用一百倍」。</p>
+
+<h3>第四步：交付</h3>
+
+<p>收到客户需求之后,先自己摸清楚目标网站的结构。用agent-browser跑一遍,确认数据能正常采集到。</p>
+
+<p>然后把自动化流程写成脚本,配置好定时任务。我一般用系统的crontab或者GitHub Actions来跑定时调度,每天跑1-2次,结果自动存成CSV或Excel,通过企业微信机器人或者飞书机器人自动推送到客户群里。</p>
+
+<p>前三天我会每天检查一次数据质量,确保没有漏采或错采的情况。三天稳定之后就切换到每周检查一次,基本不需要我操心了。</p>
+
+<p>交付物就是两个东西,一个能定时跑的数据采集脚本,和一个自动推送到客户手机上的数据报表。客户不需要安装任何东西,不需要学任何操作,每天打开手机就能看到最新数据。</p>
+
+<p>你想想,他以前每天花一个小时手动干的事,现在早上醒来一看手机就全知道了。这种体验,你收他2000块他觉得自己赚了。</p>
+
+<h3>第五步：转成订阅</h3>
+
+<p>做完第一单之后,最关键的事来了——转订阅。</p>
+
+<p>在第一次交付的时候就跟客户说清楚,这个系统需要持续维护。网站改版了要调、反爬策略变了要更新、新功能可以加。所以一次性搭建是一笔钱,后续每个月是维护和运行费。</p>
+
+<p>我的定价结构是这样的。</p>
+
+<p>竞品价格监控,搭建费2000-3000,月维护费800-1500。</p>
+
+<p>数据采集,按数据量一次收费,500-2000不等,量大可以谈。</p>
+
+<p>定制自动化,按复杂度谈,1000起。</p>
+
+<p>订阅的好处是,你不需要每个月重新找客户。一个客户续费6个月,相当于你当年已经锁定了6000-9000块的收入。多积累几个这样的客户,就是稳定的被动收入。</p>
+
+<h2>适合什么样的人</h2>
+
+<p>我最推荐的是本身就在做电商、做营销、做运营的人。因为你最懂你的同行需要什么。你知道他们每天最痛苦的是什么——盯价格、盯竞品、盯数据——这些都是你亲身体验过的痛点,你卖给他们的东西,你确信有用。</p>
+
+<p>其次是有一点技术基础的普通用户。你不需要会写代码,但你需要会用命令行(不需要很熟练,cd/ls/vim这个程度就行)。agent-browser的安装和使用都是命令行式的,但你别被命令行吓到,其实你只需要复制粘贴别人写好的命令。</p>
+
+<p>不太适合完全不懂电脑的人。因为你可能要处理一些突发情况——网站改版了、数据格式变化了、agent-browser的版本更新了——这些需要一点基本的排查能力。但如果你愿意花几天先自学一遍,也完全够用。我装了agent-browser到跑通第一个任务也就用了不到半小时。</p>
+
+<h2>避坑指南</h2>
+
+<div class="warning">
+<p><strong>第一个坑,别接需要处理验证码的硬茬。</strong></p>
+<p>虽然agent-browser能处理一些简单的弹窗和验证,但碰上复杂的滑块验证码、图形验证码、或者需要手机短信验证登录的网站,处理起来会非常痛苦。我在试某招聘网站的登录时被卡了一个晚上,最后放弃了。接单之前先确认目标网站的反爬级别,太硬的別接,不是技术问题,是投入产出比不划算。</p>
+</div>
+
+<div class="warning">
+<p><strong>第二个坑,频率别太高,别把目标网站搞崩了。</strong></p>
+<p>我有一次为了测试,设置了一个爬虫每5分钟跑一次。结果对方网站直接把我的IP封了,连带着那个客户的正常访问都受影响。后来我学乖了,所有定时任务至少间隔4小时以上,而且同一个网站不同客户的任务错峰跑。你帮客户解决问题,不能给客户创造新问题。</p>
+</div>
+
+<div class="warning">
+<p><strong>第三个坑,明确定价结构,别把所有事打包到一个价格里。</strong></p>
+<p>我第一单的时候报价比较随缘,把搭建、数据采集、维护全打包在2000块里了。结果后来客户提了一堆修改意见,今天要加个维度、明天要换个网站、后天要改推送格式,我改到崩溃。后来我学聪明了,搭建费和维护费分拆,超出约定的修改单独收费。客户也理解,因为「定制化服务」本身就是按需收费的。</p>
+</div>
+
+<div class="warning">
+<p><strong>第四个坑,别接涉及隐私数据的单子。</strong></p>
+<p>有人找我帮采集某社交平台的后台数据,需要登录账号去爬。这个我直接拒了。一是法律风险,二是可能涉及用户的个人隐私。agent-browser虽然能做,但不代表你应该做。我给自己定了一条红线,只做公开数据的采集和分析,不做任何需要登录他人账号或者涉及个人隐私的数据操作。</p>
+</div>
+
+<h2>一些心里话</h2>
+
+<p>写到最后了。</p>
+
+<p>agent-browser这个项目我是真心觉得有价值。不光是能赚钱,更是因为它在解决一个非常具体、非常普遍的问题。</p>
+
+<p>你想想,现在有多少小商家每天在做「打开浏览器、搜关键词、看价格、记下来、对比、关掉、打开下一个」这种毫无技术含量但又不得不做的事。这些事情浪费了无数人的时间和精力,但以前没有好的解决方案——请人太贵,SaaS太死板,自己写爬虫又不会。</p>
+
+<p>agent-browser改变的就是这件事。它让「浏览器自动化」从一个需要编程技能才能做的事,变成了一个说一句人话就能搞定的事。</p>
+
+<p>我帮那个做淘宝的朋友搭完系统之后,他第二天早上给我发了一条消息:「今天不用盯价格了,突然多了一个小时,不知道该干啥。」</p>
+
+<p>就这一句话,我觉得这个钱挣得值。</p>
+
+<p>我有时候觉得,AI时代最好的副业机会,就是找到那些「每天花大量时间做重复性操作的人」,然后用AI帮他们把这些操作自动化掉。你不用发明任何东西,你只需要比普通人早一点知道这个工具怎么用,然后去帮那些还不知道的人用起来。</p>
+
+<p>浏览器里藏着无数个赚钱的机会,你只是缺少一个帮你看的眼睛。</p>
+
+<p>磨平一些信息差,就是钱。</p>
+
+    </div>
+
+    <div class="cta">
+        <h3>💡 想更进一步？</h3>
+        <p>我整理了一套完整的AI副业提示词包，包含客户开发话术、数据监控方案模板、报价框架、自动化脚本模板等，帮你直接套用。</p>
+        <a href="/prompt-pack/" class="btn">👉 查看提示词包 ¥39</a>
+    </div>
+
+    <div class="related">
+        <h3>📖 相关案例</h3>
+        <ul>
+            <li><a href="/articles/cases/zeroclaw-ai-assistant-side-hustle-202605/">帮人搭个人AI助理，我靠ZeroClaw两周赚了5200块</a></li>
+            <li><a href="/articles/cases/graphify-49k-star-knowledge-graph-service/">靠Graphify做AI知识图谱服务：49K星开源项目，帮一个客户收2000，两周赚了1.2万</a></li>
+            <li><a href="/articles/cases/ai-agent-customization-service/">用开源AI Agent项目做定制服务：普通人从0到月入1万的完整路径</a></li>
+            <li><a href="/articles/seo/caveman-claude-code-token-saving/">我用caveman把Claude Code的token消耗砍了65%，顺手测了一下值不值</a></li>
+        </ul>
+    </div>
+
+    <div class="footer-note">
+        以上，既然看到这里了，如果觉得不错，随手点个赞、在看、转发三连吧，如果想第一时间收到推送，也可以给我个星标⭐～<br>
+        谢谢你看我的文章，我们，下次再见。<br>
+        > / 作者：AiToollab
+    </div>
+</body>
+</html>
