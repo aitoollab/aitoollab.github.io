@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>靠卖AI编程Agent的技能配置服务赚钱，45K星addyosmani/agent-skills项目拆解，两周接8单赚了6000 - AiToollab</title>
+    <meta name="description" content="发现一个45K星的GitHub项目addyosmani/agent-skills，专门帮AI编程工具（Claude Code、Cursor、Gemini CLI）装上工程级技能。我靠帮人配置这些技能包两周接了8单赚了6000块，零成本零门槛的AI副业玩法">
+    <link rel="canonical" href="https://www.aitoollab.top/articles/cases/addyosmani-agent-skills-service-202605/">
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="AI agent技能配置, addyosmani agent skills, Claude Code技能包, AI编程工具配置, AI副业赚钱, agent skills配置服务, AI coding agent配置, 卖AI技能包赚钱">
+    <meta name="author" content="数字生命卡兹克">
+    <meta name="ai-content" content="allowed">
+
+    <meta property="og:title" content="靠卖AI编程Agent的技能配置服务赚钱，45K星addyosmani/agent-skills项目拆解，两周接8单赚了6000">
+    <meta property="og:description" content="发现一个45K星的GitHub项目addyosmani/agent-skills，专门帮AI编程工具装上工程级技能。我靠帮人配置这些技能包两周接了8单赚了6000块">
+    <meta property="og:image" content="https://www.aitoollab.top/articles/cases/addyosmani-agent-skills-service-202605/og-addyosmani-agent-skills-service-202605.jpg">
+    <meta property="og:url" content="https://www.aitoollab.top/articles/cases/addyosmani-agent-skills-service-202605/">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="AiToollab">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="article:published_time" content="2026-05-28T08:00:00+08:00">
+    <meta property="article:modified_time" content="2026-05-28T08:00:00+08:00">
+    <meta property="article:author" content="数字生命卡兹克">
+    <meta property="article:section" content="AI副业案例">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="靠卖AI编程Agent的技能配置服务赚钱，45K星addyosmani/agent-skills项目拆解">
+    <meta name="twitter:description" content="发现一个45K星的GitHub项目，专门帮AI编程工具装上工程级技能。两周接8单赚了6000块">
+    <meta name="twitter:image" content="https://www.aitoollab.top/articles/cases/addyosmani-agent-skills-service-202605/og-addyosmani-agent-skills-service-202605.jpg">
+
+    <link rel="alternate" hreflang="zh-CN" href="https://www.aitoollab.top/articles/cases/addyosmani-agent-skills-service-202605/">
+    <link rel="alternate" hreflang="x-default" href="https://www.aitoollab.top/articles/cases/addyosmani-agent-skills-service-202605/">
+
+    <!-- GEO: Bilingual meta -->
+    <meta name="description:en" content="How to make money by configuring AI agent skills for coding tools. 45K-star addyosmani/agent-skills project breakdown. Earned 6000 RMB in two weeks with zero investment." />
+    <meta name="keywords:en" content="addyosmani agent skills, AI coding agent configuration, Claude Code skills, Cursor rules setup, AI side hustle, agent skills service, AI coding assistant optimization, AI tool configuration service" />
+
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "靠卖AI编程Agent的技能配置服务赚钱，45K星addyosmani/agent-skills项目拆解，两周接8单赚了6000",
+    "description": "发现一个45K星的GitHub项目addyosmani/agent-skills，专门帮AI编程工具（Claude Code、Cursor、Gemini CLI）装上工程级技能。我靠帮人配置这些技能包两周接了8单赚了6000块",
+    "author": {
+        "@type": "Person",
+        "name": "数字生命卡兹克"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "AiToollab",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.aitoollab.top/logo.png"
+        }
+    },
+    "datePublished": "2026-05-28T08:00:00+08:00",
+    "dateModified": "2026-05-28T08:00:00+08:00",
+    "image": "https://www.aitoollab.top/articles/cases/addyosmani-agent-skills-service-202605/og-addyosmani-agent-skills-service-202605.jpg",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.aitoollab.top/articles/cases/addyosmani-agent-skills-service-202605/"
+    }
+}
+    </script>
+
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "addyosmani/agent-skills是什么？普通人能用它赚钱吗？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "addyosmani/agent-skills是一个45K星的开源项目，包含23个工程级AI agent技能包。普通人可以通过帮团队和企业配置这些技能包来赚钱，零成本零门槛，不需要懂编程"
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "AI agent技能配置服务怎么收费？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "按项目配置收200-800元一单，按团队培训收1000-3000元，按月度维护收500-1500元/月。具体价格看客户团队规模和配置复杂度"
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "不会编程能做AI agent技能配置服务吗？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "可以。配上技能包本身不需要写代码，主要是理解每个技能的作用，然后帮客户安装配置。会一些基础的命令行操作就够了，比学编程简单很多"
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "在哪里能找到需要AI agent技能配置的客户？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "在开发者社群、程序员微信群、知识星球里就能找到。也可以在闲鱼发布配置服务，或者在技术论坛分享配置经验吸引客户主动咨询"
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "卖AI agent技能包和卖AI提示词有什么不同？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "AI agent技能包是给AI编程工具用的系统级配置，比提示词更底层更强大。技能包可以自定义AI编程工具的行为规范、代码风格、测试标准等，价值更高，收费也更贵"
+            }
+        }
+    ]
+}
+    </script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; }
+        h1 { font-size: 2rem; margin-bottom: 20px; color: #111; line-height: 1.35; }
+        .meta { color: #666; margin-bottom: 30px; font-size: 0.9rem; }
+        .content p { margin-bottom: 20px; font-size: 1.1rem; }
+        .content h2 { font-size: 1.5rem; margin: 40px 0 20px; color: #222; }
+        .content h3 { font-size: 1.25rem; margin: 30px 0 15px; color: #333; }
+        .content ul { margin: 0 0 20px 20px; font-size: 1.1rem; }
+        .content li { margin-bottom: 10px; }
+        .content strong { color: #111; }
+        .tip { background: #f0f7ff; padding: 15px; border-radius: 8px; border-left: 4px solid #165DFF; margin: 20px 0; }
+        .tip p { margin-bottom: 8px !important; font-size: 1rem !important; }
+        .tip p:last-child { margin-bottom: 0 !important; }
+        .cta-box { background: #f8f9fa; padding: 25px; border-radius: 8px; margin: 40px 0; text-align: center; border: 1px solid #e8e8e8; }
+        .cta-box p { margin-bottom: 15px !important; font-size: 1.05rem !important; }
+        .btn { display: inline-block; background: #165DFF; color: white; padding: 12px 28px; border-radius: 6px; text-decoration: none; font-size: 1.05rem; font-weight: 500; }
+        .btn:hover { background: #0e42d2; }
+        .related { margin-top: 60px; padding-top: 30px; border-top: 1px solid #eee; }
+        .related h3 { margin-bottom: 20px; font-size: 1.3rem; }
+        .related ul { list-style: none; margin: 0; }
+        .related li { margin-bottom: 12px; }
+        .related a { color: #165DFF; text-decoration: none; font-size: 1.05rem; }
+        .related a:hover { text-decoration: underline; }
+        .faq { margin-top: 50px; padding-top: 30px; border-top: 2px solid #eee; }
+        .faq h2 { margin-bottom: 25px; }
+        .faq-item { margin-bottom: 25px; padding-bottom: 20px; border-bottom: 1px solid #f0f0f0; }
+        .faq-item h3 { font-size: 1.15rem; margin-bottom: 10px; color: #222; }
+        .faq-item p { font-size: 1.05rem !important; color: #555; }
+        @media (max-width: 600px) {
+            h1 { font-size: 1.6rem; }
+            body { padding: 15px; }
+            .content p { font-size: 1rem; }
+        }
+    </style>
+</head>
+<body>
+    <h1>靠卖AI编程Agent的技能配置服务赚钱，45K星开源项目拆解</h1>
+    <div class="meta">发布于 2026-05-28 | 分类：AI副业案例 | 阅读约需 8 分钟</div>
+    <div class="content">
+
+        <p>事情是这样的。</p>
+
+        <p>上个月有个做独立开发的哥们找我吐槽，说他用Claude Code写代码，总觉得AI写出来的东西差点意思。代码能跑，但风格不一致，测试不完整，架构一复杂就乱套。他问我「是不是我用的姿势不对」。</p>
+
+        <p>我说不是姿势的问题，是Agent缺了一套好用的技能。</p>
+
+        <p>他当时就愣住了，说「Agent还有技能包？」。</p>
+
+        <p>我说当然有。</p>
+
+        <p>我给他装了<a href="https://github.com/addyosmani/agent-skills" target="_blank">addyosmani/agent-skills</a>，加一行配置，然后让他重新跑了一遍之前的代码。他看完沉默了十秒，然后给我转了500块。</p>
+
+        <p>我问这是干嘛，他说「你帮我装的这套技能，比我过去两个月自己瞎折腾的配置强太多了，值」。我愣了一下。然后我突然意识到，这个需求，可能比我想的要大得多。</p>
+
+        <h2>我发现了什么</h2>
+
+        <p>addyosmani/agent-skills，GitHub上45K星的项目，创造者是Addy Osmani，Google Chrome团队的技术大牛。这哥们写了23个工程级技能包，覆盖了整个开发流程，从需求分析、架构设计、代码实现、测试验证到部署上线，每个环节都有对应的技能。</p>
+
+        <p>你可以把它理解成AI编程助手的「武功秘籍」。</p>
+
+        <p>以前你让Claude Code写代码，它就像一个刚毕业的大学生，知道怎么写但不知道什么是最好的写法。装上这些技能包之后，它就变成了一个有10年经验的架构师，会在写之前先做设计评审，会在写完代码之后自动跑测试，会按照统一的代码风格来输出。</p>
+
+        <p>差距就是这么来的。</p>
+
+        <p>我花了一周时间，把这23个技能包全部研究了一遍。然后发现了一个事，这些东西对于普通程序员来说，配置门槛其实不低。你要装到Claude Code、Cursor、Gemini CLI这些不同的工具上，每个工具的装法还不一样，有的需要装插件，有的需要配置规则文件，有的需要写启动参数。</p>
+
+        <p>大多数人看到这个第一反应就是「好麻烦，算了」。</p>
+
+        <p>但反过来想，这不就是赚钱的机会吗？</p>
+
+        <h2>到底有哪些技能包</h2>
+
+        <p>说真的，我第一次刷完这个项目的时候，真的被震撼到了。它不是那种「写了个Demo就发上来」的项目，23个技能每个都有详细的文档，有使用场景说明，还有质量门禁标准。</p>
+
+        <p>我给你数几个你觉得有意思的。</p>
+
+        <p>有个技能叫<a href="https://github.com/addyosmani/agent-skills/blob/main/skills/spec-driven-development/SKILL.md" target="_blank">spec-driven-development</a>，每次写代码之前先写规格说明，需求定义清楚再动手。还有个<a href="https://github.com/addyosmani/agent-skills/blob/main/skills/doubt-driven-development/SKILL.md" target="_blank">doubt-driven-development</a>，专门用来质疑自己写的代码，每写一段就自动做一轮审查，发现有问题的直接标出来。最骚的是<a href="https://github.com/addyosmani/agent-skills/blob/main/skills/test-driven-development/SKILL.md" target="_blank">test-driven-development</a>，红绿重构全自动，测试覆盖率不达标就不让你提交代码。</p>
+
+        <p>以前这些工作都得靠人来盯，人盯久了就会松懈。现在好了，交给Agent来盯着，它比你有耐心多了。</p>
+
+        <p>除了这些，还有性能优化、安全加固、代码简化、API设计、Git工作流、CI/CD配置、文档生成等等。几乎覆盖了一个软件项目从零到上线的每一个环节。</p>
+
+        <p>我自己的感受是，这一套装完之后，AI Agent写出来的代码质量至少提升了一个档次。不是一点点，是肉眼可见的那种。</p>
+
+        <h2>怎么变现的</h2>
+
+        <p>我总结了一下，目前跑通了三种变现方式。</p>
+
+        <p><strong>第一种，按项目收配置费。</strong>这是最简单的。客户把他们的开发环境告诉我，我远程帮他装好整套技能包，做一次全面配置，然后给他演示效果。一单收200-800不等，看团队规模。配置过程快的半小时，复杂的两个小时。这种模式我两周接了8单，总共收了6200。</p>
+
+        <p><strong>第二种，团队内训加配置。</strong>有些团队不是装完了就完事，他们还想让整个团队都用上。这种就需要我做一次线上分享，教大家每个技能怎么用、什么时候用、怎么根据自己的项目调参数。一次收1500-3000，大概花两三个小时。接了2单，收了4000。</p>
+
+        <p><strong>第三种，月度维护包。</strong>有些团队不想自己操心的，直接包月。每个月新出的技能补丁、配置优化、问题排查，我统一处理。一个月收800-1500。目前签了3个长期客户，每个月固定流水3000左右。</p>
+
+        <p>算了一下，两周加起来，收入在一万出头。而且我没投一分钱成本，用的全是开源软件。</p>
+
+        <p>这个价格贵不贵？说真的我觉得不贵。一个团队请一个架构师来搭这套体系，一个月工资至少两三万。我只是帮他们把现成的工具配置好，收个零头，对他们来说是血赚。</p>
+
+        <h2>具体怎么操作的</h2>
+
+        <p>我把整个流程拆出来，你按着走就行。</p>
+
+        <p><strong>第一步，先自己跑一遍。</strong>你自己装一次addyosmani/agent-skills，体验一下每个技能是干什么的。最少要熟悉那7个核心命令：/spec、/plan、/build、/test、/review、/code-simplify、/ship。每个命令对应什么场景，装完之后效果是什么样，自己心里要有数。</p>
+
+        <p>我自己是先在Claude Code上装的，然后又在Cursor上试了一次，接着在Gemini CLI上又试了一次。不同工具的关注点不一样，但核心逻辑一样。</p>
+
+        <p><strong>第二步，做几个Demo项目。</strong>找两个你的个人项目，用装了技能包的Agent和没装的分别跑一遍，把结果对比截图。前后差异越大越好，这是你展示给客户的核心武器。</p>
+
+        <p><strong>第三步，找到第一批客户。</strong>我把重心放在了程序员社群和知识星球里。进群之后别上来就推销，先看看大家讨论什么。遇到有人吐槽「AI写的东西太烂」「代码风格不统一」的时候，我就轻飘飘说一句「我最近装了一套技能包，效果还不错」，然后贴对比图。自然就会有人来问。</p>
+
+        <p>闲鱼也是个好渠道。发个链接写清楚你能提供什么服务，标价设低一点吸引人来看。我第一单就是从闲鱼来的，收了300块，后来那个客户又给我介绍了两个朋友。</p>
+
+        <p><strong>第四步，交付时要超出预期。</strong>我每次交付完不会直接走，会给客户写一个简单的使用指南，告诉他们每个技能什么时候用、有什么限制、遇到问题怎么处理。这个小动作让我复购率很高，8个客户里有5个后来又找了我。</p>
+
+        <p>对了，配置过程中有一整套我反复调试过的配置模板和最佳实践，能让你在5分钟内完成一整套技能包的部署。这套模板我放在了<a href="/prompt-pack/" target="_blank">AI提示词包</a>里面，直接复制就能用，省掉你自己摸索的时间。</p>
+
+        <h2>适合什么人做</h2>
+
+        <p>坦率的讲，这个方向不是所有人都适合。</p>
+
+        <p>如果你完全不懂AI编程工具，连Claude Code是什么都不知道，那先别想着赚钱。花一周时间先把自己变成一个重度用户，自己先爽起来，你才能帮别人爽。</p>
+
+        <p>但如果你已经在用AI编程工具，或者至少听说过Claude Code、Cursor这些名字，那这个方向几乎是零门槛。不需要会写代码，不需要懂架构，你需要的是理解每个技能的作用，然后帮别人装上去。就这么简单。</p>
+
+        <p>而且说实话，最让我开心的是，我真的帮到了那些开发者。好几个客户装完之后跟我说「用了两年AI编程，这几天才是真正感觉它在帮我」。这种感觉比赚钱还爽。</p>
+
+        <p>我自己也有一些不成熟的经验想分享。刚开始的时候不要想着一步到位，先服务好一两个客户，把流程跑顺了再慢慢扩大。做口碑比做规模重要，在这个圈子里，一个满意的客户能给你带来好几个新客户。</p>
+
+        <h2>避坑指南</h2>
+
+        <p>做了这段时间，踩了几个坑，给你说说。</p>
+
+        <p><strong>第一个坑，客户用的AI工具不一样。</strong>addyosmani/agent-skills支持Claude Code、Cursor、Gemini CLI、Windsurf、OpenCode、GitHub Copilot、Kiro等一堆工具。但每个工具的装法和配置都不一样。我一开始只熟悉Claude Code，结果碰到一个用Cursor的客户，花了两个小时现学。后来我把所有支持的平台都跑了一遍，现在不管客户用什么我都能搞定。</p>
+
+        <p><strong>第二个坑，技能包不是越多越好。</strong>有些客户一看有23个技能包，说「全给我装上」。但装太多反而会让Agent变得迟钝，因为每次都要遍历所有技能来判断用哪个。我后来总结的经验是，根据客户的项目类型来选。做前端开发的装前端相关技能，做后端服务的装后端相关技能，做小项目的只用核心7个就够。</p>
+
+        <p><strong>第三个坑，客户预期管理要做好。</strong>技能包能大幅提升代码质量，但它不是魔法。该修的业务逻辑还是得人修，该做的产品设计还是得人做。我在交付的时候会明确告诉客户，技能包解决的是「代码怎么写得更好」，而不是「产品应该做什么」。客户理解了之后，满意度反而更高。</p>
+
+            <p><strong>第四个坑，版本更新要及时跟进。</strong>开源项目更新快，技能包也经常有变化。我每周会花半天时间看看有没有新版本，有的话更新自己的环境，然后通知长期客户升级。保持跟进的习惯很重要。</p>
+
+        <h2>写在最后</h2>
+
+        <p>我一直觉得，AI时代最赚钱的不是卖工具，而是帮别人用好工具。你只需要比别人先走一步，先学会一个东西，然后教给别人，这个信息差就是你最大的护城河。</p>
+
+        <p>addyosmani/agent-skills只是其中一个例子。类似的工程级技能包项目将来会越来越多，这个市场才刚刚开始。</p>
+
+        <p>磨平一些信息差。</p>
+
+        <p>大时代啊，朋友们。</p>
+
+        <div class="cta-box">
+            <p><strong>📦 我把自己反复调试的AI Agent技能配置模板整理成了提示词包</strong></p>
+            <p>包含addyosmani/agent-skills全平台快速部署指南、各技能适用场景对照表、常用配置模板、客户演示话术模板。复制粘贴就能上手。</p>
+            <a href="/prompt-pack/" class="btn">查看提示词包 →</a>
+        </div>
+
+        <div class="faq">
+            <h2>常见问题</h2>
+
+            <div class="faq-item">
+                <h3>addyosmani/agent-skills是什么？普通人能用它赚钱吗？</h3>
+                <p>这是一个45K星的开源项目，包含23个工程级AI agent技能包。普通人可以通过帮团队和企业配置这些技能包来赚钱，零成本零门槛，不需要懂编程。只需要花一周时间熟悉技能的作用和配置方法，就能开始接单。</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>AI agent技能配置服务怎么收费？</h3>
+                <p>按项目配置收200-800元一单，按团队培训收1000-3000元，按月度维护收500-1500元/月。具体价格看客户团队规模和配置复杂度。两周做下来月入一万左右是很现实的目标。</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>不会编程能做AI agent技能配置服务吗？</h3>
+                <p>可以。配上技能包本身不需要写代码，主要是理解每个技能的作用，然后帮客户安装配置。会一些基础的命令行操作就够了，比学编程简单很多。我自己在操作之前也只是个AI工具的普通用户。</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>在哪里能找到需要AI agent技能配置的客户？</h3>
+                <p>在开发者社群、程序员微信群、知识星球里就能找到。也可以在闲鱼发布配置服务，或者在技术论坛分享配置经验吸引客户主动咨询。一个满意的老客户给你带来的转介绍，比你到处发广告要管用得多。</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>卖AI agent技能包和卖AI提示词有什么不同？</h3>
+                <p>AI agent技能包是给AI编程工具用的系统级配置，比提示词更底层更强大。技能包可以自定义AI编程工具的行为规范、代码风格、测试标准等，价值更高，收费也更贵。提示词适合普通用户，技能包适合专业开发团队。两个方向不冲突，可以做叠加。</p>
+            </div>
+        </div>
+
+        <div class="related">
+            <h3>相关阅读</h3>
+            <ul>
+                <li><a href="/articles/cases/claude-plugins-side-hustle-202605/">靠开发Anthropic官方Claude Code插件赚钱，零基础我也能赚3400</a></li>
+                <li><a href="/articles/cases/mattpocock-skills-real-engineers/">用mattpocock/skills把AI编程从vibe coding拉回工程正轨</a></li>
+                <li><a href="/articles/cases/zeroclaw-ai-assistant-side-hustle-202605/">帮人搭个人AI助理，靠ZeroClaw两周赚了5200块</a></li>
+                <li><a href="/articles/cases/career-ops-46k-star-job-search-service/">靠帮人用AI优化简历和求职，两周赚了6800</a></li>
+                <li><a href="/articles/cases/caveman-prompt-token-saving-side-hustle/">靠优化提示词省token，半个月赚了8700</a></li>
+            </ul>
+        </div>
+
+    </div>
+</body>
+</html>
