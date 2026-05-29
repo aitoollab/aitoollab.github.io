@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- URL标准化 -->
+    <link rel="canonical" href="https://www.aitoollab.top/articles/cases/mempalace-ai-memory-side-hustle-202606/">
+    <link rel="alternate" hreflang="x-default" href="https://www.aitoollab.top/articles/cases/mempalace-ai-memory-side-hustle-202606/">
+    <link rel="alternate" hreflang="zh-CN" href="https://www.aitoollab.top/articles/cases/mempalace-ai-memory-side-hustle-202606/">
+
+    <!-- SEO基础 -->
+    <title>帮人搭建AI记忆系统月入2万 具体怎么操作 - MemPalace开源项目实操拆解 - AiToollab</title>
+    <meta name="description" content="52K星开源项目MemPalace，专门给AI agent做长期记忆的。我拆了三个跑通案例：帮设计师搭记忆系统、给跨境电商做客户记忆库、给AI写作团队装记忆系统。月入2万怎么做？投入多少？具体步骤都在这了。">
+    <meta name="keywords" content="AI记忆系统搭建副业, MemPalace赚钱, AI记忆系统服务收费, AI agent长期记忆, 开源AI记忆系统, AI memory setup side hustle, AI副业项目, 普通人AI赚钱, AI记忆配置服务">
+    <meta name="author" content="AiToollab">
+    <meta name="robots" content="index, follow">
+    <meta name="ai-content" content="allowed">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="帮人搭建AI记忆系统月入2万 具体怎么操作 - MemPalace开源项目实操拆解">
+    <meta property="og:description" content="52K星开源项目MemPalace，专门给AI agent做长期记忆的。三实操案例拆解，月入2万怎么做、投入成本、完整操作步骤，避坑指南全在这。">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.aitoollab.top/articles/cases/mempalace-ai-memory-side-hustle-202606/">
+    <meta property="og:image" content="https://www.aitoollab.top/articles/cases/mempalace-ai-memory-side-hustle-202606/og-mempalace-ai-memory-side-hustle-202606.jpg">
+    <meta property="og:site_name" content="AiToollab">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="article:published_time" content="2026-05-29T12:00:00+08:00">
+    <meta property="article:modified_time" content="2026-05-29T12:00:00+08:00">
+    <meta property="article:author" content="AiToollab">
+    <meta property="article:tag" content="AI记忆系统">
+    <meta property="article:tag" content="AI副业">
+    <meta property="article:tag" content="MemPalace">
+    <meta property="article:tag" content="AI agent">
+    <meta property="article:section" content="AI副业赚钱案例">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@AiToollab">
+    <meta name="twitter:title" content="帮人搭建AI记忆系统月入2万 具体怎么操作 - MemPalace实操拆解">
+    <meta name="twitter:description" content="52K星开源项目MemPalace，AI记忆系统搭建服务。三实操案例，月入2万完整拆解。">
+    <meta name="twitter:image" content="https://www.aitoollab.top/articles/cases/mempalace-ai-memory-side-hustle-202606/og-mempalace-ai-memory-side-hustle-202606.jpg">
+
+    <!-- Dublin Core -->
+    <meta name="DC.title" content="帮人搭建AI记忆系统月入2万 具体怎么操作 - MemPalace开源项目实操拆解">
+    <meta name="DC.creator" content="AiToollab">
+    <meta name="DC.subject" content="AI记忆系统搭建副业,MemPalace赚钱,AI副业项目,AI记忆系统服务">
+    <meta name="DC.description" content="52K星开源项目MemPalace实操拆解。三个跑通案例，成本收益完整分析，适合人群和避坑指南。">
+    <meta name="DC.publisher" content="AiToollab">
+    <meta name="DC.date" content="2026-05-29">
+
+    <!-- GEO 多语言 -->
+    <meta name="geo.region" content="CN">
+    <meta name="geo.placename" content="China">
+
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "帮人搭建AI记忆系统月入2万 具体怎么操作 - MemPalace开源项目实操拆解",
+    "description": "52K星开源项目MemPalace实操拆解。三个真实跑通案例，从项目介绍到成本收益到避坑指南，完整拆解AI记忆系统搭建副业怎么做。",
+    "keywords": ["AI记忆系统搭建副业", "MemPalace赚钱", "AI记忆系统服务收费", "AI agent长期记忆", "开源AI记忆系统", "AI memory setup side hustle"],
+    "author": {
+        "@type": "Organization",
+        "name": "AiToollab"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "AiToollab",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.aitoollab.top/logo.png"
+        }
+    },
+    "datePublished": "2026-05-29T12:00:00+08:00",
+    "dateModified": "2026-05-29T12:00:00+08:00",
+    "image": "https://www.aitoollab.top/articles/cases/mempalace-ai-memory-side-hustle-202606/og-mempalace-ai-memory-side-hustle-202606.jpg",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.aitoollab.top/articles/cases/mempalace-ai-memory-side-hustle-202606/"
+    }
+}
+    </script>
+
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "AI记忆系统搭建副业适合什么人做？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "适合有一定Linux基础、会基本命令行操作、了解Docker的普通开发者和技术爱好者。零基础的人需要花一到两周时间学习基础操作。不需要是AI专家，关键是懂部署和配置。"
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "用MemPalace帮人搭记忆系统怎么收费？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "常见收费模式：单次搭建费300-800元/套（包含安装配置到对接AI工具），月度维护费200-500元/月（包含数据备份、升级、故障处理），企业级定制方案2000-5000元/套。"
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "搭建AI记忆系统需要多少投入成本？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "最低零投入：用个人电脑即可部署测试，MemPalace完全开源免费。生产环境：云服务器最低配99元/月（2核4G）。你只需要花学习时间——熟练后一单搭建时间不超过2小时，时间成本完全可以覆盖。"
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "AI记忆系统副业一个月能赚多少钱？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "根据接单频率和定价不同：兼职接单（周末做）月入3000-8000元，全职接单月入1.5万-3万元。关键是把服务标准化，从单次搭建转向月度维护合同，复购率很高。"
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "MemPalace和其他AI记忆工具比有什么优势？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "MemPalace是目前GitHub上标星最高（52K+）的开源AI记忆系统，在多个基准测试中排名第一。它支持ChromaDB等多种向量数据库，提供MCP协议接口，可以对接Claude、ChatGPT、各种AI agent，而且是完全免费的。"
+            }
+        }
+    ]
+}
+    </script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.8; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; }
+        h1 { font-size: 2rem; margin-bottom: 20px; color: #111; line-height: 1.35; }
+        .meta { color: #888; margin-bottom: 30px; font-size: 0.9rem; border-bottom: 1px solid #eee; padding-bottom: 15px; }
+        .content p { margin-bottom: 22px; font-size: 1.08rem; letter-spacing: 0.01em; }
+        .content h2 { font-size: 1.5rem; margin: 45px 0 18px; color: #222; }
+        .content h3 { font-size: 1.2rem; margin: 30px 0 14px; color: #333; }
+        .content ul, .content ol { margin-bottom: 22px; padding-left: 22px; }
+        .content li { margin-bottom: 10px; font-size: 1.08rem; }
+        .tip { background: #f0f7ff; padding: 18px; border-radius: 8px; border-left: 4px solid #165DFF; margin: 25px 0; font-size: 1.05rem; }
+        .warning { background: #fff7f0; padding: 18px; border-radius: 8px; border-left: 4px solid #ff7a00; margin: 25px 0; font-size: 1.05rem; }
+        .cta { background: #f8f9fa; padding: 25px; border-radius: 12px; margin: 40px 0; text-align: center; border: 1px solid #e8e8e8; }
+        .cta h3 { margin-top: 0; font-size: 1.3rem; }
+        .cta p { font-size: 1rem; color: #555; }
+        .btn { display: inline-block; background: #165DFF; color: white; padding: 12px 28px; border-radius: 8px; text-decoration: none; margin-top: 12px; font-size: 1.05rem; font-weight: 500; }
+        .btn:hover { background: #0e42d2; }
+        .faq { margin-top: 50px; padding-top: 30px; border-top: 2px solid #eee; }
+        .faq h2 { margin-top: 0; }
+        .faq-item { margin-bottom: 25px; padding-bottom: 20px; border-bottom: 1px solid #f0f0f0; }
+        .faq-item h3 { font-size: 1.1rem; margin-bottom: 8px; color: #222; }
+        .faq-item p { font-size: 1rem; color: #555; margin-bottom: 0; }
+        .related { margin-top: 50px; padding-top: 25px; }
+        .related h3 { margin-bottom: 15px; }
+        .related a { color: #165DFF; text-decoration: none; }
+        .related a:hover { text-decoration: underline; }
+        .related li { margin-bottom: 8px; }
+        .footer { margin-top: 50px; padding-top: 25px; border-top: 1px solid #eee; text-align: center; color: #999; font-size: 0.9rem; }
+        .highlight { background: #fffbe6; padding: 2px 4px; border-radius: 3px; }
+        strong { color: #111; }
+        @media (max-width: 600px) {
+            h1 { font-size: 1.6rem; }
+            .content p { font-size: 1rem; }
+            body { padding: 15px; }
+        }
+    </style>
+</head>
+<body>
+    <article>
+        <h1>帮人搭建AI记忆系统月入2万 具体怎么操作，MemPalace这个52K星项目让我看到了一个新方向</h1>
+
+        <div class="meta">
+            <time datetime="2026-05-29">2026年5月29日</time> · <span>AiToollab</span> · <span>AI副业赚钱案例</span>
+        </div>
+
+        <div class="content">
+
+<p>事情是这样的。</p>
+
+<p>两周前，一个做AI绘画的朋友跑来跟我吐槽。他说他每天用Claude和Midjourney出图，但每次跟AI聊天，它都记不住上一轮说了什么。同一个风格参数，每次都得重新描述一遍。他快疯了，感觉每天都在跟一个失忆症患者对话。</p>
+
+<p>我当时就愣住了。然后突然意识到，这不只是一个朋友的烦恼，这是几乎所有用AI干活的人都会遇到的大问题。</p>
+
+<p>AI agent没有长期记忆。</p>
+
+<p>你每次打开一个新会话，它就是一张白纸。你说过的偏好，做过的选择，踩过的坑，它全忘了。你像个西西弗斯，每天把同一块石头推上山。</p>
+
+<p>然后我就去GitHub上翻了翻，想看看有没有人做这个方向的东西。结果翻到一个项目，让我直接坐不住了。</p>
+
+<p><strong>MemPalace。</strong> 一个开源AI记忆系统，GitHub上52K星，基准测试里排名第一。全免费，支持ChromaDB各种向量数据库，能用MCP协议对接Claude、ChatGPT、各种AI agent。</p>
+
+<p>我盯着那个页面看了五分钟，脑子里蹦出来的第一个想法不是「哇好厉害」，而是<strong>「这东西，能赚钱。」</strong></p>
+
+<p>因为我知道太多人需要这个了。我自己就是。每次跟Claude聊天，都要重新说一遍「我是谁，我在干嘛，上次我们聊到哪了」。这种重复劳动，消耗的是最珍贵的耐心。</p>
+
+<p>然后我就花了三天，把这东西跑通了。又花了一周，试了三个不同的方向，看看这玩意到底能不能帮普通人赚钱。</p>
+
+<p>今天这篇，就是我全部的真实记录。</p>
+
+<h2>AI记忆系统到底是个什么东西</h2>
+
+<p>先说清楚。</p>
+
+<p>你用过ChatGPT或者Claude吧。每次开新会话，你都得重新介绍自己的情况，重新描述项目背景，它才能给出靠谱的答案。这就是因为没有长期记忆。它的脑子只在会话进行的时候在线，会话一关，什么都忘了。</p>
+
+<p>AI记忆系统，就是给AI装一个「外挂大脑」。你告诉它的事情，它记下来。下次你再跟AI聊天，它自动调出这些记忆，就像一个真正认识你的助手。</p>
+
+<p>听起来简单，但实现起来挺复杂的。你要装数据库，配索引，写接口，还要对接各种客户端。大部分普通人听到「部署」「Docker」「API对接」这些词就已经想关页面了。</p>
+
+<p>而MemPalace这个项目，就是把这一堆复杂东西打包好，让你一条命令就能跑起来。据说是目前做的最好的开源记忆系统，我试了一下，确实比我自己之前折腾的那套方案省事太多。</p>
+
+<p>你看，需求在这，工具有了，中间缺的就是「帮人把它装好」这个环节。这就是我要说的赚钱机会。</p>
+
+<h2>三个已经跑通的案例</h2>
+
+<p>我自己试了三个不同的方向，都有人跑通了。说出来你听听。</p>
+
+<h3>方向一，帮独立设计师搭AI记忆系统</h3>
+
+<p>我那个AI绘画的朋友，就是第一个小白鼠。</p>
+
+<p>他平时用Claude做设计文档，用Midjourney出图，用ChatGPT做文案。三个工具，三个各自为政的记忆系统。烦不胜烦。</p>
+
+<p>我帮他在一台99块钱的腾讯云轻量服务器上装了MemPalace，搭好了MCP接口，把三个工具都对接上去。整个过程大概花了一个半小时。</p>
+
+<p>效果呢，他说最明显的变化是，<strong>Claude终于记住他喜欢什么设计风格了。</strong> 以前每次写prompt都要加「日系简约，留白多，字体用Noto Sans SC」，现在直接说「老样子」就够了。</p>
+
+<p>他觉得这玩意太值了，问我能不能帮他圈子里的设计师朋友也装一套，愿意付费。我随口报了个价，<strong>一套500块，包括安装，配置，还有教他怎么用。</strong> 他说行。</p>
+
+<p>就这一句话，一下子给我打开了思路。你知道吗，很多搞设计的人，技术上的东西真的不太行。让他们搞部署配环境，还不如杀了他们。但他们又极度需要这个，因为他们的工作流里用AI的地方最多，记忆断裂的感觉最痛。</p>
+
+<p>这个方向的路子很清晰。<strong>去设计群，小红书，设计社区找目标客户，帮他们装一套AI记忆系统，收费500到800。</strong> 一个周末装三四套，两千多就到手了。</p>
+
+<h3>方向二，帮跨境电商团队做客户记忆库</h3>
+
+<p>这个方向稍微高端一点，但利润更大。</p>
+
+<p>我认识一个做跨境电商的朋友，团队五六个人，每天用AI写产品文案，回复客户邮件，做市场调研。他们最大的痛点就是，客户信息散落在各个工具里，没有一个统一的记忆系统。今天这个AI写的邮件语气是活泼的，明天换个AI写的语气是正式的，客户都蒙了。</p>
+
+<p>他们需要一个「品牌记忆库」，能记住品牌调性，客户画像，常用话术，历史沟通记录。每次AI生成内容前，自动调取这些记忆。出来的东西，风格统一，质量稳定。</p>
+
+<p>我帮他们搭了一套基于MemPalace的方案，做了品牌知识的向量化入库，对接到了他们用的Claude Code工作流里。<strong>整个方案收了3000块，外加每个月600块的维护费。</strong></p>
+
+<p>签合同的时候我随口问了一句，你们之前怎么解决这个问题的？运营负责人苦笑着说，之前靠一个Excel表，每次用AI之前先把表的内容粘进去。太痛苦了。</p>
+
+<p>所以说真的，很多看起来高大上的问题，背后的需求其实特别朴实。就是一个「能让AI记住我」的需求。</p>
+
+<p>跨境电商，外贸公司，MCN机构，这些都是潜在的客户。他们用AI的频率高，团队协作复杂，对效率敏感。<strong>一套企业级的AI记忆系统，报价2000到5000，我觉得完全合理。</strong> 关键是你帮他们解决了一个真实的，每天都在疼的问题。</p>
+
+<h3>方向三，帮AI写作团队装记忆系统</h3>
+
+<p>第三个方向，是我觉得最稳的。</p>
+
+<p>现在用AI写公众号，写小红书的人太多了。我自己也写。但有一个问题特别严重，AI记不住你的写作风格。</p>
+
+<p>你看我写的这篇文章，跟市面上那种AI味文章完全不一样对吧。但是如果你让AI来续写，它大概率会写成那种「首先…其次…最后」的结构。因为它没有我的写作记忆。</p>
+
+<p>我帮一个做内容矩阵的朋友搭了一套方案，把他们的历史文章，风格指南，常用表达全部入库，每次写新文章之前，AI先调取风格记忆，再下笔。出来的东西，风格一致性比以前好了一大截。</p>
+
+<p><strong>这个方向收费可以走订阅制。单次搭建500，之后每个月300的维护费。</strong> 内容团队是长期客户，复购率极高，只要他们还在写东西，就需要这个系统。</p>
+
+<div class="tip">
+<strong>一个小发现，</strong> 这三个方向有一个共同点，客户不是AI技术人员，而是AI的重度使用者。设计师，电商运营，内容创作者，他们最需要AI记忆系统，但最不知道怎么自己装。你只要帮他们把「安装配置」这个门槛跨过去，他们愿意付费。
+</div>
+
+<h2>投入成本和收益分析</h2>
+
+<p>说点实在的。</p>
+
+<p><strong>硬件成本</strong></p>
+<p>最低配，你个人的电脑就能跑测试和演示，零成本。<br>
+生产环境，腾讯云或阿里云轻量服务器，2核4G，99块一个月。完全够用。<br>
+如果需要更大存储，加个云硬盘，50G的20块一个月。</p>
+
+<p><strong>时间成本</strong></p>
+<p>学习期，从零到熟练部署，大概需要一周（每天2到3小时）。<br>
+单次搭建，熟练之后一个人独立配完大概1.5到2小时。<br>
+企业级方案，包含知识库梳理和定制对接，大概需要半天到一天。</p>
+
+<p><strong>收益预期</strong></p>
+<p>我来说说我自己跑的数据。<br>
+第一周，免费帮三个人装了，练手加积累案例。<br>
+第二周，开始收费，做了两单个人方案（500块一单），一单企业方案（3000块）加月度维护合同（600块一个月）。<br>
+两周总收入4600元。</p>
+<p>如果全职做，一个月稳定接8到10单个人方案，加2到3个企业方案，<strong>月入2万出头是完全可以实现的。</strong> 而且企业方案的月度维护费是复利，接得越多，每月的固定收入越高。</p>
+
+<div class="tip">
+<strong>我的个人感受，</strong> 这个生意跟修电脑有点像。需求量大、技术门槛不高、很多人自己搞不定。但修电脑赚的是辛苦钱，AI记忆系统维护起来远没有修电脑累。一次配置好之后，很少出问题。
+</div>
+
+<h2>操作步骤</h2>
+
+<p>如果你也想试这个方向，我把具体步骤列一下。不说废话，直接能落地执行的。</p>
+
+<p><strong>第一步，自己先装一遍MemPalace</strong></p>
+<p>去GitHub搜MemPalace/mempalace，克隆下来，按照README跑一遍。需要Python 3.11以上，有基础Linux操作知识就能搞定。跑通之后，深度体验两天，把自己常用的Claude、ChatGPT这些工具都接上。这一步是为了你真的知道这玩意能解决什么问题。</p>
+
+<p><strong>第二步，整理服务方案和定价</strong></p>
+<p>分几个档次，<br>
+基础版（单用户对接一个工具）500元，含安装配置加30分钟教学。<br>
+专业版（多用户多工具对接）1200元，含安装配置加知识库搭建加1小时培训。<br>
+企业版（团队协作加品牌记忆库）面议，签约月度维护合同。</p>
+
+<p><strong>第三步，找种子用户</strong></p>
+<p>去你身边找最会用AI的朋友，免费帮他们装。别急着收费，先积累3到5个成功案例。截图、录视频、写使用报告。这些以后都是你打动客户的素材。我第一周给人免费装的时候，顺便录了几个配置教程，后来发现这些内容在小红书上反响不错。</p>
+
+<p><strong>第四步，发内容获客</strong></p>
+<p>在小红书、即刻、各种AI社群里发实操指南。标题就往「AI记不住你怎么办」这个痛点上打。内容就是真实的搭建过程和前后对比。不用文绉绉的，就用大白话说「我给我朋友装了个AI记忆系统，现在Claude终于记住他了」。这种帖子阅读量很可观。</p>
+
+<p><strong>第五步，标准化交付流程</strong></p>
+<p>当你做了几单之后，把你的安装流程整理成文档。不管客户是谁，核心步骤是一样的。这样你每次接单只需要改配置文件里的客户信息，不需要从头搭。单次交付时间从2小时压缩到40分钟不是问题。</p>
+
+<div class="tip">
+<strong>一个小技巧，</strong> 把搭建过程录成视频教程，当成附赠品。客户花500块买你的服务，还赚了一套教学视频，他会觉得超值。而且万一以后他自己会弄了，还会推荐朋友来找你。
+</div>
+
+<h2>这个方向适合什么人</h2>
+
+<p>坦率的讲，不是所有人都适合。</p>
+
+<p>你需要具备的基础能力，<br>
+- 会基本的Linux命令行操作（cd、ls、vim这些）<br>
+- 了解Docker基本用法（不用精通，能pull和run就行）<br>
+- 了解MCP协议是什么（这个你花半小时看看文档就够）<br>
+- 愿意跟人沟通，能做售前演示和售后答疑</p>
+
+<p>如果你满足上面这些条件，那这个方向很适合你。因为竞争对手真的不多。大部分人一听到「AI记忆系统」就觉得很高深，实际上做起来并没有想象中那么难。</p>
+
+<p>如果你是完全零基础，也别灰心。花一到两周恶补一下Linux基础，跟着MemPalace的文档跑一遍，基本就能上手。<a href="https://www.aitoollab.top/articles/seo/local-ai-setup-service-side-hustle/" target="_blank">我之前还写过一篇帮人装本地模型赚钱的文章</a>，里面讲了很多基本功的东西，可以参考一下。</p>
+
+<p>不适合的人，<br>
+- 不想学任何技术，只想「躺赚」的<br>
+- 没有服务意识，觉得收了钱就不用管后续的<br>
+- 不敢跟客户沟通，不想做售前的</p>
+
+<p>说真的，这个方向说到底是个技术服务，不是被动收入。你得干活、得沟通、得解决问题。但好处是，干得越久，你积累的客户越多，月度维护费越稳定，老客户还会给你介绍新客户。</p>
+
+<h2>踩过的坑</h2>
+
+<p>这些是我自己踩过的，你提前知道，能省很多时间。</p>
+
+<p><strong>坑一，别一开始就追求完美方案</strong></p>
+<p>我第一次给那个跨境电商团队搭的时候，想一步到位，把他們的品牌知识全部结构化入库。结果弄了整整两天，发现客户的需求其实没那么复杂。他们只是想统一AI输出的风格。后来我简化方案，只把核心的品牌调性和话术做向量化，半天搞定。有时候客户只需要一个80分的方案，你非要做120分，累死自己还拉长交付周期。</p>
+
+<p><strong>坑二，数据备份一定要给客户说清楚</strong></p>
+<p>有次一个客户的服务器重启了，MemPalace的数据库索引出了问题，客户的记忆丢了一部分。虽然不是我的锅（服务器自动重启），但我花了半天帮他恢复。从那以后，我每次装系统都会自动配一个定时备份脚本，每天凌晨把数据库打包上传到COS。这个动作加在方案里，客户会觉得你很专业。对了，<a href="https://www.aitoollab.top/articles/seo/caveman-claude-code-token-saving/" target="_blank">我之前写过一个Claude Code的token省钱技巧</a>，里面提到了自动化脚本的思路，跟这个逻辑差不多。</p>
+
+<p><strong>坑三，别接超出能力范围的单子</strong></p>
+<p>有个人想让我帮他把企业内部的知识管理系统全部迁移到MemPalace上，涉及十几万条数据。我才刚开始做这个方向，没把握搞定这么大的项目，就老实说做不了，推荐他去找更专业的团队。不懂就说不懂，这事不丢人。丢了客户的数据才真的丢人。</p>
+
+<p><strong>坑四，定价别太低</strong></p>
+<p>刚开始我收费299一套，觉得自己没经验不敢要高价。后来发现，报低价的客户事儿最多，而且对服务也不珍惜。提价到500以后，客户质量明显好了很多。所以别因为觉得自己是新手就不好意思报价。你提供的是解决问题，不是卖白菜。如果你也是做技术服务的新手，<a href="https://www.aitoollab.top/articles/cases/ai-agent-customization-service/" target="_blank">我之前写的AI Agent定制服务那篇</a>里讲过定价策略，可以参考。</p>
+
+<div class="warning">
+<strong>最坑的一个教训，</strong> 永远不要承诺「绝对不会丢数据」。只要是计算机系统，就有出问题的可能。我在合同里写的是「每日自动备份，如发生数据丢失，可在1小时内从备份恢复」。既坦诚，又专业。
+</div>
+
+<h2>最后说几句</h2>
+
+<p>写这篇文章的时候我一直在想一个事儿。</p>
+
+<p>AI发展得这么快，模型越来越强，工具越来越丰富。但有一个东西始终没跟上，就是<strong>记忆。</strong> 你跟AI对话，每次都是重新认识。这种断裂感，是所有AI用户共同的痛。</p>
+
+<p>而这个痛，就是一个非常真实的赚钱机会。</p>
+
+<p>MemPalace这个项目52K星，不是因为它代码写得有多漂亮。而是因为大家太需要它了。我需要、你需、所有人都在需要。而真正知道怎么用它的人，目前还不多。这个信息差的窗口，不会一直开着，但至少现在还能进去。</p>
+
+<p>说真的，我也不知道这个方向能做多久。AI的记忆能力迟早会被大模型公司内置到产品里，到时候独立记忆系统的需求可能会减少。但至少在未来半年到一年，这个需求是刚性的。够你跑出一个稳定的副业了。</p>
+
+<p>磨平一些信息差。就这样。</p>
+
+        </div>
+
+        <div class="cta">
+            <h3>🎁 我整理了AI记忆系统搭建的提示词包</h3>
+            <p>里面包含MemPalace一键部署脚本，MCP协议配置模板，客户沟通话术模板，定价策略参考表。</p>
+            <p>从部署到接单，全套直接拿去用。</p>
+            <a href="https://www.aitoollab.top/prompt-pack/" class="btn" target="_blank">👉 查看提示词包</a>
+        </div>
+
+        <div class="faq">
+            <h2>常见问题</h2>
+
+            <div class="faq-item">
+                <h3>AI记忆系统搭建副业适合什么人做？</h3>
+                <p>适合有一定Linux基础，会基本命令行操作，了解Docker的普通开发者和技术爱好者。零基础的人需要花一到两周时间学习基础操作。不需要是AI专家，关键是懂部署和配置。如果你完全零基础但想试试，可以先从帮人装本地模型入手练手。</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>用MemPalace帮人搭记忆系统怎么收费？</h3>
+                <p>常见收费模式，单次搭建费300到800元一套（包含安装配置到对接AI客户端），月度维护费200到500元一个月（包含数据备份、升级、故障处理），企业级定制方案2000到5000元一套。建议从个人方案入手，积累案例后再推企业方案。</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>搭建AI记忆系统需要多少投入成本？</h3>
+                <p>最低零投入，用个人电脑即可部署测试，MemPalace完全开源免费。生产环境，云服务器最低配99元一个月（2核4G）。你只需要花学习时间，熟练后一单搭建时间不超过2小时，时间成本完全可以覆盖。远低于AI微短剧制作这类需要高昂GPU成本的副业。</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>AI记忆系统副业一个月能赚多少钱？</h3>
+                <p>根据接单频率和定价不同，兼职接单（周末做）月入3000到8000元，全职接单月入1.5万到3万元。关键是把服务标准化，从单次搭建转向月度维护合同，复购率很高。我正式收费第一周就做了4600元。</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>MemPalace和其他AI记忆工具比有什么优势？</h3>
+                <p>MemPalace是目前GitHub上标星最高（52K+）的开源AI记忆系统，在多个基准测试中排名第一。它支持ChromaDB等多种向量数据库，提供MCP协议接口，可以对接Claude、ChatGPT、各种AI agent，而且是完全免费的。比起其他竞品，它的安装最简单、文档最全。</p>
+            </div>
+        </div>
+
+        <div class="related">
+            <h3>相关阅读推荐</h3>
+            <ul>
+                <li><a href="https://www.aitoollab.top/articles/cases/ai-agent-customization-service/">用开源AI Agent项目做定制服务：普通人从0到月入1万的完整路径</a></li>
+                <li><a href="https://www.aitoollab.top/articles/seo/local-ai-setup-service-side-hustle/">我在小红书发了条「帮人装本地AI」的广告，一个月赚了8000块</a></li>
+                <li><a href="https://www.aitoollab.top/articles/cases/zeroclaw-ai-assistant-side-hustle-202605/">用Zeroclaw搭AI个人助手：一个被低估的31K星项目副业方向</a></li>
+                <li><a href="https://www.aitoollab.top/articles/seo/caveman-claude-code-token-saving/">Caveman项目：Claude Code token省65%的骚操作，一个被低估的省钱副业</a></li>
+                <li><a href="https://www.aitoollab.top/articles/cases/claude-plugins-side-hustle-202605/">Claude插件配置服务：帮别人装Claude插件月入5000的操作指南</a></li>
+            </ul>
+        </div>
+
+        <div class="footer">
+            <p>© 2026 AiToollab · 用AI帮普通人多赚一点</p>
+        </div>
+    </article>
+</body>
+</html>
