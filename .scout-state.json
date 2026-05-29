@@ -1,14 +1,7 @@
 {
-  "last_updated": "2026-05-27T08:47:20.644422Z",
-  "candidate_pool_total": 324,
-  "analyzed_count": 324,
-  "last_analyzed": [
-    "I don't think AI will make your processes go faster",
-    "Tennessee man jailed 37 days for Trump meme wins settlement after lawsuit",
-    "Qwen3.7-Max: The Agent Frontier",
-    "AI is a technology not a product",
-    "Show HN: Semble – Code search for agents that uses 98% fewer tokens than grep"
-  ],
+  "last_updated": "2026-05-29T16:51:03.122254",
+  "candidate_pool_total": 475,
+  "analyzed_count": 403,
   "top_candidates": [
     {
       "repo": "I don't think AI will make your processes go faster",
@@ -19,7 +12,7 @@
       "note": "enriched — install=True, api=False, pricing=True, docs=True"
     },
     {
-      "repo": "Tennessee man jailed 37 days for Trump meme wins settlement after lawsuit",
+      "repo": "?",
       "score": 571,
       "has_pricing": true,
       "installable": false,
@@ -27,7 +20,7 @@
       "note": "enriched — install=False, api=True, pricing=True, docs=True"
     },
     {
-      "repo": "Qwen3.7-Max: The Agent Frontier",
+      "repo": "?",
       "score": 518,
       "has_pricing": false,
       "installable": false,
@@ -59,7 +52,7 @@
       "note": "enriched — install=True, api=True, pricing=False, docs=True"
     },
     {
-      "repo": "An OpenAI model has disproved a central conjecture in discrete geometry",
+      "repo": "?",
       "score": 237,
       "has_pricing": false,
       "installable": false,
@@ -67,7 +60,7 @@
       "note": "enriched — install=False, api=False, pricing=False, docs=False"
     },
     {
-      "repo": "Anna's Archive hit with $19.5M default judgment and global domain takedown order",
+      "repo": "?",
       "score": 215,
       "has_pricing": false,
       "installable": true,
@@ -75,7 +68,7 @@
       "note": "enriched — install=True, api=True, pricing=False, docs=False"
     },
     {
-      "repo": "Google's AI is being manipulated. The search giant is quietly fighting back",
+      "repo": "?",
       "score": 202,
       "has_pricing": true,
       "installable": false,
@@ -107,6 +100,22 @@
       "note": "enriched — install=True, api=False, pricing=True, docs=True"
     },
     {
+      "repo": "OnlyTerp/prompt-cache-skills",
+      "score": 100,
+      "has_pricing": true,
+      "installable": true,
+      "stars": 69,
+      "note": "enriched — install=True, api=True, pricing=True, docs=True"
+    },
+    {
+      "repo": "Novaquant-labs/hyperliquid-trading-bot",
+      "score": 100,
+      "has_pricing": true,
+      "installable": true,
+      "stars": 348,
+      "note": "enriched — install=True, api=True, pricing=True, docs=False"
+    },
+    {
       "repo": "The History of ThinkPad: From IBM’s Bento Box to Lenovo’s AI Workstations",
       "score": 97,
       "has_pricing": true,
@@ -120,7 +129,7 @@
       "has_pricing": false,
       "installable": false,
       "stars": 230,
-      "note": "enriched — install=None, api=None, pricing=None, docs=None"
+      "note": "enriched — install=False, api=False, pricing=False, docs=False"
     },
     {
       "repo": "Outcome-Signal-Forge/trading-bot",
@@ -139,166 +148,12 @@
       "note": "enriched — install=True, api=True, pricing=True, docs=True"
     },
     {
-      "repo": "Trials on veterans suggest ibogaine could provide a new treatment for PTSD",
-      "score": 94,
-      "has_pricing": true,
-      "installable": false,
-      "stars": 0,
-      "note": "enriched — install=False, api=False, pricing=True, docs=True"
-    },
-    {
-      "repo": "lynote-ai/humanize-text",
-      "score": 93,
-      "has_pricing": false,
-      "installable": false,
-      "stars": 122,
-      "note": "enriched — install=False, api=False, pricing=False, docs=False"
-    },
-    {
-      "repo": "feder-cr/invisible_playwright",
-      "score": 93,
-      "has_pricing": false,
-      "installable": false,
-      "stars": 425,
-      "note": "enriched — install=False, api=False, pricing=False, docs=False"
-    },
-    {
-      "repo": "h4ckf0r0day/awesome-ai-web-scraping",
-      "score": 90,
-      "has_pricing": false,
-      "installable": false,
-      "stars": 29,
-      "note": "enriched — install=False, api=False, pricing=False, docs=False"
-    }
-  ],
-  "high_score_projects": [
-    {
-      "repo": "I don't think AI will make your processes go faster",
-      "score": 572,
-      "has_pricing": true,
-      "installable": true,
-      "stars": 0,
-      "note": "enriched — install=True, api=False, pricing=True, docs=True"
-    },
-    {
-      "repo": "Tennessee man jailed 37 days for Trump meme wins settlement after lawsuit",
-      "score": 571,
-      "has_pricing": true,
-      "installable": false,
-      "stars": 0,
-      "note": "enriched — install=False, api=True, pricing=True, docs=True"
-    },
-    {
-      "repo": "Qwen3.7-Max: The Agent Frontier",
-      "score": 518,
-      "has_pricing": false,
-      "installable": false,
-      "stars": 0,
-      "note": "enriched — install=False, api=False, pricing=False, docs=False"
-    },
-    {
-      "repo": "AI is a technology not a product",
-      "score": 403,
-      "has_pricing": false,
-      "installable": false,
-      "stars": 0,
-      "note": "enriched — install=False, api=True, pricing=False, docs=False"
-    },
-    {
-      "repo": "Show HN: Semble – Code search for agents that uses 98% fewer tokens than grep",
-      "score": 307,
-      "has_pricing": true,
-      "installable": true,
-      "stars": 0,
-      "note": "enriched — install=True, api=True, pricing=True, docs=True"
-    },
-    {
-      "repo": "Prolog Basics Explained with Pokémon",
-      "score": 253,
+      "repo": "modelstudioai/cli",
+      "score": 95,
       "has_pricing": false,
       "installable": true,
-      "stars": 0,
+      "stars": 102,
       "note": "enriched — install=True, api=True, pricing=False, docs=True"
-    },
-    {
-      "repo": "An OpenAI model has disproved a central conjecture in discrete geometry",
-      "score": 237,
-      "has_pricing": false,
-      "installable": false,
-      "stars": 0,
-      "note": "enriched — install=False, api=False, pricing=False, docs=False"
-    },
-    {
-      "repo": "Anna's Archive hit with $19.5M default judgment and global domain takedown order",
-      "score": 215,
-      "has_pricing": false,
-      "installable": true,
-      "stars": 0,
-      "note": "enriched — install=True, api=True, pricing=False, docs=False"
-    },
-    {
-      "repo": "Google's AI is being manipulated. The search giant is quietly fighting back",
-      "score": 202,
-      "has_pricing": true,
-      "installable": false,
-      "stars": 0,
-      "note": "enriched — install=False, api=False, pricing=True, docs=False"
-    },
-    {
-      "repo": "Two EA-18 fighter jets collide at Mountain Home airshow, pilots ejected safely",
-      "score": 189,
-      "has_pricing": true,
-      "installable": true,
-      "stars": 0,
-      "note": "enriched — install=True, api=False, pricing=True, docs=True"
-    },
-    {
-      "repo": "WriteUp: 16 Bytes of x86 that turn Matrix rain into sound",
-      "score": 115,
-      "has_pricing": false,
-      "installable": true,
-      "stars": 0,
-      "note": "enriched — install=True, api=False, pricing=False, docs=False"
-    },
-    {
-      "repo": "agentic-in/elephant-agent",
-      "score": 100,
-      "has_pricing": true,
-      "installable": true,
-      "stars": 361,
-      "note": "enriched — install=True, api=False, pricing=True, docs=True"
-    },
-    {
-      "repo": "The History of ThinkPad: From IBM’s Bento Box to Lenovo’s AI Workstations",
-      "score": 97,
-      "has_pricing": true,
-      "installable": true,
-      "stars": 0,
-      "note": "enriched — install=True, api=True, pricing=True, docs=True"
-    },
-    {
-      "repo": "jianshuo/ccglass",
-      "score": 95,
-      "has_pricing": false,
-      "installable": false,
-      "stars": 230,
-      "note": "enriched — install=None, api=None, pricing=None, docs=None"
-    },
-    {
-      "repo": "Outcome-Signal-Forge/trading-bot",
-      "score": 95,
-      "has_pricing": true,
-      "installable": true,
-      "stars": 250,
-      "note": "enriched — install=True, api=True, pricing=True, docs=True"
-    },
-    {
-      "repo": "neuralCPL/polymarket-trading-bot",
-      "score": 95,
-      "has_pricing": true,
-      "installable": true,
-      "stars": 138,
-      "note": "enriched — install=True, api=True, pricing=True, docs=True"
     },
     {
       "repo": "Trials on veterans suggest ibogaine could provide a new treatment for PTSD",
@@ -371,6 +226,22 @@
       "installable": true,
       "stars": 77,
       "note": "enriched — install=True, api=True, pricing=True, docs=False"
+    },
+    {
+      "repo": "FlashML-org/flashlib",
+      "score": 90,
+      "has_pricing": true,
+      "installable": true,
+      "stars": 212,
+      "note": "enriched — install=True, api=True, pricing=True, docs=False"
+    },
+    {
+      "repo": "garnix-io/garnix-ci",
+      "score": 90,
+      "has_pricing": true,
+      "installable": false,
+      "stars": 242,
+      "note": "enriched — install=False, api=True, pricing=True, docs=False"
     },
     {
       "repo": "NabilAziz99/agent-runtime",
@@ -461,6 +332,432 @@
       "note": "enriched — install=True, api=True, pricing=True, docs=True"
     },
     {
+      "repo": "GordenSun/GordenPPTSkill",
+      "score": 85,
+      "has_pricing": false,
+      "installable": false,
+      "stars": 96,
+      "note": "enriched — install=False, api=False, pricing=False, docs=True"
+    },
+    {
+      "repo": "SigmaTradeLabs/aster-bot",
+      "score": 85,
+      "has_pricing": false,
+      "installable": true,
+      "stars": 347,
+      "note": "enriched — install=True, api=True, pricing=False, docs=True"
+    },
+    {
+      "repo": "LiuMengxuan04/shushu-internship-tool",
+      "score": 83,
+      "has_pricing": false,
+      "installable": false,
+      "stars": 162,
+      "note": "enriched — install=False, api=False, pricing=False, docs=False"
+    },
+    {
+      "repo": "openclaw/clawpatch",
+      "score": 83,
+      "has_pricing": false,
+      "installable": false,
+      "stars": 530,
+      "note": "enriched — install=False, api=False, pricing=False, docs=False"
+    },
+    {
+      "repo": "Hello-Application-XH/HelloKimi",
+      "score": 82,
+      "has_pricing": true,
+      "installable": false,
+      "stars": 82,
+      "note": "enriched — install=False, api=True, pricing=True, docs=False"
+    },
+    {
+      "repo": "zoharbabin/web-researcher-mcp",
+      "score": 81,
+      "has_pricing": false,
+      "installable": false,
+      "stars": 8,
+      "note": "enriched — install=False, api=False, pricing=False, docs=False"
+    },
+    {
+      "repo": "NeuralInverse/neuralinverse",
+      "score": 80,
+      "has_pricing": false,
+      "installable": false,
+      "stars": 90,
+      "note": "enriched — install=False, api=False, pricing=False, docs=False"
+    },
+    {
+      "repo": "8bit64k/cronalytics",
+      "score": 80,
+      "has_pricing": false,
+      "installable": false,
+      "stars": 69,
+      "note": "enriched — install=False, api=False, pricing=False, docs=False"
+    },
+    {
+      "repo": "deepelementlab/jupyter-studio",
+      "score": 80,
+      "has_pricing": false,
+      "installable": false,
+      "stars": 49,
+      "note": "enriched — install=False, api=False, pricing=False, docs=False"
+    }
+  ],
+  "high_score_projects": [
+    {
+      "repo": "I don't think AI will make your processes go faster",
+      "score": 572,
+      "has_pricing": true,
+      "installable": true,
+      "stars": 0,
+      "note": "enriched — install=True, api=False, pricing=True, docs=True"
+    },
+    {
+      "repo": "?",
+      "score": 571,
+      "has_pricing": true,
+      "installable": false,
+      "stars": 0,
+      "note": "enriched — install=False, api=True, pricing=True, docs=True"
+    },
+    {
+      "repo": "?",
+      "score": 518,
+      "has_pricing": false,
+      "installable": false,
+      "stars": 0,
+      "note": "enriched — install=False, api=False, pricing=False, docs=False"
+    },
+    {
+      "repo": "AI is a technology not a product",
+      "score": 403,
+      "has_pricing": false,
+      "installable": false,
+      "stars": 0,
+      "note": "enriched — install=False, api=True, pricing=False, docs=False"
+    },
+    {
+      "repo": "Show HN: Semble – Code search for agents that uses 98% fewer tokens than grep",
+      "score": 307,
+      "has_pricing": true,
+      "installable": true,
+      "stars": 0,
+      "note": "enriched — install=True, api=True, pricing=True, docs=True"
+    },
+    {
+      "repo": "Prolog Basics Explained with Pokémon",
+      "score": 253,
+      "has_pricing": false,
+      "installable": true,
+      "stars": 0,
+      "note": "enriched — install=True, api=True, pricing=False, docs=True"
+    },
+    {
+      "repo": "?",
+      "score": 237,
+      "has_pricing": false,
+      "installable": false,
+      "stars": 0,
+      "note": "enriched — install=False, api=False, pricing=False, docs=False"
+    },
+    {
+      "repo": "?",
+      "score": 215,
+      "has_pricing": false,
+      "installable": true,
+      "stars": 0,
+      "note": "enriched — install=True, api=True, pricing=False, docs=False"
+    },
+    {
+      "repo": "?",
+      "score": 202,
+      "has_pricing": true,
+      "installable": false,
+      "stars": 0,
+      "note": "enriched — install=False, api=False, pricing=True, docs=False"
+    },
+    {
+      "repo": "Two EA-18 fighter jets collide at Mountain Home airshow, pilots ejected safely",
+      "score": 189,
+      "has_pricing": true,
+      "installable": true,
+      "stars": 0,
+      "note": "enriched — install=True, api=False, pricing=True, docs=True"
+    },
+    {
+      "repo": "WriteUp: 16 Bytes of x86 that turn Matrix rain into sound",
+      "score": 115,
+      "has_pricing": false,
+      "installable": true,
+      "stars": 0,
+      "note": "enriched — install=True, api=False, pricing=False, docs=False"
+    },
+    {
+      "repo": "agentic-in/elephant-agent",
+      "score": 100,
+      "has_pricing": true,
+      "installable": true,
+      "stars": 361,
+      "note": "enriched — install=True, api=False, pricing=True, docs=True"
+    },
+    {
+      "repo": "OnlyTerp/prompt-cache-skills",
+      "score": 100,
+      "has_pricing": true,
+      "installable": true,
+      "stars": 69,
+      "note": "enriched — install=True, api=True, pricing=True, docs=True"
+    },
+    {
+      "repo": "Novaquant-labs/hyperliquid-trading-bot",
+      "score": 100,
+      "has_pricing": true,
+      "installable": true,
+      "stars": 348,
+      "note": "enriched — install=True, api=True, pricing=True, docs=False"
+    },
+    {
+      "repo": "The History of ThinkPad: From IBM’s Bento Box to Lenovo’s AI Workstations",
+      "score": 97,
+      "has_pricing": true,
+      "installable": true,
+      "stars": 0,
+      "note": "enriched — install=True, api=True, pricing=True, docs=True"
+    },
+    {
+      "repo": "jianshuo/ccglass",
+      "score": 95,
+      "has_pricing": false,
+      "installable": false,
+      "stars": 230,
+      "note": "enriched — install=False, api=False, pricing=False, docs=False"
+    },
+    {
+      "repo": "Outcome-Signal-Forge/trading-bot",
+      "score": 95,
+      "has_pricing": true,
+      "installable": true,
+      "stars": 250,
+      "note": "enriched — install=True, api=True, pricing=True, docs=True"
+    },
+    {
+      "repo": "neuralCPL/polymarket-trading-bot",
+      "score": 95,
+      "has_pricing": true,
+      "installable": true,
+      "stars": 138,
+      "note": "enriched — install=True, api=True, pricing=True, docs=True"
+    },
+    {
+      "repo": "modelstudioai/cli",
+      "score": 95,
+      "has_pricing": false,
+      "installable": true,
+      "stars": 102,
+      "note": "enriched — install=True, api=True, pricing=False, docs=True"
+    },
+    {
+      "repo": "Trials on veterans suggest ibogaine could provide a new treatment for PTSD",
+      "score": 94,
+      "has_pricing": true,
+      "installable": false,
+      "stars": 0,
+      "note": "enriched — install=False, api=False, pricing=True, docs=True"
+    },
+    {
+      "repo": "lynote-ai/humanize-text",
+      "score": 93,
+      "has_pricing": false,
+      "installable": false,
+      "stars": 122,
+      "note": "enriched — install=False, api=False, pricing=False, docs=False"
+    },
+    {
+      "repo": "feder-cr/invisible_playwright",
+      "score": 93,
+      "has_pricing": false,
+      "installable": false,
+      "stars": 425,
+      "note": "enriched — install=False, api=False, pricing=False, docs=False"
+    },
+    {
+      "repo": "h4ckf0r0day/awesome-ai-web-scraping",
+      "score": 90,
+      "has_pricing": false,
+      "installable": false,
+      "stars": 29,
+      "note": "enriched — install=False, api=False, pricing=False, docs=False"
+    },
+    {
+      "repo": "Klotzkette/claude-fuer-deutsches-recht",
+      "score": 90,
+      "has_pricing": false,
+      "installable": false,
+      "stars": 211,
+      "note": "enriched — install=False, api=False, pricing=False, docs=False"
+    },
+    {
+      "repo": "shannhk/hermes-agent-control-room",
+      "score": 90,
+      "has_pricing": true,
+      "installable": true,
+      "stars": 386,
+      "note": "enriched — install=True, api=True, pricing=True, docs=True"
+    },
+    {
+      "repo": "ShinyaTomitsuka/arbitrage-trading-bot",
+      "score": 90,
+      "has_pricing": true,
+      "installable": true,
+      "stars": 338,
+      "note": "enriched — install=True, api=True, pricing=True, docs=False"
+    },
+    {
+      "repo": "md0070/polymarket-trading-bot",
+      "score": 90,
+      "has_pricing": true,
+      "installable": true,
+      "stars": 313,
+      "note": "enriched — install=True, api=True, pricing=True, docs=False"
+    },
+    {
+      "repo": "Ronesfe/Polymarket-Automated-Trading-Bot",
+      "score": 90,
+      "has_pricing": true,
+      "installable": true,
+      "stars": 77,
+      "note": "enriched — install=True, api=True, pricing=True, docs=False"
+    },
+    {
+      "repo": "FlashML-org/flashlib",
+      "score": 90,
+      "has_pricing": true,
+      "installable": true,
+      "stars": 212,
+      "note": "enriched — install=True, api=True, pricing=True, docs=False"
+    },
+    {
+      "repo": "garnix-io/garnix-ci",
+      "score": 90,
+      "has_pricing": true,
+      "installable": false,
+      "stars": 242,
+      "note": "enriched — install=False, api=True, pricing=True, docs=False"
+    },
+    {
+      "repo": "NabilAziz99/agent-runtime",
+      "score": 88,
+      "has_pricing": true,
+      "installable": true,
+      "stars": 118,
+      "note": "enriched — install=True, api=True, pricing=True, docs=False"
+    },
+    {
+      "repo": "Geekgineer/needle-rs",
+      "score": 87,
+      "has_pricing": false,
+      "installable": false,
+      "stars": 22,
+      "note": "enriched — install=False, api=False, pricing=False, docs=False"
+    },
+    {
+      "repo": "Doorman11991/smallcode",
+      "score": 86,
+      "has_pricing": false,
+      "installable": false,
+      "stars": 415,
+      "note": "enriched — install=False, api=False, pricing=False, docs=False"
+    },
+    {
+      "repo": "gi-dellav/zerostack",
+      "score": 86,
+      "has_pricing": false,
+      "installable": false,
+      "stars": 703,
+      "note": "enriched — install=False, api=False, pricing=False, docs=False"
+    },
+    {
+      "repo": "bytedance/Lance",
+      "score": 85,
+      "has_pricing": true,
+      "installable": true,
+      "stars": 489,
+      "note": "enriched — install=True, api=False, pricing=True, docs=False"
+    },
+    {
+      "repo": "nkzw-tech/codiff",
+      "score": 85,
+      "has_pricing": false,
+      "installable": true,
+      "stars": 402,
+      "note": "enriched — install=True, api=False, pricing=False, docs=False"
+    },
+    {
+      "repo": "Saito-Sakuya/CandyCraft",
+      "score": 85,
+      "has_pricing": true,
+      "installable": false,
+      "stars": 20,
+      "note": "enriched — install=False, api=True, pricing=True, docs=False"
+    },
+    {
+      "repo": "tathagat22/plumb-mcp",
+      "score": 85,
+      "has_pricing": true,
+      "installable": true,
+      "stars": 18,
+      "note": "enriched — install=True, api=True, pricing=True, docs=True"
+    },
+    {
+      "repo": "nekocode/filetree-skill",
+      "score": 85,
+      "has_pricing": true,
+      "installable": true,
+      "stars": 30,
+      "note": "enriched — install=True, api=False, pricing=True, docs=True"
+    },
+    {
+      "repo": "PredictiveFlow-Labs/polymarket-btc-5min-15min-up-down-arbitrage-bot",
+      "score": 85,
+      "has_pricing": true,
+      "installable": true,
+      "stars": 233,
+      "note": "enriched — install=True, api=True, pricing=True, docs=True"
+    },
+    {
+      "repo": "cclank/lanshu-awesome-ai-video-kit",
+      "score": 85,
+      "has_pricing": true,
+      "installable": true,
+      "stars": 117,
+      "note": "enriched — install=True, api=True, pricing=True, docs=True"
+    },
+    {
+      "repo": "GordenSun/GordenPPTSkill",
+      "score": 85,
+      "has_pricing": false,
+      "installable": false,
+      "stars": 96,
+      "note": "enriched — install=False, api=False, pricing=False, docs=True"
+    },
+    {
+      "repo": "SigmaTradeLabs/aster-bot",
+      "score": 85,
+      "has_pricing": false,
+      "installable": true,
+      "stars": 347,
+      "note": "enriched — install=True, api=True, pricing=False, docs=True"
+    },
+    {
+      "repo": "LiuMengxuan04/shushu-internship-tool",
+      "score": 83,
+      "has_pricing": false,
+      "installable": false,
+      "stars": 162,
+      "note": "enriched — install=False, api=False, pricing=False, docs=False"
+    },
+    {
       "repo": "openclaw/clawpatch",
       "score": 83,
       "has_pricing": false,
@@ -525,6 +822,30 @@
       "note": "enriched — install=False, api=False, pricing=False, docs=False"
     },
     {
+      "repo": "wdnmd1265/ai-flow-architect",
+      "score": 80,
+      "has_pricing": false,
+      "installable": false,
+      "stars": 15,
+      "note": "enriched — install=False, api=False, pricing=False, docs=False"
+    },
+    {
+      "repo": "Hash-7777/HashCortX",
+      "score": 80,
+      "has_pricing": false,
+      "installable": false,
+      "stars": 6,
+      "note": "enriched — install=False, api=False, pricing=False, docs=False"
+    },
+    {
+      "repo": "VILA-Lab/FigMirror",
+      "score": 80,
+      "has_pricing": false,
+      "installable": false,
+      "stars": 278,
+      "note": "enriched — install=False, api=False, pricing=False, docs=False"
+    },
+    {
       "repo": "UditAkhourii/adhd",
       "score": 80,
       "has_pricing": true,
@@ -549,12 +870,12 @@
       "note": "enriched — install=True, api=True, pricing=True, docs=False"
     },
     {
-      "repo": "SubamanojJ-2004/gta-5-mod-menu",
-      "score": 78,
-      "has_pricing": false,
-      "installable": false,
-      "stars": 446,
-      "note": "enriched — install=False, api=False, pricing=False, docs=False"
+      "repo": "zhristophe/Claude-Mythos-AI-Anthropic-App",
+      "score": 79,
+      "has_pricing": true,
+      "installable": true,
+      "stars": 183,
+      "note": "enriched — install=True, api=True, pricing=True, docs=False"
     },
     {
       "repo": "MediatorSpeak/dota2-gameplay-tools",
@@ -581,14 +902,6 @@
       "note": "enriched — install=False, api=False, pricing=False, docs=False"
     },
     {
-      "repo": "trong776/Roblox-Hub-2026",
-      "score": 78,
-      "has_pricing": false,
-      "installable": false,
-      "stars": 482,
-      "note": "enriched — install=False, api=False, pricing=False, docs=False"
-    },
-    {
       "repo": "lucasfrre/BongoCat-Desktop",
       "score": 78,
       "has_pricing": false,
@@ -602,6 +915,22 @@
       "has_pricing": false,
       "installable": false,
       "stars": 445,
+      "note": "enriched — install=False, api=False, pricing=False, docs=False"
+    },
+    {
+      "repo": "Evokoa/pgGraph",
+      "score": 76,
+      "has_pricing": false,
+      "installable": false,
+      "stars": 227,
+      "note": "enriched — install=False, api=False, pricing=False, docs=False"
+    },
+    {
+      "repo": "agent-quality-controls/slopless",
+      "score": 76,
+      "has_pricing": false,
+      "installable": false,
+      "stars": 126,
       "note": "enriched — install=False, api=False, pricing=False, docs=False"
     },
     {
@@ -661,6 +990,14 @@
       "note": "enriched — install=False, api=False, pricing=False, docs=False"
     },
     {
+      "repo": "not-manu/filemention.nvim",
+      "score": 75,
+      "has_pricing": false,
+      "installable": false,
+      "stars": 52,
+      "note": "enriched — install=False, api=False, pricing=False, docs=False"
+    },
+    {
       "repo": "ZoyaMalhotra/DualSenseX-DSX-Steam-Edition",
       "score": 75,
       "has_pricing": false,
@@ -682,14 +1019,6 @@
       "has_pricing": false,
       "installable": false,
       "stars": 417,
-      "note": "enriched — install=False, api=False, pricing=False, docs=False"
-    },
-    {
-      "repo": "nhutdang198/AI-Final-fantasy-6-remake",
-      "score": 75,
-      "has_pricing": false,
-      "installable": false,
-      "stars": 367,
       "note": "enriched — install=False, api=False, pricing=False, docs=False"
     },
     {
@@ -749,6 +1078,14 @@
       "note": "enriched — install=False, api=False, pricing=False, docs=False"
     },
     {
+      "repo": "CylinderChairman/aida64",
+      "score": 75,
+      "has_pricing": false,
+      "installable": false,
+      "stars": 299,
+      "note": "enriched — install=False, api=False, pricing=False, docs=False"
+    },
+    {
       "repo": "AppleOnFire/JennyMod-All-Versions",
       "score": 75,
       "has_pricing": true,
@@ -797,12 +1134,20 @@
       "note": "enriched — install=True, api=True, pricing=True, docs=True"
     },
     {
-      "repo": "anjelisembiring651624/Lossless-Scaling-Util-V2.0",
+      "repo": "butterbase-ai/butterbase-oss",
       "score": 75,
-      "has_pricing": true,
-      "installable": true,
-      "stars": 186,
-      "note": "enriched — install=True, api=False, pricing=True, docs=False"
+      "has_pricing": false,
+      "installable": false,
+      "stars": 285,
+      "note": "enriched — install=False, api=False, pricing=False, docs=False"
+    },
+    {
+      "repo": "bwjoke/fomo5000.com",
+      "score": 75,
+      "has_pricing": false,
+      "installable": false,
+      "stars": 57,
+      "note": "enriched — install=False, api=False, pricing=False, docs=False"
     },
     {
       "repo": "tuchg/Lucarne",
@@ -922,7 +1267,7 @@
       "has_pricing": false,
       "installable": false,
       "stars": 298,
-      "note": "enriched — install=None, api=None, pricing=None, docs=None"
+      "note": "enriched — install=False, api=False, pricing=False, docs=False"
     },
     {
       "repo": "patchfighterway90/cs2-external-overlay",
@@ -957,13 +1302,197 @@
       "note": "enriched — install=False, api=False, pricing=False, docs=False"
     },
     {
-      "repo": "Formal Verification Gates for AI Coding Loops",
+      "repo": "?",
       "score": 71,
       "has_pricing": true,
       "installable": true,
       "stars": 0,
       "note": "enriched — install=True, api=True, pricing=True, docs=False"
+    },
+    {
+      "repo": "Sophomoresty/gemini-web2api",
+      "score": 71,
+      "has_pricing": true,
+      "installable": true,
+      "stars": 204,
+      "note": "enriched — install=True, api=True, pricing=True, docs=False"
+    },
+    {
+      "repo": "wanshuiyin/ARIS-in-AI-Offer",
+      "score": 70,
+      "has_pricing": false,
+      "installable": false,
+      "stars": 71,
+      "note": "enriched — install=False, api=False, pricing=False, docs=True"
+    },
+    {
+      "repo": "gonemedia/aipointer",
+      "score": 70,
+      "has_pricing": false,
+      "installable": false,
+      "stars": 120,
+      "note": "enriched — install=False, api=False, pricing=False, docs=False"
+    },
+    {
+      "repo": "haoaaa-111/taoketong",
+      "score": 70,
+      "has_pricing": false,
+      "installable": false,
+      "stars": 18,
+      "note": "enriched — install=False, api=False, pricing=False, docs=False"
+    },
+    {
+      "repo": "husu/loom",
+      "score": 70,
+      "has_pricing": true,
+      "installable": true,
+      "stars": 339,
+      "note": "enriched — install=True, api=True, pricing=True, docs=True"
+    },
+    {
+      "repo": "Jawaz-Keyzor/FL-Studio-2026-Producer-Edition-Unlock",
+      "score": 70,
+      "has_pricing": true,
+      "installable": true,
+      "stars": 426,
+      "note": "enriched — install=True, api=True, pricing=True, docs=False"
+    },
+    {
+      "repo": "hanyi0000/chatgpt-plus-automation-toolkit",
+      "score": 70,
+      "has_pricing": true,
+      "installable": true,
+      "stars": 111,
+      "note": "enriched — install=True, api=True, pricing=True, docs=True"
+    },
+    {
+      "repo": "xzf-thu/Mega-ASR",
+      "score": 70,
+      "has_pricing": true,
+      "installable": true,
+      "stars": 291,
+      "note": "enriched — install=True, api=False, pricing=True, docs=False"
+    },
+    {
+      "repo": "mturac/everything-openai-codex",
+      "score": 70,
+      "has_pricing": true,
+      "installable": true,
+      "stars": 27,
+      "note": "enriched — install=True, api=True, pricing=True, docs=True"
+    },
+    {
+      "repo": "MoyuFamily/ai-relay",
+      "score": 70,
+      "has_pricing": false,
+      "installable": false,
+      "stars": 17,
+      "note": "enriched — install=False, api=False, pricing=False, docs=False"
+    },
+    {
+      "repo": "X-3306/Project-Onyx",
+      "score": 70,
+      "has_pricing": true,
+      "installable": true,
+      "stars": 12,
+      "note": "enriched — install=True, api=True, pricing=True, docs=True"
+    },
+    {
+      "repo": "code-yeongyu/lazycodex",
+      "score": 70,
+      "has_pricing": true,
+      "installable": true,
+      "stars": 8,
+      "note": "enriched — install=True, api=True, pricing=True, docs=False"
+    },
+    {
+      "repo": "maowuzz/chatgpt-session-forge",
+      "score": 70,
+      "has_pricing": false,
+      "installable": false,
+      "stars": 99,
+      "note": "enriched — install=False, api=False, pricing=False, docs=False"
+    },
+    {
+      "repo": "anandhi1086/Food-Donation-Platform",
+      "score": 70,
+      "has_pricing": false,
+      "installable": false,
+      "stars": 76,
+      "note": "enriched — install=False, api=False, pricing=False, docs=False"
+    },
+    {
+      "repo": "judithsulfan/trading-bot",
+      "score": 70,
+      "has_pricing": true,
+      "installable": true,
+      "stars": 270,
+      "note": "enriched — install=True, api=True, pricing=True, docs=True"
+    },
+    {
+      "repo": "akitaonrails/ai-memory",
+      "score": 70,
+      "has_pricing": true,
+      "installable": true,
+      "stars": 218,
+      "note": "enriched — install=True, api=True, pricing=True, docs=True"
+    },
+    {
+      "repo": "Polymarket-Trading-kit/sports-trading-bot",
+      "score": 70,
+      "has_pricing": true,
+      "installable": true,
+      "stars": 197,
+      "note": "enriched — install=True, api=True, pricing=True, docs=False"
+    },
+    {
+      "repo": "rivernova/hosomaki",
+      "score": 70,
+      "has_pricing": true,
+      "installable": true,
+      "stars": 6,
+      "note": "enriched — install=True, api=True, pricing=True, docs=False"
+    },
+    {
+      "repo": "SuanFishXYY/suanfish-design-system",
+      "score": 70,
+      "has_pricing": true,
+      "installable": true,
+      "stars": 5,
+      "note": "enriched — install=True, api=False, pricing=True, docs=True"
+    },
+    {
+      "repo": "DhanushNehru/ciraft",
+      "score": 70,
+      "has_pricing": true,
+      "installable": true,
+      "stars": 5,
+      "note": "enriched — install=True, api=False, pricing=True, docs=True"
+    },
+    {
+      "repo": "JoshiNaidu/career-forges",
+      "score": 70,
+      "has_pricing": true,
+      "installable": true,
+      "stars": 5,
+      "note": "enriched — install=True, api=False, pricing=True, docs=True"
+    },
+    {
+      "repo": "TiesPetersen/SkillBenchmark",
+      "score": 70,
+      "has_pricing": false,
+      "installable": false,
+      "stars": 9,
+      "note": "enriched — install=False, api=False, pricing=False, docs=False"
+    },
+    {
+      "repo": "AmmarkoV/SAM3DBody-cpp",
+      "score": 70,
+      "has_pricing": false,
+      "installable": false,
+      "stars": 301,
+      "note": "enriched — install=False, api=True, pricing=False, docs=False"
     }
   ],
-  "note": "共324个build_candidate已全量分析（2026-05-27 enrich覆盖完成）"
+  "note": "共365个build_candidate已全量分析（2026-05-29 enrich覆盖完成）"
 }
