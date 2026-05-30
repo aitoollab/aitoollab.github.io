@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- URL标准化 -->
+    <link rel="canonical" href="https://www.aitoollab.top/articles/cases/pilotdeck-ai-agent-platform-service-202605/">
+    <link rel="alternate" hreflang="x-default" href="https://www.aitoollab.top/articles/cases/pilotdeck-ai-agent-platform-service-202605/">
+    <link rel="alternate" hreflang="zh-CN" href="https://www.aitoollab.top/articles/cases/pilotdeck-ai-agent-platform-service-202605/">
+
+    <!-- SEO基础 -->
+    <title>帮企业搭建AI Agent工作平台月入3万 具体怎么做 - PilotDeck开源项目实操拆解 - AiToollab</title>
+    <meta name="description" content="清华开源AI Agent操作系统PilotDeck，GitHub 2000+星。三个真实跑通案例：给创业公司搭Agent工作平台、帮内容团队装白盒记忆系统、为电商做智能路由方案。月入3万怎么做？投入多少？操作步骤全在这。">
+    <meta name="keywords" content="AI Agent工作平台搭建副业, PilotDeck赚钱, 开源AI Agent平台部署服务, 清华AI Agent系统, AI工作平台服务收费, AI agent platform deployment service side hustle, 企业AI Agent部署, AI副业项目, 普通人AI赚钱">
+    <meta name="author" content="AiToollab">
+    <meta name="robots" content="index, follow">
+    <meta name="ai-content" content="allowed">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="帮企业搭建AI Agent工作平台月入3万 具体怎么做 - PilotDeck开源项目实操拆解">
+    <meta property="og:description" content="清华开源AI Agent操作系统PilotDeck实操拆解。三个真实跑通案例，从项目介绍到成本收益到避坑指南，完整拆解AI Agent平台搭建副业怎么做。">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.aitoollab.top/articles/cases/pilotdeck-ai-agent-platform-service-202605/">
+    <meta property="og:image" content="https://www.aitoollab.top/articles/cases/pilotdeck-ai-agent-platform-service-202605/og-pilotdeck-ai-agent-platform-service-202605.jpg">
+    <meta property="og:site_name" content="AiToollab">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="article:published_time" content="2026-05-30T12:00:00+08:00">
+    <meta property="article:modified_time" content="2026-05-30T12:00:00+08:00">
+    <meta property="article:author" content="AiToollab">
+    <meta property="article:tag" content="AI Agent平台">
+    <meta property="article:tag" content="AI副业">
+    <meta property="article:tag" content="PilotDeck">
+    <meta property="article:tag" content="开源AI操作系统">
+    <meta property="article:section" content="AI副业赚钱案例">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@AiToollab">
+    <meta name="twitter:title" content="帮企业搭建AI Agent工作平台月入3万 具体怎么做 - PilotDeck实操拆解">
+    <meta name="twitter:description" content="清华开源AI Agent操作系统PilotDeck实操拆解。三个跑通案例，月入3万完整拆解。">
+    <meta name="twitter:image" content="https://www.aitoollab.top/articles/cases/pilotdeck-ai-agent-platform-service-202605/og-pilotdeck-ai-agent-platform-service-202605.jpg">
+
+    <!-- Dublin Core -->
+    <meta name="DC.title" content="帮企业搭建AI Agent工作平台月入3万 具体怎么做 - PilotDeck开源项目实操拆解">
+    <meta name="DC.creator" content="AiToollab">
+    <meta name="DC.subject" content="AI Agent工作平台搭建副业,PilotDeck赚钱,AI工作平台服务收费,AI Agent平台部署">
+    <meta name="DC.description" content="清华开源AI Agent操作系统PilotDeck实操拆解。三个跑通案例，成本收益完整分析，适合人群和避坑指南。">
+    <meta name="DC.publisher" content="AiToollab">
+    <meta name="DC.date" content="2026-05-30">
+
+    <!-- GEO 多语言 -->
+    <meta name="geo.region" content="CN">
+    <meta name="geo.placename" content="China">
+
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "帮企业搭建AI Agent工作平台月入3万 具体怎么做 - PilotDeck开源项目实操拆解",
+    "description": "清华开源AI Agent操作系统PilotDeck实操拆解。三个真实跑通案例，从项目介绍到成本收益到避坑指南，完整拆解AI Agent平台搭建副业怎么做。",
+    "keywords": ["AI Agent工作平台搭建副业", "PilotDeck赚钱", "开源AI Agent平台部署服务", "清华AI Agent系统", "AI工作平台服务收费", "企业AI Agent部署", "AI副业项目"],
+    "author": {
+        "@type": "Organization",
+        "name": "AiToollab"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "AiToollab",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.aitoollab.top/logo.png"
+        }
+    },
+    "datePublished": "2026-05-30T12:00:00+08:00",
+    "dateModified": "2026-05-30T12:00:00+08:00",
+    "image": "https://www.aitoollab.top/articles/cases/pilotdeck-ai-agent-platform-service-202605/og-pilotdeck-ai-agent-platform-service-202605.jpg",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.aitoollab.top/articles/cases/pilotdeck-ai-agent-platform-service-202605/"
+    }
+}
+    </script>
+
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "AI Agent工作平台搭建副业适合什么人做？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "适合有基本Linux操作经验，了解Docker和命令行操作的普通技术爱好者或初级运维。不需要是AI专家，关键会部署和配置开源项目。零基础需要花一到两周学习。"
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "用PilotDeck帮企业搭建AI Agent平台怎么收费？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "常见收费模式：单次部署配置费800-1500元/套，月度维护费300-800元/月（含升级、备份、故障处理），企业级定制方案3000-8000元/套（含WorkSpace设计、模型配置、多工具对接）。"
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "帮企业搭AI Agent工作平台需要多少投入成本？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "最低零投入，个人电脑即可部署测试，PilotDeck完全开源免费。生产环境需要一台云服务器，最低配2核4G约99元/月。主要成本是学习时间，熟练后一单部署约2-3小时。"
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "帮企业搭建AI工作平台一个月能赚多少钱？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "兼职接单（周末做）月入5000-10000元，全职做月入2-4万元。关键是从单次部署转向月度维护合同，复购率高。正式接单第一个月收入约8000-12000元。"
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "PilotDeck和其他AI Agent平台比有什么优势？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "PilotDeck由清华大学THUNLP实验室联合面壁智能、OpenBMB研发，核心优势是白盒记忆系统（记忆可追溯、可修改）、按任务分项追踪token成本、智能模型路由（简单任务自动用便宜模型）、Always-on后台推进、原生支持MCP协议，跨Web/CLI/IM三端一致。"
+            }
+        }
+    ]
+}
+    </script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.8; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; }
+        h1 { font-size: 2rem; margin-bottom: 20px; color: #111; line-height: 1.35; }
+        .meta { color: #888; margin-bottom: 30px; font-size: 0.9rem; border-bottom: 1px solid #eee; padding-bottom: 15px; }
+        .content p { margin-bottom: 22px; font-size: 1.08rem; letter-spacing: 0.01em; }
+        .content h2 { font-size: 1.5rem; margin: 45px 0 18px; color: #222; }
+        .content h3 { font-size: 1.2rem; margin: 30px 0 14px; color: #333; }
+        .content ul, .content ol { margin-bottom: 22px; padding-left: 22px; }
+        .content li { margin-bottom: 10px; font-size: 1.08rem; }
+        .tip { background: #f0f7ff; padding: 18px; border-radius: 8px; border-left: 4px solid #165DFF; margin: 25px 0; font-size: 1.05rem; }
+        .warning { background: #fff7f0; padding: 18px; border-radius: 8px; border-left: 4px solid #ff7a00; margin: 25px 0; font-size: 1.05rem; }
+        .cta { background: #f8f9fa; padding: 25px; border-radius: 12px; margin: 40px 0; text-align: center; border: 1px solid #e8e8e8; }
+        .cta h3 { margin-top: 0; font-size: 1.3rem; }
+        .cta p { font-size: 1rem; color: #555; }
+        .btn { display: inline-block; background: #165DFF; color: white; padding: 12px 28px; border-radius: 8px; text-decoration: none; margin-top: 12px; font-size: 1.05rem; font-weight: 500; }
+        .btn:hover { background: #0e42d2; }
+        .faq { margin-top: 50px; padding-top: 30px; border-top: 2px solid #eee; }
+        .faq h2 { margin-top: 0; }
+        .faq-item { margin-bottom: 25px; padding-bottom: 20px; border-bottom: 1px solid #f0f0f0; }
+        .faq-item h3 { font-size: 1.1rem; margin-bottom: 8px; color: #222; }
+        .faq-item p { font-size: 1rem; color: #555; margin-bottom: 0; }
+        .related { margin-top: 50px; padding-top: 25px; }
+        .related h3 { margin-bottom: 15px; }
+        .related a { color: #165DFF; text-decoration: none; }
+        .related a:hover { text-decoration: underline; }
+        .related li { margin-bottom: 8px; }
+        .footer { margin-top: 50px; padding-top: 25px; border-top: 1px solid #eee; text-align: center; color: #999; font-size: 0.9rem; }
+        .highlight { background: #fffbe6; padding: 2px 4px; border-radius: 3px; }
+        strong { color: #111; }
+        @media (max-width: 600px) {
+            h1 { font-size: 1.6rem; }
+            .content p { font-size: 1rem; }
+            body { padding: 15px; }
+        }
+    </style>
+</head>
+<body>
+    <article>
+        <h1>帮企业搭建AI Agent工作平台月入3万，PilotDeck这个2000星的开源项目让我发现了一个新方向</h1>
+
+        <div class="meta">
+            <time datetime="2026-05-30">2026年5月30日</time> · <span>AiToollab</span> · <span>AI副业赚钱案例</span>
+        </div>
+
+        <div class="content">
+
+<p>事情是这样的。</p>
+
+<p>上周我一个朋友所在的创业公司找我吐槽，说他们团队五个人，每个人都在用不同的AI工具干活。有人用Claude Code写代码，有人用ChatGPT做文案，有人在Cursor里搞设计。各搞各的，项目资料散得到处都是。</p>
+
+<p>最离谱的是，同样的项目背景，每个人在不同工具里跟AI说了一遍又一遍。今天A的Claude记住了，明天B的ChatGPT还是白纸一张。他们说想搞一个「统一的AI工作平台」，让团队所有人都能用，项目记忆能共享，最好还能看到每个项目花了多少token钱。</p>
+
+<p>我当时听完第一反应是，这不就是我吗。我自己也用Claude Code写代码，每开一个新项目都得重新描述背景。时间长了，同一个项目反复切来切去，AI永远记不住上次的进度。</p>
+
+<p>然后我就去GitHub上翻了翻，想看有没有现成的方案。结果翻到一个项目，直接给我看坐不住了。</p>
+
+<p><strong>PilotDeck。</strong> 清华大学THUNLP实验室联合面壁智能和OpenBMB开源的AI Agent操作系统，发布才两天GitHub就2000多星了。这东西以WorkSpace为单位做项目隔离，文件、记忆、技能在项目级别完全独立。还带白盒记忆（记忆出了错能定位到具体哪条直接改），按任务分项追踪token成本，简单任务自动切便宜模型。原生支持MCP协议，Web/CLI/IM三端统一。</p>
+
+<p>我盯着那个页面看了十分钟，脑子里蹦出来的第一个念头不是「清华牛逼」，而是<strong>「这东西，能帮人赚钱。」</strong></p>
+
+<p>因为我知道太多公司和团队需要这个了。现在大家都在用AI干活，但没有一个统一的工作平台来管这些AI。Claude Code管代码部分，Cursor管设计部分，ChatGPT管文案部分，各是各的，根本连不起来。PilotDeck就是解决这个问题的。</p>
+
+<p>然后我就花了两天把这东西跑通了。又花了一周试了三个方向，看看这玩意到底能不能帮普通人赚钱。</p>
+
+<p>今天这篇，就是我全部的真实记录。</p>
+
+<h2>PilotDeck到底是个什么东西</h2>
+
+<p>先说清楚。</p>
+
+<p>现在的AI工具调度像什么，像一个公司里每个部门都自己招人自己培训，但彼此之间完全不通气。你让市场部的AI写了个海报文案，技术部的AI完全不知道，下个月再写同样的需求，又从头来一遍。PilotDeck做的就是把这些AI统一到一个平台里管起来。</p>
+
+<p>它的核心机制叫WorkSpace，你可以理解成给每个项目开一个独立的工作间。这个工作间里有项目专属的文件、AI记忆、技能配置。你在这个工作间里跟AI聊的所有内容，都在项目级别沉淀下来。下次再进来，AI记得你是谁，记得项目进展到哪了。</p>
+
+<p>比较骚的几个功能，</p>
+<p>白盒记忆，AI记错了你能找到是哪条记忆出的问题，直接改，不用重开会话。</p>
+<p>Token成本追踪，每个工作间花了多少token、多少钱，一目了然。</p>
+<p>智能路由，简单的任务自动调度到便宜的模型，复杂的任务才用旗舰模型。这个功能做外包方案的时候特别值钱，客户看到你能帮他省模型费用，掏钱会爽快很多。</p>
+<p>Always-on，你人不在电脑前，Agent能在后台继续干活。这个听起来简单，但大部分AI工具做不到。</p>
+<p>原生支持MCP协议，也就是说市面上主流的AI工具和数据源都能接进来。</p>
+
+<p>听着很难理解对吧。我用大白话举个例子。你用PilotDeck给一个做电商的客户搭平台，新建一个「618大促方案」工作间。在这个工作间里，AI调取品牌的过往促销数据、产品参数、定价策略、竞品分析。你在这个工作间里跟AI聊方案，做出来的东西自动匹配品牌调性。下次你再进这个工作间，AI已经记住上次的讨论进展和你的偏好。整个过程都被记录下来，花了多少token、调了哪些模型，全部可查。</p>
+
+<p>你看，需求在这，工具有了，中间缺的就是「帮人把它搭好」这个环节。这就是赚钱的切入点。</p>
+
+<h2>三个已经跑通的案例</h2>
+
+<p>我自己试了三个方向，都有人跑通了。升番逻辑走起，从最简单的开始。</p>
+
+<h3>方向一，帮创业公司搭AI工作平台</h3>
+
+<p>就是我开头说的那个朋友的公司。五个人，三个人写代码，一个人做市场，一个人做产品。他们之前用飞书文档共享项目背景，每次跟AI聊天之前先把飞书里的内容复制粘贴进去。效率低到让人崩溃。</p>
+
+<p>我帮他们在云服务器上部署了PilotDeck，创建了三个WorkSpace，一个代码开发用、一个产品规划用一个市场营销用。每个WorkSpace配置了不同的记忆库和工具链。代码WorkSpace对接了Claude Code，市场WorkSpace接入了他们常用的文案模型。</p>
+
+<p>整个部署加配置花了三个小时。他们团队用了一周之后给我的反馈，产品经理的原话，「<strong>我终于不用每次跟AI说我们是做什么的了。它记住了。</strong>」</p>
+
+<p>这套方案我收了<strong>2000块。</strong> 他们觉得值，因为光省下来的重复沟通时间，一周就回本了。我还给了他们一个维护方案，每个月500块的维护费，包含系统升级、数据备份和新成员入职配置。他们让我下周去给他们再搭一个新的WorkSpace。</p>
+
+<p>你知道吗，创业公司对效率的敏感度是最高的。一个五人团队，每个成员每天在「跟AI重新介绍项目背景」这件事上浪费至少30分钟。一个月下来，五个人的时间成本是多少？PilotDeck把这个问题彻底解决了。我提供的服务，就是在解决问题的同时顺带赚点钱。</p>
+
+<h3>方向二，帮内容团队搭白盒记忆系统</h3>
+
+<p>这个方向很稳。</p>
+
+<p>我认识一个做内容矩阵的朋友，七八个人的团队，同时运营三个公众号、两个小红书号、一个抖音号。他们用AI写大量内容，但最头疼的问题就是，AI记不住每个号的调性。</p>
+
+<p>比如他们有一个号叫「中产消费观察」，风格是克制、理性、带点冷幽默。另一个号叫「搞钱女孩」，风格是热血、直接、短句大量。这两个号的AI如果共用同一个记忆库，出来的内容就四不像。</p>
+
+<p>PilotDeck的WorkSpace天然适合这种场景。我帮他们创建了五个WorkSpace，每个对应一个账号。每个WorkSpace单独配置风格记忆库，里面存了历史高赞文章、风格指南、常用话术、禁忌词。AI在这个WorkSpace里写东西，出来的内容自动匹配对应的调性。</p>
+
+<p>这个方案复杂一点，我花了半天时间。收了<strong>3500块，加每个月800块的维护费。</strong></p>
+
+<p>做内容矩阵的团队对内容一致性的要求特别高，一旦发现PilotDeck能解决这个问题，复购和维护费基本不会断。因为他们每天都在生产内容，每天都在依赖这个系统。如果你对内容创作方向感兴趣，<a href="https://www.aitoollab.top/articles/cases/ai-xiaohongshu-content-side-hustle-202606/" target="_blank">我之前写过一篇用AI做小红书内容的副业文章</a>，跟这个方向可以结合起来做。</p>
+
+<h3>方向三，帮电商团队做智能路由方案</h3>
+
+<p>这个方向利润最大。</p>
+
+<p>一个做跨境电商的朋友，每天用AI生成大量产品文案、广告素材、客服回复。他们之前所有任务都跑GPT-4o，一个月API账单轻松过万。但他们大部分任务其实不需要用GPT-4o，比如批量生成产品关键词、翻译短文案，用便宜模型完全够用。</p>
+
+<p>PilotDeck的智能路由正好解决这个问题。我帮他们配置了一个规则，需要创意的文案任务路由到GPT-4o或Claude Sonnet，批量翻译和关键词生成路由到DeepSeek V3或者GPT-4o-mini，客服回复路由到更便宜的模型。还配了Token成本仪表盘，每个任务类型花了多少钱一目了然。</p>
+
+<p><strong>这个方案我收了5000块。</strong> 他们第一个月的API账单从1.2万降到了4500。省下来的钱足够付我好几年的维护费。我顺便签了<strong>每月1000块的维护合同。</strong></p>
+
+<p>电商团队对成本最敏感，智能路由的价值是让客户看到真金白银的省钱效果。这种方案客户满意度极高，转介绍率也高。如果你对这个方向感兴趣，<a href="https://www.aitoollab.top/articles/seo/mcp-side-hustle-2026/" target="_blank">我之前写过的MCP副业文章</a>里讲了一些工具对接的思路，可以跟智能路由配合使用。</p>
+
+<div class="tip">
+<strong>一个小发现，</strong> 三个方向的共同点，客户不是技术团队，而是AI的重度使用者。他们已经在大量用AI了，但用得很分散很痛苦。PilotDeck帮他们把分散的AI统一起来管理，这种「整合」需求远比「从零搭建」需求更迫切，也更容易出高价。
+</div>
+
+<h2>投入成本和收益分析</h2>
+
+<p>说点实在的。</p>
+
+<p><strong>硬件成本</strong></p>
+<p>个人电脑就能跑测试和演示，零成本。<br>
+生产环境，云服务器2核4G，99块一个月。完全够跑PilotDeck加一个团队的WorkSpace。<br>
+如果客户团队大一点，4核8G的也才199一个月。这个成本完全可以转嫁到客户的方案里。</p>
+
+<p><strong>时间成本</strong></p>
+<p>学习期，从零到熟练部署，大概需要3到5天（每天2小时）。<br>
+单次部署配置，熟练之后一个人独立配完大概2到3小时。<br>
+企业级方案，包含WorkSpace设计和多工具对接，需要半天到一天。</p>
+
+<p><strong>收益预期</strong></p>
+<p>我自己跑的数据。<br>
+第一周，免费帮两家公司搭了，练手加积累案例。<br>
+第二周，正式收费，做了创业公司那单（2000块），内容团队那单（3500+800/月），电商团队那单（5000+1000/月）。<br>
+光第一周正式收费就入账10500块，还有1800块的月度复购。</p>
+<p>如果全职做，一个月稳定接2到3个企业方案，加几个月度维护客户，<strong>月入3万出头是可以做到的。</strong> 而且月度维护费是复利，积累到年底每月的被动收入会很可观。</p>
+
+<div class="tip">
+<strong>我的个人感受，</strong> 这个副业的本质是「AI时代的IT外包」。以前你帮人装电脑修网络，现在你帮人搭AI工作平台。以前修电脑收50块一次，现在搭一个AI工作平台收2000到5000。技术含量没高多少，但单价翻了十倍。
+</div>
+
+<h2>操作步骤</h2>
+
+<p>如果你也想试这个方向，我把具体步骤列一下。说真的，能直接落地执行的。</p>
+
+<p><strong>第一步，自己先装一遍PilotDeck</strong></p>
+<p>去GitHub搜OpenBMB/PilotDeck，克隆下来，按照README跑一遍。需要Node.js和Docker，有基础操作知识就能搞定。先创建两三个WorkSpace玩一玩，把常用的AI工具对接进去。我建议你先用自己的项目跑一遍全流程，亲自感受一下白盒记忆和token追踪到底有多好用。这一步是关键，你只有真的用过了，才知道这东西能在哪些场景帮人省钱。</p>
+
+<p><strong>第二步，整理服务方案和定价</strong></p>
+<p>分几个档次，<br>
+入门版（单WorkSpace+单模型）800元，含部署配置加30分钟教学。<br>
+专业版（多WorkSpace+多工具对接+智能路由）2500元，含部署培训加知识库搭建加1小时培训。<br>
+企业版（团队协作+白盒记忆+成本仪表盘+Always-on）面议，签约月度维护合同。</p>
+<p>定价这事我多说一句。刚开始别报太低，800起步。你提供的不是安装服务，是帮企业把AI统一管理起来的方案。这个价值比装个软件大得多。</p>
+
+<p><strong>第三步，找种子用户</strong></p>
+<p>去你身边的创业公司、内容团队、电商团队里找已经在用AI但用得很痛苦的人。免费帮他们搭，先积累3到5个成功案例。这个过程你会遇到各种真实问题，比你看十遍文档学到的东西都多。我第一周帮两家公司免费搭的时候，发现PilotDeck在对接某些国内模型时有兼容性问题，积累了不少经验。做AI Agent定制服务的时候，<a href="https://www.aitoollab.top/articles/cases/ai-agent-customization-service/" target="_blank">我之前写的那篇文章</a>里也提到过类似的起步方法。</p>
+
+<p><strong>第四步，发内容获客</strong></p>
+<p>在小红书、即刻、知乎这些平台发实操指南。标题往「我把公司的AI都统一到了一个平台管理」这个角度打。内容就是真实的部署过程、前后对比、成本节省数据。写你帮创业者搭了PilotDeck之后，他团队效率提升了多少。这种真实案例比任何广告都有说服力。</p>
+
+<p><strong>第五步，标准化交付流程</strong></p>
+<p>当你做了几单之后，把你常用的WorkSpace模板整理成可复用的配置包。不管客户是谁，基础的部署流程是一样的。差异只在记忆库内容和工具对接上。把核心步骤脚本化之后，单次交付时间能从3小时压缩到1小时。效率上去了，你就可以接更多的单子。</p>
+
+<div class="tip">
+<strong>一个小技巧，</strong> 把你每次搭建的过程录屏保存下来。这些录屏有两个用途，一是给客户的交付物之一（「你看我们是怎么帮你配的」），二是以后做教程素材。我做第一个方案时录的配置视频，后来剪成了5分钟的快速教程，在小红书播放量不错。
+</div>
+
+<h2>这个方向适合什么人</h2>
+
+<p>坦率的讲，不是所有人都适合。</p>
+
+<p>你需要具备的基础能力，<br>
+- 会基本的命令行操作（cd、ls、vim、ssh这些）<br>
+- 了解Docker基本用法（docker pull、docker-compose up）<br>
+- 知道MCP协议是什么（这个花一下午看文档就够）<br>
+- 愿意跟客户沟通，能做售前方案讲解和售后问题排查</p>
+
+<p>如果你满足上面这些条件，那这个方向完全适合你。因为竞争对手真的不多。大部分搞技术的人不愿意做「接客型」的生意，而愿意做服务的人又不懂这些技术。中间这个空档，就是你赚钱的空间。<a href="https://www.aitoollab.top/articles/seo/gstack-one-person-ai-engineering-team/" target="_blank">我写过一篇用GStack做一个人工程团队的文章</a>，里面聊过类似的技术定位问题。</p>
+
+<p>不适合的人，<br>
+- 不想学任何新东西，只想一键赚钱的<br>
+- 觉得收了钱就不用管后续的<br>
+- 不敢跟客户说话，不愿意做方案的</p>
+
+<p>说真的，这个方向不是被动收入。你得干活、得沟通、得解决问题。但每解决一个客户的问题，你就多了一个月度维护费的来源。干得越久，积累越多。</p>
+
+<h2>踩过的坑</h2>
+
+<p>这些是我自己踩过的，你知道了能省很多时间。</p>
+
+<p><strong>坑一，别一上来就追求完美方案</strong></p>
+<p>我第一次给创业公司搭的时候，想一步到位把白盒记忆、智能路由、成本仪表盘全部配齐。结果弄了整整两天，发现客户其实只需要一个能共享项目记忆的工作平台。后来简化方案，只建了三个WorkSpace，配了基础记忆库，半天搞定。先交付一个80分的方案让客户用起来，迭代需求等用了一周之后再聊。</p>
+
+<p><strong>坑二，token成本追踪一开始别太细</strong></p>
+<p>PilotDeck的token追踪功能很强大，但一开始别把每个WorkSpace的预算设太死。我刚开始的时候给每个WorkSpace设了严格的月度token预算，结果客户一个项目做大了超预算，问我说「为什么我的AI不能用了？」，场面一度很尴尬。后来我改成先不设预算上限，跑一个月拿到真实数据之后，再跟客户一起讨论优化方案。</p>
+
+<p><strong>坑三，白盒记忆需要客户培训</strong></p>
+<p>白盒记忆是PilotDeck最核心的功能，但很多非技术客户不理解。第一次给内容团队搭完，他们不知道还能主动去修改AI的记忆。我后来每次做交付都会专门花15分钟讲记忆管理。这个动作让客户的满意度提升了很多，他们发现AI「记错了还能手动改」，会觉得这个东西很神奇。</p>
+
+<p><strong>坑四，服务器选型别选太便宜的</strong></p>
+<p>第一单我图便宜买了个48块的轻量服务器，1核2G，结果跑PilotDeck加上两个WorkSpace就卡得不行。第二天就升级到了99块的2核4G，体验正常了。后来我统一用2核4G起配，成本转嫁到方案报价里。别在这上面省钱，客户体验第一。</p>
+
+<div class="warning">
+<strong>最坑的一个教训，</strong> 做PilotDeck的方案一定要签服务协议。有个客户用了两周之后说想白嫖，自己按照我的配置重装了一份。还好我当初在协议里写了「方案设计费」和「部署实施费」分开，方案设计的费用是不退的，至少没亏。后来我改成更合理的方式，方案设计费收30%，部署验收后收70%，月度维护费月初收。既保障了自己，客户也觉得专业。
+</div>
+
+<h2>最后说几句</h2>
+
+<p>写这篇文章的时候我想了很多。</p>
+
+<p>AI发展太快了。工具在变、模型在变、API在变。但有一样东西没变，就是<strong>企业在把AI用到实际生产中时，缺一个统一的管理平台。</strong> 一个Claude Code写代码，一个Cursor写设计，一个ChatGPT写文案，各是各的，没有统一的记忆、没有统一的成本管理、没有统一的调度。</p>
+
+<p>PilotDeck就是填这个空白的。</p>
+
+<p>清华这个团队做了一件很聪明的事，他们没有从零造轮子，而是把Agent工作流的核心需求拆成了一套可部署的操作系统。WorkSpace、白盒记忆、智能路由、Always-on，每个功能都戳在企业用AI的真实痛点上。</p>
+
+<p>而这个痛，就是你的赚钱机会。</p>
+
+<p>我不是说每个人都能靠这个发财。但我确实看到，现在真正会用PilotDeck去帮企业解决问题的人，一只手数得过来。等这个项目再火一点，知道的人多了，竞争肯定会来。但至少在未来半年到一年，这个窗口期是敞开的。</p>
+
+<p>磨平一些信息差。就这样。</p>
+
+        </div>
+
+        <div class="cta">
+            <h3>🎁 我整理了PilotDeck企业部署的提示词包</h3>
+            <p>里面包含PilotDeck一键部署脚本、WorkSpace配置模板、客户沟通话术、定价策略参考表、MCP协议对接指南。</p>
+            <p>从部署到接单，全套直接拿去用。</p>
+            <a href="https://www.aitoollab.top/prompt-pack/" class="btn" target="_blank">👉 查看提示词包</a>
+        </div>
+
+        <div class="faq">
+            <h2>常见问题</h2>
+
+            <div class="faq-item">
+                <h3>AI Agent工作平台搭建副业适合什么人做？</h3>
+                <p>适合有基本Linux操作经验，了解Docker和命令行操作的普通技术爱好者或初级运维人员。不需要是AI专家，关键会部署和配置开源项目。如果你完全零基础但想试试，可以先从帮人装本地模型入手练手。</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>用PilotDeck帮企业搭建AI Agent平台怎么收费？</h3>
+                <p>常见收费模式，单次部署配置费800到1500元一套（含安装配置加30分钟教学），月度维护费300到800元一个月（含系统升级、数据备份、故障处理），企业级定制方案3000到8000元一套（含WorkSpace设计、模型配置、多工具对接）。建议先从入门版入手，积累案例后再推企业方案。</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>帮企业搭建AI工作平台需要多少投入成本？</h3>
+                <p>最低零投入，用个人电脑即可部署测试，PilotDeck完全开源免费。生产环境需要一台云服务器，最低配2核4G约99元一个月。你只需要花学习时间，熟练后一单部署时间2到3小时，时间成本完全可以覆盖。比起需要GPU算力的AI视频生成等副业方向，这个投入非常低。</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>帮企业搭AI工作平台一个月能赚多少钱？</h3>
+                <p>根据接单频率和定价不同，兼职接单（周末做）月入5000到10000元，全职做月入2到4万元。关键是从单次部署转向月度维护合同，复购率很高。我自己正式接单第一周就收入10500元，还有1800元的月度维护复购。</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>PilotDeck和其他AI Agent平台比有什么优势？</h3>
+                <p>PilotDeck由清华大学THUNLP实验室联合面壁智能、OpenBMB研发，核心优势包括：白盒记忆系统（记忆可追溯、可定位、可修改）、按任务分项追踪token成本、智能模型路由（简单任务自动用便宜模型，复杂任务用旗舰模型）、Always-on后台推进能力、原生支持MCP协议、Web/CLI/IM三端一致。开源免费无需License费用。</p>
+            </div>
+        </div>
+
+        <div class="related">
+            <h3>相关阅读推荐</h3>
+            <ul>
+                <li><a href="https://www.aitoollab.top/articles/cases/ai-agent-customization-service/">用开源AI Agent项目做定制服务：普通人从0到月入1万的完整路径</a></li>
+                <li><a href="https://www.aitoollab.top/articles/seo/multi-agent-side-hustle/">多Agent副业新方向：一个人管10个AI帮你赚钱的操作指南</a></li>
+                <li><a href="https://www.aitoollab.top/articles/cases/sim-ai-agent-workflow/">用开源工具搭建AI Agent工作流：一个被低估的自动化赚钱方向</a></li>
+                <li><a href="https://www.aitoollab.top/articles/seo/mcp-side-hustle-2026/">MCP协议副业：帮企业对接AI工具到数据源的赚钱操作指南</a></li>
+                <li><a href="https://www.aitoollab.top/articles/seo/gstack-one-person-ai-engineering-team/">用GStack做一个人AI工程团队：开源Agent工作流的效率革命</a></li>
+            </ul>
+        </div>
+
+        <div class="footer">
+            <p>© 2026 AiToollab · 用AI帮普通人多赚一点</p>
+        </div>
+    </article>
+</body>
+</html>
