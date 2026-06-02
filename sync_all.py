@@ -222,6 +222,43 @@ def generate_listing(category, articles):
     html += TEMPLATE_TAIL
     return html
 
+def _rebuild_sitemap(repo_dir):
+    """扫描仓库中所有 HTML 文件，重建 sitemap.xml（不遗漏任何页面）"""
+    BASE_URL = "https://www.aitoollab.top"
+    today = datetime.now().strftime("%Y-%m-%d")
+    
+    # 收集所有 index.html 路径
+    html_files = []
+    for root, dirs, files in os.walk(repo_dir):
+        if 'node_modules' in root or '.git' in root:
+            continue
+        if 'index.html' in files:
+            rel = os.path.relpath(os.path.join(root, 'index.html'), repo_dir)
+            html_files.append(rel)
+    html_files.sort()
+    
+    urls = []
+    for f in html_files:
+        url = f"{BASE_URL}/{f.replace('/index.html', '/')}"
+        urls.append(url)
+    
+    lines = ['<?xml version="1.0" encoding="UTF-8"?>',
+             '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
+    for url in urls:
+        lines.append('  <url>')
+        lines.append(f'    <loc>{url}</loc>')
+        lines.append(f'    <lastmod>{today}</lastmod>')
+        lines.append('    <changefreq>weekly</changefreq>')
+        lines.append('    <priority>1.0</priority>')
+        lines.append('  </url>')
+    lines.append('</urlset>')
+    
+    sitemap_path = os.path.join(repo_dir, "sitemap.xml")
+    with open(sitemap_path, 'w', encoding='utf-8') as f:
+        f.write('\n'.join(lines))
+    print(f"   🗺️ sitemap rebuilt: {len(urls)} URLs")
+
+
 def sync_all(commit_msg=None):
     """全量同步：更新所有分类列表 + 首页 + 提交"""
     if not os.path.isdir(REPO_DIR):
@@ -289,7 +326,12 @@ def sync_all(commit_msg=None):
     updated.append(f"homepage: {len(top6)}篇最新")
     updated.append(f"总计: {len(all_articles)}篇")
     
-    # 3. 提交并推送
+    # 3. 重建 sitemap（扫描所有 HTML 文件，确保无遗漏）
+    _rebuild_sitemap(REPO_DIR)
+    sitemap_count = sum(1 for _ in open(os.path.join(REPO_DIR, "sitemap.xml")) if '<loc>' in _)
+    updated.append(f"sitemap: {sitemap_count}条")
+    
+    # 4. 提交并推送
     msg = commit_msg or f"feat: 全量同步 - {today}"
     os.system(f'git add . && git commit -m "{msg}" && git push')
     
