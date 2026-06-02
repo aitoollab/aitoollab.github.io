@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-05-29T16:51:03.122254",
+  "last_updated": "2026-06-03T04:46:05.909490",
   "candidate_pool_total": 475,
-  "analyzed_count": 403,
+  "analyzed_count": 406,
   "top_candidates": [
     {
       "repo": "I don't think AI will make your processes go faster",
@@ -252,6 +252,17 @@
       "note": "enriched — install=True, api=True, pricing=True, docs=False"
     },
     {
+      "repo": "OnlyTerp/UltraCode-Shim",
+      "score": 88,
+      "has_pricing": true,
+      "installable": true,
+      "stars": 187,
+      "note": "enriched — install=True, api=True, pricing=True, docs=True, examples=True",
+      "language": "Python",
+      "description": "Give Claude Code ultracode mode to ANY model you already pay for.",
+      "enriched_at": "2026-06-03T04:46:00.239946"
+    },
+    {
       "repo": "Geekgineer/needle-rs",
       "score": 87,
       "has_pricing": false,
@@ -402,6 +413,28 @@
       "installable": false,
       "stars": 49,
       "note": "enriched — install=False, api=False, pricing=False, docs=False"
+    },
+    {
+      "repo": "ClaudioDrews/memory-os",
+      "score": 80,
+      "has_pricing": true,
+      "installable": true,
+      "stars": 581,
+      "note": "enriched — install=True, api=True, pricing=True, docs=True, examples=False",
+      "language": "Python",
+      "description": "7-layer memory OS for Hermes Agent with Qdrant, structured facts, semantic search.",
+      "enriched_at": "2026-06-03T04:46:00.571772"
+    },
+    {
+      "repo": "ProxyShard/ShardBrowser",
+      "score": 70,
+      "has_pricing": false,
+      "installable": false,
+      "stars": 225,
+      "note": "enriched — install=False, api=True, pricing=False, docs=True, examples=True",
+      "language": "TypeScript",
+      "description": "Free, open-source anti-detect browser launcher for web scraping and multi-accounting.",
+      "enriched_at": "2026-06-03T04:45:59.906091"
     }
   ],
   "high_score_projects": [
@@ -654,6 +687,17 @@
       "note": "enriched — install=True, api=True, pricing=True, docs=False"
     },
     {
+      "repo": "OnlyTerp/UltraCode-Shim",
+      "score": 88,
+      "has_pricing": true,
+      "installable": true,
+      "stars": 187,
+      "note": "enriched — install=True, api=True, pricing=True, docs=True, examples=True",
+      "language": "Python",
+      "description": "Give Claude Code ultracode mode to ANY model you already pay for.",
+      "enriched_at": "2026-06-03T04:46:00.239946"
+    },
+    {
       "repo": "Geekgineer/needle-rs",
       "score": 87,
       "has_pricing": false,
@@ -868,6 +912,17 @@
       "installable": true,
       "stars": 5,
       "note": "enriched — install=True, api=True, pricing=True, docs=False"
+    },
+    {
+      "repo": "ClaudioDrews/memory-os",
+      "score": 80,
+      "has_pricing": true,
+      "installable": true,
+      "stars": 581,
+      "note": "enriched — install=True, api=True, pricing=True, docs=True, examples=False",
+      "language": "Python",
+      "description": "7-layer memory OS for Hermes Agent with Qdrant, structured facts, semantic search.",
+      "enriched_at": "2026-06-03T04:46:00.571772"
     },
     {
       "repo": "zhristophe/Claude-Mythos-AI-Anthropic-App",
@@ -1492,6 +1547,17 @@
       "installable": false,
       "stars": 301,
       "note": "enriched — install=False, api=True, pricing=False, docs=False"
+    },
+    {
+      "repo": "ProxyShard/ShardBrowser",
+      "score": 70,
+      "has_pricing": false,
+      "installable": false,
+      "stars": 225,
+      "note": "enriched — install=False, api=True, pricing=False, docs=True, examples=True",
+      "language": "TypeScript",
+      "description": "Free, open-source anti-detect browser launcher for web scraping and multi-accounting.",
+      "enriched_at": "2026-06-03T04:45:59.906091"
     }
   ],
   "note": "共365个build_candidate已全量分析（2026-05-29 enrich覆盖完成）"
