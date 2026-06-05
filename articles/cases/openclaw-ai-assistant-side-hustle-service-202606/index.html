@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenClaw开源AI助手副业怎么赚钱：靠37万Star的项目帮人搭建私人AI助理月入过万 - AiToollab</title>
+    <meta name="description" content="OpenClaw是一个37万Star的开源AI助手项目，微软刚用它做了自己的Autopilot产品。普通人怎么靠它赚钱？帮小老板搭建私人AI助理，一单收2000-5000元，完整操作步骤、工具链、定价策略全拆解。">
+    <meta name="keywords" content="OpenClaw教程,OpenClaw副业,开源AI助手怎么赚钱,帮人搭建AI助理,私人AI助手服务,AI agent服务定价,OpenClaw部署教程,AI自动化服务接单,Telegram AI机器人搭建,Slack AI助手服务">
+    <link rel="canonical" href="https://www.aitoollab.top/articles/cases/openclaw-ai-assistant-side-hustle-service-202606/">
+    <meta name="robots" content="index, follow">
+    <link rel="alternate" hreflang="zh-CN" href="https://www.aitoollab.top/articles/cases/openclaw-ai-assistant-side-hustle-service-202606/">
+    <link rel="alternate" hreflang="x-default" href="https://www.aitoollab.top/articles/cases/openclaw-ai-assistant-side-hustle-service-202606/">
+    <meta property="og:title" content="OpenClaw开源AI助手副业怎么赚钱：靠37万Star的项目帮人搭建私人AI助理月入过万">
+    <meta property="og:description" content="OpenClaw 37万Star的开源AI助手，微软刚用它做了Autopilot。普通人靠它帮客户搭建私人AI助理，一单2000-5000元，完整实操拆解。">
+    <meta property="og:image" content="https://www.aitoollab.top/articles/cases/openclaw-ai-assistant-side-hustle-service-202606/og-openclaw-ai-assistant.jpg">
+    <meta property="og:url" content="https://www.aitoollab.top/articles/cases/openclaw-ai-assistant-side-hustle-service-202606/">
+    <meta property="og:type" content="article">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="OpenClaw开源AI助手副业怎么赚钱：靠37万Star的项目帮人搭建私人AI助理月入过万">
+    <meta name="twitter:description" content="OpenClaw 37万Star，微软Autopilot底层技术。普通人怎么靠它帮客户搭建私人AI助理赚钱？">
+    <meta name="twitter:image" content="https://www.aitoollab.top/articles/cases/openclaw-ai-assistant-side-hustle-service-202606/og-openclaw-ai-assistant.jpg">
+    <meta property="og:title:en" content="OpenClaw AI Assistant Side Hustle: How to Make Money Building Personal AI Agents (2026 Guide)">
+    <meta property="og:description:en" content="OpenClaw has 377k GitHub stars and Microsoft just built their Autopilot product on it. Learn how to monetize this by building personal AI assistants for small businesses.">
+    <meta name="description:en" content="A complete guide to making money with OpenClaw, the open-source AI assistant with 377k GitHub stars. Build and deploy personal AI assistants for clients as a side hustle.">
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "OpenClaw开源AI助手副业怎么赚钱：靠37万Star的项目帮人搭建私人AI助理月入过万",
+    "description": "OpenClaw是一个37万Star的开源AI助手项目，微软刚用它做了自己的Autopilot产品。普通人怎么靠它赚钱？帮小老板搭建私人AI助理，一单收2000-5000元，完整操作步骤、工具链、定价策略全拆解。",
+    "image": "https://www.aitoollab.top/articles/cases/openclaw-ai-assistant-side-hustle-service-202606/og-openclaw-ai-assistant.jpg",
+    "datePublished": "2026-06-05",
+    "dateModified": "2026-06-05",
+    "author": {
+        "@type": "Organization",
+        "name": "AiToollab"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "AiToollab",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.aitoollab.top/logo.png"
+        }
+    },
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.aitoollab.top/articles/cases/openclaw-ai-assistant-side-hustle-service-202606/"
+    },
+    "articleSection": "AI副业",
+    "keywords": "OpenClaw副业,开源AI助手赚钱,私人AI助理服务,OpenClaw部署,AI agent服务"
+}
+</script>
+</head>
+<body>
+<article>
+
+<p>前两天刷GitHub的时候看到一件事，差点从椅子上站起来。</p>
+
+<p>OpenClaw这个项目，Star数到了37.7万。三十七万七？？？你想想这是什么样的概念，整个GitHub上能到这个级别的开源项目一只手数得过来。更离谱的是微软在6月2号的Build大会上直接宣布，他们新发布的Autopilot产品Microsoft Scout就是基于OpenClaw构建的。</p>
+
+<p>我当时的第一反应不是「哇好厉害」，而是，「这玩意能赚钱」。</p>
+
+<p>为什么？因为一个被微软这种级别的公司选中做底层架构的开源项目，相当于它已经过了技术的信任验证。你拿着它去找客户说「我帮你搭一个跟微软一样的私人AI助手」，这句话突然就有了底气。这跟你自己写个小脚本说「我帮你做个自动化」完全是两个概念。</p>
+
+<p>我花了一周时间研究这个项目，今天把我的发现完整分享一下。</p>
+
+<h2>OpenClaw到底是什么？</h2>
+
+<p>坦率的讲，很多人对OpenClaw的理解可能还停在「又一个开源AI项目」上。我自己一开始也是这么想的，直到我真正把它跑起来。</p>
+
+<p>OpenClaw是一个你部署在自己设备上的私人AI助手。注意两个关键词，「自己的设备」和「私人」。</p>
+
+<p>跟ChatGPT这种云端的聊天机器人不一样，OpenClaw跑在你自己的电脑或者服务器上，数据不出你的控制范围。它做的事情是当一个「中间人」，把你的AI模型和你的各种通讯渠道连起来。什么意思呢？你可以在Telegram、WhatsApp、Slack、Discord、微信、飞书、企业微信，甚至iMessage上跟它说话，它背后调的是Claude或者GPT或者任何你选的模型。</p>
+
+<p>支持26种通讯渠道。你没看错，26种。从主流的Telegram、微信、Slack到比较小众的IRC、Matrix、Nostr都有。那结果会怎样呢？你可以帮一个老板搭一个统一的AI助理，他在Telegram上问一句「今天有几个会」，AI自动去他的日历查，在Telegram上回复他。他在微信上问「上周的客户数据怎么样」，AI自动去数据库拉，在微信上给他发报表。</p>
+
+<p>而且它是「always-on」的，就是一直在线，随时响应。你不需要每次都打开一个网页去跟它聊，它就在你平时的聊天窗口里待着。</p>
+
+<p>回到微软这件事。微软选OpenClaw做Scout的底层，看中的是它的多渠道能力和本地化架构。Scout的定位是「Autopilot agent」，就是不需要你主动问、它自己会在后台帮你干活的AI助手。比如自动帮你协调会议时间、检查即将到期的任务、识别工作中的风险。这些能力OpenClaw本身就有，微软加了企业级的权限控制和安全策略。</p>
+
+<h2>为什么这事有赚钱的机会？</h2>
+
+<p>我跟你说一个真实的观察。这半年我接触过不少做小生意的老板，开餐饮店的、做外贸的、做跨境电商的、开培训机构的。他们有一个共同痛点，就是每天要处理大量的信息，但雇不起一个全职助理。</p>
+
+<p>你想想看，一个老板每天要处理多少事。微信群里几十个客户消息要回复、供应商报价要整理、订单状态要查、库存要盯、财务报表要看、会议要安排。这些事每一件都不难，但加在一起每天能吃掉三四个小时。</p>
+
+<p>如果雇一个助理，一线城市最少5000块一个月，三四线城市也要3000。但很多小老板的收入波动大，不敢长期雇人。他们需要的是一个便宜的、能干杂活的、随时在线的助手。</p>
+
+<p>以前的解决方案是什么？是自己扛着，或者让老婆帮忙。现在呢？AI助手可以替掉很大一部分工作。但问题是，这些老板不懂技术，他们不知道怎么搭一个AI助手，也不知道该用什么模型，更不知道怎么把AI接到微信或者Telegram里。</p>
+
+<p>这就是你的机会。</p>
+
+<p>你帮他们搭建一个基于OpenClaw的私人AI助手，接上他们常用的通讯渠道，配置好AI模型，写好几个常用的工作流。一次性收费2000到5000块，每个月再收500到1000的维护费。对老板来说，一个月花几百到一千块就拥有一个24小时在线的AI助理，比雇人便宜太多了。对你来说，搭一套OpenClaw其实就半天到一天的事，熟练以后更快。</p>
+
+<h2>OpenClaw的核心能力拆解</h2>
+
+<p>在讲怎么赚钱之前，我得先把OpenClaw能干什么说清楚。不然你跟客户沟通的时候不知道怎么介绍。</p>
+
+<p><strong>多渠道统一收发消息。</strong> 这是最核心的功能。一个OpenClaw实例可以同时连接微信、Telegram、WhatsApp、Slack等26种渠道。老板在哪个渠道问话，AI就在哪个渠道回复。不用来回切应用。</p>
+
+<p><strong>工具调用和自动化。</strong> OpenClaw不是只做聊天，它有完整的工具系统，可以调浏览器去查信息、读写文件、执行脚本、操作数据库。你给它写好规则，它可以自动完成一整套工作流。比如「每天早上9点从ERP系统拉库存数据，整理成表格发到老板的微信群里」。</p>
+
+<p><strong>定时任务和Webhook。</strong> 内置cron job功能，可以设定定时任务。也支持Webhook，可以跟外部系统对接。这个能力让OpenClaw从一个「聊天机器人」升级成了一个「自动化工作引擎」。</p>
+
+<p><strong>本地部署，数据不出设备。</strong> 这是很多企业客户特别在意的点。数据跑在客户自己的服务器上，不经过第三方。对于做外贸、做跨境电商的老板来说，这个安全性很重要。</p>
+
+<p><strong>语音交互。</strong> 支持语音唤醒和语音对话。在macOS和iOS上有Voice Wake功能，Android上有连续语音模式。虽然这个功能对大多数小老板来说不是刚需，但演示的时候拿出来效果拉满。</p>
+
+<p>如果你之前了解过<a href="/articles/seo/mcp-side-hustle-2026/">MCP（Model Context Protocol）</a>相关的服务和副业玩法，OpenClaw其实也支持MCP Server，可以接入各种外部工具和数据源。也就是说你的服务能力上限很高，不局限于内置功能。</p>
+
+<h2>完整操作流程，从接到单到交付</h2>
+
+<p>这是我总结的标准化流程，我自己也在按这个走，</p>
+
+<p><strong>第一步，找客户和聊需求。</strong> 目标客户画像很清楚，就是有信息处理需求但雇不起全职助理的小老板。怎么找？最直接的方法就是在你的朋友圈里筛。做外贸的、做电商的、做培训的、开多门店的，这类人信息密度最高。你也可以去一些小老板聚集的社群、论坛、商会活动里找。聊的时候重点问三个事，你现在每天花时间最多在处理什么信息？你最常用的沟通工具是什么（微信？Telegram？WhatsApp）？你有没有试过用AI帮自己干活？</p>
+
+<p><strong>第二步，确定方案和报价。</strong> 根据客户需求确定要接入哪些渠道、要配置哪些工作流、要调哪些数据源。我目前的定价逻辑是这样，基础搭建费2000-3000块（部署OpenClaw + 接入1-2个通讯渠道 + 配置2-3个基础工作流），如果需要接入更多渠道或者更复杂的工作流，加1000-2000。每月维护费500-1000块。说实话这个定价还是保守的，如果你做得好口碑起来了，5000甚至更高的单子完全可以接。</p>
+
+<p><strong>第三步，部署OpenClaw。</strong> OpenClaw的安装其实不复杂。推荐客户有一台Linux服务器或者一台始终开着的电脑。安装命令就几行，`npm install -g openclaw@latest`，然后`openclaw onboard --install-daemon`跟着引导走就行。它支持Node 24和Node 22.19+，用npm、pnpm或者bun都行。你也可以参考<a href="/articles/cases/local-business-ai-agent/">本地商家AI Agent搭建</a>那篇文章里的部署思路，思路是一模一样的，只是换了底层工具。</p>
+
+<p><strong>第四步，接入通讯渠道。</strong> 这是最关键也最能体现你价值的一步。每个渠道的接入方式不同，Telegram需要创建一个Bot Token，微信可以用企业微信API或者WebChat方式接入，Slack需要创建一个App。OpenClaw的文档写得很清楚，照着走就行。但这些步骤对不懂技术的老板来说就是天书，所以这一步就是你的核心竞争力。</p>
+
+<p><strong>第五步，配置AI模型和工作流。</strong> OpenClaw本身不带模型，需要你自己接入。推荐用Claude或者GPT-4o作为主力模型，便宜且效果好。你可以同时配置多个模型做轮换，这样即使一个API挂了也不会断服务。工作流配置包括设定常用指令模板、定时任务、数据查询规则等。比如给做外贸的老板配一个「查汇率」的指令，给做电商的老板配一个「查库存」的指令。</p>
+
+<p><strong>第六步，测试交付和维护。</strong> 部署完先跑两三天观察稳定性。确认没有问题后正式交付给客户，同时教他们怎么用。维护主要包括监控运行状态、偶尔调整工作流、升级OpenClaw版本。这块工作量不大，一周可能就花一两个小时，但月费就是纯利润了。</p>
+
+<h2>三个真实的使用场景</h2>
+
+<p>说了这么多理论，给大家看看具体能做什么，</p>
+
+<p><strong>场景一，外贸老板的Telegram客服助理。</strong> 这个是我最早做的一个场景。客户是做跨境电商的，每天在Telegram上有几十个海外客户的询价消息。时差关系，很多消息他半夜才看到，回复慢了客户就跑了。我帮他搭了OpenClaw接Telegram，配置了产品目录和报价表的数据库查询功能。客户问某个产品的价格和库存，AI自动回复。复杂的问题AI先回复一个标准答案，然后通知老板人工跟进。这套方案搭建费收了3500块，月费800。老板跟我说，「以前凌晨两三点还要爬起来回消息，现在AI先顶着，我只用管那些需要人出面的。」</p>
+
+<p><strong>场景二，多门店老板的管理调度助手。</strong> 这个客户开了四家奶茶店，每天要在四个微信群里看各家店的日报，催库存、查排班、处理突发情况。我帮他搭了OpenClaw接企业微信，每天定时从各门店的收银系统拉数据，整理成一个汇总表发到他的企业微信里。如果有异常数据比如某店销量突然下降超过30%，AI会主动发一条提醒。搭建费4500块，月费1000。后来他又让我加了供应商管理的功能，又加了1500。</p>
+
+<p><strong>场景三，自由职业者的日程和信息管家。</strong> 这个客户不是传统意义上的「老板」，是一个做独立设计的自由职业者。她的问题不是管理团队，而是信息碎片化。客户需求在微信上、项目反馈在邮件里、素材在网盘里、账单在银行App里，她每天要在十几个App之间来回切。我帮她搭了OpenClaw统一接入微信、邮箱和飞书，配了一个「每日摘要」的定时任务，每天早上8点自动汇总昨天的所有待办、新消息和截止日期，发到她的Telegram上。搭建费2500块，月费600。她说，「每天省出来的那半个小时，是我一天中最值的时间。」</p>
+
+<p>你注意到没有，这三个场景的共同点是「信息分散在多个渠道，需要统一处理」。这就是OpenClaw最擅长的。如果你之前看过我写的<a href="/articles/cases/ai-agent-customization-service/">AI助手定制服务</a>那篇文章，会发现思路完全一致，只是工具从通用的方案换成了OpenClaw这个更专业的平台。</p>
+
+<h2>成本和利润算一笔账</h2>
+
+<p>说到赚钱，大家最关心的肯定是成本和利润。</p>
+
+<p><strong>你的成本。</strong> 部署OpenClaw本身是免费的，开源MIT协议。AI模型API费用，取决于使用频率。一个典型的私人助手场景，每天处理几十条消息，一天的API费用大概在5-15块钱。一个月就是150-450块。这是服务器成本。如果你用客户自己的服务器，这项成本直接转嫁给他。</p>
+
+<p><strong>你的收入。</strong> 按我现在的定价，一单搭建费2000-4500，月费500-1000。如果你一个月接三单新客户，同时维护五六个老客户，月收入大概在8000-12000之间。全职做的话翻倍不夸张。</p>
+
+<p><strong>时间投入。</strong> 第一单肯定慢，可能要两三天。但搭过一次之后，第二单、第三单会越来越快，因为你有了模板和经验。熟练以后一单从部署到交付，一天到一天半就够。维护的话，一周每个客户大概一到两个小时。如果你维护6个客户，一周也就6-12小时的工作量。</p>
+
+<p>我觉得这笔账算出来还挺舒服的。门槛不高，利润率不低，而且因为OpenClaw是开源的，技术栈稳定，不用担心产品突然消失或者收费变得离谱。</p>
+
+<h2>踩过的坑和怎么避免</h2>
+
+<p>不是说这事儿没有坑，说几个我自己踩过的，</p>
+
+<p><strong>坑一，不要低估客户环境的复杂度。</strong> 有个客户的企业微信是旧版本，API接口跟文档写的不一样，我折腾了大半天才搞明白。所以接单之前一定要先确认客户的软件版本和系统环境。最好能先拿一个测试账号在客户的环境里跑通再签合同。</p>
+
+<p><strong>坑二，通讯渠道的接入限制。</strong> 微信个人号的接入是最麻烦的。OpenClaw支持企业微信API和WebChat方式，但个人微信的接入方案稳定性不太好，有时候会被限制。我现在的做法是优先推企业微信或者Telegram，如果客户坚持要用个人微信，就提前告知稳定性风险。</p>
+
+<p><strong>坑三，AI回复的准确度管理。</strong> OpenClaw本身不控制AI模型的回复质量，这取决于你选的模型和prompt配置。一定要给客户演示的时候用真实场景测试，不要只演示几个预设好的问题。如果AI在某些场景下回复不准确，要么调prompt，要么换成更强的模型。我跟你说实话，早期我犯过一个错，给客户演示的时候用了一个精心准备的问题列表，AI回答完美无缺。结果客户拿回去之后问了一个我没预料到的问题，AI一本正经地胡说八道。搞得我很被动。从那以后我每次交付前都会让客户自己试用一天，有问题当面调。</p>
+
+<p><strong>坑四，维护边界要提前说清楚。</strong> 月费维护包括什么、不包括什么，一定要写进合同里。我之前有个客户要求我「把AI调得更聪明一点」，但他说的更聪明其实是「教AI学会我们行业的所有术语」。这不是维护，这是新需求。后来我在合同里明确了，月费维护包括bug修复、版本升级、小调整，新功能的开发和训练另计。</p>
+
+<h2>跟其他AI副业方向的对比</h2>
+
+<p>如果你还在纠结要不要做这个方向，我帮你横向对比一下，</p>
+
+<p>OpenClaw搭建服务和<a href="/articles/cases/ai-desktop-automation-service-side-hustle-202606/">AI桌面自动化服务</a>的门槛差不多，都是低代码、重部署。区别在于桌面自动化解决的是「重复操作」的问题，OpenClaw解决的是「信息分散」的问题。两者面向的客户有重叠但不完全一样。我的建议是两个都学，根据客户需求推荐方案。</p>
+
+<p>跟<a href="/articles/seo/multi-agent-side-hustle/">多Agent服务</a>相比，OpenClaw更偏「个人助理」，多Agent更偏「业务流程自动化」。两者其实是互补的，OpenClaw可以作为多Agent系统的一个节点接入。</p>
+
+<p>跟直接做<a href="/articles/cases/ai-data-analysis-side-hustle-202605/">AI数据分析报告</a>服务相比，OpenClaw服务的复购率更高，因为有持续的维护费。数据分析更像一次性项目，做完就结束了。</p>
+
+<h2>如果你也想试试</h2>
+
+<p>如果你想动手做这个方向，我的建议是从你自己装一个OpenClaw开始。不要上来就找客户，先自己用两天，把26个渠道的接入方式都试一遍，把几个常用工作流都配好。只有你自己觉得好用了，你才能有信心地卖给别人。</p>
+
+<p>装好之后找一个朋友当小白鼠，免费帮他在Telegram上搭一个。在这个过程中你会发现很多你没预见到的问题，渠道接入的坑、prompt调优的技巧、工作流配置的经验。这些全是日后跟客户沟通的底气。</p>
+
+<p>我觉得OpenClaw这件事最让我兴奋的点，不是它能赚多少钱，而是它代表了一个趋势，就是AI正在从「你去找它用」变成「它来找你用」。以前你要打开ChatGPT的网页，打字问问题。以后AI就待在你的微信、Telegram、Slack里，随时随地，像你的私人助理一样工作。这个转变正在发生，而且微软这种级别的公司已经all in了。而普通人能做的，就是在趋势的早期学会搭这些东西，然后帮那些还不知道怎么做的人搭。</p>
+
+<p>磨平一些信息差。</p>
+
+</article>
+
+<div class="faq-section">
+<h2>常见问题</h2>
+
+<div itemscope="" itemprop="mainEntity" itemtype="https://schema.org/Question">
+<h3 itemprop="name">OpenClaw搭建需要什么技术基础？不懂编程能做吗？</h3>
+<div itemscope="" itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+<div itemprop="text">
+<p>需要一点基础的技术操作能力，比如能在终端里运行命令、能理解简单的配置文件。不需要会编程语言。OpenClaw的安装流程是`npm install -g openclaw@latest`然后`openclaw onboard`，跟着引导走就能完成大部分配置。通讯渠道的接入需要你能在对应的平台创建Bot或者获取API Key，这些操作都有详细的官方文档。如果你能自己折腾过服务器或者玩过Docker，那完全没问题。如果你连终端都没打开过，可能需要先花一两天熟悉一下基础操作。</p>
+</div>
+</div>
+</div>
+
+<div itemscope="" itemprop="mainEntity" itemtype="https://schema.org/Question">
+<h3 itemprop="name">OpenClaw搭建AI助理一单能赚多少钱？月收入大概多少？</h3>
+<div itemscope="" itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+<div itemprop="text">
+<p>搭建费根据复杂度在2000-5000元之间，每月维护费500-1000元。如果每月新增2-3个客户，同时维护5-6个老客户，月收入在8000-15000元之间。成本主要是AI模型的API费用，一个典型的私人助手场景每月约150-450元。如果用客户自己的服务器部署，这项成本由客户承担。</p>
+</div>
+</div>
+</div>
+
+<div itemscope="" itemprop="mainEntity" itemtype="https://schema.org/Question">
+<h3 itemprop="name">OpenClaw和ChatGPT有什么区别？为什么要用它而不是直接用ChatGPT？</h3>
+<div itemscope="" itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+<div itemprop="text">
+<p>ChatGPT是一个云端聊天产品，你打开网页跟它对话。OpenClaw是一个开源框架，你可以把它部署在自己的设备上，接入各种AI模型，连接各种通讯渠道。核心区别有三个，一是数据控制权在你手上，二是它可以接入26种通讯渠道直接在微信/Telegram里用，三是它支持自动化工作流和定时任务。简单说ChatGPT是「你去找AI」，OpenClaw是「AI来找你」。</p>
+</div>
+</div>
+</div>
+
+<div itemscope="" itemprop="mainEntity" itemtype="https://schema.org/Question">
+<h3 itemprop="name">OpenClaw能接入微信吗？个人微信和企业微信有什么区别？</h3>
+<div itemscope="" itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+<div itemprop="text">
+<p>OpenClaw支持企业微信API接入（稳定可靠）和WebChat方式，但对个人微信的支持方案稳定性较差，有被限制的风险。建议优先推企业微信方案，稳定性更好且合规风险更低。如果客户坚持用个人微信，需要提前告知风险。Telegram和Slack的接入最简单，稳定性也最好。</p>
+</div>
+</div>
+</div>
+
+<div itemscope="" itemprop="mainEntity" itemtype="https://schema.org/Question">
+<h3 itemprop="name">微软Scout和OpenClaw是什么关系？微软用了OpenClaw对普通用户有什么好处？</h3>
+<div itemscope="" itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+<div itemprop="text">
+<p>微软在2026年6月发布的Microsoft Scout是基于OpenClaw构建的。Scout是微软企业版的「Autopilot agent」，集成了Microsoft 365的权限控制和安全策略。对普通用户的好处是，微软选中OpenClaw说明这个项目的技术方向得到了顶级公司的验证，长期来看项目不会跑路，生态会越来越完善。另外微软也在把一些企业级的安全特性回馈给OpenClaw开源社区。</p>
+</div>
+</div>
+</div>
+</div>
+
+<div class="cta-card">
+<p><strong>我整理了一份OpenClaw AI助手搭建服务的完整工具清单和接单模板</strong>，内容包括，OpenClaw快速部署脚本、各通讯渠道接入配置模板、常用工作流prompt模板、接单话术和沟通模板、合同模板（含维护边界条款）。已经有不少朋友靠这套东西入行了。如果你也想试试，可以看看这个提示词包，希望能帮你少走一些弯路。</p>
+<p><a href="/prompt-pack/">点击查看OpenClaw AI助手搭建提示词包 →</a></p>
+</div>
+
+<div class="related-articles">
+<h3>你可能感兴趣的文章</h3>
+<ul>
+<li><a href="/articles/cases/ai-agent-customization-service/">AI助手定制服务副业怎么做：帮小企业搭建自动化工作流，一单收2000-5000</a></li>
+<li><a href="/articles/cases/ai-desktop-automation-service-side-hustle-202606/">AI桌面自动化服务副业怎么做：帮小公司做RPA月入过万的真实拆解</a></li>
+<li><a href="/articles/seo/mcp-side-hustle-2026/">MCP协议副业机会：AI Agent工具链服务怎么做</a></li>
+</ul>
+</div>
+
+<style>
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans SC', sans-serif;
+    line-height: 1.8;
+    color: #333;
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 20px;
+    font-size: 16px;
+}
+article p {
+    margin: 1em 0;
+    text-align: justify;
+}
+article h2 {
+    font-size: 1.3em;
+    margin: 1.8em 0 0.8em;
+    font-weight: 600;
+    color: #222;
+}
+article h3 {
+    font-size: 1.1em;
+    margin: 1.4em 0 0.6em;
+    font-weight: 600;
+    color: #333;
+}
+article strong {
+    font-weight: 600;
+    color: #111;
+}
+.faq-section {
+    margin: 3em 0;
+    padding: 1.5em;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+.faq-section h2 {
+    font-size: 1.3em;
+    margin-bottom: 1em;
+    color: #222;
+}
+.faq-section h3 {
+    font-size: 1em;
+    font-weight: 600;
+    margin: 1.2em 0 0.5em;
+    color: #333;
+}
+.cta-card {
+    margin: 2em 0;
+    padding: 1.5em;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-radius: 8px;
+    text-align: center;
+}
+.cta-card a {
+    color: #fff;
+    text-decoration: underline;
+    font-weight: 600;
+}
+.cta-card p {
+    margin: 0.5em 0;
+}
+.related-articles {
+    margin: 2em 0;
+    padding: 1.5em;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+}
+.related-articles ul {
+    padding-left: 1.2em;
+}
+.related-articles li {
+    margin: 0.5em 0;
+}
+.related-articles a {
+    color: #667eea;
+    text-decoration: none;
+}
+.related-articles a:hover {
+    text-decoration: underline;
+}
+</style>
+
+</body>
+</html>
