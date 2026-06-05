@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-06-03T04:46:05.909490",
-  "candidate_pool_total": 475,
-  "analyzed_count": 406,
+  "last_updated": "2026-06-06T00:00:00.000000",
+  "candidate_pool_total": 478,
+  "analyzed_count": 409,
   "top_candidates": [
     {
       "repo": "I don't think AI will make your processes go faster",
@@ -1560,5 +1560,43 @@
       "enriched_at": "2026-06-03T04:45:59.906091"
     }
   ],
-  "note": "共365个build_candidate已全量分析（2026-05-29 enrich覆盖完成）"
+  "note": "共365个build_candidate已全量分析（2026-05-29 enrich覆盖完成）",
+  "latest_enrichment": [
+    {
+      "repo": "CWS6206/ai-coding-starter-kit",
+      "score": 60,
+      "has_pricing": false,
+      "installable": true,
+      "stars": 222,
+      "language": null,
+      "description": "Kuratierte Agent Skills für Claude Code, Codex, Cursor und Gemini CLI",
+      "note": "enriched — 德语聚合/策划项目，非原创工具。install=True, api=False, pricing=False, docs=True, examples=True",
+      "verdict": "参考价值有限，属于聚合内容，不适合直接复用",
+      "enriched_at": "2026-06-06T00:00:00"
+    },
+    {
+      "repo": "cellebrite-labs/ghidra-rpc",
+      "score": 85,
+      "has_pricing": false,
+      "installable": true,
+      "stars": 121,
+      "language": "Python",
+      "description": "A Ghidra agentic reverse engineering skill — LLM autonomous RE via Unix Socket",
+      "note": "enriched — install=True, api=True, pricing=False, docs=True, examples=True. MIT license. Cellebrite Labs出品，质量高，含workflow guides",
+      "verdict": "高质量技术项目，逆向工程垂直场景，值得收录",
+      "enriched_at": "2026-06-06T00:00:00"
+    },
+    {
+      "repo": "best-spicy-ai/ai-naughty-tools",
+      "score": 15,
+      "has_pricing": false,
+      "installable": false,
+      "stars": 105,
+      "language": null,
+      "description": "NSFW AI image/video tool aggregator with affiliate links",
+      "note": "enriched — install=False, api=False, pricing=False, docs=False, examples=False. README仅一行'best tools'，本质SEO/联盟链接站",
+      "verdict": "垃圾项目，排除",
+      "enriched_at": "2026-06-06T00:00:00"
+    }
+  ]
 }
