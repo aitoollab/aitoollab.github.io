@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- URL标准化 -->
+    <link rel="canonical" href="https://www.aitoollab.top/articles/cases/ai-code-review-service-side-hustle-20260607/">
+    <link rel="alternate" hreflang="x-default" href="https://www.aitoollab.top/articles/cases/ai-code-review-service-side-hustle-20260607/">
+    <link rel="alternate" hreflang="zh-CN" href="https://www.aitoollab.top/articles/cases/ai-code-review-service-side-hustle-20260607/">
+
+    <!-- SEO基础 -->
+    <title>用AI帮人审代码赚钱，阿里开源Open Code Review拆解，一单能收多少 - AiToollab</title>
+    <meta name="description" content="阿里巴巴内部用了两年的AI代码审查工具Open Code Review正式开源了，帮几万工程师找出了几百万个代码缺陷。我拆解了三种用AI帮人做代码审查赚钱的玩法，从接私活到给中小公司提供code review服务，投入成本、收费标准和操作步骤全在这了。">
+    <meta name="keywords" content="AI代码审查赚钱,AI code review副业,Open Code Review,用AI帮人审代码,代码审查外包服务,AI code review service,AI code review freelancer,帮人做code review赚钱,阿里开源代码审查,代码审查接单,AI编程服务副业">
+    <meta name="author" content="AiToollab">
+    <meta name="robots" content="index, follow">
+    <meta name="ai-content" content="allowed">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="用AI帮人审代码赚钱，阿里开源Open Code Review拆解">
+    <meta property="og:description" content="阿里内部用了两年的AI代码审查工具开源了，三种用AI帮人做code review赚钱的玩法完整拆解。">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.aitoollab.top/articles/cases/ai-code-review-service-side-hustle-20260607/">
+    <meta property="og:image" content="https://www.aitoollab.top/articles/cases/ai-code-review-service-side-hustle-20260607/og-ai-code-review-service-side-hustle-20260607.jpg">
+    <meta property="og:site_name" content="AiToollab">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="article:published_time" content="2026-06-07T10:00:00+08:00">
+    <meta property="article:modified_time" content="2026-06-07T10:00:00+08:00">
+    <meta property="article:author" content="AiToollab">
+    <meta property="article:tag" content="AI代码审查">
+    <meta property="article:tag" content="Open Code Review">
+    <meta property="article:tag" content="AI副业">
+    <meta property="article:section" content="AI副业赚钱案例">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@AiToollab">
+    <meta name="twitter:title" content="用AI帮人审代码赚钱，阿里开源Open Code Review拆解">
+    <meta name="twitter:description" content="阿里内部用了两年的AI代码审查工具开源了，三种用AI帮人做code review赚钱的玩法完整拆解。">
+    <meta name="twitter:image" content="https://www.aitoollab.top/articles/cases/ai-code-review-service-side-hustle-20260607/og-ai-code-review-service-side-hustle-20260607.jpg">
+
+    <!-- Dublin Core -->
+    <meta name="DC.title" content="用AI帮人审代码赚钱，阿里开源Open Code Review拆解">
+    <meta name="DC.creator" content="AiToollab">
+    <meta name="DC.subject" content="AI代码审查赚钱,Open Code Review,AI code review副业">
+    <meta name="DC.description" content="阿里内部AI代码审查工具开源，三种用AI帮人做code review赚钱的玩法完整拆解。">
+
+    <!-- 结构化数据 -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "用AI帮人审代码赚钱，阿里开源Open Code Review拆解，一单能收多少",
+        "description": "阿里巴巴内部用了两年的AI代码审查工具Open Code Review正式开源了，帮几万工程师找出了几百万个代码缺陷。我拆解了三种用AI帮人做代码审查赚钱的玩法，从接私活到给中小公司提供code review服务，投入成本、收费标准和操作步骤全在这了。",
+        "author": {
+            "@type": "Person",
+            "name": "数字生命卡兹克"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "AiToollab",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://www.aitoollab.top/logo.png"
+            }
+        },
+        "datePublished": "2026-06-07T10:00:00+08:00",
+        "dateModified": "2026-06-07T10:00:00+08:00",
+        "image": "https://www.aitoollab.top/articles/cases/ai-code-review-service-side-hustle-20260607/og-ai-code-review-service-side-hustle-20260607.jpg",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://www.aitoollab.top/articles/cases/ai-code-review-service-side-hustle-20260607/"
+        }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Open Code Review是什么？跟普通的AI代码审查有什么区别？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Open Code Review是阿里巴巴集团内部使用了两年多的AI代码审查工具，最近正式开源。它跟普通的ChatGPT审代码最大的区别是，它不是纯语言模型驱动的，而是「确定性工程+AI agent」的混合架构。它会自动解析Git diff，精确选择需要审查的文件，智能打包关联文件，然后用AI agent做深层审查。在阿里内部已经帮几万名工程师发现了数百万个代码缺陷。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "不会写代码的人能用AI做代码审查服务赚钱吗？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "需要有一定的编程基础，但不需要是高级工程师。你至少要能看懂代码的基本逻辑，理解AI给出的审查意见是否有道理，然后把技术性的反馈翻译成客户能理解的语言。如果你完全不懂代码，这个方向不适合你。但如果你写过一两年代码，或者正在学编程，这个方向完全可以跑通。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "用AI帮人做代码审查怎么收费？一单能赚多少钱？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "小项目代码审查，一次PR收费100到300元。中型项目的定期code review服务，按月收费1500到3000元。企业级代码质量咨询，单次5000到10000元。具体看项目规模、代码量和审查深度。Uber给每个工程师每个AI编码工具设定了每月1500美元的预算上限，说明大公司对AI辅助开发工具的付费意愿是很强的。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "做AI代码审查服务需要什么工具和成本？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Open Code Review是免费开源的，npm安装就行。你需要一个LLM的API接入，推荐用Claude API或者DeepSeek API。Claude API每月大概100到500元人民币的用量（看使用频率），DeepSeek更便宜。总成本每月200到600元。一台能跑Node.js的电脑就够了。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "去哪里找需要代码审查服务的客户？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "最直接的是V2EX、掘金、GitHub上找独立开发者和开源项目。很多独立开发者没有code review的习惯，但他们的项目质量很需要这一步。其次是技术创业公司，人少没有专门做code review的流程，可以提供月度服务。也可以在闲鱼或者淘宝挂「AI代码审查」服务链接。Fiverr和Upwork上也有不少需求。"
+                }
+            }
+        ]
+    }
+    </script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans SC", sans-serif; background: #fafafa; color: #333; line-height: 1.8; }
+        article { max-width: 720px; margin: 0 auto; padding: 40px 20px; background: #fff; min-height: 100vh; }
+        h1 { font-size: 1.5em; line-height: 1.5; margin-bottom: 16px; font-weight: 700; color: #111; letter-spacing: -0.02em; }
+        .meta { font-size: 0.85em; color: #888; margin-bottom: 32px; }
+        .meta time, .meta span { margin-right: 8px; }
+        .content p { margin-bottom: 16px; font-size: 1em; }
+        .content h2 { font-size: 1.25em; margin-top: 40px; margin-bottom: 16px; font-weight: 600; color: #111; }
+        .content h3 { font-size: 1.1em; margin-top: 28px; margin-bottom: 12px; font-weight: 600; color: #222; }
+        .content a { color: #0066cc; text-decoration: none; }
+        .content a:hover { text-decoration: underline; }
+        .content strong { font-weight: 600; }
+        .content ul, .content ol { margin: 12px 0 16px 20px; }
+        .content li { margin-bottom: 8px; }
+        .content blockquote { border-left: 3px solid #ddd; padding-left: 16px; margin: 16px 0; color: #666; }
+        .content .tip { background: #f0f7ff; border-left: 3px solid #0066cc; padding: 12px 16px; margin: 20px 0; border-radius: 0 6px 6px 0; font-size: 0.95em; }
+        .content .warning { background: #fff8e6; border-left: 3px solid #f0a030; padding: 12px 16px; margin: 20px 0; border-radius: 0 6px 6px 0; font-size: 0.95em; }
+        .related { margin-top: 48px; padding-top: 24px; border-top: 1px solid #eee; }
+        .related h3 { font-size: 1em; margin-bottom: 12px; color: #888; }
+        .related ul { list-style: none; padding: 0; }
+        .related li { margin-bottom: 8px; }
+        .related a { color: #0066cc; font-size: 0.95em; }
+        .faq { margin-top: 48px; padding-top: 24px; border-top: 1px solid #eee; }
+        .faq h2 { margin-top: 0; }
+        .faq details { margin-bottom: 12px; border: 1px solid #eee; border-radius: 6px; }
+        .faq summary { padding: 12px 16px; cursor: pointer; font-weight: 600; font-size: 0.95em; }
+        .faq .answer { padding: 0 16px 12px; font-size: 0.95em; color: #555; }
+        .cta { background: linear-gradient(135deg, #f0f7ff, #e8f0fe); padding: 24px; border-radius: 8px; margin: 32px 0; text-align: center; }
+        .cta p { margin-bottom: 12px; color: #333; }
+        .cta a { display: inline-block; padding: 10px 24px; background: #0066cc; color: #fff; text-decoration: none; border-radius: 6px; font-weight: 600; }
+        .cta a:hover { background: #0055aa; }
+        .footer-cta { margin-top: 40px; padding: 20px; background: #f8f8f8; border-radius: 8px; text-align: center; }
+        .footer-cta p { margin-bottom: 12px; font-size: 0.95em; color: #555; }
+        .footer-cta a { display: inline-block; padding: 8px 20px; background: #0066cc; color: #fff; text-decoration: none; border-radius: 6px; font-size: 0.95em; }
+    </style>
+</head>
+<body>
+    <article>
+        <h1>用AI帮人审代码赚钱，阿里开源Open Code Review拆解，一单能收多少</h1>
+
+        <div class="meta">
+            <time datetime="2026-06-07">2026年6月7日</time> · <span>AiToollab</span> · <span>AI副业赚钱案例</span>
+        </div>
+
+        <div class="content">
+
+<p>前两天在HN上看到一个272星的帖子，阿里巴巴把内部用了两年多的AI代码审查工具开源了。</p>
+
+<p>说真的，一开始我没当回事。大厂开源工具嘛，一天好几个，看都看不过来。</p>
+
+<p>但往下翻了几行，看到一组数据给我整愣住了。这个工具在阿里内部服务了几万名开发者，帮他们找出了<strong>几百万个</strong>代码缺陷。几百万。不是几千，不是几万，是几百万个bug。</p>
+
+<p>然后我又刷到另一条新闻，Uber给每个工程师每个AI编码工具设了每月1500美元的预算上限。为啥要设上限？因为他们2026年的AI预算四个月就用完了。。。</p>
+
+<p>你把这两条信息放在一起看，会发现一个很现实的事情，<strong>AI辅助开发工具的市场需求是巨大的，而且是真金白银在烧的那种。</strong></p>
+
+<p>那问题来了。大厂在烧钱买AI开发工具，那些请不起全职架构师的中小公司和独立开发者呢？他们的代码谁来看？</p>
+
+<p>这就是赚钱的缝隙。</p>
+
+<h2>Open Code Review到底干了什么</h2>
+
+<p>先搞清楚这个工具是什么，值不值得你花时间去学。</p>
+
+<p>Open Code Review不是那种「你把代码贴给ChatGPT，它告诉你哪里有问题」的粗糙方案。它是一个完整的code review工作流，从解析Git diff开始，到生成行级别的精确审查意见结束。</p>
+
+<p>它的架构设计很有意思。不是纯靠语言模型驱动，而是「确定性工程 + AI agent」的混合方案。什么意思呢？就是那些<strong>必须准确</strong>的步骤，交给工程逻辑来保证，不让语言模型瞎搞。比如文件选择、文件打包、规则匹配这些。而需要<strong>灵活判断</strong>的部分，交给AI agent来处理。</p>
+
+<p>它解决的三个核心问题，你做过code review就知道多痛点。</p>
+
+<p><strong>第一个，覆盖不全。</strong> 用Claude Code之类的通用agent做code review，大的代码变更它经常偷懒，只挑几个文件看看，剩下的就跳过了。Open Code Review用确定性逻辑保证每个该审的文件都审到，不会遗漏。</p>
+
+<p><strong>第二个，定位漂移。</strong> AI审代码的时候，经常说「第42行有问题」，但你去看第42行，完全不是那么回事。行号对不上，文件也对不上。Open Code Review有一个独立的外部定位模块，专门解决这个问题，确保它指出的每一行都是精确的。</p>
+
+<p><strong>第三个，质量不稳定。</strong> 用自然语言写的审查规则，改一个词效果就变。Open Code Review用模板引擎匹配规则，不受语言模型波动的影响。</p>
+
+<p>而且它有个特别骚的功能，<strong>智能文件打包</strong>。比如你改了一个英文properties文件，它会自动把对应的中文properties文件打包到同一个审查单元里，一起交给AI看。这个设计太细了，只有真正在大规模代码库里踩过坑的人才能想出来。</p>
+
+<p>说到底就是，阿里用两年的时间，在几万人、几百万个代码缺陷的规模上打磨出了这套工具。现在它免费给你用了。</p>
+
+<div class="tip">
+<strong>一句话总结，</strong>Open Code Review把代码审查中所有应该用确定性逻辑保证的部分全部工程化了，留给AI agent的只有它真正擅长的动态判断部分。这个架构设计比直接跟ChatGPT说「帮我审一下这段代码」高了好几个段位。
+</div>
+
+<h2>为什么现在是入局的好时机</h2>
+
+<p>不只是因为这个工具开源了。而是几个信号同时出现，说明这个市场的拐点到了。</p>
+
+<p>Uber给每个工程师每个AI编码工具1500美元/月的预算上限。按两个工具算，一年3万6千美元，大概占一个美国软件工程师年薪的11%。这个数字说明什么？说明大公司已经把AI编码辅助当成刚需支出了，不是尝鲜，不是试点，是常规预算的一部分。</p>
+
+<p>但Uber用完了年度预算这事也说明，<strong>这帮工具用起来是真的烧钱。</strong> 一个大公司几万个工程师，每个都在疯狂用Claude Code写代码，token消耗量是指数级的。中小公司根本烧不起这个钱。</p>
+
+<p>所以这里出现了一个分层。大公司自己搞AI基础设施，预算充足。中小公司和独立开发者想用AI提升代码质量，但要么请不起全职的架构师做code review，要么用不起Claude Code这种按量付费的工具。</p>
+
+<p>而你用Open Code Review的成本呢？工具免费，你只需要接一个LLM的API。如果用DeepSeek的API，一次审查几毛钱人民币。用Claude API贵一点，但也就几块到十几块。</p>
+
+<p>你想想这个差价。客户如果请一个资深工程师做code review，按小时算的话，200到500块一小时。你用AI帮他做同样的事情，成本几块钱，收费几十到几百。性价比太明显了。</p>
+
+<h2>三种能跑通的赚钱方向</h2>
+
+<p>我研究了一下，发现三种玩法比较靠谱。门槛一个比一个高，但利润也一个比一个厚。</p>
+
+<h3>方向一，帮独立开发者审PR</h3>
+
+<p>这是门槛最低的一个方向，先说这个。</p>
+
+<p>GitHub上有海量的开源项目和个人项目。很多独立开发者一个人写一个项目，从架构到写代码到部署全是自己来，<strong>根本没有人帮他做code review。</strong></p>
+
+<p>你去做一下调研就会发现，GitHub上star在100到5000之间的项目，很多代码质量惨不忍睹。变量命名混乱，错误处理缺失，安全隐患一堆。不是这些开发者技术不行，是他们一个人干所有事，根本没精力回头做code review。</p>
+
+<p>我自己就有这个痛点。我做内容创作，但也写一些Python脚本和自动化工具。每次写完丢到GitHub上就不管了，因为没有人帮我看。如果我花20块请人帮我做一次完整的code review，我会很乐意付这个钱。</p>
+
+<p>操作流程也不复杂。客户给你仓库权限，你pull代码，跑Open Code Review，它会自动分析Git diff，生成行级别的审查意见。你花十来分钟过一遍AI的输出，把明显有问题的标注出来，把误报的删掉，然后整理成一份清晰的review报告发给客户。</p>
+
+<p><strong>收费标准，小项目的单次PR审查100到300元。如果客户按月付费，每月300到800元，包审查所有提交。</strong></p>
+
+<p>找客户的方式也很多。去V2EX发帖，去掘金写文章分享你的code review案例，在GitHub上主动给一些看起来需要帮助的项目提PR。一开始免费帮几个人做，积累口碑和案例，后面就能收费了。</p>
+
+<h3>方向二，给中小公司提供月度code review服务</h3>
+
+<p>这个方向有意思了。</p>
+
+<p>我之前认识一个做SaaS的创业团队，六七个人的技术团队，没有一个人专门负责代码质量。写完功能直接上，出了bug再修。他们不是不知道code review重要，是真的没有这个人力和流程。</p>
+
+<p>这种情况在中小公司里太普遍了。十几个人的技术团队，产品经理催着上线，根本没时间互相看代码。等到积累了一堆技术债，想重构的时候已经无从下手了。</p>
+
+<p>你用Open Code Review可以给这种团队提供一个很轻量的服务。每周跑一次全量审查，输出一份代码质量周报，标注本周新增的缺陷、潜在的安全问题、代码规范违反。不需要嵌入他们的开发流程，他们只要定期收到你的报告就行。</p>
+
+<p><strong>这个方向按月收费，1500到3000一个月，看代码量和团队规模。</strong></p>
+
+<p>你想想看，一个十人团队每月花2000块请人做code review，平均每人每月200块。对比一下，Uber给每个工程师每个工具的预算是1500美元/月。这个价格对他们来说是太划算了。</p>
+
+<p>而且一旦你跟一个团队建立了合作关系，<strong>续费率极高</strong>。因为代码质量是持续性的需求，不是一次性的。你做的周报越多，他们越依赖你。你如果还能帮他们追踪问题的修复情况，那就更粘了。</p>
+
+<p>获取客户的方式也很直接。在技术社区里分享你的code review案例，在天使湾、创投圈这些地方找刚拿到融资的小团队。刚拿到钱的公司最愿意在基础设施上投入。</p>
+
+<h3>方向三，给外包团队做交付前的质量把关</h3>
+
+<p>第三个方向是利润空间最大的，也是我自己觉得最有想象空间的。</p>
+
+<p>你知道现在有多少外包项目交付的时候，甲方验收到处是bug吗？太多了。很多外包团队赶工期，代码写得飞快但质量很差。甲方不懂技术，验收的时候只能看功能对不对，看不到代码层面的问题。等到后期维护的时候，一堆技术债爆雷。</p>
+
+<p>如果你能在外包项目交付之前，用AI做一轮深度的code review，输出一份质量报告，告诉甲方这份代码的隐患在哪里，你既帮甲方避免了未来的坑，也给自己找到了一个持续的需求。</p>
+
+<p>这个定位很妙。你不是在外包团队和甲方之间挑事，你是<strong>第三方的质量把关人</strong>。甲方请你来确保交付质量，就像买房找验房师一样。</p>
+
+<p>Open Code Review的优势在这个场景里特别明显。它有细粒度的规则匹配能力，可以检查代码规范、安全漏洞、性能问题、逻辑缺陷。一个完整的中型外包项目跑一遍，可能需要几个小时，但你得到的审查报告是非常全面的。</p>
+
+<p><strong>这个方向的收费可以按项目走，单次审查3000到8000元，看项目规模。如果是长期合作的外包验收，可以谈月度套餐。</strong></p>
+
+<p>找客户的话，可以去外包平台看看，那些甲方的需求帖里经常有「需要验代码」的隐性需求。也可以直接跟外包团队合作，你帮他们在交付前做质量检查，他们交付的满意度提高了，你也赚到了钱。</p>
+
+<h2>投入成本和收益分析</h2>
+
+<p>说点实在的。</p>
+
+<p><strong>工具成本</strong></p>
+<p>Open Code Review是免费开源的，npm一键安装。你真正要花钱的就是LLM的API调用。</p>
+<p>如果用DeepSeek API，价格非常低，审查一个中等大小的PR大概只要几毛钱人民币。如果用Claude API，一次审查几块到十几块。按你每天审查五六个PR算，每月API成本在100到500元之间，看你怎么选模型。</p>
+<p>总投入，<strong>每月200到600元人民币</strong>，看你的使用量和模型选择。</p>
+
+<p><strong>时间投入</strong></p>
+<p>从零开始学Open Code Review，到能独立交付，大概需要3到5天。前提是你本身有一些编程基础。不需要你是高级架构师，但要能看懂代码的基本逻辑，理解AI给出的审查意见是否有道理。</p>
+<p>单次交付时间，小PR的审查加上你的人工复核，15到30分钟。中型项目的全量审查，两到四小时。</p>
+
+<p><strong>收益预期</strong></p>
+<p>我说一个保守的估算。</p>
+<p>第一个月，免费帮三五个独立开发者做code review，积累案例。在社区发帖分享你的审查报告，让更多人看到你。</p>
+<p>第二个月，开始收费。接两三个独立开发者的按月服务，每月800到2400元。同时接几个单次PR审查，每单100到300。月收入大概3000到6000。</p>
+<p>第三四个月，如果谈到了一个中小公司的月度服务，单子直接变成1500到3000。加上散客的收入，<strong>月收入可以稳定在6000到10000</strong>。</p>
+<p>如果你能切入外包验收方向，单价更高，月入两三万不是不可能。但那个方向的客户获取难度也更大，需要你有更强的销售能力和信任背书。</p>
+
+<p>我觉得这个方向有个特别好的地方，<strong>你的价值会随着案例积累越来越被认可</strong>。一开始别人觉得「用AI审代码能靠谱吗」，等你积累了十几份高质量的审查报告，别人看到你的实际产出，疑虑就消散了。而且code review这个活是看结果的，你找出的bug是实实在在的，客户能不能看到效果一目了然。</p>
+
+<h2>操作步骤，从头到尾走一遍</h2>
+
+<p>我把我自己摸索的流程整理了一下。</p>
+
+<p><strong>第一步，安装Open Code Review。</strong>去GitHub搜索alibaba/open-code-review，npm全局安装。`npm install -g @alibaba-group/open-code-review`。装完之后`ocr`命令就可以用了。</p>
+
+<p><strong>第二步，配置LLM接入。</strong>你需要一个LLM的API endpoint。推荐Claude API或者DeepSeek API。在项目目录下创建配置文件，把你的API key和endpoint写进去。DeepSeek便宜适合起手，Claude质量更高适合做精品客户。</p>
+
+<p><strong>第三步，学会看它的输出。</strong>Open Code Review跑完之后会生成结构化的审查意见，精确到行号和文件。你需要花一两天时间熟悉它的输出格式，知道哪些类型的意见是高价值的，哪些可能是误报。这个判断力是你跟纯自动化工具的差距所在。</p>
+
+<p><strong>第四步，准备你的服务文档。</strong>写一份清晰的service说明，告诉客户你做什么，收费标准，交付格式。重点要说清楚你的审查覆盖哪些方面，比如安全漏洞、逻辑错误、代码规范、性能隐患。也要说清楚你不做什么，比如不负责修改代码，不做架构设计。</p>
+
+<p><strong>第五步，找客户并积累案例。</strong>先在GitHub上找几个看起来需要帮助的开源项目，免费做一轮code review，把报告发到项目的issue里。这就是你最好的广告。然后在技术社区发帖分享你的案例。</p>
+
+<p><strong>第六步，收费和交付。</strong>收到客户的代码仓库权限或者代码包之后，跑Open Code Review，人工复核AI的输出，整理成一份清晰的审查报告。报告里要把问题按严重程度分类，每个问题标注文件名、行号、问题描述、修复建议。这种结构化的报告交付体验特别好，客户一看就知道问题在哪。</p>
+
+<h2>踩过的坑和注意事项</h2>
+
+<p>我自己在研究这个方向的时候，踩了几个坑。</p>
+
+<p><strong>最大的坑，AI的输出不能直接扔给客户。</strong> 跟<a href="/articles/cases/claude-legal-ai-service-side-hustle-202606/">AI合同审查</a>一样，code review的AI输出也会有误报和幻觉。它可能会说「这里有一个空指针风险」，但你仔细一看，那个变量在上一行已经有null check了。这种误报如果直接发给客户，你的专业性直接打折扣。</p>
+
+<p>你必须自己先过一遍，把误报删掉，把真正有价值的发现标注清楚。这个人工复核的步骤不能省，大概每次花10到20分钟。但正是这个步骤，决定了你的服务是「AI自动化的廉价替代」还是「有质量保证的专业服务」。</p>
+
+<p><strong>第二个坑，客户的安全意识。</strong> 有些客户会把包含敏感信息的代码发给你审查，比如API key、数据库密码、业务逻辑。你必须在服务协议里写清楚，你会对客户代码严格保密，审查完之后删除所有本地副本。最好还能提供一个流程说明，告诉客户如何在发送代码前脱敏。</p>
+
+<div class="warning">
+<strong>这条红线一定要注意。</strong> 你在审查客户代码的过程中，可能会看到他们的商业机密、用户数据、安全架构。这些东西绝对不能泄露。签保密协议是最基本的，技术上也应该做到审查完就删除，不做任何备份。
+</div>
+
+<p><strong>第三个坑，定价策略。</strong> 一开始不要定太高，但也别定太低。太低了客户会觉得你不专业，太高了没人愿意尝试。我建议先从100到200一单的低价开始跑，用低价换案例和口碑。等有了十几个成功案例之后，再逐步提价。</p>
+
+<p>说真的，这个方向我自己也还在摸索。我上面说的收益数据是基于市场调研的估算，不是我自己已经赚到手的数字。但我确实觉得这个市场的需求是真实的，工具也已经成熟到可以用的程度了。</p>
+
+<p>如果你想试试，可以先从免费帮身边做开发的朋友审几段代码开始。感受一下Open Code Review的输出质量，也感受一下客户收到code review报告之后的反应。如果反馈不错，那就说明这条路能走通。</p>
+
+<p>说到这，如果你已经在用AI做副业，但苦于不知道怎么写高效的prompt、怎么搭系统化的工作流，我整理了一套自己在用的AI提示词包，覆盖了代码审查、内容创作、客户沟通这些高频场景。<a href="/prompt-pack/">点这里去看看</a>。</p>
+
+<p>回到最开始说的那个信号。Uber四个月烧完了全年AI预算，说明AI开发工具的用量在爆发。阿里开源了内部打磨了两年的code review工具，说明大厂的AI基础设施正在加速外溢。</p>
+
+<p>大厂之间的基础设施竞赛，正在给普通人制造机会。</p>
+
+<p>就像当年的云计算一样，AWS先烧钱建数据中心，然后一堆SaaS公司基于AWS长出来。现在AI底层能力的普及也是这个逻辑。工具越来越好用，成本越来越低，但会用工具的人和不会用工具的人之间的差距，正在越拉越大。</p>
+
+<p>而差距，就是赚钱的空间。</p>
+
+        </div>
+
+        <div class="related">
+            <h3>相关推荐</h3>
+            <ul>
+                <li><a href="/articles/cases/claude-code-app-store-side-hustle-202606/">Claude Code应用商店上线，靠开发AI编程插件月入过万</a></li>
+                <li><a href="/articles/cases/claude-legal-ai-service-side-hustle-202606/">用Claude帮人审合同赚钱，Anthropic官方法律AI工具拆解</a></li>
+                <li><a href="/articles/cases/career-ops-46k-star-job-search-service/">靠帮人用AI优化简历和求职，我两周赚了6800</a></li>
+                <li><a href="/articles/seo/claude-earn-money/">用Claude赚钱的8种方法（2026年实测）</a></li>
+            </ul>
+        </div>
+
+        <div class="faq">
+            <h2>常见问题</h2>
+
+            <details>
+                <summary>Open Code Review是什么？跟普通的AI代码审查有什么区别？</summary>
+                <div class="answer">Open Code Review是阿里巴巴集团内部使用了两年多的AI代码审查工具，最近正式开源。它跟普通的ChatGPT审代码最大的区别是，它不是纯语言模型驱动的，而是「确定性工程+AI agent」的混合架构。它会自动解析Git diff，精确选择需要审查的文件，智能打包关联文件，然后用AI agent做深层审查。在阿里内部已经帮几万名工程师发现了数百万个代码缺陷。</div>
+            </details>
+
+            <details>
+                <summary>不会写代码的人能用AI做代码审查服务赚钱吗？</summary>
+                <div class="answer">需要有一定的编程基础，但不需要是高级工程师。你至少要能看懂代码的基本逻辑，理解AI给出的审查意见是否有道理，然后把技术性的反馈翻译成客户能理解的语言。如果你完全不懂代码，这个方向不适合你。但如果你写过一两年代码，或者正在学编程，这个方向完全可以跑通。</div>
+            </details>
+
+            <details>
+                <summary>用AI帮人做代码审查怎么收费？一单能赚多少钱？</summary>
+                <div class="answer">小项目代码审查，一次PR收费100到300元。中型项目的定期code review服务，按月收费1500到3000元。企业级代码质量咨询，单次5000到10000元。具体看项目规模、代码量和审查深度。Uber给每个工程师每个AI编码工具设定了每月1500美元的预算上限，说明大公司对AI辅助开发工具的付费意愿是很强的。</div>
+            </details>
+
+            <details>
+                <summary>做AI代码审查服务需要什么工具和成本？</summary>
+                <div class="answer">Open Code Review是免费开源的，npm安装就行。你需要一个LLM的API接入，推荐用Claude API或者DeepSeek API。Claude API每月大概100到500元人民币的用量（看使用频率），DeepSeek更便宜。总成本每月200到600元。一台能跑Node.js的电脑就够了。</div>
+            </details>
+
+            <details>
+                <summary>去哪里找需要代码审查服务的客户？</summary>
+                <div class="answer">最直接的是V2EX、掘金、GitHub上找独立开发者和开源项目。很多独立开发者没有code review的习惯，但他们的项目质量很需要这一步。其次是技术创业公司，人少没有专门做code review的流程，可以提供月度服务。也可以在闲鱼或者淘宝挂「AI代码审查」服务链接。Fiverr和Upwork上也有不少需求。</div>
+            </details>
+        </div>
+
+        <div class="footer-cta">
+            <p>想要系统化的AI提示词和工作流模板？我整理了一套自己压箱底的提示词包。</p>
+            <a href="/prompt-pack/">查看提示词包</a>
+        </div>
+
+    </article>
+</body>
+</html>
