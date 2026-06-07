@@ -75,10 +75,16 @@ def main():
     
     state = load_state()
     
-    # 找所有 build_candidate 但还没 enrich 的 GitHub 项目
+    # 从 latest_enrichment 获取本次待分析项目（由外部 scout 传入）
+    # 或从 top_candidates 中查找未深度分析的
     candidates = []
-    for item in state.get("discovered", {}).get("github", []):
-        if item.get("build_candidate") and not item.get("enriched"):
+    already_enriched_repos = set()
+    for item in state.get("latest_enrichment", []):
+        already_enriched_repos.add(item.get("repo", ""))
+    
+    for item in state.get("top_candidates", []):
+        repo = item.get("repo", "")
+        if repo and repo not in already_enriched_repos and not item.get("enriched"):
             candidates.append(item)
     
     if not candidates:
@@ -102,24 +108,18 @@ def main():
     # 输出报告
     print(f"\n=== 分析完成 ===")
     print(f"  已分析: {len(candidates[:3])} 个")
-    print(f"  候选池总计: {sum(len(v) for v in state.get('discovered', {}).values() if isinstance(v, list))}")
+    print(f"  候选池总计: {len(state.get('top_candidates', []))}")
     
     # 列出评分最高的3个
-    all_buildable = []
-    for items in state.get("discovered", {}).values():
-        if isinstance(items, list):
-            for item in items:
-                if item.get("build_candidate"):
-                    all_buildable.append(item)
-    
-    all_buildable.sort(key=lambda x: x.get("research_score", 0), reverse=True)
+    all_buildable = state.get("top_candidates", [])
+    all_buildable.sort(key=lambda x: x.get("score", 0), reverse=True)
     
     print(f"\n  当前 TOP 3 候选:")
     for item in all_buildable[:3]:
-        name = item.get("name", "?")
-        score = item.get("research_score", 0)
-        has_pricing = item.get("analysis", {}).get("has_pricing", False)
-        has_install = item.get("analysis", {}).get("has_installation", False)
+        name = item.get("repo", "?")
+        score = item.get("score", 0)
+        has_pricing = item.get("has_pricing", False)
+        has_install = item.get("installable", False)
         tag = ""
         if has_pricing: tag += "💰有定价 "
         if has_install: tag += "⚡可装 "

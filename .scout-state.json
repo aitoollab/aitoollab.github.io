@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-06-06T00:00:00.000000",
+  "last_updated": "2026-06-08T04:46:34.989145",
   "candidate_pool_total": 478,
-  "analyzed_count": 409,
+  "analyzed_count": 412,
   "top_candidates": [
     {
       "repo": "I don't think AI will make your processes go faster",
@@ -435,6 +435,22 @@
       "language": "TypeScript",
       "description": "Free, open-source anti-detect browser launcher for web scraping and multi-accounting.",
       "enriched_at": "2026-06-03T04:45:59.906091"
+    },
+    {
+      "repo": "brewingelixir/council_ex",
+      "score": 85,
+      "has_pricing": true,
+      "installable": false,
+      "stars": 8,
+      "note": "enriched — install=False, api=True, pricing=True, docs=True, examples=True. Apache-2.0 license"
+    },
+    {
+      "repo": "ybouane/dash-p",
+      "score": 75,
+      "has_pricing": false,
+      "installable": true,
+      "stars": 9,
+      "note": "enriched — install=True, api=True, pricing=False, docs=True, examples=True"
     }
   ],
   "high_score_projects": [
@@ -1558,45 +1574,120 @@
       "language": "TypeScript",
       "description": "Free, open-source anti-detect browser launcher for web scraping and multi-accounting.",
       "enriched_at": "2026-06-03T04:45:59.906091"
+    },
+    {
+      "repo": "brewingelixir/council_ex",
+      "score": 85,
+      "has_pricing": true,
+      "installable": false,
+      "stars": 8,
+      "note": "enriched — install=False, api=True, pricing=True, docs=True, examples=True. Apache-2.0 license"
+    },
+    {
+      "repo": "ybouane/dash-p",
+      "score": 75,
+      "has_pricing": false,
+      "installable": true,
+      "stars": 9,
+      "note": "enriched — install=True, api=True, pricing=False, docs=True, examples=True"
     }
   ],
   "note": "共365个build_candidate已全量分析（2026-05-29 enrich覆盖完成）",
   "latest_enrichment": [
     {
-      "repo": "CWS6206/ai-coding-starter-kit",
-      "score": 60,
-      "has_pricing": false,
-      "installable": true,
-      "stars": 222,
-      "language": null,
-      "description": "Kuratierte Agent Skills für Claude Code, Codex, Cursor und Gemini CLI",
-      "note": "enriched — 德语聚合/策划项目，非原创工具。install=True, api=False, pricing=False, docs=True, examples=True",
-      "verdict": "参考价值有限，属于聚合内容，不适合直接复用",
-      "enriched_at": "2026-06-06T00:00:00"
-    },
-    {
-      "repo": "cellebrite-labs/ghidra-rpc",
+      "repo": "brewingelixir/council_ex",
       "score": 85,
-      "has_pricing": false,
-      "installable": true,
-      "stars": 121,
-      "language": "Python",
-      "description": "A Ghidra agentic reverse engineering skill — LLM autonomous RE via Unix Socket",
-      "note": "enriched — install=True, api=True, pricing=False, docs=True, examples=True. MIT license. Cellebrite Labs出品，质量高，含workflow guides",
-      "verdict": "高质量技术项目，逆向工程垂直场景，值得收录",
-      "enriched_at": "2026-06-06T00:00:00"
+      "has_pricing": true,
+      "installable": false,
+      "stars": 8,
+      "language": "Elixir",
+      "description": "Elixir framework for multi-model LLM councils. Debate, vote, tournament, synthesize. Provider-agnostic.",
+      "topics": [
+        "ai",
+        "anthropic",
+        "elixir",
+        "llm",
+        "openai",
+        "openrouter"
+      ],
+      "license": "Apache-2.0",
+      "analysis": {
+        "has_installation": false,
+        "has_api": true,
+        "has_pricing": true,
+        "has_docs": true,
+        "has_examples": true,
+        "readme_length": 10000
+      },
+      "note": "enriched — install=False, api=True, pricing=True, docs=True, examples=True. Apache-2.0 license",
+      "verdict": "高价值项目，值得收录",
+      "enriched_at": "2026-06-08T04:46:34.385966",
+      "readme_preview": "# CouncilEx\n\nMulti-model LLM council workflows for Elixir.\n\nDefine a council of specialized members, run structured rounds of analysis,\nand synthesize a final answer. Works against popular providers (OpenAI,\nAnthropic, Gemini, Ollama, OpenRouter). Built to get richer answers from\nmultiple models while keeping control over the process.\n\nInspired by Andrej Karpathy's [karpathy/llm-council](https://github.com/karpathy/llm-council):\nthe multi-stage peer-review pattern that motivated this framework.\n\n![CouncilEx](https://raw.githubusercontent.com/brewingelixir/council_ex/main/assets/council.png)\n\n## Contents\n\n- [Features](#features): what ships in core, ordered by abstraction layer\n- [Installation](#installation): adding the dep\n- [Quickstart](#quickstart): runnable OpenRouter council in 4 steps\n- [Examples](#examples): index of `examples/*.exs` by topic\n- [Concepts](#concepts): vocabulary used throughout the rest of the doc\n- [Council forms](#council-forms): static (DSL) vs dynamic (data) councils\n- [Providers](#providers): OpenAI / Anthropic / Gemini / Ollama / OpenRouter\n- [Profiles](#profiles): reusable per-member capability bundles\n- [Running councils](#running-councils): sync, async, Phoenix integration, retries\n- [Council topologies](#council-topologies): pre-built templates (Specialist, Tournament, WeightedConsensus, JuryWithRetry, …)\n- [Per-member capabilities](#per-member-capabilities): structured outputs, streaming, tools\n- [Composition](#composition): sub-councils + adaptive routers\n- [Auto-routing with AutoCouncil](#auto-routing-with-autocouncil): councils that pick themselves\n- [Observability](#observability): PubSub events, telemetry, verbose tracer, diagrams, introspection\n- [Testing](#testing): Mock provider, test helpers, capture-events\n- [Deployment Considerations](#deployment-considerations): single-node / cluster / replica / ephemeral\n- [Roadmap & changelog](#roadmap--changelog): shipped + planned\n- [License](#license)\n\n## Features\n\nOrdered roughly f"
     },
     {
-      "repo": "best-spicy-ai/ai-naughty-tools",
-      "score": 15,
+      "repo": "ybouane/dash-p",
+      "score": 75,
       "has_pricing": false,
-      "installable": false,
-      "stars": 105,
-      "language": null,
-      "description": "NSFW AI image/video tool aggregator with affiliate links",
-      "note": "enriched — install=False, api=False, pricing=False, docs=False, examples=False. README仅一行'best tools'，本质SEO/联盟链接站",
-      "verdict": "垃圾项目，排除",
-      "enriched_at": "2026-06-06T00:00:00"
+      "installable": true,
+      "stars": 9,
+      "language": "TypeScript",
+      "description": "Make Claude Scriptable Again",
+      "topics": [
+        "agent",
+        "agent-sdk",
+        "ai",
+        "anthropic",
+        "claude",
+        "claude-code",
+        "tui"
+      ],
+      "license": "",
+      "analysis": {
+        "has_installation": true,
+        "has_api": true,
+        "has_pricing": false,
+        "has_docs": true,
+        "has_examples": true,
+        "readme_length": 5355
+      },
+      "note": "enriched — install=True, api=True, pricing=False, docs=True, examples=True",
+      "verdict": "值得关注，可考虑收录",
+      "enriched_at": "2026-06-08T04:46:34.677463",
+      "readme_preview": "<sub>*Follow me on X [@ybouane](https://x.com/ybouane) — I'm building in public.*</sub>\n\n<p align=\"center\">\n  <img src=\"https://raw.githubusercontent.com/ybouane/dash-p/main/banner.png\" alt=\"dash-p — make Claude scriptable again\" width=\"640\">\n</p>\n\n# Make Claude Scriptable Again\n\n### `dash-p`\n\n> **If Claude can interact with apps through their interfaces, developers should be able to interact with Claude Code through theirs.**\n\n---\n\nClaude can click buttons, type into apps, read screens, and operate software through a GUI.\\\nSo why shouldn’t developers be able to automate their own Claude Code session?\n\ndash-p is a CLI and TypeScript library that makes Claude Code scriptable by driving the real Claude TUI process you already use.\n\nIt does not bypass Claude Code.\\\nIt does not fake network requests.\\\nIt does not bypass authentication.\n\nIt simply launches the official `claude` command, injects input programmatically, reads output programmatically, and exposes a clean developer interface on top.\n\nThe same Claude Code.\\\nThe same local session.\\\nThe same authentication flow.\\\nJust composable.\\\nNot a replacement for Claude Code.\n\nA bridge that makes it scriptable.\n\n\n---\n\n## Use it in one line\n\n**CLI — replace `claude -p`:**\n\n```diff\n- claude -p \"summarize this repo\"\n+ dash-p  \"summarize this repo\"\n```\n\n**SDK — replace the import:**\n\n```diff\n- import { query } from \"@anthropic-ai/claude-agent-sdk\";\n+ import { query } from \"@ybouane/dash-p\";\n```\n\nThat’s the whole idea. Same prompt in, same shape of answer out — but produced by driving the interactive TUI instead of the `-p` headless flag.\n\n---\n\n## Getting started\n\n**Prerequisite:** the official **`claude` CLI**, installed and logged in — run `claude` once interactively to sign in. dash-p drives that binary; it does not bundle or replace it. (Also: Node ≥ 20. node-pty installs a prebuilt binary on common platforms; if yours needs compiling you’ll want a C++ toolchain — macOS `xcode-select --install`, Debian/Ubuntu `apt install"
+    },
+    {
+      "repo": "aiZKP/modern-ai-engineer-roadmap",
+      "score": 65,
+      "has_pricing": false,
+      "installable": true,
+      "stars": 7,
+      "language": "Python",
+      "description": "Beginner-to-master roadmap for becoming a modern AI engineer: AI and ML fundamentals, deep learning, LLMs, RAG, agents, model infrastructure, optimization, hardware acceleration, AI security, blockchain, and ZKML.",
+      "topics": [
+        "agentic-ai",
+        "ai",
+        "ai-applications",
+        "ai-engineer",
+        "ai-infrastructure",
+        "beginner-friendly",
+        "blockchain-ai",
+        "cuda",
+        "deep-learning",
+        "hardware-acceleration"
+      ],
+      "license": "",
+      "analysis": {
+        "has_installation": true,
+        "has_api": false,
+        "has_pricing": false,
+        "has_docs": true,
+        "has_examples": true,
+        "readme_length": 657
+      },
+      "note": "enriched — install=True, api=False, pricing=False, docs=True, examples=True",
+      "verdict": "有参考价值",
+      "enriched_at": "2026-06-08T04:46:34.989112",
+      "readme_preview": "# Modern AI Engineer Roadmap\n\nBeginner-to-master roadmap for becoming a modern AI engineer: AI and ML fundamentals, deep learning, LLMs, RAG, agents, model infrastructure, optimization, hardware acceleration, AI security, blockchain, ZKML, and capstone mastery.\n\n## Architecture\n\n- Variable part counts by stage.\n- Variable sub-part counts by part.\n- Every sub-part is a folder with `index.md`, `deep-dive.md`, and `examples-and-practice.md`.\n- Every part has one local 30-question HTML exam.\n- The top-level Exam tab provides direct testing across all stages and parts.\n\n## Local Preview\n\n```bash\npython -m pip install -r requirements.txt\nmkdocs serve\n```\n"
     }
   ]
 }
