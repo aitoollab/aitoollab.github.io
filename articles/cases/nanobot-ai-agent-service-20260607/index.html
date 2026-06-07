@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- URL标准化 -->
+    <link rel="canonical" href="https://www.aitoollab.top/articles/cases/nanobot-ai-agent-service-20260607/">
+    <link rel="alternate" hreflang="x-default" href="https://www.aitoollab.top/articles/cases/nanobot-ai-agent-service-20260607/">
+    <link rel="alternate" hreflang="zh-CN" href="https://www.aitoollab.top/articles/cases/nanobot-ai-agent-service-20260607/">
+
+    <!-- SEO基础 -->
+    <title>用4万星开源AI Agent帮小企业做自动化 月入2万实操拆解 - AiToollab</title>
+    <meta name="description" content="Nanobot是一个43000多星的开源AI Agent，能接入Telegram、飞书、钉钉、Slack等十几个聊天平台，帮你做客服回复、日程管理、文件处理等自动化。我拆了一个帮奶茶店老板部署AI客服的完整案例，从投入成本到收费定价到操作步骤，一步步讲清楚。">
+    <meta name="keywords" content="AI Agent部署副业, nanobot开源项目赚钱, 帮小企业部署AI自动化, AI客服机器人搭建服务, 开源AI Agent赚钱方法, 小企业AI自动化部署收费, AI自动化副业月入2万, nanobot部署教程, 普通人AI副业项目, AI Agent接单赚钱">
+    <meta name="author" content="AiToollab">
+    <meta name="robots" content="index, follow">
+    <meta name="ai-content" content="allowed">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="用4万星开源AI Agent帮小企业做自动化 月入2万实操拆解">
+    <meta property="og:description" content="Nanobot开源AI Agent部署服务拆解。帮奶茶店、工作室、电商卖家部署AI自动化，从成本到收益到避坑全流程。">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.aitoollab.top/articles/cases/nanobot-ai-agent-service-20260607/">
+    <meta property="og:image" content="https://www.aitoollab.top/articles/cases/nanobot-ai-agent-service-20260607/og-cases-nanobot-ai-agent-service-20260607.jpg">
+    <meta property="og:site_name" content="AiToollab">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="article:published_time" content="2026-06-07T12:00:00+08:00">
+    <meta property="article:modified_time" content="2026-06-07T12:00:00+08:00">
+    <meta property="article:author" content="AiToollab">
+    <meta property="article:tag" content="AI Agent部署">
+    <meta property="article:tag" content="AI副业">
+    <meta property="article:tag" content="Nanobot">
+    <meta property="article:tag" content="开源AI赚钱">
+    <meta property="article:section" content="AI副业赚钱案例">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@AiToollab">
+    <meta name="twitter:title" content="用4万星开源AI Agent帮小企业做自动化 月入2万实操拆解">
+    <meta name="twitter:description" content="Nanobot开源AI Agent部署服务拆解。从成本到收益到避坑，完整实操流程。">
+    <meta name="twitter:image" content="https://www.aitoollab.top/articles/cases/nanobot-ai-agent-service-20260607/og-cases-nanobot-ai-agent-service-20260607.jpg">
+
+    <!-- Dublin Core -->
+    <meta name="DC.title" content="用4万星开源AI Agent帮小企业做自动化 月入2万实操拆解">
+    <meta name="DC.creator" content="AiToollab">
+    <meta name="DC.subject" content="AI Agent部署副业,nanobot开源项目赚钱,小企业AI自动化部署,AI客服搭建服务">
+    <meta name="DC.description" content="Nanobot开源AI Agent项目实操拆解。帮小企业部署AI自动化，月入2万完整案例。">
+    <meta name="DC.publisher" content="AiToollab">
+    <meta name="DC.date" content="2026-06-07">
+
+    <!-- GEO 多语言 -->
+    <meta name="geo.region" content="CN">
+    <meta name="geo.placename" content="China">
+
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "用4万星开源AI Agent帮小企业做自动化 月入2万实操拆解",
+    "description": "Nanobot是一个43000多星的开源AI Agent，能接入十几个聊天平台做自动化。帮小企业部署AI Agent做客服、日程、文件处理，月入2万的完整拆解。",
+    "keywords": ["AI Agent部署副业", "nanobot开源项目赚钱", "小企业AI自动化", "AI客服搭建服务", "AI自动化副业"],
+    "author": {
+        "@type": "Organization",
+        "name": "AiToollab"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "AiToollab",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.aitoollab.top/logo.png"
+        }
+    },
+    "datePublished": "2026-06-07T12:00:00+08:00",
+    "dateModified": "2026-06-07T12:00:00+08:00",
+    "image": "https://www.aitoollab.top/articles/cases/nanobot-ai-agent-service-20260607/og-cases-nanobot-ai-agent-service-20260607.jpg",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.aitoollab.top/articles/cases/nanobot-ai-agent-service-20260607/"
+    }
+}
+    </script>
+
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "用Nanobot帮小企业做AI自动化，到底能赚多少钱？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "单次部署收费1000-3000元，月度维护费500-1500元。兼职做稳定下来月入5000-10000元，全职做月入1.5万-2.5万元。企业客户复购率很高，维护合同是持续收入。"
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "普通人不会编程，能做AI Agent部署服务吗？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "需要会基本的Linux命令行操作，会用Docker，知道怎么配环境变量。不需要会写代码，Nanobot的配置都是JSON文件，改几个参数就行。完全零基础的话需要一到两周学习时间。"
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Nanobot和ChatGPT有什么区别？适合什么场景？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "ChatGPT是通用聊天工具，需要你主动去问。Nanobot是AI Agent，可以自动接入你的Telegram、飞书、钉钉、Slack等聊天平台，自动回复消息、管理日程、处理文件、定时提醒。适合需要把AI嵌入到日常工作流里的小企业和工作室。"
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "帮人部署Nanobot需要多少成本投入？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Nanobot完全开源免费，零软件成本。云服务器最低2核4G约99元/月，客户端可以更便宜甚至用你自己的机器做演示。API费用看客户使用量，一般月消耗100-500元。你前期投入主要是学习时间和一台测试服务器。"
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "小企业AI自动化部署的客户从哪里找？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "目标客户是有重复性工作需要自动化的微型企业，奶茶店、餐饮连锁、电商工作室、小培训机构、自媒体团队。去58同城、闲鱼、小红书搜本地商家，或者混进本地商家社群。先聊痛点再出方案，成交率远高于直接推销。"
+            }
+        }
+    ]
+}
+    </script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.8; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; }
+        h1 { font-size: 2rem; margin-bottom: 20px; color: #111; line-height: 1.35; }
+        .meta { color: #888; margin-bottom: 30px; font-size: 0.9rem; border-bottom: 1px solid #eee; padding-bottom: 15px; }
+        .content p { margin-bottom: 22px; font-size: 1.08rem; letter-spacing: 0.01em; }
+        .content h2 { font-size: 1.5rem; margin: 45px 0 18px; color: #222; }
+        .content h3 { font-size: 1.2rem; margin: 30px 0 14px; color: #333; }
+        .content ul, .content ol { margin-bottom: 22px; padding-left: 22px; }
+        .content li { margin-bottom: 10px; font-size: 1.08rem; }
+        .tip { background: #f0f7ff; padding: 18px; border-radius: 8px; border-left: 4px solid #165DFF; margin: 25px 0; font-size: 1.05rem; }
+        .warning { background: #fff7f0; padding: 18px; border-radius: 8px; border-left: 4px solid #ff7a00; margin: 25px 0; font-size: 1.05rem; }
+        .cta { background: #f8f9fa; padding: 25px; border-radius: 12px; margin: 40px 0; text-align: center; border: 1px solid #e8e8e8; }
+        .cta h3 { margin-top: 0; font-size: 1.3rem; }
+        .cta p { font-size: 1rem; color: #555; }
+        .btn { display: inline-block; background: #165DFF; color: white; padding: 12px 28px; border-radius: 8px; text-decoration: none; margin-top: 12px; font-size: 1.05rem; font-weight: 500; }
+        .btn:hover { background: #0e42d2; }
+        .faq { margin-top: 50px; padding-top: 30px; border-top: 2px solid #eee; }
+        .faq h2 { margin-top: 0; }
+        .faq-item { margin-bottom: 25px; padding-bottom: 20px; border-bottom: 1px solid #f0f0f0; }
+        .faq-item h3 { font-size: 1.1rem; margin-bottom: 8px; color: #222; }
+        .faq-item p { font-size: 1rem; color: #555; margin-bottom: 0; }
+        .related { margin-top: 50px; padding-top: 25px; }
+        .related h3 { margin-bottom: 15px; }
+        .related a { color: #165DFF; text-decoration: none; }
+        .related a:hover { text-decoration: underline; }
+        .related li { margin-bottom: 8px; }
+        .footer { margin-top: 50px; padding-top: 25px; border-top: 1px solid #eee; text-align: center; color: #999; font-size: 0.9rem; }
+        strong { color: #111; }
+        @media (max-width: 600px) {
+            h1 { font-size: 1.6rem; }
+            .content p { font-size: 1rem; }
+            body { padding: 15px; }
+        }
+    </style>
+</head>
+<body>
+    <article>
+        <h1>用4万星开源AI Agent帮小企业做自动化，月入2万实操拆解</h1>
+
+        <div class="meta">
+            <time datetime="2026-06-07">2026年6月7日</time> · <span>AiToollab</span> · <span>AI副业赚钱案例</span>
+        </div>
+
+        <div class="content">
+
+<p>上周有个做电商的朋友给我发消息，说他招的客服又跑了。第三个月了，已经是第四个。</p>
+
+<p>他做的是那种跨境小铺子，卖家居用品，一天大概200来个客户咨询。量不大，但问题杂，什么物流时效、尺寸换算、退换货规则，得有人一直盯着回复。之前请的大学生兼职，干了两个月嫌工资低走了。后来找了外包客服，一周后发现回复质量一塌糊涂，客户投诉好几个。</p>
+
+<p>他跟我说，真的，哪怕有个东西能自动回80%的常见问题，剩下的我亲自处理都行。</p>
+
+<p>我当时第一反应不是「你去买个AI客服SaaS啊」，而是想起了前两天在GitHub上刷到的一个项目。</p>
+
+<p>Nanobot，43000多星，香港大学数据科学实验室开源的。一个超轻量的AI Agent框架，能直接接入Telegram、飞书、钉钉、Slack、Discord、Teams、微信、邮件……十几个平台。记忆系统、MCP工具、模型路由、定时任务，全内置了。</p>
+
+<p>我当天晚上就把Nanobot装起来试了一下，然后给他那个店铺搭了一套AI客服。</p>
+
+<p>三天后他给我转了2000块，跟我说，「你帮我把这个装到我另一个店铺里去。」</p>
+
+<p>这就是这篇文章要讲的事。</p>
+
+<h2>为什么Nanobot这个方向能赚钱</h2>
+
+<p>我先说一下我对这个项目的判断。</p>
+
+<p>市面上的AI客服SaaS产品不少，智齿、网易七鱼、乐言这些，功能都挺全。但它们有几个问题，对微型企业来说特别扎心。</p>
+
+<p>贵。正经的AI客服SaaS，一个账号一年大几千到上万。对于一个日咨询量200的小店铺来说，这笔钱心疼。</p>
+
+<p>重。要配知识库、训练意图、设定回复模板，折腾一周才能上线。小老板哪有这个时间。</p>
+
+<p>死。大多数SaaS客服只能接网页和微信公众号，你的客户在Telegram上问、在WhatsApp上问，它接不住。</p>
+
+<p>而Nanobot的特点是什么？免费，轻量，通吃。</p>
+
+<p>开源免费，零软件成本。pip install nanobot-ai，一行命令装好。配好API key，选好模型，连上你想接的聊天平台，就能跑了。</p>
+
+<p>它支持的平台列表长到离谱。Telegram、飞书、钉钉、Slack、Discord、Teams、Signal、Matrix、QQ、微信、WhatsApp、邮件……基本上你能想到的聊天工具都支持。而且不是那种粗糙的转发，是有线程管理的，Discord和飞书的thread回复它都能处理。</p>
+
+<p>记忆系统用Dream实现，Agent能记住之前聊过的内容。模型路由可以配fallback，主力模型挂了自动切备用。MCP工具集成让Agent能调用外部能力，比如搜索网页、操作文件、调API。</p>
+
+<p>我自己的判断是，<strong>对小企业来说，一个能直接连到他们正在用的聊天工具上的AI Agent，比任何SaaS客服都实用。</strong></p>
+
+<p>因为你不需要改变客户的行为习惯。客户在Telegram上问问题，AI在Telegram上直接回复。客户感知不到「系统」的存在，只觉得老板回复变快了。</p>
+
+<p>说真的，很多人可能不知道，像nanobot这种开源项目的商业价值往往被严重低估。大部分人觉得「开源免费的东西怎么能赚钱」，但服务永远比软件贵，部署永远比产品值钱。</p>
+
+<h2>我帮奶茶店老板做了什么</h2>
+
+<p>我那个电商朋友的case比较直接，就是接Telegram做自动客服。但为了摸清这个方向的边界，我又多找了一个客户测试。</p>
+
+<p>是一个开奶茶店的本地老板。三间连锁店，两家有外卖平台，一家纯堂食。他的痛点是，美团和饿了么上的消息回复经常来不及，尤其是高峰期，店员忙着出杯根本没空看手机。差评里有一半在骂「回复慢」。</p>
+
+<p>另外他有一个福利群，200多人的微信群，经常有人在群里问「今天有什么新品」「XX店还有货吗」「能不能提前预定生日蛋糕」。这些重复问题每天要答几十遍。</p>
+
+<p>我的方案是这样的。</p>
+
+<p>帮他部署了一个Nanobot实例，跑在一台2核4G的轻量云上，一个月99块。配了DeepSeek的API做主力模型，便宜，token费一个月大概几十块就够。然后接了两个通道，一个是微信公众号的客服消息，一个是那个200人微信群（通过微信群bridge接的）。</p>
+
+<p>知识库就一份Excel，他自己整理的FAQ。新品列表、门店地址营业时间、外卖配送范围、预定流程、价格表。我把这些导入Nanobot的记忆系统，设了三条规则。</p>
+
+<p>1，能回答的问题直接回答，语气要像店员说话，不要机器味。<br>
+2，回答不了的问题，回复「我去问一下店长，稍等哈」，然后标记未处理。<br>
+3，涉及价格和库存的实时信息，调用外卖平台的API查，不要瞎猜。</p>
+
+<p>整个部署调试花了我大概三个小时，主要时间花在调prompt让回答语气别那么僵硬，以及搞定微信群的bridge连接。</p>
+
+<p>上线第一周，他自己统计了一下，微信群里的常见问题AI自动回了大概85%，剩下15%标记为未处理的他抽空回。美团上的客服消息回复率从之前的60%提升到了95%以上。</p>
+
+<p>差评率直接降了一截。</p>
+
+<p><strong>这单我收了2000。</strong></p>
+
+<p>为啥比电商那个贵500？因为奶茶这个case多了微信群接入和prompt调优，多花了差不多一倍时间。而且老板要求语气必须像真人，不要让顾客觉得是机器人，这个调起来挺费劲的。</p>
+
+<h2>投入成本和收益怎么算</h2>
+
+<p>说清楚一点，这活你到底要投入什么，能赚回来什么。</p>
+
+<p><strong>你自己的投入</strong></p>
+<p>学习成本，从零搞懂Nanobot的部署和配置，大概一周，每天两三小时。如果你之前<a href="https://www.aitoollab.top/articles/seo/mcp-side-hustle-2026/" target="_blank">接触过MCP或者AI Agent相关的东西</a>，上手会更快。<br>
+工具成本，Nanobot开源免费，零。<br>
+测试服务器，买一台最低配云服务器练手，99块一个月。<br>
+API费用，你自己测试的话一个月也就几十块。<br>
+获客成本，靠内容和口碑，基本为零。</p>
+
+<p><strong>客户要花的钱</strong></p>
+<p>服务器，2核4G轻量云99元/月起步，4核8G约198元/月。大部分小客户2核4G够用。<br>
+API费用，DeepSeek API最便宜，一般月消耗50-200元。如果用OpenRouter做多模型路由，月消费100-500元。<br>
+你的服务费，见下方定价。</p>
+
+<p><strong>你赚多少</strong></p>
+<p>基础部署，单平台接入，1000-1500元/套。一个半小时到两小时能搞定。<br>
+进阶部署，多平台接入加prompt调优，2000-3000元/套。三到四小时。<br>
+月度维护费，500-1500元/月。处理小问题、调prompt、加新功能。<br>
+我自己这两周的数据，做了2单，电商朋友那单1500加奶茶店这单2000，一共3500。奶茶店签了月度维护，每月800块。同时电商朋友又介绍了一个做代购的在谈，那单大概率能成。</p>
+
+<p>如果稳定下来，兼职做每月6-8单基础加2-3单进阶，月入8000-12000是稳的。维护合同签得越多越香，因为维护几乎不花时间，大部分就是看看日志、偶尔改改prompt。全职做的话，月入2万完全可以期待。</p>
+
+<p>坦率的讲，利润率比我想的要高。因为你的核心成本就是时间，而时间成本会随着经验积累快速下降。第一单三个小时，第五单可能一个小时就搞定了。</p>
+
+<h2>操作步骤，从零到接单</h2>
+
+<p>如果你看完觉得这个方向可以试试，我把我自己走过的路捋一下。</p>
+
+<p><strong>第一步，把Nanobot自己跑起来</strong></p>
+<p>GitHub上搜HKUDS/nanobot，43000多星那个。安装很简单，pip install nanobot-ai就行，也可以用uv装。<br>
+装完之后跑nanobot onboard，它会引导你做初始化配置。然后在~/.nanobot/config.json里配好你的API key和模型。我用OpenRouter做路由，因为便宜，DeepSeek做主力、Claude Haiku做备选。<br>
+跑nanobot agent启动命令行聊天，测试基本功能。然后再开WebUI，浏览器访问8765端口。<br>
+把每个功能都过一遍，记忆系统、工具调用、定时任务、目标追踪。你自己不熟的话，客户一问就露馅。</p>
+
+<p><strong>第二步，选一个场景深度测试</strong></p>
+<p>别上来就想着做全平台全能型方案。先选一个你最熟悉的场景吃透。<br>
+比如你做电商的，就先测试电商客服场景。你自己注册一个Telegram Bot，配好Nanobot接上去，模拟客户提问，看回答质量。反复调prompt直到你觉得「这回答我要是客户我愿意买单」。<br>
+记住，调prompt是最花时间也最值钱的一步。同样的Nanobot，prompt调得好和调得差，效果天差地别。这也是你收费的底气所在。</p>
+
+<div class="tip">
+<strong>调prompt的一个小技巧，</strong>不要写「你是一个专业的客服机器人」，客户一听就烦。写「你是XX店的店长小助手，说话要像店员一样亲切自然，遇到不确定的问题就说我帮您问一下」。语气设定比知识库还重要。
+</div>
+
+<p><strong>第三步，准备你的服务方案</strong></p>
+<p>我建议分两档。<br>
+基础版，单聊天平台接入，基础prompt配置，一小时培训。收费1000-1500。<br>
+进阶版，多平台接入，定制prompt调优，记忆系统配置，月度维护。收费2000-3000加维护费。<br>
+前期只推基础版，先拿案例。有了三五个成功案例之后，再推进阶版和企业定制。</p>
+
+<p><strong>第四步，找客户</strong></p>
+<p>目标客户画像很清晰，有重复性客服需求但请不起专职客服的微型企业。<br>
+跨境电商小卖家，日咨询50-300单的。<br>
+本地餐饮和零售，有外卖平台和微信群的。<br>
+小工作室和培训机构，需要自动回复咨询的。<br>
+自媒体团队，需要AI帮忙管社群的。<br>
+怎么找？58同城和闲鱼搜「客服」「代回复」，小红书搜「小店铺运营」「一个人开店」，能看到大量有这类需求的老板。或者混进本地商家微信群，先潜水观察谁在抱怨客服问题。<br>
+不要直接上来就推销Nanobot。先问他们现在怎么处理客服，哪里最头疼。他们自己会说出来的。然后你顺水推舟，说我能帮你搞一个自动回复的AI，直接接到你微信/Telegram上，试问你感不感兴趣。</p>
+
+<p><strong>第五步，把经验标准化</strong></p>
+<p>每做一单就记笔记。部署步骤、常见问题、prompt模板、配置参数。三单之后你就能整理出一套标准化流程。<br>
+做成模板脚本之后，新单子的交付时间会急剧缩短。从三个小时到一个小时到一个小时以内。<br>
+交付的时候录一个三分钟的操作视频给客户，教他怎么看日志、怎么重启服务、怎么改简单的配置。大部分小问题他就能自己处理了，减少你的售后负担。</p>
+
+<h2>这活适合什么人</h2>
+
+<p>先说门槛。</p>
+
+<p>你需要会基本的Linux命令行。知道怎么SSH连服务器、装软件、看日志、改配置文件。不要求多深，但基本的操作要溜。</p>
+
+<p>需要用过Docker或者至少了解Docker的概念。Nanobot可以用Docker部署也可以直接pip装，但Docker更干净，推荐。</p>
+
+<p>需要知道AI API是什么，怎么配key，怎么选模型。如果你之前用过ChatGPT的API或者玩过Ollama，这块不是问题。</p>
+
+<p>不需要会写代码。Nanobot的配置全是JSON文件，改参数就行了。<a href="https://www.aitoollab.top/articles/cases/odysseus-self-hosted-ai-workspace-side-hustle-202606/" target="_blank">跟帮人部署self-hosted AI工作区那类活</a>比，技术门槛其实更低，因为Nanobot本身就设计得很轻量。</p>
+
+<p>但有一点特别重要，也是很多人忽略的。你的客户不是技术人员，他们听不懂你说「你的MCP server端口冲突了」或者「你需要换一个模型provider」。你得翻译成人话，说「我帮你调了一下AI的回复速度，现在快多了」。</p>
+
+<p>说到底你卖的不是技术，是解决问题的能力。</p>
+
+<h2>踩过的坑，提前知道能省你不少事</h2>
+
+<p><strong>坑一，微信群接入比你想的麻烦</strong></p>
+<p>Nanobot支持微信，但微信的API限制特别多。需要通过第三方bridge来中转，bridge的稳定性参差不齐。我试了两个bridge，一个经常断连，一个延迟很高。最后选了一个比较稳定的，但还是要定期维护。<br>
+如果你接单涉及微信群，一定要提前跟客户说明白，微信通道的稳定性不如Telegram和飞书，偶尔会有消息丢失或延迟。管理好预期比什么都重要。</p>
+
+<p><strong>坑二，prompt调不好等于白装</strong></p>
+<p>这可能是新手最容易犯的错。把Nanobot装好、接上平台，觉得大功告成了。结果客户一试，AI回答要么太生硬要么答非所问，直接给你差评。<br>
+我跟你说，安装部署只占30%的工作量，70%在调prompt和配置。你得花时间了解客户的业务，知道哪些问题最常被问到，答案的标准格式是什么，语气应该是什么样的。<br>
+我给奶茶店调prompt就花了将近一个小时，反复让老板测试、反馈、再改。这个过程省不掉。</p>
+
+<p><strong>坑三，别给客户装最新版</strong></p>
+<p>Nanobot更新频率极高，几乎每天都有新功能。但最新版有时候有bug，我亲眼见过一次更新之后记忆系统抽风，Agent开始胡说八道。<br>
+给客户装一定要用稳定的release版本。你自己的测试环境可以追最新版，客户的production环境只装经过验证的版本。出了问题你负责，不是GitHub issue负责。</p>
+
+<p><strong>坑四，服务器安全不能偷懒</strong></p>
+<p>有些客户觉得「反正是小生意，安全问题无所谓」。但AI Agent接了他们的聊天平台之后，能读到所有客户消息。如果你的服务器被入侵了，这些数据就全泄露了。<br>
+最基本的操作，改掉所有默认密码，开防火墙只开放必要端口，不要用root运行，定期更新系统。<br>
+这些事做好了你不说客户也不知道，但做不好出了事你百口莫辩。</p>
+
+<div class="warning">
+<strong>再说一个很重要的事，</strong>客户有时候会提出一些Nanobot目前还做不到的需求，比如「能不能自动下单」「能不能对接我的ERP系统」。这时候别硬上，诚实说这个目前做不到，但可以后续迭代加上。承诺了做不到，比一开始就说不行更败人品。
+</div>
+
+<h2>最后说几句</h2>
+
+<p>我写这篇文章的时候一直在想一个事儿。</p>
+
+<p>几个月前AI Agent还是程序员圈子里的玩具，大家折腾各种Agent框架，看它能不能自动写代码、能不能做研究。但最近风向明显变了，Agent开始真正进入业务场景了。上周UBER宣布给员工每月1500美元的AI使用额度，说明大公司已经在认真对待Agent的效率价值。</p>
+
+<p>但大公司有大公司的用法，小企业有小企业的需求。一个日咨询200单的小卖家，不需要什么复杂的Agent编排，他只需要一个能接到微信和Telegram上、自动回常见问题、偶尔调一下库存API的AI就够了。</p>
+
+<p>Nanobot恰好能满足这个需求。43000多星，MIT协议，文档覆盖9种语言，社区活跃度很高。但知道它的普通人还很少，更不知道能用它来赚钱。</p>
+
+<p>我觉得这个窗口期可能就几个月。等到AI Agent部署变得像装WordPress一样简单，这个方向就没那么好做了。但至少现在，需求是真的，供给是缺的，你能做，有人愿付。</p>
+
+<p>我以前在<a href="https://www.aitoollab.top/articles/cases/ai-agent-customization-service/" target="_blank">另一篇文章里提过一个观点</a>，AI时代最值钱的不是AI本身，是帮别人把AI用起来的能力。Nanobot这个方向就是这句话的一个具体注脚。</p>
+
+<p>磨平一些信息差。</p>
+
+        </div>
+
+        <div class="cta">
+            <h3>🎁 我整理了Nanobot AI Agent部署的完整资料包</h3>
+            <p>包含Nanobot一键部署脚本、电商客服/本地商户/社群管理三类场景的prompt模板、常见问题排查手册、客户沟通话术、定价策略参考表。</p>
+            <p>从部署到接单到维护，全套直接拿去用。</p>
+            <a href="https://www.aitoollab.top/prompt-pack/" class="btn" target="_blank">👉 查看提示词包</a>
+        </div>
+
+        <div class="faq">
+            <h2>常见问题</h2>
+
+            <div class="faq-item">
+                <h3>用Nanobot帮小企业做AI自动化，到底能赚多少钱？</h3>
+                <p>单次部署收费1000-3000元，月度维护费500-1500元。兼职做稳定下来月入5000-10000元，全职做月入1.5万-2.5万元。维护合同是持续收入来源，签得越多越稳定。</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>普通人不会编程，能做AI Agent部署服务吗？</h3>
+                <p>需要会基本的Linux命令行操作，会用Docker，知道怎么配环境变量。不需要会写代码，Nanobot的配置都是JSON文件，改几个参数就行。完全零基础的话需要一到两周学习时间，建议先用一台云服务器自己练手。</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Nanobot和ChatGPT有什么区别？适合什么场景？</h3>
+                <p>ChatGPT是通用聊天工具，需要你主动去问。Nanobot是AI Agent，可以自动接入你的Telegram、飞书、钉钉、Slack等聊天平台，自动回复消息、管理日程、处理文件、定时提醒。适合需要把AI嵌入到日常工作流里的小企业和工作室。</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>帮人部署Nanobot需要多少成本投入？</h3>
+                <p>Nanobot完全开源免费，零软件成本。云服务器最低2核4G约99元/月。API费用看客户使用量，用DeepSeek的话一般月消耗50-200元。你前期投入主要是学习时间和一台99元的测试服务器。</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>小企业AI自动化部署的客户从哪里找？</h3>
+                <p>目标客户是有重复性工作需要自动化的微型企业，奶茶店、餐饮连锁、电商工作室、小培训机构、自媒体团队。去58同城、闲鱼、小红书搜本地商家，或者混进本地商家社群。先聊痛点再出方案，成交率远高于直接推销。</p>
+            </div>
+        </div>
+
+        <div class="related">
+            <h3>相关阅读推荐</h3>
+            <ul>
+                <li><a href="https://www.aitoollab.top/articles/cases/odysseus-self-hosted-ai-workspace-side-hustle-202606/" target="_blank">帮人搭建私有化AI工作区月入15000 Odysseus开源项目实操拆解</a></li>
+                <li><a href="https://www.aitoollab.top/articles/cases/zeroclaw-ai-assistant-side-hustle-202605/" target="_blank">帮人搭个人AI助理，我靠ZeroClaw两周赚了5200块</a></li>
+                <li><a href="https://www.aitoollab.top/articles/seo/mcp-side-hustle-2026/" target="_blank">MCP协议到底是什么，普通人怎么靠它赚钱</a></li>
+                <li><a href="https://www.aitoollab.top/articles/cases/local-business-ai-agent/" target="_blank">本地商家怎么用AI Agent获客，一个实操案例</a></li>
+                <li><a href="https://www.aitoollab.top/articles/seo/multi-agent-side-hustle/" target="_blank">多Agent协作赚钱的3个方向，普通人也能做</a></li>
+            </ul>
+        </div>
+
+        <div class="footer">
+            <p>© 2026 AiToollab · 用AI帮普通人多赚一点</p>
+        </div>
+    </article>
+</body>
+</html>
