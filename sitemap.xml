@@ -49,6 +49,12 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://www.aitoollab.top/articles/cases/ai-claude-md-documentation-service-side-hustle-20260608/</loc>
+    <lastmod>2026-06-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
     <loc>https://www.aitoollab.top/articles/cases/ai-code-review-service-side-hustle-20260607/</loc>
     <lastmod>2026-06-08</lastmod>
     <changefreq>weekly</changefreq>
@@ -152,6 +158,12 @@
   </url>
   <url>
     <loc>https://www.aitoollab.top/articles/cases/ai-token-save-side-hustle-202605/</loc>
+    <lastmod>2026-06-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.aitoollab.top/articles/cases/ai-video-subtitle-translation-service-side-hustle-20260608/</loc>
     <lastmod>2026-06-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -421,6 +433,12 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://www.aitoollab.top/articles/news/claude-code-replace-figma-ai-design-side-hustle-20260608/</loc>
+    <lastmod>2026-06-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
     <loc>https://www.aitoollab.top/articles/news/claude-mythos-metr-benchmark/</loc>
     <lastmod>2026-06-08</lastmod>
     <changefreq>weekly</changefreq>
@@ -578,6 +596,12 @@
   </url>
   <url>
     <loc>https://www.aitoollab.top/articles/news/vibe-coding-side-hustle-20260525/</loc>
+    <lastmod>2026-06-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.aitoollab.top/articles/seo/ai-art-side-hustle-2026-w24/</loc>
     <lastmod>2026-06-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -876,10 +900,4 @@
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-    <url>
-        <loc>https://www.aitoollab.top/articles/seo/ai-art-side-hustle-2026-w24/</loc>
-        <lastmod>2026-06-08</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
 </urlset>
