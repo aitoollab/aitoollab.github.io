@@ -25,13 +25,28 @@ def enrich_project(item):
     import subprocess
     
     url = item.get("url", "")
-    name = item.get("name", "")
+    name = item.get("name", "") or item.get("repo", "")
     
     print(f"  分析: {name}")
     
     # 抓取 GitHub README 完整内容
     owner_repo = name
     readme_url = f"https://raw.githubusercontent.com/{owner_repo}/main/README.md"
+    
+    # 跳过非 GitHub repo 格式的项目（如 HN stories）
+    if "/" not in owner_repo or " " in owner_repo or owner_repo == "?":
+        item["enriched"] = True
+        item["analysis"] = {
+            "installable": False,
+            "has_api": False,
+            "has_pricing": False,
+            "has_docs": False,
+            "has_examples": False,
+            "readme_length": 0,
+            "readme_sections": 0
+        }
+        item["readme_full"] = ""
+        return item
     
     try:
         import urllib.request
@@ -97,10 +112,10 @@ def main():
     
     for i, item in enumerate(candidates[:3]):  # 每次最多分析3个
         candidates[i] = enrich_project(item)
-        # 写回原始状态结构
-        for j, orig in enumerate(state["discovered"]["github"]):
-            if orig.get("name") == item.get("name"):
-                state["discovered"]["github"][j] = item
+        # 写回 top_candidates 列表
+        for j, orig in enumerate(state.get("top_candidates", [])):
+            if orig.get("repo") == item.get("repo"):
+                state["top_candidates"][j] = item
                 break
     
     save_state(state)
