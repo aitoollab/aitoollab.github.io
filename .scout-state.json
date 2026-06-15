@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-06-12T04:46:39.200612",
+  "last_updated": "2026-06-16T04:46:44.670142",
   "candidate_pool_total": 58,
-  "analyzed_count": 48,
+  "analyzed_count": 120,
   "top_candidates": [
     {
       "repo": "AI-NextGenApps/AI-IMG-VID-App",
@@ -129,7 +129,17 @@
       "has_pricing": false,
       "installable": false,
       "stars": 0,
-      "note": "enriched — install=False, api=True, pricing=False, docs=False"
+      "note": "enriched — install=False, api=True, pricing=False, docs=False",
+      "enriched": true,
+      "analysis": {
+        "installable": false,
+        "has_api": false,
+        "has_pricing": false,
+        "has_docs": false,
+        "has_examples": false,
+        "readme_length": 0
+      },
+      "readme_full": ""
     },
     {
       "repo": "Show HN: Semble – Code search for agents that uses 98% fewer tokens than grep",
@@ -137,7 +147,17 @@
       "has_pricing": true,
       "installable": true,
       "stars": 0,
-      "note": "enriched — install=True, api=True, pricing=True, docs=True"
+      "note": "enriched — install=True, api=True, pricing=True, docs=True",
+      "enriched": true,
+      "analysis": {
+        "installable": false,
+        "has_api": false,
+        "has_pricing": false,
+        "has_docs": false,
+        "has_examples": false,
+        "readme_length": 0
+      },
+      "readme_full": ""
     },
     {
       "repo": "Prolog Basics Explained with Pokémon",
@@ -145,7 +165,17 @@
       "has_pricing": false,
       "installable": true,
       "stars": 0,
-      "note": "enriched — install=True, api=True, pricing=False, docs=True"
+      "note": "enriched — install=True, api=True, pricing=False, docs=True",
+      "enriched": true,
+      "analysis": {
+        "installable": false,
+        "has_api": false,
+        "has_pricing": false,
+        "has_docs": false,
+        "has_examples": false,
+        "readme_length": 0
+      },
+      "readme_full": ""
     },
     {
       "repo": "?",
@@ -153,7 +183,17 @@
       "has_pricing": false,
       "installable": false,
       "stars": 0,
-      "note": "enriched — install=False, api=False, pricing=False, docs=False"
+      "note": "enriched — install=False, api=False, pricing=False, docs=False",
+      "enriched": true,
+      "analysis": {
+        "installable": false,
+        "has_api": false,
+        "has_pricing": false,
+        "has_docs": false,
+        "has_examples": false,
+        "readme_length": 0
+      },
+      "readme_full": ""
     },
     {
       "repo": "?",
@@ -161,7 +201,17 @@
       "has_pricing": false,
       "installable": true,
       "stars": 0,
-      "note": "enriched — install=True, api=True, pricing=False, docs=False"
+      "note": "enriched — install=True, api=True, pricing=False, docs=False",
+      "enriched": true,
+      "analysis": {
+        "installable": false,
+        "has_api": false,
+        "has_pricing": false,
+        "has_docs": false,
+        "has_examples": false,
+        "readme_length": 0
+      },
+      "readme_full": ""
     },
     {
       "repo": "?",
@@ -169,7 +219,17 @@
       "has_pricing": true,
       "installable": false,
       "stars": 0,
-      "note": "enriched — install=False, api=False, pricing=True, docs=False"
+      "note": "enriched — install=False, api=False, pricing=True, docs=False",
+      "enriched": true,
+      "analysis": {
+        "installable": false,
+        "has_api": false,
+        "has_pricing": false,
+        "has_docs": false,
+        "has_examples": false,
+        "readme_length": 0
+      },
+      "readme_full": ""
     },
     {
       "repo": "Two EA-18 fighter jets collide at Mountain Home airshow, pilots ejected safely",
@@ -177,7 +237,17 @@
       "has_pricing": true,
       "installable": true,
       "stars": 0,
-      "note": "enriched — install=True, api=False, pricing=True, docs=True"
+      "note": "enriched — install=True, api=False, pricing=True, docs=True",
+      "enriched": true,
+      "analysis": {
+        "installable": false,
+        "has_api": false,
+        "has_pricing": false,
+        "has_docs": false,
+        "has_examples": false,
+        "readme_length": 0
+      },
+      "readme_full": ""
     },
     {
       "repo": "WriteUp: 16 Bytes of x86 that turn Matrix rain into sound",
@@ -185,7 +255,17 @@
       "has_pricing": false,
       "installable": true,
       "stars": 0,
-      "note": "enriched — install=True, api=False, pricing=False, docs=False"
+      "note": "enriched — install=True, api=False, pricing=False, docs=False",
+      "enriched": true,
+      "analysis": {
+        "installable": false,
+        "has_api": false,
+        "has_pricing": false,
+        "has_docs": false,
+        "has_examples": false,
+        "readme_length": 0
+      },
+      "readme_full": ""
     },
     {
       "repo": "agentic-in/elephant-agent",
@@ -253,7 +333,17 @@
       "has_pricing": true,
       "installable": true,
       "stars": 0,
-      "note": "enriched — install=True, api=True, pricing=True, docs=True"
+      "note": "enriched — install=True, api=True, pricing=True, docs=True",
+      "enriched": true,
+      "analysis": {
+        "installable": false,
+        "has_api": false,
+        "has_pricing": false,
+        "has_docs": false,
+        "has_examples": false,
+        "readme_length": 0
+      },
+      "readme_full": ""
     },
     {
       "repo": "jianshuo/ccglass",
@@ -341,7 +431,17 @@
       "has_pricing": true,
       "installable": false,
       "stars": 0,
-      "note": "enriched — install=False, api=False, pricing=True, docs=True"
+      "note": "enriched — install=False, api=False, pricing=True, docs=True",
+      "enriched": true,
+      "analysis": {
+        "installable": false,
+        "has_api": false,
+        "has_pricing": false,
+        "has_docs": false,
+        "has_examples": false,
+        "readme_length": 0
+      },
+      "readme_full": ""
     },
     {
       "repo": "lynote-ai/humanize-text",
@@ -1049,7 +1149,17 @@
       "has_pricing": true,
       "installable": true,
       "stars": 0,
-      "note": "enriched — install=True, api=False, pricing=True, docs=True"
+      "note": "enriched — install=True, api=False, pricing=True, docs=True",
+      "enriched": true,
+      "analysis": {
+        "installable": false,
+        "has_api": false,
+        "has_pricing": false,
+        "has_docs": false,
+        "has_examples": false,
+        "readme_length": 0
+      },
+      "readme_full": ""
     },
     {
       "repo": "?",
@@ -1057,7 +1167,17 @@
       "has_pricing": true,
       "installable": false,
       "stars": 0,
-      "note": "enriched — install=False, api=True, pricing=True, docs=True"
+      "note": "enriched — install=False, api=True, pricing=True, docs=True",
+      "enriched": true,
+      "analysis": {
+        "installable": false,
+        "has_api": false,
+        "has_pricing": false,
+        "has_docs": false,
+        "has_examples": false,
+        "readme_length": 0
+      },
+      "readme_full": ""
     },
     {
       "repo": "?",
@@ -1065,7 +1185,17 @@
       "has_pricing": false,
       "installable": false,
       "stars": 0,
-      "note": "enriched — install=False, api=False, pricing=False, docs=False"
+      "note": "enriched — install=False, api=False, pricing=False, docs=False",
+      "enriched": true,
+      "analysis": {
+        "installable": false,
+        "has_api": false,
+        "has_pricing": false,
+        "has_docs": false,
+        "has_examples": false,
+        "readme_length": 0
+      },
+      "readme_full": ""
     },
     {
       "repo": "AI is a technology not a product",
@@ -1073,7 +1203,17 @@
       "has_pricing": false,
       "installable": false,
       "stars": 0,
-      "note": "enriched — install=False, api=True, pricing=False, docs=False"
+      "note": "enriched — install=False, api=True, pricing=False, docs=False",
+      "enriched": true,
+      "analysis": {
+        "installable": false,
+        "has_api": false,
+        "has_pricing": false,
+        "has_docs": false,
+        "has_examples": false,
+        "readme_length": 0
+      },
+      "readme_full": ""
     },
     {
       "repo": "Show HN: Semble – Code search for agents that uses 98% fewer tokens than grep",
@@ -1081,7 +1221,17 @@
       "has_pricing": true,
       "installable": true,
       "stars": 0,
-      "note": "enriched — install=True, api=True, pricing=True, docs=True"
+      "note": "enriched — install=True, api=True, pricing=True, docs=True",
+      "enriched": true,
+      "analysis": {
+        "installable": false,
+        "has_api": false,
+        "has_pricing": false,
+        "has_docs": false,
+        "has_examples": false,
+        "readme_length": 0
+      },
+      "readme_full": ""
     },
     {
       "repo": "Prolog Basics Explained with Pokémon",
@@ -1089,7 +1239,17 @@
       "has_pricing": false,
       "installable": true,
       "stars": 0,
-      "note": "enriched — install=True, api=True, pricing=False, docs=True"
+      "note": "enriched — install=True, api=True, pricing=False, docs=True",
+      "enriched": true,
+      "analysis": {
+        "installable": false,
+        "has_api": false,
+        "has_pricing": false,
+        "has_docs": false,
+        "has_examples": false,
+        "readme_length": 0
+      },
+      "readme_full": ""
     },
     {
       "repo": "?",
@@ -1097,7 +1257,17 @@
       "has_pricing": false,
       "installable": false,
       "stars": 0,
-      "note": "enriched — install=False, api=False, pricing=False, docs=False"
+      "note": "enriched — install=False, api=False, pricing=False, docs=False",
+      "enriched": true,
+      "analysis": {
+        "installable": false,
+        "has_api": false,
+        "has_pricing": false,
+        "has_docs": false,
+        "has_examples": false,
+        "readme_length": 0
+      },
+      "readme_full": ""
     },
     {
       "repo": "?",
@@ -1105,7 +1275,17 @@
       "has_pricing": false,
       "installable": true,
       "stars": 0,
-      "note": "enriched — install=True, api=True, pricing=False, docs=False"
+      "note": "enriched — install=True, api=True, pricing=False, docs=False",
+      "enriched": true,
+      "analysis": {
+        "installable": false,
+        "has_api": false,
+        "has_pricing": false,
+        "has_docs": false,
+        "has_examples": false,
+        "readme_length": 0
+      },
+      "readme_full": ""
     },
     {
       "repo": "?",
@@ -1113,7 +1293,17 @@
       "has_pricing": true,
       "installable": false,
       "stars": 0,
-      "note": "enriched — install=False, api=False, pricing=True, docs=False"
+      "note": "enriched — install=False, api=False, pricing=True, docs=False",
+      "enriched": true,
+      "analysis": {
+        "installable": false,
+        "has_api": false,
+        "has_pricing": false,
+        "has_docs": false,
+        "has_examples": false,
+        "readme_length": 0
+      },
+      "readme_full": ""
     },
     {
       "repo": "Two EA-18 fighter jets collide at Mountain Home airshow, pilots ejected safely",
@@ -1121,7 +1311,17 @@
       "has_pricing": true,
       "installable": true,
       "stars": 0,
-      "note": "enriched — install=True, api=False, pricing=True, docs=True"
+      "note": "enriched — install=True, api=False, pricing=True, docs=True",
+      "enriched": true,
+      "analysis": {
+        "installable": false,
+        "has_api": false,
+        "has_pricing": false,
+        "has_docs": false,
+        "has_examples": false,
+        "readme_length": 0
+      },
+      "readme_full": ""
     },
     {
       "repo": "WriteUp: 16 Bytes of x86 that turn Matrix rain into sound",
@@ -1129,7 +1329,17 @@
       "has_pricing": false,
       "installable": true,
       "stars": 0,
-      "note": "enriched — install=True, api=False, pricing=False, docs=False"
+      "note": "enriched — install=True, api=False, pricing=False, docs=False",
+      "enriched": true,
+      "analysis": {
+        "installable": false,
+        "has_api": false,
+        "has_pricing": false,
+        "has_docs": false,
+        "has_examples": false,
+        "readme_length": 0
+      },
+      "readme_full": ""
     },
     {
       "repo": "agentic-in/elephant-agent",
@@ -1197,7 +1407,17 @@
       "has_pricing": true,
       "installable": true,
       "stars": 0,
-      "note": "enriched — install=True, api=True, pricing=True, docs=True"
+      "note": "enriched — install=True, api=True, pricing=True, docs=True",
+      "enriched": true,
+      "analysis": {
+        "installable": false,
+        "has_api": false,
+        "has_pricing": false,
+        "has_docs": false,
+        "has_examples": false,
+        "readme_length": 0
+      },
+      "readme_full": ""
     },
     {
       "repo": "jianshuo/ccglass",
@@ -1285,7 +1505,17 @@
       "has_pricing": true,
       "installable": false,
       "stars": 0,
-      "note": "enriched — install=False, api=False, pricing=True, docs=True"
+      "note": "enriched — install=False, api=False, pricing=True, docs=True",
+      "enriched": true,
+      "analysis": {
+        "installable": false,
+        "has_api": false,
+        "has_pricing": false,
+        "has_docs": false,
+        "has_examples": false,
+        "readme_length": 0
+      },
+      "readme_full": ""
     },
     {
       "repo": "lynote-ai/humanize-text",
@@ -1915,7 +2145,20 @@
       "has_pricing": false,
       "installable": false,
       "stars": 27,
-      "note": "enriched — install=False, api=False, pricing=False, docs=False"
+      "note": "enriched — install=False, api=False, pricing=False, docs=False",
+      "enriched": true,
+      "analysis": {
+        "has_installation": false,
+        "has_api": true,
+        "has_pricing": false,
+        "has_docs": true,
+        "has_examples": true,
+        "readme_length": 6909,
+        "analyzed_at": "2026-06-16T04:46:43.585754"
+      },
+      "readme_full": "<div align=\"center\">\n\n<picture>\n  <source media=\"(prefers-color-scheme: dark)\" srcset=\"assets/forge-wordmark-transparent.png\">\n  <img src=\"assets/forge-wordmark.png\" alt=\"Forge\" width=\"420\">\n</picture>\n\n**Make multiple coding agents collaborate on one repo — without stepping on each other.**\n\n[![CI](https://github.com/ForgeAILab/forge/actions/workflows/ci.yml/badge.svg)](https://github.com/ForgeAILab/forge/actions/workflows/ci.yml)\n[![Release](https://img.shields.io/github/v/release/ForgeAILab/forge?include_prereleases&sort=semver)](https://github.com/ForgeAILab/forge/releases)\n[![npm](https://img.shields.io/npm/v/@forgeailab/forge)](https://www.npmjs.com/package/@forgeailab/forge)\n[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)\n[![Status: public beta](https://img.shields.io/badge/status-public%20beta-orange.svg)](#status)\n\nForge gives every task its own isolated git worktree, then runs your CI gate and\nreview step before changes touch `main`. Drive Claude Code, Codex, Cursor,\nGemini, opencode, and your own shell agents through one local-first task\nlifecycle — REST API, MCP endpoint, CLI, and web UI in a single binary.\nSelf-hosted, MIT, no cloud.\n\n[Quickstart](#5-minute-quickstart) · [Why Forge](#why-forge) · [Docs](docs/) · [Changelog](CHANGELOG.md) · [Contributing](CONTRIBUTING.md)\n\n</div>\n\n---\n\n## Why Forge\n\nRunning two coding agents against the same repo is how you lose diffs. Forge fixes\nthat: every task runs in its own git worktree, hits your CI gate, and waits for\nreview before it merges. **Agents collaborate; they don't collide.**\n\n- **One isolated git worktree per task** — Claude Code, Codex, Cursor, and Gemini can each work in parallel without overwriting each other or polluting your main checkout.\n- **Review gate with your CI** — define `ci_steps` per task; the review runner blocks merge until they pass. Human approval is an explicit transition, not an afterthought.\n- **Structured task lifecycle** — `todo → in_progress → review → merging → done`, with an audit log and explicit cancellation paths so handoffs between agents (and humans) are legible.\n- **BYO agent** — first-class adapters for Claude Code, Codex, Cursor, Gemini, opencode, and a generic shell executor. Add your own with a small adapter.\n- **One binary, every surface** — REST API, MCP JSON-RPC, `forge-ctl` CLI, and a React web UI ship together. Drive Forge from a script, an editor, or a browser.\n- **Local-first by default** — single binary, SQLite, loopback-only server with a persisted local port. No telemetry, no SaaS, your data stays on disk.\n\n## Who it's for\n\n- **Developers already running more than one coding agent** (Claude Code + Codex, Cursor + Gemini, …) who keep losing diffs to branch collisions or shared-tree edits.\n- **Small engineering teams** piloting agent workflows who need worktree isolation, audit trails, and a review gate before code lands on `main`.\n- **Builders** who want a local, hackable control plane for AI coding work — not another hosted dashboard.\n\nIf you only want a chat UI bolted onto your editor, Forge is not for you. Try Continue or Cline instead.\n\n## 5-minute quickstart\n\n```bash\n# Run instantly through npm (macOS / Linux)\nnpx @forgeailab/forge --demo\n\n# Install via Homebrew (macOS / Linux)\nbrew install forgeailab/tap/forge\n\n# Or grab the latest release directly\ncurl -fsSL https://raw.githubusercontent.com/ForgeAILab/forge/main/install.sh | bash\n\n# Start the server with seeded demo data if you installed it locally\nforge --demo\n```\n\nOpen the `management_url` printed in the server logs. That's it — you should\nsee a demo project with a labelled task and a fake daemon report. From here:\n\n- Drive a real task end-to-end → [docs/getting-started.md](docs/getting-started.md)\n- Wire up Claude Code / Codex / Cursor / Gemini → [docs/getting-started.md#agents](docs/getting-started.md#configuring-agents)\n- Hit the API directly → [docs/api.md](docs/api.md)\n\nPrefer to build from source? `cargo run -p forge-cli -- --demo`.\n\n## Core concepts\n\n<picture>\n  <img src=\"assets/screenshots/board.png\" alt=\"Forge kanban board showing tasks across backlog, todo, in_progress, review, and done columns\">\n</picture>\n\n| Concept | What it is |\n|---|---|\n| **Project** | A workspace grouping repos, tasks, agents, and a workflow definition. |\n| **Repo** | A pointer to a local git checkout that tasks operate on. |\n| **Task** | A unit of agent work with a state, optional CI steps, and an audit log. |\n| **Agent** | A registered AI executor (Claude Code, Codex, Cursor, shell, …) bound to a daemon. |\n| **Daemon** | The local process that reports installed CLIs and runs executions. |\n| **Worktree** | An isolated git checkout created per task, cleaned up on `done`/`cancelled`. |\n| **Review gate** | The CI steps + optional human approval that block `review → merging`. |\n\n<table>\n  <tr>\n    <td width=\"50%\"><img src=\"assets/screenshots/task-detail.png\" alt=\"Task detail page with status, assignees by role, observability met",
+      "research_score": 93,
+      "enriched_at": "2026-06-16T04:46:43.585777"
     },
     {
       "repo": "wailers9/bragi",
@@ -1923,7 +2166,20 @@
       "has_pricing": false,
       "installable": false,
       "stars": 21,
-      "note": "enriched — install=False, api=False, pricing=False, docs=False"
+      "note": "enriched — install=False, api=False, pricing=False, docs=False",
+      "enriched": true,
+      "analysis": {
+        "has_installation": true,
+        "has_api": true,
+        "has_pricing": true,
+        "has_docs": true,
+        "has_examples": true,
+        "readme_length": 10000,
+        "analyzed_at": "2026-06-16T04:46:43.854166"
+      },
+      "readme_full": "# Bragi\n\n现有能够生成小说的 Agent 常常受限于短期记忆，容易出现角色情节设定冲突的问题。Bragi 通过标准化的时空规范和人物事件记录解决了这一问题，让agent每次都能带着世界记忆继续创作。\n\nBragi 是一个面向幻想创作者的 AI 架空世界与互动故事引擎。给它一句世界设定，它会像搭建一座会呼吸的宇宙一样，生成历史、地理、角色、事件和剧情，并在后续创作中持续记住这些设定。\n\nBragi 会把世界拆成可追踪的时间路径和空间路径，只在需要时扩展节点，让故事既能不断变大，又不会把所有信息一次性塞进上下文。你可以用它生成架空大陆、未来都市、魔法王朝、诡异海域、群像冒险，甚至让同一个世界持续写成长期连载。\n\n## 核心能力\n\n- **一句话生成架空世界**：从简单提示开始，生成世界概览、底层规则、历史脉络和空间结构。\n- **时间与空间双树结构**：用 `1,2,3` 这样的数字路径定位历史阶段和地点层级，方便持续扩展。\n- **按需补全世界细节**：当前剧情所处的时间和地点保留完整内容，附近节点保留摘要，需要时再扩写。\n- **自动生成角色网络**：生成主角、配角、关系、状态变化，并在故事推进时更新人物。\n- **持续写故事**：根据世界观、当前地点、历史事件、角色状态和用户方向继续生成剧情。\n- **事件与上下文管理**：自动记录公开事件、个人事件、主角选择、管理器提示和 token 用量。\n- **CLI + Web UI**：既能在命令行跑完整流程，也能打开本地黑白可视化界面操作。\n- **多 Agent 支持**：内置本地 Demo Agent，也支持 OpenAI 和 DeepSeek JSON Agent。\n\n## 界面预览\n\nBragi 提供一个本地 Web UI，用来创建世界、初始化时间与空间、生成故事片段，并查看当前路径、节点摘要、角色变化和事件更新。\n\n<p align=\"center\">\n  <img width=\"100%\" alt=\"Bragi 本地 Web 可视化界面预览\" src=\"https://github.com/user-attachments/assets/2614dc5c-403d-45e5-af79-b2472785f051\" />\n</p>\n\n## 项目结构\n\n```text\n.\n├── config/                 # 默认配置和示例配置\n├── docs/                   # 架构说明\n├── src/story_world/        # 核心代码\n│   ├── agents.py           # Demo / OpenAI / DeepSeek Agent\n│   ├── cli.py              # 命令行入口\n│   ├── generator.py        # 世界生成与节点扩展\n│   ├── story.py            # 故事会话管理\n│   ├── characters.py       # 角色生成与更新\n│   ├── storage.py          # 世界文件存储\n│   └── web.py              # 本地 Web UI\n├── tests/                  # 单元测试\n└── runtime/                # 运行时生成内容，默认不提交\n```\n\n更细的模块边界见 [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)。\n\n## 环境要求\n\n- Python `3.10+`\n- 推荐使用虚拟环境\n- 可选：OpenAI API Key，用于真实 GPT 生成\n- 可选：DeepSeek API Key，用于 DeepSeek 生成\n\n本地 Demo Agent 不需要任何外部 API，适合先验证流程。\n\n## 安装\n\n克隆仓库：\n\n```bash\ngit clone https://github.com/wailers9/bragi.git\ncd bragi\n```\n\n创建虚拟环境：\n\nmacOS / Linux：\n\n```bash\npython3 -m venv .venv\nsource .venv/bin/activate\n```\n\nWindows PowerShell：\n\n```powershell\npython -m venv .venv\n.\\.venv\\Scripts\\Activate.ps1\n```\n\n安装项目：\n\n```bash\npython -m pip install -U pip\npython -m pip install -e .\n```\n\n如果你要运行测试：\n\n```bash\npython -m pip install pytest\npython -m pytest -q\n```\n\n## 配置 API Key\n\n### OpenAI\n\nmacOS / Linux：\n\n```bash\nexport OPENAI_API_KEY=\"你的 OpenAI API Key\"\n```\n\nWindows PowerShell：\n\n```powershell\n$env:OPENAI_API_KEY=\"你的 OpenAI API Key\"\n```\n\n使用 OpenAI 时，默认模型写在 `config/worldgen.json`：\n\n```json\n{\n  \"agent\": {\n    \"default_agent\": \"demo\",\n    \"model\": \"gpt-5.5\",\n    \"reasoning_effort\": null,\n    \"temperature\": 0.95,\n    \"top_p\": 0.98\n  }\n}\n```\n\n你也可以在命令里临时覆盖：\n\n```bash\n--agent openai --model gpt-5.5\n```\n\n### DeepSeek\n\nmacOS / Linux：\n\n```bash\nexport DEEPSEEK_API_KEY=\"你的 DeepSeek API Key\"\n```\n\nWindows PowerShell：\n\n```powershell\n$env:DEEPSEEK_API_KEY=\"你的 DeepSeek API Key\"\n```\n\n使用方式：\n\n```bash\n--agent deepseek --model deepseek-chat\n```\n\n### 模型建议\n\n建议优先使用 `deepseek-chat` 写故事。它的成本和速度更适合长篇互动生成，也更适合频繁续写、更新角色和推进事件。\n\n如果你想要更强的世界观搭建能力，可以先用 `gpt-5.5` 生成世界、初始化时间和空间节点，再用 `deepseek-chat` 承担后续故事续写：\n\nmacOS / Linux：\n\n```bash\nPYTHONPATH=src python -m story_world.cli init-demo \\\n  --agent openai \\\n  --model gpt-5.5 \\\n  --prompt \"一个被月亮潮汐撕裂的海上王国\" \\\n  --time-id 1,2,3 \\\n  --space-id 2,1,1 \\\n  --protagonist \"年轻的灯塔学徒\"\n\nPYTHONPATH=src python -m story_world.cli story-start \\\n  --agent deepseek \\\n  --model deepseek-chat \\\n  --world-id \"<world_id>\" \\\n  --time-id 1,2,3 \\\n  --space-id 2,1,1 \\\n  --protagonist \"年轻的灯塔学徒\"\n```\n\nWindows PowerShell：\n\n```powershell\n$env:PYTHONPATH=\"src\"\npython -m story_world.cli init-demo `\n  --agent openai `\n  --model gpt-5.5 `\n  --prompt \"一个被月亮潮汐撕裂的海上王国\" `\n  --time-id 1,2,3 `\n  --space-id 2,1,1 `\n  --protagonist \"年轻的灯塔学徒\"\n\npython -m story_world.cli story-start `\n  --agent deepseek `\n  --model deepseek-chat `\n  --world-id \"<world_id>\" `\n  --time-id 1,2,3 `\n  --space-id 2,1,1 `\n  --protagonist \"年轻的灯塔学徒\"\n```\n\n## 配置文件\n\n默认会读取：\n\n```text\nconfig/worldgen.json\n```\n\n如果你想保留自己的配置，可以复制示例：\n\nmacOS / Linux：\n\n```bash\ncp config/worldgen.example.json config/worldgen.local.json\n```\n\nWindows PowerShell：\n\n```powershell\nCopy-Item config\\worldgen.example.json config\\worldgen.local.json\n```\n\n然后运行命令时指定：\n\n```bash\n--config config/worldgen.local.json\n```\n\n常用配置项：\n\n- `runtime.worlds_root`：生成世界保存目录，默认 `runtime/worlds`\n- `space_depth`：空间树深度\n- `history_depth`：历史树深度\n- `space_default_branching`：每层空间分支数量\n- `history_default_branching`：每层历史分支数量\n- `world_generation.personal_requirements`：世界生成偏好\n- `story.generation_requirements`：故事写作风格要求\n- `story.min_story_chars`：单段故事最低字数\n- `story.story_length_mode`：故事长度模式，支持 `normal`、`long`、`infinite`\n- `story.update_cadence`：时间和地点更新节奏，支持 `slower`、`normal`、`faster`\n\n## 快速开始：本地 Demo\n\n不配置 API，也可以先跑通完整世界初始化流程：\n\nmacOS / Linux：\n\n```bash\nPYTHONPATH=src python -m story_world.cli init-demo \\\n  --prompt \"一个漂浮群岛上的魔法工业时代\" \\\n  --time-id 2,1,3 \\\n  --space-id 1,2,2 \\\n  --protagonist \"年轻的飞艇机械师\"\n```\n\nWindows PowerShell：\n\n```powershell\n$env:PYTHONPATH=\"src\"\npython -m story_world.cli init-demo `\n  --prompt \"一个漂浮群岛上的魔法工业时代\" `\n  --time-id 2,1,3 `\n  --space-id 1,2,2 `\n  --protagonist \"年轻的飞艇机械师\"\n```\n\n输出里会包含 `world_id`，后续扩展世界和写故事都要用它。\n\n运行后生成内容会保存在：\n\n```text\nruntime/worlds/<w",
+      "research_score": 100,
+      "enriched_at": "2026-06-16T04:46:43.854191"
     },
     {
       "repo": "wdnmd1265/ai-flow-architect",
@@ -1931,7 +2187,20 @@
       "has_pricing": false,
       "installable": false,
       "stars": 15,
-      "note": "enriched — install=False, api=False, pricing=False, docs=False"
+      "note": "enriched — install=False, api=False, pricing=False, docs=False",
+      "enriched": true,
+      "analysis": {
+        "has_installation": true,
+        "has_api": true,
+        "has_pricing": false,
+        "has_docs": true,
+        "has_examples": false,
+        "readme_length": 10000,
+        "analyzed_at": "2026-06-16T04:46:44.131016"
+      },
+      "readme_full": "<p align=\"center\">\n  <img src=\"docs/img/logo.svg\" alt=\"Audison\" width=\"500\" />\n</p>\n\n<p align=\"center\">\n  <strong>Two AIs review. A third attacks. You get the truth.</strong>\n</p>\n\n---\n\n## Why I built this\n\nI started using AI-generated code. The reviews it gave me were confident, but wrong — not obviously wrong. A SQL injection here, a race condition there. Things that looked right at a glance.\n\nA single model cannot discover its own blind spots. It reads its output with the same training data, the same biases, the same weak points. It's one person grading their own homework.\n\nSo I asked: what if two models review independently, and a third actively tries to break the output? Not a vote — an adversarial process. Red team vs. blue team, with a neutral arbiter.\n\nThat's the idea. Everything else — the 8 providers, the fallback network, the evidence chain — is engineering.\n\n---\n\n<p align=\"center\">\n  <a href=\"https://wdnmd1265.github.io/Audison/playground.html\"><strong>🎮 Try it live →</strong></a>\n</p>\n\n<p align=\"center\">\n  <a href=\"https://www.python.org/downloads/\"><img src=\"https://img.shields.io/badge/python-3.9%2B-3776AB.svg\" alt=\"Python 3.9+\"></a>\n  <a href=\"LICENSE\"><img src=\"https://img.shields.io/badge/license-Apache%202.0-4CAF50.svg\" alt=\"License\"></a>\n  <a href=\"https://github.com/wdnmd1265/Audison/actions\"><img src=\"https://img.shields.io/badge/tests-186%20passing-4CAF50.svg\" alt=\"Tests\"></a>\n  <a href=\"https://wdnmd1265.github.io/Audison/playground.html\"><img src=\"https://img.shields.io/badge/playground-live-58a6ff.svg\" alt=\"Playground\"></a>\n  <a href=\"https://wdnmd1265.github.io/Audison/\"><img src=\"https://img.shields.io/badge/docs-deployed-success.svg\" alt=\"GitHub Pages\"></a>\n</p>\n\n<p align=\"center\">\n  <a href=\"#why-i-built-this\">Why</a> &middot;\n  <a href=\"#before--after\">Before/After</a> &middot;\n  <a href=\"#design-notes\">Design Notes</a> &middot;\n  <a href=\"#quick-start\">Quick Start</a> &middot;\n  <a href=\"#how-it-works\">Pipeline</a> &middot;\n  <a href=\"#trustengine\">TrustEngine</a> &middot;\n  <a href=\"README_CN.md\">中文</a>\n</p>\n\n---\n\n## Before / After\n\n### Before: Single-AI Review\n\n```\n┌─────────────────────────────────────────────────────┐\n│ You ask an AI to write a login handler.              │\n│ It comes back confident:                             │\n│                                                     │\n│   def login(username, password):                    │\n│       query = \"SELECT * FROM users \"                │\n│       query += \"WHERE name='\" + username + \"'\"      │\n│       query += \" AND password='\" + hash(password)   │\n│       return db.execute(query)                      │\n│                                                     │\n│ A single AI reviewer says: \"Looks fine.\"            │\n│                                                     │\n│ ❌ SQL injection in line 3 — missed.                 │\n│ ❌ hash() is not cryptographic — missed.             │\n│ ❌ No rate limiting — missed.                        │\n│                                                     │\n│ One model. One perspective. Three blind spots.       │\n└─────────────────────────────────────────────────────┘\n```\n\n### After: audison Adversarial Audit\n\n```\n┌──────────────────────────────────────────────────────────┐\n│ Brain One (GPT-4o): Primary audit — flags SQL injection, │\n│   unsafe hash, missing rate limit.                       │\n│                                                          │\n│ Opponent Brain (Claude 3.5 Sonnet): Attacks the same     │\n│   code from 5 adversarial angles — confirms Brain One's  │\n│   findings, adds: race condition in session renewal.     │\n│                                                          │\n│ Cross-Verification: Where they agree → confirmed finding.│\n│   Where they disagree → flagged UNCERTAIN, not hidden.   │\n│                                                          │\n│ TrustReport — REJECT (confidence 32/100)                 │\n│                                                          │\n│ > [CRITICAL] SQL Injection — username concatenated       │\n│   directly into query string at line 3                   │\n│   \"Attacker input ' OR 1=1 --  bypasses auth entirely\"   │\n│                                                          │\n│ > [HIGH] Unsafe Hash — hash() is not a cryptographic     │\n│   function. Use bcrypt or argon2.                        │\n│                                                          │\n│ > [MEDIUM] Missing Rate Limit — brute-forceable in       │\n│   under 10 minutes. Add exponential backoff.             │\n│                                                          │\n│ > [!] UNCERTAIN: Race condition in session renewal —     │\n│   arbiters disagree. Manual review recommended.          │\n│                                                          │\n│ Evidence chain: a1b2c3... (SHA-256, verifiable)          │\n│                                                          │\n│ ✅ Multi-model consensus on critical findings             │\n│ ✅ Opponent caught what Brain One mi",
+      "research_score": 93,
+      "enriched_at": "2026-06-16T04:46:44.131040"
     },
     {
       "repo": "Hash-7777/HashCortX",
@@ -1939,7 +2208,20 @@
       "has_pricing": false,
       "installable": false,
       "stars": 6,
-      "note": "enriched — install=False, api=False, pricing=False, docs=False"
+      "note": "enriched — install=False, api=False, pricing=False, docs=False",
+      "enriched": true,
+      "analysis": {
+        "has_installation": true,
+        "has_api": true,
+        "has_pricing": true,
+        "has_docs": false,
+        "has_examples": true,
+        "readme_length": 10000,
+        "analyzed_at": "2026-06-16T04:46:44.418488"
+      },
+      "readme_full": "<div align=\"center\">\n\n# HashCortX\n\n**The local-first AI workspace. Eleven modes. Ten providers. Zero telemetry.**\n\n[Website](https://hashcortx.com) · [Latest Release](https://github.com/Hash-7777/HashCortX/releases/latest) · [Wiki](https://github.com/Hash-7777/HashCortX/wiki) · [Discussions](https://github.com/Hash-7777/HashCortX/discussions) · [Youtube](https://youtu.be/On5wPdKZDfg)\n\n![License: MIT](https://img.shields.io/badge/license-MIT-39ff81.svg)\n![Platform: macOS](https://img.shields.io/badge/platform-macOS%20Apple%20Silicon-39ff81.svg)\n![Version: 2.0.0](https://img.shields.io/badge/version-2.0.0-39ff81.svg)\n![Size: 8.9 MB](https://img.shields.io/badge/dmg-8.9%20MB-39ff81.svg)\n\n</div>\n\n![HashCortx main interface](https://github.com/user-attachments/assets/120dfafa-a778-4758-8314-83dc41752a28)\n\n---\n\n## What is HashCortX?\n\n**HashCortX is a local-first, open-source AI desktop application for developers that combines a multi-provider chat workspace, an autonomous coding agent, multi-agent swarms, 9 pre-built specialist agents, financial document analysis, security scanning, 3D planning, and a virtual project desktop — into a single native 8.9 MB macOS app built with Tauri v2, Rust, and vanilla JavaScript.**\n\nAPI keys are stored in the renderer's localStorage as a single JSON bundle — not in the OS keychain on the hot path. There IS an OS keychain implementation in Rust, but it's no longer used for daily reads. There is no HashCortX cloud backend, no telemetry, no analytics, no accounts, and no subscriptions. With Ollama, the entire app runs air-gapped offline. With cloud providers, every request travels directly from your device to the provider you chose — nothing passes through HashCortX infrastructure, because HashCortX infrastructure does not exist.\n\n**HashCortX is a free, open-source alternative to commercial AI coding tools** like Cursor, Claude Code, Continue, Aider, and Cline — with a wider feature set than any of them.\n\n---\n\n## Key facts\n\n| | |\n|---|---|\n| **Type** | Native AI desktop application |\n| **Platform** | macOS Apple Silicon (Windows and Linux planned) |\n| **License** | MIT |\n| **Version** | v2.0.0 (May 2026) |\n| **Bundle size** | 8.9 MB |\n| **Stack** | Tauri v2 · Rust · vanilla JavaScript · macOS Keychain |\n| **AI providers** | Anthropic · OpenAI · Google · Groq · Cerebras · SambaNova · DeepSeek · Moonshot · Mistral · OpenRouter · Ollama (local) |\n| **Modes** | 11 specialized AI workspaces |\n| **Pre-built agents** | 9 specialists |\n| **Telemetry** | None |\n| **Backend server** | None |\n| **Author** | [Seif Hashish](https://github.com/Hash-7777) |\n\n---\n\n## Why HashCortX\n\n- **Truly local-first.** No cloud backend, no auto-update, no telemetry, no accounts. The binary phones home to nothing.\n- **Multi-provider by design.** Ten cloud providers and Ollama for local models — all configured side-by-side, switched freely, with automatic provider failover in swarm runs.\n- **One app, eleven modes.** Coding, chat, swarms, research, financial analysis, security scanning, 3D planning, ERP generation, virtual OS — without juggling separate tools.\n- **OS-grade key storage.**  API keys are stored in the renderer's localStorage as a single JSON bundle — not in the OS keychain on the hot path. There IS an OS keychain implementation in Rust, but it's no longer used for daily reads.\n- **Tiny footprint.** 8.9 MB — roughly 30× smaller than Electron-based AI desktop apps that ship at 100–300 MB.\n- **Open source under MIT.** Read every line. Fork it. Ship your own version.\n\n---\n\n## About this project's development\n\n**Product, architecture, modes, philosophy, and every idea in this app are 100% by Seif Hashish.** The 11-mode structure, the local-first principle, the OS Keychain choice, the Permission Guard / Audit Log security model, the swarm-failover routing pattern, the pharma-informed source-grounding constraints in PubMed Agent, Drug Interaction, and Finance AI — every design decision was conceived and directed by the human author.\n\n**HashCortX was built with heavy AI assistance — approximately 30 million tokens consumed** across Claude, GPT, and other frontier models during the v2.0.0 build. AI handled the bulk of implementation, refactoring, and iteration under human direction. Architecture decisions, security model, mode boundaries, and final code review were the author's. This is disclosed because HashCortX is itself an AI tool — using AI to build it and hiding that fact would be inconsistent.\n\nAll source is open at [Hash-7777/HashCortX](https://github.com/Hash-7777/HashCortX) and reviewable line by line.\n\n---\n\n## Screenshots\n\n![Code mode with file explorer and agent chat](https://github.com/user-attachments/assets/00a538b5-bf12-4a24-aa23-3bc3a191840a)\n\n![Agent Swarm orchestration](https://github.com/user-attachments/assets/a07931d6-6e4c-4221-9ab2-cb3668fc70e2)\n\n![Finance AI analysis studio](https://github.com/user-attachments/assets/5e2cdc5c-854a-4331-a786-97a6337f0121)\n\n![3D Forge spatial planning](",
+      "research_score": 100,
+      "enriched_at": "2026-06-16T04:46:44.418509"
     },
     {
       "repo": "VILA-Lab/FigMirror",
@@ -1947,7 +2229,20 @@
       "has_pricing": false,
       "installable": false,
       "stars": 278,
-      "note": "enriched — install=False, api=False, pricing=False, docs=False"
+      "note": "enriched — install=False, api=False, pricing=False, docs=False",
+      "enriched": true,
+      "analysis": {
+        "has_installation": true,
+        "has_api": true,
+        "has_pricing": false,
+        "has_docs": true,
+        "has_examples": true,
+        "readme_length": 9010,
+        "analyzed_at": "2026-06-16T04:46:44.669994"
+      },
+      "readme_full": "<h1 align=\"center\">\n  <img src=\"docs/assets/figmirror-wordmark.svg\" alt=\"FigMirror\" width=\"400\">\n</h1>\n\n<p align=\"center\">\n  <b>FigMirror: Plot Your Data in Any Paper's Style.</b><br/>\n  Pick a reference figure, paste your data, and get an editable matplotlib script plus a camera-ready PDF.\n</p>\n\n<p align=\"center\">\n  <img src=\"docs/assets/show.png\" alt=\"FigMirror turns repeated plotting-code edits into a polished paper figure\" width=\"100%\">\n</p>\n\n<p align=\"center\">\n  <a href=\"#web-ui\"><img alt=\"Web UI\" src=\"https://img.shields.io/badge/Web%20UI-local%20app-2563eb?style=flat&logo=googlechrome&logoColor=white\"></a>\n  <a href=\"#codex-skill\"><img alt=\"Codex skill\" src=\"docs/assets/badges/codex.svg\"></a>\n  <a href=\"#claude-code-skill\"><img alt=\"Claude Code skill\" src=\"https://img.shields.io/badge/Claude%20Code-skill-d97706?style=flat&logo=anthropic&logoColor=white\"></a>\n  <a href=\"https://huggingface.co/spaces/zcahjl3/figcopy-taxonomy-gallery\"><img alt=\"FigMirror gallery\" src=\"https://img.shields.io/badge/Gallery-139%20figures-f59e0b?style=flat&logo=huggingface&logoColor=white\"></a>\n  <a href=\"docs/contributing.md\"><img alt=\"Contributions welcome\" src=\"https://img.shields.io/badge/Contributions-welcome-22c55e?style=flat&logo=github&logoColor=white\"></a>\n</p>\n\n<p align=\"center\">\n  <a href=\"#showcase\">Showcase</a> |\n  <a href=\"#quick-start\">Quick Start</a> |\n  <a href=\"#how-it-works\">How It Works</a> |\n  <a href=\"#star-history\">Star History</a> |\n  <a href=\"docs/method.md\">Method</a> |\n  <a href=\"docs/contributing.md\">Contribute</a>\n</p>\n\n<p align=\"center\">\n  <b>English</b> | <a href=\"README.zh-CN.md\">中文</a>\n</p>\n\n<p align=\"center\">\n  <video src=\"https://github.com/user-attachments/assets/0656009c-77c7-41e5-8423-07c3411aef13\" width=\"900\" controls\n  muted playsinline></video>\n</p>\n\n<h2 id=\"showcase\"><img src=\"docs/assets/icons/showcase.svg\" alt=\"\" width=\"22\" height=\"22\" align=\"absmiddle\"> Showcase</h2>\n\nFigMirror uses a reference figure as the style target, then renders your data through an iterative Drawer / Reviewer loop until the output looks like it belongs in the same paper family.\n\n<table>\n<tr>\n<td width=\"50%\" align=\"center\"><b>Reference</b></td>\n<td width=\"50%\" align=\"center\"><b>FigMirror Output</b></td>\n</tr>\n<tr>\n<td><img src=\"docs/assets/showcase/primary-reference.jpg\" alt=\"reference paper-style figure\" width=\"100%\"/></td>\n<td><img src=\"docs/assets/showcase/primary-generated.jpg\" alt=\"FigMirror generated paper-style output\" width=\"100%\"/></td>\n</tr>\n</table>\n\n<table>\n<tr>\n<td width=\"25%\" align=\"center\"><b>Reference</b></td>\n<td width=\"25%\" align=\"center\"><b>FigMirror Output</b></td>\n<td width=\"25%\" align=\"center\"><b>Reference</b></td>\n<td width=\"25%\" align=\"center\"><b>FigMirror Output</b></td>\n</tr>\n<tr>\n<td><img src=\"docs/assets/showcase/hexbin-joint-reference.png\" alt=\"reference joint hexbin plot\" width=\"100%\"/></td>\n<td><img src=\"docs/assets/showcase/hexbin-joint-generated.png\" alt=\"FigMirror generated joint hexbin output\" width=\"100%\"/></td>\n<td><img src=\"docs/assets/showcase/waterfall-3d-reference.png\" alt=\"reference 3D waterfall plot\" width=\"100%\"/></td>\n<td><img src=\"docs/assets/showcase/waterfall-3d-generated.png\" alt=\"FigMirror generated 3D waterfall output\" width=\"100%\"/></td>\n</tr>\n</table>\n\n<p align=\"center\">\n  <a href=\"https://huggingface.co/spaces/zcahjl3/figcopy-taxonomy-gallery\"><img alt=\"Browse the FigMirror gallery\" src=\"https://img.shields.io/badge/Browse%20gallery-pick%20a%20reference%20and%20play-16a34a?style=flat&logo=huggingface&logoColor=white\"></a><br/>\n  <sub>No high-quality reference at hand? Start from 139 paper figures across 25 chart families.</sub>\n</p>\n\n<h2 id=\"quick-start\"><img src=\"docs/assets/icons/quick-start.svg\" alt=\"\" width=\"22\" height=\"22\" align=\"absmiddle\"> Quick Start</h2>\n\n<h3 id=\"install-with-your-agent\"><img src=\"docs/assets/icons/agent.svg\" alt=\"\" width=\"18\" height=\"18\" align=\"absmiddle\"> Install With Your Claude / Codex</h3>\n\nAlready inside Claude Code or Codex? Paste this and let the agent do the setup:\n\n```text\nInstall FigMirror for me: https://github.com/VILA-Lab/FigMirror\n```\n\n<h3 id=\"web-ui\"><img src=\"docs/assets/icons/web-ui.svg\" alt=\"\" width=\"18\" height=\"18\" align=\"absmiddle\"> Web UI</h3>\n\nUse this when you want upload, preview, iteration history, and refinement in a browser.\n\nIf `uv` is missing: `python3 -m pip install uv`.\n\n```bash\ngit clone https://github.com/VILA-Lab/FigMirror.git && cd FigMirror\nbash scripts/install.sh\nuv run python scripts/figcopy_serve.py --workspace .artifacts/figmirror-workspace --backend codex\n```\n\nOpen `http://127.0.0.1:8765/`.\n\n<a id=\"codex-skill\"></a>\n<a id=\"claude-code-skill\"></a>\n\n<h3 id=\"skill-only\"><img src=\"docs/assets/icons/skill.svg\" alt=\"\" width=\"18\" height=\"18\" align=\"absmiddle\"> Skill Only</h3>\n\nUse this when you want FigMirror inside your agent, no web UI.\n\n```bash\ncurl -fsSL https://raw.githubusercontent.com/VILA-Lab/FigMirror/main/scripts/install.sh | bash\n```\n\nThen attach a paper-figure screenshot, paste your",
+      "research_score": 98,
+      "enriched_at": "2026-06-16T04:46:44.670014"
     },
     {
       "repo": "UditAkhourii/adhd",
@@ -2393,7 +2688,17 @@
       "has_pricing": false,
       "installable": false,
       "stars": 298,
-      "note": "enriched — install=False, api=False, pricing=False, docs=False"
+      "note": "enriched — install=False, api=False, pricing=False, docs=False",
+      "enriched": true,
+      "analysis": {
+        "installable": false,
+        "has_api": false,
+        "has_pricing": false,
+        "has_docs": false,
+        "has_examples": false,
+        "readme_length": 0
+      },
+      "readme_full": ""
     },
     {
       "repo": "patchfighterway90/cs2-external-overlay",
@@ -2433,7 +2738,17 @@
       "has_pricing": true,
       "installable": true,
       "stars": 0,
-      "note": "enriched — install=True, api=True, pricing=True, docs=False"
+      "note": "enriched — install=True, api=True, pricing=True, docs=False",
+      "enriched": true,
+      "analysis": {
+        "installable": false,
+        "has_api": false,
+        "has_pricing": false,
+        "has_docs": false,
+        "has_examples": false,
+        "readme_length": 0
+      },
+      "readme_full": ""
     },
     {
       "repo": "Sophomoresty/gemini-web2api",
