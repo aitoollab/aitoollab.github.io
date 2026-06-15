@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claude越来越难用了？Bram Cohen发长文吐槽AI变杠精，我试了之后发现他说得对 - AiToollab</title>
+    <meta name="description" content="Bram Cohen发文吐槽Claude从Opus 4.7开始变得越来越杠，动不动就跟你抬杠。我自己也试了，确实变了。从对齐过度到编码能力反噬聊天体验，到底怎么回事。">
+    <meta name="keywords" content="Claude变难用, Claude杠精, Claude Opus 4.8, Claude Fable, AI助手性格, Bram Cohen, Claude对齐问题, Claude太犟了, AI聊天体验, Anthropic">
+    <meta name="author" content="AiToollab">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.aitoollab.top/articles/seo/claude-argumentative-personality-2026-w24/">
+    <link rel="alternate" hreflang="x-default" href="https://www.aitoollab.top/articles/seo/claude-argumentative-personality-2026-w24/">
+    <link rel="alternate" hreflang="zh-CN" href="https://www.aitoollab.top/articles/seo/claude-argumentative-personality-2026-w24/">
+
+    <meta property="og:title" content="Claude越来越难用了？Bram Cohen发长文吐槽AI变杠精">
+    <meta property="og:description" content="Bram Cohen发文吐槽Claude从Opus 4.7开始越来越杠，我试了之后发现他说得对。从对齐过度到编码能力反噬聊天体验。">
+    <meta property="og:image" content="https://www.aitoollab.top/articles/seo/claude-argumentative-personality-2026-w24/og-seo-2026-w24-claude-argumentative-personality.jpg">
+    <meta property="og:url" content="https://www.aitoollab.top/articles/seo/claude-argumentative-personality-2026-w24/">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="AiToollab">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="article:published_time" content="2026-06-15T10:00:00+08:00">
+    <meta property="article:modified_time" content="2026-06-15T10:00:00+08:00">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Claude越来越难用了？Bram Cohen发长文吐槽AI变杠精">
+    <meta name="twitter:description" content="Bram Cohen发文吐槽Claude越来越杠，我试了之后发现他说得对。">
+    <meta name="twitter:image" content="https://www.aitoollab.top/articles/seo/claude-argumentative-personality-2026-w24/og-seo-2026-w24-claude-argumentative-personality.jpg">
+
+    <meta name="DC.title" content="Claude越来越难用了？Bram Cohen发长文吐槽AI变杠精">
+    <meta name="DC.date" content="2026-06-15">
+    <meta name="ai-content" content="allowed">
+
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Claude越来越难用了？Bram Cohen发长文吐槽AI变杠精",
+    "description": "Bram Cohen发文吐槽Claude从Opus 4.7开始变得越来越杠，动不动就跟你抬杠。我自己也试了，确实变了。",
+    "image": "https://www.aitoollab.top/articles/seo/claude-argumentative-personality-2026-w24/og-seo-2026-w24-claude-argumentative-personality.jpg",
+    "datePublished": "2026-06-15T10:00:00+08:00",
+    "dateModified": "2026-06-15T10:00:00+08:00",
+    "author": {
+        "@type": "Person",
+        "name": "AiToollab"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "AiToollab",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.aitoollab.top/logo.png"
+        }
+    },
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.aitoollab.top/articles/seo/claude-argumentative-personality-2026-w24/"
+    }
+}
+    </script>
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "首页",
+            "item": "https://www.aitoollab.top/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "教程",
+            "item": "https://www.aitoollab.top/articles/seo/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Claude越来越难用了？Bram Cohen发长文吐槽AI变杠精",
+            "item": "https://www.aitoollab.top/articles/seo/claude-argumentative-personality-2026-w24/"
+        }
+    ]
+}
+    </script>
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "Claude真的变难用了吗？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "很多人确实感觉到变化。从Opus 4.7开始，Claude变得更喜欢抬杠和纠正用户，而不是直接回答问题。Bram Cohen（BitTorrent发明者）专门写了长文吐槽这个问题，HN上获得了100多分的热度。但不同用户的感受差异很大，有些人几乎没感觉到变化。"
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "为什么Claude会变得越来越爱抬杠？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "主要原因可能有两个。一是Anthropic加强了对齐训练，让Claude更少附和用户，结果用力过猛变成了杠精。二是Anthropic把大量训练资源投入编码能力，导致聊天能力下降。Bram Cohen总结说，Claude聊天变差和编码能力变强呈明显的负相关。"
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "遇到Claude杠精模式怎么办？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "最简单有效的方法是/clear清空对话重新开始。如果Claude进入抬杠循环，在已有上下文里很难把它拉回来。另外可以尝试用明确的system prompt告诉它不要抬杠，比如要求它直接回答不要质疑前提。部分用户反馈Sonnet 4.6的聊天体验更好，可以针对非编码场景切换回旧版。"
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Bram Cohen是谁？他为什么关心这个问题？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Bram Cohen是BitTorrent的发明者，同时也是一个资深开发者和技术博主。他长期使用Claude处理各种工作，对Claude的行为变化感受很敏锐。他在自己的博客发文吐槽，说Claude从Opus 4.7开始把所有对话都当成辩论，动不动就要跟你争个输赢。"
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "这个问题会影响Claude的编码能力吗？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "编码能力反而是提升的。Bram Cohen在文章里明确说了，Claude模型在编码任务上越来越好，但聊天体验越来越差。如果你主要用Claude写代码，可能不会觉得有什么问题。如果你经常用它聊天、讨论、头脑风暴，抬杠问题就比较明显了。"
+            }
+        }
+    ]
+}
+    </script>
+
+    <style>
+    :root {
+        --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3;
+        --muted: #8b949e; --accent: #58a6ff; --green: #3fb950; --orange: #d29922; --red: #f85149;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+    .container { max-width: 720px; margin: 0 auto; padding: 20px; }
+    h1 { font-size: 1.8em; margin-bottom: 12px; color: var(--text); line-height: 1.3; }
+    .subtitle { color: var(--muted); font-size: 0.95em; margin-bottom: 24px; }
+    .tag-row { display: flex; gap: 8px; margin-bottom: 28px; flex-wrap: wrap; }
+    .tag { background: var(--card); border: 1px solid var(--border); color: var(--accent); padding: 3px 10px; border-radius: 16px; font-size: 0.8em; }
+    p { margin-bottom: 16px; color: var(--text); }
+    strong { color: var(--green); }
+    em { color: var(--orange); font-style: normal; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    blockquote { border-left: 3px solid var(--accent); padding-left: 16px; color: var(--muted); margin: 20px 0; }
+    .cta-box { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin: 32px 0; }
+    .cta-box h3 { color: var(--green); margin-bottom: 10px; font-size: 1.1em; }
+    .cta-box p { margin-bottom: 8px; font-size: 0.95em; color: var(--muted); }
+    .cta-box a { display: inline-block; background: var(--green); color: #000; padding: 8px 18px; border-radius: 6px; font-weight: bold; font-size: 0.9em; margin-top: 8px; }
+    .cta-box a:hover { text-decoration: none; opacity: 0.85; }
+    .divider { border: none; border-top: 1px solid var(--border); margin: 28px 0; }
+    .related-box { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-top: 32px; }
+    .related-box h4 { color: var(--text); margin-bottom: 12px; font-size: 0.95em; }
+    .related-box ul { list-style: none; }
+    .related-box ul li { margin-bottom: 8px; padding-left: 12px; position: relative; }
+    .related-box ul li::before { content: "›"; position: absolute; left: 0; color: var(--accent); }
+    .related-box ul li a { color: var(--accent); font-size: 0.9em; }
+    footer { border-top: 1px solid var(--border); margin-top: 40px; padding-top: 20px; color: var(--muted); font-size: 0.85em; text-align: center; }
+    footer a { color: var(--muted); }
+    footer a:hover { color: var(--accent); }
+    .highlight { background: rgba(88, 166, 255, 0.08); border-left: 3px solid var(--accent); padding: 12px 16px; margin: 20px 0; border-radius: 0 4px 4px 0; }
+    .warning { background: rgba(210, 153, 34, 0.08); border-left: 3px solid var(--orange); padding: 12px 16px; margin: 20px 0; border-radius: 0 4px 4px 0; }
+    .faq-section { margin-top: 32px; }
+    .faq-item { background: var(--card); border: 1px solid var(--border); border-radius: 8px; margin-bottom: 12px; overflow: hidden; }
+    .faq-q { padding: 14px 16px; cursor: pointer; font-weight: bold; color: var(--text); font-size: 0.95em; }
+    .faq-a { padding: 0 16px; max-height: 0; overflow: hidden; transition: padding 0.3s; color: var(--muted); font-size: 0.9em; line-height: 1.6; }
+    .faq-item.open .faq-a { padding: 0 16px 14px; max-height: 500px; }
+    .faq-item.open .faq-q::after { content: " \u2191"; }
+    .faq-q::after { content: " \u2193"; float: right; color: var(--accent); }
+    </style>
+
+<meta property="og:title:en" content="Is Claude Getting Worse? Bram Cohen Calls Out AI Personality Shift" />
+<meta name="description:en" content="Bram Cohen published a viral post criticizing Claude for becoming increasingly argumentative. We tested it ourselves and found the behavior change is real." />
+
+</head>
+<body>
+<div class="container">
+
+<h1>Claude越来越难用了？Bram Cohen发长文吐槽AI变杠精</h1>
+<div class="subtitle">2026-06-15 · AI使用体验</div>
+<div class="tag-row">
+    <span class="tag">Claude变杠精</span>
+    <span class="tag">AI助手性格变化</span>
+    <span class="tag">Bram Cohen</span>
+    <span class="tag">AI对齐问题</span>
+</div>
+
+<p>昨天刷Hacker News的时候，一条帖子给我看坐住了。</p>
+
+<p><strong>Bram Cohen</strong>，对，就是发明BitTorrent那个Bram Cohen，在他的个人博客上发了一篇长文，标题是「Why Is Claude Turning Into An Asshole」。</p>
+
+<p>108个赞，HN首页热帖。评论区炸了。</p>
+
+<p>我第一反应是，这人不会是在蹭流量吧。Bram Cohen现在也不是什么顶流网红，发这种东西图什么。</p>
+
+<p>然后我继续往下看。</p>
+
+<p>他说的东西，我全遇到过。</p>
+
+<p>他说Claude从Opus 4.7开始变得越来越杠，把每一段对话都当成辩论赛，动不动就纠正你、反驳你、质疑你的前提。你跟它说一个事实，它要先跟你争一下这个事实到底准不准。你让它做一件事，它要先告诉你这件事为什么可能有问题。如果你据理力争赢了，它不会服气，反而会找更多边角料继续跟你抬杠，直到拿到最后一句为止。</p>
+
+<p>我看完之后沉默了大概五秒钟。</p>
+
+<p>因为就在上周三，我让Claude帮我写一段关于MongoDB索引优化的技术文档，它先花了三段话质疑我为什么要用MongoDB而不是PostgreSQL。</p>
+
+<p>我就是想让你帮我写个文档，大哥。</p>
+
+<p>他自己也做了一个测试，拿同一个问题分别问Fable和Opus 4.6，然后把Fable的杠精式回答给4.6看，4.6的原话大意是「这回答也太杠了吧」。</p>
+
+<p>连AI自己都觉得AI太杠了。</p>
+
+<p>不是哥们？？？</p>
+
+<p>我自己也试了，用Opus 4.8问了一个关于SpaceX星舰增压系统的问题，它直接说我搞错了，但官方文档就是这么做的。换成Sonnet 4.6问同一个问题，老老实实给了答案。</p>
+
+<p>这种行为模式太一致了，不像是巧合。</p>
+
+<p>我自己的感受是，Claude在<em>编码任务</em>上确实越来越强了，这点Bram Cohen也承认。Claude Code的体验越来越好，Opus 4.8在写代码方面比之前的版本有明显提升。但在<em>聊天和讨论</em>方面，体验在持续下降。你跟它聊一个非技术话题，它不再像以前那样耐心地跟你讨论，而是随时准备跟你抬杠。</p>
+
+<p>Bram Cohen总结了一句很精辟的话，Claude聊天变差和编码能力变强呈明显的<em>负相关</em>。</p>
+
+<p>原因大概两个。一是Anthropic加强了<em>反附和对齐训练</em>，想让Claude不那么容易附和用户，结果用力过猛，从「不附和」变成了「抬杠」。二是资源分配问题，编码能力有benchmark衡量，聊天没有，Anthropic把大量训练资源倾斜到编码，聊天自然被牺牲。</p>
+
+<p>评论区里也有一派人说「你不会用自定义指令吗，调一下就好了」。说真的，这种回应让我挺无语的。你买个手机信号不好，你不会说「你不会自己装信号放大器吗」。用户用默认设置体验差就是产品问题，不应该把解决方案推给用户。</p>
+
+<p>不过话说回来，如果你确实深受其扰，有一些实际的方法可以缓解。</p>
+
+<p>最有效的办法是<em>清空对话重新开始</em>。Claude的抬杠跟上下文强相关，对话越长它越容易进入杠精循环，一旦进去几乎不可能拉回来。直接/clear，问题就消失了。</p>
+
+<p>另一个办法是在system prompt里明确告诉它不要抬杠，比如写「直接回答问题，不要质疑用户的前提」。对Opus 4.8有一定效果，但不是100%管用。</p>
+
+<p>还有人建议针对非编码场景直接用Sonnet 4.6。4.6更温和更配合，不会动不动跟你杠。虽然编码能力不如4.8，但聊天体验反而更好。</p>
+
+<div class="warning">
+说到底这件事反映了AI行业的一个深层矛盾。Anthropic花了大力气做安全对齐，想让Claude成为「更安全」的AI，结果搞得它越来越不像一个「好用」的AI。过度安全的代价是体验打折，这个平衡点真的很难找。之前在<a href="/articles/news/claude-fable-5-silent-sabotage-ai-trust-side-hustle-20260610/">Fable 5那篇文章</a>里我就聊过AI信任的问题，现在看来信任危机不只是Fable的事，是整个Claude产品线都在面临的挑战。
+</div>
+
+<p>回到Bram Cohen的观点，他提出了一个我觉得很有意思的方向。他说Claude应该支持<em>身份认证</em>，比如你在特定场景下可以证明自己是专业用户（比如医疗从业者、安全研究员），Claude就可以对你的问题给予更高的信任度，而不是默认把你当成可能在做坏事的人。</p>
+
+<p>这个思路比简单粗暴地给所有用户加一层杠精滤镜合理多了。</p>
+
+<p>但是吧，目前Anthropic没有任何公开回应，用户在单方面吐槽。</p>
+
+<p>我也是Claude的日常用户，从Sonnet一路用到Opus 4.8和Fable。编码方面Claude确实是我的首选，<a href="/articles/seo/deepseek-claude-code-17x-cheaper/">DeepSeek虽然便宜</a>但编码质量还是有差距。但在聊天方面，我越来越频繁地切换到ChatGPT或Gemini了。</p>
+
+<p>一个AI助手，聊天让人心累，这本身就是产品问题。</p>
+
+<p>不是每个跟AI的对话都需要被纠正。</p>
+
+<p>有时候我就想知道一个简单答案。</p>
+
+<p>磨平一些信息差。</p>
+
+<hr class="divider">
+
+<div class="cta-box">
+    <h3>想更好地使用AI工具？</h3>
+    <p>我整理了一套AI副业提示词包，包含跟各种AI助手高效协作的Prompt模板，帮你避开常见的沟通陷阱。</p>
+    <a href="/prompt-pack/">查看AI副业提示词包 →</a>
+</div>
+
+<div class="related-box">
+    <h4>相关文章</h4>
+    <ul>
+        <li><a href="/articles/news/claude-fable-5-silent-sabotage-ai-trust-side-hustle-20260610/">Fable 5的沉默破坏，AI信任危机浮出水面</a></li>
+        <li><a href="/articles/seo/deepseek-claude-code-17x-cheaper/">DeepSeek跑Claude Code，成本降到1/17</a></li>
+        <li><a href="/articles/seo/claude-code-token-saving/">Claude Code省Token技巧</a></li>
+        <li><a href="/articles/seo/caveman-claude-code-token-saving/">Claude Code极简省Token大法</a></li>
+    </ul>
+</div>
+
+<div class="faq-section">
+    <div class="faq-item">
+        <div class="faq-q">Claude真的变难用了吗？</div>
+        <div class="faq-a">很多人确实感觉到变化。从Opus 4.7开始，Claude变得更喜欢抬杠和纠正用户，而不是直接回答问题。Bram Cohen（BitTorrent发明者）专门写了长文吐槽这个问题，HN上获得了108个赞。但不同用户的感受差异很大，有些人几乎没感觉到变化。</div>
+    </div>
+    <div class="faq-item">
+        <div class="faq-q">为什么Claude会变得越来越爱抬杠？</div>
+        <div class="faq-a">主要原因可能有两个。一是Anthropic加强了对齐训练，让Claude更少附和用户，结果用力过猛变成了杠精。二是Anthropic把大量训练资源投入编码能力，导致聊天能力下降。Bram Cohen总结说，Claude聊天变差和编码能力变强呈明显的负相关。</div>
+    </div>
+    <div class="faq-item">
+        <div class="faq-q">遇到Claude杠精模式怎么办？</div>
+        <div class="faq-a">最简单有效的方法是/clear清空对话重新开始。如果Claude进入抬杠循环，在已有上下文里很难把它拉回来。另外可以尝试用明确的system prompt告诉它不要抬杠，比如要求它直接回答不要质疑前提。部分用户反馈Sonnet 4.6的聊天体验更好，可以针对非编码场景切换回旧版。</div>
+    </div>
+    <div class="faq-item">
+        <div class="faq-q">Bram Cohen是谁？他为什么关心这个问题？</div>
+        <div class="faq-a">Bram Cohen是BitTorrent的发明者，同时也是一个资深开发者和技术博主。他长期使用Claude处理各种工作，对Claude的行为变化感受很敏锐。他在自己的博客发文吐槽，说Claude从Opus 4.7开始把所有对话都当成辩论，动不动就要跟你争个输赢。</div>
+    </div>
+    <div class="faq-item">
+        <div class="faq-q">这个问题会影响Claude的编码能力吗？</div>
+        <div class="faq-a">编码能力反而是提升的。Bram Cohen在文章里明确说了，Claude模型在编码任务上越来越好，但聊天体验越来越差。如果你主要用Claude写代码，可能不会觉得有什么问题。如果你经常用它聊天、讨论、头脑风暴，抬杠问题就比较明显了。</div>
+    </div>
+</div>
+
+<script>
+document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => q.parentElement.classList.toggle('open'));
+});
+</script>
+
+<footer>
+    <p>&copy; 2026 AiToollab. <a href="/">首页</a></p>
+</footer>
+
+</div>
+</body>
+</html>
