@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-06-17T04:46:46.015122",
+  "last_updated": "2026-06-19T04:49:00.597994",
   "candidate_pool_total": 58,
-  "analyzed_count": 120,
+  "analyzed_count": 123,
   "top_candidates": [
     {
       "repo": "AI-NextGenApps/AI-IMG-VID-App",
@@ -1140,6 +1140,66 @@
       "enriched_at": "2026-06-09T16:47:27.894193",
       "readme_full": "<sub>*Follow me on X [@ybouane](https://x.com/ybouane) — I'm building in public.*</sub>\n\n<p align=\"center\">\n  <img src=\"https://raw.githubusercontent.com/ybouane/dash-p/main/banner.png\" alt=\"dash-p — make Claude scriptable again\" width=\"640\">\n</p>\n\n# Make Claude Scriptable Again\n\n### `dash-p`\n\n> **If Claude can interact with apps through their interfaces, developers should be able to interact with Claude Code through theirs.**\n\n---\n\nClaude can click buttons, type into apps, read screens, and operate software through a GUI.\\\nSo why shouldn’t developers be able to automate their own Claude Code session?\n\ndash-p is a CLI and TypeScript library that makes Claude Code scriptable by driving the real Claude TUI process you already use.\n\nIt does not bypass Claude Code.\\\nIt does not fake network requests.\\\nIt does not bypass authentication.\n\nIt simply launches the official `claude` command, injects input programmatically, reads output programmatically, and exposes a clean developer interface on top.\n\nThe same Claude Code.\\\nThe same local session.\\\nThe same authentication flow.\\\nJust composable.\\\nNot a replacement for Claude Code.\n\nA bridge that makes it scriptable.\n\n\n---\n\n## Use it in one line\n\n**CLI — replace `claude -p`:**\n\n```diff\n- claude -p \"summarize this repo\"\n+ dash-p  \"summarize this repo\"\n```\n\n**SDK — replace the import:**\n\n```diff\n- import { query } from \"@anthropic-ai/claude-agent-sdk\";\n+ import { query } from \"@ybouane/dash-p\";\n```\n\nThat’s the whole idea. Same prompt in, same shape of answer out — but produced by driving the interactive TUI instead of the `-p` headless flag.\n\n---\n\n## Getting started\n\n**Prerequisite:** the official **`claude` CLI**, installed and logged in — run `claude` once interactively to sign in. dash-p drives that binary; it does not bundle or replace it. (Also: Node ≥ 20. node-pty installs a prebuilt binary on common platforms; if yours needs compiling you’ll want a C++ toolchain — macOS `xcode-select --install`, Debian/Ubuntu `apt install build-essential python3`.)\n\n**CLI — install globally:**\n\n```bash\nnpm install -g @ybouane/dash-p\n\ndash-p \"what color is the sky\"\n```\n\nThat puts a `dash-p` command on your `PATH`. Verify with `which dash-p`. If `claude` isn’t on your `PATH`, pass `--claude-path /abs/path/to/claude`.\n\n**SDK — add to a project:**\n\n```bash\nnpm install @ybouane/dash-p\n```\n\n```ts\nimport { query } from \"@ybouane/dash-p\";\n```\n\n**No install:**\n\n```bash\nnpx @ybouane/dash-p \"what color is the sky\"\n```\n\n---\n\n## CLI\n\n```bash\ndash-p \"explain this repo in two sentences\"\ndash-p -m sonnet \"summarise the CHANGELOG\"\ndash-p -o json \"what is 6 * 7? reply with just the number\"\necho \"a long prompt from a pipe\" | dash-p\ndash-p -o stream-json \"name two primary colors\"     # JSONL message stream\n```\n\nOutput formats mirror `claude -p`: `text` (default), `json`, `stream-json`.\nRun `dash-p --help` for the full flag list (model, permission mode, tools,\nworking dir, terminal size, and more).\n\n## SDK\n\nThe `query()` shape matches `@anthropic-ai/claude-agent-sdk`, so code ports over:\n\n```ts\nimport { query } from \"@ybouane/dash-p\";\n\nfor await (const msg of query({\n  prompt: \"In one sentence, what is a pseudo-terminal?\",\n  options: { model: \"sonnet\", includePartialMessages: true },\n})) {\n  if (msg.type === \"stream_event\" && msg.event.type === \"content_block_delta\")\n    process.stdout.write(msg.event.delta.text);\n  if (msg.type === \"result\") console.log(\"\\n[done]\", msg.result);\n}\n```\n\nYou get `system` / `user` / `assistant` / `stream_event` / `result` messages,\nwith structured `tool_use` + `tool_result` blocks. See\n[docs/SDK-PARITY.md](docs/SDK-PARITY.md) for exactly what’s supported.\n\n---\n\n## How it works\n\n```\n your CLI / query()  →  dash-p engine  →  spawns the real `claude` in a PTY\n```\n\n1. **Launch** — spawns the official `claude` interactive TUI inside a pseudo-terminal (so it renders its true UI, exactly as for a human).\n2. **Inject** — pastes your prompt and keystrokes into the terminal.\n3. **Read** — feeds the terminal output through a headless terminal emulator (the same engine VS Code uses) to reconstruct the screen.\n4. **Extract** — recognizes the conversation structure (assistant text, tool calls, results) and returns it as clean text or structured SDK messages.\n\nAll the Claude-specific knowledge (what the prompt box looks like, how a tool\ncall renders, etc.) lives as **data** in versioned [`profiles/`](profiles/), so a\nTUI update is a profile edit, not an engine rewrite. There’s even a\n[self-recalibration skill](recalibrate/SKILL.md) for new Claude releases.\n\nFor the full architecture, see [docs/DESIGN.md](docs/DESIGN.md).\n\n---\n\n## Good to know\n\ndash-p reads the *rendered* screen, so it’s inherently tied to how the TUI looks\n(it’s calibrated against Claude Code 2.1.x). A few things are fidelity ceilings of\nscreen-scraping — e.g. markdown syntax like code fences is rendered-then-lossy.\n\nFor byte-exact output when you need it, dash-p can read the session transcript\nClaude Code already wri",
       "url": "https://github.com/ybouane/dash-p"
+    },
+    {
+      "repo": "PolyHelper/polyhelper",
+      "score": 0,
+      "has_pricing": false,
+      "installable": false,
+      "stars": 9,
+      "note": "enriched — README not found (404), repo may be private or deleted",
+      "enriched": true,
+      "enriched_at": "2026-06-19T04:45:51.360763",
+      "analysis": {
+        "installable": false,
+        "has_api": false,
+        "has_pricing": false,
+        "has_docs": false,
+        "has_examples": false,
+        "readme_length": 0
+      },
+      "source": "github_scout",
+      "description": "README could not be fetched (404)."
+    },
+    {
+      "repo": "ngoanpv/DeepInterview",
+      "score": 15,
+      "has_pricing": false,
+      "installable": true,
+      "stars": 6,
+      "note": "enriched — install=True, api=True, pricing=False, docs=True, examples=True",
+      "enriched": true,
+      "enriched_at": "2026-06-19T04:45:51.625476",
+      "analysis": {
+        "installable": true,
+        "has_api": true,
+        "has_pricing": false,
+        "has_docs": true,
+        "has_examples": true,
+        "readme_length": 10000
+      },
+      "source": "github_scout",
+      "description": "Deep interview simulation tool with installation instructions, API usage, and examples."
+    },
+    {
+      "repo": "czxieddan/RHoiScribe",
+      "score": 0,
+      "has_pricing": false,
+      "installable": false,
+      "stars": 6,
+      "note": "enriched — README not found (404), repo may be private or deleted",
+      "enriched": true,
+      "enriched_at": "2026-06-19T04:45:51.874041",
+      "analysis": {
+        "installable": false,
+        "has_api": false,
+        "has_pricing": false,
+        "has_docs": false,
+        "has_examples": false,
+        "readme_length": 0
+      },
+      "source": "github_scout",
+      "description": "README could not be fetched (404)."
     }
   ],
   "high_score_projects": [
