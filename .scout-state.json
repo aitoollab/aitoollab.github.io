@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-06-19T04:49:00.597994",
+  "last_updated": "2026-06-20T16:47:05+08:00",
   "candidate_pool_total": 58,
-  "analyzed_count": 123,
+  "analyzed_count": 126,
   "top_candidates": [
     {
       "repo": "AI-NextGenApps/AI-IMG-VID-App",
@@ -1200,6 +1200,66 @@
       },
       "source": "github_scout",
       "description": "README could not be fetched (404)."
+    },
+    {
+      "repo": "MSNightmare/RoguePlanet",
+      "score": 15,
+      "has_pricing": false,
+      "installable": false,
+      "stars": 1322,
+      "note": "enriched -- Windows Defender exploit, offensive security, irrelevant to Hermes",
+      "enriched": true,
+      "enriched_at": "2026-06-20T16:47:05+08:00",
+      "analysis": {
+        "installable": false,
+        "has_api": false,
+        "has_pricing": false,
+        "has_docs": false,
+        "has_examples": false,
+        "readme_length": 1221
+      },
+      "source": "github_scout",
+      "description": "RoguePlanet Windows Defender Vulnerability. 1322 stars/545 forks. C++ offensive security tool, irrelevant to Hermes/AI Agent."
+    },
+    {
+      "repo": "khrisat/text-humanizer",
+      "score": 0,
+      "has_pricing": false,
+      "installable": false,
+      "stars": 0,
+      "note": "enriched -- GitHub 404, repository deleted or does not exist",
+      "enriched": true,
+      "enriched_at": "2026-06-20T16:47:05+08:00",
+      "analysis": {
+        "installable": false,
+        "has_api": false,
+        "has_pricing": false,
+        "has_docs": false,
+        "has_examples": false,
+        "readme_length": 0
+      },
+      "source": "github_scout",
+      "description": "Repository deleted or does not exist (GitHub 404)."
+    },
+    {
+      "repo": "adysec/clawbot",
+      "score": 18,
+      "has_pricing": false,
+      "installable": true,
+      "stars": 37,
+      "note": "enriched -- Rust WeChat bot mgmt, CLI+web, no license, irrelevant to Hermes",
+      "enriched": true,
+      "enriched_at": "2026-06-20T16:47:05+08:00",
+      "analysis": {
+        "installable": true,
+        "has_api": true,
+        "has_pricing": false,
+        "has_docs": false,
+        "has_examples": false,
+        "readme_length": 673
+      },
+      "source": "github_scout",
+      "description": "iLink bot management tool with CLI and web dashboard. Rust, Cargo build. No license, no tests. Vertical chatbot tool, irrelevant to Hermes."
     }
   ],
   "high_score_projects": [
