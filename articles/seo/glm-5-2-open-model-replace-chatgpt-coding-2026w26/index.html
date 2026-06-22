@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://www.aitoollab.top/articles/seo/glm-5-2-open-model-replace-chatgpt-coding-2026w26/">
+    <link rel="alternate" hreflang="x-default" href="https://www.aitoollab.top/articles/seo/glm-5-2-open-model-replace-chatgpt-coding-2026w26/">
+    <link rel="alternate" hreflang="zh-CN" href="https://www.aitoollab.top/articles/seo/glm-5-2-open-model-replace-chatgpt-coding-2026w26/">
+    <link rel="alternate" type="application/atom+xml" title="AiToollab RSS Feed" href="/feed.xml">
+
+    <title>GLM-5.2开源了 MIT协议免费商用 开源模型第一次追上ChatGPT</title>
+    <meta name="description" content="Z.ai的GLM-5.2以MIT协议开源，在Artificial Analysis智力指数上拿到51分，只比GPT-5.5差4分。幻觉率只有GPT-5.5的三分之一。HN上1300多分的讨论帖里，大量开发者表示已经在用开源模型替代Claude和ChatGPT写代码了。">
+    <meta name="keywords" content="GLM-5.2, 开源大模型, MIT协议, ChatGPT替代, 本地AI, AI编程, 免费商用AI模型, AI副业工具, Qwen 3.6, DeepSeek V4">
+    <meta name="author" content="AiToollab">
+    <meta name="robots" content="index, follow">
+    <meta name="generator" content="allowed">
+    <meta name="ai-content" content="allowed">
+
+    <meta property="og:title" content="GLM-5.2开源了 MIT协议免费商用 开源模型第一次追上ChatGPT">
+    <meta property="og:description" content="GLM-5.2拿到51分只差GPT-5.5四分，幻觉率是GPT-5.5的三分之一，MIT协议免费商用。开发者已经在用它替代ChatGPT写代码了。">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.aitoollab.top/articles/seo/glm-5-2-open-model-replace-chatgpt-coding-2026w26/">
+    <meta property="og:image" content="https://www.aitoollab.top/og-seo-glm-5-2-open-model-replace-chatgpt-coding-2026w26.jpg">
+    <meta property="og:site_name" content="AiToollab">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="article:published_time" content="2026-06-22T08:00:00+08:00">
+    <meta property="article:modified_time" content="2026-06-22T08:00:00+08:00">
+    <meta property="article:author" content="https://github.com/AiToollab">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@AiToollab">
+    <meta name="twitter:creator" content="@AiToollab">
+    <meta name="twitter:title" content="GLM-5.2开源了 MIT协议免费商用 开源模型第一次追上ChatGPT">
+    <meta name="twitter:description" content="GLM-5.2拿到51分只差GPT-5.5四分，幻觉率是GPT-5.5的三分之一。">
+    <meta name="twitter:image" content="https://www.aitoollab.top/og-seo-glm-5-2-open-model-replace-chatgpt-coding-2026w26.jpg">
+
+    <meta name="DC.title" content="GLM-5.2开源了 MIT协议免费商用 开源模型第一次追上ChatGPT">
+    <meta name="DC.creator" content="AiToollab">
+    <meta name="DC.subject" content="GLM-5.2, 开源大模型, AI编程, ChatGPT替代">
+    <meta name="DC.description" content="GLM-5.2以MIT协议开源，智力指数51分只差GPT-5.5四分，幻觉率只有GPT-5.5的三分之一。">
+    <meta name="DC.publisher" content="AiToollab">
+    <meta name="DC.date" content="2026-06-22">
+    <meta name="DC.language" content="zh-CN">
+
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "GLM-5.2开源了 MIT协议免费商用 开源模型第一次追上ChatGPT",
+    "description": "Z.ai的GLM-5.2以MIT协议开源，在Artificial Analysis智力指数上拿到51分，只比GPT-5.5差4分。幻觉率只有GPT-5.5的三分之一。",
+    "datePublished": "2026-06-22T08:00:00+08:00",
+    "dateModified": "2026-06-22T08:00:00+08:00",
+    "author": {
+        "@type": "Organization",
+        "name": "AiToollab",
+        "url": "https://www.aitoollab.top/"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "AiToollab",
+        "url": "https://www.aitoollab.top/"
+    },
+    "image": "https://www.aitoollab.top/og-seo-glm-5-2-open-model-replace-chatgpt-coding-2026w26.jpg",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.aitoollab.top/articles/seo/glm-5-2-open-model-replace-chatgpt-coding-2026w26/"
+    }
+}
+    </script>
+
+    <style>
+    :root {
+        --bg: #0d1117;
+        --card: #161b22;
+        --border: #30363d;
+        --text: #e6edf3;
+        --muted: #8b949e;
+        --accent: #58a6ff;
+        --green: #3fb950;
+        --orange: #d29922;
+        --red: #f85149;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+    .container { max-width: 720px; margin: 0 auto; padding: 20px; }
+    .header { margin-bottom: 40px; padding-bottom: 24px; border-bottom: 1px solid var(--border); }
+    .tag { display: inline-block; background: rgba(88,166,255,0.1); color: var(--accent); font-size: 12px; padding: 4px 10px; border-radius: 20px; margin-bottom: 12px; }
+    .header h1 { font-size: 28px; font-weight: 700; margin-bottom: 12px; line-height: 1.3; }
+    .meta { font-size: 14px; color: var(--muted); }
+    .article-body { padding-bottom: 60px; }
+    .article-body p { margin-bottom: 16px; color: #c9d1d9; font-size: 16px; line-height: 1.8; }
+    .article-body h2 { font-size: 20px; margin: 40px 0 16px; color: var(--text); border-left: 3px solid var(--accent); padding-left: 12px; }
+    .article-body h3 { font-size: 17px; margin: 24px 0 10px; color: #e6edf3; }
+    .article-body strong { color: var(--text); }
+    .article-body ul, .article-body ol { margin: 16px 0 20px 24px; }
+    .article-body li { margin-bottom: 8px; color: #c9d1d9; }
+    .article-body .highlight { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin: 20px 0; font-size: 15px; }
+    .article-body .highlight-blue { border-left: 3px solid var(--accent); background: rgba(88,166,255,0.06); }
+    .article-body .highlight-green { border-left: 3px solid var(--green); background: rgba(63,185,80,0.06); }
+    .article-body .highlight-orange { border-left: 3px solid var(--orange); background: rgba(210,153,34,0.06); }
+    .article-body .tip { background: rgba(240,136,62,0.1); border: 1px solid rgba(240,136,62,0.3); border-radius: 8px; padding: 14px 16px; margin: 20px 0; font-size: 14px; color: #e6edf3; }
+    .article-body .tip strong { color: var(--orange); }
+    .article-body .cta { background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(63,185,80,0.1)); border: 1px solid rgba(88,166,255,0.3); border-radius: 12px; padding: 20px; margin: 32px 0; text-align: center; }
+    .article-body .cta p { margin-bottom: 8px; color: var(--text); }
+    .article-body .cta a { display: inline-block; background: var(--accent); color: #fff; padding: 10px 24px; border-radius: 8px; text-decoration: none; font-weight: 600; margin-top: 8px; }
+    .article-body .cta a:hover { opacity: 0.9; }
+    .article-body .related { border-top: 1px solid var(--border); margin-top: 48px; padding-top: 24px; }
+    .article-body .related h3 { font-size: 16px; color: var(--muted); margin-bottom: 16px; }
+    .article-body .related a { display: block; padding: 10px 0; color: var(--accent); font-size: 15px; text-decoration: none; }
+    .article-body .related a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 40px 20px; border-top: 1px solid var(--border); color: var(--muted); font-size: 14px; }
+    footer a { color: var(--accent); text-decoration: none; }
+    @media (max-width: 600px) { .header h1 { font-size: 22px; } }
+    </style>
+
+<meta property="og:title:en" content="GLM-5.2 Open Source Under MIT License: Open Weights Catch Up to ChatGPT for the First Time" />
+<meta property="og:description:en" content="GLM-5.2 scores 51 on the Artificial Analysis Intelligence Index, only 4 points behind GPT-5.5. Hallucination rate is one third of GPT-5.5." />
+<meta name="description:en" content="GLM-5.2 scores 51 on the Artificial Analysis Intelligence Index, only 4 points behind GPT-5.5. Hallucination rate is one third of GPT-5.5. MIT license, free for commercial use." />
+
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "首页",
+            "item": "https://www.aitoollab.top/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "SEO文章",
+            "item": "https://www.aitoollab.top/articles/seo/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "GLM-5.2开源了 MIT协议免费商用 开源模型第一次追上ChatGPT",
+            "item": "https://www.aitoollab.top/articles/seo/glm-5-2-open-model-replace-chatgpt-coding-2026w26/"
+        }
+    ]
+}
+    </script>
+
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "GLM-5.2是什么？跟ChatGPT比谁更强？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "GLM-5.2是Z.ai发布的大模型，744B总参数40B活跃参数，MIT协议开源免费商用。在Artificial Analysis智力指数上拿到51分，只比GPT-5.5差4分，已经超过MiniMax-M3和DeepSeek V4 Pro。幻觉率只有28%，远低于GPT-5.5的86%。"
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "GLM-5.2可以免费商用吗？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "可以，GLM-5.2使用MIT协议开源，这是最宽松的开源协议之一，允许免费商用、修改、分发，不需要付费也不需要公开你的代码。"
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "开源模型真的能替代ChatGPT写代码吗？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "取决于你的需求。对于日常脚本、数据处理、简单功能开发，GLM-5.2和Qwen 3.6已经够用。但对于大型复杂项目、需要深度推理的任务，Claude和GPT仍然有明显优势。建议先试用再判断。"
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "怎么快速试用GLM-5.2？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "最简单的方式是通过API调用。Z.ai官方API定价是每百万token输入1.4美元、输出4.4美元。也可以通过OpenRouter、DeepInfra、Fireworks等第三方平台使用。如果要在本地跑，需要至少128GB内存和GPU。"
+            }
+        }
+    ]
+}
+    </script>
+    </head>
+<body>
+<div class="container">
+
+<article class="article-body">
+
+<header class="header">
+    <div class="tag">&#x1f4a1; AI模型</div>
+    <h1>GLM-5.2开源了 MIT协议免费商用 开源模型第一次追上ChatGPT</h1>
+    <div class="meta">2026-06-22 · AiToollab</div>
+</header>
+
+<p>最近两天刷 Hacker News，两条帖子直接给我整不会了。</p>
+
+<p>一条900多分，<strong>Z.ai 发布了 GLM-5.2</strong>，MIT 协议开源，智力指数拿到 51 分，距离 GPT-5.5 只差 4 分。另一条 1300 多分，标题直接问「有没有人已经用本地模型替代 Claude 和 GPT 写代码了」，底下 500 多条评论炸开了锅。</p>
+
+<p>我自己的感受是，这尼玛就是，等了很久的那个信号。</p>
+
+<p>说真的，过去一年我一直在观察开源模型的追赶速度。从 DeepSeek V3 到 Qwen 3.6 到 MiniMax M3，每次都是「快了快了」，但跟 Claude 和 GPT 的差距始终像隔着一条河，看得见岸但过不去。</p>
+
+<p>GLM-5.2 可能是第一个让我觉得，真的有可能趟过去的一个。</p>
+
+<h2>先说说 GLM-5.2 到底强在哪</h2>
+
+<p>Artificial Analysis 智力指数，目前公认最靠谱的模型评测榜单之一。GLM-5.2 拿到了 51 分，排在所有开源模型的第一名。GPT-5.5 是 55 分，Opus 4.8 也差不多在这个区间。也就是说，这个开源模型跟地球上最强的闭源模型，只差 4 分。</p>
+
+<p>4 分是什么概念？同一梯队内，不同推理强度设置都能差出 4 分来。</p>
+
+<p>更离谱的是幻觉率。DeepSeek V4 Pro 的幻觉率高达 94%，遇到不会的问题几乎全在编。GPT-5.5 好一点但也到了 86%。GLM-5.2 只有 28%，不到 GPT-5.5 的三分之一。有人拿同一个复杂的 Python 问题分别测试了 DeepSeek V4 Pro 和 GLM-5.2，DeepSeek 用了将近 4 分钟思考，输出了 7700 个 token，答案全是错的。GLM-5.2 只用了 12 秒，800 个 token，直接告诉你这个需求有技术上的不可能性，并解释了为什么。</p>
+
+<p>12 秒 vs 4 分钟，800 token vs 7700 token，正确 vs 胡编。</p>
+
+<p>这个差距太扎心了。</p>
+
+<p>然后说协议。MIT 开源，免费商用。这意味着你可以把 GLM-5.2 接进你的产品里卖钱，不需要给 Z.ai 交一分钱，也不需要公开你自己的代码。在开源大模型圈子里，MIT 协议算是最大方的了，DeepSeek 用的是自家的协议，Qwen 也有各种限制。</p>
+
+<p>定价方面，Z.ai 官方 API 是每百万 token 输入 1.4 美元、缓存命中 0.26 美元、输出 4.4 美元。横向对比一下，GPT-5.5 的价格大概是这个的 5 到 10 倍。而且 GLM-5.2 的 KV 缓存命中率据说超过 95%，实际使用成本还会更低。</p>
+
+<p>上下文窗口也从 GLM-5.1 的 20 万 token 扩展到了 100 万 token。</p>
+
+<h2>1300 分的讨论帖里，开发者们怎么说</h2>
+
+<p>那条「有没有人已经用本地模型替代 Claude/GPT」的帖子，是我今年在 HN 上看到的编程类话题中讨论最热烈的一个。1306 分，560 多条评论，每一个认真写代码的人都在聊自己的实际体验。</p>
+
+<p>评论区的情况大概分成了两派。</p>
+
+<p>一派是「够了，日常完全够用」。有个开发者说他用 RTX 5090 跑 Qwen 3.6 27B，搭配 llama-server，日常的脚本、数据处理、小型项目开发已经完全不用开 Claude 了。还有人用 M4 MacBook Pro 36GB 跑 Qwen 3.6 35B，80 token/秒，也是日常任务不用云端。</p>
+
+<p>一个 24 人的公司买了两台 DGX Spark，全部自给自足，不管外面 AI 怎么涨价怎么出事，他们自己的 AI 基础设施完全不受影响。</p>
+
+<p>另一派是「还差得远」。做 DevOps 的、写基础设施代码的，普遍觉得 Claude 的能力目前没什么能替代。有个哥们说得很直接，「我试了所有开源模型包括最大的 Qwen 480B 和 Kimi，没有哪怕一个能接近 Claude，我宁愿用 Sonnet 也不碰 Qwen」。</p>
+
+<p>我觉得两边说得都对。取决于你做什么样的工作。</p>
+
+<p>如果你是写业务逻辑的，CRUD 多、重复性高、需求明确，开源模型确实已经够了。但如果你做的是需要深度推理的事情，比如设计一个复杂的系统架构、调试一个嵌套了三层的并发 bug，Claude 和 GPT 的差距还是很明显的。</p>
+
+<p>不过话说回来，Claude 的优势在缩小这件事本身，才是最重要的信号。</p>
+
+<h2>对想靠 AI 赚钱的人意味着什么</h2>
+
+<p>我觉得这事对普通人的影响，可能比大家想象的大。</p>
+
+<p>你想想看，以前想做一个 AI 相关的产品或服务，你只有两条路，要么接 OpenAI 的 API，要么接 Anthropic 的 API。定价权完全在别人手里，他们一涨价你就得跟着掏，他们一出新模型你的成本模型就得重算。</p>
+
+<p>现在多了第三个选择，而且这个选择是免费的、开源的、能力已经足够接近的。</p>
+
+<p>具体来说，有几个方向我觉得值得关注。</p>
+
+<p>第一个，<strong>AI 编程辅助工具</strong>。如果你是做开发者工具的，GLM-5.2 的 MIT 协议意味着你可以把它直接嵌入你的产品里，不需要担心授权问题。做个代码补全插件、做个代码审查工具、做个自动生成测试用例的服务，成本结构会完全不一样。</p>
+
+<p>第二个，<strong>本地部署咨询服务</strong>。评论区里很多人想用本地模型但不会配，什么量化方式、KV 缓存设置、推理引擎选型，这些对普通开发者来说门槛不低。有些人已经在做这件事了，帮企业搭建本地 AI 基础设施，按项目收费。</p>
+
+<p>第三个，<strong>多模型路由</strong>。很多开发者的实际做法不是二选一，而是简单任务用开源模型省成本，复杂任务切回 Claude。如果你能做一个智能路由工具，根据任务复杂度自动选择最合适的模型，这玩意儿是有市场的。</p>
+
+<p>第四个方向比较骚，是 <strong>模型微调服务</strong>。GLM-5.2 开源意味着你可以拿它做基础模型，针对特定行业做微调。法律、医疗、金融，每个领域都需要自己的专业模型，但不是每个公司都有能力从头训一个。你帮他们微调，收服务费。</p>
+
+<h2>一些踩坑经验</h2>
+
+<p>如果你打算试一下 GLM-5.2 或者其他开源模型，有几个坑我想提前帮你踩一遍。</p>
+
+<p>量化方式影响巨大，这一点怎么强调都不够。有人用 IQ4_XS 量化跑 Step 3.7，效果好得出乎意料。但换成另一个量化级别，同一个模型可能就疯狂循环思考、烧掉大量时间还给出错误答案。建议你用你自己的实际任务做评测，不要只看跑分。</p>
+
+<p>推理引擎的选择也很重要。llama.cpp 和 Ollama 是最流行的，但很多人发现切到 llama.cpp 之后性能提升明显，特别是在 M 系列 Mac 上。也有人在用 Opencode、Pi 这些专为编程场景优化的 agent 框架，配合本地模型使用。</p>
+
+<p>还有一点，<strong>不要只跑一个模型</strong>。评论区里有个老哥的方案很有意思，他同时跑 20 多个自烘焙的模型，用不同的 harness 配合不同的任务。他说 harness 跟模型一样重要，同一个模型换一个 harness 可能效果天差地别。</p>
+
+<p>说实话我自己也还在摸索这一块，不敢说有完整的经验。但有一点我很确定，如果你想认真玩本地 AI，不要一上来就追求最大最强的模型，先从一个 7B 或 9B 的小模型开始，把整个工作流跑通，然后再往大模型升级。</p>
+
+<div class="tip">
+    <strong>我的建议</strong>：如果你只是想试试 GLM-5.2，最快的路是去 OpenRouter 上找它，几行代码就能调通。想做本地部署的话，至少需要 128GB 内存的 Mac Studio 或者带 RTX 5090 的台式机。相关教程和工具推荐，我整理了一份提示词包，<a href="/prompt-pack/">戳这里领取</a>。
+</div>
+
+<h2>回到更大的视角</h2>
+
+<p>我越想越觉得，GLM-5.2 的意义不在于它是不是真的比 GPT-5.5 强。这个不重要。</p>
+
+<p>重要的是，一个 744B 参数的开源模型，MIT 协议，免费，智力指数 51 分，幻觉率 28%。</p>
+
+<p>这个东西一年前不存在。</p>
+
+<p>两年前连 DeepSeek V2 都还没出来。三年前 GPT-4 刚发布的时候，开源模型跟闭源的差距是跨物种级别的。</p>
+
+<p>现在这个差距是 4 分。</p>
+
+<p>我不知道 GLM-5.2 之后下一个模型会不会直接追平。但我知道一件事，速度没有放缓反而是在加速。MiniMax M3 是 44 分，三个月前发布的。GLM-5.2 是 51 分，刚发布的。中国团队的开源模型迭代速度，已经快到让人有点麻木了。</p>
+
+<p>磨平一些信息差。</p>
+
+<div class="cta">
+    <p>想了解更多 AI 副业方向和工具使用技巧？</p>
+    <a href="/prompt-pack/">免费领取 AI 副业提示词全家桶 →</a>
+</div>
+
+<div class="related">
+    <h3>相关阅读</h3>
+    <a href="/articles/seo/deepseek-ds4-mac-local-inference/">Redis创始人做了个新玩具：在Mac上跑满血DeepSeek V4 Flash</a>
+    <a href="/articles/seo/claude-code-token-saving/">Claude Code Token省钱攻略：本地推理引擎+DeepSeek混合架构</a>
+    <a href="/articles/seo/caveman-claude-code-token-saving/">Caveman：一个把Claude Code token消耗降到十分之一的方法</a>
+</div>
+
+</article>
+
+</div>
+
+<footer>
+    <p>&copy; 2026 <a href="/">AiToollab</a> &middot; <a href="/prompt-pack/">AI副业提示词全家桶</a></p>
+</footer>
+
+</body>
+</html>
