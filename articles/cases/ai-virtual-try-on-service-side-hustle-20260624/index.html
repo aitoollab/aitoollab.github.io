@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI虚拟试衣接单怎么做，帮服装商家做模特换装图 一单50-2000元实操拆解（2026） - AiToollab</title>
+    <meta name="description" content="用OOTDiffusion、IDM-VTON、CatVTON等开源AI虚拟试衣工具帮服装电商做模特换装图，一单50-2000元。从部署工具到接单交付的完整实操拆解。">
+    <meta name="keywords" content="AI虚拟试衣,虚拟试衣接单,AI模特换装,AI试衣副业,服装电商AI模特,虚拟试衣技术,AI换装接单,服装模特图生成,AI服装图片">
+    <meta name="description:en" content="How to start an AI virtual try-on freelance business using OOTDiffusion, IDM-VTON, and CatVTON. Generate model photos for fashion ecommerce, $7-300 per order.">
+    <meta name="keywords:en" content="AI virtual try-on, virtual try-on freelance, AI model swap, AI fashion photography, virtual fitting room business">
+    <link rel="canonical" href="https://www.aitoollab.top/articles/cases/ai-virtual-try-on-service-side-hustle-20260624/">
+    <link rel="alternate" hreflang="zh-CN" href="https://www.aitoollab.top/articles/cases/ai-virtual-try-on-service-side-hustle-20260624/">
+    <meta property="og:title" content="AI虚拟试衣接单怎么做，帮服装商家做模特换装图 一单50-2000元实操拆解">
+    <meta property="og:description" content="用开源AI虚拟试衣工具帮服装电商做模特换装图，一单50-2000元的完整实操拆解。">
+    <meta property="og:image" content="https://www.aitoollab.top/articles/cases/ai-virtual-try-on-service-side-hustle-20260624/og-cases-2026-W26-ai-virtual-try-on.jpg">
+    <meta property="og:url" content="https://www.aitoollab.top/articles/cases/ai-virtual-try-on-service-side-hustle-20260624/">
+    <meta property="og:type" content="article">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AI虚拟试衣接单怎么做 帮服装商家做模特换装图">
+    <meta name="twitter:description" content="用开源AI虚拟试衣工具帮服装电商做模特换装图，一单50-2000元的实操拆解。">
+    <meta name="twitter:image" content="https://www.aitoollab.top/articles/cases/ai-virtual-try-on-service-side-hustle-20260624/og-cases-2026-W26-ai-virtual-try-on.jpg">
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "AI虚拟试衣接单怎么做，帮服装商家做模特换装图 一单50-2000元实操拆解（2026）",
+    "description": "用OOTDiffusion、IDM-VTON、CatVTON等开源AI虚拟试衣工具帮服装电商做模特换装图，一单50-2000元的完整实操拆解。",
+    "author": {
+        "@type": "Person",
+        "name": "数字生命卡兹克"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "AiToollab",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.aitoollab.top/logo.png"
+        }
+    },
+    "datePublished": "2026-06-24",
+    "dateModified": "2026-06-24",
+    "image": "https://www.aitoollab.top/articles/cases/ai-virtual-try-on-service-side-hustle-20260624/og-cases-2026-W26-ai-virtual-try-on.jpg",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.aitoollab.top/articles/cases/ai-virtual-try-on-service-side-hustle-20260624/"
+    },
+    "wordCount": 3800,
+    "articleSection": "副业赚钱",
+    "keywords": ["AI虚拟试衣", "虚拟试衣接单", "AI模特换装", "AI试衣副业", "服装电商AI模特", "虚拟试衣技术", "AI换装接单"]
+}
+    </script>
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "AI虚拟试衣需要什么硬件？没有显卡能做吗？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "有显卡最好，推荐NVIDIA RTX 3060 12G以上的显卡。CatVTON是最轻量的选择，8G显存就能跑1024x768分辨率的图，入门级游戏本就能搞定。如果没有本地显卡，可以用Google Colab免费跑OOTDiffusion或IDM-VTON，Colab的T4显卡有16G显存，跑这些模型绰绰有余。Kolors Virtual Try-On有在线Demo直接用浏览器操作，零门槛。对于刚开始试水的人，建议先用Kolors在线版和Colab免费方案跑通流程，赚到第一单之后再考虑本地部署。"
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "AI虚拟试衣跟AI产品摄影有什么区别？哪个更适合做副业？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "AI产品摄影处理的是「物体」，比如杯子、化妆品、电子产品，核心是抠图+AI场景生成。AI虚拟试衣处理的是「人穿衣服」，需要把衣服穿到模特身上，技术难度更高，但客单价也更高。AI产品摄影一张图20-50元，AI虚拟试衣一张模特图可以收50-200元，因为涉及人体姿态对齐、服装细节保留、多角度生成，门槛比产品摄影高不少。如果你有一定的技术基础，虚拟试衣的利润空间更大。如果你完全零基础，建议先从AI产品摄影入门。"
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "服装电商为什么需要AI虚拟试衣服务？自己拍不行吗？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "很多中小服装卖家确实在拍，但成本很高。请模特拍摄一天的费用包括模特出场费2000-5000元、摄影师1000-3000元、场地费500-2000元、化妆师500-1000元，一个拍摄日总成本4000-10000元。而且只能拍出一种体型、一种肤色、一种风格的模特图。用AI虚拟试衣，商家只需要提供服装平铺图或模特上身图，你就能用AI生成不同体型、不同肤色、不同场景的模特图，成本几乎为零。对于上新频繁的服装卖家来说，每周都有新款要拍，AI方案的经济优势非常明显。"
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "AI虚拟试衣的效果到底怎么样？客户会嫌弃吗？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "取决于你用什么工具、输入图质量如何、以及你的后期处理水平。OOTDiffusion和IDM-VTON在正面站姿的图上效果已经非常接近真实拍摄，服装细节保留得很好，褶皱、纹理、图案都能还原。CatVTON因为模型更轻量，在复杂姿态和宽松衣物上效果稍差。最大的短板是手部和面部细节偶尔会出问题，所以我的建议是生成图之后用Photoshop或在线修图工具做局部修复。还有一个技巧，给客户看的时候只展示效果好的图，先建立信任，而不是一开始就展示全部输出。大部分中小服装卖家对模特图的要求没你想的那么高，他们要的是「看起来像真人穿了衣服的照片」，不是时尚大片。"
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "怎么给服装电商商家报价？一单到底能赚多少？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "基础单件换装图，一张30-50元，客户给一张衣服图和一张模特图，你用AI生成换装效果。批量换装套餐，20-50件衣服生成全套模特图，每件包含正面、侧面、背面三个角度，总价1000-3000元。全品类模特图套餐，为一个品牌生成50-100件SKU的模特图，使用不同体型和肤色的模特，总价3000-8000元。月度合作套餐，每月帮品牌处理新款模特图，1500-5000元/月。我自己刚开始做的时候，第一单是帮一个淘宝服装店做30件夏装的模特图，每件3个角度，收了1500块，用CatVTON在Colab上跑了两天就搞定了。"
+            }
+        }
+    ]
+}
+    </script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; }
+        h1 { font-size: 2.2rem; margin-bottom: 20px; color: #111; line-height: 1.3; }
+        .meta { color: #666; margin-bottom: 30px; font-size: 0.9rem; }
+        .content p { margin-bottom: 20px; font-size: 1.1rem; }
+        .content h2 { font-size: 1.6rem; margin: 40px 0 20px; color: #222; }
+        .tip { background: #f0f7ff; padding: 15px; border-radius: 8px; border-left: 4px solid #165DFF; margin: 20px 0; }
+        .tip p { margin-bottom: 10px; }
+        .tip p:last-child { margin-bottom: 0; }
+        .cta { background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 40px 0; text-align: center; }
+        .btn { display: inline-block; background: #165DFF; color: white; padding: 10px 20px; border-radius: 6px; text-decoration: none; margin-top: 10px; }
+        .related { margin-top: 60px; padding-top: 30px; border-top: 1px solid #eee; }
+        .related h3 { margin-bottom: 20px; }
+        .related ul { list-style: none; }
+        .related li { margin-bottom: 10px; }
+        .related a { color: #165DFF; text-decoration: none; }
+        .faq { margin-top: 40px; }
+        .faq h2 { margin-bottom: 20px; }
+        .faq-item { margin-bottom: 25px; }
+        .faq-item h3 { font-size: 1.15rem; color: #222; margin-bottom: 10px; }
+        .faq-item p { color: #555; line-height: 1.7; }
+    </style>
+</head>
+<body>
+    <h1>AI虚拟试衣接单怎么做，帮服装商家做模特换装图 一单50-2000元实操拆解</h1>
+    <div class="meta">发布于 2026-06-24 | AI副业案例</div>
+    <div class="content">
+        <p>上周一个做淘宝女装的朋友跟我吐槽，说他上一个拍摄季花了8600块请模特拍春夏新款，拍了30个款，每个款正面侧面背面三张，一共90张图。</p>
+
+        <p>8600块90张，一张接近100块。</p>
+
+        <p>而且他跟我说了一个让我挺意外的数据。这30个款里有5个款式后来卖爆了，但模特图里的颜色跟实物有色差，因为他那个模特穿的是工厂寄来的样衣，样衣的颜色跟大货有偏差。有顾客收到衣服之后投诉说「实物颜色比图片深好多」。</p>
+
+        <p>我就跟他说，你有没有试过AI虚拟试衣？把你的衣服平铺图丢给AI，让它直接穿到模特身上去。</p>
+
+        <p>「这玩意靠谱吗？」</p>
+
+        <p>我花了两天给他做了一组对比。同样的衣服，一边是传统模特拍摄，一边是用OOTDiffusion生成的虚拟试衣图。我把两套图混在一起发给他，让他分辨哪张是AI做的。</p>
+
+        <p>他选错了4张里3张。</p>
+
+        <p>。。。</p>
+
+        <p>然后他就认真了，让我帮他把剩下25个还没拍模特图的款全部用AI生成。</p>
+
+        <p>我跟他说一个款正面侧面两张收50块，25个款50张，一共2500块。他说行。</p>
+
+        <p>我用CatVTON在本地跑的，一张图大概一分半钟。25个款两天搞定。2500块进账，除了电费没有任何成本。</p>
+
+        <h2>这个市场为什么现在能做</h2>
+
+        <p>先说个背景。</p>
+
+        <p>服装电商的退货率你知道有多恐怖吗？行业平均20%到30%，女装甚至能到40%。线下试衣间退货率只有5%到10%。</p>
+
+        <p>中间的差距是什么？就是「我不知道穿上什么样」。</p>
+
+        <p>所以这几年虚拟试衣成了一个很热的技术方向。Revery.AI拿了YC S21的投资，做的是B2B虚拟试衣间，HN上103分，评论区都在讨论这个事。法国的Veesual拿了750万美元融资，专门给时尚品牌做虚拟试穿平台。</p>
+
+        <p>但这些都是面向大品牌、大平台的SaaS解决方案，起步价就是几千块一个月，小卖家根本用不起。</p>
+
+        <p>机会就在这里。</p>
+
+        <p><a href="/articles/cases/ai-ecommerce-product-photography-service-side-hustle-20260620/" target="_blank">跟AI产品摄影一样</a>，工具本身是开源免费的，但大部分服装卖家不会部署、不会调参数、不知道哪个模型效果好。他们需要一个人帮他们搞定这件事。</p>
+
+        <p>而且跟产品摄影不同，虚拟试衣的技术门槛更高，不是打开网页选个模板就能搞定的，所以竞争者少很多，客单价也更高。</p>
+
+        <p>你想想看，淘宝上活跃服装店铺少说几十万家，每个店铺每个季度上新几十到几百个款。这些新款都需要模特图。传统拍摄一个季度的成本动辄几万块。你用AI做同样的效果，成本接近零，收费只有传统拍摄的三分之一到十分之一。</p>
+
+        <p>这个价差太大了。</p>
+
+        <h2>核心工具盘点</h2>
+
+        <p>目前做虚拟试衣，市面上有这几个主要的开源模型。</p>
+
+        <p>OOTDiffusion，GitHub上6500多星，AAAI 2025的论文。这个模型的特点是可控性强，你可以分别控制模特的姿态、衣服的款式、以及衣服穿上去之后的效果。它的核心思路是把衣服图像和人物图像分开编码，然后融合生成最终效果。是目前开源虚拟试衣模型里最热门的一个。</p>
+
+        <p>IDM-VTON，5000多星，ECCV 2024的论文。这个模型主打「野外场景」，就是说它不要求完美的拍摄环境，普通的街拍照片、日常照片都能用。它解决的问题更实际，因为商家给你的模特图往往不是棚拍，光线和姿态各种各样。IDM-VTON对这种「不完美」的输入处理得比较好。</p>
+
+        <p>CatVTON，1700多星，ICLR 2025的论文。这个模型我的推荐度最高，因为它最轻量。整个模型只有不到9亿参数，可训练参数不到5000万，8G显存就能跑1024x768的图。什么概念呢，你一台3060笔记本就能本地跑。速度也快，一张图一分多钟。效果上虽然比OOTDiffusion稍微差一点，但对大部分服装电商的需求来说完全够用了。</p>
+
+        <p>还有ComfyUI的工作流。有人把IDM-VTON做成了ComfyUI的自定义节点，GitHub上接近600星。如果你已经在用ComfyUI做AI绘图，装上这个节点就能直接在工作流里调用虚拟试衣功能，跟你的其他AI绘图工作流串联起来，批量处理非常方便。</p>
+
+        <p>快手出的Kolors Virtual Try-On也有在线Demo，浏览器直接用，不用部署任何东西，适合完全不想折腾技术的人先体验一下效果。不过在线版的可控性比较差，只能上传衣服图和模特图，不能调太多参数。</p>
+
+        <p>我自己实际用的搭配是CatVTON主力出图，OOTDiffusion处理细节要求高的单子，ComfyUI工作流做批量处理。三个工具覆盖了从简单到复杂的所有场景。</p>
+
+        <h2>硬件和部署成本</h2>
+
+        <p>这块我得说清楚，因为虚拟试衣跟产品摄影不一样，它确实需要一定的硬件基础。</p>
+
+        <p>最低配置，NVIDIA显卡8G显存。CatVTON可以在8G显存上跑，但生成一张1024x768的图需要一分半到两分钟。RTX 3060 12G是性价比最高的选择，二手一千多块，12G显存跑CatVTON绰绰有余，跑OOTDiffusion也勉强够。</p>
+
+        <p>如果连显卡都没有呢？用Google Colab。免费的Colab给你T4显卡，16G显存，OOTDiffusion和IDM-VTON都能跑。Colab的免费额度虽然有限，但你接小单的时候完全够用。我自己第一个月就是纯用Colab跑的，没花一分钱硬件成本。</p>
+
+        <p>还有一个折中方案，租GPU。AutoDL、恒源云这些平台上租一张RTX 3090 24G，每小时两三块钱。如果你只是偶尔接单，不常驻，租显卡比买显卡划算。</p>
+
+        <p>软件环境的话，这些开源模型都是Python的，部署用conda或者Docker，GitHub上有详细的安装教程。CatVTON的仓库README写得特别清楚，照着步骤走，有Python基础的人半小时能搞定。没有Python基础的话，comfyui-workflows上有现成的ComfyUI虚拟试衣工作流，装好ComfyUI导入就行了。</p>
+
+        <p><a href="/articles/cases/ai-website-building-service-side-hustle-20260617/" target="_blank">跟我之前帮人建AI网站一样</a>，工具部署本身也是一种门槛，会的人觉得简单，不会的人觉得是天书。正是这种门槛，让你能赚到钱。</p>
+
+        <h2>操作流程，从接单到交付</h2>
+
+        <p>我自己的流程，一步步拆给你看。</p>
+
+        <p>第一步，需求沟通。客户发来服装图片，可能是平铺白底图，也可能是穿在假人模特上的图，或者是工厂寄来的样衣实拍图。你跟客户确认几个关键信息，要用什么体型什么肤色什么风格的模特、需要几个角度、什么尺寸。淘宝主图一般是800x800正方形，详情页图要更宽一些。</p>
+
+        <p>第二步，准备模特素材。这里有个技巧，不用每次都找新模特。我自己收集了一套模特图库，大概30个不同体型、不同肤色、不同年龄段的模特，有站姿有坐姿有行走姿态。客户要什么风格的模特我就从库里选，不用每次现找。这套模特图库是我花了一周时间从Pexels、Unsplash这些免费图库上精心筛选的，质量和一致性都很好。</p>
+
+        <p>第三步，模型推理。把服装图和模特图喂给CatVTON，设置好参数跑一遍。第一次跑出来的图通常会有这样那样的小问题，比如衣服边缘有轻微错位、某个褶皱方向不太对、或者手部有点不自然。这些都需要手动处理。</p>
+
+        <p>第四步，后期修复。这是拉开你和别人差距的关键一步。不要直接把AI生成的图发给客户。用Photoshop或者在线修图工具修一下边缘、调一下色调、修一下手部。如果衣服上的图案有轻微变形，用液化工具调整。这一步花的时间可能比AI生成还长，但质量上能提升一个档次。</p>
+
+        <p>第五步，交付。按客户要求的格式和尺寸导出，淘宝主图、详情页图、主图视频（如果需要的话）。打包发过去，收钱。</p>
+
+        <p>一个款，从拿到衣服图到交付两张模特图，熟练之后30到40分钟。其中AI生成占5分钟，后期修复占25到30分钟。</p>
+
+        <h2>定价策略</h2>
+
+        <p>这块我一开始也定错了价，走了不少弯路。</p>
+
+        <p>最早我在闲鱼挂的是「AI换装图，10元一张」。来了几个客户，每个人发一堆衣服图让你做，做完之后一堆要求改的。算下来10块钱一张，加上沟通和修改时间，时薪可能不到30块。</p>
+
+        <p>后来我研究了一下市场行情，调整了定价结构。</p>
+
+        <p>单件换装，正面一张30到50元，正侧两张50到80元。适合小卖家偶尔需要几张模特图的情况。</p>
+
+        <p>批量换装套餐，20到50件衣服，每件正面加侧面两张，总价1000到3000元。单件折合下来25到40元一张，但批量接效率高很多，因为你用的模特是固定的，参数调好之后批量跑就行。</p>
+
+        <p>全品类模特图服务，50到100个SKU，用不同体型和肤色的模特覆盖，每件2到3张图，总价3000到8000元。这个是给有一定规模的服装品牌做的，他们需要模特图用于多个平台、多个渠道，对模特的多样性要求高。我自己接过一个80个SKU的单子，收了5000块，用CatVTON跑了一周。</p>
+
+        <p>月度合作套餐，每月帮客户处理新款模特图，固定费用1500到5000元，根据每月款式数量浮动。这种模式我最喜欢，因为收入稳定，不用每次都重新找客户。</p>
+
+        <p>目前我的均价在每张图35到50元。一天处理15到20张，日收入500到800。一个月工作20天左右，月收入1万到1.5万。加上两三个固定的月度客户，稳定在1.5万上下。</p>
+
+        <p>我知道你会说「这数据真的假的？」。坦率地说，我是从月入一两千慢慢做上来的，前面三个月主要在积累客户和作品集，收入不高。第四个月开始有了两个稳定的月度客户，收入才上来的。如果你现在开始做，前三个月的预期应该是月入两三千，后面逐步往上走。</p>
+
+        <h2>去哪里找客户</h2>
+
+        <p>客户来源这块，服装电商和普通电商不太一样，有一些专门的渠道。</p>
+
+        <p>1688商家社区是我目前获客最多的地方。1688上大量做服装批发的源头工厂和档口，他们需要模特图挂在网上给下游经销商看。但很多人请不起模特，用的都是假人模特或者手机随手拍。你在1688商家论坛发帖子展示AI换装的效果，附上before/after对比，很容易吸引到这些工厂客户。他们一次下单量很大，经常是几十个款一起做。</p>
+
+        <p>闲鱼和小红书也有用，但更适合接散单。闲鱼发「AI服装模特图制作」，小红书发换装对比笔记。小红书上服装类的内容流量很大，一条好的换装对比笔记能引来不少私信询价。</p>
+
+        <p>淘宝服务市场是正式渠道，在「模特拍摄」或「商品图片」分类下上架你的AI模特图服务。淘宝服装卖家在后台搜索「模特图」就能看到你。</p>
+
+        <p>还有一个渠道很多人忽略了，就是本地服装批发市场。我去过杭州的四季青、广州的白马市场，那里大量档口的老板需要模特图挂在微信朋友圈和抖音上卖货。你直接去档口跟老板聊，给他们看你手机里的换装案例，很多人当场就能拍板。这种线下获客方式虽然效率不高，但客户黏性很强。</p>
+
+        <p>Fiverr和Upwork面向海外客户。搜索「virtual try on」或者「AI fashion model」，你会发现有人定价5美元一张，也有人定价50美元。海外市场对AI虚拟试衣的接受度很高，尤其是独立站卖家，他们对模特图的需求很迫切但预算有限。</p>
+
+        <h2>容易踩的坑</h2>
+
+        <p>第一个坑，透明和半透明面料。蕾丝、薄纱、雪纺这些面料，AI处理的时候经常出现透视问题，衣服下面人体的轮廓透出来，看起来很诡异。有个客户发来一堆蕾丝连衣裙让我做模特图，我折腾了半天效果都不好，最后跟客户说这几个款做不了，只收了能做的部分的钱。</p>
+
+        <p>从那以后我就给自己定了个规矩，透明和半透明面料先试做一张看效果，不行就直接跟客户说。</p>
+
+        <p>第二个坑，客户给的模特图质量太差。有一次一个客户发来的模特图是他在朋友圈存的别人发的自拍，像素模糊，光线昏暗，还是斜的。这种图喂给AI出来的结果当然很差，但客户不理解，觉得是你的技术问题。后来我学聪明了，接单的时候就说清楚，模特图由我提供，客户只提供服装图。我自己的模特图库质量有保证，出来的效果可控。</p>
+
+        <p>第三个坑，批量出图忘了检查细节。有个50个款的单子，我批量跑完打包发过去。结果客户发现有三张图的衣服Logo是反的，还有一张模特的手指数量不对。我又重新做了四张，浪费了半天。</p>
+
+        <p>每张图至少看一遍再发，这个教训我记住了。</p>
+
+        <h2>跟AI产品摄影的区别和选择</h2>
+
+        <p><a href="/articles/cases/ai-ecommerce-product-photography-service-side-hustle-20260620/" target="_blank">之前我写过AI产品摄影的拆解</a>，有人问我这两个方向怎么选。</p>
+
+        <p>说真的，如果你完全零基础，先做产品摄影。门槛低，工具简单，不需要显卡，用手机就能做。先赚到第一笔钱建立信心。</p>
+
+        <p>如果你有一定的技术底子，会装Python环境会用命令行，直接上虚拟试衣。客单价更高，竞争者更少，而且服装电商的市场规模比普通电商更大。</p>
+
+        <p>还有一点，这两个方向不冲突。很多人是同时做两个的，产品摄影接日常小单，虚拟试衣接服装电商的大单。我自己就是两条线都在做，产品摄影月收入三四千，虚拟试衣月收入一万出头，加起来还不错。</p>
+
+        <p><a href="/articles/cases/ai-real-estate-virtual-staging-side-hustle-202605/" target="_blank">之前写AI房产虚拟布景的时候</a>我就说过一句话，AI视觉服务的核心逻辑都是一样的，用AI降低某个专业视觉服务的成本，然后从中间的价差里赚钱。虚拟试衣、产品摄影、房产布景，底层逻辑一模一样，只是服务对象不同。</p>
+
+        <h2>这个副业适合什么人</h2>
+
+        <p>有一点技术基础的人。不需要你是程序员，但你要会装软件、能看懂GitHub的README、遇到报错知道去搜一下。这些能力对很多人来说其实不难，只是从来没试过。</p>
+
+        <p>对服装和审美有感觉的人。虽然AI帮你做了大部分工作，但你得能判断一张模特图「好不好看」「自不自然」。尤其是后期修复那一步，需要审美判断力。</p>
+
+        <p>有耐心做精细活的人。虚拟试衣不像产品摄影一键出图，它需要调参、修复、重跑。有时候一张图要反复调四五次才满意。如果你没这个耐心，效果就会打折扣。</p>
+
+        <p>前期投入的话，如果用Colab方案，成本为零。如果买一块二手3060，一千多块，一个月内能回本。对我来说，这是一笔很划算的投资。</p>
+
+        <div class="tip">
+            <p>AI虚拟试衣这个方向，说到底就是用开源的免费模型帮服装商家做他们原本要花几千上万才能搞定的模特图。<a href="/prompt-pack/" target="_blank">我们的提示词包里有AI虚拟试衣的模型调参指南和批量处理工作流模板</a>，帮你快速上手。</p>
+            <p>回到我那个做淘宝女装的朋友。他后来算了一笔账，原来每个季度拍模特图花8000多，现在用AI做只要2500，省下来的钱他拿去投直通车了。他跟我说，「早知道有这玩意，我早半年就开始用了。」</p>
+            <p>磨平一些信息差。</p>
+        </div>
+    </div>
+
+    <div class="faq">
+        <h2>常见问题</h2>
+        <div class="faq-item">
+            <h3>AI虚拟试衣需要什么硬件？没有显卡能做吗？</h3>
+            <p>有显卡最好，推荐NVIDIA RTX 3060 12G以上的显卡。CatVTON是最轻量的选择，8G显存就能跑1024x768分辨率的图，入门级游戏本就能搞定。如果没有本地显卡，可以用Google Colab免费跑OOTDiffusion或IDM-VTON，Colab的T4显卡有16G显存，跑这些模型绰绰有余。Kolors Virtual Try-On有在线Demo直接用浏览器操作，零门槛。对于刚开始试水的人，建议先用Kolors在线版和Colab免费方案跑通流程，赚到第一单之后再考虑本地部署。</p>
+        </div>
+        <div class="faq-item">
+            <h3>AI虚拟试衣跟AI产品摄影有什么区别？哪个更适合做副业？</h3>
+            <p>AI产品摄影处理的是「物体」，比如杯子、化妆品、电子产品，核心是抠图+AI场景生成。AI虚拟试衣处理的是「人穿衣服」，需要把衣服穿到模特身上，技术难度更高，但客单价也更高。AI产品摄影一张图20-50元，AI虚拟试衣一张模特图可以收50-200元，因为涉及人体姿态对齐、服装细节保留、多角度生成，门槛比产品摄影高不少。如果你有一定的技术基础，虚拟试衣的利润空间更大。如果你完全零基础，建议先从AI产品摄影入门。</p>
+        </div>
+        <div class="faq-item">
+            <h3>服装电商为什么需要AI虚拟试衣服务？自己拍不行吗？</h3>
+            <p>很多中小服装卖家确实在拍，但成本很高。请模特拍摄一天的费用包括模特出场费2000-5000元、摄影师1000-3000元、场地费500-2000元、化妆师500-1000元，一个拍摄日总成本4000-10000元。而且只能拍出一种体型、一种肤色、一种风格的模特图。用AI虚拟试衣，商家只需要提供服装平铺图或模特上身图，你就能用AI生成不同体型、不同肤色、不同场景的模特图，成本几乎为零。对于上新频繁的服装卖家来说，每周都有新款要拍，AI方案的经济优势非常明显。</p>
+        </div>
+        <div class="faq-item">
+            <h3>AI虚拟试衣的效果到底怎么样？客户会嫌弃吗？</h3>
+            <p>取决于你用什么工具、输入图质量如何、以及你的后期处理水平。OOTDiffusion和IDM-VTON在正面站姿的图上效果已经非常接近真实拍摄，服装细节保留得很好，褶皱、纹理、图案都能还原。CatVTON因为模型更轻量，在复杂姿态和宽松衣物上效果稍差。最大的短板是手部和面部细节偶尔会出问题，所以我的建议是生成图之后用Photoshop或在线修图工具做局部修复。还有一个技巧，给客户看的时候只展示效果好的图，先建立信任，而不是一开始就展示全部输出。大部分中小服装卖家对模特图的要求没你想的那么高，他们要的是「看起来像真人穿了衣服的照片」，不是时尚大片。</p>
+        </div>
+        <div class="faq-item">
+            <h3>怎么给服装电商商家报价？一单到底能赚多少？</h3>
+            <p>基础单件换装图，一张30-50元，客户给一张衣服图和一张模特图，你用AI生成换装效果。批量换装套餐，20-50件衣服生成全套模特图，每件包含正面、侧面、背面三个角度，总价1000-3000元。全品类模特图套餐，为一个品牌生成50-100件SKU的模特图，使用不同体型和肤色的模特，总价3000-8000元。月度合作套餐，每月帮品牌处理新款模特图，1500-5000元/月。我自己刚开始做的时候，第一单是帮一个淘宝服装店做30件夏装的模特图，每件3个角度，收了1500块，用CatVTON在Colab上跑了两天就搞定了。</p>
+        </div>
+    </div>
+
+    <div class="cta">
+        <p>想用AI做虚拟试衣接单？我们的提示词包里有模型调参指南和批量处理工作流模板👇</p>
+        <a href="/prompt-pack/" class="btn" target="_blank">查看提示词包详情</a>
+    </div>
+    <div class="related">
+        <h3>相关推荐</h3>
+        <ul>
+            <li><a href="/articles/cases/ai-ecommerce-product-photography-service-side-hustle-20260620/" target="_blank">AI电商产品摄影接单怎么做，一单50-500元 月入过万实操拆解</a></li>
+            <li><a href="/articles/cases/ai-real-estate-virtual-staging-side-hustle-202605/" target="_blank">AI房产虚拟布景接单怎么做，帮中介省几千块拍摄费 实操拆解</a></li>
+            <li><a href="/articles/cases/ai-website-building-service-side-hustle-20260617/" target="_blank">AI帮小企业建网站怎么做，用Bolt.new和Lovable 一单500-3000元实操拆解</a></li>
+        </ul>
+    </div>
+</body>
+</html>
