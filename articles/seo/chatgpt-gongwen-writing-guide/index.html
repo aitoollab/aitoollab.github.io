@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatGPT写公文的完整教程，我帮你踩了所有的坑 - AiToollab</title>
+    <meta name="description" content="体制内用ChatGPT写公文的实操教程。工作总结、会议纪要、汇报材料、调研报告，我用AI写了3个月，从一头雾水到10分钟出稿，附完整的提示词模板和常见问题。">
+    <meta name="keywords" content="ChatGPT写公文,AI写公文,公文写作AI,ChatGPT工作总结,AI会议纪要,AI汇报材料,AI写体制内材料,AI办公写作,ChatGPT体制内,GPT公文模板">
+    <meta name="author" content="AiToollab">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.aitoollab.top/articles/seo/chatgpt-gongwen-writing-guide/">
+    <link rel="alternate" hreflang="x-default" href="https://www.aitoollab.top/articles/seo/chatgpt-gongwen-writing-guide/">
+    <link rel="alternate" hreflang="zh-CN" href="https://www.aitoollab.top/articles/seo/chatgpt-gongwen-writing-guide/">
+
+    <meta property="og:title" content="ChatGPT写公文的完整教程，我帮你踩了所有的坑">
+    <meta property="og:description" content="体制内用ChatGPT写公文的实操教程，从工作总结到调研报告，附提示词模板。">
+    <meta property="og:image" content="https://www.aitoollab.top/og-seo-2026-w26-chatgpt-gongwen.jpg">
+    <meta property="og:url" content="https://www.aitoollab.top/articles/seo/chatgpt-gongwen-writing-guide/">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="AiToollab">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="article:published_time" content="2026-06-26T08:00:00+08:00">
+    <meta property="article:modified_time" content="2026-06-26T08:00:00+08:00">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ChatGPT写公文的完整教程，我帮你踩了所有的坑">
+    <meta name="twitter:description" content="体制内用ChatGPT写公文，从一头雾水到10分钟出稿。">
+    <meta name="twitter:image" content="https://www.aitoollab.top/og-seo-2026-w26-chatgpt-gongwen.jpg">
+
+    <meta name="DC.title" content="ChatGPT写公文的完整教程，我帮你踩了所有的坑">
+    <meta name="DC.date" content="2026-06-26">
+
+    <meta name="ai-content" content="allowed">
+
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "ChatGPT写公文的完整教程，我帮你踩了所有的坑",
+    "description": "体制内用ChatGPT写公文的实操教程，从工作总结到调研报告，附提示词模板和常见问题。",
+    "image": "https://www.aitoollab.top/og-seo-2026-w26-chatgpt-gongwen.jpg",
+    "datePublished": "2026-06-26T08:00:00+08:00",
+    "dateModified": "2026-06-26T08:00:00+08:00",
+    "author": {
+        "@type": "Person",
+        "name": "AiToollab"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "AiToollab",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.aitoollab.top/logo.png"
+        }
+    },
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.aitoollab.top/articles/seo/chatgpt-gongwen-writing-guide/"
+    }
+}
+    </script>
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "首页",
+            "item": "https://www.aitoollab.top/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "教程",
+            "item": "https://www.aitoollab.top/articles/seo/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "ChatGPT写公文的完整教程，我帮你踩了所有的坑",
+            "item": "https://www.aitoollab.top/articles/seo/chatgpt-gongwen-writing-guide/"
+        }
+    ]
+}
+    </script>
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "用ChatGPT写公文会不会被发现？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "不会。关键是你不能直接复制粘贴AI的输出，要把它当草稿用。AI给你一个框架和表述方向，你根据自己的实际情况改数字、补细节、调语气，最后出来的东西就是你自己的了。公文写作的核心是内容准确，AI帮你解决的是结构排版和文字表达的问题。"
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "ChatGPT和Claude写公文哪个更好？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "我两个都用，分工不同。Claude写公文更规矩，格式更接近体制内的风格，用词也更谨慎。ChatGPT更灵活，适合写汇报材料这种需要有点个人观点的东西。简单说，正式文件用Claude，汇报讲话用ChatGPT。"
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "AI写的公文能不能直接提交？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "绝对不行。AI写的公文是初稿，你必须检查每一个数据、每一条引用、每一个事实是否准确。公文最忌讳的就是数据出错或者引用了不存在的文件。我的做法是AI出草稿后，自己逐条核实，至少改30%以上再提交。"
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "写公文用什么AI工具最合适？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "主力用Claude或者ChatGPT就够了。Kimi和通义千问也行，它们对中文语境的理解比较好。不要用什么专门的公文AI写作平台，那些大部分是智商税，直接用通用的大模型效果更好。关键是你会不会写提示词。"
+            }
+        }
+    ]
+}
+    </script>
+
+    <style>
+    :root {
+        --bg: #0d1117;
+        --card: #161b22;
+        --border: #30363d;
+        --text: #e6edf3;
+        --muted: #8b949e;
+        --accent: #58a6ff;
+        --green: #3fb950;
+        --orange: #d29922;
+        --red: #f85149;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+    .container { max-width: 720px; margin: 0 auto; padding: 20px; }
+    h1 { font-size: 1.8em; margin-bottom: 12px; color: var(--text); line-height: 1.3; }
+    .subtitle { color: var(--muted); font-size: 0.95em; margin-bottom: 24px; }
+    .tag-row { display: flex; gap: 8px; margin-bottom: 28px; flex-wrap: wrap; }
+    .tag { background: var(--card); border: 1px solid var(--border); color: var(--accent); padding: 3px 10px; border-radius: 16px; font-size: 0.8em; }
+    p { margin-bottom: 16px; color: var(--text); }
+    strong { color: var(--green); }
+    em { color: var(--orange); font-style: normal; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    blockquote { border-left: 3px solid var(--accent); padding-left: 16px; color: var(--muted); margin: 20px 0; }
+    .cta-box { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin: 32px 0; }
+    .cta-box h3 { color: var(--green); margin-bottom: 10px; font-size: 1.1em; }
+    .cta-box p { margin-bottom: 8px; font-size: 0.95em; color: var(--muted); }
+    .cta-box a { display: inline-block; background: var(--green); color: #000; padding: 8px 18px; border-radius: 6px; font-weight: bold; font-size: 0.9em; margin-top: 8px; }
+    .cta-box a:hover { text-decoration: none; opacity: 0.85; }
+    .divider { border: none; border-top: 1px solid var(--border); margin: 28px 0; }
+    .related-box { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-top: 32px; }
+    .related-box h4 { color: var(--text); margin-bottom: 12px; font-size: 0.95em; }
+    .related-box ul { list-style: none; }
+    .related-box ul li { margin-bottom: 8px; padding-left: 12px; position: relative; }
+    .related-box ul li::before { content: "›"; position: absolute; left: 0; color: var(--accent); }
+    .related-box ul li a { color: var(--accent); font-size: 0.9em; }
+    footer { border-top: 1px solid var(--border); margin-top: 40px; padding-top: 20px; color: var(--muted); font-size: 0.85em; text-align: center; }
+    footer a { color: var(--muted); }
+    footer a:hover { color: var(--accent); }
+    .highlight { background: rgba(88, 166, 255, 0.08); border-left: 3px solid var(--accent); padding: 12px 16px; margin: 20px 0; border-radius: 0 4px 4px 0; }
+    .warning { background: rgba(210, 153, 34, 0.08); border-left: 3px solid var(--orange); padding: 12px 16px; margin: 20px 0; border-radius: 0 4px 4px 0; }
+    .faq-section { margin-top: 32px; }
+    .faq-item { background: var(--card); border: 1px solid var(--border); border-radius: 8px; margin-bottom: 12px; overflow: hidden; }
+    .faq-q { padding: 14px 16px; cursor: pointer; font-weight: bold; color: var(--text); font-size: 0.95em; }
+    .faq-a { padding: 0 16px; max-height: 0; overflow: hidden; transition: padding 0.3s; color: var(--muted); font-size: 0.9em; line-height: 1.6; }
+    .faq-item.open .faq-a { padding: 0 16px 14px; max-height: 500px; }
+    .faq-item.open .faq-q::after { content: " \u2191"; }
+    .faq-q::after { content: " \u2193"; float: right; color: var(--accent); }
+    </style>
+
+<meta property="og:title:en" content="How to Use ChatGPT for Official Document Writing - Complete Guide" />
+<meta property="og:description:en" content="A practical guide to writing Chinese government and corporate documents with AI, including prompt templates and pitfalls." />
+<meta name="description:en" content="Complete tutorial on using ChatGPT to write official documents in Chinese, with prompt templates and real experience." />
+
+</head>
+<body>
+<div class="container">
+
+<h1>ChatGPT写公文的完整教程，我帮你踩了所有的坑</h1>
+<div class="subtitle">2026年6月26日 · AI办公实战</div>
+<div class="tag-row">
+    <span class="tag">ChatGPT写公文</span>
+    <span class="tag">AI办公写作</span>
+    <span class="tag">公文写作技巧</span>
+    <span class="tag">体制内AI</span>
+</div>
+
+<p>上周我一个在区发改委的哥们儿，晚上11点半给我发微信，说领导明天要一份季度工作总结，3000字，他盯着空白文档坐了两个小时，一个字没写出来。</p>
+
+<p>我说你把这段时间做了什么事列给我，我帮你理个框架。</p>
+
+<p>他发了十几条语音，我整理了一下关键信息丢给Claude，两分钟出了一份完整的工作总结框架。他照着框架填了半小时，交稿了。</p>
+
+<p>第二天他跟我说，写完之后感觉其实也不难，就是不知道从哪儿开始。</p>
+
+<p>我相信很多人都有这个感受。公文写作不难，难的是面对空白文档的那一刻。AI能帮你跨过这个坎。</p>
+
+<p>我自己用AI写各种材料已经快三个月了，从工作总结、会议纪要到汇报材料、调研报告，前前后后写了大概四五十份。踩了不少坑，也摸索出了一套比较靠谱的方法。</p>
+
+<hr class="divider">
+
+<h2>先说一个最核心的原则</h2>
+
+<p><strong>AI写公文，不是让AI替你写，是让AI帮你搭框架。</strong></p>
+
+<p>这个区别很重要。你直接让ChatGPT「帮我写一份工作总结」，它给你出来的东西大概率是空话套话堆砌，毫无信息量，你根本没法用。</p>
+
+<p>正确的用法是，你自己脑子里有内容，知道这段时间做了什么事、有哪些数据、有哪些亮点和问题，但不知道怎么组织成一篇规范的公文。这时候你把这些素材喂给AI，让它帮你搭框架、调语序、润色措辞。</p>
+
+<p>打个比方，你手上有一堆食材，AI帮你的是写菜单和摆盘，不是替你买菜。</p>
+
+<p>这个原则搞清楚了，后面所有的方法才有意义。</p>
+
+<hr class="divider">
+
+<h2>哪种公文适合用AI，哪种不适合</h2>
+
+<p>我按自己的经验分了一下类。</p>
+
+<p>非常适合用AI的，<strong>工作总结、会议纪要、汇报材料、情况通报、调研报告</strong>。这几种材料的共同特点是，信息你都有，就是需要组织成规范的格式和措辞。AI最擅长的就是这个。</p>
+
+<p>可以用但需要大量修改的，<strong>领导讲话稿、方案规划、述职报告</strong>。这种材料需要比较强的个人风格和观点，AI给你的只能是底稿，你自己改的部分会很多。</p>
+
+<p>不建议用AI的，<strong>涉密文件、批示件、纪律处分材料</strong>。这些材料对措辞的准确性要求极高，一个字用错可能引发严重后果，AI没法保证这种精度。</p>
+
+<p>我个人的使用频率是这样的，工作总结和会议纪要用AI辅助的频率最高，基本每篇都用。汇报材料大概70%的篇幅是AI搭的框架，30%是我自己改的。</p>
+
+<hr class="divider">
+
+<h2>我用的工具和选择</h2>
+
+<p>主力是<strong>Claude</strong>。不是我偏心，是写公文这个场景Claude确实比ChatGPT更合适。Claude的中文措辞更接近体制内的表达习惯，不容易出现那种「AI味」很浓的句式，什么「众所周知」「不言而喻」这种，Claude基本不会用。</p>
+
+<p>而且Claude对格式要求的遵循度更高。你跟它说「按照工作总结的规范格式，分三个部分，每部分有小标题」，它出来的结构就很规整。ChatGPT有时候会自作主张加一些你觉得多余的部分。</p>
+
+<p><strong>备选是ChatGPT</strong>。有些材料需要更活泼一点的表达，比如内部交流的汇报材料或者演讲稿，ChatGPT的文字更灵活一些。</p>
+
+<p><strong>Kimi和通义千问</strong>我也有朋友在用，它们对中文语境的理解确实不错，特别是通义千问处理政策类文本的时候，引用的政策文件有时候比Claude还准确。但整体写作质量，我还是觉得Claude更稳定。</p>
+
+<div class="warning">
+坦率的讲，选工具这件事没那么重要。你把同样的素材喂给不同的大模型，出来的东西差别其实没你想的那么大。真正拉开差距的是你会不会写提示词，以及你自己手上有多少素材。
+</div>
+
+<hr class="divider">
+
+<h2>写工作总结，我的提示词模板</h2>
+
+<p>工作总结是我写得最多的类型，说说我的方法。</p>
+
+<p>第一步，<strong>列素材</strong>。不要直接让AI写，先把自己这段时间做了什么事一条一条列出来。比如我上个月帮一个街道办写的季度总结，素材就是他们给我的这些，完成了XX专项整治行动、处理了XX件群众诉求、组织了XX次培训、推进了XX项目进度。</p>
+
+<p>第二步，<strong>给AI搭提示词</strong>。我摸索出来的模板大概是这样。</p>
+
+<blockquote>
+你是一个机关单位的文字工作者，请根据以下素材写一份XX季度工作总结。<br><br>
+要求，总字数3000字左右，分三个部分，第一部分工作回顾，第二部分存在问题，第三部分下一步计划。语言风格要求规范严谨，符合机关公文写作规范。<br><br>
+素材如下，<br>
+1. 完成了XX专项整治，共检查XX家单位，整改XX项问题<br>
+2. 处理群众诉求XX件，办结率XX%<br>
+3. ...
+</blockquote>
+
+<p>第三步，<strong>检查修改</strong>。AI出的初稿你看一遍，重点检查数据对不对、表述有没有夸大或者缩小、有没有漏掉重要的工作。这一步我一般会改掉30%到40%的内容。</p>
+
+<p>说实话，刚开始用的时候我改得更多，大概50%都要重写。用多了之后提示词越来越精准，AI出来的质量也提高了，现在基本改个20%到30%就行。</p>
+
+<div class="highlight">
+有一个很多人不知道的技巧。你可以在提示词里附一份你们单位之前的优秀公文作为参考，让AI模仿那个风格写。AI学习范本的能力很强，你给它一篇措辞精准的范文，它出来的东西质量会明显提升。
+</div>
+
+<p>这个方法我在<a href="/articles/seo/ai-weekly-report-side-hustle/">写周报的文章</a>里也提到过，底层逻辑是一样的，先有素材再让AI组织，而不是让AI凭空捏造。</p>
+
+<hr class="divider">
+
+<h2>写会议纪要，最省时间的用法</h2>
+
+<p>会议纪要是AI帮公文里面最省力的。</p>
+
+<p>我的做法是这样的。开会的时候正常录音或者做笔记，会后把录音转文字。现在的录音转文字工具很多，讯飞、通义听悟都行，准确率已经很高了。</p>
+
+<p>转成文字之后，直接丢给AI，提示词很简单。</p>
+
+<blockquote>
+请根据以下会议记录整理一份正式的会议纪要。<br><br>
+要求，<br>
+1. 按议题分类，每个议题包含讨论内容和决定事项<br>
+2. 明确每项工作的责任人和完成时限<br>
+3. 剔除闲聊和重复内容<br>
+4. 总字数控制在1500字以内<br><br>
+会议记录如下，<br>
+...
+</blockquote>
+
+<p>5分钟出稿，你检查一下重点有没有遗漏、责任人有没有写错就行。</p>
+
+<p>有个细节需要注意。会议录音转文字之后，里面会有大量的口头禅、重复表述、跑题讨论。你自己在转文字的时候先快速过一遍，删掉明显无用的部分再给AI，效果会好很多。不然AI有时候会把一些无关紧要的讨论也写进纪要里，还得你再删。</p>
+
+<p>这块跟<a href="/articles/seo/ai-meeting-notes-side-hustle/">AI做会议笔记</a>的思路是一样的，先预处理再让AI整理，比自己手动从零写快至少5倍。</p>
+
+<hr class="divider">
+
+<h2>我踩过的三个大坑</h2>
+
+<p>第一个坑，<strong>数据瞎编</strong>。有一次我让AI写一份调研报告，里面有「XX区常住人口XX万」这种数据，我没细看就交了。结果领导说这个数字不对，实际是XX万。原因是AI根据上下文推测了一个数字，不是真实的。</p>
+
+<p>从那以后我定了一条死规矩，AI出来的稿件里每一个数据、每一个百分比、每一条引用，必须逐一核实。宁可多花10分钟核实，也不能在数据上出错。</p>
+
+<p>第二个坑，<strong>语气太AI</strong>。刚用AI的时候我经常偷懒，AI出来的东西改都不怎么改就交了。结果领导说怎么最近写的材料读起来都一个味儿。后来我才知道，AI有一个固定的写作模式，喜欢用排比、喜欢用四字成语堆砌、喜欢每段开头都是「一是」「二是」「三是」。</p>
+
+<p>解决方案很简单，拿到AI的稿子之后，至少把排比句拆掉两三个，加几句你自己习惯的表达方式，感觉就不一样了。</p>
+
+<p>第三个坑，<strong>提示词太笼统</strong>。早期我经常就写「帮我写一份工作总结」，然后抱怨AI写得太空。后来才明白，问题不在AI，在我自己给的素材太少了。你给的信息越具体，出来的东西越能用。</p>
+
+<div class="warning">
+说真的，用AI写公文这件事最大的门槛不是技术，是你自己愿不愿意先把素材理清楚。很多人觉得AI应该什么都能搞定，丢一句话过去就想出成品。这个预期是不对的。AI是放大器，你给它70分的素材，它能帮你组织成85分的稿子。你给它20分的素材，它最多帮你凑到40分，还是不能用。
+</div>
+
+<hr class="divider">
+
+<h2>几个实用的小技巧</h2>
+
+<p><strong>分段喂素材比一次全丢效果好。</strong>如果你要写一份5000字的调研报告，不要把所有素材一次性丢给AI，它容易丢失信息。分成几段喂，第一段给背景和目标，等它输出框架后，再逐段补充具体内容。</p>
+
+<p><strong>让AI先写提纲，你确认后再写全文。</strong>这个习惯能省很多返工时间。先让AI根据你的素材列一个提纲，你看一下结构合不合理，调整之后再让它展开写。如果直接写全文，写到一半发现结构不对，重写更费时间。</p>
+
+<p><strong>保存好的提示词模板。</strong>你常用的几种公文类型，比如工作总结、会议纪要、汇报材料，每种都调试出一份好用的提示词模板存下来。下次直接复制粘贴改个素材就行，不用每次从头写。</p>
+
+<p>我自己存了大概七八个模板，现在每次写材料基本就是选模板、填素材、出稿、检查修改，四步搞定。</p>
+
+<p>这些模板我也整理在我的提示词包里了，<a href="/articles/seo/ai-side-hustle-toolbox/">跟其他AI办公工具的用法</a>是一套的。</p>
+
+<hr class="divider">
+
+<h2>最后说说现实</h2>
+
+<p>我用AI写了三个月的公文，最大的感受是，它确实能帮你省很多时间。以前一个3000字的工作总结我要写半天，现在大概一小时就能搞定，质量还比以前高。</p>
+
+<p>但我也清楚地知道，AI不会替你思考，不会替你判断哪些工作值得重点写、哪些问题需要如实反映。这些是写公文最核心的部分，也是AI做不了的。</p>
+
+<p>AI帮你解决的是效率和格式的问题，让你把精力省下来放在内容本身。</p>
+
+<p>说到底，一个好的公文写作者和AI之间的关系，不是替代，是配合。你负责思考和信息把关，AI负责表达和排版。</p>
+
+<p>磨平一些信息差。</p>
+
+<div class="cta-box">
+    <h3>想要现成的公文写作提示词模板？</h3>
+    <p>我把工作总结、会议纪要、汇报材料、调研报告这四种最常用的公文写作提示词模板，全部调试好了放在提示词全家桶里。复制粘贴改个素材就能用，不用自己从头摸索。</p>
+    <a href="https://www.aitoollab.top/prompt-pack/">领取提示词全家桶 ¥39 →</a>
+</div>
+
+<div class="related-box">
+    <h4>相关推荐</h4>
+    <ul>
+        <li><a href="/articles/seo/ai-weekly-report-side-hustle/">用AI写周报，5分钟搞定每周汇报</a></li>
+        <li><a href="/articles/seo/ai-meeting-notes-side-hustle/">AI会议笔记整理，开完会直接出纪要</a></li>
+        <li><a href="/articles/seo/ai-side-hustle-toolbox/">AI工具箱时代的副业逻辑</a></li>
+        <li><a href="/articles/seo/ai-writing-side-hustle/">AI写作接单副业，月入过万的实操方法</a></li>
+    </ul>
+</div>
+
+<div class="faq-section">
+<h3 style="color: var(--text); margin-bottom: 16px; font-size: 1em;">常见问题</h3>
+
+<div class="faq-item">
+<div class="faq-q" onclick="this.parentElement.classList.toggle('open')">用ChatGPT写公文会不会被发现？</div>
+<div class="faq-a">不会。关键是你不能直接复制粘贴AI的输出，要把它当草稿用。AI给你一个框架和表述方向，你根据自己的实际情况改数字、补细节、调语气，最后出来的东西就是你自己的了。公文写作的核心是内容准确，AI帮你解决的是结构排版和文字表达的问题。</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q" onclick="this.parentElement.classList.toggle('open')">ChatGPT和Claude写公文哪个更好？</div>
+<div class="faq-a">我两个都用，分工不同。Claude写公文更规矩，格式更接近体制内的风格，用词也更谨慎。ChatGPT更灵活，适合写汇报材料这种需要有点个人观点的东西。简单说，正式文件用Claude，汇报讲话用ChatGPT。</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q" onclick="this.parentElement.classList.toggle('open')">AI写的公文能不能直接提交？</div>
+<div class="faq-a">绝对不行。AI写的公文是初稿，你必须检查每一个数据、每一条引用、每一个事实是否准确。公文最忌讳的就是数据出错或者引用了不存在的文件。我的做法是AI出草稿后，自己逐条核实，至少改30%以上再提交。</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q" onclick="this.parentElement.classList.toggle('open')">写公文用什么AI工具最合适？</div>
+<div class="faq-a">主力用Claude或者ChatGPT就够了。Kimi和通义千问也行，它们对中文语境的理解比较好。不要用什么专门的公文AI写作平台，那些大部分是智商税，直接用通用的大模型效果更好。关键是你会不会写提示词。</div>
+</div>
+
+</div>
+
+<footer>
+    <p><a href="https://www.aitoollab.top/">首页</a> · <a href="https://www.aitoollab.top/articles/">文章</a> · <a href="https://www.aitoollab.top/prompt-pack/">提示词全家桶</a> · <a href="https://www.aitoollab.top/about/">关于我们</a></p>
+    <p style="margin-top:8px">© 2026 AiToollab · 磨平一些信息差</p>
+</footer>
+</div>
+
+<script>
+document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', function() {
+        this.parentElement.classList.toggle('open');
+    });
+});
+</script>
+
+</body>
+</html>

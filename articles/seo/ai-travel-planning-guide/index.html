@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI做旅行攻略，5分钟搞定别人花3天的行程规划 - AiToollab</title>
+    <meta name="description" content="用ChatGPT和Kimi做旅行攻略的完整教程。从选目的地到排路线、定预算、找住宿，我帮朋友规划了6次旅行，每次都省了至少一天的时间。附具体提示词模板和常见问题。">
+    <meta name="keywords" content="AI做旅行攻略,ChatGPT旅行规划,AI行程规划,AI旅游攻略,Kimi旅行攻略,AI旅行助手,用AI规划行程,AI做旅游攻略,旅行规划AI,AI旅行攻略教程">
+    <meta name="author" content="AiToollab">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.aitoollab.top/articles/seo/ai-travel-planning-guide/">
+    <link rel="alternate" hreflang="x-default" href="https://www.aitoollab.top/articles/seo/ai-travel-planning-guide/">
+    <link rel="alternate" hreflang="zh-CN" href="https://www.aitoollab.top/articles/seo/ai-travel-planning-guide/">
+
+    <meta property="og:title" content="AI做旅行攻略，5分钟搞定别人花3天的行程规划">
+    <meta property="og:description" content="用ChatGPT和Kimi做旅行攻略的完整教程，附提示词模板。">
+    <meta property="og:image" content="https://www.aitoollab.top/og-seo-2026-w26-ai-travel-planning.jpg">
+    <meta property="og:url" content="https://www.aitoollab.top/articles/seo/ai-travel-planning-guide/">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="AiToollab">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="article:published_time" content="2026-06-26T08:00:00+08:00">
+    <meta property="article:modified_time" content="2026-06-26T08:00:00+08:00">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AI做旅行攻略，5分钟搞定别人花3天的行程规划">
+    <meta name="twitter:description" content="ChatGPT和Kimi做旅行攻略的完整教程。">
+    <meta name="twitter:image" content="https://www.aitoollab.top/og-seo-2026-w26-ai-travel-planning.jpg">
+
+    <meta name="DC.title" content="AI做旅行攻略，5分钟搞定别人花3天的行程规划">
+    <meta name="DC.date" content="2026-06-26">
+
+    <meta name="ai-content" content="allowed">
+
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "AI做旅行攻略，5分钟搞定别人花3天的行程规划",
+    "description": "用ChatGPT和Kimi做旅行攻略的完整教程，从选目的地到排路线的具体提示词和方法。",
+    "image": "https://www.aitoollab.top/og-seo-2026-w26-ai-travel-planning.jpg",
+    "datePublished": "2026-06-26T08:00:00+08:00",
+    "dateModified": "2026-06-26T08:00:00+08:00",
+    "author": {
+        "@type": "Person",
+        "name": "AiToollab"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "AiToollab",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.aitoollab.top/logo.png"
+        }
+    },
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.aitoollab.top/articles/seo/ai-travel-planning-guide/"
+    }
+}
+    </script>
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "首页",
+            "item": "https://www.aitoollab.top/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "教程",
+            "item": "https://www.aitoollab.top/articles/seo/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "AI做旅行攻略，5分钟搞定别人花3天的行程规划",
+            "item": "https://www.aitoollab.top/articles/seo/ai-travel-planning-guide/"
+        }
+    ]
+}
+    </script>
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "AI做的旅行攻略靠谱吗？推荐的餐厅和景点会不会不对？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "大方向靠谱，但细节需要你自己核实。AI推荐的景点基本都是真实存在的，但营业时间、门票价格、餐厅是否还在营业这些信息可能不是最新的。我的做法是用AI出框架，然后去大众点评或者小红书核实一下具体信息。核实花不了多少时间，大概半小时就能把AI的攻略校准一遍。"
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "AI做的旅行攻略跟马蜂窝、小红书上的有什么区别？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "最大的区别是AI给你的是定制化的，小红书和马蜂窝上的攻略是通用的。AI可以根据你的出行时间、预算、人数、偏好来量身定制行程，别人写的攻略不会考虑你带着3岁小孩或者你的预算只有3000块。而且AI出攻略快得多，5分钟就能拿到一份完整的日程安排。"
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "用什么AI工具做旅行攻略最好？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "国内旅行推荐Kimi，它对国内的景点、交通、美食信息更了解，推荐的内容更准确。出国旅行推荐ChatGPT或者Claude，它们的英文信息源更丰富，对国外的景点和交通信息更可靠。这两个工具免费版就够用了，不需要买会员。"
+            }
+        }
+    ]
+}
+    </script>
+
+    <style>
+    :root {
+        --bg: #0d1117;
+        --card: #161b22;
+        --border: #30363d;
+        --text: #e6edf3;
+        --muted: #8b949e;
+        --accent: #58a6ff;
+        --green: #3fb950;
+        --orange: #d29922;
+        --red: #f85149;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+    .container { max-width: 720px; margin: 0 auto; padding: 20px; }
+    h1 { font-size: 1.8em; margin-bottom: 12px; color: var(--text); line-height: 1.3; }
+    .subtitle { color: var(--muted); font-size: 0.95em; margin-bottom: 24px; }
+    .tag-row { display: flex; gap: 8px; margin-bottom: 28px; flex-wrap: wrap; }
+    .tag { background: var(--card); border: 1px solid var(--border); color: var(--accent); padding: 3px 10px; border-radius: 16px; font-size: 0.8em; }
+    p { margin-bottom: 16px; color: var(--text); }
+    strong { color: var(--green); }
+    em { color: var(--orange); font-style: normal; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    blockquote { border-left: 3px solid var(--accent); padding-left: 16px; color: var(--muted); margin: 20px 0; }
+    .cta-box { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin: 32px 0; }
+    .cta-box h3 { color: var(--green); margin-bottom: 10px; font-size: 1.1em; }
+    .cta-box p { margin-bottom: 8px; font-size: 0.95em; color: var(--muted); }
+    .cta-box a { display: inline-block; background: var(--green); color: #000; padding: 8px 18px; border-radius: 6px; font-weight: bold; font-size: 0.9em; margin-top: 8px; }
+    .cta-box a:hover { text-decoration: none; opacity: 0.85; }
+    .divider { border: none; border-top: 1px solid var(--border); margin: 28px 0; }
+    .related-box { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-top: 32px; }
+    .related-box h4 { color: var(--text); margin-bottom: 12px; font-size: 0.95em; }
+    .related-box ul { list-style: none; }
+    .related-box ul li { margin-bottom: 8px; padding-left: 12px; position: relative; }
+    .related-box ul li::before { content: "›"; position: absolute; left: 0; color: var(--accent); }
+    .related-box ul li a { color: var(--accent); font-size: 0.9em; }
+    footer { border-top: 1px solid var(--border); margin-top: 40px; padding-top: 20px; color: var(--muted); font-size: 0.85em; text-align: center; }
+    footer a { color: var(--muted); }
+    footer a:hover { color: var(--accent); }
+    .highlight { background: rgba(88, 166, 255, 0.08); border-left: 3px solid var(--accent); padding: 12px 16px; margin: 20px 0; border-radius: 0 4px 4px 0; }
+    .warning { background: rgba(210, 153, 34, 0.08); border-left: 3px solid var(--orange); padding: 12px 16px; margin: 20px 0; border-radius: 0 4px 4px 0; }
+    .faq-section { margin-top: 32px; }
+    .faq-item { background: var(--card); border: 1px solid var(--border); border-radius: 8px; margin-bottom: 12px; overflow: hidden; }
+    .faq-q { padding: 14px 16px; cursor: pointer; font-weight: bold; color: var(--text); font-size: 0.95em; }
+    .faq-a { padding: 0 16px; max-height: 0; overflow: hidden; transition: padding 0.3s; color: var(--muted); font-size: 0.9em; line-height: 1.6; }
+    .faq-item.open .faq-a { padding: 0 16px 14px; max-height: 500px; }
+    .faq-item.open .faq-q::after { content: " \u2191"; }
+    .faq-q::after { content: " \u2193"; float: right; color: var(--accent); }
+    </style>
+
+<meta property="og:title:en" content="AI Travel Itinerary Planning - 5 Minutes Instead of 3 Days" />
+<meta property="og:description:en" content="Complete guide to using AI for travel planning, with prompt templates for itinerary, budget, and accommodation." />
+<meta name="description:en" content="How to use ChatGPT and Kimi for travel planning, with practical prompt templates and real experience." />
+
+</head>
+<body>
+<div class="container">
+
+<h1>AI做旅行攻略，5分钟搞定别人花3天的行程规划</h1>
+<div class="subtitle">2026年6月26日 · AI生活技巧</div>
+<div class="tag-row">
+    <span class="tag">AI做旅行攻略</span>
+    <span class="tag">ChatGPT旅行规划</span>
+    <span class="tag">AI行程规划</span>
+    <span class="tag">AI旅行助手</span>
+</div>
+
+<p>五一假期的时候，一个朋友问我去大理怎么玩。我说你给我一分钟。</p>
+
+<p>打开Kimi，输入她的出行时间、预算、人数，说了一下她们想看洱海想逛古城想拍写真。30秒后，一份完整的3天大理行程出来了，每天几点去哪里、吃什么、怎么走、住哪里推荐了3个价位，连天气预报提醒都有。</p>
+
+<p>她看着那份攻略沉默了大概10秒钟，说「你是故意的吗」。</p>
+
+<p>说实话，我也不是故意的，就是用AI用习惯了。</p>
+
+<p>从去年年底到现在，我帮自己和朋友用AI规划了大概6次旅行，国内国外都有。摸索出一套流程之后，每次做攻略的时间从以前的一天压缩到了5到10分钟。不是说这5分钟就万事大吉了，后续还是需要核实和调整，但至少不用面对空白文档发呆了。</p>
+
+<p>今天把我的方法聊一下。</p>
+
+<hr class="divider">
+
+<h2>先选工具，国内游和出国游不一样</h2>
+
+<p>这块我自己踩过坑。</p>
+
+<p><strong>国内旅行用Kimi。</strong>这是我用下来最靠谱的组合。Kimi对国内的城市、景点、交通、美食信息掌握得比较好，推荐的内容基本靠谱。而且它连接了搜索引擎，可以拿到一些实时的信息，比如某个景点最近有没有在维修、某个餐厅有没有换老板之类的。</p>
+
+<p>我之前试过用ChatGPT规划国内的行程，它推荐的一些餐厅早关门了，有些景点信息是错的。ChatGPT的中文旅行数据更新速度跟不上国内的实际情况。</p>
+
+<p><strong>出国旅行用ChatGPT或Claude。</strong>因为它们的英文信息源更丰富，对国外的公共交通、签证政策、当地习俗这些信息更准确。规划日本、泰国这种热门目的地，ChatGPT的效果很好。规划一些小众目的地比如格鲁吉亚、塞尔维亚，Claude给的信息有时候更细致。</p>
+
+<p>选错了工具不是完全不行，就是后面你要花更多时间核实信息。反正我觉得，选对工具能省一半的核实时间。</p>
+
+<hr class="divider">
+
+<h2>我做攻略的完整流程</h2>
+
+<p>不是我上来就丢一个提示词让AI出攻略。那样出来的东西太泛了，跟你在网上随便搜一篇攻略没区别。</p>
+
+<p>我的流程是分三步。</p>
+
+<p><strong>第一步，确定基本信息。</strong>目的地、出行日期、天数、人数、预算、有没有特殊需求。这些你自己肯定知道，但关键是要<em>在提示词里说清楚</em>。很多人用AI规划旅行效果不好，不是因为AI不行，是因为自己给的信息太少了。</p>
+
+<p>举个例子，同样说「帮我规划大理旅行」，你什么都不补充，AI给你一个万金油攻略。但如果你说「两个人，4月30号到5月3号，预算人均3000，不想太赶想放松，其中一个女生特别想拍洱海写真」，AI出来的东西就完全不一样了。</p>
+
+<p><strong>第二步，让AI出第一版行程。</strong>信息给够之后，提示词大概是这样的。</p>
+
+<blockquote>
+帮我规划一个大理旅行攻略。<br><br>
+出行信息，2个人，4月30日到5月3日，共4天3晚<br>
+预算，人均3000元（不含大交通）<br>
+偏好，不想太赶，以放松为主，想去洱海环湖，想在古城逛逛，想拍写真<br>
+住宿偏好，住洱海边<br>
+其他，不吃辣，不想去网红打卡点人挤人的地方<br><br>
+请按天规划行程，每天包含，上午去哪、中午吃什么、下午去哪、晚上吃什么。附交通方式和预估费用。
+</blockquote>
+
+<p>AI出来的第一版行程你先看一遍，整体节奏合不合理，有没有景点排得太密或者太松的地方。</p>
+
+<p><strong>第三步，针对性追问和调整。</strong>这是很多人会跳过的一步，但我觉得反而是最重要的一步。AI出的第一版是框架，你在这个基础上追问，才能得到真正适合你的攻略。</p>
+
+<p>比如第一版行程里洱海环湖安排了整整一天，你觉得太多了，你就追问「洱海环湖可以压缩到半天吗，腾出来的时间推荐去哪里」。比如它推荐的某个餐厅你觉得不感兴趣，你可以说「第二天午餐不想吃云南菜，有没有别的推荐」。</p>
+
+<p>就这样来回追问两三轮，一份贴着你自己需求定制的攻略就出来了。</p>
+
+<div class="highlight">
+我自己的经验是，第一版行程大概能满足你70%的需求，追问两轮之后能到90%。剩下10%就是你到了当地之后临时决定的。旅行嘛，不可能什么都提前安排好，留点空间反而是好事。
+</div>
+
+<hr class="divider">
+
+<h2>三个场景的具体提示词</h2>
+
+<p>光说理论不够，直接给你三个场景的提示词，复制粘贴改改就能用。</p>
+
+<p><strong>场景一，情侣周末短途游。</strong>这是最高频的需求。</p>
+
+<blockquote>
+我和女朋友周末想去周边自驾游，从杭州出发，车程3小时以内。<br><br>
+要求，<br>
+1. 2天1晚的行程<br>
+2. 人均预算500以内<br>
+3. 想找一个安静一点的地方，不要太商业化<br>
+4. 有好吃的当地菜<br>
+5. 住宿要干净舒适的民宿<br><br>
+请推荐3个目的地，每个目的地附简要的2天行程和预估费用，我选一个你再帮我细化。
+</blockquote>
+
+<p>注意我这里让AI先推荐3个目的地让我选，而不是直接给一个。这样做的好处是你有选择的余地，而且AI推荐了3个之后，你可以把两个目的地的优点组合起来，让它再优化。</p>
+
+<p><strong>场景二，带老人小孩的家庭出游。</strong>这个场景用AI规划特别省心，因为需要考虑的因素太多了，自己规划容易遗漏。</p>
+
+<blockquote>
+帮我们一家人规划暑假旅行。<br><br>
+出行信息，<br>
+- 4个大人，2个小孩（一个6岁一个3岁），2个老人（60多岁）<br>
+- 时间，7月中旬，5天4晚<br>
+- 预算，总计15000以内（不含机票）<br>
+- 出发地，北京<br><br>
+特殊要求，<br>
+- 老人不能走太多路，每天行程不要太赶<br>
+- 小孩需要午休时间<br>
+- 住宿要方便，有电梯<br>
+- 最好有小孩可以玩水的地方<br>
+- 不要去太热的地方<br><br>
+请推荐3个适合的目的地，并针对我最可能选的那个给详细的5天行程。
+</blockquote>
+
+<p>你看看，这种信息量如果靠你自己去小红书上找攻略再拼凑，至少得花一整个下午。AI几分钟就给你出来了。</p>
+
+<p><strong>场景三，一个人穷游 backpacking。</strong></p>
+
+<blockquote>
+我想一个人去东南亚穷游，7天。<br><br>
+条件，<br>
+- 总预算4000人民币以内（含机票）<br>
+- 从广州出发<br>
+- 喜欢自然风光和当地文化，不喜欢购物<br>
+- 能吃苦，住青旅没问题<br>
+- 想去一个中国人不太多的地方<br><br>
+请推荐目的地并规划详细的7天行程，包含每天的路线、交通方式、住宿区域建议、餐饮预算分配。特别标注哪些地方需要提前预订、哪些地方可以到了再找。
+</blockquote>
+
+<div class="warning">
+有一个很多人不知道的技巧。你让AI规划完行程之后，追问一句「根据这份行程，帮我列一个打包清单」，它会根据目的地、季节、活动类型帮你列一份很实用的行李清单。我上次去云南，AI提醒我带防晒霜和墨镜这种显而易见的东西之外，还提醒我带感冒药和高反药物，说昆明和大理温差大，我到了之后确实用上了。
+</div>
+
+<hr class="divider">
+
+<h2>AI规划旅行的几个坑</h2>
+
+<p>第一个坑，<strong>信息过时</strong>。AI推荐的餐厅可能已经关门了，景点门票价格可能涨了，某个地方可能正在施工。这不是AI的问题，是训练数据有延迟。所以AI出的攻略必须核实关键信息，特别是门票价格、营业时间、交通班次这些容易变的。</p>
+
+<p>我的做法是AI出完攻略之后，花20分钟去大众点评核实餐厅，去官方公众号核实景点信息，去12306或者航旅纵横核实交通。这20分钟花得值。</p>
+
+<p>第二个坑，<strong>行程太满</strong>。AI有一个倾向，就是想把你的每一天都排满，不给你留喘息的时间。你要是不提醒它，它能把10个景点塞进一天里。</p>
+
+<p>解决方法很简单，在提示词里明确说「每天最多安排2到3个景点，中间留充足的休息和吃饭时间」。或者拿到行程之后自己删掉一些，少即是多。</p>
+
+<p>第三个坑，<strong>忽略交通衔接</strong>。AI给你的行程里每个景点之间怎么走，有时候不太现实。比如上午在A景区，下午推荐B景区，但A到B开车要2小时，中间根本来不及吃午饭。</p>
+
+<p>拿到行程之后重点看一下景点之间的距离和交通时间，不合理的自己调整。</p>
+
+<p>怎么说呢，AI在旅行规划这件事上能做到80分，剩下的20分得靠你自己的常识和经验去补。它不可能替代你对实际路况的判断和对当地情况的了解，但它能帮你在出发前把框架搭好，让你少走很多弯路。</p>
+
+<hr class="divider">
+
+<h2>一个真实案例</h2>
+
+<p>说说上个月帮朋友规划成都之旅的事。</p>
+
+<p>她的情况是这样的，一个人从上海飞成都，4天，预算5000，喜欢吃辣，想看大熊猫，想去人民公园喝茶，对博物馆感兴趣但不想要太学术的路线。</p>
+
+<p>我把这些信息丢给Kimi，第一版行程出来之后，我发现一个问题，Day2安排了武侯祠、锦里、杜甫草堂三个地方，但武侯祠和杜甫草堂都在一个方向，锦里在另一个方向，中间来回跑太浪费时间。</p>
+
+<p>我追问了一句，「Day2的三个景点能不能按地理位置重新排列一下，减少来回通勤」。Kim立即调整了顺序，先武侯祠再锦里（挨着的），吃完午饭再打车去杜甫草堂。</p>
+
+<p>又追问了一句，「大熊猫基地应该早上第一站去，看熊猫最活跃的时间是早上8到10点对吧」。Kim说对的，它把大熊猫基地调到了Day1的早上8点出发，并且提醒我提前买票。</p>
+
+<p>最后她又追问了餐厅推荐，把一些网红店换成了本地人常去的老店。</p>
+
+<p>总共花了不到15分钟，一份完全贴合她需求的成都攻略就搞定了。她回来跟我说行程特别顺，没有出现赶路或者无聊的时候。</p>
+
+<p>说真的，以前帮她做攻略我至少得花一整个晚上翻小红书、做Excel表格、查地图。现在15分钟，效果还更好。这就是AI最直观的价值，不是帮你做你没能力做的事，是帮你把本来就会做的事做得快很多。</p>
+
+<p>这块跟<a href="/articles/seo/ai-side-hustle-toolbox/">AI工具箱时代的效率逻辑</a>是通的，AI把信息搜集和组织的时间压缩了，让你把精力花在真正需要人判断的部分。</p>
+
+<hr class="divider">
+
+<h2>最后说两句</h2>
+
+<p>有人可能会说，做旅行攻略本身就是旅行的一部分乐趣，你用AI规划不就没意思了吗。</p>
+
+<p>怎么说呢，我觉得做攻略的乐趣是「规划去哪里」，不是「查去某地的交通方式和营业时间」。前者是有创造力的，后者是机械劳动。AI帮你把机械劳动干了，你把时间留给规划去哪里，这才是合理的分工。</p>
+
+<p>我之前也帮别人做过<a href="/articles/cases/ai-travel-planning-service-side-hustle-20260621/">AI旅行规划服务</a>的案例，很多人愿意为一份定制化的攻略付几十块钱。因为不是每个人都愿意花时间去研究行程，但每个人都想要一份顺心的旅行。</p>
+
+<p>磨平一些信息差。</p>
+
+<div class="cta-box">
+    <h3>想要现成的旅行规划提示词模板？</h3>
+    <p>我把国内游、出国游、家庭出游、情侣短途、背包穷游五种场景的AI旅行规划提示词，全部调试好了放在提示词全家桶里。复制粘贴改个目的地就能用，不用自己从头摸索。</p>
+    <a href="https://www.aitoollab.top/prompt-pack/">领取提示词全家桶 ¥39 →</a>
+</div>
+
+<div class="related-box">
+    <h4>相关推荐</h4>
+    <ul>
+        <li><a href="/articles/cases/ai-travel-planning-service-side-hustle-20260621/">AI旅行规划代做服务，帮别人做攻略也能赚钱</a></li>
+        <li><a href="/articles/seo/ai-side-hustle-toolbox/">AI工具箱时代的副业逻辑</a></li>
+        <li><a href="/articles/seo/ai-photo-editing-side-hustle/">AI修图接单，旅行照片也能变成赚钱工具</a></li>
+        <li><a href="/articles/seo/ai-data-analysis-side-hustle-2026/">用AI做数据分析，帮你省下做攻略的Excel时间</a></li>
+    </ul>
+</div>
+
+<div class="faq-section">
+<h3 style="color: var(--text); margin-bottom: 16px; font-size: 1em;">常见问题</h3>
+
+<div class="faq-item">
+<div class="faq-q" onclick="this.parentElement.classList.toggle('open')">AI做的旅行攻略靠谱吗？推荐的餐厅和景点会不会不对？</div>
+<div class="faq-a">大方向靠谱，但细节需要你自己核实。AI推荐的景点基本都是真实存在的，但营业时间、门票价格、餐厅是否还在营业这些信息可能不是最新的。我的做法是用AI出框架，然后去大众点评或者小红书核实一下具体信息。核实花不了多少时间，大概半小时就能把AI的攻略校准一遍。</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q" onclick="this.parentElement.classList.toggle('open')">AI做的旅行攻略跟马蜂窝、小红书上的有什么区别？</div>
+<div class="faq-a">最大的区别是AI给你的是定制化的，小红书和马蜂窝上的攻略是通用的。AI可以根据你的出行时间、预算、人数、偏好来量身定制行程，别人写的攻略不会考虑你带着3岁小孩或者你的预算只有3000块。而且AI出攻略快得多，5分钟就能拿到一份完整的日程安排。</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q" onclick="this.parentElement.classList.toggle('open')">用什么AI工具做旅行攻略最好？</div>
+<div class="faq-a">国内旅行推荐Kimi，它对国内的景点、交通、美食信息更了解，推荐的内容更准确。出国旅行推荐ChatGPT或者Claude，它们的英文信息源更丰富，对国外的景点和交通信息更可靠。这两个工具免费版就够用了，不需要买会员。</div>
+</div>
+
+</div>
+
+<footer>
+    <p><a href="https://www.aitoollab.top/">首页</a> · <a href="https://www.aitoollab.top/articles/">文章</a> · <a href="https://www.aitoollab.top/prompt-pack/">提示词全家桶</a> · <a href="https://www.aitoollab.top/about/">关于我们</a></p>
+    <p style="margin-top:8px">© 2026 AiToollab · 磨平一些信息差</p>
+</footer>
+</div>
+
+<script>
+document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', function() {
+        this.parentElement.classList.toggle('open');
+    });
+});
+</script>
+
+</body>
+</html>
