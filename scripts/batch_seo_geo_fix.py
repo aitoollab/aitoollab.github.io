@@ -155,8 +155,8 @@ def _fix_cjk_quotes(s):
     
     # Simpler approach: just fix common patterns
     # 提出"xxx"概念 → 提出'xxx'概念  (in value strings)
-    s = re.sub(r'([\u4e00-\u9fff])"([\u4e00-\u9fff\w\s，。、：；！？（）]+)"', r"\1\u2018\2\u2019", s)
-    s = re.sub(r'"([\u4e00-\u9fff\w\s，。、：；！？（）]+)"([\u4e00-\u9fff])', r"\u2018\1\u2019\2", s)
+    s = re.sub(r'([\u4e00-\u9fff])"([\u4e00-\u9fff\w\s，。、：；！？（）]+)"', r"\1'\2'", s)
+    s = re.sub(r'"([\u4e00-\u9fff\w\s，。、：；！？（）]+)"([\u4e00-\u9fff])', r"'\1'\2", s)
     
     return s
 
