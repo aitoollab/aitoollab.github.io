@@ -181,7 +181,54 @@
 <meta property="og:description:en" content="A practical guide to writing Chinese government and corporate documents with AI, including prompt templates and pitfalls." />
 <meta name="description:en" content="Complete tutorial on using ChatGPT to write official documents in Chinese, with prompt templates and real experience." />
 
-</head>
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "ChatGPT写公文的完整教程，我帮你踩了所有的坑 - AiToollab",
+  "description": "体制内用ChatGPT写公文的实操教程。工作总结、会议纪要、汇报材料、调研报告，我用AI写了3个月，从一头雾水到10分钟出稿，附完整的提示词模板和常见问题。",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "先说一个最核心的原则",
+      "text": "AI写公文，不是让AI替你写，是让AI帮你搭框架。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "哪种公文适合用AI，哪种不适合",
+      "text": "我按自己的经验分了一下类。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "我用的工具和选择",
+      "text": "主力是Claude。不是我偏心，是写公文这个场景Claude确实比ChatGPT更合适。Claude的中文措辞更接近体制内的表达习惯，不容易出现那种「AI味」很浓的句式，什么「众所周知」「不言而喻」这种，Claude基本不会用。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "写会议纪要，最省时间的用法",
+      "text": "会议纪要是AI帮公文里面最省力的。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "我踩过的三个大坑",
+      "text": "第一个坑，数据瞎编。有一次我让AI写一份调研报告，里面有「XX区常住人口XX万」这种数据，我没细看就交了。结果领导说这个数字不对，实际是XX万。原因是AI根据上下文推测了一个数字，不是真实的。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "几个实用的小技巧",
+      "text": "分段喂素材比一次全丢效果好。如果你要写一份5000字的调研报告，不要把所有素材一次性丢给AI，它容易丢失信息。分成几段喂，第一段给背景和目标，等它输出框架后，再逐段补充具体内容。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "最后说说现实",
+      "text": "我用AI写了三个月的公文，最大的感受是，它确实能帮你省很多时间。以前一个3000字的工作总结我要写半天，现在大概一小时就能搞定，质量还比以前高。"
+    }
+  ],
+  "totalTime": "PT30M"
+}
+    </script>
+    </head>
 <body>
 <div class="container">
 
@@ -407,5 +454,14 @@ document.querySelectorAll('.faq-q').forEach(q => {
 });
 </script>
 
+    <div class="footer" style="text-align:center;margin-top:48px;padding-top:24px;border-top:1px solid var(--border);color:var(--muted);font-size:13px;">
+        <p>
+            <a href="/about/" style="color:var(--muted);text-decoration:underline;">关于我们</a> ·
+            <a href="/disclaimer/" style="color:var(--muted);text-decoration:underline;">免责声明</a> ·
+            <a href="/privacy/" style="color:var(--muted);text-decoration:underline;">隐私政策</a> ·
+            <a href="/prompt-pack/" style="color:var(--muted);text-decoration:underline;">提示词包</a>
+        </p>
+        <p style="margin-top:6px;">© 2026 AiToollab · 内容仅供参考，不构成投资建议</p>
+    </div>
 </body>
 </html>

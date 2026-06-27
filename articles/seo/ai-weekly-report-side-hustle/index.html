@@ -180,7 +180,39 @@
     .faq-item.open .faq-a { padding: 0 16px 14px; max-height: 500px; }
     .faq-item.open .faq-q { color: var(--accent); }
     </style>
-</head>
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "用AI帮人写工作周报月报，一单收50-200块，上班族副业 - AiToollab",
+  "description": "不会写工作周报月报也能赚钱。用ChatGPT和Claude帮客户写工作汇报，一单50到200块，我从闲鱼接单到月入过万的完整过程，包括定价策略和话术模板。",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "这个需求，比你想的大",
+      "text": "我后来在闲鱼上搜了一下「周报代写」，发现月销量好几十单的店铺比比皆是。评论区全是「救了大命了」「终于不用对着空文档发呆了」。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "我的操作流程，三步搞定",
+      "text": "接单之后，我的流程非常固定。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "定价和渠道",
+      "text": "我一开始在闲鱼标价30块，来的全是要白嫖的。后来涨到50块，客户质量反而好了很多。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "踩过的几个坑",
+      "text": "第一个坑，AI写得太「官方腔」。Claude有时候写出来的周报像政府公文，一堆「积极推进」「有效落实」。后来我在Prompt里加一句「语气不要太正式，像职场人自己写的汇报」，效果好多了。"
+    }
+  ],
+  "totalTime": "PT20M"
+}
+    </script>
+    </head>
 <body>
 <div class="container">
 
@@ -302,5 +334,14 @@
 <script>
 document.querySelectorAll('.faq-q').forEach(q => { q.addEventListener('click', function() { this.parentElement.classList.toggle('open'); }); });
 </script>
+    <div class="footer" style="text-align:center;margin-top:48px;padding-top:24px;border-top:1px solid var(--border);color:var(--muted);font-size:13px;">
+        <p>
+            <a href="/about/" style="color:var(--muted);text-decoration:underline;">关于我们</a> ·
+            <a href="/disclaimer/" style="color:var(--muted);text-decoration:underline;">免责声明</a> ·
+            <a href="/privacy/" style="color:var(--muted);text-decoration:underline;">隐私政策</a> ·
+            <a href="/prompt-pack/" style="color:var(--muted);text-decoration:underline;">提示词包</a>
+        </p>
+        <p style="margin-top:6px;">© 2026 AiToollab · 内容仅供参考，不构成投资建议</p>
+    </div>
 </body>
 </html>

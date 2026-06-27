@@ -285,6 +285,43 @@
     ]
 }
     </script>
+    
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "PostgreSQL秒变图数据库：2天128★的pgGraph让我想到了几种变现思路",
+  "description": "2天128星，64★/天增速，Rust写的PostgreSQL图查询扩展。不搬家、不换语言，在原有表上直接跑图算法。普通人怎么用它赚钱？",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "pgGraph是什么",
+      "text": "简单说，pgGraph是一个PostgreSQL扩展。它干的事情很纯粹——在你现有的PostgreSQL表上，加一层图查询的能力。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "技术上的亮点",
+      "text": "我仔细看了它的技术实现，有几个点确实有点东西。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "为什么我觉得它值得写",
+      "text": "不是因为它技术上多牛，而是因为它踩中了一个很实在的场景。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "普通人怎么用它赚钱",
+      "text": "好，重点来了。结合我对这个项目的理解，我列了几种可能的变现思路，不保证都能跑通，但至少都是基于项目实际能力在想的。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "我的判断",
+      "text": "pgGraph这个项目，方向是对的。降低门槛、不搬家、SQL原生——这三个点加起来，对中小企业和个人开发者来说，决策成本非常低。"
+    }
+  ],
+  "totalTime": "PT20M"
+}
+    </script>
     </head>
 <body>
 
@@ -455,12 +492,15 @@ SELECT * FROM graph.shortest_path('users:alice', 'users:bob');
     <p>关注AiToollab，每周一篇开源项目变现拆解</p>
     <a href="/prompt-pack/" class="cta-btn">看看提示词包</a>
 </div>
-
-<div class="footer">
-    <p>以上，既然看到这里了，如果觉得不错，随手点个赞、在看、转发三连吧。</p>
-    <p>谢谢你看我的文章，我们，下次再见。</p>
-</div>
-
+    <div class="footer" style="text-align:center;margin-top:48px;padding-top:24px;border-top:1px solid var(--border);color:var(--muted);font-size:13px;">
+        <p>
+            <a href="/about/" style="color:var(--muted);text-decoration:underline;">关于我们</a> ·
+            <a href="/disclaimer/" style="color:var(--muted);text-decoration:underline;">免责声明</a> ·
+            <a href="/privacy/" style="color:var(--muted);text-decoration:underline;">隐私政策</a> ·
+            <a href="/prompt-pack/" style="color:var(--muted);text-decoration:underline;">提示词包</a>
+        </p>
+        <p style="margin-top:6px;">© 2026 AiToollab · 内容仅供参考，不构成投资建议</p>
+    </div>
 </div>
 
 

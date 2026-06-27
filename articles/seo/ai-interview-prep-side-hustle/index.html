@@ -179,7 +179,39 @@
     .faq-item.open .faq-a { padding: 0 16px 14px; max-height: 500px; }
     .faq-item.open .faq-q { color: var(--accent); }
     </style>
-</head>
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "用AI帮人准备面试模拟面试，一单50-300块，求职季刚需副业 - AiToollab",
+  "description": "用ChatGPT和Claude帮求职者准备面试、做模拟面试，一单50到300块。从金三银四到秋招，面试准备是刚需，我用AI帮人做面试辅导月入过万的全过程。",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "面试准备为什么是好市场",
+      "text": "你想想看，每年有多少人在找工作。应届生春招秋招，社招金三银四，互联网裁员潮一波接一波，求职的人只增不减。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "我的操作流程",
+      "text": "接单后固定四步。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "定价和渠道",
+      "text": "基础版，只出面试题库加参考答案，50到80块。标准版，题库加一轮模拟面试加攻略文档，100到150块。深度版，针对特定岗位的深度辅导，含两轮模拟，200到300块。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "踩过的坑",
+      "text": "第一个坑，AI的岗位知识不够准。有个客户面的是跨境电商运营岗，Claude给的建议有些比较泛。后来遇到陌生岗位，我会先让AI搜一下相关行业资料再出题，准确度高了很多。"
+    }
+  ],
+  "totalTime": "PT20M"
+}
+    </script>
+    </head>
 <body>
 <div class="container">
 
@@ -300,5 +332,14 @@
 <script>
 document.querySelectorAll('.faq-q').forEach(q => { q.addEventListener('click', function() { this.parentElement.classList.toggle('open'); }); });
 </script>
+    <div class="footer" style="text-align:center;margin-top:48px;padding-top:24px;border-top:1px solid var(--border);color:var(--muted);font-size:13px;">
+        <p>
+            <a href="/about/" style="color:var(--muted);text-decoration:underline;">关于我们</a> ·
+            <a href="/disclaimer/" style="color:var(--muted);text-decoration:underline;">免责声明</a> ·
+            <a href="/privacy/" style="color:var(--muted);text-decoration:underline;">隐私政策</a> ·
+            <a href="/prompt-pack/" style="color:var(--muted);text-decoration:underline;">提示词包</a>
+        </p>
+        <p style="margin-top:6px;">© 2026 AiToollab · 内容仅供参考，不构成投资建议</p>
+    </div>
 </body>
 </html>
