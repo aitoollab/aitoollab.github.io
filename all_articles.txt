@@ -58,3 +58,4 @@ articles/startup-100/ai-startup-100/index.html
 articles/startup-100/index.html
 
 articles/cases/ai-nutritionist-fitness-plan-service-side-hustle-20260628/index.html
+articles/news/openai-jalapeno-chip-cheaper-ai-side-hustle-20260628/
