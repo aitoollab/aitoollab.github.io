@@ -1,4 +1,3 @@
-
 articles/cases/ai-agent-customization-service/index.html
 articles/cases/ai-business-plan-service-side-hustle-20260629/index.html
 articles/cases/ai-digital-products-passive-income/index.html
@@ -60,3 +59,6 @@ articles/startup-100/2026-05-07-100-ai-startup-week-3/index.html
 articles/startup-100/2026-05-14-100-ai-startup-week-4/index.html
 articles/startup-100/ai-startup-100/index.html
 articles/startup-100/index.html
+articles/seo/ai-thesis-polishing-side-hustle-2026w26/
+articles/seo/ai-ppt-making-side-hustle-2026w26/
+articles/seo/ai-voiceover-dubbing-side-hustle-2026w26/
