@@ -62,3 +62,4 @@ articles/startup-100/index.html
 articles/seo/ai-thesis-polishing-side-hustle-2026w26/
 articles/seo/ai-ppt-making-side-hustle-2026w26/
 articles/seo/ai-voiceover-dubbing-side-hustle-2026w26/
+articles/news/ford-ai-quality-inspection-fail-side-hustle-20260629/index.html
