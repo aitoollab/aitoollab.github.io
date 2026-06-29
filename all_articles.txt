@@ -1,7 +1,9 @@
-articles/news/microsoft-ai-cost-side-hustle-opportunity-20260523/index.html
+
 articles/cases/ai-agent-customization-service/index.html
+articles/cases/ai-business-plan-service-side-hustle-20260629/index.html
 articles/cases/ai-digital-products-passive-income/index.html
 articles/cases/ai-medical-bill-repricing/index.html
+articles/cases/ai-nutritionist-fitness-plan-service-side-hustle-20260628/index.html
 articles/cases/autopreso-speech-to-presentation/index.html
 articles/cases/cheat-on-content/index.html
 articles/cases/goblinos-hermes-personality/index.html
@@ -30,8 +32,10 @@ articles/news/deepseek-tui-terminal-coding-agent/index.html
 articles/news/deepseek-vision-model-2026/index.html
 articles/news/google-ai-pointer-reimagined/index.html
 articles/news/index.html
+articles/news/microsoft-ai-cost-side-hustle-opportunity-20260523/index.html
 articles/news/nanobot-side-hustle/index.html
 articles/news/nvidia-h200-china-paradox-20260515/index.html
+articles/news/openai-jalapeno-chip-cheaper-ai-side-hustle-20260628/
 articles/news/openai-malta-chatgpt-plus-free/index.html
 articles/news/pentagon-ai-deals/index.html
 articles/news/ps3-emulator-ai-pr-conflict/index.html
@@ -56,6 +60,3 @@ articles/startup-100/2026-05-07-100-ai-startup-week-3/index.html
 articles/startup-100/2026-05-14-100-ai-startup-week-4/index.html
 articles/startup-100/ai-startup-100/index.html
 articles/startup-100/index.html
-
-articles/cases/ai-nutritionist-fitness-plan-service-side-hustle-20260628/index.html
-articles/news/openai-jalapeno-chip-cheaper-ai-side-hustle-20260628/
