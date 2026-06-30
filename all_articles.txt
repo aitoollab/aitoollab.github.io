@@ -65,3 +65,4 @@ articles/startup-100/2026-05-07-100-ai-startup-week-3/index.html
 articles/startup-100/2026-05-14-100-ai-startup-week-4/index.html
 articles/startup-100/ai-startup-100/index.html
 articles/startup-100/index.html
+articles/news/krea-2-open-source-image-side-hustle-20260630/
