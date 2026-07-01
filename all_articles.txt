@@ -67,3 +67,6 @@ articles/startup-100/ai-startup-100/index.html
 articles/startup-100/index.html
 articles/news/krea-2-open-source-image-side-hustle-20260630/
 articles/cases/ai-academic-paper-writing-service-side-hustle-20260701/index.html
+articles/seo/ai-english-tutoring-side-hustle-20260701/
+articles/seo/ai-ad-copywriting-side-hustle-20260701/
+articles/seo/ai-wechat-official-account-side-hustle-20260701/
