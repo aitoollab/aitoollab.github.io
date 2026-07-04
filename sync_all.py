@@ -18,13 +18,13 @@ CATEGORY_CONFIG = {
         "tag": "热点",
         "slug": "news",
     },
-    "seo": {
+    "tutorials": {
         "title": "AI副业实战教程｜AiToollab",
         "desc": "从0到1的AI副业实战教程，覆盖工具使用、操作步骤、变现路径，普通人照着做就能赚到第一笔AI副业收入",
         "name": "💡 教程攻略",
         "emoji": "💡",
         "tag": "教程",
-        "slug": "seo",
+        "slug": "tutorials",
     },
     "cases": {
         "title": "AI副业真实案例｜AiToollab",
@@ -153,7 +153,13 @@ window.addEventListener('scroll',function(){var b=document.getElementById('back-
 def get_articles(category):
     """扫描分类目录，返回所有文章信息按日期降序"""
     articles = []
-    cat_dir = os.path.join(ARTICLES_DIR, category)
+    # tutorials/ is at repo root, not under articles/
+    if category == "tutorials":
+        cat_dir = os.path.join(REPO_DIR, "tutorials")
+        url_prefix = "/tutorials/"
+    else:
+        cat_dir = os.path.join(ARTICLES_DIR, category)
+        url_prefix = f"/articles/{category}/"
     if not os.path.isdir(cat_dir):
         return articles
     for entry in sorted(os.listdir(cat_dir), reverse=True):
@@ -173,7 +179,7 @@ def get_articles(category):
             date = date_m.group(1) if date_m else ""
             articles.append({
                 "title": title, "desc": desc, "date": date,
-                "url": f"/articles/{category}/{entry}/",
+                "url": f"{url_prefix}{entry}/",
             })
     articles.sort(key=lambda x: x["date"], reverse=True)
     return articles
@@ -268,17 +274,20 @@ def sync_all(commit_msg=None):
     
     # 1. 更新所有分类列表页
     updated = []
-    for cat in ["news", "seo", "cases", "startup-100"]:
+    for cat in ["news", "tutorials", "cases", "startup-100"]:
         articles = get_articles(cat)
         html = generate_listing(cat, articles)
-        out_path = os.path.join(ARTICLES_DIR, cat, "index.html")
+        if cat == "tutorials":
+            out_path = os.path.join(REPO_DIR, "tutorials", "index.html")
+        else:
+            out_path = os.path.join(ARTICLES_DIR, cat, "index.html")
         with open(out_path, 'w', encoding='utf-8') as f:
             f.write(html)
         updated.append(f"{cat}: {len(articles)}篇")
     
     # 2. 更新首页
     all_articles = []
-    for cat in ["news", "cases", "seo", "startup-100"]:
+    for cat in ["news", "cases", "tutorials", "startup-100"]:
         all_articles.extend(get_articles(cat))
     all_articles.sort(key=lambda x: x["date"], reverse=True)
     top6 = all_articles[:6]
@@ -288,7 +297,7 @@ def sync_all(commit_msg=None):
     
     # 替换最新文章区域
     cards_html = ""
-    CAT_MAP = {"news": "热点", "seo": "教程", "cases": "案例", "startup-100": "实验"}
+    CAT_MAP = {"news": "热点", "tutorials": "教程", "cases": "案例", "startup-100": "实验"}
     for a in top6:
         # 推断分类
         cat = a["url"].split("/")[2] if len(a["url"].split("/")) > 2 else "news"
