@@ -1,3 +1,4 @@
+articles/cases/ai-academic-paper-writing-service-side-hustle-20260701/index.html
 articles/cases/ai-agent-customization-service/index.html
 articles/cases/ai-business-plan-service-side-hustle-20260629/index.html
 articles/cases/ai-digital-products-passive-income/index.html
@@ -18,6 +19,7 @@ articles/cases/sim-ai-agent-workflow/index.html
 articles/cases/tradingagents-multi-agent-trading/index.html
 articles/cases/warp-agentic-terminal/index.html
 articles/index.html
+articles/news/ai-productivity-paradox-side-hustle-20260704/index.html
 articles/news/ai-psychosis-companies-outsourcing-thinking/index.html
 articles/news/ai-slop-killing-communities/index.html
 articles/news/anthropic-900b-valuation/index.html
@@ -26,13 +28,16 @@ articles/news/apple-ai-tax/index.html
 articles/news/autoresearch-ai-research-agent/index.html
 articles/news/caveman-side-hustle/index.html
 articles/news/claude-mythos-metr-benchmark/index.html
+articles/news/claude-sonnet-5-side-hustle-20260701/index.html
 articles/news/computer-use-45x-cost/index.html
 articles/news/containarium-agent-sandbox/index.html
 articles/news/deepseek-tui-terminal-coding-agent/index.html
 articles/news/deepseek-vision-model-2026/index.html
 articles/news/ford-ai-quality-inspection-fail-side-hustle-20260629/index.html
+articles/news/glm-5-2-zcode-free-coding-side-hustle-20260703/
 articles/news/google-ai-pointer-reimagined/index.html
 articles/news/index.html
+articles/news/krea-2-open-source-image-side-hustle-20260630/
 articles/news/microsoft-ai-cost-side-hustle-opportunity-20260523/index.html
 articles/news/nanobot-side-hustle/index.html
 articles/news/nvidia-h200-china-paradox-20260515/index.html
@@ -42,11 +47,14 @@ articles/news/pentagon-ai-deals/index.html
 articles/news/ps3-emulator-ai-pr-conflict/index.html
 articles/news/pytorch-lightning-malware/index.html
 articles/news/vibe-coding-agentic-boundary/index.html
+articles/seo/ai-ad-copywriting-side-hustle-20260701/
+articles/seo/ai-english-tutoring-side-hustle-20260701/
 articles/seo/ai-medical-report-side-hustle-20260629/
 articles/seo/ai-ppt-making-side-hustle-2026w26/
 articles/seo/ai-side-hustle-toolbox/index.html
 articles/seo/ai-thesis-polishing-side-hustle-2026w26/
 articles/seo/ai-voiceover-dubbing-side-hustle-2026w26/
+articles/seo/ai-wechat-official-account-side-hustle-20260701/
 articles/seo/caveman-claude-code-token-saving/index.html
 articles/seo/deepseek-ds4-mac-local-inference/index.html
 articles/seo/e2a-email-gateway-ai-agents/index.html
@@ -65,10 +73,3 @@ articles/startup-100/2026-05-07-100-ai-startup-week-3/index.html
 articles/startup-100/2026-05-14-100-ai-startup-week-4/index.html
 articles/startup-100/ai-startup-100/index.html
 articles/startup-100/index.html
-articles/news/krea-2-open-source-image-side-hustle-20260630/
-articles/cases/ai-academic-paper-writing-service-side-hustle-20260701/index.html
-articles/seo/ai-english-tutoring-side-hustle-20260701/
-articles/seo/ai-ad-copywriting-side-hustle-20260701/
-articles/seo/ai-wechat-official-account-side-hustle-20260701/
-articles/news/claude-sonnet-5-side-hustle-20260701/index.html
-articles/news/glm-5-2-zcode-free-coding-side-hustle-20260703/
