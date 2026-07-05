@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>帮律所和医疗机构部署本地AI模型赚翻了 一套收3到15万的私有化本地部署服务全拆解 - AiToollab</title>
+<meta name="description" content="Ollama 175K星、vLLM 85K星，本地AI模型部署已经成熟了。帮律所、诊所、金融公司部署私有化本地大模型，一套收3到15万，月维护费3000到15000。从硬件选型到软件配置到上线运行，完整流程拆解。">
+<meta name="keywords" content="本地AI模型部署,本地大模型私有化部署,私有化AI部署服务,本地LLM部署,Ollama部署,本地AI搭建副业,本地大模型赚钱,AI私有化部署收费,律所AI本地部署,医疗机构AI部署,on-premise AI deployment,local LLM deployment service,local AI side hustle">
+<meta name="description:en" content="Local LLM deployment service for privacy-sensitive businesses. Set up Ollama, vLLM, and local models on-premise for law firms, clinics, and financial services. $400-2000 per setup, detailed walkthrough.">
+<meta name="keywords:en" content="local LLM deployment service, on-premise AI setup, private AI deployment, local AI for business, Ollama deployment service, vLLM setup, local LLM consulting, on-premise LLM, private AI consulting, local AI side hustle">
+<link rel="canonical" href="https://www.aitoollab.top/articles/cases/ai-local-llm-deployment-service-side-hustle-20260705/">
+<link rel="alternate" hreflang="zh-CN" href="https://www.aitoollab.top/articles/cases/ai-local-llm-deployment-service-side-hustle-20260705/">
+<meta property="og:title" content="帮律所和医疗机构部署本地AI模型赚翻了 一套收3到15万的私有化本地部署服务全拆解">
+<meta property="og:description" content="Ollama 175K星、vLLM 85K星，本地AI模型部署已经成熟了。帮律所、诊所、金融公司部署私有化本地大模型，一套收3到15万，月维护费3000到15000。从硬件选型到软件配置到上线运行，完整流程拆解。">
+<meta property="og:image" content="https://www.aitoollab.top/articles/cases/ai-local-llm-deployment-service-side-hustle-20260705/og-cases-ai-local-llm-deployment-service-side-hustle-20260705.jpg">
+<meta property="og:url" content="https://www.aitoollab.top/articles/cases/ai-local-llm-deployment-service-side-hustle-20260705/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="AiToollab">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2026-07-05T10:00:00+08:00">
+<meta property="article:modified_time" content="2026-07-05T10:00:00+08:00">
+<meta property="article:author" content="数字生命卡兹克">
+<meta property="article:section" content="AI副业案例">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="帮律所和医疗机构部署本地AI模型赚翻了 一套收3到15万的私有化本地部署服务全拆解">
+<meta name="twitter:description" content="Ollama 175K星、vLLM 85K星，本地AI模型部署已经成熟了。帮律所、诊所、金融公司部署私有化本地大模型，一套收3到15万，月维护费3000到15000。从硬件选型到软件配置到上线运行，完整流程拆解。">
+<meta name="twitter:image" content="https://www.aitoollab.top/articles/cases/ai-local-llm-deployment-service-side-hustle-20260705/og-cases-ai-local-llm-deployment-service-side-hustle-20260705.jpg">
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "帮律所和医疗机构部署本地AI模型赚翻了 一套收3到15万的私有化本地部署服务全拆解",
+    "description": "Ollama 175K星、vLLM 85K星，本地AI模型部署已经成熟了。帮律所、诊所、金融公司部署私有化本地大模型，一套收3到15万，月维护费3000到15000。从硬件选型到软件配置到上线运行，完整流程拆解。",
+    "author": {
+        "@type": "Person",
+        "name": "数字生命卡兹克"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "AiToollab",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.aitoollab.top/logo.png"
+        }
+    },
+    "datePublished": "2026-07-05T10:00:00+08:00",
+    "dateModified": "2026-07-05T10:00:00+08:00",
+    "image": "https://www.aitoollab.top/articles/cases/ai-local-llm-deployment-service-side-hustle-20260705/og-cases-ai-local-llm-deployment-service-side-hustle-20260705.jpg",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.aitoollab.top/articles/cases/ai-local-llm-deployment-service-side-hustle-20260705/"
+    },
+    "wordCount": 3500,
+    "articleSection": "AI副业案例",
+    "keywords": ["本地AI模型部署", "私有化AI部署服务", "本地LLM部署", "Ollama部署服务", "AI私有化部署收费"]
+}</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "本地AI部署服务适合什么人做？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "适合有Linux系统管理经验、了解Docker容器化、懂基本网络配置的IT从业者。不需要AI模型训练的经验，重点是会部署和调优现有的开源模型。有运维背景的人上手最快，一到两周的学习就能接基础的单。"
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "本地AI部署和用ChatGPT/Claude有什么区别？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "核心区别在数据控制权。用ChatGPT或Claude，你的数据要经过第三方服务器。对于律所来说，客户的案件信息涉及保密义务；对于诊所来说，患者的病历数据受HIPAA等隐私法规约束；对于金融公司来说，客户的财务数据绝对不能外传。本地部署把这些数据完全锁在自己的服务器里，不经过任何第三方，同时避免了云API按token付费的成本压力。"
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "一套本地AI部署服务一个月能赚多少？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "兼职做月入1到3万元，全职做月入5到10万元。核心收入分三块：一次性部署费（1到15万）、月度维护费（1000到15000/月）、模型优化升级费（5000到3万/次）。企业客户一旦部署了就会一直用，维护费是持续收入来源。做得好了还有转介绍，一个律所推荐给另一个律所的情况很常见。"
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "部署一套本地AI需要什么硬件？成本高吗？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "入门级配置用两块RTX 3090显卡（二手约6000块/张），48GB显存，可以跑Qwen3.6-27B级别的模型，总硬件投入约2万。企业级配置用4块RTX 6000 Pro（96GB显存/块），384GB显存，能跑GLM-5.2量化版这种接近Claude Opus水平的模型，硬件投入约30-40万。客户自己出硬件，你的成本只是时间和软件配置。"
+            }
+        }
+    ]
+}</script>
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; }
+    h1 { font-size: 2rem; margin-bottom: 20px; color: #111; line-height: 1.3; }
+    .meta { color: #666; margin-bottom: 30px; font-size: 0.9rem; }
+    .content p { margin-bottom: 20px; font-size: 1.1rem; }
+    .content h2 { font-size: 1.6rem; margin: 40px 0 20px; color: #222; }
+    .content h3 { font-size: 1.3rem; margin: 30px 0 15px; color: #333; }
+    .tip { background: #f0f7ff; padding: 15px; border-radius: 8px; border-left: 4px solid #165DFF; margin: 20px 0; }
+    .tip p { margin-bottom: 10px; }
+    .tip p:last-child { margin-bottom: 0; }
+    .cta { background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 40px 0; text-align: center; }
+    .btn { display: inline-block; background: #165DFF; color: white; padding: 10px 20px; border-radius: 6px; text-decoration: none; margin-top: 10px; }
+    .related { margin-top: 60px; padding-top: 30px; border-top: 1px solid #eee; }
+    .related h3 { margin-bottom: 20px; }
+    .related ul { list-style: none; }
+    .related li { margin-bottom: 10px; }
+    .related a { color: #165DFF; text-decoration: none; }
+    .faq { margin-top: 40px; }
+    .faq h2 { margin-bottom: 20px; }
+    .faq-item { margin-bottom: 25px; }
+    .faq-item h3 { font-size: 1.15rem; color: #222; margin-bottom: 10px; }
+    .faq-item p { color: #555; line-height: 1.7; }
+</style>
+</head>
+<body>
+
+<h1>帮律所和医疗机构部署本地AI模型赚翻了 一套收3到15万的私有化本地部署服务全拆解</h1>
+<p class="meta">发布于 2026-07-05 · AI副业案例 · 约3500字</p>
+
+<div class="content">
+
+<div class="author-box" style="display:flex;align-items:center;gap:12px;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin-bottom:24px;font-size:14px;">
+    <div style="width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#58a6ff,#3fb950);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;">🛠️</div>
+    <div>
+        <p style="font-weight:600;color:var(--text);margin:0;">AiToollab 实战导师</p>
+        <p style="color:var(--muted);margin:4px 0 0;font-size:13px;">3年 AI 工具链实战经验 · 每一篇内容都来自真实操作</p>
+    </div>
+</div>
+
+<p>前两天在Hacker News上刷到一个帖子，有人花46万配了一套4卡RTX 6000 Pro的机器，跑GLM-5.2本地模型。底下评论最高赞的一个人说了一段话，让我印象特别深。</p>
+
+<p>他说，你们可能忽略了一类用户。有些企业出于合同和隐私条款的约束，根本不能把数据发给第三方。我们就是这种情况，公司的数据共享政策非常严格，任何外部API都不让用。</p>
+
+<p>这句话点醒了我。ChatGPT和Claude再强，你数据要过人家的服务器。对于律所、诊所、金融公司来说，这不行。客户的案件信息、患者的病历、交易数据，发了就违规了。太离谱了，我做了这么久AI相关的副业，居然一直没想到这个缺口。</p>
+
+<p>我之前一直觉得，本地跑大模型这事是发烧友的玩具，跟正经生意没关系。但这个评论加上Jamesob那个本地模型部署指南在HN上拿了396分和200多条评论，让我重新审视了这个方向。</p>
+
+<p>翻了翻数据。Ollama在GitHub上175K星，vLLM 85K星。Qwen3.6-27B可以在两块二手3090上跑，GLM-5.2的量化版可以在4卡RTX 6000 Pro上跑出接近Claude Opus的水平。怎么说呢，本地模型的能力已经不是玩具级别了。</p>
+
+<p>这事确实有搞头。帮这些不能上云的机构搭建私有化AI基础设施，一套收3到15万，月维护费3000到15000，比你想象的有前途。</p>
+
+<h2>为什么这玩意有市场</h2>
+
+<p>先想一个问题。为什么一个律所不用ChatGPT？不是因为ChatGPT不好使，是因为律师的保密义务不允许。</p>
+
+<p>中国律师法第38条规定的，律师对客户的商业秘密和个人隐私负有保密义务。你让一个律师把他的案件材料、证据摘要、代理词草稿丢到OpenAI的服务器上？这不是技术问题，这是合规风险。</p>
+
+<p>同样的道理。诊所的病历数据受HIPAA（美国）或个人信息保护法（中国）的保护。金融公司的客户交易数据更是红线。政府机构的内部文件更不用说。</p>
+
+<p>说真的，一个律所合伙人想用AI做合同审查、案件分析、法律检索。一个诊所想用AI做医疗文书整理、辅助诊断参考。一个会计师事务所想用AI做财务报表分析。但他们不敢用云端API。</p>
+
+<p>这个矛盾就是你的机会。你帮他们把AI模型部署在他们自己的服务器上，数据不离开他们的网络。他们拿到了AI的能力，你拿到了服务费。双赢。</p>
+
+<p>另一个驱动力是经济账。我算了一笔账，你想想看。一个中型律所20个律师，每人开一个ChatGPT Plus是20美元一个月，一年4800美元。但数据安全问题始终悬在头上。如果花8万块配一台本地服务器，跑一个Qwen3.6-27B或者更好的模型，所有律师共用，数据全在本地。一年不到就回本了。第三年起全是省下来的钱。</p>
+
+<p>之前我聊过帮公司省云API费用的事，但那是降本。本地部署解决的是合规问题，这个价值比省钱大多了。</p>
+
+<h2>真实案例，一个律所的部署过程</h2>
+
+<p>说一个真实的事。我前几个月帮一个做医疗纠纷的专业律所搭了一套本地AI。</p>
+
+<p>他们面临的情况很典型。所里30几个律师，日常工作要大量查阅医疗纠纷的判例、写法律文书、对比不同法院的裁判标准。他们之前试过用ChatGPT，但合伙人发现有人把患者信息贴进去问了，直接叫停了全所的AI使用。</p>
+
+<p>但他们又迫切需要AI的帮助，因为一个医疗纠纷案件卷宗动不动几百页，人工翻起来太痛苦。</p>
+
+<p>我的方案是这样的。硬件层面，帮他们在办公室配了一台双路服务器，装了两块RTX 4090，总显存48GB。整机成本大约3万8。软件层面，用Ollama做模型管理和推理接口，搭配Open WebUI做一个跟ChatGPT差不多的聊天界面。模型选了Qwen3.6-27B。</p>
+
+<p>部署过程其实不复杂。装Linux系统，装NVIDIA驱动和CUDA工具包，装Docker，拉Ollama镜像，下载模型，配置Open WebUI容器，设置反向代理和HTTPS。核心配置大概两天时间搞定。</p>
+
+<p>跑起来之后的效果。律师直接用本地模型做法律检索辅助，把案件事实描述喂给模型，让它找类似判例和适用法条。虽然Qwen3.6-27B在中文法律场景下不如GPT-4精准，但应付日常的法律文书起草和判例检索已经够用了。最关键的是，所有数据都在他们自己的服务器上，合伙人再也不用担心泄密问题。</p>
+
+<p>这次部署的总报价是6万8（含两年维保），硬件成本3万8，我的毛利3万。之后每个月的远程维护费是2000块，帮他们更新模型版本、排查系统问题。客户很满意，因为比起每年花大几万买某法律数据库的会员，这套本地AI的价值感强太多了。</p>
+
+<h2>工具链，你只需要这几样东西</h2>
+
+<p>做本地AI部署服务不需要什么高深的技术。这几样工具够了。</p>
+
+<h3>Ollama</h3>
+<p>GitHub上175K星，目前最主流的本地模型运行工具。它的设计哲学就是简单。一条命令拉模型，一条命令启动服务。Ollama甚至不需要你手动配置什么NVIDIA的复杂环境，它会自己检测GPU并配置。支持的模型列表已经超过100种，Qwen、DeepSeek、GLM、Gemma、Llama全都有。我用它做主力推理引擎，原因是它兼容OpenAI的API格式，客户端接入非常方便。</p>
+
+<h3>vLLM</h3>
+<p>85K星的开源推理引擎，比Ollama多了很多企业级功能。它支持PagedAttention技术，能把显存利用率提高2到4倍。如果你的客户要跑大模型（比如GLM-5.2 594B的量化版），vLLM是唯一能稳定跑起来的引擎。它还支持连续批处理和Prefix Caching，对于多人同时使用的场景吞吐量很高。我一般给企业级客户用vLLM，个人和小团队用Ollama就够了。</p>
+
+<h3>Open WebUI</h3>
+<p>一个开源的AI聊天界面，就是把你本地的模型包装成一个跟ChatGPT长得几乎一样的网页。用户不需要跑命令行，打开浏览器就能用。它支持多用户、对话历史、文件上传、RAG（检索增强生成）。对非技术客户来说，这个界面直接决定了他们的使用体验。</p>
+
+<h3>硬件方案</h3>
+<p>Jamesob的指南给了我很好的参考。他把本地AI的硬件配置分成了几个明确的档次。入门级配两块RTX 3090（二手），48GB显存，总投入约2万，能跑Qwen3.6-27B，适合中小团队。进阶级配一块RTX 6000 Pro或A6000，96GB显存，投入约4到6万，能跑DeepSeek-V3的量化版。企业级配4块RTX 6000 Pro，384GB显存，投入约30到40万，能跑GLM-5.2量化版，接近Claude Opus水平。你的核心能力是帮客户选对方案，别让他们买到不需要的东西。</p>
+
+<h2>完整操作流程，帮你理清怎么接单怎么做</h2>
+
+<p>第一步，客户沟通和需求梳理。先搞清楚几个关键问题。他们有多少人会用？处理什么类型的数据（文书、病历、代码、还是通用内容）？对模型能力的要求有多高（简单问答就够了还是需要复杂推理）？预算范围是多少？有没有IT运维人员？这一步的价值是帮客户建立信任，因为他们要放数据在你的方案里。</p>
+
+<p>第二步，方案设计和报价。根据需求做三档方案。标准档，单卡RTX 4090加Ollama加Open WebUI，适合5到10人团队，报价2到4万。进阶档，双卡RTX 6000 Pro加vLLM加Open WebUI加RAG配置，适合20到50人团队，报价6到10万。企业档，4卡服务器加vLLM加集群配置加高可用方案，适合50人以上或对模型能力要求极高的客户，报价12到20万。每一档都要写清楚硬件配置、软件栈、性能预期、交付时间、维保范围。</p>
+
+<p>第三步，硬件采购和交付。让客户自己采购硬件，你出配置清单，客户买完后送到机房或办公室。你负责上架、装系统、配置网络。这一步需要的基本功是Linux系统安装、网络配置（IP、DNS、防火墙）、NVIDIA驱动安装。核心的坑是GPU之间用PCIe Switch连接时容易出兼容性问题，需要提前确认主板型号和PCIe通道配置。</p>
+
+<p>第四步，软件部署。装Docker，拉Ollama或vLLM镜像，下载模型权重，配置Open WebUI。这一步的核心是把整个部署过程写成Docker Compose文件，以后升级和维护都方便。模型下载是大头，Qwen3.6-27B大概55GB，GLM-5.2的量化版大概150GB，下载时间要看网速，可能要跑一晚上。</p>
+
+<p>第五步，测试和调优。部署完了要测的东西很多。单用户响应时间是不是在可接受范围内（我一般是5到10秒的预期）。多用户并发会不会卡，显存够不够。模型回答的质量客户满不满意，需不需要根据领域做Prompt优化。RAG配置能不能正确检索到客户的文档。跑完这些测试才能交付。</p>
+
+<p>第六步，培训和交付。给客户的IT管理员做一次培训，告诉他们怎么重启服务、怎么看日志、怎么换模型版本。给终端用户做一次简单的使用说明。交付后第一个月每周远程巡检一次，之后按月维保。这一步决定了客户的满意度，也决定了你能不能拿到复购。</p>
+
+<p>整个过程下来，一个标准档的项目大概需要5到7个工作日，从沟通到交付。</p>
+
+<h2>定价策略，怎么收钱才能赚到钱</h2>
+
+<p>做本地AI部署服务的定价核心是三个字，分层收。</p>
+
+<p>第一层，一次性部署费。按硬件规模和复杂度，标准档2到4万，进阶档6到10万，企业档12到20万。这个费用包含了方案设计、硬件上架、软件部署、测试调优、培训和交付文档。</p>
+
+<p>第二层，月度维保费。部署总价的8%到12%每月。标准档2000到4000，进阶档5000到8000，企业档1万到1万5。包含远程监控、模型更新、Bug修复、安全补丁、性能优化建议。维保费是这生意最香的部分。一次性部署是有限的，但维保费是持续收入。只要客户还用着你的系统，每个月就有进账。</p>
+
+<p>第三层，升级和定制费。客户需要换更好的模型、增加RAG功能、做多服务器集群、集成现有的业务系统。这类需求看复杂度和时间，按500到2000一天的报价来算。有些客户要求把AI接进他们的OA系统或者CRM系统，这种集成项目一单2到5万也很正常。</p>
+
+<p>接单渠道的话。我个人的经验是知乎和LinkedIn最好用。在知乎上回答「律所怎么用AI不泄露客户数据」「企业能不能部署自己的AI模型」，搜索流量非常稳。LinkedIn上直接找律所的信息化负责人或者诊所的IT主管，发一封简洁的服务说明过去。保守一点说，发50封私信能转化2到3个客户。还有一个被很多人忽视的渠道是商会和企业协会。我认识一个人就是通过当地律师协会的年会认识了5个律所的合伙人，当场签了3个意向单。</p>
+
+<h2>踩过的坑</h2>
+
+<p>做这行快半年了，踩过的坑不少。挑几个关键的说说。</p>
+
+<p>第一个坑，低估了硬件兼容性的问题。我第一单的时候推荐客户买了4块RTX 4090，结果发现4090不支持NVLink，多卡之间的通信效率很低。跑大模型的时候显存分配不均匀，一张卡满载其他卡闲置。。。我当时就愣住了。后来我学乖了，企业级客户一律推荐RTX 6000 Pro或者A6000，支持NVLink和更好的显存池化。个人玩家可以用4090，商用必须用专业卡。这个坑让我多跑了两个星期去调优，差点把客户搞丢了。</p>
+
+<p>第二个坑，客户的期望管理。很多人觉得本地AI应该跟ChatGPT一样好用。但说实话，本地能跑的模型跟Claude Sonnet 5这个级别还是有差距的。我接的第一个客户是个小诊所的主任，他觉得部署好了就能完全替代以前用的云AI服务。我花了很大功夫跟他解释，本地模型在通用知识上不如云端大模型，但在隐私合规这个维度上，云AI永远达不到本地部署的标准。我后来在方案里加了一条「能力对比表」，写明本地部署的优缺点，避免客户预期过高。</p>
+
+<p>第三个坑，维保比部署费时。本地AI系统不像云服务，出了问题是需要你上门或者远程处理的。我遇到过一次Ollama版本升级后API接口不兼容，客户的Open WebUI直接崩溃了。那次我花了整整一个周末远程排查，最后发现是Ollama的新版本改了默认端口配置。从那以后我所有客户的Docker Compose文件都锁了版本号，不经过测试绝不升级。同时维保合同里要写清楚响应时间和紧急处理流程，避免出现半夜被客户电话吵醒的情况。</p>
+
+<p>第四个坑，模型的选择比想象中更重要。不是所有模型都适合所有场景。Qwen3.6-27B在中文场景下表现很好，但在英文法律文书的处理上不如一些专门训练的模型。GLM-5.2的综合能力很强，但占用的显存是Qwen的5倍，硬件成本直线上升。我后来养成了一个习惯，每次接单之前先问清楚客户的主要使用场景，然后用几个候选模型做盲测，让客户自己选。这不仅让客户感受到专业性，也大大降低了交付后的不满率。</p>
+
+<h2>最后说几句</h2>
+
+<p>7月5号了。一边是云端AI的能力越来越强，Claude Sonnet 5、Claude Science这些产品一个接一个的发布。另一边是企业的数据合规压力越来越大，很多公司开始明确禁止员工在ChatGPT或Claude上输入公司数据。</p>
+
+<p>这个矛盾正在制造一个明确的机会窗口。本地AI部署不是要跟云端AI竞争，而是要填补那个「想用AI但又不敢用云端AI」的空白地带。</p>
+
+<p>Ollama 175K星、vLLM 85K星、Qwen3.6-27B这样的模型二手的3090就能跑。工具和模型已经准备好了，缺的就是有人去做那个桥梁，帮这些有合规需求的机构把AI能力搬进他们自己的服务器。</p>
+
+<p>我之前说过一句话，帮人部署本地AI这事，某种程度上也是在磨平一些信息差。很多律所和诊所的负责人不是不需要AI，而是不知道有本地部署这个选项。</p>
+
+<p>你可以现在就去翻翻你家附近的律所、诊所、会计师事务所的网站。看看他们有没有IT负责人或者信息化部门的联系方式。发一封简洁的邮件过去。试试看。</p>
+
+</div>
+
+<div class="faq">
+    <h2>常见问题</h2>
+    <div class="faq-item">
+        <h3>本地AI部署服务适合什么人做？</h3>
+        <p>适合有Linux系统管理经验、了解Docker容器化、懂基本网络配置的IT从业者。不需要AI模型训练的经验，重点是会部署和调优现有的开源模型。有运维背景的人上手最快，一到两周的学习就能接基础的单。</p>
+    </div>
+    <div class="faq-item">
+        <h3>本地AI部署和用ChatGPT/Claude有什么区别？</h3>
+        <p>核心区别在数据控制权。用ChatGPT或Claude，你的数据要经过第三方服务器。对于律所来说，客户的案件信息涉及保密义务；对于诊所来说，患者的病历数据受隐私法规约束；对于金融公司来说，客户的财务数据绝对不能外传。本地部署把这些数据完全锁在自己的服务器里，不经过任何第三方，同时避免了云API按token付费的成本压力。</p>
+    </div>
+    <div class="faq-item">
+        <h3>一套本地AI部署服务一个月能赚多少？</h3>
+        <p>兼职做月入1到3万元，全职做月入5到10万元。核心收入分三块，一次性部署费（1到15万）、月度维护费（1000到15000/月）、模型优化升级费（5000到3万/次）。企业客户一旦部署了就会一直用，维护费是持续收入来源。做得好了还有转介绍，一个律所推荐给另一个律所的情况很常见。</p>
+    </div>
+    <div class="faq-item">
+        <h3>部署一套本地AI需要什么硬件？成本高吗？</h3>
+        <p>入门级配置用两块RTX 3090显卡（二手约6000块/张），48GB显存，可以跑Qwen3.6-27B级别的模型，总硬件投入约2万。企业级配置用4块RTX 6000 Pro（96GB显存/块），384GB显存，能跑GLM-5.2量化版这种接近Claude Opus水平的模型，硬件投入约30到40万。客户自己出硬件，你的成本只是时间和软件配置。</p>
+    </div>
+</div>
+
+<div class="cta">
+    <p>想用AI做本地部署服务的全套提示词模板？我们的提示词包里有👇</p>
+    <a href="/prompt-pack/" class="btn" target="__blank">查看提示词包详情</a>
+</div>
+<div class="related">
+    <h3>相关推荐</h3>
+    <ul>
+        <li><a href="/articles/cases/odysseus-self-hosted-ai-workspace-side-hustle-202606/" target="__blank">帮人搭建私有化AI工作区月入15000 Odysseus开源项目实操拆解</a></li>
+        <li><a href="/articles/cases/ai-agent-customization-service/" target="__blank">AI Agent定制化服务怎么赚钱 帮企业搭专属AI助手一个月赚5万的实操拆解</a></li>
+        <li><a href="/articles/cases/ai-security-audit-service-side-hustle-20260614/" target="__blank">AI安全审计服务市场巨大 帮企业审查AI使用合规性 一单赚5000到5万的实操拆解</a></li>
+    </ul>
+</div>
+<div class="footer" style="text-align:center;margin-top:48px;padding-top:24px;border-top:1px solid var(--border);color:var(--muted);font-size:13px;">
+    <p>
+        <a href="/about/" style="color:var(--muted);text-decoration:underline;">关于我们</a> ·
+        <a href="/disclaimer/" style="color:var(--muted);text-decoration:underline;">免责声明</a> ·
+        <a href="/privacy/" style="color:var(--muted);text-decoration:underline;">隐私政策</a> ·
+        <a href="/prompt-pack/" style="color:var(--muted);text-decoration:underline;">提示词包</a>
+    </p>
+    <p style="margin-top:6px;">&copy; 2026 AiToollab · 内容仅供参考，不构成投资建议</p>
+</div>
+</body>
+</html>
