@@ -137,7 +137,17 @@
 
 <p>三个方向，方向一最快上手，有Cloudflare账号就能搞。方向二需要你对某个领域有深入了解，但做出来之后是躺赚。方向三最考验产品能力，但护城河最深。</p>
 
-<p>我自己准备这两周试一下方向一，把一些模型代理挂出来看看效果。行不行试了再说，反正Cloudflare这边写了说他们跟25家以上的公司一起在搞这个x402基金会，基础设施应该不会拉胯。</p>
+<p>我自己已经搭了一个x402 API，叫<a href="https://api.aitoollab.top/api/health">x402 Crypto Data API</a>，挂了41个数据接口，从加密货币实时价格到DeFi收益率、巨鲸追踪、AI代理数据分析，全部配置了x402微支付。AI agent发现它就能直接调，每次调用自动扣几分钱。</p>
+
+<p>Agent发现入口在这里：<br>
+<a href="https://api.aitoollab.top/.well-known/x402">api.aitoollab.top/.well-known/x402</a></p>
+
+<p>用curl就能看到完整的定价清单：</p>
+
+<pre><code>curl -s https://api.aitoollab.top/.well-known/x402 | jq '.resources[] | {resource, accepts}'
+</code></pre>
+
+<p>这个API目前已经上线运行，所有x402协议都配好了——定价、收款地址、MCP agent发现端点一应俱全。你或者你的agent可以直接调试试用。不一定要等Cloudflare gateway正式开放，现在x402协议本身就是可以跑通的。</p>
 
 <p>大时代啊，朋友们。</p>
 
