@@ -74,4 +74,4 @@ articles/startup-100/2026-05-14-100-ai-startup-week-4/index.html
 articles/startup-100/ai-startup-100/index.html
 articles/startup-100/index.html
 
-articles/cases/ai-local-llm-deployment-service-side-hustle-20260705/index.html
+articles/cases/ai-local-llm-deployment-service-side-hustle-20260705/index.htmlarticles/news/cloudflare-x402-monetization-gateway-side-hustle-20260705/index.html
