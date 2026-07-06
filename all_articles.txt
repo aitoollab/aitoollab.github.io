@@ -76,3 +76,6 @@ articles/startup-100/index.html
 
 articles/cases/ai-local-llm-deployment-service-side-hustle-20260705/index.htmlarticles/news/cloudflare-x402-monetization-gateway-side-hustle-20260705/index.html
 articles/cases/ai-accessibility-app-development-service-side-hustle-20260706/index.html
+tutorials/chatgpt-prompt-formula-tutorial-2026/
+tutorials/ai-ppt-creation-tutorial-2026/
+tutorials/ai-data-analysis-tutorial-2026/
