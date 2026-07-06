@@ -1,8 +1,11 @@
+
 articles/cases/ai-academic-paper-writing-service-side-hustle-20260701/index.html
+articles/cases/ai-accessibility-app-development-service-side-hustle-20260706/index.html
 articles/cases/ai-agent-customization-service/index.html
 articles/cases/ai-business-plan-service-side-hustle-20260629/index.html
 articles/cases/ai-digital-products-passive-income/index.html
 articles/cases/ai-grant-writing-service-side-hustle-20260630/index.html
+articles/cases/ai-local-llm-deployment-service-side-hustle-20260705/index.htmlarticles/news/cloudflare-x402-monetization-gateway-side-hustle-20260705/index.html
 articles/cases/ai-medical-bill-repricing/index.html
 articles/cases/ai-nutritionist-fitness-plan-service-side-hustle-20260628/index.html
 articles/cases/autopreso-speech-to-presentation/index.html
@@ -38,6 +41,7 @@ articles/news/glm-5-2-zcode-free-coding-side-hustle-20260703/
 articles/news/google-ai-pointer-reimagined/index.html
 articles/news/index.html
 articles/news/krea-2-open-source-image-side-hustle-20260630/
+articles/news/microsoft-365-price-hike-ai-alternative-side-hustle-20260706/index.html
 articles/news/microsoft-ai-cost-side-hustle-opportunity-20260523/index.html
 articles/news/nanobot-side-hustle/index.html
 articles/news/nvidia-h200-china-paradox-20260515/index.html
@@ -73,9 +77,6 @@ articles/startup-100/2026-05-07-100-ai-startup-week-3/index.html
 articles/startup-100/2026-05-14-100-ai-startup-week-4/index.html
 articles/startup-100/ai-startup-100/index.html
 articles/startup-100/index.html
-
-articles/cases/ai-local-llm-deployment-service-side-hustle-20260705/index.htmlarticles/news/cloudflare-x402-monetization-gateway-side-hustle-20260705/index.html
-articles/cases/ai-accessibility-app-development-service-side-hustle-20260706/index.html
-tutorials/chatgpt-prompt-formula-tutorial-2026/
-tutorials/ai-ppt-creation-tutorial-2026/
 tutorials/ai-data-analysis-tutorial-2026/
+tutorials/ai-ppt-creation-tutorial-2026/
+tutorials/chatgpt-prompt-formula-tutorial-2026/
