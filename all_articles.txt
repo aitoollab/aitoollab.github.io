@@ -80,3 +80,4 @@ articles/startup-100/index.html
 tutorials/ai-data-analysis-tutorial-2026/
 tutorials/ai-ppt-creation-tutorial-2026/
 tutorials/chatgpt-prompt-formula-tutorial-2026/
+tutorials/ai-content-image-tutorial-20260706/
