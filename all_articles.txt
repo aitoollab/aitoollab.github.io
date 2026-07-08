@@ -84,3 +84,6 @@ tutorials/ai-data-analysis-tutorial-2026/
 tutorials/ai-ppt-creation-tutorial-2026/
 tutorials/chatgpt-prompt-formula-tutorial-2026/
 articles/cases/ai-content-quality-audit-service-side-hustle-20260708/
+tutorials/ai-audio-transcription-tutorial-20260708/
+tutorials/ai-translation-tutorial-20260708/
+tutorials/ai-flowchart-mindmap-tutorial-20260708/
