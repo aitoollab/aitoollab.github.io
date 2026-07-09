@@ -88,3 +88,4 @@ tutorials/ai-audio-transcription-tutorial-20260708/
 tutorials/ai-translation-tutorial-20260708/
 tutorials/ai-flowchart-mindmap-tutorial-20260708/
 articles/news/ai-code-cleanup-service-side-hustle-20260708/index.html
+articles/cases/ai-live-streaming-assistant-service-side-hustle-20260709/
