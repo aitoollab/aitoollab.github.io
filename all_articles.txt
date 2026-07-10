@@ -89,3 +89,6 @@ tutorials/ai-translation-tutorial-20260708/
 tutorials/ai-flowchart-mindmap-tutorial-20260708/
 articles/news/ai-code-cleanup-service-side-hustle-20260708/index.html
 articles/cases/ai-live-streaming-assistant-service-side-hustle-20260709/
+tutorials/ai-workflow-automation-tutorial-20260710/
+tutorials/ai-image-editing-tutorial-20260710/
+tutorials/ai-learning-assistant-tutorial-20260710/
