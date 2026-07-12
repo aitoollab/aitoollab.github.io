@@ -95,3 +95,4 @@ tutorials/ai-learning-assistant-tutorial-20260710/
 articles/news/chatgpt-work-freelance-side-hustle-20260710/index.html
 articles/cases/ai-children-reading-tutor-service-side-hustle-20260711/
 articles/news/meta-muse-image-ai-image-side-hustle-20260711/index.html
+articles/cases/ai-market-research-analysis-service-side-hustle-20260712/
