@@ -98,3 +98,6 @@ tutorials/ai-translation-tutorial-20260708/
 tutorials/ai-workflow-automation-tutorial-20260710/
 tutorials/chatgpt-prompt-formula-tutorial-2026/
 articles/cases/ai-cost-optimization-service-side-hustle-20260713/
+tutorials/ai-excel-tutorial-20260713/
+tutorials/ai-writing-assistant-tutorial-20260713/
+tutorials/ai-coding-tutorial-beginners-20260713/

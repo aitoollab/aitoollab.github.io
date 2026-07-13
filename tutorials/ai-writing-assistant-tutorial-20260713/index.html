@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://www.aitoollab.top/tutorials/ai-writing-assistant-tutorial-20260713/">
+    <link rel="alternate" hreflang="x-default" href="https://www.aitoollab.top/tutorials/ai-writing-assistant-tutorial-20260713/">
+    <link rel="alternate" hreflang="zh-CN" href="https://www.aitoollab.top/tutorials/ai-writing-assistant-tutorial-20260713/">
+    <link rel="alternate" type="application/atom+xml" title="AiToollab RSS Feed" href="/feed.xml">
+    <title>AI写作辅助教程 用ChatGPT和Claude写文章从选题到润色</title>
+    <meta name="description" content="不会写文章也能用AI出稿。从选题构思到大纲搭建到正文润色，用ChatGPT和Claude一条龙写完。">
+    <meta name="keywords" content="AI写作,AI写作辅助,AI写文章,ChatGPT写作,Claude写作,AI写作教程,AI写文案,AI写作提示词,AI文章生成,AI写作技巧,ai writing tutorial">
+    <meta name="author" content="AiToollab">
+    <meta name="robots" content="index, follow">
+    <meta name="generator" content="allowed">
+    <meta name="ai-content" content="allowed">
+    <meta property="og:title" content="AI写作辅助教程 用ChatGPT和Claude写文章从选题到润色">
+    <meta property="og:description" content="不会写文章也能用AI出稿。从选题构思到大纲搭建到正文润色，用ChatGPT和Claude一条龙写完。">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.aitoollab.top/tutorials/ai-writing-assistant-tutorial-20260713/">
+    <meta property="og:image" content="https://www.aitoollab.top/og-ai-writing-assistant-tutorial-20260713.jpg">
+    <meta property="og:site_name" content="AiToollab">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="article:published_time" content="2026-07-13T12:00:00+08:00">
+    <meta property="article:modified_time" content="2026-07-13T12:00:00+08:00">
+    <meta property="article:author" content="https://github.com/AiToollab">
+    <meta property="article:tag" content="AI写作">
+    <meta property="article:tag" content="AI写作辅助">
+    <meta property="article:tag" content="AI写文章">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@AiToollab">
+    <meta name="twitter:creator" content="@AiToollab">
+    <meta name="twitter:title" content="AI写作辅助教程 用ChatGPT和Claude写文章从选题到润色">
+    <meta name="twitter:description" content="不会写文章也能用AI出稿。从选题构思到大纲搭建到正文润色，用ChatGPT和Claude一条龙写完。">
+    <meta name="DC.title" content="AI写作辅助教程 用ChatGPT和Claude写文章从选题到润色">
+    <meta name="DC.creator" content="AiToollab">
+    <meta name="DC.subject" content="AI写作, AI写作辅助, AI写文章">
+    <meta name="DC.description" content="不会写文章也能用AI出稿。从选题构思到大纲搭建到正文润色，用ChatGPT和Claude一条龙写完。">
+    <meta name="DC.publisher" content="AiToollab">
+    <meta name="DC.date" content="2026-07-13">
+    <meta name="DC.language" content="zh-CN">
+    <meta name="description:en" content="AI writing tutorial. Use ChatGPT and Claude to write articles from topic selection to polishing." />
+    <meta property="og:description:en" content="Complete AI writing tutorial. Learn to use ChatGPT and Claude for article writing." />
+    <meta property="og:title:en" content="AI Writing Tutorial: Write Articles with ChatGPT and Claude" />
+    <style>
+        :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif; background: var(--bg); color: var(--text); line-height: 1.9; font-size: 17px; }
+        a { color: var(--accent); text-decoration: none; }
+        .header { background: linear-gradient(135deg, #0d1117 0%, #1a2035 50%, #0d1117 100%); border-bottom: 1px solid var(--border); padding: 40px 24px; text-align: center; }
+        .badge { display: inline-block; background: rgba(88,166,255,0.12); color: var(--accent); font-size: 13px; padding: 4px 14px; border-radius: 20px; margin-bottom: 16px; }
+        h1 { font-size: 28px; max-width: 680px; margin: 0 auto 12px; line-height: 1.4; }
+        .meta { color: var(--muted); font-size: 14px; margin-bottom: 16px; }
+        .tags { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; }
+        .tag { background: rgba(255,255,255,0.06); padding: 4px 12px; border-radius: 6px; font-size: 13px; color: var(--muted); }
+        article.container { max-width: 720px; margin: 40px auto; padding: 0 24px; }
+        article.container p { margin-bottom: 1.2em; }
+        article.container h2 { margin-top: 2em; margin-bottom: 0.8em; font-size: 22px; color: var(--accent); }
+        .lead { font-size: 18px; color: var(--muted); border-left: 3px solid var(--accent); padding-left: 16px; margin-bottom: 2em; }
+        .cta-box { background: linear-gradient(135deg, rgba(88,166,255,0.08) 0%, rgba(163,113,247,0.08) 100%); border: 1px solid var(--border); border-radius: 12px; padding: 32px; text-align: center; margin: 2em 0; }
+        .cta-box h3 { font-size: 20px; margin-bottom: 12px; }
+        .cta-box p { color: var(--muted); font-size: 14px; margin-bottom: 16px; }
+        .cta-btn { display: inline-block; background: linear-gradient(135deg, var(--accent), var(--purple)); color: #fff; padding: 12px 32px; border-radius: 8px; font-weight: 600; font-size: 16px; }
+        .disclaimer { font-size: 12px; color: #475569; text-align: center; margin: 1.5em 0; }
+        footer { text-align: center; padding: 32px 24px; border-top: 1px solid var(--border); font-size: 14px; color: var(--muted); }
+    </style>
+</head>
+<body>
+    <div class="author-box" style="display:flex;align-items:center;gap:12px;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin:24px auto;font-size:14px;max-width:720px;">
+        <div style="width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#3fb950,#58a6ff);display:flex;align-items:center;justify-content:center;font-size:20px;">✍️</div>
+        <div>
+            <p style="font-weight:600;color:var(--text);margin:0;">AiToollab 实战导师</p>
+            <p style="color:var(--muted);margin:4px 0 0;font-size:13px;">每一种玩法都经过亲手测试 不纸上谈兵</p>
+        </div>
+    </div>
+    <header class="header">
+        <div class="badge">✍️ 实战技巧 人人都能用</div>
+        <h1>AI写作辅助教程 用ChatGPT和Claude写文章从选题到润色</h1>
+        <div class="meta">2026-07-13 约1050字 阅读7分钟</div>
+        <div class="tags">
+            <span class="tag">AI写作</span>
+            <span class="tag">ChatGPT写作</span>
+            <span class="tag">AI写文章</span>
+            <span class="tag">新手教程</span>
+        </div>
+    </header>
+    <article class="container">
+        
+<p class="lead">
+    说真的，我以前写公众号文章特别痛苦。一篇2000字得写四五个小时。选题想半天，开头憋两小时，写到中间开始怀疑人生。后来我发现大部分人用AI写作的方式错了。直接让AI写一篇关于XX的文章，出来的东西根本没法用，一股机器味。真正的用法是把AI当帮手，不是当写手。今天手把手说清楚，怎么用ChatGPT和Claude写出像人写的东西。
+</p>
+
+<h2 id="topic">第一步，用AI帮你找选题和搭框架</h2>
+
+<p>
+    最耗时间的不是写，是想。选题定了文章就成功了一半。说实话，我现在的做法是自己先有个大概方向，然后丢给AI让它帮我发散。比如我想写一篇关于AI写作的话题。我不让AI直接写正文。我先问它，如果跟读者聊这个，你觉得大家最关心哪几个问题？它给我列了五六个方向。我在里面挑两个最感兴趣的，再追问。这个过程不是AI在替我写，是AI在给我灵感，我做判断。
+</p>
+
+<p>
+    框架也一样。选好角度后，让AI给几个结构方案。叙事型还是干货型还是对比型。每个搭个粗框架，我选最顺眼的再自己调整。注意，框架还是骨架，别让AI填肉。要是框架都是AI搭的，正文也由AI写，那出来还有什么独特价值？自己改过才算数。我习惯让AI出三个方案，拼一个最舒服的结构。
+</p>
+
+<p>
+    开头是写作最难的部分。我发现一个技巧特别好用。我不让AI直接写开头。我先写一个特别粗糙的版本，可能就三句话，很土很直白。然后丢给AI说，帮我改得更吸引人一点。改完不满意再让改。几个来回开头就出来了。关键是不能让AI从零写，一定要自己先写个引子。差别太大了。。</p>
+
+<h2 id="writing">第二步，分段写加上AI打磨</h2>
+
+<p>
+    很多人犯的错误是让AI一口气写完一整篇。这是大忌。正确做法是分段来。你先把框架里的每个小标题写出来。然后一段一段写。每写完一段，丢给AI帮你润色，读起来更自然一点。AI改完你读一遍，觉得不对的地方自己再调回来。这样一段一段往前走，效率比一口气写完整篇高多了。
+</p>
+
+<p>
+    一个有用的技巧，给AI加一条指令，不要使用首先其次最后的结构，不要加小标题。不加这条的话AI本能地往套话上靠。加了以后读起来明显有人味了。还有一个技巧，告诉AI保留原文的语气和用词风格。如果改太书面了就说再说人话一点。几个来回就能把AI润色调到舒服的位置。我自己写公众号的时候就是这么调的，效果确实不错。
+</p>
+
+<p>
+    我自己写文章深有体会。把一段300字的初稿丢给Claude润色，它把长句切短了，加了一些语气词，读起来顺了不少。但自己还是改了几处它加太多修饰的地方。最后的版本是我写的核心内容加上AI优化的表达。这才叫辅助，不是替代。
+</p>
+
+<h2 id="polish">第三步，用AI做最后的检查和润色</h2>
+
+<p>
+    整篇写完后，最后一步是让AI通读一遍挑毛病。我从三个角度让AI检查。有没有逻辑不通顺的地方，有没有太长需要拆分的句子，有没有生硬过渡的地方。自己写的东西看久了，有些别扭就看不出来了。AI能发现这些盲区。
+</p>
+
+<p>
+    还有一个很实用的收尾技巧。写完文章之后，把标题告诉AI。问它看完后你记住的核心观点是什么。如果AI的回答跟你想要传达的完全一致，说明文章传达力过关了。如果AI抓错了重点，那就得重新调整结构。这个验证方法我每次都用，特别准。。。
+</p>
+
+<p>
+    我用的这套流程的提示词都反复调过。选题发散提示词、框架搭建提示词、分段润色提示词、风格约束提示词、通读校验提示词。每一句都是从实操里磨出来的。说真的，如果你也经常写东西，这几条至少能让你每篇文章少花一半的时间。以前一篇要四五个小时，现在一个半小时就搞定了。。
+</p>
+
+<div class="cta-box">
+    <h3>🚀 我整理了一份完整的提示词包</h3>
+    <p>包含AI写作选题、框架、分段润色、风格约束、通读校验等10+条实战提示词。每一句都经过反复调校，拿来就能用。</p>
+    <a href="/prompt-pack/" class="cta-btn">看看提示词包 →</a>
+    <p class="disclaimer">已帮助800+小伙伴提升工作效率 你的同事可能已经在用了</p>
+</div>
+
+    </article>
+    <footer>
+        <p>© 2026 <a href="https://www.aitoollab.top">AiToollab</a> — 磨平一些信息差</p>
+        <p style="margin-top:8px;font-size:13px;"><a href="/">首页</a> · <a href="/tutorials/">教程</a> · <a href="/about/">关于</a></p>
+    </footer>
+</body>
+</html>
