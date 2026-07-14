@@ -104,3 +104,4 @@ tutorials/ai-coding-tutorial-beginners-20260713/
 articles/news/terry-tao-ai-coding-agent-app-archaeology-side-hustle-20260713/index.html
 tutorials/ai-reading-notes-tutorial-20260713/
 articles/cases/ai-ios-app-development-service-side-hustle-20260714/index.html
+articles/news/ai-ios-app-no-xcode-claude-code-side-hustle-20260714/
