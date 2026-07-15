@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://www.aitoollab.top/tutorials/ai-resume-job-hunt-tutorial-20260715/">
+    <link rel="alternate" hreflang="x-default" href="https://www.aitoollab.top/tutorials/ai-resume-job-hunt-tutorial-20260715/">
+    <link rel="alternate" hreflang="zh-CN" href="https://www.aitoollab.top/tutorials/ai-resume-job-hunt-tutorial-20260715/">
+    <link rel="alternate" type="application/atom+xml" title="AiToollab RSS Feed" href="/feed.xml">
+
+    <title>AI写简历教程 用AI优化简历加模拟面试的完整流程</title>
+    <meta name="description" content="手把手教你用AI写简历改简历做面试模拟。从个人信息到项目经验再到面试问答，每一步都有具体操作。附实测好用的提示词模板。">
+    <meta name="keywords" content="AI写简历,AI改简历,AI面试模拟,AI求职,AI简历优化,AI面试辅导,AI求职教程,AI简历模板,AI模拟面试,AI求职技巧">
+    <meta name="author" content="AiToollab">
+    <meta name="robots" content="index, follow">
+    <meta name="generator" content="allowed">
+    <meta name="ai-content" content="allowed">
+
+    <meta property="og:title" content="AI写简历教程 用AI优化简历加模拟面试的完整流程">
+    <meta property="og:description" content="手把手教你用AI写简历改简历做面试模拟。从个人信息到项目经验再到面试问答，每一步都有具体操作。附实测好用的提示词模板。">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.aitoollab.top/tutorials/ai-resume-job-hunt-tutorial-20260715/">
+    <meta property="og:image" content="https://www.aitoollab.top/og-ai-resume-job-hunt-tutorial-20260715.jpg">
+    <meta property="og:site_name" content="AiToollab">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="article:published_time" content="2026-07-15T12:00:00+08:00">
+    <meta property="article:modified_time" content="2026-07-15T12:00:00+08:00">
+    <meta property="article:author" content="https://github.com/AiToollab">
+    <meta property="article:tag" content="AI求职">
+    <meta property="article:tag" content="AI简历">
+    <meta property="article:tag" content="AI面试模拟">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@AiToollab">
+    <meta name="twitter:creator" content="@AiToollab">
+    <meta name="twitter:title" content="AI写简历教程 用AI优化简历加模拟面试的完整流程">
+    <meta name="twitter:description" content="手把手教你用AI写简历改简历做面试模拟。从个人信息到项目经验再到面试问答，每一步都有具体操作。附实测好用的提示词模板。">
+
+    <meta name="DC.title" content="AI写简历教程 用AI优化简历加模拟面试的完整流程">
+    <meta name="DC.creator" content="AiToollab">
+    <meta name="DC.subject" content="AI简历, AI求职, AI面试, AI求职辅导, 求职技巧">
+    <meta name="DC.description" content="手把手教你用AI写简历改简历做面试模拟。从个人信息到项目经验再到面试问答，每一步都有具体操作。附实测好用的提示词模板。">
+    <meta name="DC.publisher" content="AiToollab">
+    <meta name="DC.date" content="2026-07-15">
+    <meta name="DC.language" content="zh-CN">
+
+    <style>
+        :root {
+            --bg: #0d1117;
+            --card: #161b22;
+            --border: #30363d;
+            --text: #e6edf3;
+            --muted: #8b949e;
+            --accent: #58a6ff;
+            --green: #3fb950;
+            --purple: #a371f7;
+            --orange: #f0883e;
+            --gold: #f0b429;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif; background: var(--bg); color: var(--text); line-height: 1.9; font-size: 17px; }
+        a { color: var(--accent); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .header { background: linear-gradient(135deg, #0d1117 0%, #1a2035 50%, #0d1117 100%); border-bottom: 1px solid var(--border); padding: 40px 24px; text-align: center; }
+        .badge { display: inline-block; background: rgba(88,166,255,0.12); color: var(--accent); font-size: 13px; font-weight: 600; padding: 4px 14px; border-radius: 20px; margin-bottom: 16px; }
+        h1 { font-size: 28px; max-width: 680px; margin: 0 auto 12px; line-height: 1.4; }
+        .meta { color: var(--muted); font-size: 14px; margin-bottom: 16px; }
+        .tags { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; }
+        .tag { background: rgba(255,255,255,0.06); padding: 4px 12px; border-radius: 6px; font-size: 13px; color: var(--muted); }
+        article.container { max-width: 720px; margin: 40px auto; padding: 0 24px; }
+        article.container p { margin-bottom: 1.2em; }
+        article.container h2 { margin-top: 2em; margin-bottom: 0.8em; font-size: 22px; color: var(--accent); }
+        .lead { font-size: 18px; color: var(--muted); border-left: 3px solid var(--accent); padding-left: 16px; margin-bottom: 2em; }
+        .cta-box { background: linear-gradient(135deg, rgba(88,166,255,0.08) 0%, rgba(163,113,247,0.08) 100%); border: 1px solid var(--border); border-radius: 12px; padding: 32px; text-align: center; margin: 2em 0; }
+        .cta-box h3 { font-size: 20px; margin-bottom: 12px; }
+        .cta-box p { color: var(--muted); font-size: 14px; margin-bottom: 16px; }
+        .cta-btn { display: inline-block; background: linear-gradient(135deg, var(--accent), var(--purple)); color: #fff; padding: 12px 32px; border-radius: 8px; font-weight: 600; font-size: 16px; transition: opacity .2s; }
+        .cta-btn:hover { opacity: 0.9; text-decoration: none; }
+        .disclaimer { font-size: 12px; color: #475569; text-align: center; margin: 1.5em 0; }
+        footer { text-align: center; padding: 32px 24px; border-top: 1px solid var(--border); font-size: 14px; color: var(--muted); }
+        footer a { color: var(--muted); }
+    </style>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Article",
+                "headline": "AI写简历教程 用AI优化简历加模拟面试的完整流程",
+                "description": "手把手教你用AI写简历改简历做面试模拟。从个人信息到项目经验再到面试问答，每一步都有具体操作。附实测好用的提示词模板。",
+                "author": {"@type": "Person", "@id": "https://www.aitoollab.top/#author", "name": "AiToollab", "url": "https://github.com/AiToollab"},
+                "datePublished": "2026-07-15T12:00:00+08:00",
+                "dateModified": "2026-07-15T12:00:00+08:00",
+                "publisher": {"@type": "Person", "name": "AiToollab"},
+                "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.aitoollab.top/tutorials/ai-resume-job-hunt-tutorial-20260715/"},
+                "wordCount": 1169,
+                "articleSection": "AI教程",
+                "keywords": ["AI简历","AI求职","AI面试模拟","AI简历优化","求职技巧"],
+                "image": {"@type": "ImageObject", "url": "https://www.aitoollab.top/og-ai-resume-job-hunt-tutorial-20260715.jpg"},
+                "timeRequired": "PT10M",
+                "speakable": {"@type": "SpeakableSpecification", "cssSelector": ["h1", ".lead", "h2"]}
+            },
+            {
+                "@type": "HowTo",
+                "name": "用AI做简历优化和面试模拟",
+                "description": "四步搭建AI求职辅助系统 从简历梳理到面试模拟",
+                "step": [
+                    {"@type": "HowToStep", "name": "用AI梳理职业经历", "text": "把工作经历喂给AI让AI帮你提取关键信息按岗位-项目-成果框架整理", "url": "https://www.aitoollab.top/tutorials/ai-resume-job-hunt-tutorial-20260715/#step1"},
+                    {"@type": "HowToStep", "name": "用AI写项目经验", "text": "用STAR法则让AI帮你改写项目经验突出个人贡献和量化成果", "url": "https://www.aitoollab.top/tutorials/ai-resume-job-hunt-tutorial-20260715/#step2"},
+                    {"@type": "HowToStep", "name": "用AI模拟面试", "text": "让AI基于你的简历出面试题并做模拟对话提供反馈优化回答", "url": "https://www.aitoollab.top/tutorials/ai-resume-job-hunt-tutorial-20260715/#step3"}
+                ]
+            },
+            {
+                "@type": "FAQPage",
+                "mainEntity": [
+                    {"@type": "Question", "name": "AI写的简历会不会太模板化", "acceptedAnswer": {"@type": "Answer", "text": "会的。所以拿到AI生成的版本后一定要加入自己的真实细节。AI给你的是骨架和表达方式你的真实项目细节才是血肉。最佳做法是让AI写初稿你在上面改用自己的话替换那些一眼就能看出是AI写的段落。"}},
+                    {"@type": "Question", "name": "AI模拟面试靠谱吗", "acceptedAnswer": {"@type": "Answer", "text": "作为面试前的准备工具非常靠谱。AI能覆盖大多数常规问题让你提前准备好回答框架。但不能完全替代真人面试因为AI无法模拟面试时的真实氛围和临场压力。建议先用AI练5-10轮再找朋友做2-3次真人模拟。"}},
+                    {"@type": "Question", "name": "简历要写多长才合适", "acceptedAnswer": {"@type": "Answer", "text": "工作3年以内一页以内。3-8年一页半以内。8年以上两页以内。AI帮你精简内容的时候要注意不要为了压到一页而删掉关键信息。每删一段问自己这一段经历对下一份工作有没有价值。"}}
+                ]
+            },
+            {"@type": "Person", "@id": "https://www.aitoollab.top/#author", "name": "AiToollab", "url": "https://github.com/AiToollab", "description": "AI工具实战研究者 专注于AI效率提升与自动化。"},
+            {"@type": "BreadcrumbList", "itemListElement": [
+                {"@type": "ListItem", "position": 1, "name": "首页", "item": "https://www.aitoollab.top/"},
+                {"@type": "ListItem", "position": 2, "name": "教程", "item": "https://www.aitoollab.top/tutorials/"},
+                {"@type": "ListItem", "position": 3, "name": "AI写简历教程 用AI优化简历加模拟面试的完整流程", "item": "https://www.aitoollab.top/tutorials/ai-resume-job-hunt-tutorial-20260715/"}
+            ]},
+            {"@type": "WebSite", "name": "AiToollab", "url": "https://www.aitoollab.top/", "potentialAction": {"@type": "SearchAction", "target": "https://www.aitoollab.top/?s=AI", "query-input": "required name=search_term_string"}}
+        ]
+    }
+    </script>
+
+    <meta name="description:en" content="Complete guide to using AI for resume optimization and interview prep. Step-by-step tutorial to improve your job hunting with ChatGPT and Claude." />
+    <meta property="og:description:en" content="Learn how to use AI to write resumes, optimize project descriptions, and practice mock interviews. Practical guide with tested prompts." />
+    <meta property="og:title:en" content="AI Resume & Interview Tutorial: Complete Guide to Job Hunting with AI" />
+</head>
+<body>
+    <div class="author-box" style="display:flex;align-items:center;gap:12px;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin:24px auto;font-size:14px;max-width:720px;">
+        <div style="width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#3fb950,#58a6ff);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;">💼</div>
+        <div>
+            <p style="font-weight:600;color:var(--text);margin:0;">AiToollab 实战导师</p>
+            <p style="color:var(--muted);margin:4px 0 0;font-size:13px;">每一种方法都经过亲手测试 不纸上谈兵</p>
+        </div>
+    </div>
+
+    <header class="header">
+        <div class="badge">💼 简历优化+面试模拟 全流程实测</div>
+        <h1>AI写简历教程 用AI优化简历加模拟面试的完整流程</h1>
+        <div class="meta">2026-07-15 约1169字 阅读8分钟</div>
+        <div class="tags">
+            <span class="tag">AI求职</span>
+            <span class="tag">AI简历</span>
+            <span class="tag">AI面试模拟</span>
+            <span class="tag">求职技巧</span>
+        </div>
+    </header>
+
+    <article class="container">
+        <p class=lead>
+    前两天一个朋友发消息给我，说投了三十多份简历一个面试都没收到。我让他把简历发过来看了一眼，问题太多了。格式乱项目经验写得像岗位描述个人信息堆了半页。后来我帮他从头到尾用AI改了一遍，一周内收到三个面试邀请。说真的，AI改简历这件事每个人都得学会。
+</p>
+
+<p>
+    写简历这事，说难也不难，说简单吧大多数人写出来就是不对味。核心问题在哪呢？你写的是我做了什么，但面试官想看的是你能为我做什么。AI最擅长的，恰恰就是帮你切换到这个视角。
+</p>
+
+<h2 id=step1>第一步，用AI梳理你的职业经历</h2>
+
+<p>
+    先把自己的经历喂给AI梳理结构。把工作经历、项目经验发给Claude或者ChatGPT，让它提取关键信息，按岗位-项目-成果的框架整理。我自己就是这么做的，五年经验半小时理清了主线。
+</p>
+
+<p>
+    具体操作也不复杂。把做过的所有事用自然语言列出来，越碎越好，不用讲究格式。然后让AI归类、提炼、排序。说实话，这步做完你已经比80%的求职者强了，大多数人连自己做过啥都说不清楚。
+</p>
+
+<h2 id=step2>第二步，让AI帮你写项目经验</h2>
+
+<p>
+    简历里最重要的部分就是项目经验，也是最容易翻车的地方。很多人写项目经验就是复制粘贴岗位职责，读起来像是从JD上扒下来的。正确写法是用STAR法则，每个项目写清楚背景、任务、行动、结果。AI特别擅长这个。
+</p>
+
+<p>
+    你把自己的原始描述丢进去，说帮我把这段改写成STAR格式的项目经验，它会自动给你一个结构化的版本。然后你在这个基础上修改，加入只有你才知道的细节。你想想看，以前写一个项目经验要绞尽脑汁想怎么写才好看，现在AI帮你搭好骨架你往里面填真实细节就行。效率差别太大了。你敢信？？我给那个朋友改简历的时候，就是用这个方法，半小时把他三个项目经验全翻新了。
+</p>
+
+<h2 id=step3>第三步，AI模拟面试实战</h2>
+
+<p>
+    简历过了就是面试，这是更关键的一关。我以前面试前会给朋友打电话让人家帮我模拟，很尴尬也没效率。后来发现让AI做模拟面试比真人还好用。把你的简历发给AI，让它基于你的经历出面试题。就问它一句话，基于我的简历，帮我出10道最可能被问到的问题，然后我们一个一个来模拟。
+</p>
+
+<p>
+    它会从技术问题问到行为问题再问到职业规划。你回答完它会给你反馈，指出回答里的逻辑漏洞和不准确的地方。你敢信？？我第一次试的时候，AI指出了我回答里一个我自己都没意识到的矛盾点。真的。这种模拟你可以在面试前反复练，练到觉得什么问题都不慌了。说实话，这比花几百块找人做模拟面试香太多了。。
+</p>
+
+<h2 id=step4>第四步，简历定制化和投递策略</h2>
+
+<p>
+    最后一招也很关键。不要用同一份简历投所有公司。每家公司的JD都不一样，你的简历也应该跟着调整。但人工调整太累了，这时候AI就派上用场了。把JD和你的简历一起发给AI，说帮我把简历调整一下，突出这家公司最看重的经验。几分钟就有一份定制版简历。以前一家一家手动改太累，有了这招我才说，不定制化就是在浪费投递机会。
+</p>
+
+<p>
+    整理了一下自己反复调试过的简历优化和模拟面试提示词。包括经历梳理模板、STAR改写指令、模拟面试系统提示。你直接复制就能用。
+</p>
+
+<p>
+    说真的，用好AI之后找工作比以前简单太多了。以前拼的是你会不会写简历，现在拼的是你会不会用工具。门槛降了，就看谁先动手了。
+</p>
+
+<div class=cta-box>
+    <h3>🚀 我整理了一份求职提示词包</h3>
+    <p>包含简历优化模板、STAR项目经验生成指令、模拟面试系统提示、简历定制化模板等15条实战Prompt。每一条都用过很多次，拿来直接就能用。</p>
+    <a href=/prompt-pack/ class=cta-btn>看看提示词包 →</a>
+    <p class=disclaimer>已经帮助很多朋友拿到了offer 你也可以</p>
+</div>
+    </article>
+
+    <footer>
+        <p>© 2026 <a href="https://www.aitoollab.top">AiToollab</a> — 磨平一些信息差</p>
+        <p style="margin-top:8px;font-size:13px;"><a href="/">首页</a> · <a href="/tutorials/">教程</a> · <a href="/about/">关于</a></p>
+    </footer>
+</body>
+</html>
