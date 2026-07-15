@@ -108,3 +108,4 @@ articles/news/ai-ios-app-no-xcode-claude-code-side-hustle-20260714/
 tutorials/ai-resume-job-hunt-tutorial-20260715/
 tutorials/ai-video-production-tutorial-20260715/
 tutorials/ai-xiaohongshu-content-tutorial-20260715/
+articles/news/offloading-thinking-ai-side-hustle-critical-thinking-20260715/
