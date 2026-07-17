@@ -1,4 +1,3 @@
-
 articles/cases/ai-academic-paper-writing-service-side-hustle-20260701/index.html
 articles/cases/ai-accessibility-app-development-service-side-hustle-20260706/index.html
 articles/cases/ai-agent-customization-service/index.html
@@ -115,3 +114,4 @@ articles/news/jira-ai-agent-sdlc-side-hustle-20260716/index.htmlarticles/cases/a
 tutorials/ai-work-report-tutorial-20260717/
 tutorials/ai-marketing-copy-tutorial-20260717/
 tutorials/ai-contract-document-tutorial-20260717/
+articles/news/ai-music-video-service-side-hustle-20260717/index.html
