@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://www.aitoollab.top/tutorials/ai-contract-document-tutorial-20260717/">
+    <link rel="alternate" hreflang="x-default" href="https://www.aitoollab.top/tutorials/ai-contract-document-tutorial-20260717/">
+    <link rel="alternate" hreflang="zh-CN" href="https://www.aitoollab.top/tutorials/ai-contract-document-tutorial-20260717/">
+    <link rel="alternate" type="application/atom+xml" title="AiToollab RSS Feed" href="/feed.xml">
+    <title>AI合同审查教程 用ChatGPT审合同写法律文书</title>
+    <meta name="description" content="手把手教你用AI审查合同写法律文书。从合同风险识别到条款修改到简易法律文书撰写，每一步都有具体操作和提示词模板。实测半小时完成一份合同审查。">
+    <meta name="keywords" content="AI合同审查,AI审合同,AI法律文书,AI合同模板,AI写合同,AI法律顾问,AI合同风险,AI合同分析,AI法律教程,AI合同审核">
+    <meta name="author" content="AiToollab">
+    <meta name="robots" content="index, follow">
+    <meta name="generator" content="allowed">
+    <meta name="ai-content" content="allowed">
+    <meta property="og:title" content="AI合同审查教程 用ChatGPT审合同写法律文书">
+    <meta property="og:description" content="手把手教你用AI审查合同写法律文书。从合同风险识别到条款修改到简易法律文书撰写，每一步都有具体操作和提示词模板。实测半小时完成一份合同审查。">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.aitoollab.top/tutorials/ai-contract-document-tutorial-20260717/">
+    <meta property="og:image" content="https://www.aitoollab.top/og-ai-contract-document-tutorial-20260717.jpg">
+    <meta property="og:site_name" content="AiToollab">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="article:published_time" content="2026-07-17T12:00:00+08:00">
+    <meta property="article:modified_time" content="2026-07-17T12:00:00+08:00">
+    <meta property="article:author" content="https://github.com/AiToollab">
+    <meta property="article:tag" content="AI合同">
+    <meta property="article:tag" content="AI法律">
+    <meta property="article:tag" content="AI办公">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@AiToollab">
+    <meta name="twitter:creator" content="@AiToollab">
+    <meta name="twitter:title" content="AI合同审查教程 用ChatGPT审合同写法律文书">
+    <meta name="twitter:description" content="手把手教你用AI审查合同写法律文书。从合同风险识别到条款修改到简易法律文书撰写，每一步都有具体操作和提示词模板。实测半小时完成一份合同审查。">
+    <meta name="DC.title" content="AI合同审查教程 用ChatGPT审合同写法律文书">
+    <meta name="DC.creator" content="AiToollab">
+    <meta name="DC.subject" content="AI合同, AI法律, AI办公, 合同审查, 法律文书">
+    <meta name="DC.description" content="手把手教你用AI审查合同写法律文书。从合同风险识别到条款修改到简易法律文书撰写，每一步都有具体操作和提示词模板。实测半小时完成一份合同审查。">
+    <meta name="DC.publisher" content="AiToollab">
+    <meta name="DC.date" content="2026-07-17">
+    <meta name="DC.language" content="zh-CN">
+    <style>
+        :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff; --green: #3fb950; --purple: #a371f7; --orange: #f0883e; --gold: #f0b429; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif; background: var(--bg); color: var(--text); line-height: 1.9; font-size: 17px; }
+        a { color: var(--accent); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .header { background: linear-gradient(135deg, #0d1117 0%, #1a2035 50%, #0d1117 100%); border-bottom: 1px solid var(--border); padding: 40px 24px; text-align: center; }
+        .badge { display: inline-block; background: rgba(88,166,255,0.12); color: var(--accent); font-size: 13px; font-weight: 600; padding: 4px 14px; border-radius: 20px; margin-bottom: 16px; }
+        h1 { font-size: 28px; max-width: 680px; margin: 0 auto 12px; line-height: 1.4; }
+        .meta { color: var(--muted); font-size: 14px; margin-bottom: 16px; }
+        .tags { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; }
+        .tag { background: rgba(255,255,255,0.06); padding: 4px 12px; border-radius: 6px; font-size: 13px; color: var(--muted); }
+        article.container { max-width: 720px; margin: 40px auto; padding: 0 24px; }
+        article.container p { margin-bottom: 1.2em; }
+        article.container h2 { margin-top: 2em; margin-bottom: 0.8em; font-size: 22px; color: var(--accent); }
+        .lead { font-size: 18px; color: var(--muted); border-left: 3px solid var(--accent); padding-left: 16px; margin-bottom: 2em; }
+        .cta-box { background: linear-gradient(135deg, rgba(88,166,255,0.08) 0%, rgba(163,113,247,0.08) 100%); border: 1px solid var(--border); border-radius: 12px; padding: 32px; text-align: center; margin: 2em 0; }
+        .cta-box h3 { font-size: 20px; margin-bottom: 12px; }
+        .cta-box p { color: var(--muted); font-size: 14px; margin-bottom: 16px; }
+        .cta-btn { display: inline-block; background: linear-gradient(135deg, var(--accent), var(--purple)); color: #fff; padding: 12px 32px; border-radius: 8px; font-weight: 600; font-size: 16px; transition: opacity .2s; }
+        .cta-btn:hover { opacity: 0.9; text-decoration: none; }
+        .disclaimer { font-size: 12px; color: #475569; text-align: center; margin: 1.5em 0; }
+        footer { text-align: center; padding: 32px 24px; border-top: 1px solid var(--border); font-size: 14px; color: var(--muted); }
+        footer a { color: var(--muted); }
+    </style>
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "Article",
+            "headline": "AI合同审查教程 用ChatGPT审合同写法律文书",
+            "description": "手把手教你用AI审查合同写法律文书。从合同风险识别到条款修改到简易法律文书撰写，每一步都有具体操作和提示词模板。实测半小时完成一份合同审查。",
+            "author": {"@type": "Person", "@id": "https://www.aitoollab.top/#author", "name": "AiToollab", "url": "https://github.com/AiToollab"},
+            "datePublished": "2026-07-17T12:00:00+08:00",
+            "dateModified": "2026-07-17T12:00:00+08:00",
+            "publisher": {"@type": "Person", "name": "AiToollab"},
+            "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.aitoollab.top/tutorials/ai-contract-document-tutorial-20260717/"},
+            "wordCount": 1182,
+            "articleSection": "AI教程",
+            "keywords": ["AI合同","AI法律","AI办公","合同审查","法律文书"],
+            "image": {"@type": "ImageObject", "url": "https://www.aitoollab.top/og-ai-contract-document-tutorial-20260717.jpg"},
+            "timeRequired": "PT10M",
+            "speakable": {"@type": "SpeakableSpecification", "cssSelector": ["h1", ".lead", "h2"]}
+        },
+        {
+            "@type": "HowTo",
+            "name": "用AI审查合同写法律文书",
+            "description": "三步完成合同审查和文书起草",
+            "step": [
+                {"@type": "HowToStep", "name": "识别合同风险点", "text": "把合同文本丢给AI让它标出付款违约知识产权等关键风险条款", "url": "https://www.aitoollab.top/tutorials/ai-contract-document-tutorial-20260717/#step1"},
+                {"@type": "HowToStep", "name": "针对性修改条款", "text": "让AI用大白话解释问题条款含义并给出多个修改方案", "url": "https://www.aitoollab.top/tutorials/ai-contract-document-tutorial-20260717/#step2"},
+                {"@type": "HowToStep", "name": "起草简易法律文书", "text": "给AI足够具体的合作背景信息生成保密协议意向书等框架文书", "url": "https://www.aitoollab.top/tutorials/ai-contract-document-tutorial-20260717/#step3"}
+            ]
+        },
+        {
+            "@type": "FAQPage",
+            "mainEntity": [
+                {"@type": "Question", "name": "AI审合同靠谱吗 能替代律师吗", "acceptedAnswer": {"@type": "Answer", "text": "AI审合同适合日常合同的风险排查和条款理解，但不能完全替代律师。复杂诉讼级别的大合同建议还是找专业律师。AI最适合用来做初步筛查大幅提高审合同效率，最后的关键判断还是需要人来把关。"}},
+                {"@type": "Question", "name": "把合同文本输入AI会泄露商业机密吗", "acceptedAnswer": {"@type": "Answer", "text": "建议处理敏感合同时先脱敏。把具体公司名用甲方乙方替代，具体的金额和日期用占位符替代。ChatGPT和Claude的企业版不会用用户数据训练模型。普通商业合同脱敏后使用AI审查问题不大。"}},
+                {"@type": "Question", "name": "用AI写的法律文书有法律效力吗", "acceptedAnswer": {"@type": "Answer", "text": "AI生成的文书框架本身没有法律问题，但需要你根据具体业务情况补充专属条款并请律师审阅最终版本后才具备完整效力。AI的角色是帮你快速生成一个不错的起点，而不是替代最终的法律意见。"}}
+            ]
+        },
+        {"@type": "Person", "@id": "https://www.aitoollab.top/#author", "name": "AiToollab", "url": "https://github.com/AiToollab", "description": "AI工具实战研究者 专注于AI效率提升与自动化。"},
+        {"@type": "BreadcrumbList", "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "首页", "item": "https://www.aitoollab.top/"},
+            {"@type": "ListItem", "position": 2, "name": "教程", "item": "https://www.aitoollab.top/tutorials/"},
+            {"@type": "ListItem", "position": 3, "name": "AI合同审查教程 用ChatGPT审合同写法律文书", "item": "https://www.aitoollab.top/tutorials/ai-contract-document-tutorial-20260717/"}
+        ]},
+        {"@type": "WebSite", "name": "AiToollab", "url": "https://www.aitoollab.top/", "potentialAction": {"@type": "SearchAction", "target": "https://www.aitoollab.top/?s=AI", "query-input": "required name=search_term_string"}}
+    ]
+}
+    </script>
+    <meta name="description:en" content="Complete guide to reviewing contracts with AI. Use ChatGPT to identify risks, modify clauses, and draft legal documents." />
+    <meta property="og:description:en" content="Learn how to review contracts and draft legal documents with AI. Save hours on contract review." />
+    <meta property="og:title:en" content="AI Contract Review Tutorial: Use ChatGPT to Review Contracts and Draft Legal Documents" />
+</head>
+<body>
+    <div class="author-box" style="display:flex;align-items:center;gap:12px;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin:24px auto;font-size:14px;max-width:720px;">
+        <div style="width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#3fb950,#58a6ff);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;">⚖️</div>
+        <div>
+            <p style="font-weight:600;color:var(--text);margin:0;">AiToollab 实战导师</p>
+            <p style="color:var(--muted);margin:4px 0 0;font-size:13px;">每一种方法都经过亲手测试 不纸上谈兵</p>
+        </div>
+    </div>
+    <header class="header">
+        <div class="badge">⚖️ AI法律助手 从合同审查到文书起草</div>
+        <h1>AI合同审查教程 用ChatGPT审合同写法律文书</h1>
+        <div class="meta">2026-07-17</div>
+        <div class="tags">
+            <span class="tag">AI合同</span>
+            <span class="tag">AI法律</span>
+            <span class="tag">AI办公</span>
+        </div>
+    </header>
+    <article class="container">
+        
+<p class=lead>
+    说真的，以前我每次收到合同要审的时候都特别头大。不是我看不懂，是一份合同几十页，逐字逐句读下来你根本不知道哪些条款是坑。后来我发现用AI审合同真的方便很多，不需要自己懂法律，把合同丢进去让AI帮你标记风险点。当然最后还是要人过一遍，但效率完全不一样。我自己试了半年，从看一份合同花半天到现在半小时搞定。
+</p>
+
+<p>
+    我自己也踩过坑，一开始让AI直接给我审合同，结果AI太保守了，什么条款都说有风险，给了一堆没用的建议。后来我摸索出正确的姿势，不是让AI替你做决定，而是让AI帮你找出需要关注的地方。你想想看，一份合同那么多字，你一个人看不可能面面俱到，AI帮你把高风险条款标出来，你再针对性地去研究，这才是正确的用法。
+</p>
+
+<h2 id=step1>第一步，让AI帮你识别合同风险点</h2>
+
+<p>
+    审合同第一件事不是逐字读，而是让AI先扫一遍。把合同的全文拷给AI，告诉它这是哪类合同，你的角色是甲方还是乙方，你最关心什么。比如你是乙方肯定关心付款条款和违约责任。你是甲方可能更关心交付标准和验收条件。把这些告诉AI，它会帮你列出需要注意的关键条款，你从头看到尾自己找要花一两个小时。
+</p>
+
+<p>
+    具体做法是这样的。把合同文本贴给Claude或者ChatGPT，告诉它请帮我审查这份合同，重点看付款条件有没有坑、违约责任是否公平、知识产权归属是否清晰。AI会逐项分析并标出具体条款号和原文。你只需要对着AI标记的位置去看原文就行。差别太大了，我之前审合同全靠自己啃，现在靠AI五分钟就知道需要重点关注哪里。
+</p>
+
+<h2 id=step2>第二步，针对性修改条款</h2>
+
+<p>
+    风险点找到了，接下来怎么改。AI可以帮你做两件事。第一，解释这个条款为什么有问题。有时候法律条款的表述很绕，你读了几遍还是没理解它的实际含义。让AI用大白话给你翻译一下你就懂了。第二，给你修改建议。告诉AI你的诉求是什么，想让条款往哪个方向优化，它会给出几个修改方案，你挑一个最合适的。
+</p>
+
+<p>
+    我自己的习惯是让AI出三个版本的修改建议，一个最保守的、一个最激进的、一个折中的。然后看我实际谈判的情况选一个。你也可以让AI模拟谈判场景，假设对方提出了某个修改意见，让AI帮你分析对方为什么这么改，你应该怎么应对。这招真的特别实用，我第一次用的时候觉得太值了。以前我自己谈判常常被对方律师几句话绕进去，现在有了AI做参谋，心里有底多了。
+</p>
+
+<h2 id=step3>第三步，简易法律文书起草</h2>
+
+<p>
+    除了审合同，AI还能帮你写一些简单的法律文书。我自己用得最多的是合作框架协议、保密协议、意向书、授权书这类不太复杂的文档。复杂的大合同当然要找律师，但日常用的小文书完全可以让AI搞定。我也试过让AI写了一份简单的服务协议框架，然后拿去给律师朋友看过，他说框架没问题，只需要针对具体项目补几个条款就行。说实话，这已经帮我省了一大笔律师费，你敢信？？？
+</p>
+
+<p>
+    写法律文书的关键是给AI足够具体的背景。你是什么公司，对方是什么公司，合作范围是什么，期限多久。这些信息越具体AI写出来的东西越能用。你跟着做一遍就熟了。
+</p>
+
+<p>
+    我整理了全套的AI合同审查和文书生成提示词模板，包括合同审查模板、条款修改提示词、各类简易协议起草模板。每一条都经过实操验证，你拿来改改就能用。
+</p>
+
+<div class=cta-box>
+    <h3>🚀 我整理了AI合同审查提示词包</h3>
+    <p>包含合同审查模板、条款修改提示词、各类简易协议起草模板、谈判策略助手等。每一条都经过实操验证，你拿来改改就能用。</p>
+    <a href=/prompt-pack/ class=cta-btn>看看提示词包 →</a>
+    <p class=disclaimer>很多创业者和上班族已经在用 省时省心</p>
+</div>
+    </article>
+    <footer>
+        <p>© 2026 <a href="https://www.aitoollab.top">AiToollab</a> — 磨平一些信息差</p>
+        <p style="margin-top:8px;font-size:13px;"><a href="/">首页</a> · <a href="/tutorials/">教程</a> · <a href="/about/">关于</a></p>
+    </footer>
+</body>
+</html>
