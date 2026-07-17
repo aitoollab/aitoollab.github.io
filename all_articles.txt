@@ -111,4 +111,4 @@ tutorials/ai-writing-assistant-tutorial-20260713/
 tutorials/ai-xiaohongshu-content-tutorial-20260715/
 tutorials/chatgpt-prompt-formula-tutorial-2026/
 
-articles/news/jira-ai-agent-sdlc-side-hustle-20260716/index.html
+articles/news/jira-ai-agent-sdlc-side-hustle-20260716/index.htmlarticles/cases/ai-event-planning-service-side-hustle-20260717/
