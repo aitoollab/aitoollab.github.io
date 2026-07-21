@@ -118,3 +118,4 @@ articles/news/ai-music-video-service-side-hustle-20260717/index.html
 articles/cases/ai-image-detection-compliance-service-side-hustle-20260721/
 articles/news/claude-fable-jacobian-conjecture-advanced-analysis-side-hustle-20260721/index.html
 articles/news/chatgpt-ads-launch-side-hustle-20260722/
+articles/cases/ai-food-photography-menu-service-side-hustle-20260722/
