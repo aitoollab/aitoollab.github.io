@@ -116,3 +116,4 @@ tutorials/ai-marketing-copy-tutorial-20260717/
 tutorials/ai-contract-document-tutorial-20260717/
 articles/news/ai-music-video-service-side-hustle-20260717/index.html
 articles/cases/ai-image-detection-compliance-service-side-hustle-20260721/
+articles/news/claude-fable-jacobian-conjecture-advanced-analysis-side-hustle-20260721/index.html
