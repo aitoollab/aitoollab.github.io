@@ -115,3 +115,4 @@ tutorials/ai-work-report-tutorial-20260717/
 tutorials/ai-marketing-copy-tutorial-20260717/
 tutorials/ai-contract-document-tutorial-20260717/
 articles/news/ai-music-video-service-side-hustle-20260717/index.html
+articles/cases/ai-image-detection-compliance-service-side-hustle-20260721/
