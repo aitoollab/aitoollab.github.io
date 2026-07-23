@@ -124,3 +124,4 @@ tutorials/ai-business-plan-tutorial-20260722/
 tutorials/ai-children-story-picturebook-tutorial-20260722/
 articles/news/gemini-3-6-flash-price-cut-side-hustle-20260723/
 articles/cases/bento-interactive-presentation-service-side-hustle-20260723/index.html
+articles/news/gemini-3-6-flash-cheaper-ai-side-hustle-20260724/
