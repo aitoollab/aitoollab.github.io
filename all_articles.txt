@@ -129,3 +129,4 @@ articles/cases/ai-menu-design-redesign-service-side-hustle-20260724/index.html
 tutorials/ai-meeting-minutes-tutorial-20260724/
 tutorials/ai-knowledge-base-tutorial-20260724/
 tutorials/ai-email-writing-tutorial-20260724/
+articles/news/claude-opus-5-ai-side-hustle-20260725/index.html
