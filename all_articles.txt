@@ -126,3 +126,6 @@ articles/news/gemini-3-6-flash-price-cut-side-hustle-20260723/
 articles/cases/bento-interactive-presentation-service-side-hustle-20260723/index.html
 articles/news/gemini-3-6-flash-cheaper-ai-side-hustle-20260724/
 articles/cases/ai-menu-design-redesign-service-side-hustle-20260724/index.html
+tutorials/ai-meeting-minutes-tutorial-20260724/
+tutorials/ai-knowledge-base-tutorial-20260724/
+tutorials/ai-email-writing-tutorial-20260724/
