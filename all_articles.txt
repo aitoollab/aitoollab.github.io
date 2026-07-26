@@ -18,6 +18,7 @@ articles/cases/ai-market-research-analysis-service-side-hustle-20260712/
 articles/cases/ai-medical-bill-repricing/index.html
 articles/cases/ai-menu-design-redesign-service-side-hustle-20260724/index.html
 articles/cases/ai-nutritionist-fitness-plan-service-side-hustle-20260628/index.html
+articles/cases/ai-process-documentation-sop-service-side-hustle-20260727/index.html
 articles/cases/ai-travel-planning-service-side-hustle-20260725/index.html
 articles/cases/ai-voice-deepfake-detection-service-side-hustle-20260716/index.html
 articles/cases/autopreso-speech-to-presentation/index.html
