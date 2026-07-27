@@ -137,3 +137,4 @@ tutorials/chatgpt-prompt-formula-tutorial-2026/
 tutorials/ai-customer-service-chatbot-tutorial-20260727/
 tutorials/ai-social-media-planning-tutorial-20260727/
 tutorials/ai-competitive-analysis-tutorial-20260727/
+tutorials/ai-meal-planning-tutorial-20260727/
