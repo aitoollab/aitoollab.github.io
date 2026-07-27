@@ -138,3 +138,4 @@ tutorials/ai-customer-service-chatbot-tutorial-20260727/
 tutorials/ai-social-media-planning-tutorial-20260727/
 tutorials/ai-competitive-analysis-tutorial-20260727/
 tutorials/ai-meal-planning-tutorial-20260727/
+articles/news/feynobg-ai-background-removal-side-hustle-20260728/
