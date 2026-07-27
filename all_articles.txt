@@ -20,6 +20,7 @@ articles/cases/ai-menu-design-redesign-service-side-hustle-20260724/index.html
 articles/cases/ai-nutritionist-fitness-plan-service-side-hustle-20260628/index.html
 articles/cases/ai-process-documentation-sop-service-side-hustle-20260727/index.html
 articles/cases/ai-travel-planning-service-side-hustle-20260725/index.html
+articles/cases/ai-video-editing-service-side-hustle-20260728/index.html
 articles/cases/ai-voice-deepfake-detection-service-side-hustle-20260716/index.html
 articles/cases/autopreso-speech-to-presentation/index.html
 articles/cases/bento-interactive-presentation-service-side-hustle-20260723/index.html
@@ -58,6 +59,7 @@ articles/news/computer-use-45x-cost/index.html
 articles/news/containarium-agent-sandbox/index.html
 articles/news/deepseek-tui-terminal-coding-agent/index.html
 articles/news/deepseek-vision-model-2026/index.html
+articles/news/feynobg-ai-background-removal-side-hustle-20260728/
 articles/news/ford-ai-quality-inspection-fail-side-hustle-20260629/index.html
 articles/news/gemini-3-6-flash-cheaper-ai-side-hustle-20260724/
 articles/news/gemini-3-6-flash-price-cut-side-hustle-20260723/
@@ -111,8 +113,10 @@ tutorials/ai-audio-transcription-tutorial-20260708/
 tutorials/ai-business-plan-tutorial-20260722/
 tutorials/ai-children-story-picturebook-tutorial-20260722/
 tutorials/ai-coding-tutorial-beginners-20260713/
+tutorials/ai-competitive-analysis-tutorial-20260727/
 tutorials/ai-content-image-tutorial-20260706/
 tutorials/ai-contract-document-tutorial-20260717/
+tutorials/ai-customer-service-chatbot-tutorial-20260727/
 tutorials/ai-data-analysis-tutorial-2026/
 tutorials/ai-email-writing-tutorial-20260724/
 tutorials/ai-excel-tutorial-20260713/
@@ -122,10 +126,12 @@ tutorials/ai-knowledge-base-tutorial-20260724/
 tutorials/ai-learning-assistant-tutorial-20260710/
 tutorials/ai-logo-brand-design-tutorial-20260722/
 tutorials/ai-marketing-copy-tutorial-20260717/
+tutorials/ai-meal-planning-tutorial-20260727/
 tutorials/ai-meeting-minutes-tutorial-20260724/
 tutorials/ai-ppt-creation-tutorial-2026/
 tutorials/ai-reading-notes-tutorial-20260713/
 tutorials/ai-resume-job-hunt-tutorial-20260715/
+tutorials/ai-social-media-planning-tutorial-20260727/
 tutorials/ai-translation-tutorial-20260708/
 tutorials/ai-video-production-tutorial-20260715/
 tutorials/ai-workflow-automation-tutorial-20260710/
@@ -133,9 +139,3 @@ tutorials/ai-work-report-tutorial-20260717/
 tutorials/ai-writing-assistant-tutorial-20260713/
 tutorials/ai-xiaohongshu-content-tutorial-20260715/
 tutorials/chatgpt-prompt-formula-tutorial-2026/
-
-tutorials/ai-customer-service-chatbot-tutorial-20260727/
-tutorials/ai-social-media-planning-tutorial-20260727/
-tutorials/ai-competitive-analysis-tutorial-20260727/
-tutorials/ai-meal-planning-tutorial-20260727/
-articles/news/feynobg-ai-background-removal-side-hustle-20260728/
