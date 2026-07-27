@@ -133,3 +133,7 @@ tutorials/ai-work-report-tutorial-20260717/
 tutorials/ai-writing-assistant-tutorial-20260713/
 tutorials/ai-xiaohongshu-content-tutorial-20260715/
 tutorials/chatgpt-prompt-formula-tutorial-2026/
+
+tutorials/ai-customer-service-chatbot-tutorial-20260727/
+tutorials/ai-social-media-planning-tutorial-20260727/
+tutorials/ai-competitive-analysis-tutorial-20260727/
