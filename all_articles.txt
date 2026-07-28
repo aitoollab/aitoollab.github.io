@@ -18,6 +18,7 @@ articles/cases/ai-market-research-analysis-service-side-hustle-20260712/
 articles/cases/ai-medical-bill-repricing/index.html
 articles/cases/ai-menu-design-redesign-service-side-hustle-20260724/index.html
 articles/cases/ai-nutritionist-fitness-plan-service-side-hustle-20260628/index.html
+articles/cases/ai-pet-photography-service-side-hustle-20260729/index.html
 articles/cases/ai-process-documentation-sop-service-side-hustle-20260727/index.html
 articles/cases/ai-travel-planning-service-side-hustle-20260725/index.html
 articles/cases/ai-video-editing-service-side-hustle-20260728/index.html
@@ -77,6 +78,7 @@ articles/news/nvidia-h200-china-paradox-20260515/index.html
 articles/news/offloading-thinking-ai-side-hustle-critical-thinking-20260715/
 articles/news/openai-jalapeno-chip-cheaper-ai-side-hustle-20260628/
 articles/news/openai-malta-chatgpt-plus-free/index.html
+articles/news/oracle-layoff-21000-ai-freelance-side-hustle-20260729/index.html
 articles/news/pentagon-ai-deals/index.html
 articles/news/ps3-emulator-ai-pr-conflict/index.html
 articles/news/pytorch-lightning-malware/index.html
@@ -139,4 +141,3 @@ tutorials/ai-work-report-tutorial-20260717/
 tutorials/ai-writing-assistant-tutorial-20260713/
 tutorials/ai-xiaohongshu-content-tutorial-20260715/
 tutorials/chatgpt-prompt-formula-tutorial-2026/
-articles/news/oracle-layoff-21000-ai-freelance-side-hustle-20260729/index.html
