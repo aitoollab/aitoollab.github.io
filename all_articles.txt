@@ -139,3 +139,4 @@ tutorials/ai-work-report-tutorial-20260717/
 tutorials/ai-writing-assistant-tutorial-20260713/
 tutorials/ai-xiaohongshu-content-tutorial-20260715/
 tutorials/chatgpt-prompt-formula-tutorial-2026/
+articles/news/oracle-layoff-21000-ai-freelance-side-hustle-20260729/index.html
