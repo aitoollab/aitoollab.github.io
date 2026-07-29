@@ -1,4 +1,3 @@
-
 articles/cases/ai-academic-paper-writing-service-side-hustle-20260701/index.html
 articles/cases/ai-accessibility-app-development-service-side-hustle-20260706/index.html
 articles/cases/ai-agent-customization-service/index.html
@@ -141,3 +140,4 @@ tutorials/ai-work-report-tutorial-20260717/
 tutorials/ai-writing-assistant-tutorial-20260713/
 tutorials/ai-xiaohongshu-content-tutorial-20260715/
 tutorials/chatgpt-prompt-formula-tutorial-2026/
+articles/news/ai-data-center-electrician-side-hustle-20260730/
