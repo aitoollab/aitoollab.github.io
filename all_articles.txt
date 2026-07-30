@@ -142,3 +142,4 @@ tutorials/ai-writing-assistant-tutorial-20260713/
 tutorials/ai-xiaohongshu-content-tutorial-20260715/
 tutorials/chatgpt-prompt-formula-tutorial-2026/
 articles/news/ai-data-center-electrician-side-hustle-20260730/
+articles/news/gpt-5-6-sol-business-fail-monitoring-side-hustle-20260731/index.html
