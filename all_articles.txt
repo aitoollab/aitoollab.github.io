@@ -147,3 +147,4 @@ articles/cases/ai-customer-feedback-analysis-service-side-hustle-20260731/index.
 tutorials/ai-writing-assistant-tutorial-20260731/
 tutorials/ai-data-visualization-tutorial-20260731/
 tutorials/ai-video-script-tutorial-20260731/
+articles/news/deepseek-v4-flash-official-release-side-hustle-20260801/index.html
