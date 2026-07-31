@@ -144,3 +144,6 @@ tutorials/chatgpt-prompt-formula-tutorial-2026/
 articles/news/ai-data-center-electrician-side-hustle-20260730/
 articles/news/gpt-5-6-sol-business-fail-monitoring-side-hustle-20260731/index.html
 articles/cases/ai-customer-feedback-analysis-service-side-hustle-20260731/index.html
+tutorials/ai-writing-assistant-tutorial-20260731/
+tutorials/ai-data-visualization-tutorial-20260731/
+tutorials/ai-video-script-tutorial-20260731/
