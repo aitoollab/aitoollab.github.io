@@ -150,3 +150,4 @@ tutorials/ai-video-script-tutorial-20260731/
 articles/news/deepseek-v4-flash-official-release-side-hustle-20260801/index.html
 articles/cases/ai-recruitment-screening-service-side-hustle-20260801/index.html
 articles/cases/ai-financial-advisor-service-side-hustle-20260802/index.html
+articles/news/kimi-k3-256k-side-hustle-20260803/index.html
