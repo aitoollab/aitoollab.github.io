@@ -152,3 +152,4 @@ articles/cases/ai-recruitment-screening-service-side-hustle-20260801/index.html
 articles/cases/ai-financial-advisor-service-side-hustle-20260802/index.html
 articles/news/kimi-k3-256k-side-hustle-20260803/index.html
 articles/news/qwen3-8-max-side-hustle-20260804/index.html
+articles/cases/ai-cobol-legacy-migration-service-side-hustle-20260804/index.html
