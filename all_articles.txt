@@ -154,3 +154,4 @@ articles/news/kimi-k3-256k-side-hustle-20260803/index.html
 articles/news/qwen3-8-max-side-hustle-20260804/index.html
 articles/cases/ai-cobol-legacy-migration-service-side-hustle-20260804/index.html
 articles/news/ai-wage-drop-side-hustle-20260805/index.html
+articles/cases/ai-insurance-claim-appeal-service-side-hustle-20260805/index.html
