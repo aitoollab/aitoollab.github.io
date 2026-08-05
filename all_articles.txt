@@ -158,3 +158,4 @@ articles/cases/ai-insurance-claim-appeal-service-side-hustle-20260805/index.html
 tutorials/ai-meme-sticker-tutorial-20260805/
 tutorials/ai-speech-writing-tutorial-20260805/
 tutorials/ai-music-generation-tutorial-20260805/
+articles/news/mistral-shieldstral-content-moderation-side-hustle-20260806/index.html
