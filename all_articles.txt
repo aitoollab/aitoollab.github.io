@@ -155,3 +155,6 @@ articles/news/qwen3-8-max-side-hustle-20260804/index.html
 articles/cases/ai-cobol-legacy-migration-service-side-hustle-20260804/index.html
 articles/news/ai-wage-drop-side-hustle-20260805/index.html
 articles/cases/ai-insurance-claim-appeal-service-side-hustle-20260805/index.html
+tutorials/ai-meme-sticker-tutorial-20260805/
+tutorials/ai-speech-writing-tutorial-20260805/
+tutorials/ai-music-generation-tutorial-20260805/
