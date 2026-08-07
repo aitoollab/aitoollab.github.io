@@ -1825,6 +1825,18 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://www.aitoollab.top/tutorials/ai-photo-restoration-tutorial-20260807/</loc>
+    <lastmod>2026-08-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.aitoollab.top/tutorials/ai-podcast-creation-tutorial-20260807/</loc>
+    <lastmod>2026-08-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
     <loc>https://www.aitoollab.top/tutorials/ai-ppt-creation-tutorial-2026/</loc>
     <lastmod>2026-08-07</lastmod>
     <changefreq>weekly</changefreq>
@@ -1916,6 +1928,12 @@
   </url>
   <url>
     <loc>https://www.aitoollab.top/tutorials/ai-video-side-hustle-2026-w19/</loc>
+    <lastmod>2026-08-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.aitoollab.top/tutorials/ai-voiceover-tutorial-20260807/</loc>
     <lastmod>2026-08-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -2046,22 +2064,4 @@
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-    <url>
-        <loc>https://www.aitoollab.top/tutorials/ai-voiceover-tutorial-20260807/</loc>
-        <lastmod>2026-08-07</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.aitoollab.top/tutorials/ai-photo-restoration-tutorial-20260807/</loc>
-        <lastmod>2026-08-07</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.aitoollab.top/tutorials/ai-podcast-creation-tutorial-20260807/</loc>
-        <lastmod>2026-08-07</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
 </urlset>
