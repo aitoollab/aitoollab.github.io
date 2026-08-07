@@ -161,3 +161,6 @@ tutorials/ai-music-generation-tutorial-20260805/
 articles/news/mistral-shieldstral-content-moderation-side-hustle-20260806/index.html
 articles/cases/ai-review-response-service-side-hustle-20260806/index.html
 articles/cases/ai-study-abroad-essay-service-side-hustle-20260807/index.html
+tutorials/ai-voiceover-tutorial-20260807/
+tutorials/ai-photo-restoration-tutorial-20260807/
+tutorials/ai-podcast-creation-tutorial-20260807/
