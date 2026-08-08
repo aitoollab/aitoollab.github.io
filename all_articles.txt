@@ -167,3 +167,4 @@ tutorials/ai-podcast-creation-tutorial-20260807/
 qwen-image-3-pro-text-rendering-side-hustle-20260808
 articles/cases/ai-personalized-storybook-service-side-hustle-20260808/
 articles/news/gpt-5-6-luna-free-side-hustle-20260809/
+articles/cases/ai-civil-service-exam-coaching-service-side-hustle-20260809/index.html
