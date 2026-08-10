@@ -169,3 +169,7 @@ articles/cases/ai-personalized-storybook-service-side-hustle-20260808/
 articles/news/gpt-5-6-luna-free-side-hustle-20260809/
 articles/cases/ai-civil-service-exam-coaching-service-side-hustle-20260809/index.html
 articles/cases/ai-interactive-simulation-courseware-side-hustle-20260810/index.html
+tutorials/ai-home-design-tutorial-20260810/
+tutorials/ai-pet-photography-tutorial-20260810/
+tutorials/ai-travel-planning-tutorial-20260810/
+tutorials/ai-wedding-planning-tutorial-20260810/
