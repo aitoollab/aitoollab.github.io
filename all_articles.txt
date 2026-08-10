@@ -173,3 +173,4 @@ tutorials/ai-home-design-tutorial-20260810/
 tutorials/ai-pet-photography-tutorial-20260810/
 tutorials/ai-travel-planning-tutorial-20260810/
 tutorials/ai-wedding-planning-tutorial-20260810/
+articles/news/claude-ai-content-watermark-side-hustle-20260811/index.html
