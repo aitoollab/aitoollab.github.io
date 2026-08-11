@@ -175,3 +175,4 @@ tutorials/ai-travel-planning-tutorial-20260810/
 tutorials/ai-wedding-planning-tutorial-20260810/
 articles/news/claude-ai-content-watermark-side-hustle-20260811/index.html
 articles/cases/ai-tattoo-design-service-side-hustle-20260811/index.html
+articles/news/needle2-edge-ai-side-hustle-20260812/index.html
