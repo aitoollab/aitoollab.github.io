@@ -2148,4 +2148,10 @@
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+    <url>
+        <loc>https://www.aitoollab.top/tutorials/ai-id-photo-tutorial-20260812/</loc>
+        <lastmod>2026-08-11</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
 </urlset>
