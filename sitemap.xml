@@ -1807,6 +1807,12 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://www.aitoollab.top/tutorials/ai-fitness-plan-tutorial-20260812/</loc>
+    <lastmod>2026-08-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
     <loc>https://www.aitoollab.top/tutorials/ai-flowchart-mindmap-tutorial-20260708/</loc>
     <lastmod>2026-08-12</lastmod>
     <changefreq>weekly</changefreq>
@@ -1819,7 +1825,19 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://www.aitoollab.top/tutorials/ai-id-photo-tutorial-20260812/</loc>
+    <lastmod>2026-08-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
     <loc>https://www.aitoollab.top/tutorials/ai-image-editing-tutorial-20260710/</loc>
+    <lastmod>2026-08-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.aitoollab.top/tutorials/ai-interview-practice-tutorial-20260812/</loc>
     <lastmod>2026-08-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -2148,22 +2166,4 @@
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-    <url>
-        <loc>https://www.aitoollab.top/tutorials/ai-id-photo-tutorial-20260812/</loc>
-        <lastmod>2026-08-11</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.aitoollab.top/tutorials/ai-interview-practice-tutorial-20260812/</loc>
-        <lastmod>2026-08-11</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.aitoollab.top/tutorials/ai-fitness-plan-tutorial-20260812/</loc>
-        <lastmod>2026-08-11</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
 </urlset>
