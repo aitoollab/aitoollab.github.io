@@ -1,0 +1,54 @@
+/*
+  Cache-Control: public, max-age=3600
+  X-Content-Type-Options: nosniff
+
+/tutorials/*
+  Cache-Control: public, max-age=3600
+
+/articles/*
+  Cache-Control: public, max-age=3600
+
+/prompt-pack/*
+  Cache-Control: public, max-age=3600
+
+/*.css
+  Cache-Control: public, max-age=86400, immutable
+
+/*.js
+  Cache-Control: public, max-age=86400, immutable
+
+/*.jpg
+  Cache-Control: public, max-age=86400, immutable
+
+/*.jpeg
+  Cache-Control: public, max-age=86400, immutable
+
+/*.png
+  Cache-Control: public, max-age=86400, immutable
+
+/*.webp
+  Cache-Control: public, max-age=86400, immutable
+
+/*.svg
+  Cache-Control: public, max-age=86400, immutable
+
+/*.ico
+  Cache-Control: public, max-age=86400, immutable
+
+/*.txt
+  Cache-Control: public, max-age=86400, immutable
+
+/sitemap.xml
+  Cache-Control: public, max-age=3600
+
+/sitemap-index.xml
+  Cache-Control: public, max-age=3600
+
+/feed.xml
+  Cache-Control: public, max-age=3600
+
+/robots.txt
+  Cache-Control: public, max-age=86400
+
+/llms.txt
+  Cache-Control: public, max-age=86400
