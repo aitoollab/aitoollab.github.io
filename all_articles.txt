@@ -177,3 +177,6 @@ articles/news/claude-ai-content-watermark-side-hustle-20260811/index.html
 articles/cases/ai-tattoo-design-service-side-hustle-20260811/index.html
 articles/news/needle2-edge-ai-side-hustle-20260812/index.html
 articles/cases/ai-voice-mystery-game-service-side-hustle-20260812/index.html
+tutorials/ai-id-photo-tutorial-20260812/
+tutorials/ai-interview-practice-tutorial-20260812/
+tutorials/ai-fitness-plan-tutorial-20260812/
