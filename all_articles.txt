@@ -184,3 +184,6 @@ articles/news/grok-4-6-release-agent-side-hustle-20260813/index.html
 articles/cases/ai-english-speaking-tutor-service-side-hustle-20260813/index.html
 articles/news/deepseek-v4-pro-peak-off-peak-pricing-side-hustle-20260814/index.html
 articles/cases/ai-used-car-inspection-service-side-hustle-20260814/index.html
+tutorials/ai-baby-naming-tutorial-20260814/
+tutorials/ai-outfit-style-tutorial-20260814/
+tutorials/ai-homework-help-tutorial-20260814/
