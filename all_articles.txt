@@ -187,3 +187,4 @@ articles/cases/ai-used-car-inspection-service-side-hustle-20260814/index.html
 tutorials/ai-baby-naming-tutorial-20260814/
 tutorials/ai-outfit-style-tutorial-20260814/
 tutorials/ai-homework-help-tutorial-20260814/
+articles/cases/ai-elderly-home-care-service-side-hustle-20260815/
