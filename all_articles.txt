@@ -190,3 +190,4 @@ tutorials/ai-homework-help-tutorial-20260814/
 articles/cases/ai-elderly-home-care-service-side-hustle-20260815/
 articles/news/deepseek-harness-open-source-side-hustle-20260816/index.html
 articles/cases/ai-vulnerability-discovery-service-side-hustle-20260816/
+articles/cases/ai-tarot-reading-service-side-hustle-20260817/index.html
