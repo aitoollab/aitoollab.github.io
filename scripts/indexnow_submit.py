@@ -23,12 +23,14 @@ def get_urls():
     for candidate in [os.path.join(repo, "sitemap.xml")]:
         if os.path.exists(candidate):
             with open(candidate) as f:
-                return re.findall(r"<loc>(.*?)</loc>", f.read())[:500]
+                urls = re.findall(r"<loc>(.*?)</loc>", f.read())
+                # IndexNow 限制：每次最多提交 50 个（最新URL通常在sitemap末尾）
+                return urls[-50:]
     # 回退：远程 sitemap
     try:
         with urllib.request.urlopen(f"https://{HOST}/sitemap.xml", timeout=30) as r:
             xml = r.read().decode("utf-8")
-        return re.findall(r"<loc>(.*?)</loc>", xml)[:500]
+        return re.findall(r"<loc>(.*?)</loc>", xml)[-50:]
     except Exception as e:
         print(f"[ERR] 读取sitemap失败: {e}")
         return []
@@ -38,20 +40,28 @@ def submit(urls):
     if not urls:
         print("[SKIP] 无URL可提交")
         return
-    payload = json.dumps({
-        "host": HOST,
-        "key": KEY,
-        "keyLocation": KEY_LOCATION,
-        "urlList": urls,
-    }).encode("utf-8")
-    req = urllib.request.Request(API, data=payload, headers={"Content-Type": "application/json; charset=utf-8"})
-    try:
-        with urllib.request.urlopen(req, timeout=30) as r:
-            print(f"[OK] IndexNow {r.status}: 提交 {len(urls)} 个URL")
-            return True
-    except urllib.error.HTTPError as e:
-        print(f"[ERR] IndexNow {e.code}: {e.read().decode()[:200]}")
-        return False
+    # IndexNow 单次提交限制：分批，每批≤25个
+    batch_size = 25
+    ok, fail = 0, 0
+    for i in range(0, len(urls), batch_size):
+        batch = urls[i:i+batch_size]
+        payload = json.dumps({
+            "host": HOST,
+            "key": KEY,
+            "keyLocation": KEY_LOCATION,
+            "urlList": batch,
+        }).encode("utf-8")
+        req = urllib.request.Request(API, data=payload, headers={"Content-Type": "application/json; charset=utf-8"})
+        try:
+            with urllib.request.urlopen(req, timeout=30) as r:
+                ok += len(batch)
+        except urllib.error.HTTPError as e:
+            fail += len(batch)
+            body = e.read().decode()[:100]
+            if fail and i == 0:
+                print(f"[ERR] IndexNow {e.code}: {body}")
+    print(f"[OK] IndexNow: 提交 {ok} 个URL成功, {fail} 个失败")
+    return ok > 0
 
 
 if __name__ == "__main__":
