@@ -344,6 +344,19 @@ def sync_all(commit_msg=None):
     msg = commit_msg or f"feat: 全量同步 - {today}"
     os.system(f'git add . && git commit -m "{msg}" && git push')
     
+    # 5. IndexNow 通知搜索引擎收录（推送后，sitemap 已含最新 URL）
+    try:
+        import subprocess
+        r = subprocess.run([sys.executable, os.path.join(REPO_DIR, "scripts", "indexnow_submit.py")],
+                           capture_output=True, text=True, timeout=60)
+        out = (r.stdout + r.stderr).strip()
+        if r.returncode == 0 and "[OK]" in out:
+            updated.append("indexnow: ✅ 已通知搜索引擎")
+        else:
+            updated.append(f"indexnow: ⚠️ {out.splitlines()[-1][:60] if out else '失败'}")
+    except Exception as e:
+        updated.append(f"indexnow: ⚠️ {e}")
+    
     print(f"✅ 全量同步完成: {today}")
     for u in updated:
         print(f"   • {u}")
