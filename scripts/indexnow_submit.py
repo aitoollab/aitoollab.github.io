@@ -24,13 +24,13 @@ def get_urls():
         if os.path.exists(candidate):
             with open(candidate) as f:
                 urls = re.findall(r"<loc>(.*?)</loc>", f.read())
-                # IndexNow 定位：新文章即时通知。默认只提交最新 5 个URL（风控友好）
-                return urls[-5:]
+                # IndexNow 定位：新文章即时通知。每次只提交最新 2 个URL（少推送，防风控）
+                return urls[-2:]
     # 回退：远程 sitemap
     try:
         with urllib.request.urlopen(f"https://{HOST}/sitemap.xml", timeout=30) as r:
             xml = r.read().decode("utf-8")
-        return re.findall(r"<loc>(.*?)</loc>", xml)[-5:]
+        return re.findall(r"<loc>(.*?)</loc>", xml)[-2:]
     except Exception as e:
         print(f"[ERR] 读取sitemap失败: {e}")
         return []
