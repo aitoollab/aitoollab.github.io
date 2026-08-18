@@ -8,8 +8,7 @@
 import json, sys, urllib.request, urllib.error
 
 HOST = "www.aitoollab.top"
-KEYS = ["b6a56baf28a44512b2d37748f5d6f3e4", "4a7cdecf71d74733a36e72e2fd034608"]
-KEY = KEYS[0]  # 默认用第一个，失败时轮换
+KEY = "4a7cdecf71d74733a36e72e2fd034608"
 KEY_LOCATION = f"https://{HOST}/{KEY}.txt"
 API = "https://api.indexnow.org/IndexNow"
 
@@ -46,31 +45,21 @@ def submit(urls):
     ok, fail = 0, 0
     for i in range(0, len(urls), batch_size):
         batch = urls[i:i+batch_size]
-        success = False
-        # 多 key 轮换：一个失败换下一个
-        for key in KEYS:
-            key_loc = f"https://{HOST}/{key}.txt"
-            payload = json.dumps({
-                "host": HOST,
-                "key": key,
-                "keyLocation": key_loc,
-                "urlList": batch,
-            }).encode("utf-8")
-            req = urllib.request.Request(API, data=payload, headers={"Content-Type": "application/json; charset=utf-8"})
-            try:
-                with urllib.request.urlopen(req, timeout=30) as r:
-                    ok += len(batch)
-                    success = True
-                    break
-            except urllib.error.HTTPError as e:
-                body = e.read().decode()[:100]
-                if e.code == 403 and "UserForbidded" in body:
-                    continue  # 换下一个 key
-                fail += len(batch)
-                print(f"[ERR] IndexNow {e.code}: {body}")
-                break
-        if not success and fail == 0:
+        payload = json.dumps({
+            "host": HOST,
+            "key": KEY,
+            "keyLocation": KEY_LOCATION,
+            "urlList": batch,
+        }).encode("utf-8")
+        req = urllib.request.Request(API, data=payload, headers={"Content-Type": "application/json; charset=utf-8"})
+        try:
+            with urllib.request.urlopen(req, timeout=30) as r:
+                ok += len(batch)
+        except urllib.error.HTTPError as e:
             fail += len(batch)
+            body = e.read().decode()[:100]
+            if fail and i == 0:
+                print(f"[ERR] IndexNow {e.code}: {body}")
     print(f"[OK] IndexNow: 提交 {ok} 个URL成功, {fail} 个失败")
     return ok > 0
 

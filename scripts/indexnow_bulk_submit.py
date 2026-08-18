@@ -5,7 +5,7 @@
 import json, sys, time, urllib.request, urllib.error
 
 HOST = "www.aitoollab.top"
-KEY = "b6a56baf28a44512b2d37748f5d6f3e4"
+KEY = "4a7cdecf71d74733a36e72e2fd034608"
 KEY_LOCATION = f"https://{HOST}/{KEY}.txt"
 API = "https://api.indexnow.org/IndexNow"
 BATCH = 25
