@@ -2011,6 +2011,12 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://www.aitoollab.top/tutorials/ai-memory-system-tutorial-20260819/</loc>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
     <loc>https://www.aitoollab.top/tutorials/ai-money-management-tutorial-20260817/</loc>
     <lastmod>2026-08-19</lastmod>
     <changefreq>weekly</changefreq>
@@ -2084,6 +2090,12 @@
   </url>
   <url>
     <loc>https://www.aitoollab.top/tutorials/ai-short-video-analysis-tutorial-20260729/</loc>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.aitoollab.top/tutorials/ai-short-video-sales-tutorial-20260819/</loc>
     <lastmod>2026-08-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -2221,6 +2233,12 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://www.aitoollab.top/tutorials/chatgpt-gongwen-writing-tutorial-20260819/</loc>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
     <loc>https://www.aitoollab.top/tutorials/chatgpt-prompt-formula-tutorial-2026/</loc>
     <lastmod>2026-08-19</lastmod>
     <changefreq>weekly</changefreq>
@@ -2304,22 +2322,4 @@
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-    <url>
-        <loc>https://www.aitoollab.top/tutorials/chatgpt-gongwen-writing-tutorial-20260819/</loc>
-        <lastmod>2026-08-18</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.aitoollab.top/tutorials/ai-memory-system-tutorial-20260819/</loc>
-        <lastmod>2026-08-18</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.aitoollab.top/tutorials/ai-short-video-sales-tutorial-20260819/</loc>
-        <lastmod>2026-08-18</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
 </urlset>
