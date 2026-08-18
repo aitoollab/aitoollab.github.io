@@ -2304,4 +2304,10 @@
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+    <url>
+        <loc>https://www.aitoollab.top/tutorials/chatgpt-gongwen-writing-tutorial-20260819/</loc>
+        <lastmod>2026-08-18</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
 </urlset>
