@@ -198,3 +198,6 @@ articles/news/gpt-5-6-sol-vision-side-hustle-20260818/index.html
 tutorials/ai-live-selling-copy-tutorial-20260818/
 articles/news/cursor-origin-code-hosting-side-hustle-20260819/index.html
 articles/cases/ai-gongwen-writing-service-side-hustle-20260819/index.html
+tutorials/chatgpt-gongwen-writing-tutorial-20260819/
+tutorials/ai-memory-system-tutorial-20260819/
+tutorials/ai-short-video-sales-tutorial-20260819/
