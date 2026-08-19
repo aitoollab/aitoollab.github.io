@@ -201,3 +201,4 @@ articles/cases/ai-gongwen-writing-service-side-hustle-20260819/index.html
 tutorials/chatgpt-gongwen-writing-tutorial-20260819/
 tutorials/ai-memory-system-tutorial-20260819/
 tutorials/ai-short-video-sales-tutorial-20260819/
+articles/news/mistral-ocr-4-1-handwriting-digitization-side-hustle-20260820/index.html
