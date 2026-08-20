@@ -203,3 +203,4 @@ tutorials/ai-memory-system-tutorial-20260819/
 tutorials/ai-short-video-sales-tutorial-20260819/
 articles/news/mistral-ocr-4-1-handwriting-digitization-side-hustle-20260820/index.html
 articles/cases/ai-mascot-logo-design-service-side-hustle-20260820/index.html
+articles/cases/ai-coding-chat-history-extraction-service-side-hustle-20260821/index.html
