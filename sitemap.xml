@@ -1903,6 +1903,12 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://www.aitoollab.top/tutorials/ai-efficiency-tools-side-hustle-tutorial-20260821/</loc>
+    <lastmod>2026-08-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
     <loc>https://www.aitoollab.top/tutorials/ai-email-writing-tutorial-20260724/</loc>
     <lastmod>2026-08-21</lastmod>
     <changefreq>weekly</changefreq>
@@ -2041,6 +2047,12 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://www.aitoollab.top/tutorials/ai-money-overview-tutorial-20260821/</loc>
+    <lastmod>2026-08-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
     <loc>https://www.aitoollab.top/tutorials/ai-music-generation-tutorial-20260805/</loc>
     <lastmod>2026-08-21</lastmod>
     <changefreq>weekly</changefreq>
@@ -2096,6 +2108,12 @@
   </url>
   <url>
     <loc>https://www.aitoollab.top/tutorials/ai-resume-job-hunt-tutorial-20260715/</loc>
+    <lastmod>2026-08-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.aitoollab.top/tutorials/ai-resume-prompts-advanced-tutorial-20260821/</loc>
     <lastmod>2026-08-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -2340,22 +2358,4 @@
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-    <url>
-        <loc>https://www.aitoollab.top/tutorials/ai-money-overview-tutorial-20260821/</loc>
-        <lastmod>2026-08-20</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.aitoollab.top/tutorials/ai-efficiency-tools-side-hustle-tutorial-20260821/</loc>
-        <lastmod>2026-08-20</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.aitoollab.top/tutorials/ai-resume-prompts-advanced-tutorial-20260821/</loc>
-        <lastmod>2026-08-20</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
 </urlset>
