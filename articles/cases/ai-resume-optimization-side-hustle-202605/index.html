@@ -215,6 +215,70 @@
 
         <p>今天就完整拆一下这个事。</p>
 
+        <!-- 交互式简历优化提示词生成工具组件 -->
+        <div class="interactive-tool-card" style="background: #f8fafc; border: 2px solid #e2e8f0; border-radius: 12px; padding: 24px; margin: 30px 0; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);">
+            <div style="display: flex; align-items: center; margin-bottom: 16px;">
+                <span style="background: #2563eb; color: white; padding: 4px 8px; border-radius: 4px; font-size: 12px; font-weight: bold; margin-right: 8px;">免安装即用</span>
+                <h3 style="margin: 0; font-size: 18px; color: #1e293b;">⚡ 简历优化接单级提示词即时生成器</h3>
+            </div>
+            <p style="font-size: 14px; color: #64748b; margin-bottom: 16px;">无需复杂配置，选择求职者背景与目标岗位，一键组装闲鱼接单同款的简历优化提示词：</p>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 16px;">
+                <div>
+                    <label style="display: block; font-size: 13px; font-weight: 600; color: #334155; margin-bottom: 6px;">求职者背景</label>
+                    <select id="rs-type" style="width: 100%; padding: 8px 12px; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 14px; background: #fff;">
+                        <option value="应届毕业生（经历少，需挖掘实习和项目亮点）">应届毕业生</option>
+                        <option value="3-5年职场人（经历杂，需聚焦主线和量化成果）">3-5年职场人</option>
+                        <option value="转行求职者（需重写经历相关性，弥合技能断层）">转行求职者</option>
+                        <option value="管理层求职者（需突出战略视角和团队成果）">管理层求职者</option>
+                    </select>
+                </div>
+                <div>
+                    <label style="display: block; font-size: 13px; font-weight: 600; color: #334155; margin-bottom: 6px;">目标岗位方向</label>
+                    <select id="rs-tone" style="width: 100%; padding: 8px 12px; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 14px; background: #fff;">
+                        <option value="互联网运营/产品（重数据增长和项目结果）">互联网运营/产品</option>
+                        <option value="技术/研发（重技术栈深度和项目复杂度）">技术/研发</option>
+                        <option value="市场/销售（重业绩数字和客户案例）">市场/销售</option>
+                        <option value="职能岗（行政/人力/财务，重流程规范和细致度）">职能岗（行政/人力/财务）</option>
+                    </select>
+                </div>
+            </div>
+            <div style="margin-bottom: 16px;">
+                <label style="display: block; font-size: 13px; font-weight: 600; color: #334155; margin-bottom: 6px;">目标公司/JD关键要求（选填）</label>
+                <input type="text" id="rs-context" placeholder="例如：某大厂用户运营岗，要求3年经验、擅长社群和数据分析" style="width: 100%; padding: 8px 12px; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 14px; box-sizing: border-box; background: #fff;">
+            </div>
+            <button id="rs-gen-btn" onclick="generateRsPrompt()" style="width: 100%; background: #2563eb; color: white; border: none; padding: 10px 16px; border-radius: 6px; font-size: 15px; font-weight: 600; cursor: pointer; transition: background 0.2s;">一键生成专属 Prompt</button>
+            <div id="rs-result-box" style="display: none; margin-top: 16px; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 14px;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                    <span style="font-size: 12px; font-weight: bold; color: #059669;">✔ 已按HR筛选标准优化完成</span>
+                    <button onclick="copyRsPrompt()" id="rs-copy-btn" style="background: #e2e8f0; border: none; padding: 4px 8px; border-radius: 4px; font-size: 12px; cursor: pointer;">复制提示词</button>
+                </div>
+                <textarea id="rs-prompt-output" readonly style="width: 100%; height: 110px; border: none; background: #f8fafc; font-family: monospace; font-size: 13px; color: #334155; padding: 8px; border-radius: 4px; box-sizing: border-box; resize: vertical;"></textarea>
+                <div style="margin-top: 10px; font-size: 12px; color: #64748b; border-top: 1px dashed #e2e8f0; padding-top: 8px; display: flex; justify-content: space-between; align-items: center;">
+                    <span>💡 需更多专属场景与避坑指南？</span>
+                    <a href="/prompt-pack/" style="color: #2563eb; font-weight: bold; text-decoration: none;">获取完整版 300+ 专属提示词库 →</a>
+                </div>
+            </div>
+        </div>
+        <script>
+            function generateRsPrompt() {
+                var type = document.getElementById('rs-type').value;
+                var tone = document.getElementById('rs-tone').value;
+                var ctx = document.getElementById('rs-context').value || '目标岗位的通用JD要求';
+                var res = '你是一位在头部公司做HR的资深简历筛选官，看过上万份简历。请帮我优化以下【' + type + '】的简历，目标岗位是【' + tone + '】。\\\\n\\\\n【目标岗位要求】：' + ctx + '\\\\n\\\\n【优化要求】：\\\\n1. 用STAR法则重写每段工作/实习经历，每条bullet point必须有量化结果；\\\\n2. 对照JD提炼关键词，重排模块顺序，让最匹配的经历出现在第一屏；\\\\n3. 删掉「负责」「协助」这类流水账表述，换成动作+结果的开头；\\\\n4. 保留原有事实，严禁编造经历和数据。\\\\n【输出格式】：先给优化后简历全文，再附3条面试官视角的修改说明。';
+                document.getElementById('rs-prompt-output').value = res;
+                document.getElementById('rs-result-box').style.display = 'block';
+            }
+            function copyRsPrompt() {
+                var copyText = document.getElementById('rs-prompt-output');
+                copyText.select();
+                copyText.setSelectionRange(0, 99999);
+                navigator.clipboard.writeText(copyText.value);
+                var btn = document.getElementById('rs-copy-btn');
+                btn.innerText = '已复制!';
+                setTimeout(function(){ btn.innerText = '复制提示词'; }, 2000);
+            }
+        </script>
+
         <h2>为什么AI简历优化能赚钱</h2>
 
         <p>你想想看，每年有多少人在找工作？光是2026届高校毕业生就超过1200万。这还不算社招跳槽的、转行的、考完研出来找工作的。这些人里头，至少有六成以上的人简历写得一塌糊涂。</p>
