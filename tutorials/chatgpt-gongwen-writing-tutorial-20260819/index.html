@@ -146,6 +146,69 @@
             上个月老同学半夜发微信，说年终总结写到凌晨一点，改了三遍领导还嫌不接地气。我让他把原稿丢给ChatGPT，按我给的提示词改了一遍。说实话，第二天他跟我说，领导看完就俩字，可以了。你敢信？？？后来他把这套方法用在各种材料上，写材料这事，再没熬过夜。
         </p>
 
+        <!-- 交互式公文提示词生成工具组件 -->
+        <div class="interactive-tool-card" style="background: #f8fafc; border: 2px solid #e2e8f0; border-radius: 12px; padding: 24px; margin: 30px 0; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);">
+            <div style="display: flex; align-items: center; margin-bottom: 16px;">
+                <span style="background: #2563eb; color: white; padding: 4px 8px; border-radius: 4px; font-size: 12px; font-weight: bold; margin-right: 8px;">免安装即用</span>
+                <h3 style="margin: 0; font-size: 18px; color: #1e293b;">⚡ 公文专属高过审提示词即时生成器</h3>
+            </div>
+            <p style="font-size: 14px; color: #64748b; margin-bottom: 16px;">无需复杂配置，选择你的公文类型与核心需求，一键组装符合体制内/职场规范的顶级提示词：</p>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 16px;">
+                <div>
+                    <label style="display: block; font-size: 13px; font-weight: 600; color: #334155; margin-bottom: 6px;">公文类型</label>
+                    <select id="gw-type" style="width: 100%; padding: 8px 12px; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 14px; background: #fff;">
+                        <option value="工作总结/述职报告">工作总结 / 述职报告</option>
+                        <option value="请示/汇报材料">请示 / 汇报材料</option>
+                        <option value="会议纪要/通报">会议纪要 / 通知通报</option>
+                        <option value="项目申报/实施方案">项目申报 / 实施方案</option>
+                    </select>
+                </div>
+                <div>
+                    <label style="display: block; font-size: 13px; font-weight: 600; color: #334155; margin-bottom: 6px;">文风与基调</label>
+                    <select id="gw-tone" style="width: 100%; padding: 8px 12px; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 14px; background: #fff;">
+                        <option value="体制内稳重、站位高、结构严谨">体制内稳重（高站位、重成效）</option>
+                        <option value="务实接地气、数据详实、逻辑闭环">企业汇报（重数据、讲结果）</option>
+                        <option value="精炼通俗、重点突出、易执行">通知通报（短平快、强执行）</option>
+                    </select>
+                </div>
+            </div>
+            <div style="margin-bottom: 16px;">
+                <label style="display: block; font-size: 13px; font-weight: 600; color: #334155; margin-bottom: 6px;">核心工作背景/诉求要点（选填）</label>
+                <input type="text" id="gw-context" placeholder="例如：本季度推进了3个项目，完成了80%指标，需协调下阶段预算" style="width: 100%; padding: 8px 12px; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 14px; box-sizing: border-box; background: #fff;">
+            </div>
+            <button id="gw-gen-btn" onclick="generateGwPrompt()" style="width: 100%; background: #2563eb; color: white; border: none; padding: 10px 16px; border-radius: 6px; font-size: 15px; font-weight: 600; cursor: pointer; transition: background 0.2s;">一键生成专属 Prompt</button>
+            <div id="gw-result-box" style="display: none; margin-top: 16px; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 14px;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                    <span style="font-size: 12px; font-weight: bold; color: #059669;">✔ 已针对过审标准优化完成</span>
+                    <button onclick="copyGwPrompt()" id="gw-copy-btn" style="background: #e2e8f0; border: none; padding: 4px 8px; border-radius: 4px; font-size: 12px; cursor: pointer;">复制提示词</button>
+                </div>
+                <textarea id="gw-prompt-output" readonly style="width: 100%; height: 110px; border: none; background: #f8fafc; font-family: monospace; font-size: 13px; color: #334155; padding: 8px; border-radius: 4px; box-sizing: border-box; resize: vertical;"></textarea>
+                <div style="margin-top: 10px; font-size: 12px; color: #64748b; border-top: 1px dashed #e2e8f0; padding-top: 8px; display: flex; justify-content: space-between; align-items: center;">
+                    <span>💡 需更多专属场景与避坑指南？</span>
+                    <a href="/prompt-pack/" style="color: #2563eb; font-weight: bold; text-decoration: none;">获取完整版 300+ 专属提示词库 →</a>
+                </div>
+            </div>
+        </div>
+        <script>
+            function generateGwPrompt() {
+                var type = document.getElementById('gw-type').value;
+                var tone = document.getElementById('gw-tone').value;
+                var ctx = document.getElementById('gw-context').value || '完成阶段性业务推进与关键指标落地';
+                var res = '你是一名拥有15年经验的体制内办公室资深笔杆子兼公文材料专家。请帮我起草一份标准的【' + type + '】。\\n\\n【写作基调与原则】：' + tone + '，严禁空洞套话，严禁AI味明显的排比滥用。\\n【核心背景与诉求】：' + ctx + '\\n\\n【输出规范】：\\n1. 严格符合公文规范的标题、小标题架构（一级标题、二级小标题）；\\n2. 按“现状/成效 - 问题/瓶颈 - 下步举措”逻辑展开，成效部分必须留出量化数据坑位；\\n3. 语言精炼得体，符合上级审核习惯。';
+                document.getElementById('gw-prompt-output').value = res;
+                document.getElementById('gw-result-box').style.display = 'block';
+            }
+            function copyGwPrompt() {
+                var copyText = document.getElementById('gw-prompt-output');
+                copyText.select();
+                copyText.setSelectionRange(0, 99999);
+                navigator.clipboard.writeText(copyText.value);
+                var btn = document.getElementById('gw-copy-btn');
+                btn.innerText = '已复制!';
+                setTimeout(function(){ btn.innerText = '复制提示词'; }, 2000);
+            }
+        </script>
+
         <h2 id="way1">第一步，先让AI知道你要写的是哪种公文</h2>
 
         <p>
