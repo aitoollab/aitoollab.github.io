@@ -141,6 +141,69 @@
             前两天刷抖音，刷到一个卖零食的账号，一条视频就是一个数字人在介绍产品，声音、画面全是大模型生成的，播放量二十多万。当时我就想，这玩意儿普通人能复制吗？说真的，我花三天，从选品到出片完整跑了一遍，还真跑通了，你敢信？？？今天这篇把整个流程拆给你看。
         </p>
 
+        <!-- 交互式带货脚本提示词生成工具组件 -->
+        <div class="interactive-tool-card" style="background: #f8fafc; border: 2px solid #e2e8f0; border-radius: 12px; padding: 24px; margin: 30px 0; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);">
+            <div style="display: flex; align-items: center; margin-bottom: 16px;">
+                <span style="background: #2563eb; color: white; padding: 4px 8px; border-radius: 4px; font-size: 12px; font-weight: bold; margin-right: 8px;">免安装即用</span>
+                <h3 style="margin: 0; font-size: 18px; color: #1e293b;">⚡ 高转化带货短视频脚本提示词即时生成器</h3>
+            </div>
+            <p style="font-size: 14px; color: #64748b; margin-bottom: 16px;">无需复杂配置，选择你的产品品类与带货平台，一键组装高完播、高点击的带货脚本提示词：</p>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 16px;">
+                <div>
+                    <label style="display: block; font-size: 13px; font-weight: 600; color: #334155; margin-bottom: 6px;">产品品类</label>
+                    <select id="sv-type" style="width: 100%; padding: 8px 12px; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 14px; background: #fff;">
+                        <option value="零食饮料（冲动消费型，主打性价比和口感）">零食饮料</option>
+                        <option value="家居好物（解决生活痛点型，主打实用省事）">家居好物</option>
+                        <option value="图书文具（知识焦虑型，主打好用不贵）">图书文具</option>
+                        <option value="美妆个护（效果对比型，主打前后变化）">美妆个护</option>
+                    </select>
+                </div>
+                <div>
+                    <label style="display: block; font-size: 13px; font-weight: 600; color: #334155; margin-bottom: 6px;">带货平台</label>
+                    <select id="sv-tone" style="width: 100%; padding: 8px 12px; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 14px; background: #fff;">
+                        <option value="抖音快节奏、强钩子、口语化喊话式表达">抖音（快节奏强钩子）</option>
+                        <option value="小红书种草感、真诚分享语气、场景化描述">小红书（种草分享）</option>
+                        <option value="视频号中年用户友好、稳重可信、痛点直给">视频号（中年用户）</option>
+                    </select>
+                </div>
+            </div>
+            <div style="margin-bottom: 16px;">
+                <label style="display: block; font-size: 13px; font-weight: 600; color: #334155; margin-bottom: 6px;">产品名称与核心卖点（选填）</label>
+                <input type="text" id="sv-context" placeholder="例如：一款免手洗拖把，核心卖点30秒甩干、不脏手" style="width: 100%; padding: 8px 12px; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 14px; box-sizing: border-box; background: #fff;">
+            </div>
+            <button id="sv-gen-btn" onclick="generateSvPrompt()" style="width: 100%; background: #2563eb; color: white; border: none; padding: 10px 16px; border-radius: 6px; font-size: 15px; font-weight: 600; cursor: pointer; transition: background 0.2s;">一键生成专属 Prompt</button>
+            <div id="sv-result-box" style="display: none; margin-top: 16px; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 14px;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                    <span style="font-size: 12px; font-weight: bold; color: #059669;">✔ 已针对高完播率结构优化完成</span>
+                    <button onclick="copySvPrompt()" id="sv-copy-btn" style="background: #e2e8f0; border: none; padding: 4px 8px; border-radius: 4px; font-size: 12px; cursor: pointer;">复制提示词</button>
+                </div>
+                <textarea id="sv-prompt-output" readonly style="width: 100%; height: 110px; border: none; background: #f8fafc; font-family: monospace; font-size: 13px; color: #334155; padding: 8px; border-radius: 4px; box-sizing: border-box; resize: vertical;"></textarea>
+                <div style="margin-top: 10px; font-size: 12px; color: #64748b; border-top: 1px dashed #e2e8f0; padding-top: 8px; display: flex; justify-content: space-between; align-items: center;">
+                    <span>💡 需更多专属场景与避坑指南？</span>
+                    <a href="/prompt-pack/" style="color: #2563eb; font-weight: bold; text-decoration: none;">获取完整版 300+ 专属提示词库 →</a>
+                </div>
+            </div>
+        </div>
+        <script>
+            function generateSvPrompt() {
+                var type = document.getElementById('sv-type').value;
+                var tone = document.getElementById('sv-tone').value;
+                var ctx = document.getElementById('sv-context').value || '一款高佣金的实用型产品，性价比突出';
+                var res = '你是一名操盘过千万级播放量带货账号的资深短视频编导。请帮我写一条【' + type + '】的带货短视频脚本。\\\\n\\\\n【平台与表达风格】：' + tone + '，严禁书面腔，必须像真人随手拍。\\\\n【产品信息】：' + ctx + '\\\\n\\\\n【脚本结构要求】：\\\\n1. 前3秒钩子：用反常识、痛点提问或视觉冲击开场，给出用户停下来的理由；\\\\n2. 中段痛点+展示：说清产品解决什么问题，画面怎么拍（给分镜提示）；\\\\n3. 结尾行动指令：一句自然的话引导点购物车，不喊硬广口号。\\\\n【输出格式】：表格，列包含时间轴/口播文案/画面提示。';
+                document.getElementById('sv-prompt-output').value = res;
+                document.getElementById('sv-result-box').style.display = 'block';
+            }
+            function copySvPrompt() {
+                var copyText = document.getElementById('sv-prompt-output');
+                copyText.select();
+                copyText.setSelectionRange(0, 99999);
+                navigator.clipboard.writeText(copyText.value);
+                var btn = document.getElementById('sv-copy-btn');
+                btn.innerText = '已复制!';
+                setTimeout(function(){ btn.innerText = '复制提示词'; }, 2000);
+            }
+        </script>
+
         <h2 id="step1">第一步，选品，别选你自己喜欢的，选好卖的</h2>
 
         <p>
