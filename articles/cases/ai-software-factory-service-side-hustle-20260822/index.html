@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI软件工厂搭建副业，用Vercel开源的Foreman给开发团队装自动化流水线，一单3000-8000元实操拆解（2026） - AiToollab</title>
+    <meta name="description" content="Vercel开源了软件工厂模板Foreman，把StrongDM那种「代码不给人写、不给人review」的AI自动化开发流水线平民化了。帮开发团队部署Foreman软件工厂，接GitHub和Linear任务、自动写代码自动审PR，一单3000-8000元，月入1-5万。完整工具链、部署步骤和避坑指南。">
+    <meta name="keywords" content="AI软件工厂,Foreman部署,Vercel eve,软件工厂模板,AI自动化开发,AI写代码流水线,Claude Code团队部署,软件外包新玩法,程序员副业,AI开发流水线搭建,StrongDM软件工厂">
+    <meta name="description:en" content="Vercel open-sourced Foreman, an eve Software Factory template that brings StrongDM-style hands-off AI development to any team. Deploy AI software factories for dev teams, connect GitHub and Linear, auto-write code and auto-review PRs. Earn 3000-8000 RMB per project." />
+    <meta name="keywords:en" content="AI software factory, Vercel Foreman, eve software factory template, AI development pipeline, software factory deployment, Claude Code team, AI coding agent, developer side hustle" />
+    <link rel="canonical" href="https://www.aitoollab.top/articles/cases/ai-software-factory-service-side-hustle-20260822/">
+    <link rel="alternate" hreflang="zh-CN" href="https://www.aitoollab.top/articles/cases/ai-software-factory-service-side-hustle-20260822/">
+    <meta property="og:title" content="AI软件工厂搭建副业，用Vercel开源的Foreman给开发团队装自动化流水线，一单3000-8000元实操拆解（2026）">
+    <meta property="og:description" content="Vercel开源了软件工厂模板Foreman，把StrongDM那种「代码不给人写、不给人review」的AI自动化开发流水线平民化了。帮开发团队部署Foreman软件工厂，一单3000-8000元，月入1-5万。">
+    <meta property="og:image" content="https://www.aitoollab.top/articles/cases/ai-software-factory-service-side-hustle-20260822/og-cases-ai-software-factory-service-side-hustle-20260822.jpg">
+    <meta property="og:url" content="https://www.aitoollab.top/articles/cases/ai-software-factory-service-side-hustle-20260822/">
+    <meta property="og:type" content="article">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AI软件工厂搭建副业，用Vercel开源的Foreman给开发团队装自动化流水线，一单3000-8000元实操拆解（2026）">
+    <meta name="twitter:description" content="Vercel开源了软件工厂模板Foreman，把StrongDM那种「代码不给人写、不给人review」的AI自动化开发流水线平民化了。帮开发团队部署Foreman软件工厂，一单3000-8000元。">
+    <meta name="twitter:image" content="https://www.aitoollab.top/articles/cases/ai-software-factory-service-side-hustle-20260822/og-cases-ai-software-factory-service-side-hustle-20260822.jpg">
+    <script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "AI软件工厂搭建副业，用Vercel开源的Foreman给开发团队装自动化流水线，一单3000-8000元实操拆解（2026）",
+    "description": "Vercel开源了软件工厂模板Foreman，把StrongDM那种「代码不给人写、不给人review」的AI自动化开发流水线平民化了。帮开发团队部署Foreman软件工厂，接GitHub和Linear任务、自动写代码自动审PR，一单3000-8000元，月入1-5万。",
+    "author": {"@type": "Organization", "name": "AiToollab"},
+    "publisher": {
+        "@type": "Organization",
+        "name": "AiToollab",
+        "logo": {"@type": "ImageObject", "url": "https://www.aitoollab.top/logo.png"}
+    },
+    "datePublished": "2026-08-22",
+    "dateModified": "2026-08-22",
+    "image": "https://www.aitoollab.top/articles/cases/ai-software-factory-service-side-hustle-20260822/og-cases-ai-software-factory-service-side-hustle-20260822.jpg",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.aitoollab.top/articles/cases/ai-software-factory-service-side-hustle-20260822/"
+    },
+    "wordCount": 2600,
+    "articleSection": "副业赚钱",
+    "keywords": [
+        "AI软件工厂",
+        "Foreman部署",
+        "Vercel eve",
+        "AI自动化开发",
+        "软件工厂模板"
+    ]
+}
+    </script>
+    <script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "不懂代码能做AI软件工厂搭建副业吗？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "基本不行。这个方向是给懂技术的人准备的，你至少得会看GitHub仓库结构、理解Issue和Pull Request的流转，最好自己用过Claude Code或Cursor。软件工厂的本质是把开发流程自动化，如果你连开发流程都不熟，客户一问细节就露馅了。但反过来，只要你用过AI编程工具、能看懂README，部署Foreman本身不需要你写代码，门槛比想象的低。"
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "AI软件工厂搭建一单能赚多少钱？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "标准部署3000-5000元一单，含定制配置和团队培训的5000-8000元，一个开发团队做完部署后每个月还要维护费1000-3000元。工具本身免费开源，你的成本主要是时间。熟练后两天交付一单，一个月接4-6单加维护费，月入1-5万是有可能的。跟AI写文案这类副业比，客单价高一个数量级，但获客周期也更长。"
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Foreman软件工厂和Claude Code自己写代码有什么区别？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Claude Code是单个AI帮你写代码，你在命令行里指挥它。Foreman是把整个开发流程组织成流水线，任务从GitHub或Linear进来，经过分类、分析、实现、审查四个AI工作站，最后自动提交一个经过审查的Pull Request，人只做最终判断。一个是单兵作战，一个是工厂流水线，这是本质区别。"
+            }
+        }
+    ]
+}
+    </script>
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"PingFang SC","Microsoft YaHei",sans-serif;color:#2c3e50;line-height:1.8;font-size:16px;background:#f8f9fa}
+        .container{max-width:800px;margin:0 auto;padding:20px;background:#fff}
+        h1{font-size:26px;margin:30px 0 15px;color:#1a5276;line-height:1.4}
+        h2{font-size:20px;margin:30px 0 12px;color:#1e8449;padding-bottom:6px;border-bottom:2px solid #1e8449}
+        h3{font-size:18px;margin:20px 0 10px;color:#2e86c1}
+        p{margin:12px 0;text-align:justify}
+        .meta{color:#7f8c8d;font-size:14px;margin-bottom:20px}
+        .tip{background:#eafaf1;border-left:4px solid #27ae60;padding:12px 16px;margin:16px 0;border-radius:4px}
+        .cta{background:#1a5276;color:#fff;padding:20px 24px;margin:24px 0;border-radius:8px;text-align:center}
+        .cta a{color:#f1c40f;font-weight:bold;text-decoration:underline}
+        .cta p{color:#fff;margin:6px 0}
+        ul,ol{margin:10px 0 10px 24px}
+        li{margin:6px 0}
+        a{color:#2980b9;text-decoration:none}
+        a:hover{text-decoration:underline}
+        blockquote{border-left:3px solid #3498db;background:#f0f7ff;padding:10px 16px;margin:12px 0;color:#34495e}
+        .faq{background:#f9f9f9;padding:20px;border-radius:8px;margin:24px 0}
+        .faq h2{font-size:18px;color:#1a5276;border-bottom:none;padding-bottom:0}
+        .faq h3{font-size:16px;color:#2c3e50;margin:16px 0 6px}
+        .related{margin:24px 0;padding:16px;background:#f5f6fa;border-radius:8px}
+        .related a{display:block;padding:4px 0}
+        .footer{border-top:1px solid #ddd;padding:20px 0;margin-top:30px;text-align:center;color:#7f8c8d;font-size:13px}
+        @media (max-width:600px){.container{padding:15px}h1{font-size:22px}}
+        table{width:100%;border-collapse:collapse;margin:16px 0}
+        th,td{border:1px solid #ddd;padding:8px 12px;text-align:left}
+        th{background:#1a5276;color:#fff}
+        tr:nth-child(even){background:#f8f9fa}
+    </style>
+</head>
+<body>
+<nav class="site-topnav" style="position:sticky;top:0;z-index:100;display:flex;align-items:center;gap:16px;padding:10px 24px;background:rgba(13,17,23,0.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--border,#30363d);font-size:14px;">
+    <a href="/" style="display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--text,#e6edf3);font-weight:700;font-size:16px;">
+        <span style="font-size:20px;">🧰</span><span>AiToollab</span>
+    </a>
+    <a href="/" style="color:var(--muted,#8b949e);text-decoration:none;">首页</a>
+    <a href="/tutorials/" style="color:var(--muted,#8b949e);text-decoration:none;">教程</a>
+    <a href="/articles/cases/" style="color:var(--muted,#8b949e);text-decoration:none;">案例</a>
+    <a href="/prompt-pack/" style="color:var(--muted,#8b949e);text-decoration:none;">提示词包</a>
+    <a href="https://xiaobot.net/p/aibianxianlab?refer=baf6c644-27fb-4d70-bcd2-d239d17890a2" style="margin-left:auto;padding:4px 14px;border-radius:6px;background:linear-gradient(135deg,#58a6ff,#3fb950);color:#fff;text-decoration:none;font-weight:600;" target="_blank" rel="noopener">¥39 立即获取</a>
+</nav>
+<div class="container">
+
+<p class="meta">发布于 2026-08-22 . AI副业案例拆解 . 预计阅读时间 12 分钟</p>
+
+<h1>AI软件工厂搭建副业，用Vercel开源的Foreman给开发团队装自动化流水线，一单3000-8000元实操拆解（2026）</h1>
+
+<p>前两天我翻GitHub新项目的时候，看到一个叫Foreman的东西，Vercel官方实验室出的，名字翻译过来就是工头。</p>
+
+<p>八天时间，九百多个星。</p>
+
+<p>它干的活，简单说，就是把你GitHub和Linear里的开发任务接过去，经过四个AI工作站自动处理，最后直接给你提交一个写好的Pull Request。你只需要最后点一下合并。</p>
+
+<p>我当时第一反应是，这不就是把软件开发变成工厂流水线了吗？？？</p>
+
+<p>而且不是那种PPT里的概念，是已经能跑的真东西。分类任务、分析方案、写代码、审查代码，每一步都是独立的AI在工作，人只做判断。说真的，我盯着那个流水线图看了半天，脑子里全是以前接外包时被客户改需求改到怀疑人生的画面。</p>
+
+<p>软件工厂这个词，前两年还只是少数大厂内部玩的，现在Vercel把一个能直接部署的开源模板甩到所有人面前，MIT协议，一键部署。这个信息差，就是普通人赚钱的机会。</p>
+
+<h2>软件工厂到底是个什么东西</h2>
+
+<p>先说这个概念怎么来的。今年二月，网络安全公司StrongDM的CTO Justin McCarthy发了一篇文章，讲他们内部怎么用AI开发软件，标题叫《Software Factories and the Agentic Moment》，在HN上拿了三百多分，连Simon Willison都专门写了一篇博客解读。</p>
+
+<p>他们团队2025年7月成立的，三个人。定下的规矩听起来像疯话，代码不给人写，代码不给人审查。</p>
+
+<p>对，你没看错，代码不给人审查。</p>
+
+<p>他们的逻辑是这样的，2024年底Claude 3.5更新之后，AI写长任务的正确率开始指数级提升，错误不再累积而是自我纠正。到了2025年，用Cursor的YOLO模式跑复杂任务已经非常可靠了。所以他们干脆赌一把，整个团队不手写代码，全部交给AI agent，人只负责定义需求和验收。</p>
+
+<p>他们有个特别出名的口诀，说如果你每个工程师每天花在token上的钱没超过1000美元，你的软件工厂还有改进空间。</p>
+
+<p>一天一千美元的token，这钱听着吓人，但你想想他们团队三个人不写代码、几个月做出正经软件，人力的钱全省了，这个账其实是划算的。而且他们为了测试AI写的东西，专门给Okta、Jira、Slack这些外部服务做了数字孪生，在模拟环境里跑几千个场景验证，这在以前根本不敢想。</p>
+
+<p>这套玩法以前是StrongDM这种有实力的大公司专属，直到Vercel把Foreman开源。</p>
+
+<h2>Foreman具体能干什么，值钱在哪</h2>
+
+<p>Foreman是Vercel官方实验室出的软件工厂模板，整个流程分四个工作站。</p>
+
+<p>第一个工作站是分类器，任务进来先判断类型、优先级、复杂度，如果任务描述不清楚，它会直接反问提需求的人，而不是闷头做错的东西。</p>
+
+<p>第二个是分析员，基于你仓库的真实代码，把任务拆成带验收标准的实施计划。</p>
+
+<p>第三个是执行者，在自己独立的沙箱里写代码，跑你仓库自己的测试，验证通过才推分支。</p>
+
+<p>第四个是审查员，独立审查最终的代码差异，每个结论都要给出证据。而且审查员只看最终的代码分支，看不到执行者中间怎么想的，这个设计就是为了防止AI互相包庇。</p>
+
+<p>任务从哪进来都行，给GitHub Issue打个factory标签，或者直接在Issue里@它，或者从Linear里委派，或者本地命令行直接丢给它一个任务。CI挂了它还会自己诊断自己修，只改自己工厂的分支，不动你的。</p>
+
+<p>几个工作站跑完，它会给你一个带说明的Pull Request，你看了觉得没问题就合并。</p>
+
+<p>这个模式值钱在哪，一句话，把开发团队从每天写重复代码里解放出来，让AI处理七八成常规开发工作，人只做那些需要判断力的事。对技术团队来说，这就是省成本，省时间，省人力。</p>
+
+<h2>普通人怎么靠它赚钱，三档服务</h2>
+
+<p>这个方向的服务对象不是个人，是那些有GitHub仓库、在用或想用AI编程工具的开发团队。国内现在大量小团队在用Claude Code和Cursor，但绝大多数还停留在单兵作战，每个人自己在命令行里指挥AI，没有形成流水线。你帮他们把流水线搭起来，就是你的生意。这玩意跟<a href="/articles/cases/ai-claude-md-documentation-service-side-hustle-20260608/">帮程序员整理文档</a>那种小单不一样，客单价直接高一个量级。</p>
+
+<p><strong>第一档，标准软件工厂部署（¥3000-5000/单）。</strong>客户有一个现成的GitHub仓库，你帮他把Foreman部署到Vercel上，配置好GitHub连接器，跑通第一个factory任务，再教会团队怎么用。熟练之后两天能交付一单。</p>
+
+<p><strong>第二档，定制化部署加培训（¥5000-8000/单）。</strong>除了部署，还要根据客户的仓库特点配置构建命令、初始化依赖、设定分支规范，然后给团队做一次完整的培训，教他们怎么把任务拆好丢给工厂。这一档赚的是你懂流程的钱，不是装软件的钱。</p>
+
+<p><strong>第三档，软件工厂长期维护（¥1000-3000/月）。</strong>这是最值钱的一档。工厂跑起来之后，客户会遇到各种问题，CI怎么配、任务怎么拆、token怎么控制、质量怎么把关，都需要人。你按月收维护费，相当于成了他们团队的AI流水线管理员。一个客户一年就是一两万的稳定收入，攒三五个这样的客户，副业就变成主业了。</p>
+
+<p>三档递进逻辑很清楚，第一档获客，第二档做深，第三档躺赚。你不需要一上来就全做，从第一档接起，顺手就会了。</p>
+
+<h2>工具链，成本几乎为零</h2>
+
+<table>
+<tr><th>工具</th><th>做什么用</th><th>价格</th></tr>
+<tr><td>Foreman (eve Software Factory Template)</td><td>软件工厂主流程，四个AI工作站自动化处理开发任务</td><td>免费开源</td></tr>
+<tr><td>Vercel</td><td>部署Foreman的平台，一键部署带GitHub和Linear连接器</td><td>免费额度够用</td></tr>
+<tr><td>GitHub</td><td>任务来源和代码仓库，工厂的最终交付地</td><td>免费</td></tr>
+<tr><td>Claude / Claude Code</td><td>客户团队日常用AI编程工具，也是理解任务拆解的基础</td><td>$20/月起</td></tr>
+<tr><td>Linear</td><td>可选的团队任务管理工具，Foreman支持直接接Linear任务</td><td>免费版够用</td></tr>
+</table>
+
+<p>核心工具全是免费开源的，你的成本只有时间。真正的门槛是你要懂开发流程，得知道Issue怎么拆、PR怎么审、CI怎么配，这些东西装一次软件学不会，但你只要自己用过AI编程工具，学一遍Foreman的文档就能上手。</p>
+
+<p>顺便说一句，Foreman的文档写得相当清楚，从部署到配置到每个工作站的职责都有说明，跟着走一遍就有底了。</p>
+
+<h2>完整的接单流程，从练手到交付</h2>
+
+<p>第一步，先给自己装一个。你自己的GitHub仓库，或者随便找个开源项目clone下来，把Foreman部署上去，跑通三五个任务，把每个步骤截屏记录下来，这就是你接单的案例素材。没有案例的冷启动都是空谈。</p>
+
+<p>第二步，去技术团队聚集的地方发内容。这个方向的客户不在闲鱼，在掘金、V2EX、技术公众号的评论区，以及各种程序员社群里。发什么，发你的Foreman部署记录，配一张四工作站跑完任务自动提交PR的截图，配一句你的心得。这种内容自带信息差，评论区自然有人问怎么弄的。</p>
+
+<p>第三步，私聊转化。有人问就报价格梯度，第一档三千起，先做小团队攒案例。国内小团队的决策人往往就是技术负责人本人，他能看懂这个东西的价值，不太需要你费口舌解释。</p>
+
+<p>第四步，标准化交付。把部署流程做成checklist，固定一份交付模板，环境变量怎么配、连接器怎么装、培训讲哪几块，都定死。流程越固定，你单个订单花的时间越短。</p>
+
+<p>第五步，往第三档爬。交付完部署之后，主动提一句，工厂跑起来之后如果遇到问题可以按月找我维护。这句话就是从三千块的单往每月稳定收入跳的入口。</p>
+
+<h2>踩过的坑，提前给你排掉</h2>
+
+<p>第一个坑，别把Foreman吹成无人开发。Foreman确实能自动跑流程，但它的定位是辅助，不是替代。任务拆不清楚、验收标准不明确，它也会做错。跟客户沟通的时候一定要说清楚，软件工厂是让AI干七八成常规活，关键的判断还是要人来，不然客户期望值拉满，后面全是麻烦。</p>
+
+<p>第二个坑，token成本要提前跟客户讲明白。软件工厂跑起来是实打实烧token的，StrongDM那种一天一千美元是极端情况，但小团队一个月烧几千块很正常。部署之前先问清楚客户预算，把token成本控制写进方案里，不然月底账单出来客户心态会崩。</p>
+
+<p>第三个坑，客户的代码质量参差不齐。Foreman的审查员再强，也只是在仓库现有测试体系里做判断，如果客户的仓库测试覆盖率很低，AI写出来的东西质量就难保证。接单前先看一眼客户的仓库，测试体系太差的单子要么加价，要么先劝客户补测试。</p>
+
+<p>第四个坑，别同时接太多单。软件工厂部署看着简单，每个客户的仓库结构、环境、规范都不一样，定制化的活比想象中耗时间。第一档的单子一次只接两三个，跑顺了再加量，不然交付延期砸的是口碑。</p>
+
+<h2>一些最后想说的</h2>
+
+<p>我自己是越看越觉得，软件工厂这件事，是AI时代里少数几个真正改变生产方式的变化。就像当年福特发明流水线，把汽车从手工作坊变成工业化生产，现在软件开发也在经历同样的事，从手工作坊走向流水线。</p>
+
+<p>每一次生产方式变革，最先学会用新工具的人，都会吃到一波红利。上一波是会用AI写代码的程序员，这一波是能把AI组织成流水线的人。而Vercel把Foreman开源，等于把这套原本属于大厂的打法，交到了所有人手里。</p>
+
+<p>说真的，这个方向我自己也还在摸索，可能有些判断还不成熟。但如果你本身就在技术圈，或者你身边有一堆写代码的朋友，这件事值得花一个周末试一下。试错的成本，就是一晚上部署的时间。</p>
+
+<p>磨平一些信息差，顺手赚点钱。</p>
+
+<div class="tip">
+<p><strong>💡 我整理了一份AI软件工厂部署的「工具配置清单+交付模板+获客话术」工具包</strong></p>
+<p>包含Foreman的完整部署步骤、三档服务定价模板、技术团队获客话术。微信扫码或搜索「AiToollab」关注公众号，回复「软件工厂」获取。</p>
+</div>
+
+<div class="cta">
+<p><strong>我整理了一份AI副业实操的提示词包和操作模板</strong></p>
+<p>包含AI写作、AI设计、AI开发等20多个方向的实战Prompt、定价参考和获客话术</p>
+<p><a href="/prompt-pack/">点击获取提示词包 →</a></p>
+</div>
+
+<div class="faq">
+<h2>常见问题</h2>
+<h3>不懂代码能做AI软件工厂搭建副业吗？</h3>
+<p>基本不行。这个方向是给懂技术的人准备的，你至少得会看GitHub仓库结构、理解Issue和Pull Request的流转，最好自己用过Claude Code或Cursor。软件工厂的本质是把开发流程自动化，如果你连开发流程都不熟，客户一问细节就露馅了。但反过来，只要你用过AI编程工具、能看懂README，部署Foreman本身不需要你写代码，门槛比想象的低。</p>
+<h3>AI软件工厂搭建一单能赚多少钱？</h3>
+<p>标准部署3000-5000元一单，含定制配置和团队培训的5000-8000元，一个开发团队做完部署后每个月还要维护费1000-3000元。工具本身免费开源，你的成本主要是时间。熟练后两天交付一单，一个月接4-6单加维护费，月入1-5万是有可能的。跟AI写文案这类副业比，客单价高一个数量级，但获客周期也更长。</p>
+<h3>Foreman软件工厂和Claude Code自己写代码有什么区别？</h3>
+<p>Claude Code是单个AI帮你写代码，你在命令行里指挥它。Foreman是把整个开发流程组织成流水线，任务从GitHub或Linear进来，经过分类、分析、实现、审查四个AI工作站，最后自动提交一个经过审查的Pull Request，人只做最终判断。一个是单兵作战，一个是工厂流水线，这是本质区别。</p>
+<h3>客户怎么找，一定要接技术团队的活吗？</h3>
+<p>不一定。除了给开发团队部署，还有两类客户可以接。一类是有技术团队但还没用上AI编程工具的科技公司，你顺手把Claude Code和Foreman一起教了，客单价更高。另一类是独立开发者，一个人维护好几个项目，正好需要流水线帮他扛住常规开发量。获客渠道主要是掘金、V2EX、技术社群，以及你身边认识的技术朋友转介绍。</p>
+<h3>这个方向能做多久，会不会很快被官方功能取代？</h3>
+<p>短期不会。Vercel做Foreman的目的就是把它做成平台级产品，后续大概率会推托管服务，但托管价格一定比你自己部署贵。而且每个团队的仓库、流程、规范都不一样，部署和调优的需求长期存在，就像WordPress免费开源这么多年，帮人搭网站的服务依然赚钱。真正要担心的不是功能被取代，而是会部署的人越来越多，所以趁现在信息差还在，尽早进场。</p>
+</div>
+
+<div class="related">
+<h3>你可能也感兴趣</h3>
+<a href="/articles/cases/ai-coding-chat-history-extraction-service-side-hustle-20260821/">AI编程记录提取副业，帮程序员抢救AI聊天记录和token账单，一单100-500元实操拆解</a>
+<a href="/articles/cases/ai-claude-md-documentation-service-side-hustle-20260608/">AI技术文档代写服务，帮程序员整理项目文档，一单200-2000元</a>
+<a href="/articles/cases/ai-code-review-service-side-hustle-20260607/">AI代码审查服务，帮程序员做代码走查，一单200-2000元</a>
+<a href="/articles/cases/ai-ios-app-development-service-side-hustle-20260714/">AI iOS App开发服务副业，用Claude Code帮人开发iOS/Mac应用月入5000-30000元</a>
+</div>
+
+<div class="footer">
+<p>© 2026 AiToollab | 普通人用AI做副业的实战平台</p>
+</div>
+
+</div>
+</body>
+</html>
