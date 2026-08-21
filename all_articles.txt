@@ -207,3 +207,4 @@ articles/cases/ai-coding-chat-history-extraction-service-side-hustle-20260821/in
 tutorials/ai-money-overview-tutorial-20260821/index.html
 tutorials/ai-efficiency-tools-side-hustle-tutorial-20260821/index.html
 tutorials/ai-resume-prompts-advanced-tutorial-20260821/index.html
+articles/news/anthropic-project-panama-book-digitization-side-hustle-20260822/index.html
