@@ -209,3 +209,4 @@ tutorials/ai-efficiency-tools-side-hustle-tutorial-20260821/index.html
 tutorials/ai-resume-prompts-advanced-tutorial-20260821/index.html
 articles/news/anthropic-project-panama-book-digitization-side-hustle-20260822/index.html
 articles/cases/ai-software-factory-service-side-hustle-20260822/index.html
+articles/news/deepseek-v4-flash-vision-api-side-hustle-20260823/index.html
