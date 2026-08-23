@@ -213,3 +213,6 @@ articles/news/deepseek-v4-flash-vision-api-side-hustle-20260823/index.html
 articles/cases/ai-virtual-employee-office-side-hustle-20260823/index.html
 articles/news/gpt-5-6-sol-price-cut-side-hustle-20260824/index.html
 articles/cases/ai-scrollcraft-premium-website-service-side-hustle-20260824/index.html
+tutorials/ai-thesis-writing-tutorial-20260824/
+tutorials/ai-shenlun-writing-tutorial-20260824/
+tutorials/ai-foreign-trade-tutorial-20260824/
