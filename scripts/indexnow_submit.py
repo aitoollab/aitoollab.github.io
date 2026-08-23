@@ -8,7 +8,7 @@
 import json, sys, urllib.request, urllib.error
 
 HOST = "www.aitoollab.top"
-KEY = "4a7cdecf71d74733a36e72e2fd034608"
+KEY = "7af5801d3868400c8fad0a949cebd385"
 KEY_LOCATION = f"https://{HOST}/{KEY}.txt"
 API = "https://api.indexnow.org/IndexNow"
 
