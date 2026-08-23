@@ -734,5 +734,20 @@
 <script>
 window.addEventListener('scroll',function(){var b=document.getElementById('back-to-top');b.classList.toggle('show',window.scrollY>400);});
 </script>
+<script>
+// 入口词A/B追踪：读取 ?src= 参数，打 /track/{src}.gif 像素请求（CF日志按路径统计）
+(function(){
+  try{
+    var m = window.location.search.match(/[?&]src=([a-z0-9]+)/i);
+    if(m){
+      var s = m[1].toLowerCase();
+      var img = new Image();
+      img.src = '/track/' + s + '.gif';
+      // 上报给CF Analytics的辅助标记（可选）
+      if(window.dataLayer) window.dataLayer.push({'event':'cta_src','src':s});
+    }
+  }catch(e){}
+})();
+</script>
 </body>
 </html>
