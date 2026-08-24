@@ -18,7 +18,7 @@ NAV_HTML = """<nav class="site-topnav" style="position:sticky;top:0;z-index:100;
     <a href="/" style="color:var(--muted,#8b949e);text-decoration:none;">首页</a>
     <a href="/tutorials/" style="color:var(--muted,#8b949e);text-decoration:none;">教程</a>
     <a href="/articles/cases/" style="color:var(--muted,#8b949e);text-decoration:none;">案例</a>
-    <a href="/prompt-pack/" style="color:var(--muted,#8b949e);text-decoration:none;">提示词包</a>
+    <a href="/prompt-pack/?src=anav" style="color:var(--muted,#8b949e);text-decoration:none;">AI副业工具箱</a>
     <a href="/prompt-pack/" style="margin-left:auto;padding:4px 14px;border-radius:6px;background:linear-gradient(135deg,#58a6ff,#3fb950);color:#fff;text-decoration:none;font-weight:600;">¥39 立即获取</a>
 </nav>"""
 
