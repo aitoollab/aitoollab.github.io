@@ -42,7 +42,17 @@ def get_latest_articles(limit=6):
                 title = title_match.group(1).split('｜')[0].strip()
                 desc = desc_match.group(1) if desc_match else ""
                 if len(desc) > 60:
-                    desc = desc[:60] + "。。"
+                    # 在60字附近按句号/分号截断，不加"。。"
+                    cut = desc[:70]
+                    for punct in ("。", "；", "，", "、"):
+                        pos = cut.rfind(punct)
+                        if pos >= 30:
+                            desc = cut[:pos].rstrip(punct)
+                            break
+                    else:
+                        desc = cut.rstrip()
+                else:
+                    desc = desc.rstrip()
                 date = date_match.group(1)
                 articles.append({
                     "title": title,
