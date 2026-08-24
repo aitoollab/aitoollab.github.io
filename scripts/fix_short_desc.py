@@ -56,7 +56,7 @@ def make_desc(title, text, max_len=140):
             continue
         if s.startswith(("本文", "这篇文章", "欢迎", "首页", "教程", "发布于", "分类", "阅读约")):
             continue
-        if any(k in s for k in ("｜", "|", "发布于", "分类：", "首页 副业", "提示词全家桶", "AI副业实战专栏", "导航", "社交媒体运营", "副业赚钱 社交媒体", "面包屑")):
+        if any(k in s for k in ("｜", "|", "发布于", "分类：", "首页 副业", "提示词全家桶", "导航", "社交媒体运营", "副业赚钱 社交媒体", "面包屑")):
             continue
         if t and (t in s or s in t):
             continue
