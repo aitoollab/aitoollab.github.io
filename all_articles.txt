@@ -218,3 +218,4 @@ tutorials/ai-shenlun-writing-tutorial-20260824/
 tutorials/ai-foreign-trade-tutorial-20260824/
 tutorials/ai-handmade-poster-tutorial-20260824/
 articles/news/qwen3-tts-cost-drop-side-hustle-20260825/index.html
+articles/cases/ai-shopping-agent-northcinder-side-hustle-20260826/index.html/
