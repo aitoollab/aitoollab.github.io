@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>帮人用AI做Excel数据分析和报表，300星huashu-excel项目拆解，一单报价500到2000 - AiToollab</title>
+    <meta name="description" content="发现一个爆火的开源项目alchaincyf/huashu-excel，专治AI算Excel算错数，8步流程体检清洗对账交付一条龙。我靠帮中小企业主做AI数据分析报表，一单收500到2000块，会用Excel就能上手">
+    <link rel="canonical" href="https://www.aitoollab.top/articles/cases/huashu-excel-data-analysis-service-side-hustle-20260829/">
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="AI数据分析副业, huashu-excel, AI做Excel报表, AI数据清洗, Excel数据分析服务, AI副业赚钱, Claude Code技能包, AI报表代做, 数据分析接单, openpyxl">
+    <meta name="author" content="数字生命卡兹克">
+    <meta name="ai-content" content="allowed">
+
+    <meta property="og:title" content="帮人用AI做Excel数据分析和报表，300星huashu-excel项目拆解，一单报价500到2000">
+    <meta property="og:description" content="专治AI算Excel算错数的开源项目huashu-excel，8步流程让AI算出来的数字经得起追问。我靠帮中小企业主做AI数据分析报表，一单收500到2000块">
+    <meta property="og:image" content="https://www.aitoollab.top/articles/cases/huashu-excel-data-analysis-service-side-hustle-20260829/og-huashu-excel-data-analysis-service-side-hustle-20260829.jpg">
+    <meta property="og:url" content="https://www.aitoollab.top/articles/cases/huashu-excel-data-analysis-service-side-hustle-20260829/">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="AiToollab">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="帮人用AI做Excel数据分析和报表，300星huashu-excel项目拆解，一单报价500到2000">
+    <meta name="twitter:description" content="专治AI算Excel算错数的开源项目huashu-excel，8步流程让AI算出来的数字经得起追问。我靠帮中小企业主做AI数据分析报表，一单收500到2000块">
+    <meta name="twitter:image" content="https://www.aitoollab.top/articles/cases/huashu-excel-data-analysis-service-side-hustle-20260829/og-huashu-excel-data-analysis-service-side-hustle-20260829.jpg">
+
+    <link rel="alternate" hreflang="zh-CN" href="https://www.aitoollab.top/articles/cases/huashu-excel-data-analysis-service-side-hustle-20260829/">
+
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "帮人用AI做Excel数据分析和报表，300星huashu-excel项目拆解，一单报价500到2000",
+    "description": "发现一个爆火的开源项目alchaincyf/huashu-excel，专治AI算Excel算错数，8步流程体检清洗对账交付一条龙。我靠帮中小企业主做AI数据分析报表，一单收500到2000块",
+    "author": {
+        "@type": "Person",
+        "name": "数字生命卡兹克"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "AiToollab",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.aitoollab.top/logo.png"
+        }
+    },
+    "datePublished": "2026-08-29",
+    "mainEntityOfPage": "https://www.aitoollab.top/articles/cases/huashu-excel-data-analysis-service-side-hustle-20260829/",
+    "image": "https://www.aitoollab.top/articles/cases/huashu-excel-data-analysis-service-side-hustle-20260829/og-huashu-excel-data-analysis-service-side-hustle-20260829.jpg"
+}
+    </script>
+
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "huashu-excel是什么？普通人能用它赚钱吗？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "huashu-excel是一个专门教AI做Excel数据分析的开源技能包，8步流程覆盖体检、清洗、对齐、分析、对账、交付。普通人可以靠它帮中小企业主做数据分析和报表接单赚钱，会用Excel、能给AI下指令就能上手"
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "AI数据分析报表服务怎么收费？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "单表清洗加分析报告收500到800元，月度经营分析报表收1000到2000元，长期顾问按月收1500到3000元。价格看数据量和交付频率，比传统咨询公司便宜一个数量级"
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "不会编程能做AI数据分析服务吗？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "可以。huashu-excel只依赖openpyxl一个库，装上之后AI自己会跑全部脚本。你只需要会把客户的需求说清楚，检查AI的交付结果。命令行装个npm包的水平就够了"
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "AI算Excel算错了怎么办？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "这正是huashu-excel要解决的问题。它会先用openpyxl读原始单元格做体检，识别合并表头、小计行、重复行这些坑，交付前再跑一遍对账，用表里自带的合计行当校验和，对不上就不给数字"
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "去哪里找AI数据分析的客户？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "三个渠道，本地实体店主、电商卖家社群、自媒体创作者。这些群体每天都有数据但没人帮他们分析，从免费帮一家做开始，拿着作品集去谈"
+            }
+        }
+    ]
+}
+    </script>
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "帮人用AI做Excel数据分析和报表，300星huashu-excel项目拆解，一单报价500到2000 - AiToollab",
+  "description": "专治AI算Excel算错数的开源项目huashu-excel，8步流程让AI算出来的数字经得起追问。我靠帮中小企业主做AI数据分析报表，一单收500到2000块",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "这个项目到底解决了什么问题",
+      "text": "huashu-excel用一份演示表证明，主流做法用pd.read_excel算月度总额，比真值高161%，零报错零警告。错误出在三处，合计行被当成一家门店，小计行又被当成一家门店，一行粘贴事故造成的重复算了两次。这个skill先用openpyxl读原始单元格做体检，把问题全列出来再动pandas"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "八步流程怎么跑",
+      "text": "体检、清洗、对齐、分析、对账、交付、验图、质控八步。对账这一步拿表里的合计行当免费校验和，清洗后的明细求和对不上就说明有一方错了。最后一步质控会另派一个没参与创作的agent从原始数据重算，专拆自己的台"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "怎么把它变成服务去接单",
+      "text": "三个档位，入门档单表清洗加分析报告500到800元，进阶档月度经营分析报表1000到2000元，高阶档长期数据顾问每月1500到3000元。客户锁定本地实体店主、电商卖家、自媒体创作者"
+    }
+  ]
+}
+    </script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; }
+        h1 { font-size: 2rem; margin-bottom: 20px; color: #111; line-height: 1.35; }
+        .meta { color: #666; margin-bottom: 30px; font-size: 0.9rem; }
+        .content p { margin-bottom: 20px; font-size: 1.1rem; }
+        .content h2 { font-size: 1.5rem; margin: 40px 0 20px; color: #222; }
+        .content h3 { font-size: 1.25rem; margin: 30px 0 15px; color: #333; }
+        .content ul { margin: 0 0 20px 20px; font-size: 1.1rem; }
+        .content li { margin-bottom: 10px; }
+        .content strong { color: #111; }
+        .tip { background: #f0f7ff; padding: 15px; border-radius: 8px; border-left: 4px solid #165DFF; margin: 20px 0; }
+        .tip p { margin-bottom: 8px !important; font-size: 1rem !important; }
+        .tip p:last-child { margin-bottom: 0 !important; }
+        .cta-box { background: #f8f9fa; padding: 25px; border-radius: 8px; margin: 40px 0; text-align: center; border: 1px solid #e8e8e8; }
+        .cta-box p { margin-bottom: 15px !important; font-size: 1.05rem !important; }
+        .btn { display: inline-block; background: #165DFF; color: white; padding: 12px 28px; border-radius: 6px; text-decoration: none; font-size: 1.05rem; font-weight: 500; }
+        .btn:hover { background: #0e42d2; }
+        .related { margin-top: 60px; padding-top: 30px; border-top: 1px solid #eee; }
+        .related h3 { margin-bottom: 20px; font-size: 1.3rem; }
+        .related ul { list-style: none; margin: 0; }
+        .related li { margin-bottom: 12px; }
+        .related a { color: #165DFF; text-decoration: none; font-size: 1.05rem; }
+        .related a:hover { text-decoration: underline; }
+        .faq { margin-top: 50px; padding-top: 30px; border-top: 2px solid #eee; }
+        .faq h2 { margin-bottom: 25px; }
+        .faq-item { margin-bottom: 25px; padding-bottom: 20px; border-bottom: 1px solid #f0f0f0; }
+        .faq-item h3 { font-size: 1.15rem; margin-bottom: 10px; color: #222; }
+        .faq-item p { font-size: 1.05rem !important; color: #555; }
+        @media (max-width: 600px) {
+            h1 { font-size: 1.6rem; }
+            body { padding: 15px; }
+            .content p { font-size: 1rem; }
+        }
+    </style>
+</head>
+<body>
+<nav class="site-topnav" style="position:sticky;top:0;z-index:100;display:flex;align-items:center;gap:16px;padding:10px 24px;background:rgba(13,17,23,0.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--border,#30363d);font-size:14px;">
+    <a href="/" style="display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--text,#e6edf3);font-weight:700;font-size:16px;">
+        <span style="font-size:20px;">🧰</span><span>AiToollab</span>
+    </a>
+    <a href="/" style="color:var(--muted,#8b949e);text-decoration:none;">首页</a>
+    <a href="/tutorials/" style="color:var(--muted,#8b949e);text-decoration:none;">教程</a>
+    <a href="/articles/cases/" style="color:var(--muted,#8b949e);text-decoration:none;">案例</a>
+    <a href="/prompt-pack/?src=apkg" style="color:var(--muted,#8b949e);text-decoration:none;">AI副业实战包</a>
+    <a href="https://xiaobot.net/p/aibianxianlab?refer=baf6c644-27fb-4d70-bcd2-d239d17890a2" style="margin-left:auto;padding:4px 14px;border-radius:6px;background:linear-gradient(135deg,#58a6ff,#3fb950);color:#fff;text-decoration:none;font-weight:600;" target="_blank" rel="noopener">¥39 立即解锁</a>
+</nav>
+
+    <div class="content">
+
+        <h1>帮人用AI做Excel数据分析和报表，300星huashu-excel项目拆解，一单报价500到2000</h1>
+        <p class="meta">发布于 2026-08-29 · AI副业案例</p>
+
+        <p>事情是这样的。</p>
+
+        <p>上个月我帮一个开奶茶店的朋友看他的月度流水表，顺手丢给ChatGPT让它算算哪款产品利润最高。AI给我回了一份特别漂亮的分析，结论头头是道，还配了张趋势图。</p>
+
+        <p>我朋友看了一眼就说，这数不对，总营业额怎么多出十几万。</p>
+
+        <p>我回去一行行对，才发现他的表里有「华东小计」和「合计」行，AI把它们当成两家门店算进去了，另外还有一行是当初粘贴事故造成的完全重复，算了两次。整个分析没有一处报错，数字看起来全都像真的？？你说气不气人。</p>
+
+        <p>我当时后背有点发凉。因为我已经把这个结论发给他了，他也差点拿去跟合伙人谈进货的事。</p>
+
+        <p>你写代码，错了会抛异常。你做数据分析，错了什么都不会发生。</p>
+
+        <p>这句话不是我说的，是我这两天在GitHub上刷到的一个项目README里写的，我原样抄给你。这个项目叫<a href="https://github.com/alchaincyf/huashu-excel" target="_blank">alchaincyf/huashu-excel</a>，8月23号才创建，几天时间300多星，冲得挺猛。</p>
+
+        <h2>这个项目到底解决了什么问题</h2>
+
+        <p>一句话，它让AI算出来的Excel数字，经得起追问。</p>
+
+        <p>「这个数你怎么算的」，每个交过数字的人都被这么问过。答不上来通常不是记性差，是那个数从一开始就没法被追溯。</p>
+
+        <p>huashu-excel给了一份演示表来证明这事有多严重。那份表就是中国职场真实Excel的样子，标题占了第一行，表头有两级，地区列用合并单元格，金额带千分位，中间夹着华东小计，尾巴三行是合计占比同比。就问一个问题，1月总销售额是多少。</p>
+
+        <p>主流做法用pd.read_excel去读，发现表头位置不对就加参数，发现数字读不出来就清千分位，看起来已经挺周全了。结果算出来34,893,234，真值13,367,767，误差加161%，全程零报错零警告。</p>
+
+        <p>而huashu-excel的做法是，动pandas之前先用openpyxl把原始单元格读一遍，做个体检。表头在第几行、有几级、哪几行是汇总行混进了数据区、哪行完全重复，全部列出来，一个都不猜。体检报告直接告诉你，第12、17、18、19行是汇总小计行，第11行与前面完全重复。</p>
+
+        <p>把「合计」行当噪音扔掉是所有工具的默认动作。但这个项目的思路反过来了，合计行是原表作者用公式算出来的真值，那是免费的校验和。拿清洗后的明细求和去对它，对不上就说明有一方错了，两种情况都必须报出来。</p>
+
+        <p>我看到这个设计的时候是真的愣了一下。不是技术上多难，是思路上的那种干净。</p>
+
+        <h2>八步流程，怎么跑</h2>
+
+        <p>装很简单，一行命令，npx skills add alchaincyf/huashu-excel。Claude Code、Cursor、Codex都能装，只依赖openpyxl一个库，没有乱七八糟的环境问题。</p>
+
+        <p>装上之后AI干活分八步，体检、清洗、对齐、分析、对账、交付、验图、质控。你不用记全，我给你讲三个我觉得最值钱的。</p>
+
+        <p>第一个是第3步对齐。用户开口说「帮我分析一下」的时候，他自己也不知道要什么，因为他也没看过这份数据。所以AI会先出一段人话摸底，几行几列、有哪些维度、分布形态，还带一两个已经能看出来的现象，然后拿着这个去问你，这份分析拿去做什么决定。然后停下来等回答。带着错的问题做完整套分析，返工成本远高于等这一次。</p>
+
+        <p>第二个是第5步对账。行数守恒、总和守恒、跟表内合计交叉验证，三条全过才给数字。这条对应的是ICAEW金融建模规范里的master check，以前只有正经财务建模的人才会做，现在AI自动跑。</p>
+
+        <p>第三个是最狠的第8步，质控。另派一个没参与分析的agent，从原始数据重算一遍，专门拆前面那个agent的台。README里有句话我印象很深，退出码验的是算得对，不是结论对。一份内部对账分毫不差的报告，可以整体错一个财年，只要那一列的列名不是它字面的意思。</p>
+
+        <p>它还内置了一堆分析陷阱的扫描，辛普森悖论、幽灵分组、小基数、时间断点。幽灵分组这个特别扎心，「张伟」和「张伟 」（尾巴多个空格）被算成两个人，每组的数都是残缺的，你肉眼根本看不出来。</p>
+
+        <h2>怎么把它变成服务去接单</h2>
+
+        <p>聊完项目，回到赚钱这块。你想想看，中国有多少中小企业主，天天守着一堆Excel流水、库存、进销存，从来没有人帮他们把数据变成决策。不是他们不想，是咨询公司太贵，一个正经的数据分析项目报价几万起。</p>
+
+        <p>现在你手上有一套能保证数字可靠的AI分析流程，中间的断层就是你的生意。</p>
+
+        <p>我自己试下来，三个档位比较好走。</p>
+
+        <p>入门档，单表清洗加分析报告，收500到800。客户给你一份乱表，你跑完整套流程，交付一份干净的分析表加一份人话报告，告诉他三个能落地的发现。这种单子两个小时能做完，量大。</p>
+
+        <p>进阶档，月度经营分析报表，收1000到2000。客户每个月把流水发你，你出一份固定格式的经营报表，哪款产品该砍、哪个渠道在亏、复购率什么水平，AI查行业基准做横向对比。这个是订阅性质的，一个客户每月都付费。</p>
+
+        <p>高阶档，长期数据顾问，每月1500到3000。小公司养不起数据分析师，但每个月总有几个决策需要数据支撑，你就当那个外挂的分析师，随叫随到。这个档拼的是信任，做起来之后最稳。</p>
+
+        <p>有个朋友可能纳闷，客户为什么自己不装这个skill。跟之前addyosmani那篇文章里聊过的一样，大多数人看到命令行第一反应就是算了。你帮他把这个「算了」吃掉，钱就是你的。</p>
+
+        <h2>客户从哪来</h2>
+
+        <p>三个地方。本地实体店主，奶茶店餐馆美容院，他们有收银数据但从来没人分析过。电商卖家社群，他们看后台数据看得头大，最需要有人帮他们把爆款逻辑讲清楚。自媒体创作者，哪个视频涨粉、哪个转化好，这些都是数据问题。</p>
+
+        <p>冷启动就一招，免费帮一家做。做完把报告（脱敏后）当作品集，去谈下一家的时候直接甩出来。数据分析这个生意，一份漂亮的样例报告比一百句自我介绍都管用。</p>
+
+        <h2>踩过的坑</h2>
+
+        <p>第一个坑，AI的结论要人工过一遍再交付。huashu-excel管住了数字对不对，但「这个发现对客户的生意有没有意义」还是得你来判断。我有一次AI发现某个SKU销量环比跌了40%，挺唬人，结果那玩意是季节性产品，去年同月也跌。行业常识这层，AI目前补不上。</p>
+
+        <p>第二个坑，别碰财务合规类的活。帮人看经营数据没问题，但涉及报税、审计的数据，那个责任不是个人能扛的。客户问起来就直说，这块需要持证机构。</p>
+
+        <p>第三个坑，交付物要带着口径一起给。这个数是含税还是不含税，退货算不算在内，写清楚。我一开始不懂这个，客户拿着我的数去跟他会计对，两边对不上差点闹掰。后来我把口径说明直接附在报告第一页，再没出过这种事。</p>
+
+        <h2>写在最后</h2>
+
+        <p>我一直觉得，AI时代最先被淘汰的不是不会用AI的人，是拿着AI的输出直接交差的人。AI算错不会报错这件事，会变成越来越多人踩的坑，而你能站在坑边上拦住他们，这个位置本身就值钱。</p>
+
+        <p>huashu-excel的README里还有句话，「给我一份Excel，给你交一份专业报告」。这个项目才一个星期，星还不多，正是信息差最大的时候。等它涨到几千星、人人都会装的时候，这波红利就平了。</p>
+
+        <p>早动手的人，吃肉。</p>
+
+        <div class="tip">
+            <p><strong>工具信息</strong></p>
+            <p>项目地址，github.com/alchaincyf/huashu-excel，MIT协议，一条命令安装，依赖仅openpyxl。支持Claude Code、Cursor、Codex等主流agent。</p>
+        </div>
+
+        <div class="cta-box">
+            <p><strong>📦 我把AI数据分析和接单的完整提示词模板整理进了AI副业实战包</strong></p>
+            <p>包含Excel体检话术、客户需求对齐模板、经营分析报告交付模板、报价沟通话术。复制粘贴就能用。</p>
+            <a href="/prompt-pack/?src=apkg" class="btn">AI副业实战包</a>
+        </div>
+
+        <div class="faq">
+            <h2>常见问题</h2>
+
+            <div class="faq-item">
+                <h3>huashu-excel是什么？普通人能用它赚钱吗？</h3>
+                <p>huashu-excel是一个专门教AI做Excel数据分析的开源技能包，8月23日上线，几天冲到300多星。8步流程覆盖体检、清洗、对齐、分析、对账、交付。普通人可以靠它帮中小企业主做数据分析报表接单赚钱，会用Excel、能给AI下指令就能上手。</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>AI数据分析报表服务怎么收费？</h3>
+                <p>单表清洗加分析报告收500到800元，月度经营分析报表收1000到2000元，长期数据顾问按月收1500到3000元。比咨询公司便宜一个数量级，比客户自己瞎摸索省太多时间，中间的差价就是你的利润空间。</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>不会编程能做AI数据分析服务吗？</h3>
+                <p>可以。huashu-excel只依赖openpyxl一个库，一条npx命令装上，之后AI自己跑全部脚本。你的核心工作是跟客户对齐需求、检查AI的交付结果，都是人干的活，不是码代码的活。</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>AI算Excel算错了怎么办？</h3>
+                <p>这正是huashu-excel存在的理由。它先用openpyxl读原始单元格识别合并表头、小计行、重复行，交付前再跑对账，用表里自带的合计行当校验和，对不上就不给数字。最后还有一步质控，另派一个agent从原始数据重算拆台。</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>去哪里找AI数据分析的客户？</h3>
+            <p>三个渠道，本地实体店主、电商卖家社群、自媒体创作者。这些群体天天产生数据但没人帮他们分析，从免费帮一家做开始，把脱敏后的报告当作品集去谈下一家。</p>
+            </div>
+        </div>
+
+        <div class="related">
+            <h3>相关阅读</h3>
+            <ul>
+                <li><a href="/tutorials/ai-excel-tutorial-20260713/">AI做Excel教程，用ChatGPT自动写公式做数据分析报表</a></li>
+                <li><a href="/articles/cases/addyosmani-agent-skills-service-202605/">靠卖AI编程Agent的技能配置服务赚钱，45K星开源项目拆解</a></li>
+                <li><a href="/articles/cases/career-ops-46k-star-job-search-service/">靠帮人用AI优化简历和求职，两周赚了6800</a></li>
+                <li><a href="/articles/cases/mattpocock-skills-real-engineers/">用mattpocock/skills把AI编程从vibe coding拉回工程正轨</a></li>
+                <li><a href="/articles/cases/caveman-prompt-token-saving-side-hustle/">靠优化提示词省token，半个月赚了8700</a></li>
+            </ul>
+        </div>
+
+    </div>
+    <div class="footer" style="text-align:center;margin-top:48px;padding-top:24px;border-top:1px solid var(--border);color:var(--muted);font-size:13px;">
+        <p>
+            <a href="/about/" style="color:var(--muted);text-decoration:underline;">关于我们</a> ·
+            <a href="/disclaimer/" style="color:var(--muted);text-decoration:underline;">免责声明</a> ·
+            <a href="/privacy/" style="color:var(--muted);text-decoration:underline;">隐私政策</a> ·
+            <a href="/prompt-pack/?src=apkg" style="color:var(--muted);text-decoration:underline;">AI副业实战包</a>
+        </p>
+        <p style="margin-top:6px;">© 2026 AiToollab · 内容仅供参考，不构成投资建议</p>
+    </div>
+</body>
+</html>
