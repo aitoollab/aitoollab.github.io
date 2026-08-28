@@ -228,3 +228,4 @@ articles/news/speko-voice-ai-router-side-hustle-20260828/index.html
 tutorials/xiaohongshu-0-fans-money-tutorial-20260828/index.html
 tutorials/ai-short-drama-course-price-guide-20260828/index.html
 tutorials/ai-resume-optimize-prompt-tutorial-20260828/index.html
+articles/news/gemini-3-5-transcribe-speech-to-text-side-hustle-20260829/index.html
