@@ -231,3 +231,4 @@ tutorials/ai-resume-optimize-prompt-tutorial-20260828/index.html
 articles/news/gemini-3-5-transcribe-speech-to-text-side-hustle-20260829/index.html
 articles/cases/huashu-excel-data-analysis-service-side-hustle-20260829/index.html
 articles/news/openai-cuts-cursor-migration-side-hustle-20260830/index.html
+articles/cases/ai-product-video-ad-service-side-hustle-20260830/index.html
