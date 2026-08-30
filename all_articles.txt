@@ -232,3 +232,4 @@ articles/news/gemini-3-5-transcribe-speech-to-text-side-hustle-20260829/index.ht
 articles/cases/huashu-excel-data-analysis-service-side-hustle-20260829/index.html
 articles/news/openai-cuts-cursor-migration-side-hustle-20260830/index.html
 articles/cases/ai-product-video-ad-service-side-hustle-20260830/index.html
+articles/news/tencent-hy4-open-source-side-hustle-20260831/index.html
