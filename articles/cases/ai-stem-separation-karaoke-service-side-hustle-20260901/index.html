@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>帮KTV和翻唱博主做人声分离伴奏提取，StemDeck本地分轨实测，一单30到800实操拆解 - AiToollab</title>
+    <meta name="description" content="Moises号称7000万用户，LALAL.AI按分钟扣钱。开源项目StemDeck把人声、鼓、贝斯、吉他、钢琴拆成六轨，本地跑不上传。我靠帮KTV店、翻唱博主、音乐老师做人声分离和伴奏提取，一单收30到800">
+    <meta name="description:en" content="Moises claims 70 million users while LALAL.AI bills by the minute. Open-source StemDeck splits a song into six local stems with no upload. Make vocal remover and karaoke backing tracks for KTV shops, cover creators and music teachers, 30-800 RMB per order." />
+    <meta name="keywords" content="人声分离, 伴奏提取, AI人声分离, 卡拉OK伴奏制作, StemDeck, 分轨提取副业, 人声移除, 翻唱伴奏代做, KTV伴奏, Demucs分轨">
+    <meta name="keywords:en" content="vocal remover, stem separation, karaoke backing track, StemDeck, AI stem splitter, isolate vocals, Demucs, cover song instrumental, KTV backing track side hustle" />
+    <link rel="canonical" href="https://www.aitoollab.top/articles/cases/ai-stem-separation-karaoke-service-side-hustle-20260901/">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="数字生命卡兹克">
+    <meta name="ai-content" content="allowed">
+
+    <meta property="og:title" content="帮KTV和翻唱博主做人声分离伴奏提取，StemDeck本地分轨实测，一单30到800实操拆解">
+    <meta property="og:description" content="Moises号称7000万用户，LALAL.AI按分钟扣钱。开源项目StemDeck把人声、鼓、贝斯、吉他、钢琴拆成六轨，本地跑不上传。我靠帮KTV店、翻唱博主、音乐老师做人声分离和伴奏提取，一单收30到800">
+    <meta property="og:image" content="https://www.aitoollab.top/articles/cases/ai-stem-separation-karaoke-service-side-hustle-20260901/og-cases-ai-stem-separation-karaoke-service-side-hustle-20260901.jpg">
+    <meta property="og:url" content="https://www.aitoollab.top/articles/cases/ai-stem-separation-karaoke-service-side-hustle-20260901/">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="AiToollab">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="帮KTV和翻唱博主做人声分离伴奏提取，StemDeck本地分轨实测，一单30到800实操拆解">
+    <meta name="twitter:description" content="Moises号称7000万用户，LALAL.AI按分钟扣钱。开源项目StemDeck把人声、鼓、贝斯、吉他、钢琴拆成六轨，本地跑不上传。我靠帮KTV店、翻唱博主、音乐老师做人声分离和伴奏提取，一单收30到800">
+    <meta name="twitter:image" content="https://www.aitoollab.top/articles/cases/ai-stem-separation-karaoke-service-side-hustle-20260901/og-cases-ai-stem-separation-karaoke-service-side-hustle-20260901.jpg">
+
+    <link rel="alternate" hreflang="zh-CN" href="https://www.aitoollab.top/articles/cases/ai-stem-separation-karaoke-service-side-hustle-20260901/">
+
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "帮KTV和翻唱博主做人声分离伴奏提取，StemDeck本地分轨实测，一单30到800实操拆解",
+    "description": "Moises号称7000万用户，LALAL.AI按分钟扣钱。开源项目StemDeck把人声、鼓、贝斯、吉他、钢琴拆成六轨，本地跑不上传。我靠帮KTV店、翻唱博主、音乐老师做人声分离和伴奏提取，一单收30到800",
+    "author": {
+        "@type": "Person",
+        "name": "数字生命卡兹克"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "AiToollab",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.aitoollab.top/logo.png"
+        }
+    },
+    "datePublished": "2026-09-01",
+    "dateModified": "2026-09-01",
+    "mainEntityOfPage": "https://www.aitoollab.top/articles/cases/ai-stem-separation-karaoke-service-side-hustle-20260901/",
+    "image": "https://www.aitoollab.top/articles/cases/ai-stem-separation-karaoke-service-side-hustle-20260901/og-cases-ai-stem-separation-karaoke-service-side-hustle-20260901.jpg"
+}
+    </script>
+
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "人声分离和伴奏提取怎么接单赚钱？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "入门档单曲人声或伴奏收30到80元，进阶档六轨分轨加WAV交付收150到400元，高阶档按店或按月包曲库收500到800元以上。客户是KTV店、翻唱博主、音乐老师和婚礼司仪。成本几乎为零，因为StemDeck本地跑不按分钟扣费"
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "StemDeck是什么，跟Moises、LALAL.AI有什么区别？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "StemDeck是2026年5月开源的本地分轨软件，用Meta的Demucs htdemucs_6s模型把歌拆成人声、鼓、贝斯、吉他、钢琴、其他六轨。不注册、不上传、不订阅。Moises是云端练习App，自称7000万用户，年费大约35到95美元。LALAL.AI按分钟扣钱，Lite大约每月10到15美元给90分钟"
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "不会音乐软件能做人声分离服务吗？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "能。StemDeck有安装包，Mac拖进应用程序，Windows解压跑exe。第一次会下载Python运行环境和大约170MB的模型，之后拖进MP3就能出轨。你不需要会调EQ，也不需要会用Ableton，交付前戴耳机听一遍漏音就行"
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "AI分轨会不会漏音，能直接给KTV用吗？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "会漏。混响重、和声多、老歌母带糊的曲子，人声会残在伴奏里。KTV和婚礼这种要干净伴奏的单，交付前必须听全曲，漏得明显就换LALAL.AI或UVR再跑一版。别把第一版当成品甩给客户"
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "去哪里找需要伴奏提取的客户？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "闲鱼和小红书搜人声分离、伴奏提取、卡拉OK伴奏。本地KTV店和琴行最稳，店里曲库缺歌就会找人补。翻唱博主和婚礼司仪是第二波。先免费帮一家店补十首歌，作品集一挂，单子会自己来"
+            }
+        }
+    ]
+}
+    </script>
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "帮KTV和翻唱博主做人声分离伴奏提取，StemDeck本地分轨实测，一单30到800实操拆解 - AiToollab",
+  "description": "用StemDeck本地分轨帮KTV店、翻唱博主和音乐老师做人声分离与伴奏提取，一单30到800",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "装好StemDeck",
+      "text": "从GitHub Release下Mac的dmg或Windows的zip，第一次启动下载运行环境和Demucs模型，大约170MB"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "对齐客户要哪几轨",
+      "text": "KTV要去人声伴奏，翻唱博主要人声加伴奏两份，老师可能只要鼓或贝斯。先问清楚再跑"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "本地分轨并听漏音",
+      "text": "拖进MP3或WAV，出六轨后戴耳机听全曲。漏音明显就换LALAL.AI或UVR补一版，再导出WAV交付"
+    }
+  ]
+}
+    </script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; }
+        h1 { font-size: 2rem; margin-bottom: 20px; color: #111; line-height: 1.35; }
+        .meta { color: #666; margin-bottom: 30px; font-size: 0.9rem; }
+        .content p { margin-bottom: 20px; font-size: 1.1rem; }
+        .content h2 { font-size: 1.5rem; margin: 40px 0 20px; color: #222; }
+        .content h3 { font-size: 1.25rem; margin: 30px 0 15px; color: #333; }
+        .content ul { margin: 0 0 20px 20px; font-size: 1.1rem; }
+        .content li { margin-bottom: 10px; }
+        .content strong { color: #111; }
+        .tip { background: #f0f7ff; padding: 15px; border-radius: 8px; border-left: 4px solid #165DFF; margin: 20px 0; }
+        .tip p { margin-bottom: 8px !important; font-size: 1rem !important; }
+        .tip p:last-child { margin-bottom: 0 !important; }
+        .cta-box { background: #f8f9fa; padding: 25px; border-radius: 8px; margin: 40px 0; text-align: center; border: 1px solid #e8e8e8; }
+        .cta-box p { margin-bottom: 15px !important; font-size: 1.05rem !important; }
+        .btn { display: inline-block; background: #165DFF; color: white; padding: 12px 28px; border-radius: 6px; text-decoration: none; font-size: 1.05rem; font-weight: 500; }
+        .btn:hover { background: #0e42d2; }
+        .related { margin-top: 60px; padding-top: 30px; border-top: 1px solid #eee; }
+        .related h3 { margin-bottom: 20px; font-size: 1.3rem; }
+        .related ul { list-style: none; margin: 0; }
+        .related li { margin-bottom: 12px; }
+        .related a { color: #165DFF; text-decoration: none; font-size: 1.05rem; }
+        .related a:hover { text-decoration: underline; }
+        .faq { margin-top: 50px; padding-top: 30px; border-top: 2px solid #eee; }
+        .faq h2 { margin-bottom: 25px; }
+        .faq-item { margin-bottom: 25px; padding-bottom: 20px; border-bottom: 1px solid #f0f0f0; }
+        .faq-item h3 { font-size: 1.15rem; margin-bottom: 10px; color: #222; }
+        .faq-item p { font-size: 1.05rem !important; color: #555; }
+        @media (max-width: 600px) {
+            h1 { font-size: 1.6rem; }
+            body { padding: 15px; }
+            .content p { font-size: 1rem; }
+        }
+    </style>
+</head>
+<body>
+<nav class="site-topnav" style="position:sticky;top:0;z-index:100;display:flex;align-items:center;gap:16px;padding:10px 24px;background:rgba(13,17,23,0.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--border,#30363d);font-size:14px;">
+    <a href="/" style="display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--text,#e6edf3);font-weight:700;font-size:16px;">
+        <span style="font-size:20px;">🧰</span><span>AiToollab</span>
+    </a>
+    <a href="/" style="color:var(--muted,#8b949e);text-decoration:none;">首页</a>
+    <a href="/tutorials/" style="color:var(--muted,#8b949e);text-decoration:none;">教程</a>
+    <a href="/articles/cases/" style="color:var(--muted,#8b949e);text-decoration:none;">案例</a>
+    <a href="/prompt-pack/?src=apkg" style="color:var(--muted,#8b949e);text-decoration:none;">AI副业实战包</a>
+    <a href="https://xiaobot.net/p/aibianxianlab?refer=baf6c644-27fb-4d70-bcd2-d239d17890a2" style="margin-left:auto;padding:4px 14px;border-radius:6px;background:linear-gradient(135deg,#58a6ff,#3fb950);color:#fff;text-decoration:none;font-weight:600;" target="_blank" rel="noopener">¥39 立即解锁</a>
+</nav>
+
+    <div class="content">
+
+        <h1>帮KTV和翻唱博主做人声分离伴奏提取，StemDeck本地分轨实测，一单30到800实操拆解</h1>
+        <p class="meta">发布于 2026-09-01 · AI副业案例</p>
+
+        <p>事情是这样的。</p>
+
+        <p>上周有个开KTV的远房表哥半夜发微信，说店里新点的歌曲库里没有，客人已经坐进去了。他问我，能不能把原曲的人声抠掉，留个伴奏，十分钟内发给他。</p>
+
+        <p>我以前会让他去Moises上传。上传完排队，免费额度没了就弹订阅。那晚他急，我更急。</p>
+
+        <p>后来我在Hacker News上刷到StemDeck，本地开源分轨，GitHub已经三千多星。不注册，不上传，不按分钟扣钱。拖进MP3，出来人声、鼓、贝斯、吉他、钢琴、其他，六轨。</p>
+
+        <p>我当时就愣住了。</p>
+
+        <p>这不就是KTV店、翻唱博主、音乐老师天天在闲鱼上找的那种活？？？</p>
+
+        <h2>这玩意到底拆的是什么</h2>
+
+        <p>先把话说清楚。人声分离不是什么黑科技新词，就是把已经混好的歌拆开。要伴奏就把人声拿掉，要清唱就把伴奏拿掉，再狠一点，鼓、贝斯、吉他也能单独抽出来。</p>
+
+        <p>云端这条路已经被Moises和LALAL.AI占满了。Moises自己官网写着全球七千万人在用，Berklee音乐学院也认，练习、变调、和弦检测做得漂亮。问题是音频得上传，免费额度很快没，Premium年费大概三十多到九十多美元，Pro更贵。</p>
+
+        <p>LALAL.AI走另一条，按分钟扣。Lite大概每月十到十五美元给九十分钟，一首四分钟的歌，你要人声、鼓、钢琴各拆一次，分钟数直接乘三。量大了比请人还心疼。</p>
+
+        <p>StemDeck把这条路拧回来了。2026年5月开源，Apache-2.0，底层是Meta的Demucs，模型叫htdemucs_6s。Mac有Apple芯片的dmg，Windows有CPU版和NVIDIA CUDA版。第一次启动会下一套Python运行环境和大约170MB的模型，之后离线也能跑。</p>
+
+        <p>作者自己写得很直，不跟商业产品拼音质、拼移动端、拼和弦检测。它就干一件事，本地、免费、六轨、音频不出门。</p>
+
+        <p>怎么说呢，说实话我也不确定它能不能打过Moises的新模型。但这个定位已经够接单了。客户要的不是Grammy工作室那套，是今晚能唱的伴奏，和明天能发的翻唱底轨。</p>
+
+        <h2>为什么普通人能靠这个赚钱</h2>
+
+        <p>你想想看，真正会自己装UVR、会选模型、会听漏音的人，本来就少。闲鱼上搜人声分离、伴奏提取，一堆人在卖，报价从九块九到一百多都有。买家不是音频工程师。买家是KTV店补曲库的小哥，是要发抖音翻唱的女生，是周末教小孩钢琴的老师。</p>
+
+        <p>他们不是不想自己弄。是看到英文界面、GPU、模型名字，第一反应就是算了。</p>
+
+        <p>你帮他把这个算了吃掉，钱就是你的。</p>
+
+        <p>我试下来三个档比较好走。</p>
+
+        <p>入门档，单曲人声分离或伴奏提取，收30到80。客户丢一首MP3过来，你交出人声轨和伴奏轨，MP3就够。这种单快的十分钟一单，适合练手和冲量。</p>
+
+        <p>进阶档，六轨分轨加WAV交付，收150到400。鼓、贝斯、吉他、钢琴、人声、其他全给，再附一份你调过音量的mix。适合翻唱博主、婚礼司仪、短视频剪辑。他们要的是能直接丢进剪映或Cubase的文件，不是一个糊糊的mp3。</p>
+
+        <p>高阶档，按店或按月包曲库，收500到800以上。KTV、琴行、主持团队每个月补几十首新歌，你按月交付。这是订阅生意。一个店稳定下来，比天天刷闲鱼舒服太多。</p>
+
+        <p>成本呢。StemDeck零订阅。电费和硬盘忽略不计。真碰到漏音严重的老歌，拿LALAL.AI的Lite救急，一个月十来美元，摊到几十单上等于没有。</p>
+
+        <h2>工具链，你只需要这几样</h2>
+
+        <p>主力就是StemDeck。GitHub仓库stemdeckapp/stemdeck，Release页下安装包。Mac拖进应用程序，Windows解压跑StemDeck.exe。有NVIDIA显卡就下CUDA那包，大约1.6GB，分轨会快很多。没有显卡也能跑，一首三分钟的歌CPU上可能要等几分钟，喝口水就好。</p>
+
+        <p>备一手Ultimate Vocal Remover，圈里叫UVR。免费本地，模型多，人声干净的时候经常比Demucs更干净。界面丑，参数吓人，所以你别让客户自己装，你自己当后厨用就行。</p>
+
+        <p>再备一手LALAL.AI。客户要极致干净、或者母带糊到StemDeck拆不动的时候再上。别一上来就烧分钟数。</p>
+
+        <p>交付用剪映或任何播放器听一遍就行。你不需要会编曲。之前我写过<a href="/articles/cases/ai-voiceover-short-video-side-hustle-202605/">AI配音短视频</a>和<a href="/articles/cases/ai-video-editing-service-side-hustle-20260728/">AI视频后期</a>，那两套活经常跟伴奏提取叠在一起，客户要一条去人声的BGM再配旁白，你顺手就能接。</p>
+
+        <p>整套工具成本，最低配置一个月不到一百块人民币。很多时候是零。</p>
+
+        <h2>完整流程，从接到需求到交付</h2>
+
+        <p>先问客户要哪几轨。KTV只要去人声。翻唱博主要人声参考轨加伴奏。老师可能只要鼓，或者只要钢琴。别自作主张给六轨，客户听不懂，还会觉得你在凑数。</p>
+
+        <p>然后要原曲文件。让他发MP3或WAV。别主动帮他下有版权争议的歌，StemDeck自己也写了，YouTube链接只是方便，版权是你自己的事。接单就接客户已经有文件的，省心。</p>
+
+        <p>拖进StemDeck。等六轨出来。点solo听人声，再solo听伴奏。漏不漏，耳朵比任何指标准。</p>
+
+        <p>漏得轻，用混音器把人声轨再压一点，导出mix。漏得重，换UVR或LALAL.AI再跑一版，两版听着选。</p>
+
+        <p>交付两包。一包带水印的三十秒试听，一包收款后的WAV或MP3全曲。KTV店可以按曲库打包成一个文件夹，歌名对齐他们点歌系统，这点小事能让你从九块九的摊位里抬出来。</p>
+
+        <p>最后记一笔，哪首歌漏、哪个模型更干净。下次同类曲风你就少试一轮。我自己有个破记事本，写着「港乐混响重，人声走UVR」「电子舞曲Demucs鼓组稳」。土，但省时间。</p>
+
+        <h2>客户从哪来</h2>
+
+        <p>三个地方。</p>
+
+        <p>本地KTV和琴行。他们曲库永远缺新歌和冷门歌。你走进去直接说，我能把原曲做成可唱伴奏，按首收，先免费补十首。店长听得懂这个。</p>
+
+        <p>闲鱼和小红书。关键词就写人声分离、伴奏提取、卡拉OK伴奏、翻唱伴奏代做。作品集放前后对比，原曲十秒，去人声十秒，别整花活。</p>
+
+        <p>翻唱博主和婚礼司仪。短视频要干净BGM，婚礼要现场伴奏。这两类人愿意付钱，因为他们被版权音乐卡过，也被免费在线站卡过额度。</p>
+
+        <p>直播这块也能顺。之前聊过<a href="/articles/cases/ai-live-streaming-assistant-service-side-hustle-20260709/">直播助手</a>，有的主播要无歌词伴奏垫场，你按场次卖比按首卖更合适。</p>
+
+        <h2>踩过的坑</h2>
+
+        <p>第一个坑，把第一版当成品。Demucs对混响重的人声会残。客户戴耳机一听，伴奏里还有哼哼，单子就黄了。交付前必须听全曲，不是听前奏。</p>
+
+        <p>第二个坑，接版权脏的单。有人让你拆热门歌去挂网盘卖曲库，这种活别碰。你接的是替他处理他自己已经有的文件，不是帮他建盗版曲库。这事我自己也踩过坑，后来把那单退了，睡得着。</p>
+
+        <p>第三个坑，承诺广播级音质。StemDeck作者自己都说商业产品音质通常更好。你卖的是快、本地、便宜、够用。客户要去参加正式发行，老实推荐他找录音棚或多花点钱上LALAL.AI的新模型，别硬撑。</p>
+
+        <p>还有个小闲笔。我第一次在CPU笔记本上跑，风扇响得像要起飞，金毛在旁边盯着机箱看了半天。后来换了带显卡的机器，那声音才消停。接批量单，机器真的重要。</p>
+
+        <h2>写在最后</h2>
+
+        <p>我一直觉得，AI时代的信息差不在模型名字，在有人已经把模型包成能拖拽的软件，而需要伴奏的人还在KTV包厢里干等。</p>
+
+        <p>StemDeck这种本地分轨，搜索词还没完全起来。人声分离、伴奏提取、卡拉OK伴奏，这些词会一直有人搜。提前写，提前占。</p>
+
+        <p>表哥那晚的歌，我用StemDeck拆完发过去，包厢里已经开始唱了。他后来按月找我补曲库。一单不大。</p>
+
+        <p>但这类单会一直有。</p>
+
+        <p>早动手的人，吃肉。</p>
+
+        <div class="tip">
+            <p><strong>工具信息</strong></p>
+            <p>StemDeck，开源本地分轨，GitHub stemdeckapp/stemdeck，三千多星，Apache-2.0。模型Demucs htdemucs_6s，六轨，不上传不订阅。Mac和Windows有安装包，第一次下载运行环境和约170MB模型。备选UVR本地免费，LALAL.AI按分钟云端救急。</p>
+        </div>
+
+        <div class="cta-box">
+            <p><strong>📦 我把人声分离接单的话术和交付清单整理进了AI副业实战包</strong></p>
+            <p>含客户问轨话术、漏音检查清单、闲鱼标题模板、按店报价表。复制就能用。</p>
+            <a href="/prompt-pack/?src=apkg" class="btn">AI副业实战包</a>
+        </div>
+
+        <div class="faq">
+            <h2>常见问题</h2>
+
+            <div class="faq-item">
+                <h3>人声分离和伴奏提取怎么接单赚钱？</h3>
+                <p>入门档单曲人声或伴奏收30到80元，进阶档六轨分轨加WAV交付收150到400元，高阶档按店或按月包曲库收500到800元以上。客户是KTV店、翻唱博主、音乐老师和婚礼司仪。成本几乎为零，因为StemDeck本地跑不按分钟扣费。</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>StemDeck是什么，跟Moises、LALAL.AI有什么区别？</h3>
+                <p>StemDeck是2026年5月开源的本地分轨软件，用Meta的Demucs htdemucs_6s模型把歌拆成人声、鼓、贝斯、吉他、钢琴、其他六轨。不注册、不上传、不订阅。Moises是云端练习App，自称7000万用户，年费大约35到95美元。LALAL.AI按分钟扣钱，Lite大约每月10到15美元给90分钟。</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>不会音乐软件能做人声分离服务吗？</h3>
+                <p>能。StemDeck有安装包，Mac拖进应用程序，Windows解压跑exe。第一次会下载Python运行环境和大约170MB的模型，之后拖进MP3就能出轨。你不需要会调EQ，也不需要会用Ableton，交付前戴耳机听一遍漏音就行。</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>AI分轨会不会漏音，能直接给KTV用吗？</h3>
+                <p>会漏。混响重、和声多、老歌母带糊的曲子，人声会残在伴奏里。KTV和婚礼这种要干净伴奏的单，交付前必须听全曲，漏得明显就换LALAL.AI或UVR再跑一版。别把第一版当成品甩给客户。</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>去哪里找需要伴奏提取的客户？</h3>
+                <p>闲鱼和小红书搜人声分离、伴奏提取、卡拉OK伴奏。本地KTV店和琴行最稳，店里曲库缺歌就会找人补。翻唱博主和婚礼司仪是第二波。先免费帮一家店补十首歌，作品集一挂，单子会自己来。</p>
+            </div>
+        </div>
+
+        <div class="related">
+            <h3>相关阅读</h3>
+            <ul>
+                <li><a href="/articles/cases/ai-voiceover-short-video-side-hustle-202605/">AI配音短视频副业，帮商家做解说视频</a></li>
+                <li><a href="/articles/cases/ai-video-editing-service-side-hustle-20260728/">AI视频编辑服务，帮内容创作者做后期，一单300到3000</a></li>
+                <li><a href="/articles/cases/ai-product-video-ad-service-side-hustle-20260830/">帮商家用AI做产品宣传视频，一单300到3000</a></li>
+                <li><a href="/articles/cases/ai-automated-podcast-side-hustle-202606/">AI播客自动化副业，从选题到发布怎么跑</a></li>
+                <li><a href="/articles/cases/ai-live-streaming-assistant-service-side-hustle-20260709/">AI直播助手服务，帮主播做场控和内容</a></li>
+            </ul>
+        </div>
+
+    </div>
+    <div class="footer" style="text-align:center;margin-top:48px;padding-top:24px;border-top:1px solid var(--border);color:var(--muted);font-size:13px;">
+        <p>
+            <a href="/about/" style="color:var(--muted);text-decoration:underline;">关于我们</a> ·
+            <a href="/disclaimer/" style="color:var(--muted);text-decoration:underline;">免责声明</a> ·
+            <a href="/privacy/" style="color:var(--muted);text-decoration:underline;">隐私政策</a> ·
+            <a href="/prompt-pack/?src=apkg" style="color:var(--muted);text-decoration:underline;">AI副业实战包</a>
+        </p>
+        <p style="margin-top:6px;">© 2026 AiToollab · 内容仅供参考，不构成投资建议</p>
+    </div>
+</body>
+</html>
