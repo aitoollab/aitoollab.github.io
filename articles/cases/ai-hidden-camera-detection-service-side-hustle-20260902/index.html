@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>帮酒店民宿做隐形摄像头检测，KAIST SweepLED刷屏后，一单99到800实操拆解 - AiToollab</title>
+    <meta name="description" content="KAIST的SweepLED用不到7美元LED壳和手机，5秒内94%检出率，HN上204分。帮出差的人、女团和民宿管家做隐形摄像头检测，一单99到800，App加廉价红外仪就能接。完整工具链、报价和避坑。">
+    <meta name="description:en" content="KAIST SweepLED uses a sub-$7 LED phone case and AI reflection analysis to catch hidden cameras in under 5 seconds at 94% accuracy. Offer hotel and Airbnb spy-camera checks for 99-800 RMB per room using SafeRoom, Hidden Eye and cheap IR finders." />
+    <meta name="keywords" content="隐形摄像头检测, 酒店防偷拍, 民宿针孔检测, SweepLED, 防偷拍上门, Airbnb查摄像头, 红外检测仪, 针孔摄像头, AI副业">
+    <meta name="keywords:en" content="hidden camera detector, hotel spy camera check, Airbnb hidden camera, SweepLED, IR camera finder, pinhole camera detection, travel privacy service, AI side hustle" />
+    <link rel="canonical" href="https://www.aitoollab.top/articles/cases/ai-hidden-camera-detection-service-side-hustle-20260902/">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="数字生命卡兹克">
+    <meta name="ai-content" content="allowed">
+
+    <meta property="og:title" content="帮酒店民宿做隐形摄像头检测，KAIST SweepLED刷屏后，一单99到800实操拆解">
+    <meta property="og:description" content="KAIST的SweepLED用不到7美元LED壳和手机，5秒内94%检出率。帮出差的人、女团和民宿管家做隐形摄像头检测，一单99到800。">
+    <meta property="og:image" content="https://www.aitoollab.top/articles/cases/ai-hidden-camera-detection-service-side-hustle-20260902/og-cases-ai-hidden-camera-detection-service-side-hustle-20260902.jpg">
+    <meta property="og:url" content="https://www.aitoollab.top/articles/cases/ai-hidden-camera-detection-service-side-hustle-20260902/">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="AiToollab">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="帮酒店民宿做隐形摄像头检测，KAIST SweepLED刷屏后，一单99到800实操拆解">
+    <meta name="twitter:description" content="KAIST的SweepLED用不到7美元LED壳和手机，5秒内94%检出率。帮出差的人、女团和民宿管家做隐形摄像头检测，一单99到800。">
+    <meta name="twitter:image" content="https://www.aitoollab.top/articles/cases/ai-hidden-camera-detection-service-side-hustle-20260902/og-cases-ai-hidden-camera-detection-service-side-hustle-20260902.jpg">
+
+    <link rel="alternate" hreflang="zh-CN" href="https://www.aitoollab.top/articles/cases/ai-hidden-camera-detection-service-side-hustle-20260902/">
+
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "帮酒店民宿做隐形摄像头检测，KAIST SweepLED刷屏后，一单99到800实操拆解",
+    "description": "KAIST的SweepLED用不到7美元LED壳和手机，5秒内94%检出率，HN上204分。帮出差的人、女团和民宿管家做隐形摄像头检测，一单99到800。",
+    "author": {
+        "@type": "Person",
+        "name": "数字生命卡兹克"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "AiToollab",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.aitoollab.top/logo.png"
+        }
+    },
+    "datePublished": "2026-09-02",
+    "dateModified": "2026-09-02",
+    "mainEntityOfPage": "https://www.aitoollab.top/articles/cases/ai-hidden-camera-detection-service-side-hustle-20260902/",
+    "image": "https://www.aitoollab.top/articles/cases/ai-hidden-camera-detection-service-side-hustle-20260902/og-cases-ai-hidden-camera-detection-service-side-hustle-20260902.jpg"
+}
+    </script>
+
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "隐形摄像头检测怎么接单赚钱？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "入门档单次酒店或民宿扫房收99到199元，进阶档整套房加PDF报告收300到800元，高阶档给民宿管家或酒店前台做月检收1500到4000元。客户是出差的人、女团、短租管家。成本是一台廉价红外仪加一两个App订阅。"
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "SweepLED是什么，现在能买到吗？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "SweepLED是KAIST、新加坡国立大学和新加坡管理大学在ACM MobiSys 2026上发表的原型。手机加不到7美元的LED壳，多角度扫光，AI看反射形变，30件物品上大约94%检出率，单件不到5秒。它还不是货架商品。你现在接单用SafeRoom、Hidden Eye、DETEKCAM和淘宝红外检测仪，把SweepLED当权威背书和未来卖点。"
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "不会技术能做酒店防偷拍服务吗？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "能。入门不写代码。关掉灯用手机前置摄像头看红外灯，再用红外检测仪扫烟雾报警器、插座、时钟、充电器，最后用SafeRoom或Veilbreaker扫Wi-Fi和蓝牙。你要练的是检查顺序和一份能给平台退款用的照片报告。"
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "手机App真能查出针孔摄像头吗？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "能查一部分，不是全部。联网的海康、大华、Reolink这类相机会在Wi-Fi或蓝牙里露头。带夜视红外的会在关灯后被前置摄像头看到。本地存储、不开红外、藏在螺丝孔后面的，App经常漏。所以单靠磁强计那种App不够，红外加网络加肉眼清单要一起上。"
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "去哪里找需要防偷拍检测的客户？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "小红书和闲鱼搜酒店防偷拍、民宿针孔检测、入住查摄像头。出差群、女大学生宿舍群、婚礼跟拍团队也有需求。民宿管家比散客更稳，按月包几套房子。先免费帮一个熟人扫一晚，作品就是前后对比照片和一份时间戳报告。"
+            }
+        }
+    ]
+}
+    </script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; }
+        h1 { font-size: 2.2rem; margin-bottom: 20px; color: #111; line-height: 1.3; }
+        .meta { color: #666; margin-bottom: 30px; font-size: 0.9rem; }
+        .content p { margin-bottom: 20px; font-size: 1.1rem; }
+        .content h2 { font-size: 1.6rem; margin: 40px 0 20px; color: #222; }
+        .tip { background: #f0f7ff; padding: 15px; border-radius: 8px; border-left: 4px solid #165DFF; margin: 20px 0; }
+        .cta-box { background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 40px 0; text-align: center; }
+        .btn { display: inline-block; background: #165DFF; color: white; padding: 10px 20px; border-radius: 6px; text-decoration: none; margin-top: 10px; }
+        .related { margin-top: 60px; padding-top: 30px; border-top: 1px solid #eee; }
+        .related h3 { margin-bottom: 20px; }
+        .related ul { list-style: none; margin: 0; }
+        .related li { margin-bottom: 12px; }
+        .related a { color: #165DFF; text-decoration: none; font-size: 1.05rem; }
+        .related a:hover { text-decoration: underline; }
+        .faq { margin-top: 50px; padding-top: 30px; border-top: 2px solid #eee; }
+        .faq h2 { margin-bottom: 25px; }
+        .faq-item { margin-bottom: 25px; padding-bottom: 20px; border-bottom: 1px solid #f0f0f0; }
+        .faq-item h3 { font-size: 1.15rem; margin-bottom: 10px; color: #222; }
+        .faq-item p { font-size: 1.05rem !important; color: #555; }
+        @media (max-width: 600px) {
+            h1 { font-size: 1.6rem; }
+            body { padding: 15px; }
+            .content p { font-size: 1rem; }
+        }
+    </style>
+</head>
+<body>
+<nav class="site-topnav" style="position:sticky;top:0;z-index:100;display:flex;align-items:center;gap:16px;padding:10px 24px;background:rgba(13,17,23,0.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--border,#30363d);font-size:14px;">
+    <a href="/" style="display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--text,#e6edf3);font-weight:700;font-size:16px;">
+        <span style="font-size:20px;">🧰</span><span>AiToollab</span>
+    </a>
+    <a href="/" style="color:var(--muted,#8b949e);text-decoration:none;">首页</a>
+    <a href="/tutorials/" style="color:var(--muted,#8b949e);text-decoration:none;">教程</a>
+    <a href="/articles/cases/" style="color:var(--muted,#8b949e);text-decoration:none;">案例</a>
+    <a href="/prompt-pack/?src=apkg" style="color:var(--muted,#8b949e);text-decoration:none;">AI副业实战包</a>
+    <a href="https://xiaobot.net/p/aibianxianlab?refer=baf6c644-27fb-4d70-bcd2-d239d17890a2" style="margin-left:auto;padding:4px 14px;border-radius:6px;background:linear-gradient(135deg,#58a6ff,#3fb950);color:#fff;text-decoration:none;font-weight:600;" target="_blank" rel="noopener">¥39 立即解锁</a>
+</nav>
+
+    <div class="content">
+
+        <h1>帮酒店民宿做隐形摄像头检测，KAIST SweepLED刷屏后，一单99到800实操拆解</h1>
+        <p class="meta">发布于 2026-09-02 · AI副业案例</p>
+
+        <p>事情是这样的。</p>
+
+        <p>这两天Hacker News上有条204分的帖，标题就一句话，Smartphone LED detects hidden cameras with AI。点进去是韩国KAIST的新闻稿。手机壳上塞一圈LED，成本不到7美元，大概一万韩元。镜头对着充电器、闹钟、遥控器，灯转一圈，AI看反射怎么变形。单件不到五秒，三十件物品上大约94%能分出是不是针孔。</p>
+
+        <p>我当时就愣住了。</p>
+
+        <p>不是因为论文多高级。是因为我认识的人里，真有人出差住进民宿，第一件事不是放行李，是先拿红外笔在房间里转一圈。转完还是不踏实。问我，有没有更靠谱的办法。</p>
+
+        <p>有。而且这活能接单？？？</p>
+
+        <h2>这玩意到底在查什么</h2>
+
+        <p>坦率的讲，防偷拍这事一点都不新。烟雾报警器、USB充电器、相框、插座，这些位置被拍过太多次了。亚马逊上几十块的镜头检测仪，淘宝上十九块九的红外笔，一直有人在卖。</p>
+
+        <p>旧办法的坑也清楚。人眼看亮点，金属、玻璃、亮塑料都会反光，假阳性一堆。磁强计App更离谱，离充电头近一点就叫，离真镜头远一点就哑。客户花了钱，越查越慌。</p>
+
+        <p>SweepLED把灯和摄像头拆开了。手机端端正正拿着，LED从不同角度扫，普通反光会跟着灯走或者干脆消失，镜头内部有镜片、光圈、传感器，反射会拧出一种很怪的形变。深度学习吃的就是这种随时间变的形状，不是某一个亮点。</p>
+
+        <p>论文叫Hide-and-Sweep，一作是KAIST博士生Jonghyuk Yun，通讯作者Jun Han，跟新加坡国立大学、新加坡管理大学一起做，2026年6月20日在ACM MobiSys上讲的。实验室里十二件藏摄像头的物件，十八件会反光的日常东西。</p>
+
+        <p>怎么说呢，它现在还不是货架上能下单的商品。。。别跟客户吹你手里有KAIST同款。你手里有的是同一套需求，和已经能买到的半成品。</p>
+
+        <p>需求一直在。商品还没跟上。中间那截，就是你的单。</p>
+
+        <h2>为什么普通人能靠这个赚钱</h2>
+
+        <p>你想想看，真正会自己关灯、会看红外、会扫Wi-Fi设备列表、还知道海康和大华网卡前缀的人，本来就少。出差的人、单独旅行的女生、带小孩住短租的家长，他们不是不想自己弄。是刚进门又累又饿，英文App一堆权限弹窗，第一反应就是算了。</p>
+
+        <p>算了的代价，他们自己清楚。所以有人愿意掏一两百块，让你进门扫二十分钟，出门留一份带时间戳的照片报告。</p>
+
+        <p>我试下来三个档比较好走。</p>
+
+        <p>入门档，单次入住扫一间房，收99到199。关灯看红外，红外仪扫烟雾报警器、插座、时钟、充电器、花洒和镜子边，再跑一遍SafeRoom或Veilbreaker的Wi-Fi加蓝牙。交出十二到二十张标注过的照片，加一句结论。适合练手，也适合住同一栋楼里顺手接邻居。</p>
+
+        <p>进阶档，整套房加PDF报告，收300到800。客厅、卧室、卫生间分开扫，可疑设备截网卡厂商和信号强度，报告能直接丢给Airbnb客服或酒店前台。女团、婚礼跟拍、商务出差小团队吃这档。他们要的是能退款、能报警的材料，不是一句「好像没事」。</p>
+
+        <p>高阶档，按月包民宿管家或小型酒店前台，收1500到4000。每套房子退房后你去扫一次，或者培训前台用同一套清单自己扫，你只做抽检和报告模板。这是订阅。一套房子稳定下来，比天天刷闲鱼舒服太多。</p>
+
+        <p>成本呢。淘宝红外检测仪大概二三十到八十。iPhone上SafeRoom年费54美元，大约每周4.99美元，有试用。Android上Veilbreaker按月订阅，比一周十美元的磁强计App便宜。Hidden Eye、DETEKCAM、NoSpy也能凑合，免费档够练手。一个月摊下来，经常不到一张房费。</p>
+
+        <h2>工具链，你只需要这几样</h2>
+
+        <p>主力先别幻想SweepLED的壳。等它量产再说。现在能干活的是三层。</p>
+
+        <p>第一层，关灯，用手机前置摄像头慢慢扫。很多夜视针孔会打红外，人眼看不见，前置镜头滤红外没那么狠，屏幕上会冒白点或粉点。电视遥控器也能拿来自测，你对着前置按一下，能看见闪，说明这招是真的，不是玄学。</p>
+
+        <p>第二层，红外镜头检测仪。就是那种带红光小孔、凑近看反光圈的小盒子。别买最便宜到不能对焦的。扫的时候贴着物体表面走，烟雾报警器、插座面板、时钟正面、充电器的指示灯孔，这些是高频藏点。</p>
+
+        <p>第三层，网络。iPhone用SafeRoom，走Bonjour把局域网设备拉出来，再扫一遍蓝牙。Android用Veilbreaker更狠一点，能看MAC是不是海康大华，还能探554这类视频端口。酒店客房Wi-Fi经常隔离得很死，这一层在民宿里更有用。</p>
+
+        <p>Hidden Eye号称过百万用户，DETEKCAM走AI加红外加磁检，NoSpy把AI、红外、磁力和Wi-Fi捆在一起。这些App营销词都很满。我自己的感受是，把它们当辅助，别当法庭证据。磁强计离金属近就会叫，你得用眼睛和红外把假警报压下去。</p>
+
+        <p>交付用手机相册加一份简单PDF就行。Canva或任何文档都行。你不需要会写安卓。之前我写过<a href="/articles/cases/ai-image-detection-compliance-service-side-hustle-20260721/">AI图片真伪检测</a>和<a href="/articles/cases/ai-voice-deepfake-detection-service-side-hustle-20260716/">AI语音鉴伪</a>，那两套活经常跟防偷拍叠在一起，客户要的是「这房间、这段视频、这段声音，有没有被人做手脚」。你顺手就能接。</p>
+
+        <p>整套工具成本，最低配置一个月一两百块人民币。很多时候更低。</p>
+
+        <h2>完整流程，从接到需求到交付</h2>
+
+        <p>进门先别放行李。先拍照，门牌、床、卫生间全景，时间戳开着。这是报告封面，也是你自己的保护。真查出东西，你需要证明你没动过现场。</p>
+
+        <p>然后关主灯，留一条缝。前置摄像头沿天花板走一圈，烟雾报警器、空调出风口、挂画、电视支架，这些位置停两秒。看到稳定的白点，标位置，开灯用红外仪凑近确认是不是镜片反光。</p>
+
+        <p>开灯之后按清单走。插座、USB充电头、闹钟、遥控器、花洒头、镜柜缝、床头灯、玩偶眼睛。每处一张近景。红外仪看到圆环再拍一张带红光的。</p>
+
+        <p>连上房间Wi-Fi。跑SafeRoom或Veilbreaker。未知厂商、摄像头品牌名、没名字但信号特别强的蓝牙，都记下来。民宿比酒店容易扫到，因为设备都在同一网段。</p>
+
+        <p>交付两包。一包当场口头结论，让客户先敢洗澡。一包十分钟内发出的PDF，含时间、房号、照片、网络设备列表、你的判断。判断只写「发现可疑反光，建议报警或联系平台」，别写「这就是偷拍摄像头」。你不是鉴定机构。</p>
+
+        <p>最后记一笔，哪家连锁酒店Wi-Fi隔离、哪类充电器爱假阳性、哪款红外仪对黑塑料瞎。土，但下一单少走十分钟。</p>
+
+        <p>出差规划那摊，之前聊过<a href="/articles/cases/ai-travel-planning-service-side-hustle-20260725/">AI旅行规划</a>，有的客户本来就找你订行程，入住检测可以做成行程里的附加项，比单独卖扫房好开口。</p>
+
+        <h2>客户从哪来</h2>
+
+        <p>三个地方。</p>
+
+        <p>小红书和闲鱼。关键词就写酒店防偷拍、民宿针孔检测、入住查摄像头、女团出行检测。作品集放检查顺序和报告封面，别放别人的裸镜头，那是犯罪现场不是作品。</p>
+
+        <p>民宿管家和小型酒店。他们怕的是差评和报警。你按月包扫，退房后二十分钟进房，比等平台来查体面。先免费帮一家扫一周，把模板留下。</p>
+
+        <p>线下社群。高校女生群、婚礼跟拍微信群、商务出差群。一句话就够，入住二十分钟，出报告，可疑立刻停。价格贴在第一句，别藏。</p>
+
+        <p>网站安全那摊我以前写过<a href="/articles/cases/ai-website-security-testing-side-hustle-20260625/">网站安全测试</a>，有的客户是公司行政，既怕会议室被录，也怕官网被挂马。会议室扫房和网站审计可以打包，别把人当一次性客户。</p>
+
+        <h2>踩过的坑</h2>
+
+        <p>第一个坑，把App绿勾当结论。磁强计叫了十次，九次是床架和音箱。客户戴着耳机听你解释「这是误报」，信任直接掉。交付前必须用红外和肉眼过一遍，App只是线索。</p>
+
+        <p>第二个坑，承诺百分之百。SweepLED实验室都只到大约94%，还是固定三十件物品。专业TSCM那种开箱拆墙的活，你干不了，也别报价去干。你卖的是消费级快检，够劝退大多数廉价针孔，劝不退国家队。</p>
+
+        <p>第三个坑，自己上手拆设备。查出可疑，拍照，出门，报警或找前台。别拧开烟雾报警器。真是证据，你一拆就乱了。这个事儿我也踩过坑，后来把那单停了，只出报告。</p>
+
+        <p>还有个闲笔。我第一次关灯扫房，走廊里保洁推车轱辘响，我蹲在插座前面举着红外仪，像在干坏事。后来改成先跟前台打招呼，说我是客人请的隐私检测。那几分钟体面很多。</p>
+
+        <p>法律这块说真的，你提供的是检测服务，不是担保房间绝对安全。合同里写清范围，红外可见、网络可见、清单内位置。超出的不负责。别把「绝对没有针孔」写进朋友圈。</p>
+
+        <h2>写在最后</h2>
+
+        <p>我一直觉得，AI时代的信息差不在模型名字，在有人已经把反射形变喂进网络，而住店的人还在用十九块九的红外笔瞎转。</p>
+
+        <p>SweepLED这种手机加LED壳，搜索词还没完全起来。隐形摄像头检测、酒店防偷拍、民宿针孔检测，这些词会一直有人搜。提前写，提前占。</p>
+
+        <p>KAIST那篇论文现在还躺在会议上。货架上的壳不知道哪天才有。可房间每天都有人住。</p>
+
+        <p>你现在就能扫。</p>
+
+        <p>早动手的人，吃肉。</p>
+
+        <div class="tip">
+            <p><strong>工具信息</strong></p>
+            <p>SweepLED，KAIST与NUS、SMU合作，ACM MobiSys 2026论文Hide-and-Sweep，LED壳核心件不到7美元，实验室约94%检出率，单件不到5秒。接单现用SafeRoom（约54美元/年）、Veilbreaker、Hidden Eye、DETEKCAM、NoSpy，外加淘宝红外镜头检测仪。前置摄像头关灯看红外是零成本第一层。</p>
+        </div>
+
+        <div class="cta-box">
+            <p><strong>📦 我把入住扫房的清单和报告话术整理进了AI副业实战包</strong></p>
+            <p>含十二处藏点顺序、误报对照、平台退款用报告模板、闲鱼标题。复制就能用。</p>
+            <a href="/prompt-pack/?src=apkg" class="btn">AI副业实战包</a>
+        </div>
+
+        <div class="faq">
+            <h2>常见问题</h2>
+
+            <div class="faq-item">
+                <h3>隐形摄像头检测怎么接单赚钱？</h3>
+                <p>入门档单次酒店或民宿扫房收99到199元，进阶档整套房加PDF报告收300到800元，高阶档给民宿管家或酒店前台做月检收1500到4000元。客户是出差的人、女团、短租管家。成本是一台廉价红外仪加一两个App订阅。</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>SweepLED是什么，现在能买到吗？</h3>
+                <p>SweepLED是KAIST、新加坡国立大学和新加坡管理大学在ACM MobiSys 2026上发表的原型。手机加不到7美元的LED壳，多角度扫光，AI看反射形变，30件物品上大约94%检出率，单件不到5秒。它还不是货架商品。你现在接单用SafeRoom、Hidden Eye、DETEKCAM和淘宝红外检测仪，把SweepLED当权威背书和未来卖点。</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>不会技术能做酒店防偷拍服务吗？</h3>
+                <p>能。入门不写代码。关掉灯用手机前置摄像头看红外灯，再用红外检测仪扫烟雾报警器、插座、时钟、充电器，最后用SafeRoom或Veilbreaker扫Wi-Fi和蓝牙。你要练的是检查顺序和一份能给平台退款用的照片报告。</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>手机App真能查出针孔摄像头吗？</h3>
+                <p>能查一部分，不是全部。联网的海康、大华、Reolink这类相机会在Wi-Fi或蓝牙里露头。带夜视红外的会在关灯后被前置摄像头看到。本地存储、不开红外、藏在螺丝孔后面的，App经常漏。所以单靠磁强计那种App不够，红外加网络加肉眼清单要一起上。</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>去哪里找需要防偷拍检测的客户？</h3>
+                <p>小红书和闲鱼搜酒店防偷拍、民宿针孔检测、入住查摄像头。出差群、女大学生宿舍群、婚礼跟拍团队也有需求。民宿管家比散客更稳，按月包几套房子。先免费帮一个熟人扫一晚，作品就是前后对比照片和一份时间戳报告。</p>
+            </div>
+        </div>
+
+        <div class="related">
+            <h3>相关阅读</h3>
+            <ul>
+                <li><a href="/articles/cases/ai-image-detection-compliance-service-side-hustle-20260721/">AI图片真伪检测，帮商家做合规审核</a></li>
+                <li><a href="/articles/cases/ai-voice-deepfake-detection-service-side-hustle-20260716/">AI语音鉴伪，帮人识别伪造录音</a></li>
+                <li><a href="/articles/cases/ai-travel-planning-service-side-hustle-20260725/">AI旅行规划服务，帮人做行程怎么报价</a></li>
+                <li><a href="/articles/cases/ai-website-security-testing-side-hustle-20260625/">AI网站安全测试，帮小商家查漏洞</a></li>
+                <li><a href="/articles/cases/ai-website-accessibility-audit-side-hustle-20260622/">网站无障碍审计，帮企业过合规</a></li>
+            </ul>
+        </div>
+
+    </div>
+    <div class="footer" style="text-align:center;margin-top:48px;padding-top:24px;border-top:1px solid var(--border);color:var(--muted);font-size:13px;">
+        <p>
+            <a href="/about/" style="color:var(--muted);text-decoration:underline;">关于我们</a> ·
+            <a href="/disclaimer/" style="color:var(--muted);text-decoration:underline;">免责声明</a> ·
+            <a href="/privacy/" style="color:var(--muted);text-decoration:underline;">隐私政策</a> ·
+            <a href="/prompt-pack/?src=apkg" style="color:var(--muted);text-decoration:underline;">AI副业实战包</a>
+        </p>
+        <p style="margin-top:6px;">© 2026 AiToollab · 内容仅供参考，不构成投资建议</p>
+    </div>
+</body>
+</html>

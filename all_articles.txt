@@ -237,3 +237,4 @@ tutorials/ai-zhihu-answer-monetize-tutorial-20260831/
 articles/news/gemini-omni-1-1-flash-video-side-hustle-20260901/index.html
 articles/cases/ai-stem-separation-karaoke-service-side-hustle-20260901/index.html
 articles/news/instagram-ai-generated-profile-label-side-hustle-20260902/index.html
+articles/cases/ai-hidden-camera-detection-service-side-hustle-20260902/index.html
