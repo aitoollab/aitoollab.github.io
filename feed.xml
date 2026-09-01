@@ -1,132 +1,215 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>AiToollab - AI副业加速器</title>
-  <subtitle>2026年最适合普通人的AI副业实战指南，含提示词、工具推荐、变现方法</subtitle>
+  <subtitle>普通人能照着做的AI副业教程、案例和热点，不含空话。</subtitle>
   <link href="https://www.aitoollab.top/feed.xml" rel="self"/>
   <link href="https://www.aitoollab.top/"/>
   <id>https://www.aitoollab.top/</id>
-  <updated>2026-04-28T08:00:00+08:00</updated>
+  <updated>2026-09-02T08:00:00+08:00</updated>
   <author>
     <name>AiToollab</name>
-    <uri>https://github.com/AiToollab</uri>
+    <uri>https://www.aitoollab.top</uri>
   </author>
   <generator uri="https://www.aitoollab.top/">AiToollab Generator</generator>
 
   <entry>
-    <title>洞穴人的逆袭：GitHub 47k星项目揭示的AI副业新方向</title>
-    <link href="https://www.aitoollab.top/caveman-side-hustle/"/>
-    <id>https://www.aitoollab.top/caveman-side-hustle/</id>
-    <updated>2026-04-28T08:00:00+08:00</updated>
-    <published>2026-04-28T08:00:00+08:00</published>
-    <summary type="text">从caveman项目看AI副业机会：token优化已成为新战场。3种变现路径分析，附从0到月入1万的具体步骤。</summary>
-    <category term="AI副业"/>
-    <category term="token优化"/>
-    <category term="LLM成本优化"/>
+    <title>Instagram给AI人设贴标限流 普通人怎么靠真人账号赚钱</title>
+    <link href="https://www.aitoollab.top/articles/news/instagram-ai-generated-profile-label-side-hustle-20260902/"/>
+    <id>https://www.aitoollab.top/articles/news/instagram-ai-generated-profile-label-side-hustle-20260902/</id>
+    <updated>2026-09-02T08:00:00+08:00</updated>
+    <published>2026-09-02T08:00:00+08:00</published>
+    <summary type="text">Instagram 8月31日把AI creator改成AI-generated profile，不贴标的假人设号会被踢出Reels和Explore推荐。普通人怎么靠真人账号赚钱，帮商家养号、做合规体检、卖真人感内容，三个方向拆开讲。</summary>
+    <category term="热点"/>
   </entry>
 
   <entry>
-    <title>AI副业加速器｜2026年最适合普通人的10种副业方向（实测有效）</title>
-    <link href="https://www.aitoollab.top/"/>
-    <id>https://www.aitoollab.top/</id>
-    <updated>2026-04-20T00:00:00+08:00</updated>
-    <published>2026-04-18T00:00:00+08:00</published>
-    <summary type="text">实测10种AI副业方向，含具体提示词、使用方法和收益分析。包含副业选择、变现路径、内容创作、数据分析等完整指南。</summary>
-    <category term="AI副业"/>
-    <category term="副业赚钱"/>
-    <category term="ChatGPT副业"/>
+    <title>帮酒店民宿做隐形摄像头检测，KAIST SweepLED刷屏后，一单99到800实操拆解</title>
+    <link href="https://www.aitoollab.top/articles/cases/ai-hidden-camera-detection-service-side-hustle-20260902/"/>
+    <id>https://www.aitoollab.top/articles/cases/ai-hidden-camera-detection-service-side-hustle-20260902/</id>
+    <updated>2026-09-02T08:00:00+08:00</updated>
+    <published>2026-09-02T08:00:00+08:00</published>
+    <summary type="text">KAIST的SweepLED用不到7美元LED壳和手机，5秒内94%检出率，HN上204分。帮出差的人、女团和民宿管家做隐形摄像头检测，一单99到800，App加廉价红外仪就能接。完整工具链、报价和避坑。</summary>
+    <category term="案例"/>
   </entry>
 
   <entry>
-    <title>AI变现工具大全｜2026年普通人可用的AI赚钱工具清单（实测推荐）</title>
-    <link href="https://www.aitoollab.top/ai-tools/"/>
-    <id>https://www.aitoollab.top/ai-tools/</id>
-    <updated>2026-04-19T00:00:00+08:00</updated>
-    <published>2026-04-19T00:00:00+08:00</published>
-    <summary type="text">2026年最全AI变现工具清单，覆盖内容创作、编程自动化、数据分析、图像生成等12大场景。普通人用这些工具从零开始做副业，月入3000+。</summary>
-    <category term="AI副业工具"/>
-    <category term="AI变现"/>
-    <category term="副业赚钱"/>
+    <title>小红书好物分享怎么赚钱 0粉也能挂链接的3步</title>
+    <link href="https://www.aitoollab.top/tutorials/xiaohongshu-haowu-share-money-tutorial-20260902/"/>
+    <id>https://www.aitoollab.top/tutorials/xiaohongshu-haowu-share-money-tutorial-20260902/</id>
+    <updated>2026-09-02T08:00:00+08:00</updated>
+    <published>2026-09-02T08:00:00+08:00</published>
+    <summary type="text">小红书好物分享怎么赚钱？别等粉丝。开通蒲公英或购物笔记，用AI写评测再自己改口吻，0粉也能挂链接拿佣金。我挂了12条，最低一条也出过单。</summary>
+    <category term="教程"/>
   </entry>
 
   <entry>
-    <title>普通人如何用AI副业赚钱｜2026完整实战指南</title>
-    <link href="https://www.aitoollab.top/ai-side-hustle-guide/"/>
-    <id>https://www.aitoollab.top/ai-side-hustle-guide/</id>
-    <updated>2026-04-20T00:00:00+08:00</updated>
-    <published>2026-04-20T00:00:00+08:00</published>
-    <summary type="text">普通人如何用AI副业赚钱？本指南覆盖副业选择、提示词使用、变现路径三大核心模块，附50+实战提示词。是SEO优化内容，针对"AI副业赚钱"等关键词。</summary>
-    <category term="AI副业"/>
-    <category term="副业指南"/>
-    <category term="AI副业赚钱"/>
+    <title>自建的工具网站如何推广 3条不用砸广告的路子</title>
+    <link href="https://www.aitoollab.top/tutorials/ai-tool-website-promo-tutorial-20260902/"/>
+    <id>https://www.aitoollab.top/tutorials/ai-tool-website-promo-tutorial-20260902/</id>
+    <updated>2026-09-02T08:00:00+08:00</updated>
+    <published>2026-09-02T08:00:00+08:00</published>
+    <summary type="text">自建的工具网站如何推广？别先买流量。用教程占长尾词、用知乎小红书带人、把用法拆成提示词再卖，三条路我都试过，日活从四十人往上抬。</summary>
+    <category term="教程"/>
   </entry>
 
   <entry>
-    <title>AI副业提示词全家桶｜50+可直接使用的AI副业提示词</title>
-    <link href="https://www.aitoollab.top/prompt-pack/"/>
-    <id>https://www.aitoollab.top/prompt-pack/</id>
-    <updated>2026-04-20T00:00:00+08:00</updated>
-    <published>2026-04-20T00:00:00+08:00</published>
-    <summary type="text">50+个实测有效的AI副业提示词，覆盖副业选择、变现路径、内容创作、数据分析。ChatGPT/Claude/文心一言通用。一次性买断，永久更新。¥39首批特价。</summary>
-    <category term="AI副业"/>
-    <category term="提示词"/>
-    <category term="ChatGPT提示词"/>
+    <title>AI写卡副业怎么做 单词卡知识卡闲鱼接单教程</title>
+    <link href="https://www.aitoollab.top/tutorials/ai-flashcard-writing-side-hustle-tutorial-20260902/"/>
+    <id>https://www.aitoollab.top/tutorials/ai-flashcard-writing-side-hustle-tutorial-20260902/</id>
+    <updated>2026-09-02T08:00:00+08:00</updated>
+    <published>2026-09-02T08:00:00+08:00</published>
+    <summary type="text">AI写卡副业怎么做？家长要单词闪卡，宝妈要知识卡，闲鱼一单30到80。用ChatGPT出题面，Canva排版，别做成绘本。我接了9单，最快一晚交稿。</summary>
+    <category term="教程"/>
   </entry>
 
   <entry>
-    <title>为本地商家搭建AI智能体：月入8000+的蓝海副业</title>
-    <link href="https://www.aitoollab.top/local-business-ai-agent/"/>
-    <id>https://www.aitoollab.top/local-business-ai-agent/</id>
-    <updated>2026-04-20T00:00:00+08:00</updated>
-    <published>2026-04-20T00:00:00+08:00</published>
-    <summary type="text">本地商家AI智能体服务是2026年蓝海副业方向。无需编程，帮商家配置AI客服/预约助手/营销系统。单次搭建费1000-3000元，月维护费300-1000元。</summary>
-    <category term="本地商家AI"/>
-    <category term="AI智能体副业"/>
-    <category term="AI客服搭建"/>
+    <title>Gemini Omni 1.1 Flash发布 普通人怎么用它接短视频单</title>
+    <link href="https://www.aitoollab.top/articles/news/gemini-omni-1-1-flash-video-side-hustle-20260901/"/>
+    <id>https://www.aitoollab.top/articles/news/gemini-omni-1-1-flash-video-side-hustle-20260901/</id>
+    <updated>2026-09-01T08:00:00+08:00</updated>
+    <published>2026-09-01T08:00:00+08:00</published>
+    <summary type="text">Google正式上线Gemini Omni 1.1 Flash，360p草稿只要720p三分之一价格，还能首尾帧控制和4K放大。普通人怎么用它接短视频单、做产品演示、卖视频工作流，三个方向拆开讲。</summary>
+    <category term="热点"/>
   </entry>
 
   <entry>
-    <title>AI副业情报｜所有文章列表</title>
-    <link href="https://www.aitoollab.top/articles/"/>
-    <id>https://www.aitoollab.top/articles/</id>
-    <updated>2026-04-20T00:00:00+08:00</updated>
-    <published>2026-04-20T00:00:00+08:00</published>
-    <summary type="text">AiToollab所有AI副业实战文章列表，包括副业方向、变现路径、工具推荐、提示词教程。</summary>
-    <category term="AI副业"/>
-    <category term="文章列表"/>
+    <title>帮KTV和翻唱博主做人声分离伴奏提取，StemDeck本地分轨实测，一单30到800实操拆解</title>
+    <link href="https://www.aitoollab.top/articles/cases/ai-stem-separation-karaoke-service-side-hustle-20260901/"/>
+    <id>https://www.aitoollab.top/articles/cases/ai-stem-separation-karaoke-service-side-hustle-20260901/</id>
+    <updated>2026-09-01T08:00:00+08:00</updated>
+    <published>2026-09-01T08:00:00+08:00</published>
+    <summary type="text">Moises号称7000万用户，LALAL.AI按分钟扣钱。开源项目StemDeck把人声、鼓、贝斯、吉他、钢琴拆成六轨，本地跑不上传。我靠帮KTV店、翻唱博主、音乐老师做人声分离和伴奏提取，一单收30到800</summary>
+    <category term="案例"/>
   </entry>
 
   <entry>
-    <title>Multi-Agent多智能体副业：2026年AI副业新风向</title>
-    <link href="https://www.aitoollab.top/multi-agent-side-hustle/"/>
-    <id>https://www.aitoollab.top/multi-agent-side-hustle/</id>
-    <updated>2026-04-20T00:00:00+08:00</updated>
-    <published>2026-04-20T00:00:00+08:00</published>
-    <summary type="text">Multi-Agent多智能体是2026年AI副业新风口。5个副业方向+3大主流框架对比+从0搭建教程。openai-agents-python、crewAI、AutoGen完整使用指南。</summary>
-    <category term="Multi-Agent"/>
-    <category term="AI Agent副业"/>
-    <category term="AutoGPT副业"/>
+    <title>腾讯开源Hy4顶级模型 普通人怎么靠它接单赚钱</title>
+    <link href="https://www.aitoollab.top/articles/news/tencent-hy4-open-source-side-hustle-20260831/"/>
+    <id>https://www.aitoollab.top/articles/news/tencent-hy4-open-source-side-hustle-20260831/</id>
+    <updated>2026-08-31T08:00:00+08:00</updated>
+    <published>2026-08-31T08:00:00+08:00</published>
+    <summary type="text">腾讯开源Hy4大模型，7700亿参数100万上下文，免费开放两周。普通人怎么用它做办公自动化、长文档处理、私有化部署赚钱，三个方向拆开讲。</summary>
+    <category term="热点"/>
   </entry>
 
   <entry>
-    <title>AI数字产品副业：从提示词模板到月入过万的被动收入</title>
-    <link href="https://www.aitoollab.top/ai-digital-products-passive-income/"/>
-    <id>https://www.aitoollab.top/ai-digital-products-passive-income/</id>
-    <updated>2026-04-20T00:00:00+08:00</updated>
-    <published>2026-04-20T00:00:00+08:00</published>
-    <summary type="text">数字产品是AI时代最适合普通人的副业。5种高变现产品类型+零成本制作方法+Gumroad/小红书/知识星球平台选择+定价策略+真实月入5000+案例。</summary>
-    <category term="数字产品副业"/>
-    <category term="被动收入"/>
-    <category term="提示词模板"/>
+    <title>帮独立开发者用AI做App Store截图，应用商店上架素材设计服务，一单200到2000实操拆解</title>
+    <link href="https://www.aitoollab.top/articles/cases/ai-app-store-screenshot-service-side-hustle-20260831/"/>
+    <id>https://www.aitoollab.top/articles/cases/ai-app-store-screenshot-service-side-hustle-20260831/</id>
+    <updated>2026-08-31T08:00:00+08:00</updated>
+    <published>2026-08-31T08:00:00+08:00</published>
+    <summary type="text">App Store截图尺寸不对就上不了架，一套专业截图在Fiverr上卖10到250美元。我靠给独立开发者做应用商店截图和上架素材，一单收200到2000元，Claude Code配一个截图skill就能上手</summary>
+    <category term="案例"/>
+  </entry>
+
   <entry>
-    <title>用开源AI Agent项目做定制服务：普通人从0到月入1万的完整路径</title>
-    <link href="https://www.aitoollab.top/ai-agent-customization-service/"/>
-    <id>https://www.aitoollab.top/ai-agent-customization-service/</id>
-    <updated>2026-04-27T08:00:00+08:00</updated>
-    <published>2026-04-27T08:00:00+08:00</published>
-    <summary type="text">GitHub 40K星项目career-ops、77K星项目autoresearch能赚钱吗？实测验证：AI Agent定制服务是2026年最适合普通人的副业方向。从0到月入1万，完整拆解。</summary>
-    <category term="AI Agent定制服务"/>
-    <category term="AI副业"/>
-    <category term="career-ops"/>
+    <title>AI写知乎回答赚钱 普通人靠答题月入2000</title>
+    <link href="https://www.aitoollab.top/tutorials/ai-zhihu-answer-monetize-tutorial-20260831/"/>
+    <id>https://www.aitoollab.top/tutorials/ai-zhihu-answer-monetize-tutorial-20260831/</id>
+    <updated>2026-08-31T08:00:00+08:00</updated>
+    <published>2026-08-31T08:00:00+08:00</published>
+    <summary type="text">用AI写知乎回答赚钱的实操教程。选题、喂料、改人话三步走，从创作收益、好物推荐到私域引流，普通人答一周就能看到流量进来。</summary>
+    <category term="教程"/>
+  </entry>
+
+  <entry>
+    <title>AI赚钱50招 2026普通人能直接上手的50个方向</title>
+    <link href="https://www.aitoollab.top/tutorials/ai-earn-money-50-ways-tutorial-20260831/"/>
+    <id>https://www.aitoollab.top/tutorials/ai-earn-money-50-ways-tutorial-20260831/</id>
+    <updated>2026-08-31T08:00:00+08:00</updated>
+    <published>2026-08-31T08:00:00+08:00</published>
+    <summary type="text">AI赚钱50招，从内容创作、接单服务到电商带货全给你列齐了。每条都标了门槛和收入区间，挑一个你今天就能开始的方向，别光收藏不动手。</summary>
+    <category term="教程"/>
+  </entry>
+
+  <entry>
+    <title>内容生成赚钱副业怎么做 三个小工具方向直接上手</title>
+    <link href="https://www.aitoollab.top/tutorials/ai-content-generation-money-tutorial-20260831/"/>
+    <id>https://www.aitoollab.top/tutorials/ai-content-generation-money-tutorial-20260831/</id>
+    <updated>2026-08-31T08:00:00+08:00</updated>
+    <published>2026-08-31T08:00:00+08:00</published>
+    <summary type="text">内容生成赚钱副业怎么做，用AI小工具接单最实在。这篇拆3个方向，文案代写、商品图批量出图、短视频脚本，每个都给出单量和收入，今天就能开工。</summary>
+    <category term="教程"/>
+  </entry>
+
+  <entry>
+    <title>AI数字人带货教程 零基础做数字人短视频的完整流程</title>
+    <link href="https://www.aitoollab.top/tutorials/ai-digital-human-sales-tutorial-20260831/"/>
+    <id>https://www.aitoollab.top/tutorials/ai-digital-human-sales-tutorial-20260831/</id>
+    <updated>2026-08-31T08:00:00+08:00</updated>
+    <published>2026-08-31T08:00:00+08:00</published>
+    <summary type="text">AI数字人带货教程，从选工具、生成数字人到发布带货的完整流程。零基础也能上手，一篇讲清楚数字人带货怎么做、能赚多少、有什么坑。</summary>
+    <category term="教程"/>
+  </entry>
+
+  <entry>
+    <title>OpenAI断供Cursor 普通人怎么抓住AI编程迁移潮赚钱</title>
+    <link href="https://www.aitoollab.top/articles/news/openai-cuts-cursor-migration-side-hustle-20260830/"/>
+    <id>https://www.aitoollab.top/articles/news/openai-cuts-cursor-migration-side-hustle-20260830/</id>
+    <updated>2026-08-30T08:00:00+08:00</updated>
+    <published>2026-08-30T08:00:00+08:00</published>
+    <summary type="text">OpenAI宣布11月12日断供Cursor模型，SpaceX收购引发AI编程工具大迁移，普通人怎么抓住AI编程工具迁移潮赚钱，三个方向现在就能动手。</summary>
+    <category term="热点"/>
+  </entry>
+
+  <entry>
+    <title>帮商家用AI做产品宣传视频，Gemini Omni 1.1 Flash实测拆解，一单300到3000</title>
+    <link href="https://www.aitoollab.top/articles/cases/ai-product-video-ad-service-side-hustle-20260830/"/>
+    <id>https://www.aitoollab.top/articles/cases/ai-product-video-ad-service-side-hustle-20260830/</id>
+    <updated>2026-08-30T08:00:00+08:00</updated>
+    <published>2026-08-30T08:00:00+08:00</published>
+    <summary type="text">Gemini Omni 1.1 Flash让AI生成视频成本降到一条一美元，场景延伸、首尾帧、4K超分全都有。我靠帮本地商家和电商卖家做AI产品宣传视频，一单收300到3000，会用剪映就能上手</summary>
+    <category term="案例"/>
+  </entry>
+
+  <entry>
+    <title>Gemini 3.5 Transcribe发布，语音转文字副业的机会来了</title>
+    <link href="https://www.aitoollab.top/articles/news/gemini-3-5-transcribe-speech-to-text-side-hustle-20260829/"/>
+    <id>https://www.aitoollab.top/articles/news/gemini-3-5-transcribe-speech-to-text-side-hustle-20260829/</id>
+    <updated>2026-08-29T08:00:00+08:00</updated>
+    <published>2026-08-29T08:00:00+08:00</published>
+    <summary type="text">谷歌Gemini 3.5 Transcribe发布，语音转文字准确率大幅提升，普通人怎么用它赚钱？三个AI转写副业方向实操拆解，会议纪要、播客文案、视频字幕。</summary>
+    <category term="热点"/>
+  </entry>
+
+  <entry>
+    <title>帮人用AI做Excel数据分析和报表，300星huashu-excel项目拆解，一单报价500到2000</title>
+    <link href="https://www.aitoollab.top/articles/cases/huashu-excel-data-analysis-service-side-hustle-20260829/"/>
+    <id>https://www.aitoollab.top/articles/cases/huashu-excel-data-analysis-service-side-hustle-20260829/</id>
+    <updated>2026-08-29T08:00:00+08:00</updated>
+    <published>2026-08-29T08:00:00+08:00</published>
+    <summary type="text">发现一个爆火的开源项目alchaincyf/huashu-excel，专治AI算Excel算错数，8步流程体检清洗对账交付一条龙。我靠帮中小企业主做AI数据分析报表，一单收500到2000块，会用Excel就能上手</summary>
+    <category term="案例"/>
+  </entry>
+
+  <entry>
+    <title>语音AI统一路由来了 普通人怎么靠语音接单赚钱</title>
+    <link href="https://www.aitoollab.top/articles/news/speko-voice-ai-router-side-hustle-20260828/"/>
+    <id>https://www.aitoollab.top/articles/news/speko-voice-ai-router-side-hustle-20260828/</id>
+    <updated>2026-08-28T08:00:00+08:00</updated>
+    <published>2026-08-28T08:00:00+08:00</published>
+    <summary type="text">YC S26的Speko把20多个语音模型接进一个API，语音AI成本混乱时代普通人怎么靠语音接单赚钱，三个方向从配音小单到客服外包，拆开讲。</summary>
+    <category term="热点"/>
+  </entry>
+
+  <entry>
+    <title>Ox Alpha神秘模型身份揭晓，智谱开源GLM-5.3-Flash权重，普通人怎么靠它赚钱（2026）</title>
+    <link href="https://www.aitoollab.top/articles/cases/ox-alpha-glm-5-3-flash-open-weights-side-hustle-20260828/"/>
+    <id>https://www.aitoollab.top/articles/cases/ox-alpha-glm-5-3-flash-open-weights-side-hustle-20260828/</id>
+    <updated>2026-08-28T08:00:00+08:00</updated>
+    <published>2026-08-28T08:00:00+08:00</published>
+    <summary type="text">OpenRouter上免费的神秘模型Ox Alpha被扒出是智谱GLM-5.3-Flash，320B参数MIT协议开源权重。怎么用这个一折价格的模型做本地部署、Agent服务赚钱，完整工具链和避坑指南。</summary>
+    <category term="案例"/>
+  </entry>
+
+  <entry>
+    <title>AI简历优化提示词怎么写 3条模板直接抄</title>
+    <link href="https://www.aitoollab.top/tutorials/ai-resume-optimize-prompt-tutorial-20260828/"/>
+    <id>https://www.aitoollab.top/tutorials/ai-resume-optimize-prompt-tutorial-20260828/</id>
+    <updated>2026-08-28T08:00:00+08:00</updated>
+    <published>2026-08-28T08:00:00+08:00</published>
+    <summary type="text">AI简历优化提示词怎么写才有效，关键在把岗位JD喂进去对标改。这篇给3条实测有效的模板，投简历前10分钟跑一遍，面试邀约率明显上升。</summary>
+    <category term="教程"/>
   </entry>
 
 </feed>

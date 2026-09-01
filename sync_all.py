@@ -263,6 +263,67 @@ def _rebuild_sitemap(repo_dir):
     with open(sitemap_path, 'w', encoding='utf-8') as f:
         f.write('\n'.join(lines))
     print(f"   🗺️ sitemap rebuilt: {len(urls)} URLs")
+    # 同步 sitemap-index lastmod，避免索引文件停在旧日期
+    idx_path = os.path.join(repo_dir, "sitemap-index.xml")
+    if os.path.isfile(idx_path):
+        with open(idx_path, 'r', encoding='utf-8') as f:
+            idx = f.read()
+        idx = re.sub(r'<lastmod>[^<]+</lastmod>', f'<lastmod>{today}</lastmod>', idx, count=1)
+        with open(idx_path, 'w', encoding='utf-8') as f:
+            f.write(idx)
+
+
+def _rebuild_feed(repo_dir, limit=20):
+    """用现有文章重建 Atom feed，去掉已下线的旧路径。"""
+    from xml.sax.saxutils import escape
+    items = []
+    for cat in ["news", "cases", "tutorials", "startup-100"]:
+        for a in get_articles(cat):
+            items.append(a)
+    items.sort(key=lambda x: x["date"], reverse=True)
+    items = items[:limit]
+    today = datetime.now().strftime("%Y-%m-%d")
+    base = "https://www.aitoollab.top"
+    lines = [
+        '<?xml version="1.0" encoding="UTF-8" ?>',
+        '<feed xmlns="http://www.w3.org/2005/Atom">',
+        "  <title>AiToollab - AI副业加速器</title>",
+        "  <subtitle>普通人能照着做的AI副业教程、案例和热点，不含空话。</subtitle>",
+        f'  <link href="{base}/feed.xml" rel="self"/>',
+        f'  <link href="{base}/"/>',
+        f'  <id>{base}/</id>',
+        f"  <updated>{today}T08:00:00+08:00</updated>",
+        "  <author>",
+        "    <name>AiToollab</name>",
+        f"    <uri>{base}</uri>",
+        "  </author>",
+        f'  <generator uri="{base}/">AiToollab Generator</generator>',
+        "",
+    ]
+    tag_map = {"news": "热点", "tutorials": "教程", "cases": "案例", "startup-100": "实验"}
+    for a in items:
+        parts = a["url"].strip("/").split("/")
+        cat = parts[1] if parts and parts[0] == "articles" and len(parts) > 1 else (parts[0] if parts else "news")
+        tag = tag_map.get(cat, "热点")
+        u = f"{base}{a['url']}"
+        d = a["date"] or today
+        lines += [
+            "  <entry>",
+            f"    <title>{escape(a['title'])}</title>",
+            f'    <link href="{escape(u)}"/>',
+            f"    <id>{escape(u)}</id>",
+            f"    <updated>{d}T08:00:00+08:00</updated>",
+            f"    <published>{d}T08:00:00+08:00</published>",
+            f'    <summary type="text">{escape(a.get("desc") or "")}</summary>',
+            f"    <category term=\"{tag}\"/>",
+            "  </entry>",
+            "",
+        ]
+    lines.append("</feed>")
+    out = os.path.join(repo_dir, "feed.xml")
+    with open(out, "w", encoding="utf-8") as f:
+        f.write("\n".join(lines) + "\n")
+    print(f"   📰 feed rebuilt: {len(items)} entries")
 
 
 def sync_all(commit_msg=None):
@@ -339,6 +400,8 @@ def sync_all(commit_msg=None):
     _rebuild_sitemap(REPO_DIR)
     sitemap_count = sum(1 for _ in open(os.path.join(REPO_DIR, "sitemap.xml")) if '<loc>' in _)
     updated.append(f"sitemap: {sitemap_count}条")
+    _rebuild_feed(REPO_DIR)
+    updated.append("feed.xml: 最近20篇")
     
     # 4. 提交并推送
     msg = commit_msg or f"feat: 全量同步 - {today}"
