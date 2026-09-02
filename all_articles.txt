@@ -241,3 +241,4 @@ articles/cases/ai-hidden-camera-detection-service-side-hustle-20260902/index.htm
 tutorials/ai-tool-website-promo-tutorial-20260902/
 tutorials/xiaohongshu-haowu-share-money-tutorial-20260902/
 tutorials/ai-flashcard-writing-side-hustle-tutorial-20260902/
+articles/news/gemini-3-8-flash-cyber-side-hustle-20260903/index.html
