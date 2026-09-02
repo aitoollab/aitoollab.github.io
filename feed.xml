@@ -23,6 +23,16 @@
   </entry>
 
   <entry>
+    <title>tokentab开源了，普通人怎么靠Claude Code成本分析服务赚钱</title>
+    <link href="https://www.aitoollab.top/articles/cases/ai-coding-cost-analysis-tokentab-service-side-hustle-20260903/"/>
+    <id>https://www.aitoollab.top/articles/cases/ai-coding-cost-analysis-tokentab-service-side-hustle-20260903/</id>
+    <updated>2026-09-03T08:00:00+08:00</updated>
+    <published>2026-09-03T08:00:00+08:00</published>
+    <summary type="text">tokentab能读取Claude Code、Codex和Gemini CLI日志，按模型、项目、日期算Token成本，。。</summary>
+    <category term="案例"/>
+  </entry>
+
+  <entry>
     <title>Instagram给AI人设贴标限流 普通人怎么靠真人账号赚钱</title>
     <link href="https://www.aitoollab.top/articles/news/instagram-ai-generated-profile-label-side-hustle-20260902/"/>
     <id>https://www.aitoollab.top/articles/news/instagram-ai-generated-profile-label-side-hustle-20260902/</id>
@@ -200,16 +210,6 @@
     <published>2026-08-28T08:00:00+08:00</published>
     <summary type="text">YC S26的Speko把20多个语音模型接进一个API，语音AI成本混乱时代普通人怎么靠语音接单赚钱，三个方向从配音小。。</summary>
     <category term="热点"/>
-  </entry>
-
-  <entry>
-    <title>Ox Alpha神秘模型身份揭晓，智谱开源GLM-5.3-Flash权重，普通人怎么靠它赚钱（2026）</title>
-    <link href="https://www.aitoollab.top/articles/cases/ox-alpha-glm-5-3-flash-open-weights-side-hustle-20260828/"/>
-    <id>https://www.aitoollab.top/articles/cases/ox-alpha-glm-5-3-flash-open-weights-side-hustle-20260828/</id>
-    <updated>2026-08-28T08:00:00+08:00</updated>
-    <published>2026-08-28T08:00:00+08:00</published>
-    <summary type="text">OpenRouter上免费的神秘模型Ox Alpha被扒出是智谱GLM-5.3-Flash，320B参数MIT协议开源权。。</summary>
-    <category term="案例"/>
   </entry>
 
 </feed>
