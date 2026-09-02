@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tokentab开源了，普通人怎么靠Claude Code成本分析服务赚钱 - AiToollab</title>
+    <meta name="description" content="tokentab能读取Claude Code、Codex和Gemini CLI日志，按模型、项目、日期算Token成本，而且完全本地运行。本文拆解AI编码成本分析服务的接单方式、工具链、报价和避坑。">
+    <meta name="description:en" content="Tokentab reads Claude Code, Codex and Gemini CLI logs locally and turns token usage into cost reports. A practical guide to offering AI coding cost analysis as a service.">
+    <meta name="keywords" content="tokentab, Claude Code成本, Codex成本分析, Gemini CLI, Token统计, AI编码成本, AI副业, Token成本报告">
+    <meta name="keywords:en" content="tokentab, Claude Code cost, Codex usage, Gemini CLI tokens, AI coding cost report, token analytics, AI side hustle">
+    <link rel="canonical" href="https://www.aitoollab.top/articles/cases/ai-coding-cost-analysis-tokentab-service-side-hustle-20260903/">
+    <link rel="alternate" hreflang="zh-CN" href="https://www.aitoollab.top/articles/cases/ai-coding-cost-analysis-tokentab-service-side-hustle-20260903/">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="数字生命卡兹克">
+    <meta property="og:title" content="tokentab开源了，普通人怎么靠Claude Code成本分析服务赚钱">
+    <meta property="og:description" content="读取Claude Code、Codex和Gemini CLI日志，做一份真正知道钱花到哪里的Token成本报告。">
+    <meta property="og:image" content="https://www.aitoollab.top/articles/cases/ai-coding-cost-analysis-tokentab-service-side-hustle-20260903/og-cases-ai-coding-cost-analysis-tokentab-service-side-hustle-20260903.jpg">
+    <meta property="og:url" content="https://www.aitoollab.top/articles/cases/ai-coding-cost-analysis-tokentab-service-side-hustle-20260903/">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="AiToollab">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="tokentab开源了，普通人怎么靠Claude Code成本分析服务赚钱">
+    <meta name="twitter:description" content="Claude Code、Codex和Gemini CLI都在烧Token，但很多团队不知道钱花在哪里。tokentab把日志变成成本报告。">
+    <meta name="twitter:image" content="https://www.aitoollab.top/articles/cases/ai-coding-cost-analysis-tokentab-service-side-hustle-20260903/og-cases-ai-coding-cost-analysis-tokentab-service-side-hustle-20260903.jpg">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "tokentab开源了，普通人怎么靠Claude Code成本分析服务赚钱",
+  "description": "tokentab能读取Claude Code、Codex和Gemini CLI日志，按模型、项目、日期算Token成本，而且完全本地运行。",
+  "author": {"@type": "Person", "name": "数字生命卡兹克"},
+  "publisher": {"@type": "Organization", "name": "AiToollab"},
+  "datePublished": "2026-09-03",
+  "dateModified": "2026-09-03",
+  "mainEntityOfPage": "https://www.aitoollab.top/articles/cases/ai-coding-cost-analysis-tokentab-service-side-hustle-20260903/",
+  "image": "https://www.aitoollab.top/articles/cases/ai-coding-cost-analysis-tokentab-service-side-hustle-20260903/og-cases-ai-coding-cost-analysis-tokentab-service-side-hustle-20260903.jpg"
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"tokentab是什么？","acceptedAnswer":{"@type":"Answer","text":"tokentab是一个开源本地CLI，可以读取Claude Code、Codex和Gemini CLI留下的会话日志，按模型、项目、日期和工作类型统计Token用量与成本。"}},
+    {"@type":"Question","name":"不会写代码能做AI编码成本分析吗？","acceptedAnswer":{"@type":"Answer","text":"可以从报告服务开始，不需要开发新系统。客户授权后导出或现场读取日志，用tokentab生成基础数据，再人工解释异常、给出模型切换和缓存优化建议。"}},
+    {"@type":"Question","name":"AI成本分析服务怎么报价？","acceptedAnswer":{"@type":"Answer","text":"可以按一次性诊断、月度报告和团队治理分层。价格需要根据日志规模、隐私要求和是否包含优化实施来定，先用低价样板验证客户需求，不要把预测收入当成已经赚到的钱。"}},
+    {"@type":"Question","name":"tokentab会上传我的代码吗？","acceptedAnswer":{"@type":"Answer","text":"项目README说明它在本地读取日志，不需要账号和API密钥，也不会把数据上传到网络。实际接单仍应获得客户授权，并避免复制完整代码和敏感日志。"}},
+    {"@type":"Question","name":"Claude Code和Codex的Token成本为什么要统计？","acceptedAnswer":{"@type":"Answer","text":"订阅制编码Agent很容易让团队忽略模型调用成本、缓存读写和无效探索。按项目和日期拆开后，才能看出昂贵模型是否用在了值得的任务上。"}}
+  ]
+}
+    </script>
+    <style>
+      *{box-sizing:border-box}body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;line-height:1.7;color:#333;max-width:820px;margin:0 auto;padding:0 20px;background:#fff}.site-topnav{margin:0 -20px;padding:12px 24px;background:#0d1117;display:flex;gap:16px;align-items:center}.site-topnav a{color:#c9d1d9;text-decoration:none;font-size:14px}.site-topnav a:first-child{font-weight:700;color:#fff;font-size:16px}.content{padding:35px 0}.meta{color:#777;font-size:14px;margin-bottom:28px}h1{font-size:2.2rem;line-height:1.35;color:#111;margin:28px 0 12px}h2{font-size:1.55rem;color:#222;margin:42px 0 18px}.content p{font-size:1.08rem;margin:0 0 20px}.content a{color:#165DFF}.author-box{background:#f6f8fa;border-radius:8px;padding:16px 20px;margin:24px 0 32px;font-size:14px}.tip,.cta-box{background:#f0f7ff;padding:18px 22px;border-left:4px solid #165DFF;border-radius:8px;margin:28px 0}.cta-box{text-align:center;background:#fff7ed;border-left-color:#f97316}.btn{display:inline-block;background:#165DFF;color:#fff!important;padding:9px 22px;border-radius:6px;text-decoration:none}.faq,.related{margin-top:48px;padding-top:25px;border-top:1px solid #eee}.faq-item{margin:0 0 25px}.faq-item h3{font-size:1.1rem;margin-bottom:6px}.faq-item p{font-size:1rem;color:#555}.related ul{padding-left:20px}.footer{text-align:center;margin:50px 0 25px;padding-top:22px;border-top:1px solid #eee;color:#777;font-size:13px}@media(max-width:600px){h1{font-size:1.65rem}.content p{font-size:1rem}}
+    </style>
+</head>
+<body>
+<nav class="site-topnav"><a href="/">🧰 AiToollab</a><a href="/">首页</a><a href="/tutorials/">教程</a><a href="/articles/cases/">案例</a><a href="/prompt-pack/?src=apkg" style="margin-left:auto">¥39 AI副业实战包</a></nav>
+<div class="container">
+<div class="content">
+<h1>tokentab开源了，普通人怎么靠Claude Code成本分析服务赚钱</h1>
+<p class="meta">发布于 2026-09-03 · AI副业案例</p>
+<div class="author-box">作者，数字生命卡兹克。这里写的是可执行的服务拆解，收入数字只写已知成本和报价逻辑，不把推测写成到账记录。</div>
+<p>我最近看到了一个挺小、但很对味的开源项目，说真的，第一眼我没觉得它能做成什么大生意。</p>
+<p>GitHub上的damejan80/tokentab，刚刚被Scout扫到时已经有1132颗星。它不做模型，也不造一个花里胡哨的Agent，它只干一件容易被忽略的事，把Claude Code、Codex和Gemini CLI留在电脑里的会话日志读出来，算清楚每种模型、每个项目、每天到底花了多少钱。</p>
+<p>我当时就停了一下？？？</p>
+<p>因为现在很多人谈AI编码，盯着的是模型有多聪明，Agent能不能自己改完一个项目。真正到了月底，没人知道钱是怎么烧掉的。一个项目聊了三小时，改了十行代码，究竟算研发投入，还是算无效探索？这笔账没人记。</p>
+<p>这就给了普通人一个服务缝隙，帮团队把AI编码账本做出来。</p>
+<h2>tokentab到底解决了哪块麻烦</h2>
+<p>坦率的讲，Token统计看起来不像一门生意。你想想看，谁会主动买一张账单？Claude Code有日志，Codex有会话文件，Gemini CLI也会留下记录，懂点Python的人自己写一个解析器似乎就行。</p>
+<p>可客户买的从来不是解析器。这个判断我也是踩过坑之后才敢说。</p>
+<p>tokentab能读三类日志，Claude Code在<code>~/.claude/projects/</code>，Codex在<code>~/.codex/sessions/</code>，Gemini CLI在<code>~/.gemini/tmp/</code>。它把不同格式压成同一个UsageRecord，再按模型、项目、日期和活动类型展示。网页模式还会在本地打开一个报表页，不要服务器，不要账号，也不需要把日志交给第三方。</p>
+<p>里面有个细节挺重要。Claude的缓存读写会分开记录，Gemini的输入Token可能已经包含缓存部分。tokentab会把缓存Token拆出来，避免重复计费。这个东西客户自己未必说得清，但月底看到Claude或Gemini的成本突然高了，第一句肯定是，为什么？</p>
+<p>答案不是一张总账，而是能追到项目和会话。</p>
+<p>它也没有把所有判断装成神谕。活动类型，编码、调试、重构、测试，是根据工具使用和首条消息做的确定性猜测。项目README自己也说了，把它当提示，不要当判决。这个克制反而是优点，成本报告最怕把猜测写成财务事实。</p>
+<h2>第一档，做一次AI编码花费体检</h2>
+<p>最容易接的不是企业大单，而是已经在用Claude Code、Codex或Gemini CLI的小团队。他们通常有三种感觉，月费不算贵，模型用起来很爽，但项目越多越不知道哪个值得继续。</p>
+<p>你可以把服务包装成一次体检。客户授权后，在他的电脑上运行tokentab，先不复制代码，只带走聚合后的模型、日期、项目和成本数据。交付一份十页以内的报告，告诉他过去七天或一个月的费用分布，哪几个项目最烧钱，哪些会话是大量聊天和探索，哪些任务适合换便宜模型。</p>
+<p>基础报告可以从199到499元起步，具体报价取决于日志规模和隐私要求。这不是已经验证的成交价，是一个适合冷启动的报价区间。别上来就承诺帮客户省下百分之多少，先说清楚你交付的是记录、解释和建议。</p>
+<p>我自己做内容自动化，也经常碰到同一个坑，模型调用多了，感觉每一笔都不大，合在一起却看不清。tokentab的价值，就是把这种模糊的肉疼变成一张能看的表。</p>
+<h2>第二档，做月度成本报告和模型路由建议</h2>
+<p>一次体检解决的是看见，月度服务解决的是持续管理。</p>
+<p>你每周或每月帮客户生成一次成本摘要，按项目比较本月和上月，标出大模型集中出现的任务，再结合他们的工作流程提出调整。写代码、查资料、改文案、跑测试，不需要全部塞给同一个贵模型。Claude Code、Codex、Gemini CLI各有自己的使用习惯，客户往往不是缺模型，而是没有分工。</p>
+<p>月度报告可以按399到1500元报价，团队规模更大再往上谈。这里的核心不是自动替客户切模型，而是把建议写成能执行的规则，例如小型重构先用便宜模型，架构决策再交给强模型，长上下文项目固定目录和提示词，减少每次重新喂背景。</p>
+<p>缓存命中率也值得单独讲。README给了一个很朴素的判断，长期低于约80%，可能是上下文不稳定，或者缓存没有真正发挥作用。一次异常不用紧张，连续几周都低，就值得检查。</p>
+<p>这类报告的利润来自解释，不来自软件授权。tokentab本身是MIT许可，客户可以自己装。你要卖的是少走弯路的判断。</p>
+<h2>第三档，给AI开发团队做成本治理</h2>
+<p>再往上，客户就不只是想知道花了多少钱，而是想把这笔钱管住。</p>
+<p>小型外包团队、独立开发工作室、正在把Claude Code接进流程的公司，都可能遇到同一个场景，几个项目共用订阅，成员各自开会话，到了月底才发现某个项目吃掉了大部分额度。负责人想知道每个客户项目的真实成本，却没有一套统一口径。</p>
+<p>这时可以把服务做成一次治理项目。先帮他们约定项目命名和日志归档方式，再把tokentab输出接进每周例会，最后做一份成本和交付工时对照表。假如一个项目Token成本很高，但交付速度也明显快了，它不一定是浪费。反过来，便宜的会话如果一直在原地探索，也不一定划算。</p>
+<p>这个档位可以按2000到8000元做项目报价，再加月度维护。数字依然是建议测试的价格，不是市场公允价。真正决定报价的是团队人数、是否需要现场部署、是否需要接入他们已有的财务表格，以及你要不要负责后续优化。</p>
+<p>怎么说呢，最骚的地方在这里，你甚至不用先做一个新平台。tokentab的网页仪表板用的是Python标准库HTTP服务器，只绑定localhost，也不从CDN拉字体。你先把客户现有的日志和报告流程跑通，再考虑自动化。我寻思了一下，别反过来，花两个月开发后台，最后没人愿意为一张账单付钱。</p>
+<h2>一套能落地的接单流程</h2>
+<p>第一步，自己装一次。把Claude Code、Codex或Gemini CLI里的一种日志跑通，确认日期、模型、项目和缓存字段能正常显示。项目README写了安装方式，克隆仓库后用pip安装，也可以直接运行源代码。README里还有一个命令示例存在拼写问题，复制前人工检查，这种小坑正好是你服务价值的一部分。</p>
+<p>第二步，做一份脱敏样板。不要拿自己的真实客户数据，准备一个只包含模型名、项目名和成本数字的示例报告。首页写本周期总成本，下面按项目和模型拆开，最后留三条可执行建议。客户看的是结果，不是你的终端窗口。</p>
+<p>第三步，去找正在用编码Agent的人。GitHub独立开发者群、外包团队、AI编程社群和小型工作室都比泛流量更准。开口别问要不要做AI成本分析，换成一句，最近一个项目的Claude Code和Codex花费，你能按项目拆出来吗？这个问题更容易让人回复。</p>
+<p>第四步，先做低风险体检。客户不愿意把日志发给你，就现场操作，或者只让他导出聚合结果。报告里不放源码、密钥、完整提示词和个人信息。隐私不是页脚里的一句免责声明，是你每一步都要少拿一点数据。</p>
+<p>第五步，交付时把事实和建议分开。事实是本月哪个项目用了多少Token，建议是下月可以怎样调整。两者混在一起，客户很难判断你到底测到了什么。最后让客户自己选一条改动，下一周期再验证，别把报告做成看完就丢的PDF。</p>
+<h2>这里最容易踩的坑</h2>
+<p>第一个坑，价格表过时。tokentab的定价表是手工维护的，项目作者也承认，供应商改名或调价后可能有滞后。你给客户看美元成本前，必须标出价格表日期和未匹配模型。显示成零美元，不代表免费，可能只是名字没匹配上。</p>
+<p>第二个坑，把订阅费和Token费用混为一谈。Claude Code、Codex和Gemini CLI的实际计费规则并不完全一样。报告里要说清楚，哪些是日志里直接读到的用量，哪些是按本地价格表估算的金额。</p>
+<p>第三个坑，拿客户原始日志做训练或二次分析。没有必要，也不要碰。说真的，这个服务最好的卖点恰恰是本地运行、无账号、无上传。你一旦把文件传到自己的网盘，信任就没了。</p>
+<p>第四个坑，承诺一定省钱。有人用贵模型，是因为它真的减少了返工。成本下降不是唯一目标，交付速度、错误率和客户满意度也要放进报告。否则你只是把账做便宜了，没把业务做得更好。</p>
+<h2>写在最后</h2>
+<p>这两年大家都在抢着做Agent，反而很少有人愿意做账。</p>
+<p>可每一个自动化系统，最后都要回到账本上。谁在用，花在哪，为什么花，下一次要不要继续。tokentab只是一个很小的开源CLI，却把这个长期需求露了出来。</p>
+<p>它现在有1132颗星，不代表你拿它就能赚到钱。星星是注意力，报告才是交付，客户复购才是生意。。。这个顺序，别搞反了。</p>
+<p>你想试这条路，今天可以先装起来，给自己的Claude Code、Codex或Gemini CLI做一张账。先把自己的钱看明白，再去帮别人看。</p>
+<p>账本很小，机会不一定小。</p>
+<div class="tip"><p><strong>工具信息</strong></p><p>tokentab，GitHub项目damejan80/tokentab，MIT许可，支持Claude Code、Codex和Gemini CLI日志，本地统计模型、项目、日期、活动类型和成本。项目地址，<a href="https://github.com/damejan80/tokentab">github.com/damejan80/tokentab</a>。</p></div>
+<div class="cta-box"><p><strong>📦 我把AI副业接单、需求沟通和交付模板整理进了AI副业实战包</strong></p><p>先把客户问题问清楚，再报价，再交付，不靠临场发挥。</p><a class="btn" href="/prompt-pack/?src=apkg">AI副业实战包</a></div>
+<div class="faq"><h2>常见问题</h2>
+<div class="faq-item"><h3>tokentab是什么？</h3><p>tokentab是一个开源本地CLI，可以读取Claude Code、Codex和Gemini CLI留下的会话日志，按模型、项目、日期和工作类型统计Token用量与成本。</p></div>
+<div class="faq-item"><h3>不会写代码能做AI编码成本分析吗？</h3><p>可以从报告服务开始，不需要开发新系统。客户授权后导出或现场读取日志，用tokentab生成基础数据，再人工解释异常、给出模型切换和缓存优化建议。</p></div>
+<div class="faq-item"><h3>AI成本分析服务怎么报价？</h3><p>可以按一次性诊断、月度报告和团队治理分层。价格需要根据日志规模、隐私要求和是否包含优化实施来定，先用低价样板验证客户需求，不要把预测收入当成已经赚到的钱。</p></div>
+<div class="faq-item"><h3>tokentab会上传我的代码吗？</h3><p>项目README说明它在本地读取日志，不需要账号和API密钥，也不会把数据上传到网络。实际接单仍应获得客户授权，并避免复制完整代码和敏感日志。</p></div>
+<div class="faq-item"><h3>Claude Code和Codex的Token成本为什么要统计？</h3><p>订阅制编码Agent很容易让团队忽略模型调用成本、缓存读写和无效探索。按项目和日期拆开后，才能看出昂贵模型是否用在了值得的任务上。</p></div>
+</div>
+<div class="related"><h3>相关阅读</h3><ul><li><a href="/articles/cases/ai-software-factory-service-side-hustle-20260822/">AI软件工厂搭建服务，普通人怎么接单</a></li><li><a href="/articles/cases/ai-deep-research-report-service-side-hustle-20260626/">AI深度研究报告服务，怎么把检索变成交付</a></li><li><a href="/articles/cases/agent-reach-open-source-project-monetization-side-hustle-20260821/">开源Agent项目怎么做本地化服务</a></li><li><a href="/tutorials/claude-code-monetize-tutorial-20260826/">Claude Code怎么接单赚钱</a></li></ul></div>
+</div></div>
+<div class="footer"><p><a href="/about/">关于我们</a> · <a href="/disclaimer/">免责声明</a> · <a href="/privacy/">隐私政策</a> · <a href="/prompt-pack/?src=apkg">AI副业实战包</a></p><p>© 2026 AiToollab · 内容仅供参考，不构成投资建议</p></div>
+</body></html>
