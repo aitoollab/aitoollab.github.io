@@ -5,12 +5,22 @@
   <link href="https://www.aitoollab.top/feed.xml" rel="self"/>
   <link href="https://www.aitoollab.top/"/>
   <id>https://www.aitoollab.top/</id>
-  <updated>2026-09-03T08:00:00+08:00</updated>
+  <updated>2026-09-04T08:00:00+08:00</updated>
   <author>
     <name>AiToollab</name>
     <uri>https://www.aitoollab.top</uri>
   </author>
   <generator uri="https://www.aitoollab.top/">AiToollab Generator</generator>
+
+  <entry>
+    <title>Claude商业智能体发布 普通人怎么靠AI电商接单赚钱</title>
+    <link href="https://www.aitoollab.top/articles/news/claude-commerce-agents-side-hustle-20260904/"/>
+    <id>https://www.aitoollab.top/articles/news/claude-commerce-agents-side-hustle-20260904/</id>
+    <updated>2026-09-04T08:00:00+08:00</updated>
+    <published>2026-09-04T08:00:00+08:00</published>
+    <summary type="text">Claude商业智能体发布，Anthropic公开电商智能体蓝图。普通人怎么靠AI电商接单赚钱，本文拆解商品资料整理、客。。</summary>
+    <category term="热点"/>
+  </entry>
 
   <entry>
     <title>Gemini 3.8 Flash发布 普通人怎么用它接AI编程单赚钱</title>
@@ -200,16 +210,6 @@
     <published>2026-08-29T08:00:00+08:00</published>
     <summary type="text">发现一个爆火的开源项目alchaincyf/huashu-excel，专治AI算Excel算错数，8步流程体检清洗对账交。。</summary>
     <category term="案例"/>
-  </entry>
-
-  <entry>
-    <title>语音AI统一路由来了 普通人怎么靠语音接单赚钱</title>
-    <link href="https://www.aitoollab.top/articles/news/speko-voice-ai-router-side-hustle-20260828/"/>
-    <id>https://www.aitoollab.top/articles/news/speko-voice-ai-router-side-hustle-20260828/</id>
-    <updated>2026-08-28T08:00:00+08:00</updated>
-    <published>2026-08-28T08:00:00+08:00</published>
-    <summary type="text">YC S26的Speko把20多个语音模型接进一个API，语音AI成本混乱时代普通人怎么靠语音接单赚钱，三个方向从配音小。。</summary>
-    <category term="热点"/>
   </entry>
 
 </feed>
