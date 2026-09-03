@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>useAgent开源AI同事怎么赚钱，一套云电脑Agent服务实操拆解 - AiToollab</title>
+<meta name="description" content="useAgent是一个刚冒头的开源AI同事平台，让Claude Code、Codex和OpenCode拥有自己的云电脑、浏览器和工作空间。本文拆解如何围绕部署、自动化和团队工作流做AI Agent服务，并分析成本、客户和避坑方法。">
+<meta name="keywords" content="useAgent,AI同事,AI Agent服务,云电脑Agent,Claude Code服务,Codex自动化,OpenCode部署,AI副业,AI自动化接单">
+<meta property="og:title" content="useAgent开源AI同事怎么赚钱，一套云电脑Agent服务实操拆解">
+<meta property="og:description" content="从useAgent这个新项目出发，拆解云电脑Agent部署、团队自动化和AI同事服务的真实收费路径。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://www.aitoollab.top/articles/cases/useagent-ai-coworker-service-side-hustle-20260904/">
+<meta property="og:image" content="https://www.aitoollab.top/og-daily-2026-05-03-manus-cloud-computer.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="useAgent开源AI同事怎么赚钱，一套云电脑Agent服务实操拆解">
+<meta name="twitter:description" content="useAgent把Claude Code、Codex和OpenCode放进隔离云电脑，普通人可以围绕部署和工作流改造接单。">
+<link rel="canonical" href="https://www.aitoollab.top/articles/cases/useagent-ai-coworker-service-side-hustle-20260904/">
+<link rel="alternate" hreflang="zh-CN" href="https://www.aitoollab.top/articles/cases/useagent-ai-coworker-service-side-hustle-20260904/">
+<meta name="description:en" content="How to build an AI coworker service with useAgent, Claude Code, Codex and cloud sandboxes">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"NewsArticle","headline":"useAgent开源AI同事怎么赚钱，一套云电脑Agent服务实操拆解","description":"useAgent开源AI同事平台的部署、服务化和变现拆解。","image":"https://www.aitoollab.top/og-daily-2026-05-03-manus-cloud-computer.jpg","datePublished":"2026-09-04T01:00:00+08:00","dateModified":"2026-09-04T01:00:00+08:00","author":{"@type":"Person","name":"AiToollab"}}</script>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f5f7fa;color:#293746;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;line-height:1.85;font-size:16px}.container{max-width:820px;margin:0 auto;background:#fff;padding:22px 28px 36px}nav{background:#101820;padding:11px 24px;display:flex;gap:18px;align-items:center}nav a{color:#d9e4ee;text-decoration:none;font-size:14px}nav a:first-child{font-weight:700;font-size:17px;margin-right:8px}.meta{color:#7c8791;font-size:14px;margin:12px 0 22px}h1{font-size:29px;line-height:1.45;color:#173f5f;margin:20px 0}h2{font-size:21px;color:#1f8058;border-bottom:2px solid #d8eee3;padding-bottom:6px;margin:34px 0 12px}h3{font-size:18px;color:#286b9c;margin:25px 0 6px}p{margin:13px 0;text-align:justify}.author-box{background:#f1f7fb;border-left:4px solid #3182bd;padding:12px 16px;margin:18px 0}.tip,.cta-box{padding:17px 20px;border-radius:8px;margin:24px 0}.tip{background:#edf9f1;border-left:4px solid #2eaa68}.cta-box{background:#153f60;color:#fff;text-align:center}.cta-box a{color:#ffd166;font-weight:700}.faq-section,.related{background:#f7f8fa;border-radius:8px;padding:18px 20px;margin-top:28px}.faq-item h4{margin:14px 0 3px;color:#34495e}.related a{color:#2675a6}.footer{text-align:center;color:#84909b;font-size:13px;border-top:1px solid #ddd;margin-top:30px;padding-top:18px}@media(max-width:600px){.container{padding:16px}h1{font-size:24px}}
+</style>
+</head>
+<body>
+<nav><a href="/">🧰 AiToollab</a><a href="/">首页</a><a href="/tutorials/">教程</a><a href="/articles/cases/">案例</a><a href="/prompt-pack/?src=apkg">AI副业实战包</a></nav>
+<div class="container">
+<p class="meta">发布于 2026-09-04 · AI副业案例拆解 · 预计阅读时间 12 分钟</p>
+<article>
+<h1>useAgent开源AI同事怎么赚钱，一套云电脑Agent服务实操拆解</h1>
+<div class="author-box">AiToollab，专注普通人能看懂、能动手的AI副业和自动化实战。</div>
+<p>这两天我在Scout的新项目数据里看到一个仓库，名字叫useAgent，8月29日才创建，已经拿到269颗星。</p>
+<p>数字不算夸张，真正让我停下来的是它的描述，给Claude Code、Codex和OpenCode各自配一台云电脑，让它们不只是回答问题，而是把网站、表格、演示文稿、研究报告和代码提交做完，再交回给人检查。</p>
+<p>我当时就愣了一下。</p>
+<p>过去我们聊Agent，脑子里经常是一个聊天框，问一句，回一段，最后还是你自己打开浏览器、复制资料、改文件。useAgent试图把中间那段脏活放进隔离的Linux工作区，里面有终端、仓库、浏览器和可视化桌面，任务跑完还有完整时间线可追。</p>
+<p>这就不是再做一个聊天机器人了，而是把「给AI派活」做成了一种基础设施。</p>
+<h2>useAgent到底在解决哪件麻烦事</h2>
+<p>你可以把它理解成一个自托管的Agent工作台。前端负责聊天、任务和产物，后端负责调度，Postgres保存每次运行的事件，Daytona或CubeSandbox负责提供隔离环境。Claude Code、Codex、OpenCode在里面是可以替换的执行引擎。</p>
+<p>这个设计有三个细节挺关键。任务不会因为后端重启就全部消失，凭证不会直接塞进沙箱，危险操作可以停下来等人审批。对于个人玩具，这些听起来有点重。对于客户要交付的自动化服务，这些东西反而是客户愿意付钱的地方。</p>
+<p>因为客户买的从来不是「模型会写几句代码」，客户买的是一个任务能不能跑完，出了问题能不能追，资料和密钥会不会乱飞。</p>
+<p>不过先把预期放低一点。useAgent目前还是Alpha，官方README自己也提醒接口可能变化。它需要Bun、Postgres 16和pgvector，真正的沙箱还要接Daytona或CubeSandbox。拿一台1核小服务器直接照着装，八成会卡在资源和依赖上，这不是一个装完就能卖的成品。</p>
+<h2>普通人可以卖的不是源码，而是三层服务</h2>
+<p>第一层是部署和迁移服务。</p>
+<p>很多小团队已经在用Claude Code或Codex，但任务散在个人电脑里，密钥放在环境变量里，做完的文件也没人归档。你可以把useAgent部署到客户自己的云主机，接好Postgres、GitHub和Slack，再把一条能跑通的任务链交付出去。比如每周读取销售表，生成经营简报，写入团队知识库，最后在Slack线程里通知负责人。</p>
+<p>这一层卖的是省心，价格可以从一次部署几千元起步，具体要看云主机、沙箱和集成数量。这个价格是服务报价的估算，不是useAgent官方定价，别把两个概念混在一起。</p>
+<p>第二层是垂直工作流改造。</p>
+<p>客户不会因为「我有一个Agent平台」而兴奋，他会因为「每周少做四小时报表」而付款。你可以只挑一个行业和一个重复任务，先做成模板。跨境卖家要的是商品资料整理和客服回复草稿，咨询公司要的是资料搜集和报告初稿，软件团队要的是Issue分流、代码修改和测试结果回传。</p>
+<p>useAgent的优势在于，产物不是一段聊天记录，而是文件、提交、表格或PDF。你交付的时候能把过程和结果一起给客户看，验收会顺很多。</p>
+<p>第三层才是长期托管。</p>
+<p>当客户已经有三五条稳定工作流，你可以按月收取维护费，负责升级Agent引擎、检查失败任务、调整权限、补连接器和整理知识库。这里的难点也最明显，客户买的是持续可用，不是一次炫技演示。只会写Prompt的人做不了这层，至少要懂一点Linux、数据库、权限和日志。</p>
+<h2>一单服务怎么从零跑通</h2>
+<p>我建议不要一上来部署完整平台，更不要先做一个「万能AI员工」。先拿一个可验收的任务做最小闭环。</p>
+<p>第一步，跟客户确认输入、动作和结果。输入是一份什么文件，Agent要访问哪些系统，中间允许做什么，最后交付什么格式。没有这四个答案，后面所有演示都只是聊天。</p>
+<p>第二步，准备隔离环境。useAgent要求Postgres 16和pgvector，官方快速开始使用Bun安装前后端包。沙箱可以先选Daytona这类托管服务，减少自建运行时的工作量，等客户对数据本地化有要求，再评估CubeSandbox。</p>
+<p>第三步，只接一个执行引擎。Claude Code、Codex和OpenCode都能接入，但第一单没必要同时接三个。你先让一个引擎稳定完成任务，再测试切换，避免把问题拆成模型问题、沙箱问题和连接器问题三团。</p>
+<p>第四步，补权限和人工审批。客户最怕Agent误删文件、发错邮件、把内部资料带出去。把发送、删除、发布这些动作设成审批点，普通读取和草稿生成才自动跑。这个动作看起来拖慢速度，其实是在换客户信任。</p>
+<p>第五步，交付可追踪的结果。让客户能看到任务何时开始、访问了什么、生成了哪些文件、哪一步失败。useAgent把每次运行保存成事件时间线，这正好能拿来做交付说明，不必自己重新拼一份漂亮但无法核对的报告。</p>
+<p>第六步，留下人工接管口。Agent失败时不要只显示一条红色报错，要告诉客户该补什么资料、该重新授权哪个连接器、能不能从上一步继续。自动化不是完全没人管，而是把人从重复操作里拿出来，留在真正需要判断的位置。</p>
+<h2>成本怎么估，哪些钱不能漏算</h2>
+<p>源码本身是AGPL-3.0，个人研究和自托管可以从开源仓库开始。如果要把它嵌进闭源产品、做白标分发，README里写明另有商业许可，这块要提前看清楚。</p>
+<p>基础成本至少包括云主机、Postgres、沙箱运行时和模型账号。useAgent仓库没有公布统一的商业套餐，所以不能拿一个漂亮的月费数字冒充成本。Daytona是托管服务，CubeSandbox偏向自托管，价格和运维方式不同，报价时必须按客户实际用量核算。</p>
+<p>比较稳的报价方式，是把一次性实施费和月度维护费分开。实施费覆盖部署、连接器、权限和第一条工作流，维护费覆盖运行监控和小版本修改。模型调用费、沙箱费用和超出范围的新增工作流，单独列出来。</p>
+<p>我自己更倾向于先做小单，不先承诺「全自动」。一条每周跑一次、结果有人验收的工作流，远比十条只能演示不能稳定运行的流程值钱。客户第一次付款，买的是可控；第二次续费，才是效率。</p>
+<h2>这个方向最容易踩的坑</h2>
+<p>第一个坑是把Alpha项目包装成生产级产品。useAgent的文档写得很完整，但接口和数据结构仍可能变。服务合同里要写清楚版本、备份、升级窗口和故障边界，不要一句「永久稳定」把自己锁死。</p>
+<p>第二个坑是忽略服务器配置。Postgres、pgvector、前后端、沙箱加起来并不轻，低配机器可能连开发环境都撑不住。先在目标配置上做一次真实任务测试，再报价。</p>
+<p>第三个坑是只卖技术，不卖结果。客户不需要听你讲事件溯源和规范化事件契约，他要看一份报告能不能准时出来，一张表能不能少改两遍。技术应该藏在交付过程里，结果才放在报价单上。</p>
+<p>第四个坑是许可证看晚了。AGPL不是「随便拿来改改就能闭源卖」的许可证，尤其是你准备把平台嵌入自己的产品时，最好让懂开源合规的人确认一次。</p>
+<h2>我的判断</h2>
+<p>useAgent现在还不是一个适合普通人直接复制的赚钱项目，它更像一张正在成形的地图。地图上标出了一个新服务形态，客户不再只想买聊天机器人，而是想买一个有权限、有工作区、有记录、能交付文件的AI同事。</p>
+<p>这条路的窗口，不在于谁先注册一个域名，而在于谁先替一个具体行业跑通第一条任务链。你不需要一开始就做平台，也不需要同时掌握所有模型。找一个重复、昂贵、能验收的工作，把它放进隔离环境里，跑通，记录，交付。</p>
+<p>以前客户问的是「你会不会用Claude」。以后他更可能问，「这个任务能不能每周自己跑完，出了错我能不能接手」。</p>
+<p>问题已经从会不会聊天，挪到了能不能把活干完。</p>
+<p>大时代啊，朋友们。</p>
+<div class="cta-box"><p><strong>我整理了一份AI副业实战包</strong></p><p>里面有客户需求拆解、自动化服务报价、交付检查和Prompt模板，适合拿来做第一条可收费工作流。</p><p><a href="/prompt-pack/?src=apkg">查看AI副业实战包</a></p></div>
+</article>
+<div class="tip">本文基于useAgent公开GitHub README、仓库信息和公开资料整理。价格区间属于服务模式估算，实际报价请按云资源、沙箱和模型用量核算。</div>
+<div class="faq-section"><h2>常见问题</h2><div class="faq-item"><h4>useAgent适合个人部署吗</h4><p>适合学习和验证，但完整部署需要Bun、Postgres 16、pgvector以及沙箱运行时。低配服务器不一定适合生产使用。</p></div><div class="faq-item"><h4>不会写代码能做AI同事服务吗</h4><p>可以从需求梳理、工作流设计和交付管理切入，但部署、权限、日志和故障处理仍需要自己掌握，或者找技术伙伴合作。</p></div><div class="faq-item"><h4>useAgent和Claude Code有什么区别</h4><p>Claude Code是执行引擎之一，useAgent负责工作区、任务调度、事件记录、连接器和产物交付，两者不是同一层产品。</p></div><div class="faq-item"><h4>AI Agent服务怎么收费</h4><p>可以拆成部署实施费、工作流改造费和月度维护费。模型调用、沙箱和云主机等按实际用量单列，避免报价失真。</p></div></div>
+<div class="related"><p><strong>推荐阅读</strong></p><p><a href="/articles/cases/pilotdeck-ai-agent-platform-service-202605/">AI Agent平台服务怎么接单，PilotDeck实操拆解</a></p><p><a href="/tutorials/multi-agent-side-hustle/">多Agent协作副业怎么开始</a></p><p><a href="/articles/cases/openclaw-ai-assistant-side-hustle-service-202606/">个人AI助手服务的交付和变现路径</a></p></div>
+<div class="footer"><p>磨平一些信息差。</p><p>作者：AiToollab</p></div>
+</div>
+</body>
+</html>
