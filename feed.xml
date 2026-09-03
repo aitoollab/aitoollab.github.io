@@ -23,6 +23,36 @@
   </entry>
 
   <entry>
+    <title>AI报价单制作教程，把客户需求变成能成交的报价单</title>
+    <link href="https://www.aitoollab.top/tutorials/ai-quotation-making-tutorial-20260904/"/>
+    <id>https://www.aitoollab.top/tutorials/ai-quotation-making-tutorial-20260904/</id>
+    <updated>2026-09-04T08:00:00+08:00</updated>
+    <published>2026-09-04T08:00:00+08:00</published>
+    <summary type="text">AI报价单制作教程，教你用ChatGPT或DeepSeek整理需求、拆分成本、写交付说明，减少报价漏项。</summary>
+    <category term="教程"/>
+  </entry>
+
+  <entry>
+    <title>AI采购比价教程，普通人也能做出清楚的供应商对比表</title>
+    <link href="https://www.aitoollab.top/tutorials/ai-purchasing-price-comparison-tutorial-20260904/"/>
+    <id>https://www.aitoollab.top/tutorials/ai-purchasing-price-comparison-tutorial-20260904/</id>
+    <updated>2026-09-04T08:00:00+08:00</updated>
+    <published>2026-09-04T08:00:00+08:00</published>
+    <summary type="text">AI采购比价教程，教你整理供应商报价、规格和交期，用AI找出真正便宜而不是表面低价的方案。</summary>
+    <category term="教程"/>
+  </entry>
+
+  <entry>
+    <title>AI电商客服话术教程，让AI帮你一天处理100条咨询</title>
+    <link href="https://www.aitoollab.top/tutorials/ai-ecommerce-customer-service-tutorial-20260904/"/>
+    <id>https://www.aitoollab.top/tutorials/ai-ecommerce-customer-service-tutorial-20260904/</id>
+    <updated>2026-09-04T08:00:00+08:00</updated>
+    <published>2026-09-04T08:00:00+08:00</published>
+    <summary type="text">AI电商客服话术教程，覆盖售前咨询、售后安抚、催付和差评回复，适合店主和接单做客服的人。</summary>
+    <category term="教程"/>
+  </entry>
+
+  <entry>
     <title>Gemini 3.8 Flash发布 普通人怎么用它接AI编程单赚钱</title>
     <link href="https://www.aitoollab.top/articles/news/gemini-3-8-flash-cyber-side-hustle-20260903/"/>
     <id>https://www.aitoollab.top/articles/news/gemini-3-8-flash-cyber-side-hustle-20260903/</id>
@@ -180,36 +210,6 @@
     <published>2026-08-30T08:00:00+08:00</published>
     <summary type="text">OpenAI宣布11月12日断供Cursor模型，SpaceX收购引发AI编程工具大迁移，普通人怎么抓住AI编程工具迁移。。</summary>
     <category term="热点"/>
-  </entry>
-
-  <entry>
-    <title>帮商家用AI做产品宣传视频，Gemini Omni 1.1 Flash实测拆解，一单300到3000</title>
-    <link href="https://www.aitoollab.top/articles/cases/ai-product-video-ad-service-side-hustle-20260830/"/>
-    <id>https://www.aitoollab.top/articles/cases/ai-product-video-ad-service-side-hustle-20260830/</id>
-    <updated>2026-08-30T08:00:00+08:00</updated>
-    <published>2026-08-30T08:00:00+08:00</published>
-    <summary type="text">Gemini Omni 1.1 Flash让AI生成视频成本降到一条一美元，场景延伸、首尾帧、4K超分全都有。我靠帮本地。。</summary>
-    <category term="案例"/>
-  </entry>
-
-  <entry>
-    <title>Gemini 3.5 Transcribe发布，语音转文字副业的机会来了</title>
-    <link href="https://www.aitoollab.top/articles/news/gemini-3-5-transcribe-speech-to-text-side-hustle-20260829/"/>
-    <id>https://www.aitoollab.top/articles/news/gemini-3-5-transcribe-speech-to-text-side-hustle-20260829/</id>
-    <updated>2026-08-29T08:00:00+08:00</updated>
-    <published>2026-08-29T08:00:00+08:00</published>
-    <summary type="text">谷歌Gemini 3.5 Transcribe发布，语音转文字准确率大幅提升，普通人怎么用它赚钱？三个AI转写副业方向实。。</summary>
-    <category term="热点"/>
-  </entry>
-
-  <entry>
-    <title>帮人用AI做Excel数据分析和报表，300星huashu-excel项目拆解，一单报价500到2000</title>
-    <link href="https://www.aitoollab.top/articles/cases/huashu-excel-data-analysis-service-side-hustle-20260829/"/>
-    <id>https://www.aitoollab.top/articles/cases/huashu-excel-data-analysis-service-side-hustle-20260829/</id>
-    <updated>2026-08-29T08:00:00+08:00</updated>
-    <published>2026-08-29T08:00:00+08:00</published>
-    <summary type="text">发现一个爆火的开源项目alchaincyf/huashu-excel，专治AI算Excel算错数，8步流程体检清洗对账交。。</summary>
-    <category term="案例"/>
   </entry>
 
 </feed>
