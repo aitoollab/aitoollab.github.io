@@ -19,19 +19,29 @@ def process_article(path):
         content = f.read()
     
     # 清理历史上无法核验的社会证明，不用虚构数字换转化
+<<<<<<< HEAD
     old_content = content
     content = re.sub(r'已帮助\d+\+小伙伴[^<]*', '页面不放未经核验的用户评价；先看免费内容，再决定是否购买。', content)
     changed = content != old_content
+=======
+    content = content.replace('已帮助800+小伙伴提升效率 你的对手可能已经在用了', '页面不放未经核验的用户评价；先看免费内容，再决定是否购买。')
+>>>>>>> origin/main
     if 'data-conversion-bridge' in content:
         normalized = re.sub(
             r'<section class="conversion-bridge" data-conversion-bridge(?: style="[^"]*")?>',
             '<section class="conversion-bridge" data-conversion-bridge style="margin:40px 0;padding:24px;border:1px solid var(--border,#30363d);border-radius:12px;background:rgba(37,99,235,.08);text-align:center;">',
             content, count=1)
+<<<<<<< HEAD
         changed = normalized != content or changed
         content = normalized
         if changed:
             with open(path, "w", encoding="utf-8") as f:
                 f.write(content)
+=======
+        if normalized != content:
+            with open(path, "w", encoding="utf-8") as f:
+                f.write(normalized)
+>>>>>>> origin/main
             return True
         return False
 
