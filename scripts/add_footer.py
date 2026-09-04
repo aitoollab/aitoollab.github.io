@@ -20,7 +20,7 @@ def process_article(path):
     
     # 清理历史上无法核验的社会证明，不用虚构数字换转化
     old_content = content
-    content = content.replace('已帮助800+小伙伴提升效率 你的对手可能已经在用了', '页面不放未经核验的用户评价；先看免费内容，再决定是否购买。')
+    content = re.sub(r'已帮助\d+\+小伙伴[^<]*', '页面不放未经核验的用户评价；先看免费内容，再决定是否购买。', content)
     changed = content != old_content
     if 'data-conversion-bridge' in content:
         normalized = re.sub(
