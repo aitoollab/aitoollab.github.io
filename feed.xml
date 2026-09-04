@@ -5,12 +5,22 @@
   <link href="https://www.aitoollab.top/feed.xml" rel="self"/>
   <link href="https://www.aitoollab.top/"/>
   <id>https://www.aitoollab.top/</id>
-  <updated>2026-09-04T08:00:00+08:00</updated>
+  <updated>2026-09-05T08:00:00+08:00</updated>
   <author>
     <name>AiToollab</name>
     <uri>https://www.aitoollab.top</uri>
   </author>
   <generator uri="https://www.aitoollab.top/">AiToollab Generator</generator>
+
+  <entry>
+    <title>GPT-6 Astra发布 普通人怎么靠AI安全测试接单赚钱</title>
+    <link href="https://www.aitoollab.top/articles/news/gpt-6-astra-ai-cybersecurity-side-hustle-20260905/"/>
+    <id>https://www.aitoollab.top/articles/news/gpt-6-astra-ai-cybersecurity-side-hustle-20260905/</id>
+    <updated>2026-09-05T08:00:00+08:00</updated>
+    <published>2026-09-05T08:00:00+08:00</published>
+    <summary type="text">GPT-6 Astra发布，首次达到关键网络安全能力级别。普通人怎么靠GPT-6 Astra做AI安全测试接单赚钱，本文。。</summary>
+    <category term="热点"/>
+  </entry>
 
   <entry>
     <title>Claude商业智能体发布 普通人怎么靠AI电商接单赚钱</title>
@@ -200,16 +210,6 @@
     <published>2026-08-31T08:00:00+08:00</published>
     <summary type="text">内容生成赚钱副业怎么做，用AI小工具接单最实在。这篇拆3个方向，文案代写、商品图批量出图、短视频脚本，每个都给出单量和收。。</summary>
     <category term="教程"/>
-  </entry>
-
-  <entry>
-    <title>OpenAI断供Cursor 普通人怎么抓住AI编程迁移潮赚钱</title>
-    <link href="https://www.aitoollab.top/articles/news/openai-cuts-cursor-migration-side-hustle-20260830/"/>
-    <id>https://www.aitoollab.top/articles/news/openai-cuts-cursor-migration-side-hustle-20260830/</id>
-    <updated>2026-08-30T08:00:00+08:00</updated>
-    <published>2026-08-30T08:00:00+08:00</published>
-    <summary type="text">OpenAI宣布11月12日断供Cursor模型，SpaceX收购引发AI编程工具大迁移，普通人怎么抓住AI编程工具迁移。。</summary>
-    <category term="热点"/>
   </entry>
 
 </feed>
