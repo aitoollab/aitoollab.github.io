@@ -5,12 +5,22 @@
   <link href="https://www.aitoollab.top/feed.xml" rel="self"/>
   <link href="https://www.aitoollab.top/"/>
   <id>https://www.aitoollab.top/</id>
-  <updated>2026-09-05T08:00:00+08:00</updated>
+  <updated>2026-09-06T08:00:00+08:00</updated>
   <author>
     <name>AiToollab</name>
     <uri>https://www.aitoollab.top</uri>
   </author>
   <generator uri="https://www.aitoollab.top/">AiToollab Generator</generator>
+
+  <entry>
+    <title>Lyria 3.5发布 普通人怎么靠AI音乐接单赚钱</title>
+    <link href="https://www.aitoollab.top/articles/news/lyria-3-5-music-side-hustle-20260906/"/>
+    <id>https://www.aitoollab.top/articles/news/lyria-3-5-music-side-hustle-20260906/</id>
+    <updated>2026-09-06T08:00:00+08:00</updated>
+    <published>2026-09-06T08:00:00+08:00</published>
+    <summary type="text">Lyria 3.5发布，支持生成几分钟的完整歌曲和44.1kHz立体声音频。普通人怎么靠Lyria 3.5做AI音乐接单。。</summary>
+    <category term="热点"/>
+  </entry>
 
   <entry>
     <title>GPT-6 Astra发布 普通人怎么靠AI安全测试接单赚钱</title>
@@ -199,16 +209,6 @@
     <updated>2026-08-31T08:00:00+08:00</updated>
     <published>2026-08-31T08:00:00+08:00</published>
     <summary type="text">AI赚钱50招，从内容创作、接单服务到电商带货全给你列齐了。每条都标了门槛和收入区间，挑一个你今天就能开始的方向，别光收。。</summary>
-    <category term="教程"/>
-  </entry>
-
-  <entry>
-    <title>AI数字人带货教程 零基础做数字人短视频的完整流程</title>
-    <link href="https://www.aitoollab.top/tutorials/ai-digital-human-sales-tutorial-20260831/"/>
-    <id>https://www.aitoollab.top/tutorials/ai-digital-human-sales-tutorial-20260831/</id>
-    <updated>2026-08-31T08:00:00+08:00</updated>
-    <published>2026-08-31T08:00:00+08:00</published>
-    <summary type="text">AI数字人带货教程，从选工具、生成数字人到发布带货的完整流程。零基础也能上手，一篇讲清楚数字人带货怎么做、能赚多少、有什。。</summary>
     <category term="教程"/>
   </entry>
 
