@@ -248,3 +248,5 @@ tutorials/ai-ecommerce-customer-service-tutorial-20260904/
 tutorials/ai-quotation-making-tutorial-20260904/
 tutorials/ai-purchasing-price-comparison-tutorial-20260904/
 articles/news/gpt-6-astra-ai-cybersecurity-side-hustle-20260905/index.html
+
+articles/news/lyria-3-5-music-side-hustle-20260906/index.html
