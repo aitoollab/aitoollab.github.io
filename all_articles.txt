@@ -254,4 +254,4 @@ articles/cases/ai-photo-curation-service-side-hustle-20260907/index.html/
 
 tutorials/ai-data-analysis-money-tool-tutorial-20260907/
 tutorials/ai-content-generation-money-tool-tutorial-20260907/
-tutorials/chatgpt-gongwen-prompts-tutorial-20260907/
+tutorials/chatgpt-gongwen-prompts-tutorial-20260907/tutorials/ai-customer-followup-tutorial-20260907/
