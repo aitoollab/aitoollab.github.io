@@ -18,8 +18,8 @@ NAV_HTML = """<nav class="site-topnav" style="position:sticky;top:0;z-index:100;
     <a href="/" style="color:var(--muted,#8b949e);text-decoration:none;">首页</a>
     <a href="/tutorials/" style="color:var(--muted,#8b949e);text-decoration:none;">教程</a>
     <a href="/articles/cases/" style="color:var(--muted,#8b949e);text-decoration:none;">案例</a>
-    <a href="/prompt-pack/?src=anav" style="color:var(--muted,#8b949e);text-decoration:none;">AI副业工具箱</a>
-    <a href="/prompt-pack/" style="margin-left:auto;padding:4px 14px;border-radius:6px;background:linear-gradient(135deg,#58a6ff,#3fb950);color:#fff;text-decoration:none;font-weight:600;">¥39 立即获取</a>
+    <a href="/projects/" style="color:var(--muted,#8b949e);text-decoration:none;">项目库</a>
+    <a href="/projects/wechat-sticker/" style="margin-left:auto;padding:4px 14px;border-radius:6px;background:linear-gradient(135deg,#58a6ff,#3fb950);color:#fff;text-decoration:none;font-weight:600;">公众号贴图项目</a>
 </nav>"""
 
 
@@ -28,7 +28,12 @@ def process_file(path):
         content = f.read()
 
     if 'site-topnav' in content:
-        return False  # 已有导航
+        updated = re.sub(r'<nav class="site-topnav".*?</nav>', NAV_HTML, content, count=1, flags=re.DOTALL)
+        if updated != content:
+            with open(path, "w", encoding="utf-8") as f:
+                f.write(updated)
+            return True
+        return False  # 已有最新导航
 
     # 在 <body> 后插入导航
     if '<body>' in content:
