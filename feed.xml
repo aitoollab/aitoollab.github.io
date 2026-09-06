@@ -33,6 +33,36 @@
   </entry>
 
   <entry>
+    <title>ChatGPT 公文提示词教程，三条提示词把初稿改得更稳</title>
+    <link href="https://www.aitoollab.top/tutorials/chatgpt-gongwen-prompts-tutorial-20260907/"/>
+    <id>https://www.aitoollab.top/tutorials/chatgpt-gongwen-prompts-tutorial-20260907/</id>
+    <updated>2026-09-07T08:00:00+08:00</updated>
+    <published>2026-09-07T08:00:00+08:00</published>
+    <summary type="text">ChatGPT 公文提示词教程，提供通知、工作总结和调研报告的实用提示词写法，帮助你减少空话和返工。</summary>
+    <category term="教程"/>
+  </entry>
+
+  <entry>
+    <title>数据分析 赚钱 副业 小工具教程，先从Excel报表接单做起</title>
+    <link href="https://www.aitoollab.top/tutorials/ai-data-analysis-money-tool-tutorial-20260907/"/>
+    <id>https://www.aitoollab.top/tutorials/ai-data-analysis-money-tool-tutorial-20260907/</id>
+    <updated>2026-09-07T08:00:00+08:00</updated>
+    <published>2026-09-07T08:00:00+08:00</published>
+    <summary type="text">数据分析 赚钱 副业 小工具教程，教你用ChatGPT和Excel把散乱数据整理成客户看得懂的报表。</summary>
+    <category term="教程"/>
+  </entry>
+
+  <entry>
+    <title>内容生成 赚钱 副业 小工具教程，把一篇素材做成一周内容</title>
+    <link href="https://www.aitoollab.top/tutorials/ai-content-generation-money-tool-tutorial-20260907/"/>
+    <id>https://www.aitoollab.top/tutorials/ai-content-generation-money-tool-tutorial-20260907/</id>
+    <updated>2026-09-07T08:00:00+08:00</updated>
+    <published>2026-09-07T08:00:00+08:00</published>
+    <summary type="text">内容生成 赚钱 副业 小工具教程，教你用ChatGPT和Claude把一份真实素材拆成短文、标题和发布清单。</summary>
+    <category term="教程"/>
+  </entry>
+
+  <entry>
     <title>Lyria 3.5发布 普通人怎么靠AI音乐接单赚钱</title>
     <link href="https://www.aitoollab.top/articles/news/lyria-3-5-music-side-hustle-20260906/"/>
     <id>https://www.aitoollab.top/articles/news/lyria-3-5-music-side-hustle-20260906/</id>
@@ -180,36 +210,6 @@
     <published>2026-09-01T08:00:00+08:00</published>
     <summary type="text">Google正式上线Gemini Omni 1.1 Flash，360p草稿只要720p三分之一价格，还能首尾帧控制和4。。</summary>
     <category term="热点"/>
-  </entry>
-
-  <entry>
-    <title>帮KTV和翻唱博主做人声分离伴奏提取，StemDeck本地分轨实测，一单30到800实操拆解</title>
-    <link href="https://www.aitoollab.top/articles/cases/ai-stem-separation-karaoke-service-side-hustle-20260901/"/>
-    <id>https://www.aitoollab.top/articles/cases/ai-stem-separation-karaoke-service-side-hustle-20260901/</id>
-    <updated>2026-09-01T08:00:00+08:00</updated>
-    <published>2026-09-01T08:00:00+08:00</published>
-    <summary type="text">Moises号称7000万用户，LALAL.AI按分钟扣钱。开源项目StemDeck把人声、鼓、贝斯、吉他、钢琴拆成六轨。。</summary>
-    <category term="案例"/>
-  </entry>
-
-  <entry>
-    <title>腾讯开源Hy4顶级模型 普通人怎么靠它接单赚钱</title>
-    <link href="https://www.aitoollab.top/articles/news/tencent-hy4-open-source-side-hustle-20260831/"/>
-    <id>https://www.aitoollab.top/articles/news/tencent-hy4-open-source-side-hustle-20260831/</id>
-    <updated>2026-08-31T08:00:00+08:00</updated>
-    <published>2026-08-31T08:00:00+08:00</published>
-    <summary type="text">腾讯开源Hy4大模型，7700亿参数100万上下文，免费开放两周。普通人怎么用它做办公自动化、长文档处理、私有化部署赚钱。。</summary>
-    <category term="热点"/>
-  </entry>
-
-  <entry>
-    <title>帮独立开发者用AI做App Store截图，应用商店上架素材设计服务，一单200到2000实操拆解</title>
-    <link href="https://www.aitoollab.top/articles/cases/ai-app-store-screenshot-service-side-hustle-20260831/"/>
-    <id>https://www.aitoollab.top/articles/cases/ai-app-store-screenshot-service-side-hustle-20260831/</id>
-    <updated>2026-08-31T08:00:00+08:00</updated>
-    <published>2026-08-31T08:00:00+08:00</published>
-    <summary type="text">App Store截图尺寸不对就上不了架，一套专业截图在Fiverr上卖10到250美元。我靠给独立开发者做应用商店截图。。</summary>
-    <category term="案例"/>
   </entry>
 
 </feed>
