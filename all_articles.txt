@@ -251,3 +251,7 @@ articles/news/gpt-6-astra-ai-cybersecurity-side-hustle-20260905/index.html
 
 articles/news/lyria-3-5-music-side-hustle-20260906/index.html/
 articles/cases/ai-photo-curation-service-side-hustle-20260907/index.html/
+
+tutorials/ai-data-analysis-money-tool-tutorial-20260907/
+tutorials/ai-content-generation-money-tool-tutorial-20260907/
+tutorials/chatgpt-gongwen-prompts-tutorial-20260907/
