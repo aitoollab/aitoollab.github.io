@@ -147,7 +147,7 @@
 <p>前两天刷HN，刷到一个有点炸的帖子，arxiv上有人发了篇论文，讲AI怎么把COBOL程序迁移成Java。我点进去看了一眼，他们搞了个叫Locksmith Loop的方法，拿三个真实COBOL程序做测试，规模从430行到4114行，AI生成的Java在确定性校验下全部通过，最狠的那个生产级程序，分支覆盖率做到了91.90%。底下评论区吵成一锅粥，有人觉得不可思议，有人觉得AI迁移肯定要翻车。我当时就想，这事背后藏着一门生意，而且是一门会越来越大的生意。。。</p>
 <p>先给你补个背景。COBOL这门语言，1959年就出来了，比你爷爷年纪都大。它至今还在支撑全球金融系统的底层，有人统计过，COBOL每天处理的交易量是Google搜索量的200倍，全球95%的ATM取款机交易背后跑的都是COBOL。美国的银行、保险、政府系统，欧洲的养老金，日本的证券交易所，核心账务系统全是它。这门语言被宣布死亡了几十年，1992年就有人写文章给它办葬礼，结果它到现在还活着，活得好好的。</p>
 <p>问题出在人上。写COBOL的程序员，平均年龄60多岁，这几年扎堆退休。2020年疫情的时候，美国新泽西州失业救济系统直接崩了，州政府急得满世界找COBOL程序员，最后IBM都下场免费开COBOL培训课了。你想想看，一边是几亿行还在跑的老代码，一边是懂它的人在肉眼可见地消失，这个供需缺口，就是机会。</p>
-<div style="margin:28px 0;padding:14px 18px;border:1px solid rgba(63,185,80,.35);background:rgba(63,185,80,.06);border-radius:10px;font-size:14px;">💡 想要这套方法的现成模板和真实案例？<a href="/projects/" style="color:#3fb950;font-weight:600;"> 查看当前AI副业项目 →</a></div><h2>为什么这个方向突然值得做了</h2>
+<div style="margin:28px 0;padding:14px 18px;border:1px solid rgba(63,185,80,.35);background:rgba(63,185,80,.06);border-radius:10px;font-size:14px;">💡 想知道这个方向普通人实操的真实情况？<a href="/projects/wechat-sticker/" style="color:#3fb950;font-weight:600;"> 看训练营学员最近的结果 →</a></div><h2>为什么这个方向突然值得做了</h2>
 <p>以前COBOL迁移是大厂专属，一个银行的核心系统迁移项目，动辄几千万预算，要请专门的咨询公司，排期排好几年。普通人根本碰不到这个市场，门槛太高了。</p>
 <p>但AI把门槛砸穿了。IBM搞了watsonx Code Assistant for Z，专门用AI把COBOL转成Java，AWS也出了COBOL转换器。这周HN上还有个叫Hopper的agentic工具，97分上榜，号称第一个面向主框架的AI开发环境，能直接连上你公司的z/OS系统，用AI操作TN3270终端、读写VSAM数据、帮你调试JCL作业，免费版就能用。再加上GPT-5.x、Claude这些通用大模型，你喂一段COBOL给它，它翻译成Java、Python、C#，基本能看。</p>
 <p>几个变化是同时发生的。一是COBOL程序员退休潮到了临界点，银行想找人维护都找不到，更别说迁移。二是监管在逼着金融机构现代化，老系统要上云、要符合新安全标准。三是AI终于能读懂COBOL了，以前这种代码只有十几年经验的老工程师敢碰，现在AI几秒钟出一版翻译，人工负责验证就行。这三件事叠在一起，中间那段「用AI帮企业迁移老系统」的服务，就成了一个真空地带。</p>
@@ -230,13 +230,13 @@
 </div>
 
     <section class="conversion-bridge" data-conversion-bridge style="margin:40px 0;padding:24px;border:1px solid var(--border,#30363d);border-radius:12px;background:rgba(37,99,235,.08);text-align:center;">
-        <strong>想了解真实可参与的AI项目？</strong>
-        <p>这篇内容先解决一个具体问题。想继续了解公众号贴图、内容变现和带货项目，可以先看项目说明与案例，再添加个人微信咨询。</p>
+        <strong>贴图项目已跑通，训练营学员陆续拿到结果</strong>
+        <p>这篇教程解决一个具体问题。如果你想要一个不需要粉丝、AI 直接出图、已有人拿到收益的方向，可以看贴图项目的学员最近在做什么、拿到了什么结果。</p>
         <div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center;">
             <a href="/projects/" style="padding:8px 14px;border:1px solid var(--border,#30363d);border-radius:7px;">查看当前项目</a>
-            <a href="/projects/wechat-sticker/" style="padding:8px 14px;background:#2563eb;color:#fff;border-radius:7px;">领取公众号贴图项目说明</a>
+            <a href="/projects/wechat-sticker/" style="padding:8px 14px;background:#2563eb;color:#fff;border-radius:7px;">看学员拿到了什么结果</a>
         </div>
-        <div style="display:flex;align-items:center;justify-content:center;gap:18px;margin-top:16px;flex-wrap:wrap;"><img src="/wechat-qr-v3.jpg" alt="AiToollab 微信二维码" width="120" height="120" loading="lazy" style="border-radius:8px;border:1px solid var(--border,#30363d);margin:0;"><p style="margin:0;font-size:13px;color:var(--muted,#8b949e);max-width:280px;text-align:left;line-height:1.7;">扫码加微信，回复「贴图」可领项目说明与案例；已经试过这篇方法的，欢迎把结果或卡点发到 contact@aitoollab.top。</p></div>
+        <div style="display:flex;align-items:center;justify-content:center;gap:18px;margin-top:16px;flex-wrap:wrap;"><img src="/wechat-qr-v3.jpg" alt="AiToollab 微信二维码" width="120" height="120" loading="lazy" style="border-radius:8px;border:1px solid var(--border,#30363d);margin:0;"><p style="margin:0;font-size:13px;color:var(--muted,#8b949e);max-width:280px;text-align:left;line-height:1.7;">扫码加微信回复「贴图」，发你最近的学员收益截图和起号检查表；已经在做的，欢迎把结果或卡点发到 contact@aitoollab.top。</p></div>
     </section>
     <div class="footer">
     <p>© 2026 AiToollab · 激发大家对AI的好奇</p>
