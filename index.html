@@ -653,6 +653,15 @@
         .article-card p { font-size: 13px; color: var(--muted); margin: 0 0 10px; line-height: 1.5; }
         .article-card .card-date { font-size: 12px; color: var(--muted); }
 
+
+        .article-card { padding: 0; overflow: hidden; }
+        .article-card > .card-tag, .article-card > h3, .article-card > p, .article-card > .card-date { margin-left: 20px; margin-right: 20px; }
+        .article-card > .card-tag { margin-top: 16px; }
+        .article-card > .card-date { margin-bottom: 16px; }
+        .card-cover { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; margin: 0; border-radius: 0; }
+        .card-money { display: inline-block; margin-left: 6px; background: rgba(63,185,80,.14); color: #3fb950; font-weight: 700; font-size: 11px; padding: 2px 8px; border-radius: 4px; }
+        .article-card:hover { box-shadow: 0 8px 24px rgba(0,0,0,.35); border-color: rgba(63,185,80,.45); }
+    
         .category-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -804,7 +813,7 @@
     <section class="hero">
         <div class="hero-badge">2026-09-07 · 持续更新</div>
         <h1 class="hero-title">AI副业项目库</h1>
-        <p class="hero-desc">持续更新公众号贴图、内容变现和带货等真实项目介绍。先看项目说明和案例，再添加个人微信咨询，确认适合后再谈合作。</p>
+        <p class="hero-desc">每个项目都拆好玩法、投入成本和收益数据。先看说明和真实案例，觉得合适再加微信细聊，不合适不打扰。</p>
         <div class="hero-actions">
             <a href="/projects/" class="btn-primary">查看当前项目</a>
             <a href="/projects/wechat-sticker/" class="btn-secondary">领取公众号贴图项目说明</a>
@@ -819,7 +828,7 @@
         </div>
         <div class="stat-item">
             <span class="stat-num">50+</span>
-            <span class="stat-label">AIAI工作流案例</span>
+            <span class="stat-label">AI工作流案例</span>
         </div>
         <div class="stat-item">
             <span class="stat-num">47篇</span>
@@ -836,36 +845,41 @@
         <h2 class="section-title">最新文章</h2>
         <div class="article-grid">
             <a href="/articles/news/ai-incident-simulation-side-hustle-20260907/" class="article-card">
+                <img class="card-cover" alt="AI自动处理故障后 普通人怎么靠AI运维培训接单赚钱" src="/og-daily-ai-incident-simulation-side-hustle-20260907.jpg" loading="lazy">
                 <span class="card-tag">热点</span>
                 <h3>AI自动处理故障后 普通人怎么靠AI运维培训接单赚钱</h3>
                 <p>AI自动处理故障后，普通人怎么靠AI运维培训接单赚钱？从事故演练、值班流程和故障复盘三个方向，拆解AI运维副业机会。</p>
                 <span class="card-date">2026-09-07</span>
             </a>
             <a href="/articles/cases/ai-photo-curation-service-side-hustle-20260907/" class="article-card">
-                <span class="card-tag">案例</span>
+                <span class="card-tag">案例</span><span class="card-money">¥300到2000/单</span>
                 <h3>AI摄影管家怎么赚钱，帮摄影师筛片和整理照片一单300到2000元</h3>
                 <p>GitHub上的AI摄影管家可以本地筛选照片、识别重复和模糊图片，并生成摄影报告。本文拆解AI照片筛选服务的工具链、接单。。</p>
                 <span class="card-date">2026-09-07</span>
             </a>
             <a href="/tutorials/chatgpt-gongwen-prompts-tutorial-20260907/" class="article-card">
+                <img class="card-cover" alt="ChatGPT 公文提示词教程，三条提示词把初稿改得更稳" src="/og-chatgpt-gongwen-prompts-tutorial-20260907.jpg" loading="lazy">
                 <span class="card-tag">热点</span>
                 <h3>ChatGPT 公文提示词教程，三条提示词把初稿改得更稳</h3>
                 <p>ChatGPT 公文提示词教程，提供通知、工作总结和调研报告的实用提示词写法，帮助你减少空话和返工。</p>
                 <span class="card-date">2026-09-07</span>
             </a>
             <a href="/tutorials/ai-data-analysis-money-tool-tutorial-20260907/" class="article-card">
+                <img class="card-cover" alt="数据分析 赚钱 副业 小工具教程，先从Excel报表接单做起" src="/og-ai-data-analysis-money-tool-tutorial-20260907.jpg" loading="lazy">
                 <span class="card-tag">热点</span>
                 <h3>数据分析 赚钱 副业 小工具教程，先从Excel报表接单做起</h3>
                 <p>数据分析 赚钱 副业 小工具教程，教你用ChatGPT和Excel把散乱数据整理成客户看得懂的报表。</p>
                 <span class="card-date">2026-09-07</span>
             </a>
             <a href="/tutorials/ai-customer-followup-tutorial-20260907/" class="article-card">
+                <img class="card-cover" alt="AI客户跟进教程，普通人用ChatGPT做出不尴尬的回访话术" src="/og-ai-customer-followup-tutorial-20260907.jpg" loading="lazy">
                 <span class="card-tag">热点</span>
                 <h3>AI客户跟进教程，普通人用ChatGPT做出不尴尬的回访话术</h3>
                 <p>AI客户跟进实操教程，用ChatGPT整理客户记录、判断回访时机、生成不油腻的话术。适合接单、咨询和小商家，半小时搭好自。。</p>
                 <span class="card-date">2026-09-07</span>
             </a>
             <a href="/tutorials/ai-content-generation-money-tool-tutorial-20260907/" class="article-card">
+                <img class="card-cover" alt="内容生成 赚钱 副业 小工具教程，把一篇素材做成一周内容" src="/og-ai-content-generation-money-tool-tutorial-20260907.jpg" loading="lazy">
                 <span class="card-tag">热点</span>
                 <h3>内容生成 赚钱 副业 小工具教程，把一篇素材做成一周内容</h3>
                 <p>内容生成 赚钱 副业 小工具教程，教你用ChatGPT和Claude把一份真实素材拆成短文、标题和发布清单。</p>

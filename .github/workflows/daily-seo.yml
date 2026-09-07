@@ -39,11 +39,10 @@ jobs:
           echo "Articles: $(find . -path '*/index.html' -not -path './index.html' | wc -l)"
           echo "Products: $(find . -name 'index.html' -path '*/xhs-*' -o -name 'index.html' -path '*/resume-*' -o -name 'index.html' -path '*/notion-*' | wc -l)"
 
-      - name: Commit sitemap update (if needed)
+      - name: Sitemap lastmod sanity check
         run: |
-          git config --local user.email "github-actions@aitoollab.github.io"
-          git config --local user.name "GitHub Actions Bot"
-          # Auto-update lastmod dates in sitemap
-          DATE=$(date '+%Y-%m-%d')
-          sed -i "s/<lastmod>[0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\}/<lastmod>$DATE/g" sitemap.xml
-          git diff --exit-code sitemap.xml || git add sitemap.xml && git commit -m "chore: update sitemap lastmod [auto]" && git push
+          # 只报告异常，不再全量改写 lastmod（全量改写会让 Google 不信任该字段）
+          TODAY=$(date '+%Y-%m-%d')
+          STALE=$(grep -c "<lastmod>$TODAY" sitemap.xml || true)
+          echo "URLs claiming today as lastmod: $STALE / $(grep -c '<loc>' sitemap.xml)"
+          if [ "$STALE" -gt 50 ]; then echo "::warning::大部分 lastmod 都是今天，疑似被批量改写"; fi

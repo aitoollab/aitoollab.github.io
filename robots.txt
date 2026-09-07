@@ -2,6 +2,8 @@
 
 User-agent: *
 Allow: /
+Disallow: /*.py$
+Disallow: /scripts/
 
 # AI搜索引擎 / GEO引擎
 User-agent: GPTBot
