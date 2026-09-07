@@ -27,6 +27,14 @@ def process_file(path):
     with open(path, "r", encoding="utf-8") as f:
         content = f.read()
 
+    # 先删除文章自带 header nav（toc/breadcrumb/section-nav 保留），防止双导航
+    def strip_dup(m):
+        tag = m.group(0)
+        if any(k in tag[:120] for k in ('toc', 'breadcrumb', 'section-nav', 'site-topnav')):
+            return tag
+        return ''
+    content = re.sub(r'\s*<nav(?![^>]*site-topnav)[^>]*>.*?</nav>', strip_dup, content, flags=re.S)
+
     if 'site-topnav' in content:
         updated = re.sub(r'<nav class="site-topnav".*?</nav>', NAV_HTML, content, count=1, flags=re.DOTALL)
         if updated != content:
