@@ -5,12 +5,22 @@
   <link href="https://www.aitoollab.top/feed.xml" rel="self"/>
   <link href="https://www.aitoollab.top/"/>
   <id>https://www.aitoollab.top/</id>
-  <updated>2026-09-07T08:00:00+08:00</updated>
+  <updated>2026-09-08T08:00:00+08:00</updated>
   <author>
     <name>AiToollab</name>
     <uri>https://www.aitoollab.top</uri>
   </author>
   <generator uri="https://www.aitoollab.top/">AiToollab Generator</generator>
+
+  <entry>
+    <title>OpenAI承认管不住AI了 普通人怎么靠AI验收检查接单赚钱</title>
+    <link href="https://www.aitoollab.top/articles/news/openai-alien-mind-ai-verification-side-hustle-20260908/"/>
+    <id>https://www.aitoollab.top/articles/news/openai-alien-mind-ai-verification-side-hustle-20260908/</id>
+    <updated>2026-09-08T08:00:00+08:00</updated>
+    <published>2026-09-08T08:00:00+08:00</published>
+    <summary type="text">OpenAI首席科学家发文承认目前没有任何实验室能监督住AI，AI验收检查成了新副业机会。本文拆解AI产出验收、AI验证。。</summary>
+    <category term="热点"/>
+  </entry>
 
   <entry>
     <title>AI自动处理故障后 普通人怎么靠AI运维培训接单赚钱</title>
@@ -128,7 +138,7 @@
     <id>https://www.aitoollab.top/tutorials/ai-purchasing-price-comparison-tutorial-20260904/</id>
     <updated>2026-09-04T08:00:00+08:00</updated>
     <published>2026-09-04T08:00:00+08:00</published>
-    <summary type="text">AI采购比价教程，教你整理供应商报价、规格和交期，用AI找出真正便宜而不是表面低价的方案。</summary>
+    <summary type="text">AI采购比价教程：把多家供应商报价丢给AI，自动生成清晰的对比表和推荐结论，附提示词模板与Excel核对方法。</summary>
     <category term="教程"/>
   </entry>
 
@@ -138,7 +148,7 @@
     <id>https://www.aitoollab.top/tutorials/ai-ecommerce-customer-service-tutorial-20260904/</id>
     <updated>2026-09-04T08:00:00+08:00</updated>
     <published>2026-09-04T08:00:00+08:00</published>
-    <summary type="text">AI电商客服话术教程，覆盖售前咨询、售后安抚、催付和差评回复，适合店主和接单做客服的人。</summary>
+    <summary type="text">AI电商客服话术教程：用ChatGPT批量生成售前售后回复模板，一天处理上百条咨询，附常见场景话术与提效方法。</summary>
     <category term="教程"/>
   </entry>
 
@@ -199,16 +209,6 @@
     <updated>2026-09-02T08:00:00+08:00</updated>
     <published>2026-09-02T08:00:00+08:00</published>
     <summary type="text">自建的工具网站如何推广？别先买流量。用教程占长尾词、用知乎小红书带人、把用法拆成提示词再卖，三条路我都试过，日活从四十人。。</summary>
-    <category term="教程"/>
-  </entry>
-
-  <entry>
-    <title>AI写卡副业怎么做 单词卡知识卡闲鱼接单教程</title>
-    <link href="https://www.aitoollab.top/tutorials/ai-flashcard-writing-side-hustle-tutorial-20260902/"/>
-    <id>https://www.aitoollab.top/tutorials/ai-flashcard-writing-side-hustle-tutorial-20260902/</id>
-    <updated>2026-09-02T08:00:00+08:00</updated>
-    <published>2026-09-02T08:00:00+08:00</published>
-    <summary type="text">AI写卡副业怎么做？家长要单词闪卡，宝妈要知识卡，闲鱼一单30到80。用ChatGPT出题面，Canva排版，别做成绘本。。</summary>
     <category term="教程"/>
   </entry>
 
