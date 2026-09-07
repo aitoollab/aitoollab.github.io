@@ -1,0 +1,52 @@
+name: Homepage render guard
+
+# 任何人（包括 hermes 凌晨的自动同步）推送 main 后，
+# 立即用新版 update_homepage.py 重渲染首页卡片，
+# 保证封面图/收入徽章/教程扫描的样式不被旧版脚本抹掉。
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'index.html'
+      - 'articles/**'
+      - 'tutorials/**'
+      - 'og-*.jpg'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  rerender:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Re-render homepage cards
+        run: |
+          python -c "
+          import os
+          os.environ['REPO_DIR'] = os.getcwd()
+          import update_homepage as u
+          u.REPO_DIR = os.getcwd()
+          u.INDEX_PATH = os.path.join(u.REPO_DIR, 'index.html')
+          u.ARTICLES_DIR = os.path.join(u.REPO_DIR, 'articles')
+          u.TUTORIALS_DIR = os.path.join(u.REPO_DIR, 'tutorials')
+          assert u.update_homepage(), 'render failed'
+          "
+
+      - name: Commit if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet index.html; then
+            echo "homepage already canonical, nothing to do"
+          else
+            git add index.html
+            git commit -m "chore: re-render homepage cards (auto-heal after push)"
+            git push
+          fi
