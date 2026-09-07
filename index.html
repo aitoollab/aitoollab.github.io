@@ -655,12 +655,21 @@
 
 
         .article-card { padding: 0; overflow: hidden; }
-        .article-card > .card-tag, .article-card > h3, .article-card > p, .article-card > .card-date { margin-left: 20px; margin-right: 20px; }
-        .article-card > .card-tag { margin-top: 16px; }
-        .article-card > .card-date { margin-bottom: 16px; }
-        .card-cover { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; margin: 0; border-radius: 0; }
-        .card-money { display: inline-block; margin-left: 6px; background: rgba(63,185,80,.14); color: #3fb950; font-weight: 700; font-size: 11px; padding: 2px 8px; border-radius: 4px; }
-        .article-card:hover { box-shadow: 0 8px 24px rgba(0,0,0,.35); border-color: rgba(63,185,80,.45); }
+        .article-card > .card-strip { margin-left: 20px; margin-right: 20px; }
+        .article-card > h3, .article-card > p { margin-left: 20px; margin-right: 20px; }
+        .article-card > h3 { margin-top: 14px; }
+        .article-card > p { margin-bottom: 14px; }
+        .card-strip {
+            display: flex; align-items: center; gap: 8px;
+            margin: 0 -20px; padding: 12px 20px;
+            background: linear-gradient(135deg, rgba(88,166,255,.10), rgba(163,113,247,.08));
+            border-bottom: 1px solid var(--border);
+            min-height: 46px;
+        }
+        .card-strip .strip-cat { font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 4px; }
+        .card-strip .strip-date { margin-left: auto; font-size: 12px; color: var(--muted); }
+        .card-money { flex-shrink: 0; background: rgba(63,185,80,.14); color: #3fb950; font-weight: 700; font-size: 11px; padding: 2px 8px; border-radius: 4px; }
+        .article-card:hover { box-shadow: 0 8px 24px rgba(0,0,0,.35); border-color: rgba(88,166,255,.45); }
     
         .category-grid {
             display: grid;
@@ -844,46 +853,29 @@
     <section class="section">
         <h2 class="section-title">最新文章</h2>
         <div class="article-grid">
-            <a href="/articles/news/openai-alien-mind-ai-verification-side-hustle-20260908/" class="article-card">
-                <img class="card-cover" src="/og-daily-openai-alien-mind-ai-verification-side-hustle-20260908.jpg" alt="OpenAI承认管不住AI了 普通人怎么靠AI验收检查接单赚钱" loading="lazy">
-                <span class="card-tag">热点</span>
+            <a href="/articles/news/openai-alien-mind-ai-verification-side-hustle-20260908/" class="article-card"><div class="card-strip"><span class="strip-cat" style="color:#f0883e;border:1px solid #f0883e55;background:#f0883e18;">热点</span><span class="strip-date">2026-09-08</span></div>
                 <h3>OpenAI承认管不住AI了 普通人怎么靠AI验收检查接单赚钱</h3>
                 <p>OpenAI首席科学家发文承认目前没有任何实验室能监督住AI，AI验收检查成了新副业机会</p>
-                <span class="card-date">2026-09-08</span>
             </a>
-            <a href="/articles/cases/video-ai-talking-lipsync-service-side-hustle-20260908/" class="article-card">
-                <img class="card-cover" src="/og-cases-video-ai-talking-lipsync-service-side-hustle-20260908.jpg" alt="AI对口型口播视频怎么生成怎么赚钱，video-ai-talking开源工具实操" loading="lazy">
-                <span class="card-tag">案例</span>
+            <a href="/articles/cases/video-ai-talking-lipsync-service-side-hustle-20260908/" class="article-card"><div class="card-strip"><span class="strip-cat" style="color:#3fb950;border:1px solid #3fb95055;background:#3fb95018;">案例</span><span class="strip-date">2026-09-08</span></div>
                 <h3>AI对口型口播视频怎么生成怎么赚钱，video-ai-talking开源工具实操拆解</h3>
                 <p>video-ai-talking是一个一周冲到325星的开源AI真人口播视频工具，上传一段真人出镜素材，写好文案</p>
-                <span class="card-date">2026-09-08</span>
             </a>
-            <a href="/articles/news/ai-incident-simulation-side-hustle-20260907/" class="article-card">
-                <img class="card-cover" src="/og-daily-ai-incident-simulation-side-hustle-20260907.jpg" alt="AI自动处理故障后 普通人怎么靠AI运维培训接单赚钱" loading="lazy">
-                <span class="card-tag">热点</span>
+            <a href="/articles/news/ai-incident-simulation-side-hustle-20260907/" class="article-card"><div class="card-strip"><span class="strip-cat" style="color:#f0883e;border:1px solid #f0883e55;background:#f0883e18;">热点</span><span class="strip-date">2026-09-07</span></div>
                 <h3>AI自动处理故障后 普通人怎么靠AI运维培训接单赚钱</h3>
                 <p>AI自动处理故障后，普通人怎么靠AI运维培训接单赚钱？从事故演练、值班流程和故障复盘三个方向，拆解AI运维副业机会。</p>
-                <span class="card-date">2026-09-07</span>
             </a>
-            <a href="/articles/cases/ai-photo-curation-service-side-hustle-20260907/" class="article-card">
-                <span class="card-tag">案例</span><span class="card-money">¥300到2000/单</span>
+            <a href="/articles/cases/ai-photo-curation-service-side-hustle-20260907/" class="article-card"><div class="card-strip"><span class="strip-cat" style="color:#3fb950;border:1px solid #3fb95055;background:#3fb95018;">案例</span><span class="strip-date">2026-09-07</span></div><span class="card-money">¥300到2000/单</span>
                 <h3>AI摄影管家怎么赚钱，帮摄影师筛片和整理照片一单300到2000元</h3>
                 <p>GitHub上的AI摄影管家可以本地筛选照片、识别重复和模糊图片，并生成摄影报告</p>
-                <span class="card-date">2026-09-07</span>
             </a>
-            <a href="/tutorials/ai-content-generation-money-tool-tutorial-20260907/" class="article-card">
-                <img class="card-cover" src="/og-ai-content-generation-money-tool-tutorial-20260907.jpg" alt="内容生成 赚钱 副业 小工具教程，把一篇素材做成一周内容" loading="lazy">
-                <span class="card-tag">教程</span>
+            <a href="/tutorials/ai-content-generation-money-tool-tutorial-20260907/" class="article-card"><div class="card-strip"><span class="strip-cat" style="color:#58a6ff;border:1px solid #58a6ff55;background:#58a6ff18;">教程</span><span class="strip-date">2026-09-07</span></div>
                 <h3>内容生成 赚钱 副业 小工具教程，把一篇素材做成一周内容</h3>
                 <p>内容生成 赚钱 副业 小工具教程，教你用ChatGPT和Claude把一份真实素材拆成短文、标题和发布清单。</p>
-                <span class="card-date">2026-09-07</span>
             </a>
-            <a href="/tutorials/ai-customer-followup-tutorial-20260907/" class="article-card">
-                <img class="card-cover" src="/og-ai-customer-followup-tutorial-20260907.jpg" alt="AI客户跟进教程，普通人用ChatGPT做出不尴尬的回访话术" loading="lazy">
-                <span class="card-tag">教程</span>
+            <a href="/tutorials/ai-customer-followup-tutorial-20260907/" class="article-card"><div class="card-strip"><span class="strip-cat" style="color:#58a6ff;border:1px solid #58a6ff55;background:#58a6ff18;">教程</span><span class="strip-date">2026-09-07</span></div>
                 <h3>AI客户跟进教程，普通人用ChatGPT做出不尴尬的回访话术</h3>
                 <p>AI客户跟进实操教程，用ChatGPT整理客户记录、判断回访时机、生成不油腻的话术。适合接单、咨询和小商家，半小时搭好自己的跟进表</p>
-                <span class="card-date">2026-09-07</span>
             </a>
         </div>
         <div class="section-more">
