@@ -1,19 +1,15 @@
 /*
-  Cache-Control: public, max-age=3600
-  CDN-Cache-Control: public, max-age=3600
+  Cache-Control: public, max-age=0, must-revalidate
   X-Content-Type-Options: nosniff
 
 /tutorials/*
-  Cache-Control: public, max-age=3600
-  CDN-Cache-Control: public, max-age=3600
+  Cache-Control: public, max-age=0, must-revalidate
 
 /articles/*
-  Cache-Control: public, max-age=3600
-  CDN-Cache-Control: public, max-age=3600
+  Cache-Control: public, max-age=0, must-revalidate
 
-/prompt-pack/*
-  Cache-Control: public, max-age=3600
-  CDN-Cache-Control: public, max-age=3600
+/projects/*
+  Cache-Control: public, max-age=0, must-revalidate
 
 /*.css
   Cache-Control: public, max-age=86400, immutable
@@ -52,16 +48,13 @@
   CDN-Cache-Control: public, max-age=86400, immutable
 
 /sitemap.xml
-  Cache-Control: public, max-age=3600
-  CDN-Cache-Control: public, max-age=3600
+  Cache-Control: public, max-age=0, must-revalidate
 
 /sitemap-index.xml
-  Cache-Control: public, max-age=3600
-  CDN-Cache-Control: public, max-age=3600
+  Cache-Control: public, max-age=0, must-revalidate
 
 /feed.xml
-  Cache-Control: public, max-age=3600
-  CDN-Cache-Control: public, max-age=3600
+  Cache-Control: public, max-age=0, must-revalidate
 
 /robots.txt
   Cache-Control: public, max-age=86400
