@@ -173,20 +173,22 @@ def count_articles():
     return total, counts
 
 
-def render_card(article):
-    """单张卡片：封面图 + 标签 + 收入徽章 + 标题 + 摘要 + 日期。
+# 分类色（与 index.html 卡片数据条一致）
+TAG_COLORS = {'热点': '#f0883e', '案例': '#3fb950', '教程': '#58a6ff', '实验': '#a371f7'}
 
-    样式依赖 index.html <style> 里的 .card-cover / .card-money 规则，
+
+def render_card(article):
+    """单张卡片：数据条（分类徽章 + 收入徽章 + 日期）+ 标题 + 摘要。
+
+    样式依赖 index.html <style> 里的 .card-strip / .card-money 规则，
     那些规则不在本脚本的替换范围内，所以重跑不会丢样式。
     """
-    cover = (f'\n                <img class="card-cover" src="{article["cover"]}" '
-             f'alt="{article["title"][:40]}" loading="lazy">') if article.get("cover") else ""
+    color = TAG_COLORS.get(article['tag'], '#58a6ff')
     money = f'<span class="card-money">¥{article["money"]}</span>' if article.get("money") else ""
-    return f'''            <a href="{article['url']}" class="article-card">{cover}
-                <span class="card-tag">{article['tag']}</span>{money}
+    return f'''            <a href="{article['url']}" class="article-card">
+                <div class="card-strip"><span class="strip-cat" style="color:{color};border:1px solid {color}55;background:{color}18;">{article['tag']}</span>{money}<span class="strip-date">{article['date']}</span></div>
                 <h3>{article['title']}</h3>
                 <p>{article['desc']}</p>
-                <span class="card-date">{article['date']}</span>
             </a>
 '''
 
@@ -239,14 +241,13 @@ def update_homepage():
     with open(INDEX_PATH, 'w', encoding='utf-8') as f:
         f.write(html)
 
-    with_cover = sum(1 for a in articles[:6] if a.get("cover"))
     with_money = sum(1 for a in articles[:6] if a.get("money"))
     print(f"✅ 首页已更新：{today}")
     print(f"   - 候选文章：{len(candidates)}篇 (news/seo/cases/startup + tutorials)")
-    print(f"   - 展示 6 篇：带封面 {with_cover}/6，带收入徽章 {with_money}/6")
+    print(f"   - 展示 6 篇：带收入徽章 {with_money}/6")
     print(f"   - 文章总数：{total}篇 {counts}")
     for a in articles[:6]:
-        print(f"     • [{a['tag']}] {a['title'][:36]:38} 封面={'有' if a.get('cover') else '无'} 徽章={a.get('money') or '—'}")
+        print(f"     • [{a['tag']}] {a['title'][:40]:42} 徽章={a.get('money') or '—'}")
     return True
 
 
