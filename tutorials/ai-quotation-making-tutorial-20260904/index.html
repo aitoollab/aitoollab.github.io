@@ -9,17 +9,17 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "AI做报价或比价会不会算错", "acceptedAnswer": {"@type": "Answer", "text": "会，所以价格、税费和规格必须回看原始资料。让模型展示计算过程，再用表格或计算器复核。"}}, {"@type": "Question", "name": "普通人需要付费模型吗", "acceptedAnswer": {"@type": "Answer", "text": "不一定。ChatGPT、DeepSeek的基础额度可以先完成整理和初稿，长表格或批量任务再考虑升级。"}}, {"@type": "Question", "name": "这些教程能不能拿来接单", "acceptedAnswer": {"@type": "Answer", "text": "可以，先选一个具体场景做样稿，比如客服问答表、报价单或采购比价报告，再按工作量收费。"}}]}</script>
 <style>body{margin:0;background:#0d1117;color:#e6edf3;font:17px/1.9 -apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif}a{color:#f97316}.top{padding:14px 24px;border-bottom:1px solid #30363d}.top a{margin-right:20px;text-decoration:none}.head{padding:48px 24px;text-align:center;border-bottom:1px solid #30363d}h1{max-width:760px;margin:auto;font-size:30px;line-height:1.5}.meta{color:#8b949e;font-size:14px;margin-top:10px}article{max-width:760px;margin:40px auto;padding:0 24px}article p{margin:0 0 1.25em}.lead{font-size:19px;color:#b8c3d1;border-left:3px solid #f97316;padding-left:16px}.cta-box{margin:35px 0;padding:28px;text-align:center;border:1px solid #30363d;border-radius:12px;background:#161b22}.cta-btn{display:inline-block;padding:10px 24px;background:#f97316;color:#fff;border-radius:7px;text-decoration:none}.faq-section{border-top:1px solid #30363d;margin-top:40px;padding-top:20px}.faq-item{margin:20px 0}.faq-item h3{font-size:18px;color:#f0b429}.footer{text-align:center;padding:40px 20px;border-top:1px solid #30363d;color:#8b949e;font-size:14px}</style></head>
 <body>
-<nav class="site-topnav" style="position:sticky;top:0;z-index:100;display:flex;align-items:center;gap:16px;padding:10px 24px;background:rgba(13,17,23,0.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--border,#30363d);font-size:14px;">
-    <a href="/" style="display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--text,#e6edf3);font-weight:700;font-size:16px;flex-shrink:0;">
+<nav class="site-topnav" style="position:sticky;top:0;z-index:100;display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:center;padding:10px 24px;background:rgba(13,17,23,0.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--border,#30363d);font-size:14px;">
+    <a href="/" style="grid-column:1;justify-self:start;display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--text,#e6edf3);font-weight:700;font-size:16px;white-space:nowrap;">
         <span style="font-size:20px;">🧰</span><span>AiToollab</span>
     </a>
-    <div style="flex:1;display:flex;justify-content:center;gap:18px;min-width:0;">
-    <a href="/" style="color:var(--muted,#8b949e);text-decoration:none;">首页</a>
-    <a href="/tutorials/" style="color:var(--muted,#8b949e);text-decoration:none;">教程</a>
-    <a href="/articles/cases/" style="color:var(--muted,#8b949e);text-decoration:none;">案例</a>
-    <a href="/projects/" style="color:var(--muted,#8b949e);text-decoration:none;"><span data-ab-slot="projects-nav">项目库</span></a>
+    <div style="grid-column:2;display:flex;align-items:center;justify-content:center;gap:18px;white-space:nowrap;">
+        <a href="/" style="color:var(--muted,#8b949e);text-decoration:none;">首页</a>
+        <a href="/tutorials/" style="color:var(--muted,#8b949e);text-decoration:none;">教程</a>
+        <a href="/articles/cases/" style="color:var(--muted,#8b949e);text-decoration:none;">案例</a>
+        <a href="/projects/" style="color:var(--muted,#8b949e);text-decoration:none;"><span data-ab-slot="projects-nav">项目库</span></a>
     </div>
-    <a href="/projects/wechat-sticker/" style="flex-shrink:0;padding:4px 14px;border-radius:6px;background:linear-gradient(135deg,#58a6ff,#3fb950);color:#fff;text-decoration:none;font-weight:600;">公众号贴图项目</a>
+    <a href="/projects/" style="grid-column:3;justify-self:end;padding:4px 14px;border-radius:6px;background:linear-gradient(135deg,#58a6ff,#3fb950);color:#fff;text-decoration:none;font-weight:600;white-space:nowrap;"><span data-ab-slot="projects-nav">项目库</span></a>
 </nav><header class="head"><h1>AI报价单制作教程，把客户需求变成能成交的报价单</h1><div class="meta">📅 2026-09-04 · AI报价单 · 预计阅读 5 分钟</div></header>
 <article><p class="lead">我以前做项目时，最怕客户问一句，给我报个价。脑子里明明有成本，写出来却总漏掉修改次数、交付格式和时间。后来我把需求丢给ChatGPT，让它先当一个挑刺的项目经理，报价单反而清楚了很多。你敢信？？？不是让AI替我定价，是让它帮我发现我没算进去的东西。</p><p>拿到客户需求后，先别急着让模型写报价。把聊天记录、参考图片、交付时间和客户说过的预算贴进去，让它提取四件事，客户要什么、哪些内容没说、交付要分几步、哪些地方可能追加费用。DeepSeek做这一步也够用，关键是材料不能只剩一句「做个宣传册」。</p>
 <p>报价单最好拆成基础项、可选项和不包含项。基础项写清交付文件和修改次数，可选项放加急、额外尺寸和后续维护，不包含项则直接写明客户需要另行提供的素材。这样不是故意复杂，而是把容易吵架的地方提前摆到桌面上。说实话，很多低价单子不是亏在单价低，是亏在边界没写。</p>
