@@ -2730,4 +2730,10 @@
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+    <url>
+        <loc>https://www.aitoollab.top/tutorials/xiaohongshu-revenue-breakdown-tutorial-20260909/</loc>
+        <lastmod>2026-09-08</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
 </urlset>
