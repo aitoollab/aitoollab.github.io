@@ -260,3 +260,6 @@ articles/news/openai-alien-mind-ai-verification-side-hustle-20260908/index.html
 articles/cases/video-ai-talking-lipsync-service-side-hustle-20260908/index.html
 articles/news/ai-model-fatigue-migration-side-hustle-20260909/index.html
 articles/cases/screenwriting-skills-ai-script-side-hustle-20260909/index.html
+tutorials/xiaohongshu-revenue-breakdown-tutorial-20260909/
+tutorials/kimi-k3-256k-tutorial-20260909/
+tutorials/youtube-custom-merch-ai-tutorial-20260909/
