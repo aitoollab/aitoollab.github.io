@@ -50,4 +50,40 @@
     report(slot, v, 'show');
     el.addEventListener('click', function () { report(slot, v, 'click'); }, { passive: true });
   });
+
+  /* ---- 全站点击追踪：任何链接点击都记一条（页面类型+目标+是否A/B入口）---- */
+  function pageKind() {
+    var p = location.pathname;
+    if (p === '/' || p === '/index.html') return 'home';
+    if (p.indexOf('/projects/') === 0) return 'project';
+    if (p.indexOf('/tutorials/') === 0) return 'tutorial';
+    if (p.indexOf('/articles/news/') === 0) return 'news';
+    if (p.indexOf('/articles/cases/') === 0) return 'case';
+    if (p.indexOf('/articles/') === 0) return 'article';
+    return 'other';
+  }
+  function destKind(href) {
+    if (!href) return 'void';
+    if (href.indexOf(location.origin) !== 0 && href.indexOf('/') !== 0 && href.indexOf('#') !== 0) return 'external';
+    if (href.indexOf('/projects/') === 0) return 'projects';
+    if (href.indexOf('/tutorials/') === 0) return 'tutorials';
+    if (href.indexOf('/articles/news/') === 0) return 'news';
+    if (href.indexOf('/articles/cases/') === 0) return 'cases';
+    if (href.indexOf('/articles/') === 0) return 'articles';
+    if (href === '/' || href.indexOf('#') === 0) return 'home';
+    return 'other';
+  }
+  document.addEventListener('click', function (ev) {
+    var a = ev.target && ev.target.closest ? ev.target.closest('a') : null;
+    if (!a) return;
+    var tracked = a.hasAttribute('data-ab-slot') || !!a.querySelector('[data-ab-slot]');
+    if (tracked) return; // A/B 入口已由上面的槽位逻辑上报，避免重复计数
+    var pos = 'nav';
+    if (a.closest('.article-grid, .category-grid, .grid')) pos = 'card';
+    else if (a.closest('.cta-box, .conversion-bridge, [data-conversion-bridge]')) pos = 'cta';
+    else if (a.closest('.footer')) pos = 'footer';
+    else if (a.closest('.student-results')) pos = 'results';
+    else if (a.closest('article')) pos = 'body';
+    report('link:' + pageKind(), destKind(a.getAttribute('href')) + '@' + pos, 'click');
+  }, { passive: true });
 })();
