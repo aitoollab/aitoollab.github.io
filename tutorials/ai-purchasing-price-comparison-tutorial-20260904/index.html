@@ -9,17 +9,18 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "AI做报价或比价会不会算错", "acceptedAnswer": {"@type": "Answer", "text": "会，所以价格、税费和规格必须回看原始资料。让模型展示计算过程，再用表格或计算器复核。"}}, {"@type": "Question", "name": "普通人需要付费模型吗", "acceptedAnswer": {"@type": "Answer", "text": "不一定。ChatGPT、DeepSeek的基础额度可以先完成整理和初稿，长表格或批量任务再考虑升级。"}}, {"@type": "Question", "name": "这些教程能不能拿来接单", "acceptedAnswer": {"@type": "Answer", "text": "可以，先选一个具体场景做样稿，比如客服问答表、报价单或采购比价报告，再按工作量收费。"}}]}</script>
 <style>body{margin:0;background:#0d1117;color:#e6edf3;font:17px/1.9 -apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif}a{color:#f97316}.top{padding:14px 24px;border-bottom:1px solid #30363d}.top a{margin-right:20px;text-decoration:none}.head{padding:48px 24px;text-align:center;border-bottom:1px solid #30363d}h1{max-width:760px;margin:auto;font-size:30px;line-height:1.5}.meta{color:#8b949e;font-size:14px;margin-top:10px}article{max-width:760px;margin:40px auto;padding:0 24px}article p{margin:0 0 1.25em}.lead{font-size:19px;color:#b8c3d1;border-left:3px solid #f97316;padding-left:16px}.cta-box{margin:35px 0;padding:28px;text-align:center;border:1px solid #30363d;border-radius:12px;background:#161b22}.cta-btn{display:inline-block;padding:10px 24px;background:#f97316;color:#fff;border-radius:7px;text-decoration:none}.faq-section{border-top:1px solid #30363d;margin-top:40px;padding-top:20px}.faq-item{margin:20px 0}.faq-item h3{font-size:18px;color:#f0b429}.footer{text-align:center;padding:40px 20px;border-top:1px solid #30363d;color:#8b949e;font-size:14px}</style></head>
 <body>
-<nav class="site-topnav" style="position:sticky;top:0;z-index:100;display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:center;padding:10px 24px;background:rgba(13,17,23,0.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--border,#30363d);font-size:14px;">
-    <a href="/" style="grid-column:1;justify-self:start;display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--text,#e6edf3);font-weight:700;font-size:16px;white-space:nowrap;">
-        <span style="font-size:20px;">🧰</span><span>AiToollab</span>
-    </a>
-    <div style="grid-column:2;display:flex;align-items:center;justify-content:center;gap:18px;white-space:nowrap;">
-        <a href="/" style="color:var(--muted,#8b949e);text-decoration:none;">首页</a>
-        <a href="/tutorials/" style="color:var(--muted,#8b949e);text-decoration:none;">教程</a>
-        <a href="/articles/cases/" style="color:var(--muted,#8b949e);text-decoration:none;">案例</a>
-        <a href="/projects/" style="color:var(--muted,#8b949e);text-decoration:none;"><span data-ab-slot="projects-nav">项目库</span></a>
+<nav class="site-topnav" style="position:sticky;top:0;z-index:100;background:rgba(13,17,23,0.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--border,#30363d);font-size:14px;">
+    <div style="max-width:1120px;margin:0 auto;min-height:56px;display:grid;grid-template-columns:minmax(180px,1fr) auto minmax(180px,1fr);align-items:center;padding:0 20px;">
+        <a href="/" style="grid-column:1;justify-self:start;display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--text,#e6edf3);font-weight:700;font-size:16px;white-space:nowrap;">
+            <span style="font-size:20px;">🧰</span><span>AiToollab</span>
+        </a>
+        <div style="grid-column:2;display:flex;align-items:center;justify-content:center;gap:18px;white-space:nowrap;">
+            <a href="/" style="color:var(--muted,#8b949e);text-decoration:none;">首页</a>
+            <a href="/tutorials/" style="color:var(--muted,#8b949e);text-decoration:none;">教程</a>
+            <a href="/articles/cases/" style="color:var(--muted,#8b949e);text-decoration:none;">案例</a>
+        </div>
+        <a href="/projects/" style="grid-column:3;justify-self:end;padding:7px 14px;border-radius:7px;background:linear-gradient(135deg,#58a6ff,#3fb950);color:#fff;text-decoration:none;font-weight:600;white-space:nowrap;"><span data-ab-slot="projects-cta">项目库</span></a>
     </div>
-    <a href="/projects/" style="grid-column:3;justify-self:end;padding:4px 14px;border-radius:6px;background:linear-gradient(135deg,#58a6ff,#3fb950);color:#fff;text-decoration:none;font-weight:600;white-space:nowrap;"><span data-ab-slot="projects-nav">项目库</span></a>
 </nav><header class="head"><h1>AI采购比价教程，普通人也能做出清楚的供应商对比表</h1><div class="meta">📅 2026-09-04 · AI采购比价 · 预计阅读 5 分钟</div></header>
 <article><p class="lead">采购比价这件事，看着就是把几个数字放进表格，真做起来特别容易翻车。同一个产品，有的供应商含税，有的不含税，有的包运费，有的交期要20天。我前几天整理一批办公用品，单看单价，最便宜的那家最后反而贵了。给我整不会了。</p><p>用AI做比价，第一步不是让它选供应商，而是先统一字段。把商品名称、规格、数量、含税价、运费、起订量、交期、付款方式和售后写成固定表头。聊天记录里缺的地方标成待确认，不能让模型自己猜。ChatGPT、Claude和DeepSeek都能做整理，区别主要在长表格处理和你自己的校验习惯。</p>
 <p>第二步，把同类商品归到一起。供应商写的名称可能完全不同，一个叫加厚文件盒，一个叫办公档案盒，AI可以帮你找出疑似同款，但不能替你确认材质和尺寸。你想想看，规格不一样的产品硬放在一起比价，表格再漂亮也没有用。</p>
