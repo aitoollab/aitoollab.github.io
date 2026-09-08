@@ -34,6 +34,8 @@ def process_file(path):
             return True
         return False  # 已有最新导航
 
+    # 本页没有 site-topnav（首页 main-nav / 栏目页 section-nav）：不注入，避免双导航
+    return False
     # 在 <body> 后插入导航
     if '<body>' in content:
         content = content.replace('<body>', '<body>\n' + NAV_HTML, 1)
@@ -49,10 +51,16 @@ def process_file(path):
 
 def main():
     files = []
-    for pattern in ['articles/cases/*/index.html', 'articles/news/*/index.html',
-                    'articles/seo/*/index.html', 'articles/startup-100/*/index.html',
-                    'tutorials/*/index.html']:
-        files.extend(glob.glob(os.path.join(BASE, pattern)))
+    for dirpath, dirnames, filenames in os.walk(BASE):
+        if '.git' in dirpath or os.path.join(BASE,'scripts') in dirpath:
+            continue
+        for fn in filenames:
+            if not fn.endswith('.html'):
+                continue
+            rel = os.path.relpath(os.path.join(dirpath, fn), BASE).replace(os.sep, '/')
+            if any(k in rel for k in ('baidu_verify','google06','yandex_')):
+                continue
+            files.append(os.path.join(dirpath, fn))
 
     # 排除已处理的
     done = 0
