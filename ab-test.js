@@ -12,7 +12,8 @@
   var EXP = {
     // 槽位: 候选词数组（A 恒为当前默认词，保证对照）
     'projects-nav': ['项目库', '已跑通项目库', '在赚项目'],
-    'projects-hero-btn': ['查看当前项目', '看已跑通的项目', '看真实在做的项目']
+    'projects-hero-btn': ['查看当前项目', '看已跑通的项目', '看真实在做的项目'],
+    'projects-bridge-btn': ['查看当前项目', '看这个项目的真实数据', '看已跑通的项目']
   };
 
   function variant(slot) {

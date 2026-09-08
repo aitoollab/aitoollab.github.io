@@ -284,7 +284,7 @@
     <a href="/" style="color:var(--muted,#8b949e);text-decoration:none;">首页</a>
     <a href="/tutorials/" style="color:var(--muted,#8b949e);text-decoration:none;">教程</a>
     <a href="/articles/cases/" style="color:var(--muted,#8b949e);text-decoration:none;">案例</a>
-    <a href="/projects/" style="color:var(--muted,#8b949e);text-decoration:none;">项目库</a>
+    <a href="/projects/" style="color:var(--muted,#8b949e);text-decoration:none;"><span data-ab-slot="projects-nav">项目库</span></a>
     </div>
     <a href="/projects/wechat-sticker/" style="flex-shrink:0;padding:4px 14px;border-radius:6px;background:linear-gradient(135deg,#58a6ff,#3fb950);color:#fff;text-decoration:none;font-weight:600;">公众号贴图项目</a>
 </nav>
@@ -635,7 +635,7 @@
         <strong>贴图项目已跑通，训练营学员陆续拿到结果</strong>
         <p>这篇教程解决一个具体问题。如果你想要一个不需要粉丝、AI 直接出图、已有人拿到收益的方向，可以看贴图项目的学员最近在做什么、拿到了什么结果。</p>
         <div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center;">
-            <a href="/projects/" style="padding:8px 14px;border:1px solid var(--border,#30363d);border-radius:7px;">查看当前项目</a>
+            <a href="/projects/" style="padding:8px 14px;border:1px solid var(--border,#30363d);border-radius:7px;"><span data-ab-slot="projects-bridge-btn">查看当前项目</span></a>
             <a href="/projects/wechat-sticker/" style="padding:8px 14px;background:#2563eb;color:#fff;border-radius:7px;">看学员拿到了什么结果</a>
         </div>
         <div style="display:flex;align-items:center;justify-content:center;gap:18px;margin-top:16px;flex-wrap:wrap;"><img src="/wechat-qr-v3.jpg" alt="AiToollab 微信二维码" width="120" height="120" loading="lazy" style="border-radius:8px;border:1px solid var(--border,#30363d);margin:0;"><p style="margin:0;font-size:13px;color:var(--muted,#8b949e);max-width:280px;text-align:left;line-height:1.7;">扫码加微信回复「贴图」，发你最近的学员收益截图和起号检查表；已经在做的，欢迎把结果或卡点发到 contact@aitoollab.top。</p></div>
@@ -645,12 +645,13 @@
             <a href="/about/" style="color:var(--muted);text-decoration:underline;">关于我们</a> ·
             <a href="/disclaimer/" style="color:var(--muted);text-decoration:underline;">免责声明</a> ·
             <a href="/privacy/" style="color:var(--muted);text-decoration:underline;">隐私政策</a> ·
-            <a href="/projects/" style="color:var(--muted);text-decoration:underline;">项目库</a>
+            <a href="/projects/" style="color:var(--muted);text-decoration:underline;"><span data-ab-slot="projects-nav">项目库</span></a>
         </p>
         <p style="margin-top:6px;">© 2026 AiToollab · 内容仅供参考，不构成投资建议</p>
     </div>
 <button id="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="返回顶部">↑</button>
 <style>#back-to-top{position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;background:#2563eb;color:#fff;border:none;cursor:pointer;font-size:18px;opacity:0;transition:opacity .3s;z-index:999;pointer-events:none}#back-to-top.show{opacity:.85;pointer-events:auto}#back-to-top:hover{opacity:1}</style>
 <script>window.addEventListener('scroll',function(){var b=document.getElementById('back-to-top');if(b)b.classList.toggle('show',window.scrollY>400);});</script>
+<script src="/ab-test.js" defer></script>
 </body>
 </html>
