@@ -194,14 +194,16 @@
 
         /* 导航栏 */
         .main-nav {
-            display: flex;
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
             align-items: center;
-            justify-content: space-between;
             max-width: 1100px;
             margin: 0 auto 24px;
             padding: 0 0 20px;
             border-bottom: 1px solid var(--border);
         }
+        .main-nav .nav-links { grid-column: 2; }
+        .main-nav .nav-links .nav-link-cta { grid-column: 3; justify-self: end; }
         .nav-logo {
             display: flex;
             align-items: center;
@@ -811,7 +813,7 @@
             <a href="/articles/news/" class="nav-link">热点</a>
             <a href="/articles/cases/" class="nav-link">案例</a>
             <a href="/articles/startup-100/" class="nav-link">实验</a>
-            <a href="/projects/" class="nav-link nav-link-cta">当前项目</a>
+        <a href="/projects/" class="nav-link nav-link-cta" data-ab-slot="projects-nav">项目库</a>
         </div>
     </nav>
 </header>
@@ -824,7 +826,7 @@
         <h1 class="hero-title">AI副业项目库</h1>
         <p class="hero-desc">每个项目都拆好玩法、投入成本和收益数据。先看说明和真实案例，觉得合适再加微信细聊，不合适不打扰。</p>
         <div class="hero-actions">
-            <a href="/projects/" class="btn-primary">查看当前项目</a>
+            <a href="/projects/" class="btn-primary" data-ab-slot="projects-hero-btn">查看当前项目</a>
             <a href="/projects/wechat-sticker/" class="btn-secondary">看学员拿到了什么结果</a>
         </div>
     </section>
@@ -998,5 +1000,6 @@
 </div>
 
 <button id="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="返回顶部">↑</button>
+<script src="/ab-test.js" defer></script>
 </body>
 </html>
