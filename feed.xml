@@ -5,12 +5,22 @@
   <link href="https://www.aitoollab.top/feed.xml" rel="self"/>
   <link href="https://www.aitoollab.top/"/>
   <id>https://www.aitoollab.top/</id>
-  <updated>2026-09-08T08:00:00+08:00</updated>
+  <updated>2026-09-09T08:00:00+08:00</updated>
   <author>
     <name>AiToollab</name>
     <uri>https://www.aitoollab.top</uri>
   </author>
   <generator uri="https://www.aitoollab.top/">AiToollab Generator</generator>
+
+  <entry>
+    <title>一周五个AI新模型发布 模型疲劳爆发 普通人怎么靠帮人换模型赚钱</title>
+    <link href="https://www.aitoollab.top/articles/news/ai-model-fatigue-migration-side-hustle-20260909/"/>
+    <id>https://www.aitoollab.top/articles/news/ai-model-fatigue-migration-side-hustle-20260909/</id>
+    <updated>2026-09-09T08:00:00+08:00</updated>
+    <published>2026-09-09T08:00:00+08:00</published>
+    <summary type="text">Anthropic、OpenAI、Meta、Google一周内连发五个AI新模型，CNBC报道模型疲劳爆发。本文拆解AI。。</summary>
+    <category term="热点"/>
+  </entry>
 
   <entry>
     <title>OpenAI承认管不住AI了 普通人怎么靠AI验收检查接单赚钱</title>
@@ -200,16 +210,6 @@
     <published>2026-09-02T08:00:00+08:00</published>
     <summary type="text">KAIST的SweepLED用不到7美元LED壳和手机，5秒内94%检出率，HN上204分。帮出差的人、女团和民宿管家做。。</summary>
     <category term="案例"/>
-  </entry>
-
-  <entry>
-    <title>小红书好物分享怎么赚钱 0粉也能挂链接的3步</title>
-    <link href="https://www.aitoollab.top/tutorials/xiaohongshu-haowu-share-money-tutorial-20260902/"/>
-    <id>https://www.aitoollab.top/tutorials/xiaohongshu-haowu-share-money-tutorial-20260902/</id>
-    <updated>2026-09-02T08:00:00+08:00</updated>
-    <published>2026-09-02T08:00:00+08:00</published>
-    <summary type="text">小红书好物分享怎么赚钱？别等粉丝。开通蒲公英或购物笔记，用AI写评测再自己改口吻，0粉也能挂链接拿佣金。我挂了12条，最。。</summary>
-    <category term="教程"/>
   </entry>
 
 </feed>
