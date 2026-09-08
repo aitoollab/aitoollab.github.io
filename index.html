@@ -194,16 +194,17 @@
 
         /* 导航栏 */
         .main-nav {
-            display: grid;
-            grid-template-columns: 1fr auto 1fr;
+            display: flex;
+            justify-content: space-between;
+            position: relative;
             align-items: center;
             max-width: 1100px;
             margin: 0 auto 24px;
             padding: 0 0 20px;
             border-bottom: 1px solid var(--border);
         }
-        .main-nav .nav-links { grid-column: 2; }
-        .main-nav .nav-links .nav-link-cta { grid-column: 3; justify-self: end; }
+        .main-nav .nav-links { position:absolute; left:50%; transform:translateX(-50%); display:flex; align-items:center; gap:4px; }
+        .main-nav .nav-link-cta { margin-left:auto; }
         .nav-logo {
             display: flex;
             align-items: center;
@@ -813,8 +814,8 @@
             <a href="/articles/news/" class="nav-link">热点</a>
             <a href="/articles/cases/" class="nav-link">案例</a>
             <a href="/articles/startup-100/" class="nav-link">实验</a>
-        <a href="/projects/" class="nav-link nav-link-cta" data-ab-slot="projects-nav">项目库</a>
         </div>
+        <a href="/projects/" class="nav-link nav-link-cta" data-ab-slot="projects-cta">项目库</a>
     </nav>
 </header>
 
