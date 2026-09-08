@@ -258,3 +258,4 @@ tutorials/chatgpt-gongwen-prompts-tutorial-20260907/
 tutorials/ai-customer-followup-tutorial-20260907/
 articles/news/openai-alien-mind-ai-verification-side-hustle-20260908/index.html
 articles/cases/video-ai-talking-lipsync-service-side-hustle-20260908/index.html
+articles/news/ai-model-fatigue-migration-side-hustle-20260909/index.html
