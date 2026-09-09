@@ -5,12 +5,22 @@
   <link href="https://www.aitoollab.top/feed.xml" rel="self"/>
   <link href="https://www.aitoollab.top/"/>
   <id>https://www.aitoollab.top/</id>
-  <updated>2026-09-09T08:00:00+08:00</updated>
+  <updated>2026-09-10T08:00:00+08:00</updated>
   <author>
     <name>AiToollab</name>
     <uri>https://www.aitoollab.top</uri>
   </author>
   <generator uri="https://www.aitoollab.top/">AiToollab Generator</generator>
+
+  <entry>
+    <title>ChatGPT Images 2.5发布 AI改图不用整张重画 普通人怎么靠AI修图接单赚钱</title>
+    <link href="https://www.aitoollab.top/articles/news/chatgpt-images-2-5-editing-side-hustle-20260910/"/>
+    <id>https://www.aitoollab.top/articles/news/chatgpt-images-2-5-editing-side-hustle-20260910/</id>
+    <updated>2026-09-10T08:00:00+08:00</updated>
+    <published>2026-09-10T08:00:00+08:00</published>
+    <summary type="text">OpenAI发布ChatGPT Images 2.5，AI修图终于能改哪指哪，不用整张重画。本文拆解电商产品图、海报改稿。。</summary>
+    <category term="热点"/>
+  </entry>
 
   <entry>
     <title>一周五个AI新模型发布 模型疲劳爆发 普通人怎么靠帮人换模型赚钱</title>
@@ -199,16 +209,6 @@
     <updated>2026-09-04T08:00:00+08:00</updated>
     <published>2026-09-04T08:00:00+08:00</published>
     <summary type="text">AI采购比价教程：把多家供应商报价丢给AI，自动生成清晰的对比表和推荐结论，附提示词模板与Excel核对方法。</summary>
-    <category term="教程"/>
-  </entry>
-
-  <entry>
-    <title>AI电商客服话术教程，让AI帮你一天处理100条咨询</title>
-    <link href="https://www.aitoollab.top/tutorials/ai-ecommerce-customer-service-tutorial-20260904/"/>
-    <id>https://www.aitoollab.top/tutorials/ai-ecommerce-customer-service-tutorial-20260904/</id>
-    <updated>2026-09-04T08:00:00+08:00</updated>
-    <published>2026-09-04T08:00:00+08:00</published>
-    <summary type="text">AI电商客服话术教程：用ChatGPT批量生成售前售后回复模板，一天处理上百条咨询，附常见场景话术与提效方法。</summary>
     <category term="教程"/>
   </entry>
 
