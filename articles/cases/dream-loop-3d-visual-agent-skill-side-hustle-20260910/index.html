@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI做3D网站怎么接单赚钱，三天426星的开源技能包dream-loop实操拆解 - AiToollab</title>
+<meta name="description" content="dream-loop是9月7号刚上线的agent技能包，三天冲到426星，让AI自己dream出目标画面再照着建3D场景，critic子代理逐帧挑刺直到过关。本文拆解3D网站和动效接单的真实行情，海外动效网站外包300到2000美元一档，国内3D动画按秒报价150到3000元，以及普通人吃这个窗口的三刀变现路径。">
+<meta name="keywords" content="AI做3D网站,3D网站制作多少钱,WebGL外包,AI建站,dream-loop,agent skills,GPT-6 Astra,Blender,AI副业,接单赚钱">
+<meta property="og:title" content="AI做3D网站怎么接单赚钱，三天426星的开源技能包dream-loop实操拆解">
+<meta property="og:description" content="上线三天426星的3D视觉agent技能包，AI先dream出目标画面再照着建，critic子代理逐帧挑刺。3D网站外包一单几百到几千美元的行情，普通人怎么吃。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://www.aitoollab.top/articles/cases/dream-loop-3d-visual-agent-skill-side-hustle-20260910/">
+<meta property="og:image" content="https://www.aitoollab.top/og-cases-dream-loop-3d-visual-agent-skill-side-hustle-20260910.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AI做3D网站怎么接单赚钱，三天426星的开源技能包dream-loop实操拆解">
+<meta name="twitter:description" content="上线三天426星的3D视觉agent技能包，AI先dream目标画面再照着建，critic逐帧挑刺直到过关。">
+<meta name="description:en" content="How to take freelance 3D website jobs with dream-loop, an open-source agent skill that hit 426 GitHub stars in three days by letting AI dream a target visual and iterate until a critic subagent approves">
+<meta name="keywords:en" content="AI 3D website,WebGL freelance,dream-loop,agent skills,GPT-6 Astra,Blender automation,AI side hustle">
+<link rel="canonical" href="https://www.aitoollab.top/articles/cases/dream-loop-3d-visual-agent-skill-side-hustle-20260910/">
+<link rel="alternate" hreflang="zh-CN" href="https://www.aitoollab.top/articles/cases/dream-loop-3d-visual-agent-skill-side-hustle-20260910/">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "AI做3D网站怎么接单赚钱，三天426星的开源技能包dream-loop实操拆解", "description": "dream-loop技能包的完整拆解，含3D网站与动效外包行情、三档变现路径和避坑指南。", "image": "https://www.aitoollab.top/og-cases-dream-loop-3d-visual-agent-skill-side-hustle-20260910.jpg", "datePublished": "2026-09-10T08:00:00+08:00", "dateModified": "2026-09-10T08:00:00+08:00", "author": {"@type": "Person", "name": "AiToollab"}, "publisher": {"@type": "Organization", "name": "AiToollab", "logo": {"@type": "ImageObject", "url": "https://www.aitoollab.top/og.jpg"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.aitoollab.top/articles/cases/dream-loop-3d-visual-agent-skill-side-hustle-20260910/"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "3D网站制作多少钱一个", "acceptedAnswer": {"@type": "Answer", "text": "海外平台公开行情，freelancer做动效网站一般每小时15到40美元，单个项目300到2000美元，涉及滚动叙事和WebGL交互的偏上限；设计机构报价3000到30000美元。国内3D动画按秒计价，基础档150到300元每秒，中等复杂度800到1500元每秒，专业公司全流程1500到3000元每秒。"}}, {"@type": "Question", "name": "dream-loop是什么", "acceptedAnswer": {"@type": "Answer", "text": "一个开源的agent技能包，2026年9月7号上线，三天426星。核心是一个闭环，AI先用图像生成dream出一张高质量目标画面，然后照着这个目标写代码搭建，再由一个独立的critic子代理对比实机截图和目标图给反馈，循环迭代直到critic满意，最后还能反过来升级目标继续迭代。"}}, {"@type": "Question", "name": "不会Blender不会Three.js能做3D网站接单吗", "acceptedAnswer": {"@type": "Answer", "text": "纯手工时代不行，现在门槛被大幅压低了，但别理解成一键躺赚。dream-loop这类工具解决的是执行，你的agent还得会装、模型要有图像生成和视觉能力、跑出来的东西你得能判断好不好。审美和需求沟通仍然是人干的活，这也正是接单报价里值钱的部分。"}}, {"@type": "Question", "name": "做3D网站接单去哪里找客户", "acceptedAnswer": {"@type": "Answer", "text": "国内可以看猪八戒、一品威客这类外包平台的产品展示和官网定制类目，小红书搜3D官网、沉浸式落地页也有大量设计师在接单。海外看Upwork和Fiverr的WebGL、three.js类目，Awwwards上这类项目的展示本身就是获客橱窗，品牌方看到就会来私信。"}}, {"@type": "Question", "name": "AI生成的3D场景有版权问题吗", "acceptedAnswer": {"@type": "Answer", "text": "要注意三层。AI生成的模型和贴图的版权归属各法域要求不同，商用交付前最好自己复核。dream-loop明确禁止直接下载第三方资产，鼓励从零生成，这反而降低了侵权风险。最后，用GPT-6、Claude这类模型的输出做商用，看清楚对应订阅和API条款里的商用授权范围。"}}]}</script>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f5f7fa;color:#293746;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;line-height:1.85;font-size:16px}.container{max-width:820px;margin:0 auto;background:#fff;padding:22px 28px 36px}nav{background:#101820;padding:11px 24px;display:flex;gap:18px;align-items:center}nav a{color:#d9e4ee;text-decoration:none;font-size:14px}nav a:first-child{font-weight:700;font-size:17px;margin-right:8px}.meta{color:#7c8791;font-size:14px;margin:12px 0 22px}h1{font-size:29px;line-height:1.45;color:#173f5f;margin:20px 0}h2{font-size:21px;color:#1f8058;border-bottom:2px solid #d8eee3;padding-bottom:6px;margin:34px 0 12px}h3{font-size:18px;color:#286b9c;margin:25px 0 6px}p{margin:13px 0;text-align:justify}.author-box{background:#f1f7fb;border-left:4px solid #3182bd;padding:12px 16px;margin:18px 0}.tip,.cta-box{padding:17px 20px;border-radius:8px;margin:24px 0}.tip{background:#edf9f1;border-left:4px solid #2eaa68}.cta-box{background:#153f60;color:#fff;text-align:center}.cta-box a{color:#ffd166;font-weight:700}.faq-section,.related{background:#f7f8fa;border-radius:8px;padding:18px 20px;margin-top:28px}.faq-item h4{margin:14px 0 3px;color:#34495e}.related a{color:#2675a6}.footer{text-align:center;color:#84909b;font-size:13px;border-top:1px solid #ddd;margin-top:30px;padding-top:18px}@media(max-width:600px){.container{padding:16px}h1{font-size:24px}}
+</style>
+</head>
+<body>
+<nav class="site-topnav" style="position:sticky;top:0;width:100vw;margin-left:calc(50% - 50vw);z-index:100;background:rgba(13,17,23,0.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--border,#30363d);font-size:14px;">
+    <div style="max-width:1120px;margin:0 auto;min-height:56px;display:flex;align-items:center;gap:26px;padding:0 20px;">
+        <a href="/" style="display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--text,#e6edf3);font-weight:700;font-size:16px;white-space:nowrap;flex-shrink:0;">
+            <span style="font-size:20px;">🧰</span><span>AiToollab</span>
+        </a>
+        <a href="/" style="color:var(--muted,#8b949e);text-decoration:none;white-space:nowrap;">首页</a>
+        <a href="/tutorials/" style="color:var(--muted,#8b949e);text-decoration:none;white-space:nowrap;">教程</a>
+        <a href="/articles/cases/" style="color:var(--muted,#8b949e);text-decoration:none;white-space:nowrap;">案例</a>
+        <a href="/projects/" style="margin-left:auto;padding:7px 14px;border-radius:7px;background:linear-gradient(135deg,#58a6ff,#3fb950);color:#fff;text-decoration:none;font-weight:600;white-space:nowrap;flex-shrink:0;"><span data-ab-slot="projects-cta">项目库</span></a>
+    </div>
+</nav>
+<div class="container">
+<p class="meta">发布于 2026-09-10 · AI副业案例拆解 · 预计阅读时间 11 分钟</p>
+<article>
+<h1>AI做3D网站怎么接单赚钱，三天426星的开源技能包dream-loop实操拆解</h1>
+<div class="author-box">AiToollab，专注普通人能看懂、能动手的AI副业和自动化实战。</div>
+<p>故事是这样的。前天早上我们的Scout在扫GitHub新仓库，捞出来一个只有101星的东西，叫dream-loop，仓库是当天凌晨才建的。我当时扫了一眼描述，一个让agent做炫目3D视觉的技能包，没太当回事。</p>
+<p>今天早上再查，426星，54个fork，三天走完的。</p>
+<p>它干的事一句话能讲完，但越想越有意思。你让AI做一个3D网页或者游戏场景，以前它交出来的是什么东西大家都见过，灰模、乱码贴图、跟PPT一样的静态排版的「动画」。dream-loop的解法是给AI套了一个闭环，先让AI用图像生成自己dream一张高质量的目标画面，然后照着这张图去写代码搭场景，搭完截图，交给一个独立的critic子代理对比目标图和实机画面，挑刺，改，循环，直到critic点头。满意了还能回到第一步，基于当前成果再dream一张更好的，继续迭代。</p>
+<p>坦率的讲整个流程就是，AI自己当甲方，AI自己当乙方，再安排一个AI当监理，三方在你睡觉的时候互相卷。</p>
+<p>让我真正坐起来的是时间点？？？GPT-6 Astra是第一批把3D能力放到台面上的模型，外网这几天全是在Blender里让AI一晚上重建一栋房子的视频，Reddit的aigamedev板块有帖子标题直接写的，不用再学Blender了= = 工具刚出现，行情还停在原地，这种错位就是信息差。今天把这条线整个捋一遍。</p>
+<div style="margin:28px 0;padding:14px 18px;border:1px solid rgba(63,185,80,.35);background:rgba(63,185,80,.06);border-radius:10px;font-size:14px;">💡 想知道这个方向普通人实操的真实情况？<a href="/projects/wechat-sticker/" style="color:#3fb950;font-weight:600;"> 看训练营学员最近的结果 →</a></div>
+<h2>先看清行情，会动的页面到底值多少钱</h2>
+<p>聊工具之前老规矩，先把钱的事说清楚，因为工具的价值完全取决于行情。</p>
+<p>海外这边有个2026年的动效网站成本指南，数据来自Fiverr、Upwork和Clutch.co的公开报价。纯CSS特效和轻量动画，freelancer报价300到1000美元一个项目；用GSAP做滚动叙事和交互的，1500到4000美元；React或Vue框架级的动效网站，3000到8000美元；再往上，那种能上Awwwards首页的沉浸式WebGL体验，机构报价直接3000到30000美元。个人freelancer的时薪档位是15到40美元，机构是40到120美元。</p>
+<p>国内行情按秒计价。搜狐今年7月那份3D动画价格指南写得很直白，基础档150到300元一秒，就是预设模型库加简单几何体那种；中等复杂度800到1500元一秒；专业公司全流程服务1500到3000元一秒。一个30秒的片子，低档4500到9000元，高档能到9万。企业宣传片、产品演示、工业流程动画，全是这个盘子。</p>
+<p>你品品这个价格结构。客户付的每一分钱里，大头是「把它做出来」的执行成本，建模、K帧、调曲线、渲染，纯手艺人肉堆出来的。创意和沟通的部分其实占比不高。</p>
+<p>而「做出来」，恰恰是AI这两年吃掉最快的环节。</p>
+<p>那为什么价格还没崩？因为大部分甲方根本不知道AI已经能干这活了，市面上的服务还是按人天的逻辑在报价。这就是窗口。</p>
+<h2>这个426星的技能包到底卷在哪</h2>
+<p>回到dream-loop本身。它跟「让AI直接写个3D网页」的区别，是流程上的代差。</p>
+<p>你直接跟AI说给我做个炫酷的产品展示页，它大概率还你一张灰扑扑的PPT。原因不复杂，模型没有「目标」，它不知道「好」长什么样，只能凭训练语料的平均值往下糊。dream-loop补的就是这一块，先dream一张目标图，把「好」具象化成一张可以被对比的参照物，后面的每一轮迭代都有明确的及格线。</p>
+<p>README里那个官方示例我看了好几遍。prompt大意是，做一个体素风格等距视角的暗黑奇幻场景，湿滑反光的地板，Elden Ring那个味儿，Three.js浏览器里跑，60帧以上，不许下载现成资产，限时一小时，点击移动、拖拽转镜头、滚轮缩放，世界要有生命感。GPT-6 Astra在Codex里high档跑出来的结果，是一个真能玩的、光影氛围直接到位的demo，在线版挂在dream-loop-demo.anshu.dev，谁都能点进去看。</p>
+<p>一小时，从零，不下载资产。这个活儿放在上面那个报价单里，是3000美元往上的一档。</p>
+<p>装起来也是两行的事，npx skills add achimala/dream-loop，或者直接丢进Claude Code的skills目录。但它有几个硬前提你得知道，你的agent得有图像生成能力（Codex、Grok内置的，或者喂个Gemini API key），得有视觉输入，最好支持子代理。要自定义3D建模还得装Blender，作者建议走Blender的MCP或脚本接口而不是computer use，效果好得多。目前只在GPT-6 Astra上测过，作者原话是Claude Fable 5.1这种级别的「大概率也行」，= = 也就是说他自己还没验证完，这是个上线三天的仓库的正常状态。</p>
+<p>顺着这条线往浏览器方向看一眼，还有个上周同期上线的叫bang-motion，116星，专做动效包装，产品片头、频道intro、动态排版，输出是单个index.html，双击就播。它的核心卖点是一堆「反PPT规则」，不许场景靠淡入淡出切换、必须有运镜、每秒必须有东西在动。这俩凑一起你会发现，3D场景和动效包装这两个外包大头，已经各有一个开源技能包在改了。</p>
+<h2>这个机会普通人怎么吃，三刀</h2>
+<p>行情有了，工具有了，怎么变成钱？还是按门槛从低到高切。</p>
+<p>第一刀，直接接单做页面。目标客户特别具体，卖高客单价实物的小品牌，潮玩、香氛、精酿、家具，他们的产品天然适合转着圈展示，但找机构做沉浸式落地页报价四位数美元起步，预算对不上。这就是个人接单的空间，用dream-loop加Codex出一版demo，拿着demo去谈，报价按国内市场的一半打，3000到8000人民币一单，你的执行成本是一个下午加一点API费。获客路径也现成，小红书搜3D官网、WebGL，一堆设计师在发案例接私单，你发的作品比他们快十倍；海外路径是把自己的demo挂上Awwwards，那个网站本身就是甲方橱窗，上面那些studio的报价页我看过，全是私信转化来的。</p>
+<p>第二刀，给同行提效，赚改稿的钱。说实话这个可能更快见钱。现在大量动效设计师和小型studio的处境很尴尬，客户要「再炫一点」，但人力加不动。你去谈的不是替他做，是做他流程里那个「dream目标图」的环节，客户提完需求，你一晚上出三张不同风格的「成品预览图」让客户选，选定了再进生产。甲方最痛的不是贵，是不知道成品长什么样，你这一步直接把确认周期从两周压到两天。按预览收费，一单500到1500，谈下来的都是长期单。你想想看，这活儿其实就是在卖AI的dream能力，成本几乎为零，定价却按咨询费走。</p>
+<p>第三刀，往部署服务层走，帮人把这套系统跑起来。这个逻辑跟我昨天写screenwriting-skills那篇讲的第三刀一模一样，插件装得上和用得起来中间隔着一条鸿沟。得有Codex或者Claude Code的环境和订阅，会配图像生成的key，装Blender、配MCP，还得看得懂critic循环为什么卡住。这个断层就是生意。远程部署加一场两小时的培训，打包500到1500，客户画像精确得很，独立设计师、想接AI单但没跑通工作流的接单工作室、被甲方「要3D感」逼到连夜学Blender的平面设计爱好者。这批人付费意愿强，因为他们每接一单都能把部署费赚回来。</p>
+<p>三刀看下来共同点很清楚，工具把执行成本砸穿了，但没有砸穿「知道要什么」和「让别人相信你能做到」这两件事。前者靠dream闭环帮客户解决，后者靠你先动手别人还在观望的时间差。</p>
+<h2>几个坑，看清楚再动手</h2>
+<p>第一个坑，模型依赖。技能包目前只在GPT-6 Astra high档上验证过，弱一档的模型大概率critic循环半天收敛不了，token费烧得你肉疼。开工前先拿一个小场景试跑一轮，确认你的模型组合能出活再报价，别拿客户的deadline练手。</p>
+<p>第二个坑，性能陷阱。浏览器里跑WebGL，手机上是另一回事。demo在M1芯片上60帧不代表客户老板的破安卓机能跑。交付前必须真机测试，尤其是滚动驱动的场景，这项检查写进你的交付清单，不然尾款收不回来。</p>
+<p>第三个坑，交付边界。AI很擅长把场景做得「第一秒很惊艳」，不擅长让你点进去之后的三十秒依然有内容。接单合同里把时长、交互点数量、修改轮次白纸黑字写死，两轮封顶，超过就加钱。这个行当老话了，改稿改到破产的从来不是技术不行，是需求没锁死。</p>
+<p>还有一个资产坑反而是机会。dream-loop明令不许下载现成资产，全部从零生成，这帮你避开了素材版权的雷，但你交付的每个模型也因此都是独一份的。报价的时候把这个当卖点讲，「100%原创资产」那几个字，甲方爱听。</p>
+<h2>如果你看到这里觉得能做</h2>
+<p>我的建议这个周末干三件事。第一，把Codex或者Claude Code的环境理清楚，五分钟装好dream-loop，拿你自己的产品，手办、茶叶罐、你家电饭煲都行，跑一版360度展示页，感受一下一小时的成品和上面报价单里那一档的差距。第二，去小红书和Upwork各搜十个「3D落地页」的真实需求帖，把客户原话抄下来，那就是需求表。第三，挑其中最好说话的一个，拿着你的demo私信过去，第一单哪怕收1500，你要的是作品集和一句真实客户评价。</p>
+<p>以前入这行的门票是三年Blender加一整部GSAP文档。现在门票是一个npx命令，和一个愿意在周日晚上动手的你。</p>
+<p>窗口期这个词都说滥了，但三天的仓库和还没反应过来的报价单摆在一起，你懂的。</p>
+<p>磨平一些信息差。</p>
+<div class="cta-box"><p><strong>我整理了一份项目库</strong></p><p>里面有客户需求拆解、自动化服务报价、交付检查和Prompt模板，适合拿来做第一条可收费工作流。</p><p><a href="/projects/">查看项目库</a> · <a href="/prompt-pack/">¥39提示词包</a></p></div>
+</article>
+<div class="tip">本文基于dream-loop、bang-motion公开GitHub仓库与README、animation-addons.com动效网站2026成本指南、搜狐3D动画制作价格指南等公开资料整理。文中报价为行业公开行情，实际成交价因平台、地区、需求复杂度差异极大。使用AI生成内容商用前请确认所使用模型的授权条款。</div>
+<div class="faq-section"><h2>常见问题</h2><div class="faq-item"><h4>3D网站制作多少钱一个</h4><p>海外公开行情，freelancer做动效网站每小时15到40美元，单个项目300到2000美元，涉及WebGL交互的偏上限，机构报价3000到30000美元。国内3D动画按秒计价，基础档150到300元一秒，专业公司全流程1500到3000元一秒。用AI工作流个人接单，3000到8000人民币一单是有行情支撑的定价区间。</p></div><div class="faq-item"><h4>dream-loop是什么</h4><p>一个开源agent技能包，2026年9月7号上线，三天426星。核心是个闭环，AI先用图像生成dream出一张高质量目标画面，照着目标写代码搭建，再由独立的critic子代理对比实机截图给反馈，循环迭代直到满意，然后还能升级目标继续迭代。</p></div><div class="faq-item"><h4>不会Blender不会Three.js能接这种单吗</h4><p>纯手工时代不行，现在执行层门槛被大幅压低，但不是躺赚。工具解决的是「做出来」，你的agent得有图像生成和视觉能力、模型要够强、跑出来的东西你得会判断。审美、需求沟通、报价谈判仍然是人干的活，这部分恰恰是行情的价值大头。</p></div><div class="faq-item"><h4>做3D网站接单去哪里找客户</h4><p>国内看外包平台的产品展示和官网定制类目，小红书搜3D官网、沉浸式落地页，大量真实需求在设计师私信里。海外看Upwork和Fiverr的WebGL、three.js类目，把自己的demo挂上Awwwards，它本身就是甲方橱窗。</p></div><div class="faq-item"><h4>AI生成的3D场景版权有问题吗</h4><p>注意三层，AI生成资产的商用授权各法域要求不同，交付前自己复核。dream-loop禁止下载第三方资产、全部从零生成，反而降低了侵权风险，可以把100%原创资产当卖点。最后看清楚GPT-6、Claude这些模型订阅条款里的商用范围。</p></div></div>
+<div class="related"><p><strong>推荐阅读</strong></p><p><a href="/articles/cases/screenwriting-skills-ai-script-side-hustle-20260909/">AI写短剧剧本怎么投稿赚钱，编剧技能包三天382星拆解</a></p><p><a href="/articles/cases/ai-website-building-service-side-hustle-20260617/">AI建站服务怎么接单</a></p><p><a href="/articles/cases/video-ai-talking-lipsync-service-side-hustle-20260908/">AI对口型口播视频怎么生成怎么赚钱</a></p></div>
+    <section class="conversion-bridge" data-conversion-bridge style="margin:40px 0;padding:24px;border:1px solid var(--border,#30363d);border-radius:12px;background:rgba(37,99,235,.08);text-align:center;">
+        <strong>贴图项目已跑通，训练营学员陆续拿到结果</strong>
+        <p>这篇拆解解决一个具体问题。如果你想要一个不需要粉丝、AI 直接出图、已有人拿到收益的方向，可以看贴图项目的学员最近在做什么、拿到了什么结果。</p>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center;">
+            <a href="/projects/" style="padding:8px 14px;border:1px solid var(--border,#30363d);border-radius:7px;"><span data-ab-slot="projects-bridge-btn">查看当前项目</span></a>
+            <a href="/projects/wechat-sticker/" style="padding:8px 14px;background:#2563eb;color:#fff;border-radius:7px;">看学员拿到了什么结果</a>
+        </div>
+        <div style="display:flex;align-items:center;justify-content:center;gap:18px;margin-top:16px;flex-wrap:wrap;"><img src="/wechat-qr-v3.jpg" alt="AiToollab 微信二维码" width="120" height="120" loading="lazy" style="border-radius:8px;border:1px solid var(--border,#30363d);margin:0;"><p style="margin:0;font-size:13px;color:var(--muted,#8b949e);max-width:280px;text-align:left;line-height:1.7;">扫码加微信回复「3D」，发你这份AI3D接单的交付检查清单；已经在做的，欢迎把结果或卡点发到 contact@aitoollab.top。</p></div>
+    </section>
+    <div class="footer"><p>磨平一些信息差。</p><p>作者：AiToollab</p></div>
+</div>
+<button id="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="返回顶部">↑</button>
+<style>#back-to-top{position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;background:#2563eb;color:#fff;border:none;cursor:pointer;font-size:18px;opacity:0;transition:opacity .3s;z-index:999;pointer-events:none}#back-to-top.show{opacity:.85;pointer-events:auto}#back-to-top:hover{opacity:1}</style>
+<script>window.addEventListener('scroll',function(){var b=document.getElementById('back-to-top');if(b)b.classList.toggle('show',window.scrollY>400);});</script>
+<script src="/ab-test.js" defer></script>
+</body>
+</html>
