@@ -5,12 +5,22 @@
   <link href="https://www.aitoollab.top/feed.xml" rel="self"/>
   <link href="https://www.aitoollab.top/"/>
   <id>https://www.aitoollab.top/</id>
-  <updated>2026-09-10T08:00:00+08:00</updated>
+  <updated>2026-09-11T08:00:00+08:00</updated>
   <author>
     <name>AiToollab</name>
     <uri>https://www.aitoollab.top</uri>
   </author>
   <generator uri="https://www.aitoollab.top/">AiToollab Generator</generator>
+
+  <entry>
+    <title>Meta Muse个人AI Agent发布 普通人怎么靠AI代理服务赚钱</title>
+    <link href="https://www.aitoollab.top/articles/news/meta-muse-ai-agent-side-hustle-20260911/"/>
+    <id>https://www.aitoollab.top/articles/news/meta-muse-ai-agent-side-hustle-20260911/</id>
+    <updated>2026-09-11T08:00:00+08:00</updated>
+    <published>2026-09-11T08:00:00+08:00</published>
+    <summary type="text">Meta Muse个人AI Agent发布，能替用户发邮件、订旅行、填表和完成购买。普通人怎么靠AI代理服务赚钱，本文拆。。</summary>
+    <category term="热点"/>
+  </entry>
 
   <entry>
     <title>ChatGPT Images 2.5发布 AI改图不用整张重画 普通人怎么靠AI修图接单赚钱</title>
@@ -200,16 +210,6 @@
     <published>2026-09-04T08:00:00+08:00</published>
     <summary type="text">Claude商业智能体发布，Anthropic公开电商智能体蓝图。普通人怎么靠AI电商接单赚钱，本文拆解商品资料整理、客。。</summary>
     <category term="热点"/>
-  </entry>
-
-  <entry>
-    <title>AI报价单制作教程，把客户需求变成能成交的报价单</title>
-    <link href="https://www.aitoollab.top/tutorials/ai-quotation-making-tutorial-20260904/"/>
-    <id>https://www.aitoollab.top/tutorials/ai-quotation-making-tutorial-20260904/</id>
-    <updated>2026-09-04T08:00:00+08:00</updated>
-    <published>2026-09-04T08:00:00+08:00</published>
-    <summary type="text">AI报价单制作教程，教你用ChatGPT或DeepSeek整理需求、拆分成本、写交付说明，减少报价漏项。</summary>
-    <category term="教程"/>
   </entry>
 
 </feed>
