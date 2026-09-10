@@ -267,3 +267,6 @@ articles/news/chatgpt-images-2-5-editing-side-hustle-20260910/index.html
 articles/cases/dream-loop-3d-visual-agent-skill-side-hustle-20260910/index.html
 articles/news/meta-muse-ai-agent-side-hustle-20260911/index.html
 articles/cases/ai-competitor-monitoring-service-side-hustle-20260911/index.html
+tutorials/ai-memory-system-tutorial-20260911/
+tutorials/needle2-local-ai-tutorial-20260911/
+tutorials/ai-efficiency-side-hustle-tools-tutorial-20260911/
