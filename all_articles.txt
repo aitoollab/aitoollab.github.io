@@ -266,3 +266,4 @@ tutorials/youtube-custom-merch-ai-tutorial-20260909/
 articles/news/chatgpt-images-2-5-editing-side-hustle-20260910/index.html
 articles/cases/dream-loop-3d-visual-agent-skill-side-hustle-20260910/index.html
 articles/news/meta-muse-ai-agent-side-hustle-20260911/index.html
+articles/cases/ai-competitor-monitoring-service-side-hustle-20260911/index.html
