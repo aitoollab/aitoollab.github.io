@@ -33,6 +33,36 @@
   </entry>
 
   <entry>
+    <title>Needle 2怎么用，本地AI小模型上手教程</title>
+    <link href="https://www.aitoollab.top/tutorials/needle2-local-ai-tutorial-20260911/"/>
+    <id>https://www.aitoollab.top/tutorials/needle2-local-ai-tutorial-20260911/</id>
+    <updated>2026-09-11T08:00:00+08:00</updated>
+    <published>2026-09-11T08:00:00+08:00</published>
+    <summary type="text">Needle 2怎么用？从安装、导入资料到本地检索，本文演示轻量端侧AI的基础流程，适合想降低云端调用成本的普通人。</summary>
+    <category term="教程"/>
+  </entry>
+
+  <entry>
+    <title>如何给AI搭建记忆系统，普通人也能用的实操教程</title>
+    <link href="https://www.aitoollab.top/tutorials/ai-memory-system-tutorial-20260911/"/>
+    <id>https://www.aitoollab.top/tutorials/ai-memory-system-tutorial-20260911/</id>
+    <updated>2026-09-11T08:00:00+08:00</updated>
+    <published>2026-09-11T08:00:00+08:00</published>
+    <summary type="text">如何给AI搭建记忆系统？本文用ChatGPT、Claude和Notion演示记忆分层、资料整理和定期更新，适合个人副业与。。</summary>
+    <category term="教程"/>
+  </entry>
+
+  <entry>
+    <title>效率工具赚钱副业小工具教程，把重复工作做成可收费服务</title>
+    <link href="https://www.aitoollab.top/tutorials/ai-efficiency-side-hustle-tools-tutorial-20260911/"/>
+    <id>https://www.aitoollab.top/tutorials/ai-efficiency-side-hustle-tools-tutorial-20260911/</id>
+    <updated>2026-09-11T08:00:00+08:00</updated>
+    <published>2026-09-11T08:00:00+08:00</published>
+    <summary type="text">效率工具赚钱副业小工具怎么做？本文用Notion、ChatGPT和表格演示三类可交付的小工具，适合普通人从整理资料开始接。。</summary>
+    <category term="教程"/>
+  </entry>
+
+  <entry>
     <title>ChatGPT Images 2.5发布 AI改图不用整张重画 普通人怎么靠AI修图接单赚钱</title>
     <link href="https://www.aitoollab.top/articles/news/chatgpt-images-2-5-editing-side-hustle-20260910/"/>
     <id>https://www.aitoollab.top/articles/news/chatgpt-images-2-5-editing-side-hustle-20260910/</id>
@@ -180,36 +210,6 @@
     <published>2026-09-07T08:00:00+08:00</published>
     <summary type="text">内容生成 赚钱 副业 小工具教程，教你用ChatGPT和Claude把一份真实素材拆成短文、标题和发布清单。</summary>
     <category term="教程"/>
-  </entry>
-
-  <entry>
-    <title>Lyria 3.5发布 普通人怎么靠AI音乐接单赚钱</title>
-    <link href="https://www.aitoollab.top/articles/news/lyria-3-5-music-side-hustle-20260906/"/>
-    <id>https://www.aitoollab.top/articles/news/lyria-3-5-music-side-hustle-20260906/</id>
-    <updated>2026-09-06T08:00:00+08:00</updated>
-    <published>2026-09-06T08:00:00+08:00</published>
-    <summary type="text">Lyria 3.5发布，支持生成几分钟的完整歌曲和44.1kHz立体声音频。普通人怎么靠Lyria 3.5做AI音乐接单。。</summary>
-    <category term="热点"/>
-  </entry>
-
-  <entry>
-    <title>GPT-6 Astra发布 普通人怎么靠AI安全测试接单赚钱</title>
-    <link href="https://www.aitoollab.top/articles/news/gpt-6-astra-ai-cybersecurity-side-hustle-20260905/"/>
-    <id>https://www.aitoollab.top/articles/news/gpt-6-astra-ai-cybersecurity-side-hustle-20260905/</id>
-    <updated>2026-09-05T08:00:00+08:00</updated>
-    <published>2026-09-05T08:00:00+08:00</published>
-    <summary type="text">GPT-6 Astra发布，首次达到关键网络安全能力级别。普通人怎么靠GPT-6 Astra做AI安全测试接单赚钱，本文。。</summary>
-    <category term="热点"/>
-  </entry>
-
-  <entry>
-    <title>AI做PPT接单怎么赚钱，Claude Code演示文稿服务一单500-3000元实操拆解（2026）</title>
-    <link href="https://www.aitoollab.top/articles/cases/ai-consulting-pptx-service-side-hustle-20260905/"/>
-    <id>https://www.aitoollab.top/articles/cases/ai-consulting-pptx-service-side-hustle-20260905/</id>
-    <updated>2026-09-05T08:00:00+08:00</updated>
-    <published>2026-09-05T08:00:00+08:00</published>
-    <summary type="text">gozen3ji开源 consulting-pptx-skill，把Claude Code做PPT从随便生成变成有规则、。。</summary>
-    <category term="案例"/>
   </entry>
 
 </feed>
