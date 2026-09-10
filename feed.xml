@@ -23,6 +23,16 @@
   </entry>
 
   <entry>
+    <title>AI竞品监控怎么接单赚钱，agent-fleet-manager把信息差变成服务</title>
+    <link href="https://www.aitoollab.top/articles/cases/ai-competitor-monitoring-service-side-hustle-20260911/"/>
+    <id>https://www.aitoollab.top/articles/cases/ai-competitor-monitoring-service-side-hustle-20260911/</id>
+    <updated>2026-09-11T08:00:00+08:00</updated>
+    <published>2026-09-11T08:00:00+08:00</published>
+    <summary type="text">agent-fleet-manager是一个用SQLite管理大规模信息监控的开源项目，能定时检查竞品、价格、招聘和政策。。</summary>
+    <category term="案例"/>
+  </entry>
+
+  <entry>
     <title>ChatGPT Images 2.5发布 AI改图不用整张重画 普通人怎么靠AI修图接单赚钱</title>
     <link href="https://www.aitoollab.top/articles/news/chatgpt-images-2-5-editing-side-hustle-20260910/"/>
     <id>https://www.aitoollab.top/articles/news/chatgpt-images-2-5-editing-side-hustle-20260910/</id>
@@ -200,16 +210,6 @@
     <published>2026-09-05T08:00:00+08:00</published>
     <summary type="text">gozen3ji开源 consulting-pptx-skill，把Claude Code做PPT从随便生成变成有规则、。。</summary>
     <category term="案例"/>
-  </entry>
-
-  <entry>
-    <title>Claude商业智能体发布 普通人怎么靠AI电商接单赚钱</title>
-    <link href="https://www.aitoollab.top/articles/news/claude-commerce-agents-side-hustle-20260904/"/>
-    <id>https://www.aitoollab.top/articles/news/claude-commerce-agents-side-hustle-20260904/</id>
-    <updated>2026-09-04T08:00:00+08:00</updated>
-    <published>2026-09-04T08:00:00+08:00</published>
-    <summary type="text">Claude商业智能体发布，Anthropic公开电商智能体蓝图。普通人怎么靠AI电商接单赚钱，本文拆解商品资料整理、客。。</summary>
-    <category term="热点"/>
   </entry>
 
 </feed>
