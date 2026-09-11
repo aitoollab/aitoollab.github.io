@@ -5,12 +5,22 @@
   <link href="https://www.aitoollab.top/feed.xml" rel="self"/>
   <link href="https://www.aitoollab.top/"/>
   <id>https://www.aitoollab.top/</id>
-  <updated>2026-09-11T08:00:00+08:00</updated>
+  <updated>2026-09-12T08:00:00+08:00</updated>
   <author>
     <name>AiToollab</name>
     <uri>https://www.aitoollab.top</uri>
   </author>
   <generator uri="https://www.aitoollab.top/">AiToollab Generator</generator>
+
+  <entry>
+    <title>GPT-Live-1语音API上线 普通人怎么靠实时语音客服赚钱</title>
+    <link href="https://www.aitoollab.top/articles/news/gpt-live-1-api-voice-agent-side-hustle-20260912/"/>
+    <id>https://www.aitoollab.top/articles/news/gpt-live-1-api-voice-agent-side-hustle-20260912/</id>
+    <updated>2026-09-12T08:00:00+08:00</updated>
+    <published>2026-09-12T08:00:00+08:00</published>
+    <summary type="text">GPT-Live-1语音API上线，语音层每分钟0.05美元，能边听边说。普通人怎么靠实时语音客服赚钱，本文拆解本地店接。。</summary>
+    <category term="热点"/>
+  </entry>
 
   <entry>
     <title>Meta Muse个人AI Agent发布 普通人怎么靠AI代理服务赚钱</title>
@@ -199,16 +209,6 @@
     <updated>2026-09-07T08:00:00+08:00</updated>
     <published>2026-09-07T08:00:00+08:00</published>
     <summary type="text">AI客户跟进实操教程，用ChatGPT整理客户记录、判断回访时机、生成不油腻的话术。适合接单、咨询和小商家，半小时搭好自。。</summary>
-    <category term="教程"/>
-  </entry>
-
-  <entry>
-    <title>内容生成 赚钱 副业 小工具教程，把一篇素材做成一周内容</title>
-    <link href="https://www.aitoollab.top/tutorials/ai-content-generation-money-tool-tutorial-20260907/"/>
-    <id>https://www.aitoollab.top/tutorials/ai-content-generation-money-tool-tutorial-20260907/</id>
-    <updated>2026-09-07T08:00:00+08:00</updated>
-    <published>2026-09-07T08:00:00+08:00</published>
-    <summary type="text">内容生成 赚钱 副业 小工具教程，教你用ChatGPT和Claude把一份真实素材拆成短文、标题和发布清单。</summary>
     <category term="教程"/>
   </entry>
 
