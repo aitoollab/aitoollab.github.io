@@ -270,3 +270,4 @@ articles/cases/ai-competitor-monitoring-service-side-hustle-20260911/index.html
 tutorials/ai-memory-system-tutorial-20260911/
 tutorials/needle2-local-ai-tutorial-20260911/
 tutorials/ai-efficiency-side-hustle-tools-tutorial-20260911/
+articles/news/gpt-live-1-api-voice-agent-side-hustle-20260912/index.html
