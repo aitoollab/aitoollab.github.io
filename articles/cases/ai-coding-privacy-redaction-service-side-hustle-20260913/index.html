@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI编程隐私脱敏服务怎么赚钱，Maskit本地网关接单拆解</title>
+<meta name="description" content="Maskit是支持Cursor、Claude Code、Codex的本地隐私脱敏网关。本文拆解AI编程隐私脱敏服务怎么接单、如何部署、怎么报价，以及密钥和源码脱敏的实际坑。">
+<meta name="keywords" content="AI编程隐私脱敏服务,Maskit,Cursor隐私,Claude Code隐私,Codex隐私,源码脱敏,API密钥保护,AI副业">
+<meta name="description:en" content="Maskit is a local privacy gateway for Cursor, Claude Code and Codex. A practical guide to selling AI coding privacy setup and redaction services.">
+<meta name="keywords:en" content="AI coding privacy service, Maskit, Cursor privacy, Claude Code privacy, Codex privacy, source code redaction, API key protection">
+<meta property="og:title" content="AI编程隐私脱敏服务怎么赚钱，Maskit本地网关接单拆解">
+<meta property="og:description" content="在Cursor、Claude Code、Codex前面加一层本地隐私网关，拆解部署、交付、报价和安全边界。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://www.aitoollab.top/articles/cases/ai-coding-privacy-redaction-service-side-hustle-20260913/">
+<meta property="og:image" content="https://www.aitoollab.top/articles/cases/ai-coding-privacy-redaction-service-side-hustle-20260913/og-cases-ai-coding-privacy-redaction-service-side-hustle-20260913.jpg">
+<meta property="og:site_name" content="AiToollab">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2026-09-13T08:00:00+08:00">
+<meta property="article:modified_time" content="2026-09-13T08:00:00+08:00">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AI编程隐私脱敏服务怎么赚钱，Maskit本地网关接单拆解">
+<meta name="twitter:description" content="Maskit如何保护Cursor、Claude Code和Codex里的源码、密钥与内网信息，普通人怎么把它做成部署服务。">
+<meta name="twitter:image" content="https://www.aitoollab.top/articles/cases/ai-coding-privacy-redaction-service-side-hustle-20260913/og-cases-ai-coding-privacy-redaction-service-side-hustle-20260913.jpg">
+<link rel="canonical" href="https://www.aitoollab.top/articles/cases/ai-coding-privacy-redaction-service-side-hustle-20260913/">
+<link rel="alternate" hreflang="zh-CN" href="https://www.aitoollab.top/articles/cases/ai-coding-privacy-redaction-service-side-hustle-20260913/">
+<link rel="alternate" hreflang="x-default" href="https://www.aitoollab.top/articles/cases/ai-coding-privacy-redaction-service-side-hustle-20260913/">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"NewsArticle","headline":"AI编程隐私脱敏服务怎么赚钱，Maskit本地网关接单拆解","description":"Maskit本地隐私网关的部署、交付和AI编程隐私脱敏服务报价拆解。","image":"https://www.aitoollab.top/articles/cases/ai-coding-privacy-redaction-service-side-hustle-20260913/og-cases-ai-coding-privacy-redaction-service-side-hustle-20260913.jpg","datePublished":"2026-09-13T08:00:00+08:00","dateModified":"2026-09-13T08:00:00+08:00","author":{"@type":"Person","name":"AiToollab"},"publisher":{"@type":"Organization","name":"AiToollab","logo":{"@type":"ImageObject","url":"https://www.aitoollab.top/og.jpg"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.aitoollab.top/articles/cases/ai-coding-privacy-redaction-service-side-hustle-20260913/"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Maskit是什么","acceptedAnswer":{"@type":"Answer","text":"Maskit是一个本地隐私脱敏与还原网关，能在Cursor、Claude Code、Codex等工具请求出网前替换密钥、连接串、手机号和内部词汇，收到回复后再在本地还原。"}},{"@type":"Question","name":"AI编程隐私脱敏服务怎么收费","acceptedAnswer":{"@type":"Answer","text":"个人电脑安装和规则配置可以按299到699元报价，小团队私有网关和审计交付可以按1500到5000元起谈。以上是建议测试价，不是已成交收入。"}},{"@type":"Question","name":"Maskit能完全阻止源码上传吗","acceptedAnswer":{"@type":"Answer","text":"不能把它当成万能防火墙。Maskit主要处理经过本地网关的请求内容，仍需配置工具的上下文范围、排除敏感目录，并对网络请求做独立验证。"}},{"@type":"Question","name":"Maskit适合企业使用吗","acceptedAnswer":{"@type":"Answer","text":"适合做小团队试点和本地部署，但AGPL-3.0许可、密钥管理、日志留存、审计责任都要先评估。闭源商业集成不能只看安装是否成功。"}}]}</script>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f5f7fa;color:#293746;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;line-height:1.85;font-size:16px}.container{max-width:820px;margin:0 auto;background:#fff;padding:22px 28px 36px}nav{background:#101820;padding:11px 24px;display:flex;gap:18px;align-items:center}nav a{color:#d9e4ee;text-decoration:none;font-size:14px}nav a:first-child{font-weight:700;font-size:17px;margin-right:8px}.meta{color:#7c8791;font-size:14px;margin:12px 0 22px}h1{font-size:29px;line-height:1.45;color:#173f5f;margin:20px 0}h2{font-size:21px;color:#1f8058;border-bottom:2px solid #d8eee3;padding-bottom:6px;margin:34px 0 12px}h3{font-size:18px;color:#286b9c;margin:25px 0 6px}p{margin:13px 0;text-align:justify}.author-box{background:#f1f7fb;border-left:4px solid #3182bd;padding:12px 16px;margin:18px 0}.tip,.cta-box{padding:17px 20px;border-radius:8px;margin:24px 0}.tip{background:#edf9f1;border-left:4px solid #2eaa68}.cta-box{background:#153f60;color:#fff;text-align:center}.cta-box a{color:#ffd166;font-weight:700}.faq-section,.related{background:#f7f8fa;border-radius:8px;padding:18px 20px;margin-top:28px}.faq-item h4{margin:14px 0 3px;color:#34495e}.related a{color:#2675a6}.footer{text-align:center;color:#84909b;font-size:13px;border-top:1px solid #ddd;margin-top:30px;padding-top:18px}@media(max-width:600px){.container{padding:16px}h1{font-size:24px}}
+</style>
+</head>
+<body>
+<nav><a href="/">AiToollab</a><a href="/">首页</a><a href="/tutorials/">教程</a><a href="/articles/cases/">案例</a><a href="/projects/">项目库</a></nav>
+<div class="container">
+<p class="meta">发布于 2026-09-13 · AI副业案例拆解 · 预计阅读时间 12 分钟</p>
+<article>
+<h1>AI编程隐私脱敏服务怎么赚钱，Maskit本地网关接单拆解</h1>
+<div class="author-box">AiToollab，专注普通人能看懂、能动手的AI副业和自动化实战。</div>
+<p>这两天我在看 Scout 新捞到的仓库，看到一个名字挺直白，Data Maskit，中文叫数据面具。</p>
+<p>它干的事也直白，在 Cursor、Claude Code、Codex、Pi 这些编码助手和外部模型之间，放一个本地网关。请求出去前，把 API Key、数据库连接串、手机号、身份证号、内网 IP 和公司内部代号替换成占位符，模型回话以后，再在本地换回来。</p>
+<p>我当时第一反应是，这不就是正则替换吗？？？</p>
+<p>还真不是那么简单。最麻烦的不是把一串手机号变成星号，而是多轮对话里同一个人、同一条数据库连接，必须一直对应同一个占位符。否则模型上一句在说张三，下一句突然把张三认成李四，整个排查过程就废了。</p>
+<p>这件事有点像给 AI 编程助手装了一扇纱窗。风还能进来，蚊子别跟着进来。</p>
+<h2>为什么现在有人愿意为这层纱窗付钱</h2>
+<p>很多人觉得，Cursor 或 Claude Code 只是写代码的，自己又不是银行，不会有那么多隐私问题。我很理解这种想法。个人项目里确实没那么紧张，公开仓库、练手代码、普通网页，直接用就行。</p>
+<p>但只要进了真实项目，文件里就会出现另一套东西，.env里的密钥，客户手机号，内网域名，支付回调，没提交到仓库的业务规则。模型为了理解任务，可能会读取上下文，而上下文边界不一定和你的鼠标光标一样小。</p>
+<p>CodeCloak那篇论文早就讨论过类似问题，研究者甚至测试了从编码助手请求里重建原始代码。论文实验里，未经处理的提示内容有很高的可重建程度，加入本地改写后，泄露程度能下降，同时尽量保留建议质量。</p>
+<p>近期也有编码助手网络流量分析把问题摆得更直接，有的工具会发送任务所需的代码，有的还会为了索引、上下文和遥测发送更多内容。关闭训练选项，和阻止内容离开电脑，是两件事。很多人把这两个开关混在一起，真正出事时才发现，关掉的只是模型改进，不是出网。</p>
+<p>所以客户买的不是一个开源仓库。客户买的是一句能写进内部流程的话，我们知道哪些内容出去了，哪些内容被替换了，出了问题能不能查。</p>
+<h2>Maskit到底能交付哪一段</h2>
+<p>Maskit的公开README写得比较完整。它内置19类规则，覆盖常见密钥、Token、PEM私钥、数据库连接串、手机号、身份证、邮箱、银行卡和内网 IP，也允许加敏感词与自定义正则。</p>
+<p>它最有意思的地方，是占位符复用和流式还原。比如第一次把一个数据库连接串换成占位符，后面的多轮对话继续使用同一个占位符。模型看到的是稳定的符号，人看到的还是自己的原文。SSE流式输出也会逐事件处理，不必等整段回答生成完才还原。</p>
+<p>部署方式也比较接地气。Windows有桌面客户端，团队可以用Docker跑私有网关，个人还可以把 Cursor、Claude Code、Codex 的 Base URL 指到本机端口。默认端口按协议分开，OpenAI协议、DeepSeek和Anthropic各有入口。</p>
+<p>我这里要泼一点冷水。它不是魔法盾牌。没有经过本地端口的请求，它管不了。工具自己上传的索引、遥测、插件数据，它也未必看得见。你还得把敏感目录从编码助手上下文里排除，再用网络抓包或日志确认实际流量。</p>
+<p>还有一个很现实的点，Maskit是AGPL-3.0许可。个人使用、团队内部试点和开源项目，路径相对清楚。要是你把它改完塞进闭源商业软件，再对外分发，就必须找人把许可义务看明白。安装成功，不等于商业交付合规。</p>
+<h2>普通人可以怎么把它做成服务</h2>
+<p>第一档是个人开发者的安装和规则配置，报价可以从299到699元测试。交付内容不是帮客户点几下安装，而是把 Claude Code、Cursor 或 Codex 接到本地端口，配置API地址，加入客户自己的敏感词，跑一组假的密钥和数据库连接串，确认出网内容已经替换，回复还能正常还原。</p>
+<p>客户最关心的不是你会不会Docker。他会打开终端问一句，我现在把代码交给Claude Code，它到底看到了什么。你得拿日志和对照样例回答。</p>
+<p>第二档是小团队私有网关，建议报价1500到5000元起谈。团队通常有多个模型渠道，多个开发者，多个端口，还需要基础日志和规则维护。你可以给他们做一份敏感信息清单，按项目、环境、人员分开规则，再写一页发生误报时怎么处理的说明。</p>
+<p>第三档是AI编程使用审计，价格不应该只按安装次数算。你帮客户抽查一周的请求，记录请求体里有哪些代码文件、哪些敏感字段、哪个工具在做额外索引，再把问题分成必须阻断、可以脱敏、需要人工确认三类。</p>
+<p>这就从装软件变成了安全交付。你不需要冒充渗透测试公司，也不要承诺绝对不泄露。把边界讲清楚，反而更容易让懂行的客户信任。</p>
+<h2>一条能执行的接单流程</h2>
+<p>先找一个自己能控制的测试项目，放入假的API Key、假的数据库连接串和一个假的内部项目名。不要拿真实客户数据做第一次演示，别刚开始接单就把自己送进事故现场。</p>
+<p>接着安装Maskit，优先用稳定版，不要拿预发布版给客户做生产配置。启动控制台，配置一个模型渠道，把 Cursor 或 Claude Code 的 Base URL 指向本机端口。然后用同一个占位符连续问三轮，看它有没有串号。</p>
+<p>再做一次反向测试，故意把敏感词放进代码注释、JSON、日志和多行连接串里。很多脱敏规则在普通句子里看起来没问题，到了转义字符、换行和流式分片就开始漏。AI编程隐私脱敏服务的技术含量，恰好藏在这些不漂亮的边角里。</p>
+<p>最后给客户交三样东西，配置文件、测试报告和回滚说明。回滚说明很重要，代理挂了不能让整个团队停工。Maskit本身提供直连兜底，但你仍然应该把原始 Base URL、端口和密钥存放方式写清楚。</p>
+<p>整个流程跑通以后，再去闲鱼、程序员社群和本地软件园找第一批客户。不要一上来卖企业级合规。先卖一个具体结果，帮你把 Claude Code 接到本地隐私网关，检查密钥和连接串是否会裸奔。</p>
+<h2>报价和成本，别把故事讲过头</h2>
+<p>软件本身是开源的，个人安装的现金成本不高。团队版可能需要一台能稳定运行Docker的机器，或者部署在客户自己的NAS和服务器上。你真正付出的，是现场排查时间、规则误报处理和交付后的解释成本。</p>
+<p>这类服务没有必要用月入多少来包装。我目前没有Maskit的真实成交数据，也没有看到公开可验证的客户收入案例。可以确认的只有项目功能、许可、发布包和部署文档。上面的299、699、1500到5000，是用来测试市场的建议报价，不是收入承诺。</p>
+<p>如果客户要求你把所有日志长期保存，还要接企业身份系统和权限审计，价格就要重新算。日志越细，留下的敏感信息也越多。你不能为了证明自己很专业，把客户原文再复制一份到自己的服务器上。</p>
+<h2>四个坑，提前写进交付单</h2>
+<p>第一个坑是把训练关闭当成隐私完成。关闭模型训练，只解决数据是否用于训练的一部分问题，不能自动阻止请求出网。这个解释必须写进客户确认单。</p>
+<p>第二个坑是脱敏过度。手机号、姓名和内部代号全换成随机字符串，模型可能还能回答，但业务上下文变得不可读。适合推理的占位符应该保留类型，像PHONE、CONNSTR、PROJECT，而不是一串完全没有含义的乱码。</p>
+<p>第三个坑是日志泄露。控制台如果把原文、脱敏后文本和模型回复全保存，管理员权限一旦失控，网关就变成新的敏感数据仓库。默认只保留必要字段，客户要完整审计，再单独确认保存周期和访问权限。</p>
+<p>第四个坑是许可证。AGPL-3.0不是看到开源两个字就可以随便拿去闭源卖。你可以基于官方项目做内部部署服务，但涉及修改和对外分发时，必须确认源代码提供义务。这个边界搞不懂，就只做安装、配置和审计，不要把自己包装成商业软件供应商。</p>
+<h2>这条缝，真的值得进去吗</h2>
+<p>我觉得值得试，但不值得吹成暴富项目。</p>
+<p>AI编程助手越能读懂项目，客户越需要知道它读了什么。未来大家争的可能不只是模型聪不聪明，还包括上下文有没有越界，哪个文件能被读，哪些内容必须留在本机。Maskit把一个大而模糊的隐私问题，收缩成了本地端口、规则库、日志和审计四件能交付的东西。</p>
+<p>你不需要会训练大模型，也不需要先做一个复杂SaaS。先拿假的密钥跑通一次，先让客户看见一条请求如何被打码，再谈团队部署。愚钝如我，做这种安全服务最怕的不是报价低，是自己没验证就敢保证。</p>
+<p>开头那扇纱窗还在。它不能挡住所有风，也不能替你决定窗外有没有人，但至少你终于知道，什么东西正在穿过来。</p>
+<p>磨平一些信息差。</p>
+<div class="cta-box"><p><strong>想把AI工作流做成可收费服务</strong></p><p>我把客户需求拆解、服务报价、交付检查和常用提示词整理进AI赚钱方法库，适合拿来验证第一条副业工作流。</p><p><a href="/prompt-pack/?src=acta">查看¥39提示词包</a> · <a href="/projects/">查看项目库</a></p></div>
+</article>
+<div class="tip">本文依据 xiaYuTian11/maskit 公开GitHub仓库、README、发布信息与 CodeCloak 论文整理。Maskit功能、许可和上游服务条款可能变化。文中报价为市场测试建议，不代表已成交收入。涉及客户源码、密钥和个人信息时，请先获得授权并做假数据演示。</div>
+<div class="faq-section"><h2>常见问题</h2><div class="faq-item"><h4>Maskit是什么</h4><p>Maskit是一个本地隐私脱敏与还原网关，能在Cursor、Claude Code、Codex等工具请求出网前替换密钥、连接串、手机号和内部词汇，收到回复后再在本地还原。</p></div><div class="faq-item"><h4>AI编程隐私脱敏服务怎么收费</h4><p>个人电脑安装和规则配置可以按299到699元报价，小团队私有网关和审计交付可以按1500到5000元起谈。以上是建议测试价，不是已成交收入。</p></div><div class="faq-item"><h4>Maskit能完全阻止源码上传吗</h4><p>不能把它当成万能防火墙。Maskit主要处理经过本地网关的请求内容，仍需配置工具的上下文范围、排除敏感目录，并对网络请求做独立验证。</p></div><div class="faq-item"><h4>Maskit适合企业使用吗</h4><p>适合做小团队试点和本地部署，但AGPL-3.0许可、密钥管理、日志留存、审计责任都要先评估。闭源商业集成不能只看安装是否成功。</p></div></div>
+<div class="related"><p><strong>推荐阅读</strong></p><p><a href="/articles/cases/ai-coding-chat-history-extraction-service-side-hustle-20260821/">AI编程聊天记录提取服务怎么接单</a></p><p><a href="/articles/cases/ai-cost-optimization-service-side-hustle-20260713/">AI成本优化服务怎么报价</a></p><p><a href="/articles/cases/odysseus-self-hosted-ai-workspace-side-hustle-202606/">私有化AI工作台部署服务</a></p><p><a href="/articles/cases/ai-website-security-testing-side-hustle-20260625/">AI网站安全测试服务</a></p></div>
+<div class="footer"><p>磨平一些信息差。</p><p>作者：AiToollab · <a href="/prompt-pack/">AI赚钱方法库</a></p></div>
+</div>
+</body>
+</html>

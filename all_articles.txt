@@ -272,3 +272,4 @@ tutorials/needle2-local-ai-tutorial-20260911/
 tutorials/ai-efficiency-side-hustle-tools-tutorial-20260911/
 articles/news/gpt-live-1-api-voice-agent-side-hustle-20260912/index.html
 articles/cases/ai-course2md-illustrated-notes-service-side-hustle-20260912/index.html
+articles/cases/ai-coding-privacy-redaction-service-side-hustle-20260913/index.html
