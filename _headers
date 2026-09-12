@@ -1,15 +1,15 @@
 /*
-  Cache-Control: public, max-age=0, must-revalidate
+  Cache-Control: public, max-age=3600, must-revalidate
   X-Content-Type-Options: nosniff
 
 /tutorials/*
-  Cache-Control: public, max-age=0, must-revalidate
+  Cache-Control: public, max-age=3600, must-revalidate
 
 /articles/*
-  Cache-Control: public, max-age=0, must-revalidate
+  Cache-Control: public, max-age=3600, must-revalidate
 
 /projects/*
-  Cache-Control: public, max-age=0, must-revalidate
+  Cache-Control: public, max-age=3600, must-revalidate
 
 /*.css
   Cache-Control: public, max-age=86400, immutable
