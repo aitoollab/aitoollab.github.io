@@ -5,12 +5,22 @@
   <link href="https://www.aitoollab.top/feed.xml" rel="self"/>
   <link href="https://www.aitoollab.top/"/>
   <id>https://www.aitoollab.top/</id>
-  <updated>2026-09-12T08:00:00+08:00</updated>
+  <updated>2026-09-13T08:00:00+08:00</updated>
   <author>
     <name>AiToollab</name>
     <uri>https://www.aitoollab.top</uri>
   </author>
   <generator uri="https://www.aitoollab.top/">AiToollab Generator</generator>
+
+  <entry>
+    <title>Gemini Windows桌面版上线 普通人怎么靠AI电脑助手接单赚钱</title>
+    <link href="https://www.aitoollab.top/articles/news/gemini-windows-desktop-ai-service-side-hustle-20260913/"/>
+    <id>https://www.aitoollab.top/articles/news/gemini-windows-desktop-ai-service-side-hustle-20260913/</id>
+    <updated>2026-09-13T08:00:00+08:00</updated>
+    <published>2026-09-13T08:00:00+08:00</published>
+    <summary type="text">Gemini Windows桌面版上线，普通人怎么靠AI电脑助手接单赚钱？本文从电脑流程整理、办公自动化和上门配置三个方。。</summary>
+    <category term="热点"/>
+  </entry>
 
   <entry>
     <title>GPT-Live-1语音API上线 普通人怎么靠实时语音客服赚钱</title>
@@ -199,16 +209,6 @@
     <updated>2026-09-07T08:00:00+08:00</updated>
     <published>2026-09-07T08:00:00+08:00</published>
     <summary type="text">ChatGPT 公文提示词教程，提供通知、工作总结和调研报告的实用提示词写法，帮助你减少空话和返工。</summary>
-    <category term="教程"/>
-  </entry>
-
-  <entry>
-    <title>数据分析 赚钱 副业 小工具教程，先从Excel报表接单做起</title>
-    <link href="https://www.aitoollab.top/tutorials/ai-data-analysis-money-tool-tutorial-20260907/"/>
-    <id>https://www.aitoollab.top/tutorials/ai-data-analysis-money-tool-tutorial-20260907/</id>
-    <updated>2026-09-07T08:00:00+08:00</updated>
-    <published>2026-09-07T08:00:00+08:00</published>
-    <summary type="text">数据分析 赚钱 副业 小工具教程，教你用ChatGPT和Excel把散乱数据整理成客户看得懂的报表。</summary>
     <category term="教程"/>
   </entry>
 
