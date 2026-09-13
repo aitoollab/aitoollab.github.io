@@ -274,3 +274,6 @@ articles/news/gpt-live-1-api-voice-agent-side-hustle-20260912/index.html
 articles/cases/ai-course2md-illustrated-notes-service-side-hustle-20260912/index.html
 articles/cases/ai-coding-privacy-redaction-service-side-hustle-20260913/index.html
 articles/news/openai-agents-api-side-hustle-20260914/index.html
+tutorials/xiaohongshu-enterprise-posting-money-tutorial-20260914/
+tutorials/ai-small-tool-money-side-hustle-tutorial-20260914/
+tutorials/ai-data-dashboard-money-tutorial-20260914/
