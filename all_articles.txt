@@ -277,3 +277,4 @@ articles/news/openai-agents-api-side-hustle-20260914/index.html
 tutorials/xiaohongshu-enterprise-posting-money-tutorial-20260914/
 tutorials/ai-small-tool-money-side-hustle-tutorial-20260914/
 tutorials/ai-data-dashboard-money-tutorial-20260914/
+tutorials/ai-invoice-expense-tutorial-20260914/
