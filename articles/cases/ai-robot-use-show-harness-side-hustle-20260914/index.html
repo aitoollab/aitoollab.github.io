@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI机器人示教服务怎么赚钱，Show-Harness开源项目接单拆解</title>
+<meta name="description" content="Show-Harness是新加坡国立大学Show Lab发布的开源机器人视觉语言模型项目。本文拆解AI机器人示教服务怎么做、普通人能卖什么、工具链、报价思路和硬件风险。">
+<meta name="keywords" content="AI机器人示教服务,Show-Harness,机器人AI,视觉语言模型,VLM机器人,机器人数据采集,AI副业,机器人服务接单">
+<meta name="description:en" content="Show-Harness connects vision-language models with robots through a semantic action interface. A practical breakdown of possible AI robot teaching services.">
+<meta name="keywords:en" content="AI robot teaching service, Show-Harness, VLM robot, robot data collection, embodied AI, AI side hustle">
+<meta property="og:title" content="AI机器人示教服务怎么赚钱，Show-Harness开源项目接单拆解">
+<meta property="og:description" content="一个新开源项目，把视觉语言模型、机器人动作和浏览器示教接到了一起。普通人能从哪一层切进去。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://www.aitoollab.top/articles/cases/ai-robot-use-show-harness-side-hustle-20260914/">
+<meta property="og:image" content="https://www.aitoollab.top/articles/cases/ai-robot-use-show-harness-side-hustle-20260914/og-cases-ai-robot-use-show-harness-side-hustle-20260914.jpg">
+<meta property="og:site_name" content="AiToollab">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2026-09-14T16:00:00+08:00">
+<meta property="article:modified_time" content="2026-09-14T16:00:00+08:00">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AI机器人示教服务怎么赚钱，Show-Harness开源项目接单拆解">
+<meta name="twitter:description" content="从Show-Harness看AI机器人示教服务，普通人可以卖部署、数据采集和演示验证，而不是直接卖机器人。">
+<meta name="twitter:image" content="https://www.aitoollab.top/articles/cases/ai-robot-use-show-harness-side-hustle-20260914/og-cases-ai-robot-use-show-harness-side-hustle-20260914.jpg">
+<link rel="canonical" href="https://www.aitoollab.top/articles/cases/ai-robot-use-show-harness-side-hustle-20260914/">
+<link rel="alternate" hreflang="zh-CN" href="https://www.aitoollab.top/articles/cases/ai-robot-use-show-harness-side-hustle-20260914/">
+<link rel="alternate" hreflang="x-default" href="https://www.aitoollab.top/articles/cases/ai-robot-use-show-harness-side-hustle-20260914/">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"NewsArticle","headline":"AI机器人示教服务怎么赚钱，Show-Harness开源项目接单拆解","description":"Show-Harness连接视觉语言模型与机器人，本文拆解AI机器人示教服务的切入方式、流程和风险。","image":"https://www.aitoollab.top/articles/cases/ai-robot-use-show-harness-side-hustle-20260914/og-cases-ai-robot-use-show-harness-side-hustle-20260914.jpg","datePublished":"2026-09-14T16:00:00+08:00","dateModified":"2026-09-14T16:00:00+08:00","author":{"@type":"Person","name":"AiToollab"},"publisher":{"@type":"Organization","name":"AiToollab","logo":{"@type":"ImageObject","url":"https://www.aitoollab.top/og.jpg"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.aitoollab.top/articles/cases/ai-robot-use-show-harness-side-hustle-20260914/"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Show-Harness是什么","acceptedAnswer":{"@type":"Answer","text":"Show-Harness是新加坡国立大学Show Lab发布的开源机器人视觉语言模型项目，用一个语义动作接口让视觉语言模型控制不同机器人，并支持浏览器示教和训练数据采集。"}},{"@type":"Question","name":"不会造机器人能做AI机器人服务吗","acceptedAnswer":{"@type":"Answer","text":"可以从软件和数据服务切入，例如帮实验室部署环境、整理示教数据、跑仿真验证和制作演示报告。不要一开始承诺改造真实产线。"}},{"@type":"Question","name":"AI机器人示教服务怎么收费","acceptedAnswer":{"@type":"Answer","text":"公开资料没有给出Show-Harness服务的统一市场价格。实际报价应按部署复杂度、数据量、是否需要现场硬件和交付报告单独核算，本文不虚构已成交收入。"}},{"@type":"Question","name":"Show-Harness需要什么硬件","acceptedAnswer":{"@type":"Answer","text":"项目支持仿真环境，也支持Franka和AgileX Piper等机器人。真实机器人还需要对应硬件、相机、驱动和安全防护，普通电脑只能先做代码阅读、仿真和小规模数据处理。"}}]}
+</script>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f5f7fa;color:#293746;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;line-height:1.85;font-size:16px}.container{max-width:820px;margin:0 auto;background:#fff;padding:22px 28px 36px}nav{background:#101820;padding:11px 24px;display:flex;gap:18px;align-items:center}nav a{color:#d9e4ee;text-decoration:none;font-size:14px}nav a:first-child{font-weight:700;font-size:17px;margin-right:8px}.meta{color:#7c8791;font-size:14px;margin:12px 0 22px}h1{font-size:29px;line-height:1.45;color:#173f5f;margin:20px 0}h2{font-size:21px;color:#1f8058;border-bottom:2px solid #d8eee3;padding-bottom:6px;margin:34px 0 12px}h3{font-size:18px;color:#286b9c;margin:25px 0 6px}p{margin:13px 0;text-align:justify}.author-box{background:#f1f7fb;border-left:4px solid #3182bd;padding:12px 16px;margin:18px 0}.tip,.cta-box{padding:17px 20px;border-radius:8px;margin:24px 0}.tip{background:#edf9f1;border-left:4px solid #2eaa68}.cta-box{background:#153f60;color:#fff;text-align:center}.cta-box a{color:#ffd166;font-weight:700}.faq-section,.related{background:#f7f8fa;border-radius:8px;padding:18px 20px;margin-top:28px}.faq-item h4{margin:14px 0 3px;color:#34495e}.related a{color:#2675a6}.footer{text-align:center;color:#84909b;font-size:13px;border-top:1px solid #ddd;margin-top:30px;padding-top:18px}@media(max-width:600px){.container{padding:16px}h1{font-size:24px}}
+</style>
+</head>
+<body>
+<nav><a href="/">🧰 AiToollab</a><a href="/tutorials/">教程</a><a href="/articles/cases/">案例</a><a href="/projects/">项目库</a></nav>
+<div class="container">
+<p class="meta">发布于 2026-09-14 · AI副业案例拆解 · 预计阅读时间 12 分钟</p>
+<article>
+<h1>AI机器人示教服务怎么赚钱，Show-Harness开源项目接单拆解</h1>
+<div class="author-box">AiToollab，专注普通人能看懂、能动手的AI副业和自动化实战。</div>
+<p>昨天Scout扫到一个新仓库，叫Show-Harness。9月7日创建，9月13日还在持续更新，项目描述只有一句，Just a VLM Agent Can Play Robots。</p>
+<p>一个视觉语言模型，开始玩机器人了。</p>
+<p>我第一眼其实有点懵。机器人不是要机械臂、摄像头、控制器，还有一堆实验室设备吗？普通人看个开源仓库，跟赚钱有什么关系？？？</p>
+<p>顺着README往下看，事情没有那么玄。Show-Harness把复杂的机器人控制拆成了一个语义动作接口。模型输出向左、向前、夹取这类离散动作，针对不同机器人的解释器，再把动作翻译成具体运动。</p>
+<p>这层翻译很关键。</p>
+<p>同一套词汇，可以接Franka、AgileX Piper、ManiSkill和Isaac Lab。项目还放出了GUMI，一个在浏览器里示教机器人的界面。人按键操作，GUI Agent看着同一块屏幕操作，留下来的每一步都能变成训练数据。</p>
+<p>我没有机器人，也没有H200，更没有条件假装自己已经用它接到订单。所以今天不写月入多少，也不编一个客户故事。我们只把这个项目拆开，看普通人到底能从哪一层切进去。</p>
+<h2>Show-Harness到底把什么变简单了</h2>
+<p>传统机器人项目经常卡在两头。一头是模型听得懂人话，却不知道手要移动几厘米。另一头是动作控制很精确，却只能在固定场景里重复，换个桌面、换个光线就懵。</p>
+<p>Show-Harness的做法，是让视觉语言模型负责每一步的语义决策，再由解释器负责把动作落到机器人身上。模型不用直接输出一串关节角度，但也没有被一个黑箱策略完全替代。</p>
+<p>这有点像给模型装了一个方向盘。</p>
+<p>项目页面给出的实验结果很有意思。零样本路线和微调后的开源小模型，都能跨任务、跨环境和跨机器人测试。项目公开展示的指标里，跨任务零样本和微调模式分别达到89%和86%，跨环境达到100%和88%，跨机器人达到93%和87%。这些是项目方的实验结果，不等于任何客户现场都能复现。</p>
+<p>更骚的是，机器人换一个物理需求，未必需要重新训练模型。想把步长从2厘米改成1厘米，可以先改解释器。双臂动作、失败恢复、动作历史，也能作为插件接进去。</p>
+<p>对于做服务的人来说，这个思路比某个漂亮的演示视频更有价值。客户未必关心你的模型叫什么，他关心的是换一台机械臂后要不要全部重做。</p>
+<h2>普通人不要先买机器人，先卖这三类服务</h2>
+<p>第一类是环境部署和演示验证。实验室、机器人初创团队、学校实验课，常常有代码，有模型，有机械臂，但缺一个能把仓库从README跑到演示的人。你可以负责整理Python环境、配置OpenAI兼容模型接口、接仿真环境，最后交一份可复现的启动说明。</p>
+<p>这里卖的不是你会敲几条命令，而是客户下周能不能给别人演示。部署前先问清楚是仿真、远程机器人，还是现场机械臂。真实硬件没确认，别把现场交付写进报价单。</p>
+<p>第二类是机器人示教数据整理。GUMI的价值不只是让人按键玩机器人，而是把动作序列和画面对应起来。你可以接一个小任务，帮客户把十几个示教回合按任务名、环境、失败原因和动作步骤整理成可训练的数据集。</p>
+<p>这件事听着像整理文件，实际很吃细节。某一次抓取失败，是模型看错了位置，还是夹爪没有闭合，还是解释器步长太大，标签不能随便填。数据一旦错了，训练出来的模型只会把错误学得更认真。</p>
+<p>第三类是仿真到真实的前期评估。客户想做机器人分拣、桌面整理、实验室搬运，但还没决定买哪套硬件。你可以用ManiSkill或Isaac Lab跑几个任务，比较不同相机位置、动作步长和失败恢复插件，再输出一页风险清单。</p>
+<p>这一档更像技术调研，不要包装成已经能替客户把生产线跑起来。仿真里成功，不等于真实世界成功。光线、摩擦、延迟、遮挡，任何一项都能让演示现场突然安静。</p>
+<h2>接单流程，先做一个能看的小样</h2>
+<p>我会把第一单拆成四步。先选一个没有安全风险的桌面任务，比如把积木从左边移到右边。再用仿真环境跑通语义动作，记录每一步模型看到了什么、输出了什么、解释器做了什么。</p>
+<p>然后把任务换一个环境参数。桌面颜色变一下，物体位置挪一下，光线暗一点。不是为了制造漂亮数字，而是找出系统在哪些变化下会失控。</p>
+<p>最后交付三样东西，一个可复现的启动脚本，一段带标注的演示视频，一页问题清单。客户看得懂这三样，才知道你不是把GitHub README复制给他。</p>
+<p>报价不要直接照搬实验室项目。Show-Harness公开仓库没有统一服务价格，我也没有已成交收入可以拿来装权威。比较稳妥的方式，是把费用拆成环境准备、数据整理、仿真测试和现场支持四块，现场硬件和差旅另算。</p>
+<p>第一单可以只卖远程仿真验证，不碰机器人硬件。等你跑过两三个任务，知道哪些环节最容易炸，再考虑卖数据整理或实验室部署。顺序反过来，很容易把自己卖进一个没有设备、没有日志、没有权限的坑里。</p>
+<h2>这个方向的门槛，根本不在Prompt</h2>
+<p>看到视觉语言模型，很多人会本能地想写一套机器人Prompt。这不是没用，但它不是最难的部分。</p>
+<p>真正需要补的，是坐标系、相机视角、动作频率、碰撞安全和数据标注。你至少要看懂一段动作从模型输出到机械臂执行，中间经过了哪几个解释器。否则客户问一句为什么总是抓偏，你只能把问题推给模型。</p>
+<p>还有硬件安全。真实机械臂不是网页按钮，动作过大可能撞设备，夹爪误开可能损坏样品。没有急停、限位和人在场监督，不要远程尝试真实动作。普通人能先做的是仿真和离线数据，不是拿客户的机械臂当自己的试玩机。</p>
+<p>Show-Harness目前更适合研究、演示和早期验证。项目支持的机器人、模型和环境不少，但安装依赖也不少。README里明确分了基础环境、服务模型环境和真实硬件层，真实机器人还涉及RealSense、ROS兼容层和遥操作窗口。</p>
+<p>这就是我不建议一上来买设备的原因。先跑代码，先看自己能不能把一个任务讲清楚。买机器人不是学习的第一步，往往是把错误放大的第一步。</p>
+<h2>从一个仓库看见一条新服务链</h2>
+<p>以前说AI机器人，普通人的第一反应通常是买硬件、训练模型、做工厂自动化。Show-Harness把中间那一层露了出来，模型接口、动作解释、示教数据、仿真评估，这些都可以单独成为服务。</p>
+<p>我觉得这才是开源项目对副业真正有用的地方。不是每个人都要复制项目方的完整技术路线，而是把一条很长的链条，切下一小段，做成客户能买的交付物。</p>
+<p>你可以先从一段仿真视频开始。视频里有动作、有日志、有失败解释，比一句我能做机器人AI强得多。</p>
+<p>我自己也还在摸索这类项目怎么从代码走到收费，尤其是硬件现场和安全责任，不能靠一篇文章解决。能确认的是，Show-Harness的开源接口、GUMI示教、公开模型和数据，已经把入口摆出来了。</p>
+<p>机器人还没走进每个人家里，但围绕机器人训练、验证和交付的人，已经开始出现了。</p>
+<p>磨平一些信息差。</p>
+<div class="cta-box"><p><strong>想把AI项目拆成可交付的服务</strong></p><p>我整理了一份AI副业方法库，包含需求拆解、服务报价、交付检查和Prompt模板，适合拿来做第一条可收费工作流。</p><p><a href="/prompt-pack/?src=cases-robot-show-harness">查看¥39提示词包</a> · <a href="/projects/">查看项目库</a></p></div>
+</article>
+<div class="tip">本文基于showlab/Show-Harness公开GitHub仓库、项目主页和arXiv论文整理。项目实验数据为作者公开结果，不等于商业现场效果。本文没有虚构Show-Harness的客户、收入或统一市场报价。真实机器人操作必须配置急停、限位和现场监督。</div>
+<div class="faq-section"><h2>常见问题</h2>
+<div class="faq-item"><h4>Show-Harness是什么</h4><p>Show-Harness是新加坡国立大学Show Lab发布的开源机器人视觉语言模型项目，用一个语义动作接口让视觉语言模型控制不同机器人，并支持浏览器示教和训练数据采集。</p></div>
+<div class="faq-item"><h4>不会造机器人能做AI机器人服务吗</h4><p>可以从软件和数据服务切入，例如帮实验室部署环境、整理示教数据、跑仿真验证和制作演示报告。不要一开始承诺改造真实产线。</p></div>
+<div class="faq-item"><h4>AI机器人示教服务怎么收费</h4><p>公开资料没有给出Show-Harness服务的统一市场价格。实际报价应按部署复杂度、数据量、是否需要现场硬件和交付报告单独核算，本文不虚构已成交收入。</p></div>
+<div class="faq-item"><h4>Show-Harness需要什么硬件</h4><p>项目支持仿真环境，也支持Franka和AgileX Piper等机器人。真实机器人还需要对应硬件、相机、驱动和安全防护，普通电脑只能先做代码阅读、仿真和小规模数据处理。</p></div>
+</div>
+<div class="related"><p><strong>推荐阅读</strong></p>
+<p><a href="/articles/cases/ai-competitor-monitoring-service-side-hustle-20260911/">AI竞品监控怎么接单赚钱</a></p>
+<p><a href="/articles/cases/ai-course2md-illustrated-notes-service-side-hustle-20260912/">AI把网课转成带截图笔记怎么赚钱</a></p>
+<p><a href="/articles/news/deepseek-harness-open-source-side-hustle-20260816/">开源Harness项目怎么变成服务</a></p>
+<p><a href="/tutorials/multi-agent-side-hustle/">多Agent服务怎么搭建</a></p>
+</div>
+<section class="conversion-bridge" style="margin:40px 0;padding:24px;border:1px solid var(--border,#30363d);border-radius:12px;background:rgba(37,99,235,.08);text-align:center;">
+<strong>项目不必一次做大</strong><p>先挑一个公开仓库，跑通一个任务，做出一份别人看得懂的交付件，再谈收费。</p><a href="/projects/" style="padding:8px 14px;background:#2563eb;color:#fff;border-radius:7px;text-decoration:none;">查看项目库</a>
+</section>
+<div class="footer"><p>磨平一些信息差。</p><p>作者：AiToollab</p><p><a href="/prompt-pack/">AI赚钱方法库</a></p></div>
+</div>
+</body>
+</html>
