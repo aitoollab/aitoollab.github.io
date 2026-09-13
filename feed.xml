@@ -5,12 +5,22 @@
   <link href="https://www.aitoollab.top/feed.xml" rel="self"/>
   <link href="https://www.aitoollab.top/"/>
   <id>https://www.aitoollab.top/</id>
-  <updated>2026-09-13T08:00:00+08:00</updated>
+  <updated>2026-09-14T08:00:00+08:00</updated>
   <author>
     <name>AiToollab</name>
     <uri>https://www.aitoollab.top</uri>
   </author>
   <generator uri="https://www.aitoollab.top/">AiToollab Generator</generator>
+
+  <entry>
+    <title>OpenAI Agents API上线 普通人怎么靠云端AI Agent接单赚钱</title>
+    <link href="https://www.aitoollab.top/articles/news/openai-agents-api-side-hustle-20260914/"/>
+    <id>https://www.aitoollab.top/articles/news/openai-agents-api-side-hustle-20260914/</id>
+    <updated>2026-09-14T08:00:00+08:00</updated>
+    <published>2026-09-14T08:00:00+08:00</published>
+    <summary type="text">OpenAI Agents API上线，普通人怎么靠云端AI Agent接单赚钱？本文拆解资料整理、企业流程自动化和AI。。</summary>
+    <category term="热点"/>
+  </entry>
 
   <entry>
     <title>Gemini Windows桌面版上线 普通人怎么靠AI电脑助手接单赚钱</title>
@@ -200,16 +210,6 @@
     <published>2026-09-07T08:00:00+08:00</published>
     <summary type="text">AI自动处理故障后，普通人怎么靠AI运维培训接单赚钱？从事故演练、值班流程和故障复盘三个方向，拆解AI运维副业机会。</summary>
     <category term="热点"/>
-  </entry>
-
-  <entry>
-    <title>AI摄影管家怎么赚钱，帮摄影师筛片和整理照片一单300到2000元</title>
-    <link href="https://www.aitoollab.top/articles/cases/ai-photo-curation-service-side-hustle-20260907/"/>
-    <id>https://www.aitoollab.top/articles/cases/ai-photo-curation-service-side-hustle-20260907/</id>
-    <updated>2026-09-07T08:00:00+08:00</updated>
-    <published>2026-09-07T08:00:00+08:00</published>
-    <summary type="text">GitHub上的AI摄影管家可以本地筛选照片、识别重复和模糊图片，并生成摄影报告。本文拆解AI照片筛选服务的工具链、接单。。</summary>
-    <category term="案例"/>
   </entry>
 
 </feed>
