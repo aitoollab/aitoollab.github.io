@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KITE AI记忆系统副业，帮团队给Claude和智能体装长期记忆，一单500-3000元</title>
+<meta name="description" content="Memoket开源KITE用无向量的方式给AI智能体建立可追溯长期记忆。本文拆解AI记忆系统搭建服务，包含工具原理、三档定价、交付流程、客户来源和隐私避坑。">
+<meta name="keywords" content="KITE AI记忆,Memoket,AI记忆系统,智能体长期记忆,Claude记忆,AI副业,AI智能体搭建,向量数据库替代">
+<meta name="description:en" content="Build AI memory systems for agent teams with KITE by Memoket. A practical side hustle guide covering pricing, delivery, customer acquisition and privacy."
+><meta name="keywords:en" content="KITE AI memory,Memoket,agent memory service,AI side hustle,Claude memory">
+<link rel="canonical" href="https://www.aitoollab.top/articles/cases/ai-memory-kite-service-side-hustle-20260915/">
+<link rel="alternate" hreflang="zh-CN" href="https://www.aitoollab.top/articles/cases/ai-memory-kite-service-side-hustle-20260915/">
+<meta property="og:title" content="KITE AI记忆系统副业，帮团队给智能体装长期记忆">
+<meta property="og:description" content="一个开源项目，把AI记忆从相似度检索改成带证据的事实查询。普通人可以怎么把它做成搭建和迁移服务。">
+<meta property="og:image" content="https://www.aitoollab.top/articles/cases/ai-memory-kite-service-side-hustle-20260915/og-cases-ai-memory-kite-service-side-hustle-20260915.jpg">
+<meta property="og:url" content="https://www.aitoollab.top/articles/cases/ai-memory-kite-service-side-hustle-20260915/">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="KITE AI记忆系统副业，帮团队给智能体装长期记忆">
+<meta name="twitter:description" content="AI记忆系统搭建服务实操拆解">
+<meta name="twitter:image" content="https://www.aitoollab.top/articles/cases/ai-memory-kite-service-side-hustle-20260915/og-cases-ai-memory-kite-service-side-hustle-20260915.jpg">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"KITE AI记忆系统副业，帮团队给智能体装长期记忆","description":"Memoket开源KITE用无向量的方式给AI智能体建立可追溯长期记忆。","author":{"@type":"Organization","name":"AiToollab"},"publisher":{"@type":"Organization","name":"AiToollab"},"datePublished":"2026-09-15","dateModified":"2026-09-15","image":"https://www.aitoollab.top/articles/cases/ai-memory-kite-service-side-hustle-20260915/og-cases-ai-memory-kite-service-side-hustle-20260915.jpg","mainEntityOfPage":"https://www.aitoollab.top/articles/cases/ai-memory-kite-service-side-hustle-20260915/","articleSection":"副业赚钱","keywords":["KITE AI记忆","智能体长期记忆","AI副业"]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"不会写代码能做AI记忆系统服务吗？","acceptedAnswer":{"@type":"Answer","text":"可以从部署和数据整理做起，但需要能看懂Python项目、环境变量和基础命令行。复杂的智能体集成不适合完全零基础的人。"}},{"@type":"Question","name":"AI记忆系统一单能收多少钱？","acceptedAnswer":{"@type":"Answer","text":"基础安装和迁移可以按500到1000元报价，接入现有智能体和整理历史数据可以按1500到3000元报价，具体取决于数据量和集成范围。"}},{"@type":"Question","name":"客户的聊天记录怎么保护？","acceptedAnswer":{"@type":"Answer","text":"优先本地部署，只处理客户授权的数据，交付前后做备份和删除确认，不把真实聊天记录上传到公共模型或个人电脑。"}}]}</script>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f8f9fa;color:#2c3e50;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;line-height:1.85;font-size:16px}.container{max-width:820px;margin:0 auto;padding:24px;background:#fff}h1{font-size:28px;line-height:1.45;color:#1a5276;margin:28px 0 14px}h2{font-size:21px;color:#1e8449;border-bottom:2px solid #1e8449;padding-bottom:6px;margin:32px 0 14px}h3{font-size:17px;margin:18px 0 6px}p{margin:13px 0;text-align:justify}.meta{font-size:14px;color:#7f8c8d}.tip{padding:16px 18px;background:#eafaf1;border-left:4px solid #27ae60;border-radius:5px;margin:22px 0}.cta{padding:20px;background:#1a5276;color:#fff;border-radius:8px;text-align:center;margin:24px 0}.cta a{color:#f1c40f}.faq{background:#f7f7f7;padding:18px;border-radius:8px;margin:26px 0}.related{padding:16px;background:#f5f6fa;border-radius:8px}.related a{display:block;color:#2980b9;padding:4px 0}.footer{text-align:center;color:#7f8c8d;border-top:1px solid #ddd;margin-top:30px;padding:20px 0;font-size:13px}table{width:100%;border-collapse:collapse;margin:16px 0}th,td{border:1px solid #ddd;padding:8px;text-align:left}th{background:#1a5276;color:#fff}@media(max-width:600px){.container{padding:16px}h1{font-size:23px}}
+</style>
+</head>
+<body><div class="container"><article>
+<p class="meta">发布于 2026-09-15 · AI副业案例拆解 · 预计阅读时间 12 分钟</p>
+<div class="author-box">作者，AiToollab</div>
+<h1>KITE AI记忆系统副业，帮团队给智能体装长期记忆，一单500-3000元</h1>
+<p>前几天我在翻Scout的新项目时，看到一个叫memoket-kite的仓库，创建时间不算长，扫描时已经有一百多个Star，GitHub页面现在显示140个Star。它做的事很简单，也很刺眼，给AI智能体装一套能查证据的长期记忆。</p>
+<p>我当时停了一下。</p>
+<p>我们现在用Claude、ChatGPT、Cursor或者自建Agent，最烦的地方往往不是模型不会回答，而是它昨天明明知道的事情，今天又忘了。你告诉它客户已经换了负责人，它过两天还拿旧信息出来说。向量库能找到相似句子，却不一定知道哪一条是最新事实。</p>
+<p>KITE的思路有点不一样。它把对话整理成带时间、人物和来源的事实，再把问题编译成一套可以检查的查询计划，最后把答案和原话一起拿回来。仓库README给出的公开测试结果是LoCoMo 93.51%，LongMemEval-S 85.60%，并强调平均每个问题只需要约1600个上下文token。[1]</p>
+<p>这不是说它已经是成熟商业产品，远没有。但一个新项目把客户痛点戳得这么准，就值得顺着看一眼。</p>
+<h2>AI记忆系统为什么会变成一门服务</h2>
+<p>很多人看到AI记忆，第一反应是装个向量数据库，再接一个Embedding模型。这个路线当然能跑，但客户买的从来不是一个数据库。客户想要的是，三个月后问一句「上次那个客户最后定了哪个方案」，AI能给出现在有效的答案，还能告诉他这句话来自哪段会议记录。</p>
+<p>这类需求已经出现了三个很具体的场景。</p>
+<p>个人用户想把自己的长期对话、工作偏好和项目资料留住，不想每次开新会话都重新解释。小团队想让几个Agent共享项目背景，避免每个机器人各说各的。再往上，是咨询公司和软件团队，他们需要把客服记录、会议纪要和决策文档变成能追溯的知识层。</p>
+<p>你可能觉得，这不是开发者才做得了吗？我理解这种感觉。KITE目前是Python库，文档、示例和集成还在发展，真正把它接进客户现有的Claude Code、Codex、Cursor或自研Agent，确实需要技术基础。</p>
+<p>但服务不等于从零发明算法。客户需要的是有人把数据理顺，把部署跑起来，把旧记忆迁过去，再交付一份团队看得懂的使用说明。这里面有不少工作，模型不会替你承担。</p>
+<h2>三档服务，别一上来就卖大项目</h2>
+<table><tr><th>服务</th><th>交付内容</th><th>建议报价</th></tr><tr><td>基础部署</td><td>环境安装、示例数据导入、一次问答验证</td><td>500至1000元</td></tr><tr><td>记忆迁移</td><td>整理聊天记录、会议纪要和知识文档，建立主题和来源索引</td><td>1500至3000元</td></tr><tr><td>团队接入</td><td>接入现有Agent、权限设计、更新规则、交付培训</td><td>3000元起</td></tr></table>
+<p>第一档适合冷启动。你先给客户装好KITE，拿一组脱敏数据跑通从消息到事实、从问题到计划、从证据到答案的完整链路。交付物不要只给一个Git仓库，最好有安装记录、测试问题和回滚方法。</p>
+<p>第二档才是利润更好的部分。客户手里的旧资料通常乱得像抽屉，文件名五花八门，会议纪要里还有相互矛盾的决定。你要做的是分批导入，保留原始来源，给每条事实加时间和负责人，再设计几组真实问题验收。这个工作不性感，但客户愿意为它付钱。</p>
+<p>第三档属于轻咨询。团队里谁能读哪些记忆，哪些内容可以进入公共知识层，客户删除资料后怎么同步，模型回答不确定时怎么返回空结果，这些都要提前定规则。没有规则的长期记忆，最后只会变成一座更难清理的垃圾场。</p>
+<h2>怎么把项目做成可交付的工具链</h2>
+<p>核心工具是KITE by Memoket。它使用主题索引和事实记录，不依赖向量数据库，仓库采用Apache-2.0许可证。[1] 你可以把它当成记忆层，而不是一个完整的聊天机器人。</p>
+<p>数据处理可以用Python脚本完成，脱敏和格式整理可以交给Claude或ChatGPT辅助，但不要把客户原始记录直接丢进公共会话。交付报告用WPS或Excel就够了，里面列出已导入的数据范围、测试问题、已知缺口和后续维护方式。</p>
+<p>我会把流程固定成六步。先确认客户的Agent形态和数据来源，再复制原始数据做只读备份。接着抽取事实并保留原文引用，然后建立主题和时间规则。第四步接入客户的调用流程，第五步用十到二十个真实问题做验收，最后交付操作手册和删除确认。</p>
+<p>一开始可能会很笨拙，甚至比手动翻文档还慢。尤其是数据质量差的时候，你花半天时间只是为了判断两句话是不是同一个事实。这不是失败，而是服务的价值所在。客户自己不愿意做，才会找你。</p>
+<h2>客户从哪里来，别只盯着闲鱼</h2>
+<p>这个方向的客户不太像买Logo的人，他们通常藏在AI开发群、独立开发者社区、自动化工作流社群和企业数字化服务商身边。你可以先写一篇公开内容，演示一个很小的变化，比如同一条客户信息在三个月内发生更新，普通相似度检索会拿旧答案，带时间和来源的记忆层会返回新答案。</p>
+<p>这种内容比「我能帮你搭AI记忆系统」有说服力多了。客户看到的是问题和结果，不是你的自我介绍。</p>
+<p>第二个入口是给已经在做Agent集成的人当外包。很多人会接API、会做聊天界面，却不想处理历史数据迁移和权限规则。你不需要跟他们竞争整套项目，只接记忆层这一小段，先按项目收费，稳定后再做维护包。</p>
+<p>第三个入口是内部知识整理。给咨询师、销售团队和小型软件公司做一次资料盘点，把会议记录和决策文档整理成可查询的事实库。这里不一定非要推KITE，客户要的是结果，技术路线应该服从数据安全和维护成本。</p>
+<h2>这个方向最大的坑，不是技术</h2>
+<p>第一是隐私。AI记忆里可能有客户报价、源代码、身份证明和内部决策。默认本地部署，客户授权什么你处理什么，全程保留备份和删除记录。不要为了展示效果，把真实聊天截图发到社交平台。</p>
+<p>第二是夸大效果。README里的公开基准成绩是项目方提供的结果，不等于每个客户的数据都能达到同样表现。你应该把它当成技术信号，不能拿它替客户保证准确率。验收时要明确哪些问题能回答，哪些问题必须返回不知道。</p>
+<p>第三是过早承诺全自动。KITE目前的集成生态还在发展，README也把Claude Code、Codex、Cursor和OpenCode等生态接入列为后续方向。[1] 这反而给服务商留下空间，但你要把工作范围写清楚，不能收了部署费，最后交付一张架构图。</p>
+<p>还有一个现实问题，主流Agent以后可能自己把记忆功能做得很好。这个窗口不会永远打开。所以别把生意设计成只卖一次安装，应该把数据迁移、知识清理、记忆质量检查和团队权限维护做成后续服务。</p>
+<h2>最后想说几句</h2>
+<p>我喜欢KITE这个项目，不是因为它已经证明了什么，而是它把AI记忆从「找相似内容」往「回答有证据的问题」推了一步。这个差别，在个人聊天里可能只是偶尔觉得AI变聪明了，在团队业务里却直接关系到客户会不会因为旧信息做错决定。</p>
+<p>如果你有Python基础，又愿意处理脏数据和部署细节，可以先拿自己的项目试一遍。不要先做漂亮官网，先准备十个真实问题，看看它能不能把答案和来源一起交出来。能跑通，再去找第一个客户。</p>
+<p>一个小项目，一条新缝隙。磨平一些信息差，顺手赚点钱。</p>
+</article>
+<div class="tip"><p><strong>我整理了一份AI智能体服务接单的工具配置清单、交付模板和获客话术</strong></p><p>包含项目筛选、隐私处理、报价分档和交付验收模板。微信扫码或搜索「AiToollab」关注公众号，回复「智能体」获取。</p></div>
+<div class="cta cta-box"><p><strong>想找更多能落地的AI副业方向</strong></p><p>我把AI写作、AI设计、AI开发和自动化服务整理成了项目库，包含工具链、定价参考和执行路径。</p><p><a href="/projects/">查看AI副业项目库</a></p></div>
+<div class="faq"><h2>常见问题</h2><h3>不会写代码能做AI记忆系统服务吗？</h3><p>可以从部署、数据整理和文档交付做起，但至少要能看懂Python项目、环境变量和基础命令行。复杂的Agent集成不适合完全零基础的人。</p><h3>AI记忆系统一单能收多少钱？</h3><p>基础安装和迁移可以按500至1000元报价，接入现有智能体和整理历史数据可以按1500至3000元报价，团队项目再按数据量和人数增加。</p><h3>客户聊天记录怎么保护？</h3><p>优先本地部署，只处理客户授权的数据，交付前后做备份和删除确认，不把真实聊天记录上传到公共模型或个人电脑。</p></div>
+<div class="related"><h3>你可能也感兴趣</h3><a href="/articles/cases/mempalace-ai-memory-side-hustle-202606/">AI记忆系统怎么做成副业，MemPalace实操拆解</a><a href="/articles/cases/ai-agent-customization-service/">AI智能体定制服务，一单怎么从需求做到交付</a><a href="/articles/cases/ai-software-factory-service-side-hustle-20260822/">AI软件工厂搭建服务，普通人怎么切入</a></div>
+<div class="footer"><p>© 2026 AiToollab | 普通人用AI做副业的实战平台</p></div>
+</div></body></html>
