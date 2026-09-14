@@ -5,12 +5,22 @@
   <link href="https://www.aitoollab.top/feed.xml" rel="self"/>
   <link href="https://www.aitoollab.top/"/>
   <id>https://www.aitoollab.top/</id>
-  <updated>2026-09-14T08:00:00+08:00</updated>
+  <updated>2026-09-15T08:00:00+08:00</updated>
   <author>
     <name>AiToollab</name>
     <uri>https://www.aitoollab.top</uri>
   </author>
   <generator uri="https://www.aitoollab.top/">AiToollab Generator</generator>
+
+  <entry>
+    <title>苹果Siri开放第三方AI模型 普通人怎么靠AI助手服务赚钱</title>
+    <link href="https://www.aitoollab.top/articles/news/apple-siri-third-party-ai-side-hustle-20260915/"/>
+    <id>https://www.aitoollab.top/articles/news/apple-siri-third-party-ai-side-hustle-20260915/</id>
+    <updated>2026-09-15T08:00:00+08:00</updated>
+    <published>2026-09-15T08:00:00+08:00</published>
+    <summary type="text">苹果Siri开放第三方AI模型，Claude和ChatGPT可能直接接管系统任务。普通人怎么靠AI助手服务赚钱，本文拆解。。</summary>
+    <category term="热点"/>
+  </entry>
 
   <entry>
     <title>OpenAI Agents API上线 普通人怎么靠云端AI Agent接单赚钱</title>
@@ -200,16 +210,6 @@
     <published>2026-09-09T08:00:00+08:00</published>
     <summary type="text">screenwriting-skills是9月6号刚上线的Claude Code编剧技能包，三天冲到382星，把19本编。。</summary>
     <category term="案例"/>
-  </entry>
-
-  <entry>
-    <title>YouTube定制商品带货怎么做 AI出图POD零库存副业教程</title>
-    <link href="https://www.aitoollab.top/tutorials/youtube-custom-merch-ai-tutorial-20260909/"/>
-    <id>https://www.aitoollab.top/tutorials/youtube-custom-merch-ai-tutorial-20260909/</id>
-    <updated>2026-09-09T08:00:00+08:00</updated>
-    <published>2026-09-09T08:00:00+08:00</published>
-    <summary type="text">YouTube定制商品带货成功案例拆解，用Midjourney出图接Printify零库存POD，500订阅到1000订。。</summary>
-    <category term="教程"/>
   </entry>
 
 </feed>
