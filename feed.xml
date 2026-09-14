@@ -23,6 +23,16 @@
   </entry>
 
   <entry>
+    <title>KITE AI记忆系统副业，帮团队给Claude和智能体装长期记忆，一单500-3000元</title>
+    <link href="https://www.aitoollab.top/articles/cases/ai-memory-kite-service-side-hustle-20260915/"/>
+    <id>https://www.aitoollab.top/articles/cases/ai-memory-kite-service-side-hustle-20260915/</id>
+    <updated>2026-09-15T08:00:00+08:00</updated>
+    <published>2026-09-15T08:00:00+08:00</published>
+    <summary type="text">Memoket开源KITE用无向量的方式给AI智能体建立可追溯长期记忆。本文拆解AI记忆系统搭建服务，包含工具原理、三档。。</summary>
+    <category term="案例"/>
+  </entry>
+
+  <entry>
     <title>OpenAI Agents API上线 普通人怎么靠云端AI Agent接单赚钱</title>
     <link href="https://www.aitoollab.top/articles/news/openai-agents-api-side-hustle-20260914/"/>
     <id>https://www.aitoollab.top/articles/news/openai-agents-api-side-hustle-20260914/</id>
@@ -200,16 +210,6 @@
     <published>2026-09-09T08:00:00+08:00</published>
     <summary type="text">Anthropic、OpenAI、Meta、Google一周内连发五个AI新模型，CNBC报道模型疲劳爆发。本文拆解AI。。</summary>
     <category term="热点"/>
-  </entry>
-
-  <entry>
-    <title>AI写短剧剧本怎么投稿赚钱，GitHub三天382星的编剧技能包实操拆解</title>
-    <link href="https://www.aitoollab.top/articles/cases/screenwriting-skills-ai-script-side-hustle-20260909/"/>
-    <id>https://www.aitoollab.top/articles/cases/screenwriting-skills-ai-script-side-hustle-20260909/</id>
-    <updated>2026-09-09T08:00:00+08:00</updated>
-    <published>2026-09-09T08:00:00+08:00</published>
-    <summary type="text">screenwriting-skills是9月6号刚上线的Claude Code编剧技能包，三天冲到382星，把19本编。。</summary>
-    <category term="案例"/>
   </entry>
 
 </feed>
