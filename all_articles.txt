@@ -279,3 +279,5 @@ tutorials/ai-small-tool-money-side-hustle-tutorial-20260914/
 tutorials/ai-data-dashboard-money-tutorial-20260914/
 tutorials/ai-invoice-expense-tutorial-20260914/
 articles/news/openclips-boreal-ai-video-side-hustle-20260916/index.html
+
+articles/cases/ai-video-generation-api-service-side-hustle-20260916/index.html
