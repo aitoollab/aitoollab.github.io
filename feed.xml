@@ -5,12 +5,22 @@
   <link href="https://www.aitoollab.top/feed.xml" rel="self"/>
   <link href="https://www.aitoollab.top/"/>
   <id>https://www.aitoollab.top/</id>
-  <updated>2026-09-16T08:00:00+08:00</updated>
+  <updated>2026-09-17T08:00:00+08:00</updated>
   <author>
     <name>AiToollab</name>
     <uri>https://www.aitoollab.top</uri>
   </author>
   <generator uri="https://www.aitoollab.top/">AiToollab Generator</generator>
+
+  <entry>
+    <title>ChatGPT Sponsored Agents上线，普通人怎么靠AI广告代运营赚钱</title>
+    <link href="https://www.aitoollab.top/articles/news/openai-chatgpt-sponsored-agents-side-hustle-20260917/"/>
+    <id>https://www.aitoollab.top/articles/news/openai-chatgpt-sponsored-agents-side-hustle-20260917/</id>
+    <updated>2026-09-17T08:00:00+08:00</updated>
+    <published>2026-09-17T08:00:00+08:00</published>
+    <summary type="text">ChatGPT Sponsored Agents开始测试，普通人怎么靠AI广告代运营赚钱？本文拆解AI广告素材、对话式销。。</summary>
+    <category term="热点"/>
+  </entry>
 
   <entry>
     <title>OpenClips和Boreal上线，普通人怎么靠AI产品视频接单赚钱</title>
@@ -200,16 +210,6 @@
     <published>2026-09-11T08:00:00+08:00</published>
     <summary type="text">agent-fleet-manager是一个用SQLite管理大规模信息监控的开源项目，能定时检查竞品、价格、招聘和政策。。</summary>
     <category term="案例"/>
-  </entry>
-
-  <entry>
-    <title>Needle 2怎么用，本地AI小模型上手教程</title>
-    <link href="https://www.aitoollab.top/tutorials/needle2-local-ai-tutorial-20260911/"/>
-    <id>https://www.aitoollab.top/tutorials/needle2-local-ai-tutorial-20260911/</id>
-    <updated>2026-09-11T08:00:00+08:00</updated>
-    <published>2026-09-11T08:00:00+08:00</published>
-    <summary type="text">Needle 2怎么用？从安装、导入资料到本地检索，本文演示轻量端侧AI的基础流程，适合想降低云端调用成本的普通人。</summary>
-    <category term="教程"/>
   </entry>
 
 </feed>
