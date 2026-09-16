@@ -284,3 +284,4 @@ articles/cases/ai-video-generation-api-service-side-hustle-20260916/index.html
 tutorials/ai-market-research-tutorial-20260916/
 tutorials/ai-event-planning-tutorial-20260916/
 tutorials/ai-personalized-storybook-tutorial-20260916/
+articles/news/openai-chatgpt-sponsored-agents-side-hustle-20260917/index.html
