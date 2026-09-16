@@ -23,6 +23,16 @@
   </entry>
 
   <entry>
+    <title>AI代码质量审计服务怎么赚钱，帮客户给Vibe Coding加上质量闸门</title>
+    <link href="https://www.aitoollab.top/articles/cases/ai-code-quality-audit-service-side-hustle-20260917/"/>
+    <id>https://www.aitoollab.top/articles/cases/ai-code-quality-audit-service-side-hustle-20260917/</id>
+    <updated>2026-09-17T08:00:00+08:00</updated>
+    <published>2026-09-17T08:00:00+08:00</published>
+    <summary type="text">GitHub新项目gap-trap能读取代码库、生成项目规则并安装质量闸门。本文拆解AI代码质量审计服务的工具链、报价、。。</summary>
+    <category term="案例"/>
+  </entry>
+
+  <entry>
     <title>OpenClips和Boreal上线，普通人怎么靠AI产品视频接单赚钱</title>
     <link href="https://www.aitoollab.top/articles/news/openclips-boreal-ai-video-side-hustle-20260916/"/>
     <id>https://www.aitoollab.top/articles/news/openclips-boreal-ai-video-side-hustle-20260916/</id>
@@ -200,16 +210,6 @@
     <published>2026-09-11T08:00:00+08:00</published>
     <summary type="text">Meta Muse个人AI Agent发布，能替用户发邮件、订旅行、填表和完成购买。普通人怎么靠AI代理服务赚钱，本文拆。。</summary>
     <category term="热点"/>
-  </entry>
-
-  <entry>
-    <title>AI竞品监控怎么接单赚钱，agent-fleet-manager把信息差变成服务</title>
-    <link href="https://www.aitoollab.top/articles/cases/ai-competitor-monitoring-service-side-hustle-20260911/"/>
-    <id>https://www.aitoollab.top/articles/cases/ai-competitor-monitoring-service-side-hustle-20260911/</id>
-    <updated>2026-09-11T08:00:00+08:00</updated>
-    <published>2026-09-11T08:00:00+08:00</published>
-    <summary type="text">agent-fleet-manager是一个用SQLite管理大规模信息监控的开源项目，能定时检查竞品、价格、招聘和政策。。</summary>
-    <category term="案例"/>
   </entry>
 
 </feed>
