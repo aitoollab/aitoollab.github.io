@@ -5,12 +5,42 @@
   <link href="https://www.aitoollab.top/feed.xml" rel="self"/>
   <link href="https://www.aitoollab.top/"/>
   <id>https://www.aitoollab.top/</id>
-  <updated>2026-09-17T08:00:00+08:00</updated>
+  <updated>2026-09-18T08:00:00+08:00</updated>
   <author>
     <name>AiToollab</name>
     <uri>https://www.aitoollab.top</uri>
   </author>
   <generator uri="https://www.aitoollab.top/">AiToollab Generator</generator>
+
+  <entry>
+    <title>AI商品详情页制作教程，普通人用ChatGPT做出能卖货的页面</title>
+    <link href="https://www.aitoollab.top/tutorials/ai-product-detail-page-tutorial-20260918/"/>
+    <id>https://www.aitoollab.top/tutorials/ai-product-detail-page-tutorial-20260918/</id>
+    <updated>2026-09-18T08:00:00+08:00</updated>
+    <published>2026-09-18T08:00:00+08:00</published>
+    <summary type="text">AI商品详情页制作教程，教你用ChatGPT、Canva和可灵AI整理卖点、生成配图与页面文案，适合电商小店和接单副业。</summary>
+    <category term="教程"/>
+  </entry>
+
+  <entry>
+    <title>AI面试题生成教程，用ChatGPT给小团队做一套靠谱的面试题</title>
+    <link href="https://www.aitoollab.top/tutorials/ai-interview-question-tutorial-20260918/"/>
+    <id>https://www.aitoollab.top/tutorials/ai-interview-question-tutorial-20260918/</id>
+    <updated>2026-09-18T08:00:00+08:00</updated>
+    <published>2026-09-18T08:00:00+08:00</published>
+    <summary type="text">AI面试题生成教程，教你用ChatGPT根据岗位职责设计结构化面试题、评分标准和面试记录表，适合小团队招聘与人事接单。</summary>
+    <category term="教程"/>
+  </entry>
+
+  <entry>
+    <title>AI家庭预算表制作教程，用ChatGPT把每月开销变成能执行的计划</title>
+    <link href="https://www.aitoollab.top/tutorials/ai-family-budget-tutorial-20260918/"/>
+    <id>https://www.aitoollab.top/tutorials/ai-family-budget-tutorial-20260918/</id>
+    <updated>2026-09-18T08:00:00+08:00</updated>
+    <published>2026-09-18T08:00:00+08:00</published>
+    <summary type="text">AI家庭预算表制作教程，教你用ChatGPT和Excel整理收入、固定支出、可变开销与储蓄目标，适合家庭记账和预算管理。</summary>
+    <category term="教程"/>
+  </entry>
 
   <entry>
     <title>ChatGPT Sponsored Agents上线，普通人怎么靠AI广告代运营赚钱</title>
@@ -180,36 +210,6 @@
     <published>2026-09-13T08:00:00+08:00</published>
     <summary type="text">Maskit是支持Cursor、Claude Code、Codex的本地隐私脱敏网关。本文拆解AI编程隐私脱敏服务怎么接。。</summary>
     <category term="案例"/>
-  </entry>
-
-  <entry>
-    <title>GPT-Live-1语音API上线 普通人怎么靠实时语音客服赚钱</title>
-    <link href="https://www.aitoollab.top/articles/news/gpt-live-1-api-voice-agent-side-hustle-20260912/"/>
-    <id>https://www.aitoollab.top/articles/news/gpt-live-1-api-voice-agent-side-hustle-20260912/</id>
-    <updated>2026-09-12T08:00:00+08:00</updated>
-    <published>2026-09-12T08:00:00+08:00</published>
-    <summary type="text">GPT-Live-1语音API上线，语音层每分钟0.05美元，能边听边说。普通人怎么靠实时语音客服赚钱，本文拆解本地店接。。</summary>
-    <category term="热点"/>
-  </entry>
-
-  <entry>
-    <title>AI把网课转成带截图笔记怎么赚钱，开源工具course2md接单拆解</title>
-    <link href="https://www.aitoollab.top/articles/cases/ai-course2md-illustrated-notes-service-side-hustle-20260912/"/>
-    <id>https://www.aitoollab.top/articles/cases/ai-course2md-illustrated-notes-service-side-hustle-20260912/</id>
-    <updated>2026-09-12T08:00:00+08:00</updated>
-    <published>2026-09-12T08:00:00+08:00</published>
-    <summary type="text">course2md是2026年8月底上线的开源桌面应用，能把YouTube、B站或本地网课转成带截图的Markdown和。。</summary>
-    <category term="案例"/>
-  </entry>
-
-  <entry>
-    <title>Meta Muse个人AI Agent发布 普通人怎么靠AI代理服务赚钱</title>
-    <link href="https://www.aitoollab.top/articles/news/meta-muse-ai-agent-side-hustle-20260911/"/>
-    <id>https://www.aitoollab.top/articles/news/meta-muse-ai-agent-side-hustle-20260911/</id>
-    <updated>2026-09-11T08:00:00+08:00</updated>
-    <published>2026-09-11T08:00:00+08:00</published>
-    <summary type="text">Meta Muse个人AI Agent发布，能替用户发邮件、订旅行、填表和完成购买。普通人怎么靠AI代理服务赚钱，本文拆。。</summary>
-    <category term="热点"/>
   </entry>
 
 </feed>
