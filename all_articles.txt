@@ -285,3 +285,6 @@ tutorials/ai-market-research-tutorial-20260916/
 tutorials/ai-event-planning-tutorial-20260916/
 tutorials/ai-personalized-storybook-tutorial-20260916/
 articles/news/openai-chatgpt-sponsored-agents-side-hustle-20260917/index.html
+tutorials/ai-product-detail-page-tutorial-20260918/
+tutorials/ai-family-budget-tutorial-20260918/
+tutorials/ai-interview-question-tutorial-20260918/
