@@ -288,3 +288,4 @@ articles/news/openai-chatgpt-sponsored-agents-side-hustle-20260917/index.html
 tutorials/ai-product-detail-page-tutorial-20260918/
 tutorials/ai-family-budget-tutorial-20260918/
 tutorials/ai-interview-question-tutorial-20260918/
+articles/news/openai-astra-for-law-ai-legal-workflow-side-hustle-20260919/index.html
