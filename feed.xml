@@ -5,12 +5,22 @@
   <link href="https://www.aitoollab.top/feed.xml" rel="self"/>
   <link href="https://www.aitoollab.top/"/>
   <id>https://www.aitoollab.top/</id>
-  <updated>2026-09-18T08:00:00+08:00</updated>
+  <updated>2026-09-19T08:00:00+08:00</updated>
   <author>
     <name>AiToollab</name>
     <uri>https://www.aitoollab.top</uri>
   </author>
   <generator uri="https://www.aitoollab.top/">AiToollab Generator</generator>
+
+  <entry>
+    <title>OpenAI推出Astra for Law，普通人怎么靠AI法律工作流赚钱</title>
+    <link href="https://www.aitoollab.top/articles/news/openai-astra-for-law-ai-legal-workflow-side-hustle-20260919/"/>
+    <id>https://www.aitoollab.top/articles/news/openai-astra-for-law-ai-legal-workflow-side-hustle-20260919/</id>
+    <updated>2026-09-19T08:00:00+08:00</updated>
+    <published>2026-09-19T08:00:00+08:00</published>
+    <summary type="text">OpenAI推出Astra for Law，普通人怎么靠AI法律工作流赚钱？从合同资料整理、法律检索辅助到企业知识库搭建。。</summary>
+    <category term="热点"/>
+  </entry>
 
   <entry>
     <title>AI商品详情页制作教程，普通人用ChatGPT做出能卖货的页面</title>
@@ -200,16 +210,6 @@
     <published>2026-09-13T08:00:00+08:00</published>
     <summary type="text">Gemini Windows桌面版上线，普通人怎么靠AI电脑助手接单赚钱？本文从电脑流程整理、办公自动化和上门配置三个方。。</summary>
     <category term="热点"/>
-  </entry>
-
-  <entry>
-    <title>AI编程隐私脱敏服务怎么赚钱，Maskit本地网关接单拆解</title>
-    <link href="https://www.aitoollab.top/articles/cases/ai-coding-privacy-redaction-service-side-hustle-20260913/"/>
-    <id>https://www.aitoollab.top/articles/cases/ai-coding-privacy-redaction-service-side-hustle-20260913/</id>
-    <updated>2026-09-13T08:00:00+08:00</updated>
-    <published>2026-09-13T08:00:00+08:00</published>
-    <summary type="text">Maskit是支持Cursor、Claude Code、Codex的本地隐私脱敏网关。本文拆解AI编程隐私脱敏服务怎么接。。</summary>
-    <category term="案例"/>
   </entry>
 
 </feed>
