@@ -5,12 +5,22 @@
   <link href="https://www.aitoollab.top/feed.xml" rel="self"/>
   <link href="https://www.aitoollab.top/"/>
   <id>https://www.aitoollab.top/</id>
-  <updated>2026-09-19T08:00:00+08:00</updated>
+  <updated>2026-11-07T08:00:00+08:00</updated>
   <author>
     <name>AiToollab</name>
     <uri>https://www.aitoollab.top</uri>
   </author>
   <generator uri="https://www.aitoollab.top/">AiToollab Generator</generator>
+
+  <entry>
+    <title>两个人花2万美元训出文生图模型，普通人怎么靠定制模型接单</title>
+    <link href="https://www.aitoollab.top/articles/news/linum-21k-text-to-image-custom-model-side-hustle-20261107/"/>
+    <id>https://www.aitoollab.top/articles/news/linum-21k-text-to-image-custom-model-side-hustle-20261107/</id>
+    <updated>2026-11-07T08:00:00+08:00</updated>
+    <published>2026-11-07T08:00:00+08:00</published>
+    <summary type="text">两个人花2万美元训出开源文生图模型，普通人怎么靠定制模型接单？本文拆出同款出图、品牌专属模型和行业工具三条路，附报价和踩。。</summary>
+    <category term="热点"/>
+  </entry>
 
   <entry>
     <title>OpenAI推出Astra for Law，普通人怎么靠AI法律工作流赚钱</title>
@@ -199,16 +209,6 @@
     <updated>2026-09-14T08:00:00+08:00</updated>
     <published>2026-09-14T08:00:00+08:00</published>
     <summary type="text">AI发票整理教程，教你用ChatGPT或Claude把发票、收据和付款记录整理成费用表，核对金额、分类并交付给老板或客户。。</summary>
-    <category term="教程"/>
-  </entry>
-
-  <entry>
-    <title>数据分析赚钱副业小工具，帮小店做每周经营看板</title>
-    <link href="https://www.aitoollab.top/tutorials/ai-data-dashboard-money-tutorial-20260914/"/>
-    <id>https://www.aitoollab.top/tutorials/ai-data-dashboard-money-tutorial-20260914/</id>
-    <updated>2026-09-14T08:00:00+08:00</updated>
-    <published>2026-09-14T08:00:00+08:00</published>
-    <summary type="text">数据分析赚钱副业小工具怎么接单？本文用Excel、ChatGPT和Looker Studio帮小商家做每周经营看板，覆盖。。</summary>
     <category term="教程"/>
   </entry>
 
