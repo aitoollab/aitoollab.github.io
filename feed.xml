@@ -5,12 +5,22 @@
   <link href="https://www.aitoollab.top/feed.xml" rel="self"/>
   <link href="https://www.aitoollab.top/"/>
   <id>https://www.aitoollab.top/</id>
-  <updated>2026-11-07T08:00:00+08:00</updated>
+  <updated>2026-11-08T08:00:00+08:00</updated>
   <author>
     <name>AiToollab</name>
     <uri>https://www.aitoollab.top</uri>
   </author>
   <generator uri="https://www.aitoollab.top/">AiToollab Generator</generator>
+
+  <entry>
+    <title>Anthropic估值被砍4000亿美元，AI涨价潮来了，普通人怎么反着赚</title>
+    <link href="https://www.aitoollab.top/articles/news/anthropic-valuation-cut-ai-tool-price-rise-side-hustle-20261108/"/>
+    <id>https://www.aitoollab.top/articles/news/anthropic-valuation-cut-ai-tool-price-rise-side-hustle-20261108/</id>
+    <updated>2026-11-08T08:00:00+08:00</updated>
+    <published>2026-11-08T08:00:00+08:00</published>
+    <summary type="text">Anthropic IPO估值从1.5万亿被压到1.1万亿，AI涨价潮开始。普通人怎么在涨价前锁住利润？订阅额度套利、贵。。</summary>
+    <category term="热点"/>
+  </entry>
 
   <entry>
     <title>两个人花2万美元训出文生图模型，普通人怎么靠定制模型接单</title>
@@ -200,16 +210,6 @@
     <published>2026-09-14T08:00:00+08:00</published>
     <summary type="text">OpenAI Agents API上线，普通人怎么靠云端AI Agent接单赚钱？本文拆解资料整理、企业流程自动化和AI。。</summary>
     <category term="热点"/>
-  </entry>
-
-  <entry>
-    <title>AI机器人示教服务怎么赚钱，Show-Harness开源项目接单拆解</title>
-    <link href="https://www.aitoollab.top/articles/cases/ai-robot-use-show-harness-side-hustle-20260914/"/>
-    <id>https://www.aitoollab.top/articles/cases/ai-robot-use-show-harness-side-hustle-20260914/</id>
-    <updated>2026-09-14T08:00:00+08:00</updated>
-    <published>2026-09-14T08:00:00+08:00</published>
-    <summary type="text">Show-Harness是新加坡国立大学Show Lab发布的开源机器人视觉语言模型项目。本文拆解AI机器人示教服务怎么。。</summary>
-    <category term="案例"/>
   </entry>
 
 </feed>
